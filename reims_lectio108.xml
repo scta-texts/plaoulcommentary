@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="file:/Users/JCWitt/Desktop/ODD_exercise/out/odd_practice.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="file:/Users/JCWitt/Desktop/ODD_exercise/out/odd_practice.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2013-03-05">March 5, 2013</date>  
       </publicationStmt>
@@ -29,19 +31,28 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio108">
-      <head>Lectio 108, de Libertate [Reims Transcription]</head>
-          <p><g ref="#slash"/>Et 
+      <head xml:id="l108-Hldlldl" subtype="title">Lectio 108, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l108-Hqeiqpc">Quod esse in homine liberum arbitrium est nedum a catholico fideli et a quolibet philosopho concedendum</head>
+          <p xml:id="l108-eqpqdp"><g ref="#slash"/>Et 
             <lb ed="#R"/>quia plures gentilium dixerunt <choice><orig>facum</orig><reg>fatum</reg></choice> impo<g ref="#slash"/><lb ed="#R"/>nere 
             <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> et tollere libertatem arbitrii, <g ref="#slash"/> 
             <lb ed="#R"/>ideo ponitur ista conclusio esse in homine liberum arbi<g ref="#slash"/><lb ed="#R"/>trium 
             est nedum a catholico fideli, sed <choice><orig>eciam</orig><reg>etiam</reg></choice> a quolibet 
-            <lb ed="#R"/><name>philosopho</name> concedendum vel confitendum, <g ref="#slash"/>illud apparet primo <choice><orig>experi<g ref="#slash"/><lb ed="#R"/>encia</orig><reg>experi<g ref="#slash"/><lb ed="#R"/>entia</reg></choice> 
+            <lb ed="#R"/>philosopho concedendum vel confitendum, <g ref="#slash"/>illud apparet primo <choice><orig>experi<g ref="#slash"/><lb ed="#R"/>encia</orig><reg>experi<g ref="#slash"/><lb ed="#R"/>entia</reg></choice> 
             actum nostrorum nam quilibet potest se experi<g ref="#slash"/><lb ed="#R"/>ri 
             digitum ex libertate ad quamlibet differentiam propositionis.</p>
         
-            <p><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nisi sic tota subverteretur moralis politia, 
+            <p xml:id="l108-snssla"><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nisi sic tota subverteretur moralis politia, 
               <lb ed="#R"/>et alia plura <choice><orig>inconveniencia</orig><reg>inconvenientia</reg></choice> sequitur, <g ref="#slash"/>nam dicit <name>philosophus</name> in 
               <lb ed="#R"/><choice><orig>3o</orig><reg>IIIo</reg></choice> <title>ethicorum</title> quod ad virtuose operandum <choice><orig>opportet</orig><reg>oportet</reg></choice> 
               quod aliquid concurrat voluntarium et <name><choice><orig>tulius</orig><reg>tullius</reg></choice></name> ut 
@@ -57,12 +68,12 @@
               <lb ed="#R"/>quod quasi omnes philosophi horruerunt tollere 
               <lb ed="#R"/>liberum arbitrium seu libertatem arbitrii.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> 
+        <p xml:id="l108-taeela"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> 
           <lb ed="#R"/>arguitur ex auctoritate <name>armacavi</name> in libro <title>de quaestionibus 
             <lb ed="#R"/>armenorum</title> ubi expresse ponit in nobis 
           <lb ed="#R"/>esse libertatem arbitrii.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> ex auctoritate 
+        <p xml:id="l108-qeaper"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> ex auctoritate 
           <cb ed="#R" n="168va"/><lb ed="#R"/>scripturae. <g ref="#slash"/>nam salvator ait <name>mathim[?]</name> <g ref="#dot"/>26o 
           <lb ed="#R"/>an putatis quod non possum rogare patrem 
           <lb ed="#R"/>meum et exhibebit <choice><orig>michi</orig><reg>mihi</reg></choice> plusquam qui[?] 
@@ -71,53 +82,59 @@
           <lb ed="#R"/>non rogandi licet ipse ob passionem evitendam 
           <lb ed="#R"/>rogaverit.</p>
         
-        <p><g ref="#dbslash"/>Ex quo patet radix errorum 
+        <p xml:id="l108-eqppdp"><g ref="#dbslash"/>Ex quo patet radix errorum 
           <lb ed="#R"/><choice><orig>negancium</orig><reg>negantium</reg></choice> libertatem arbitrii ex parte 
           <lb ed="#R"/>divinae providentiae.</p>
         
-        <p><g ref="#slash"/><choice><orig>Isci</orig><reg>Isti</reg></choice> igitur negant esse 
+        <p xml:id="l108-iinqla"><g ref="#slash"/><choice><orig>Isci</orig><reg>Isti</reg></choice> igitur negant esse 
           <lb ed="#R"/>in qualibet libertatem arbitrii.</p>
         
-        <p><g ref="#dbslash"/>Ex <g ref="carrot"/><add place="aboveLine">quo</add> apparet quod 
+        <p xml:id="l108-eqaetp"><g ref="#dbslash"/>Ex <g ref="carrot"/><add place="aboveLine">quo</add> apparet quod 
           <lb ed="#R"/>ex divina provisione sequitur <choice><orig>neccisstans</orig><reg>necessitans</reg></choice> <g ref="#slash"/> 
           <lb ed="#R"/>ita quod sequitur quod non posset non producere 
           <lb ed="#R"/>effectum tempore praefixo.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur ex sal<g ref="#slash"/><lb ed="#R"/>vatoris 
-          auctoritate dicentis <name type="group">apostolis</name> non po<g ref="#slash"/><lb ed="#R"/>testis 
+        <p xml:id="l108-qaeela"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur ex sal<g ref="#slash"/><lb ed="#R"/>vatoris 
+          auctoritate dicentis <name ref="#Apostles">apostolis</name> non po<g ref="#slash"/><lb ed="#R"/>testis 
           una hora vigilare mecum, <g ref="#slash"/>quasi 
           <lb ed="#R"/>vellet dicere quod erat in libertate arbitrii 
           <lb ed="#R"/>eorum vigilare vel non vigilare. <g ref="#slash"/>ex quo 
           <lb ed="#R"/>denotatur eorum libertas, <g ref="#slash"/>et de sanctis legitur 
           <lb ed="#R"/>qui potuit transgredi, et non est transgressus. 
           <lb ed="#R"/><g ref="#slash"/>Et sic in veteri testamento et novo apparet 
-          <lb ed="#R"/>quod in nobis est liberum arbitrium. <g ref="#slash"/>Ex quo 
-          <lb ed="#R"/>apparet error <name>iullii</name> firmiti qui in principio suae 
-          <lb ed="#R"/>astrologiae ponit quod constellatio est dispositio 
+          <lb ed="#R"/>quod in nobis est liberum arbitrium.</p> 
+        </div>
+        <div>
+          <head xml:id="l108-Heifeif">Error Iulii Firmici</head>
+          <p xml:id="l108-eqaece"><g ref="#slash"/>Ex quo 
+          <lb ed="#R"/>apparet error <name ref="#JuliusFirmicus">iullii firmici</name> qui in principio suae 
+          <lb ed="#R"/><title>astrologiae</title> ponit quod constellatio est dispositio 
           <lb ed="#R"/>syderum est fatum absolute <choice><orig>neccissitas</orig><reg>necessitas</reg></choice> respectu cuius<g ref="#slash"/><lb ed="#R"/>cumque 
           operationis, <g ref="#slash"/>nam iste error apparet 
           <lb ed="#R"/>clare, quia tollit libertatem arbitrii cuius<lb ed="#R"/>cumque 
           causae respectu effectus sui quo est contra 
           <lb ed="#R"/><choice><orig>experienciam</orig><reg>experientiam</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia actiones liberas 
+        <p xml:id="l108-sqacim"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia actiones liberas 
           <lb ed="#R"/>voluntatis reducit in causas caelestes et 
           <lb ed="#R"/>hoc est falsum quia tales actus non depen<g ref="#slash"/><lb ed="#R"/>dent 
           a causis in materialibus.</p>
-        
-        <p><g ref="#dbslash"/>Sequitur 
-          <lb ed="#R"/><name key="alkindi">aliquindi</name> in libro suo <title>de radiis stellicis</title> 
+        </div>
+        <div>
+          <head xml:id="l108-Heraera">Error Alkindi</head>
+        <p xml:id="l108-saimni"><g ref="#dbslash"/>Sequitur 
+          <lb ed="#R"/><name ref="#Alkindi">aliquindi</name> in libro suo <title>de radiis stellicis</title> 
           <lb ed="#R"/>qui ponit in caelesti armonia re<g ref="#slash"/><lb ed="#R"/>lucere 
           omnes effectus in istis inferioribus 
           <lb ed="#R"/>maxima <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> inevitabilitatis.</p>
         
-        <p><g ref="#slash"/>Ex 
+        <p xml:id="l108-eqdnan"><g ref="#slash"/>Ex 
           <lb ed="#R"/>quibus duo infert. <g ref="#slash"/>Primum quod non est differentia 
           <lb ed="#R"/>inter possibile et <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> quia quicquid poterit 
           <lb ed="#R"/>esse <choice><orig>neccessario</orig><reg>necessario</reg></choice> erit <del rend="strikethrough/expunctuated">so</del> sed solum est differentia quo 
           <lb ed="#R"/>ad nos quia non apparet nobis.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infert quod 
+        <p xml:id="l108-siqcpa"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infert quod 
           <lb ed="#R"/>qui caelestem armoniam cognosceret per<g ref="#slash"/><lb ed="#R"/>fecte 
           tam <choice><orig>praesencia</orig><reg>praesentia</reg></choice> praeterita et futura distincte 
           <lb ed="#R"/>videret et cognosceret, <g ref="#slash"/>sed ista <choice><orig>oppinio</orig><reg>opinio</reg></choice> est 
@@ -140,15 +157,19 @@
           <lb ed="#R"/>non ponit expresse, licet illa posset elici a praedicta 
           <lb ed="#R"/>propositione, <g ref="#slash"/>et ex hoc habetur quod <choice><orig>execucio</orig><reg>executio</reg></choice> operationum 
           <lb ed="#R"/>in istis inferioribus contingenter potest adimpleri.</p>
-        
-        <p><lb ed="#R"/><g ref="#dbslash"/>Sequitur contra <name><choice><orig>tulium</orig><reg>tullium</reg></choice></name> et sui sequaces quod cum immu<g ref="#slash"/><lb ed="#R"/>tabilitate 
+        </div>
+        <div>
+          <head xml:id="l108-Hecsecs">Error Ciceronis</head>
+        <p xml:id="l108-sctcao"><lb ed="#R"/><g ref="#dbslash"/>Sequitur contra <name ref="#Cicero"><choice><orig>tulium</orig><reg>tullium</reg></choice></name> et sui sequaces quod cum immu<g ref="#slash"/><lb ed="#R"/>tabilitate 
           divinae potentiae et providentiae <choice><orig>scat</orig><reg>stat</reg></choice> executionis 
           <lb ed="#R"/>contingentia, <g ref="#slash"/>nam ista co??na[?] est concedenda deus incommuni<g ref="#slash"/><lb ed="#R"/>cabiliter[?] 
           omnibus providet et contingenter evenit 
           <lb ed="#R"/>illud quod accidit, <g ref="#slash"/>prima pars est concessa et dedu<g ref="#slash"/><lb ed="#R"/>cta 
           et conceditur ab omnibus.</p>
-        
-        <p><g ref="#slash"/>Ex quo patet error 
+        </div>
+        <div>
+          <head xml:id="l108-Haeraer">Alia error</head>
+        <p xml:id="l108-eqpier"><g ref="#slash"/>Ex quo patet error 
           <lb ed="#R"/>illorum qui ex hac radice fatum <choice><orig>neccessario</orig><reg>necessario</reg></choice> assentiunt 
           <lb ed="#R"/>res <choice><orig>neccessitative</orig><reg>necessitative</reg></choice>. <g ref="#slash"/>unde <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> aliquorum fuit 
           <lb ed="#R"/>quod divina providentia ab aeterno vidit et disposuit 
@@ -159,7 +180,7 @@
           <lb ed="#R"/>deordinationem universi quod est malum modo utrumque 
           <lb ed="#R"/>istorum ei repugnat.</p>
         
-        <p><g ref="#dbslash"/>Ex ex hoc [???] 
+        <p xml:id="l108-eehssm"><g ref="#dbslash"/>Ex ex hoc [???] 
           <lb ed="#R"/><choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> infert quod series causarum et 
           <lb ed="#R"/>effectuum est absolute <choice><orig>neccessaria</orig><reg>necessaria</reg></choice>, <g ref="#slash"/>nam vocat fatum 
           <lb ed="#R"/>executionem divinae <choice><orig>providenciae</orig><reg>providentiae</reg></choice>, <g ref="#slash"/>sed patet quod iste 
@@ -167,8 +188,10 @@
           nihilominus cum libertatem arbitrii quid<g ref="#slash"/><lb ed="#R"/>quid 
           praevidit futurum potest non fore sine 
           <lb ed="#R"/>sui mutatione.</p>
-        
-        <p><g ref="#slash"/>Sequitur error <choice><orig>dicencium</orig><reg>dicentiium</reg></choice> ex 
+        </div>
+        <div>
+          <head xml:id="l108-Haaeaae">Alia error</head>
+        <p xml:id="l108-sedeaf"><g ref="#slash"/>Sequitur error <choice><orig>dicencium</orig><reg>dicentiium</reg></choice> ex 
           <lb ed="#R"/>infallibili do?r?siua[?] fati <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> contingere 
           <lb ed="#R"/>vel esse, <g ref="#slash"/>nam dictum est a vetulis de nativitate 
           <lb ed="#R"/>puerorum apparut[?] fatales deae dicentes futuros 
@@ -181,12 +204,14 @@
           <lb ed="#R"/>est mendax, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> secundum scripturam pater men<g ref="#slash"/><lb ed="#R"/>dacii, 
           <g ref="#slash"/>ideo eius dicto non est adibenda[?] fides.</p>
         
-        <p><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dictum dicti non imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice>, <g ref="#slash"/>et per consequens nec 
+        <p xml:id="l108-sddudp"><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dictum dicti non imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice>, <g ref="#slash"/>et per consequens nec 
           <lb ed="#R"/>daemones dictum ut apparet de revelatione nec 
           <lb ed="#R"/>ex hoc arguitur falsitas seu deceptio in deo ut 
           <lb ed="#R"/>dicetur post.</p>
-        
-        <p><g ref="#dbslash"/>Ex quo sequitur error philosopho<g ref="#slash"/><lb ed="#R"/>rum 
+        </div>
+        <div>
+          <head xml:id="l108-Hepmepm">Error philosophorum</head>
+        <p xml:id="l108-eqspmi"><g ref="#dbslash"/>Ex quo sequitur error philosopho<g ref="#slash"/><lb ed="#R"/>rum 
           in materia fati <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod <name>ympermanes</name> 
           se habet per modum seminis, <g ref="#slash"/><choice><orig>neccissitatis</orig><reg>necesssitatis</reg></choice> ut germinis et 
           <lb ed="#R"/>ordo per modum influxus et illud habetur in 
@@ -210,27 +235,25 @@
           <lb ed="#R"/>libertatem <choice><orig>suppremis</orig><reg>supremis</reg></choice> causis, <g ref="#slash"/>et videtur quod hoc 
           <lb ed="#R"/>sit eis per modum imperfectionis.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia ponit 
+        <p xml:id="l108-sqpiii"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia ponit 
           <lb ed="#R"/><choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> omnium <choice><orig>agencium</orig><reg>agentium</reg></choice> ad effectum 
           <lb ed="#R"/>et tantum ponit <choice><orig>contingenciam</orig><reg>contingentiam</reg></choice> ratione fluxibilitatis 
           <lb ed="#R"/>materiae quo secluso omnia evenirent de 
           <lb ed="#R"/><choice><orig>neccessitate</orig><reg>necessitate</reg></choice>, <g ref="#slash"/>sed in hoc <choice><orig>defficit</orig><reg>deficit</reg></choice> quia tollit li<g ref="#slash"/><lb ed="#R"/>bertatem 
           a prima causa in aliquibus causis 
           <lb ed="#R"/>liberis in istis inferioribus.</p> 
-        
-        <p><g ref="#slash"/>Et ex hoc 
+        </div>
+        <div>
+          <head xml:id="l108-Hcnocno">Conclusio</head>
+        <p xml:id="l108-eehede"><g ref="#slash"/>Et ex hoc 
           <lb ed="#R"/>apparet quod omnibus praedictis modis fatum nihil est 
           <lb ed="#R"/><choice><orig>ymo</orig><reg>immo</reg></choice> oppositum ponere est <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> heretica 
           <lb ed="#R"/>et deceptio erronea.</p>
         
-        <p><g ref="#dbslash"/>notandum est tamen quod 
+        <p xml:id="l108-netpeb"><g ref="#dbslash"/>notandum est tamen quod 
           <lb ed="#R"/>fatum potest capi multipliciter quia ut ait 
           <lb ed="#R"/><name>anselmus</name> licet nomen sit abh?abile[?], tamen sententia poterit esse bona.</p>
-           
-        
-        
-        
-            
+        </div>  
       </div>
     </body>
   </text>
