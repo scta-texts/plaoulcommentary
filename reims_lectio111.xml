@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,13 +31,24 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio111">
-      <head>Lectio 111, de Libertate [Reims Transcription]</head>
-        <p><g ref="#dbslash"/>quantum spectat ad propositum 
-          <lb ed="#R"/>et pro maori declaratione materiae potestate, <g ref="#slash"/>sci<g ref="#slash"/><lb ed="#R"/>endum 
+      <head xml:id="l111-Hldlldl" subtype="title">Lectio 111, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l111-Hedppet">Executio divinae providentiae est triplex</head>
+        <p xml:id="l111-qsadpe"><g ref="#dbslash"/>quantum spectat ad propositum 
+          <lb ed="#R"/>et pro maior declaratione materiae potestate, <g ref="#slash"/>sci<g ref="#slash"/><lb ed="#R"/>endum 
         est quod <choice><orig>tripplex</orig><reg>triplex</reg></choice> est divinae <choice><orig>providenciae</orig><reg>providentiae</reg></choice> 
-          executio. <g ref="#slash"/>una est per influentiam summi bo<g ref="#slash"/><lb ed="#R"/>ni 
+          executio.</p> 
+          
+          <p xml:id="l111-uepctc"><g ref="#slash"/>una est per influentiam summi bo<g ref="#slash"/><lb ed="#R"/>ni 
         cuctis[?] providentis, <g ref="#slash"/>et hoc modo ipsa 
           <lb ed="#R"/>non est res ad extra, <g ref="#slash"/>sed est <choice><orig>volicio</orig><reg>volitio</reg></choice> divinae quae 
             <lb ed="#R"/>semper est uniformis respectu omnium effectuum 
@@ -46,7 +59,7 @@
           <lb ed="#R"/>est, <g ref="#slash"/>ideo talis executio nullo modo potest concurrere 
           <lb ed="#R"/>tunc creatae.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> executio est divinae non naturalis 
+        <p xml:id="l111-seeaeh"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> executio est divinae non naturalis 
           <lb ed="#R"/>sed voluntaria quam faciunt angeli non appropriati 
           <lb ed="#R"/>naturaliter corporibus <del rend="strikethrough/expunctuated">b</del> vel orbibus vel materiis cor<g ref="#slash"/><cb ed="#R" n="172va"/><lb ed="#R"/>poreis, 
         <g ref="#slash"/>et isto modo <name ref="#Seraphim">seraphin</name> contemplatur divinam 
@@ -64,16 +77,23 @@
           <lb ed="#R"/>veritatem ac bonitatem summam revelare 
           <lb ed="#R"/>et dicere congruenter angelis <del rend="strikethrough/expunctuated">et</del> aliis et hominibus.</p>
         
-        <p><g ref="#slash"/>Consequenter considerando rerum dispositionem optime factam 
+        <p xml:id="l111-ccrhhi"><g ref="#slash"/>Consequenter considerando rerum dispositionem optime factam 
           <lb ed="#R"/>et habitudines rerum inter se per hoc explicatur 
           <lb ed="#R"/>divina sapientia quae ita bene scivit ordinare quod 
           <lb ed="#R"/>officium pertinet ad <name rend="Cherubim">cherubin</name> quod interpretatur 
           <lb ed="#R"/>plenitudo scientiae. <g ref="#slash"/>Et idem docent alios angelos 
           <lb ed="#R"/>inferiores et homines hic inferius.</p>
         
-        <p><g ref="#dbslash"/>Consequenter de<g ref="#slash"/><lb ed="#R"/>scendendo 
+        </div>
+        <div>
+          <head xml:id="l111-Hocrcrh">Officia circa[?] regimen humanum</head>
+        <p xml:id="l111-cdaeht"><g ref="#dbslash"/>Consequenter de<g ref="#slash"/><lb ed="#R"/>scendendo 
         ad ultimam gerarchiam sunt alia officia 
-          <lb ed="#R"/>certa regimen humanum et haec triplicia, <g ref="#slash"/>nam 
+          <lb ed="#R"/>certa regimen humanum et haec triplicia.</p> 
+          
+          <div>
+            <head xml:id="l111-Hpompom">Primum officium</head>
+          <p xml:id="l111-naoapp"><g ref="#slash"/>nam 
           <lb ed="#R"/>aliquod officium est certa bonum commune humanum 
           <lb ed="#R"/>quod est pole?cum[?] et adhoc deputati sunt angeli 
           <lb ed="#R"/>quorum officium est conservare politicas et instruere 
@@ -87,14 +107,17 @@
         <g ref="#slash"/>alium angelum habebat <choice><orig>policiam</orig><reg>politiam</reg></choice> graecorum 
           <lb ed="#R"/><g ref="#slash"/>et alium <choice><orig>policiam</orig><reg>politiam</reg></choice> persarum[?].</p>
         
-        <p><g ref="#slash"/>Ex quo apparet quod angelorum 
+        <p xml:id="l111-eqaead"><g ref="#slash"/>Ex quo apparet quod angelorum 
           <lb ed="#R"/>officium est certa humanas <choice><orig>policias</orig><reg>politias</reg></choice> et huic 
           <lb ed="#R"/>addunt doctores et translatio regnorum spec<g ref="#slash"/><lb ed="#R"/>tat 
           ad eorum officia ut si princeps volu<g ref="#slash"/><lb ed="#R"/>erit 
           inclinationibus angelorum obedire 
           <lb ed="#R"/>a principatu corruat et a divino.</p>
         
-        <p>Aliud habent 
+          </div>
+          <div>
+            <head xml:id="l111-Hsomsom">Secundum officium</head>
+        <p xml:id="l111-ahotrc">Aliud habent 
           <lb ed="#R"/>officium nedum circa communem politiam et eius recto<g ref="#slash"/><lb ed="#R"/>res 
           sed etiam circa quamlibet personam et totam politiam 
           <lb ed="#R"/>simul et adhoc deputantur archangelum ad 
@@ -104,12 +127,14 @@
           <lb ed="#R"/>vebi quae fuit fons salutis et totius 
           <lb ed="#R"/>religionis christinae.</p>
           
-          <p><g ref="#slash"/>Ex hoc apparet quod divina 
+          <p xml:id="l111-ehaesr"><g ref="#slash"/>Ex hoc apparet quod divina 
             <cb ed="#R" n="172vb"/><lb ed="#R"/>providente gratia angeli prompti sunt ut 
             <lb ed="#R"/>doceant et homines instruant circa fidei cul<g ref="#slash"/><lb ed="#R"/>tum 
             et sacram religionem.</p>
-        
-        <p><g ref="#dbslash"/>Aliud est offi<g ref="#slash"/><lb ed="#R"/>cium 
+          </div>
+          <div>
+            <head xml:id="l111-Htomtom">Tertium officium</head>
+        <p xml:id="l111-aeosep"><g ref="#dbslash"/>Aliud est offi<g ref="#slash"/><lb ed="#R"/>cium 
           respectu particularis personae et succ??[?] artium 
           <lb ed="#R"/>con?um[?], et sic dicunt sancti quod cuilibet rationali creaturae 
           <lb ed="#R"/>datus est <sic>agelus</sic> cuius officium est de sin<g ref="#slash"/><lb ed="#R"/>gulis 
@@ -122,14 +147,17 @@
           institutione <del rend="strikethrough/expunctuated">divina</del> divina constitutum ut sic 
           <lb ed="#R"/>homines instruam nisi ponant obicem. <g ref="#slash"/>Et istae 
           <lb ed="#R"/>duae acceptationes sunt extra propositionem.</p>
-        
-        <p><g ref="#slash"/>Sed hic 
+          </div>
+        </div>
+        <div>
+          <head xml:id="l111-Hduavaa">Difficultas: Utrum angeli non naturaliter inclinati ad orbes vel ad alia?</head>
+        <p xml:id="l111-sheace"><g ref="#slash"/>Sed hic 
           <lb ed="#R"/>est difficultas, <g ref="#slash"/>nam dubitatur utrum angeli 
           <lb ed="#R"/>non naturaliter inclinati ad orbes vel ad alia. 
           <lb ed="#R"/>corpora[?] movenda[?] respectu naturalium actionum concurrant 
           <lb ed="#R"/>effective.</p>
         
-        <p><g ref="#slash"/>Et si aliqui utrum omnes et quia 
+        <p xml:id="l111-esavie"><g ref="#slash"/>Et si aliqui utrum omnes et quia 
           <lb ed="#R"/>materia est positiva congruitate potest dici sic quod secundum 
           <lb ed="#R"/>ordinem essentialem perfectionis secundum hoc est ordo <g ref="#slash"/> 
           <lb ed="#R"/>influxus ita quod angelus immediate sub deo 
@@ -140,12 +168,12 @@
           <lb ed="#R"/>angelus moveat orbem solo voluntatis 
           <lb ed="#R"/>imperio error.</p>
         
-        <p><g ref="#slash"/>Intelligitur tamen iste ar<g ref="#slash"/><lb ed="#R"/>ticulus 
+        <p xml:id="l111-itieev"><g ref="#slash"/>Intelligitur tamen iste ar<g ref="#slash"/><lb ed="#R"/>ticulus 
           de angelo appopriato orbi qui tamen poterit 
           <lb ed="#R"/>ratione sui motus in multas operationes natura<g ref="#slash"/><lb ed="#R"/>les 
           et etiam voluntarias.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod an<g ref="#slash"/><lb ed="#R"/>gelus 
+        <p xml:id="l111-sdqqse"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod an<g ref="#slash"/><lb ed="#R"/>gelus 
           agens per voluntatem non sufficeret 
           <lb ed="#R"/>producere operationes inferius nisi concurrentibus 
           <lb ed="#R"/>aliis causis naturalibus et naturali modo requi<g ref="#slash"/><lb ed="#R"/>sitis, 
@@ -154,11 +182,14 @@
           <lb ed="#R"/>movet una cum intelligentia praerequista 
           <lb ed="#R"/>et concurrente quae superior est.</p>
         
-        <p><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> potest dici quod re<g ref="#slash"/><lb ed="#R"/>solvendum 
+        <p xml:id="l111-tpdori"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> potest dici quod re<g ref="#slash"/><lb ed="#R"/>solvendum 
           est ad divinum decretum quia ordo causalitatis 
           <lb ed="#R"/>non semper sequitur ordinem rerum intrinsecum.</p>
         
-        <p><g ref="#dbslash"/> 
+        </div>
+        <div>
+          <head xml:id="l111-Hadqmoo">Alia difficultas: qualiter motores orbium ordinantur</head>
+        <p xml:id="l111-sdimmd"><g ref="#dbslash"/> 
           <lb ed="#R"/>Sequitur de influentia naturali prout est ad propo<g ref="#slash"/><lb ed="#R"/>situm. 
           <g ref="#slash"/>Difficultas est qualiter motores orbium 
           <lb ed="#R"/>vel causae superiores naturaliter agentes or<g ref="#slash"/><lb ed="#R"/>dinantur 
@@ -167,8 +198,9 @@
           <lb ed="#R"/>utrum, scilicet, quaelibet intelligentia sufficiat se sola 
           <lb ed="#R"/>individium[?] vel speciem producere et certa hoc 
           <cb ed="#R" n="173ra"/><lb ed="#R"/>sunt multi modi dicendi.</p>
-        
-        <p><g ref="#slash"/>primum est quod prima 
+        <div>
+          <head xml:id="l111-Hpvapva">Prima via</head>
+        <p xml:id="l111-peqcqr"><g ref="#slash"/>primum est quod prima 
           <lb ed="#R"/><choice><orig>intelligencia</orig><reg>intelligentia</reg></choice> coniuncta orbi data quod non mo<g ref="#slash"/><lb ed="#R"/>veret 
           se solo orbem, <g ref="#slash"/>habet tamen naturalem causalitatem universalem 
           <lb ed="#R"/>respectu omnium producibilium naturaliter et naturaliter, id est, de potentia 
@@ -196,13 +228,13 @@
           <lb ed="#R"/>figuraliter, sed virtualiter quae sunt causae quiditatum 
           <lb ed="#R"/>rerum.</p>
         
-        <p><g ref="#dbslash"/>Consequenter ponunt isti astrologi quod pla<g ref="#slash"/><lb ed="#R"/>netae 
+        <p xml:id="l111-cpivpi"><g ref="#dbslash"/>Consequenter ponunt isti astrologi quod pla<g ref="#slash"/><lb ed="#R"/>netae 
           et orbes planetarum non hanc in se 
           <lb ed="#R"/><choice><orig>ymagines</orig><reg>imagines</reg></choice> rerum sed sunt successivi inflentiarum trium 
           <lb ed="#R"/>superioris orbium ut a primo orbe capiant in 
           <lb ed="#R"/>genere vim producendi inferiora.</p>
         
-        <p><g ref="#slash"/>A <choice><orig>2o</orig><reg>secundo</reg></choice> orbe 
+        <p xml:id="l111-asovmm"><g ref="#slash"/>A <choice><orig>2o</orig><reg>secundo</reg></choice> orbe 
           <lb ed="#R"/>capiant vim producendi species tales. <g ref="#slash"/>a <choice><orig>3o</orig><reg>tertio</reg></choice> orbe 
           <lb ed="#R"/>capiant vim producendi figuras. <g ref="#slash"/>Sed <choice><orig>isci</orig><reg>isti</reg></choice> plane<g ref="#slash"/><lb ed="#R"/>tae 
           et eorum orbes habet ex propria natura vim ponendi 
@@ -239,8 +271,10 @@
           <lb ed="#R"/>orbe, <g ref="#slash"/>nec tantum sufficeret producere effectus 
           <lb ed="#R"/>nisi <del rend="strikethrough/expunctuated">mel</del> mediantibus membris, id est, <choice><orig>speris</orig><reg>spheris</reg></choice> inferioribus 
           <lb ed="#R"/><g ref="#slash"/>et secundum hanc similitudinem homo vacatur minor mundus.</p>
-        
-          <p><lb ed="#R"/><g ref="#slash"/>Alia <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> quae apud quosdam videtur 
+        </div>
+          <div>
+            <head xml:id="l111-Hsvasva">Secunda via</head>
+          <p xml:id="l111-aiqapl"><lb ed="#R"/><g ref="#slash"/>Alia <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> quae apud quosdam videtur 
             <lb ed="#R"/>esse contraria primae, <g ref="#slash"/>apparet cum secundum proprium iudicium 
             <lb ed="#R"/>quod sacris <del rend="strikethrough/expunctuated">im</del> coincidat cum prima, <g ref="#slash"/>nam pla<g ref="#slash"/><lb ed="#R"/>netae 
             sunt effectum hic inferios primo et prin<g ref="#slash"/><lb ed="#R"/>cipaliter 
@@ -262,8 +296,10 @@
             ad effectuum productionem, <g ref="#slash"/>ut lumen 
             <lb ed="#R"/>non producit species colores, <g ref="#slash"/>sed cum color non 
             <lb ed="#R"/>potest producere species nisi <del rend="strikethrough">as</del> adsit <choice><orig>praesencia</orig><reg>praesentia</reg></choice> luminis.</p>
-        
-        <p><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> via quod planetae habent proportionales stel<g ref="#slash"/><lb ed="#R"/>las 
+          </div>
+          <div>
+            <head xml:id="l111-Htvatva">Tertia via</head>
+        <p xml:id="dL109tvqena"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> via quod planetae habent proportionales stel<g ref="#slash"/><lb ed="#R"/>las 
           fixas in <choice><orig>8va</orig><reg>octava</reg></choice> <choice><orig>spera</orig><reg>sphera</reg></choice> quaequid stellae fixae 
           <cb ed="#R" n="173va"/><lb ed="#R"/>recipiunt influentiam cum <choice><orig>9na</orig><reg>nona</reg></choice> <choice><orig>spera</orig><reg>sphera</reg></choice>, <g ref="#slash"/>et ideo effectus 
           <lb ed="#R"/>fiunt, <g ref="#slash"/>nec a plenetis sic quod contineant principaliter 
@@ -275,8 +311,8 @@
           <lb ed="#R"/>magna copia individuorum et posset contin<g ref="#slash"/><lb ed="#R"/>gere 
           per oppositum minus si tales stellae effectibus non 
           <lb ed="#R"/>applicentur.</p>
-        
-        <p><g ref="#dbslash"/>notandum est tamen quod rationes scientia<g ref="#slash"/><lb ed="#R"/>les 
+          
+        <p xml:id="l111-netqmc"><g ref="#dbslash"/>notandum est tamen quod rationes scientia<g ref="#slash"/><lb ed="#R"/>les 
           et causlitates causarum inferiorum non semper 
           <lb ed="#R"/>requirunt causam superiorem eis correspondentem adae<g ref="#slash"/><lb ed="#R"/>quate 
           <g ref="#slash"/>sed sufficit quod sit communis influentia vel 
@@ -289,7 +325,7 @@
           <lb ed="#R"/>in actum non requirit influentiam sibi adaequatem, 
           <lb ed="#R"/>sed sufficit quod sit communis et quodam modo commixta.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
+        <p xml:id="l111-sneepi"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
           <lb ed="#R"/>notandum est quod ratio scientialis vel causalitatis hic inferius 
           <lb ed="#R"/>quantum ad mixta perfecta movitur[?] et multum iuvatur 
           <lb ed="#R"/>vel impeditur a causa ei proportionata vel contraria in 
@@ -300,7 +336,7 @@
           <lb ed="#R"/>notat <name ref="Albertus">albertus</name> quod monstra consueverunt contin<g ref="#slash"/><lb ed="#R"/>gere 
           non solum ex parte materiae, sed etiam ex parte <choice><orig>influ<g ref="#slash"/><lb ed="#R"/>enciae</orig><reg>influ<g ref="#slash"/><lb ed="#R"/>entiae</reg></choice>.</p>
         
-        <p><g ref="#slash"/>Ex parte influentiae ut contingit quod sit 
+        <p xml:id="l111-epiahp"><g ref="#slash"/>Ex parte influentiae ut contingit quod sit 
           <lb ed="#R"/>aliqua dispositio in astris ad productionem a speciei 
           <lb ed="#R"/>contingit tamen per aliam influentiam advenientem 
           <lb ed="#R"/>fieri monstrum alterius speciei plene tamen, <g ref="#slash"/>et ita in 
@@ -309,17 +345,17 @@
           <lb ed="#R"/>influentiae quae viget tempore productionis seminis 
           <lb ed="#R"/>quaequid influentia est conveniens ad hominis produ<g ref="#slash"/><lb ed="#R"/>ctionem.</p>
         
-        <p><g ref="#slash"/>Ex primo dicto apparet quod multum inspicien<g ref="#slash"/><lb ed="#R"/>da 
+        <p xml:id="l111-epdcic"><g ref="#slash"/>Ex primo dicto apparet quod multum inspicien<g ref="#slash"/><lb ed="#R"/>da 
           est radix inferiorum causarum in actionibus inferio<g ref="#slash"/><lb ed="#R"/>ribus 
           patet quia radix causarum superiorum non haberet 
           <lb ed="#R"/>effectum nisi concordarent inferiores causae.</p>
         
-        <p><g ref="#slash"/> 
+        <p xml:id="l111-eqasmn"><g ref="#slash"/> 
           <lb ed="#R"/>Ex quo apparet quod <choice><orig>praesumptuosum</orig><reg>praesumptiosum</reg></choice> est intromittere 
           <lb ed="#R"/>de indicativa astrologiae alicui nisi sit 
           <lb ed="#R"/>maximus naturalis.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>sequitur</reg></choice> sequitur quod licet monstrum 
+        <p xml:id="l111-sqlicc"><g ref="#dbslash"/><choice><orig>3o</orig><reg>sequitur</reg></choice> sequitur quod licet monstrum 
           <lb ed="#R"/>et <choice><orig>pestilenciae</orig><reg>pestilentiae</reg></choice> et mutationes reducentur 
           <cb ed="#R" n="173vb"/><lb ed="#R"/>in causam caelestem ut in pluribus reducuntur 
           <lb ed="#R"/>in causam inferiorem, <g ref="#slash"/>nam secundum dispositionem influentiae 
@@ -332,8 +368,8 @@
           <lb ed="#R"/>potest contingere mortalitas et ex in dispositione re<g ref="#slash"/><lb ed="#R"/>gionum. 
           et ista non immediate reducitur in causam 
           <lb ed="#R"/>caelestem.</p>
-          
-          <p><g ref="#slash"/>Sunt etiam aliqua quae eveniunt quae 
+        
+          <p xml:id="l111-seacmp"><g ref="#slash"/>Sunt etiam aliqua quae eveniunt quae 
             <lb ed="#R"/>possunt resolvi in causa superiores ut quaedam aba[?] 
             <lb ed="#R"/>sunt venenosa ita influentia illorum producti<g ref="#slash"/><lb ed="#R"/>va 
             potest in aliquo tempore vigere taliter quod ratione 
@@ -342,18 +378,22 @@
             venenum conservativa potest contingere mor<g ref="#slash"/><lb ed="#R"/>talitas 
             et <choice><orig>pestilencia</orig><reg>pestilentia</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/>Alius modus po<g ref="#slash"/><lb ed="#R"/>nendi 
+        <p xml:id="l111-amppve"><g ref="#dbslash"/>Alius modus po<g ref="#slash"/><lb ed="#R"/>nendi 
           quod ordo naturalis non requirit aliquam conne<g ref="#slash"/><lb ed="#R"/>xionem 
           causarum mediarum inter se sed quilibet prae<g ref="#slash"/><lb ed="#R"/>requirit 
           influxum primae, et tunc ex va<g ref="#slash"/><lb ed="#R"/>riis 
           <choice><orig>influenciis</orig><reg>influentiis</reg></choice> hic inferius congregatis pro<g ref="#slash"/><lb ed="#R"/>ducuntur 
           varii effectus.</p>
-        
-        <p><g ref="#dbslash"/>Ex istis quacumque 
+        </div>
+        </div>
+        <div>
+          <head xml:id="l111-Hcorlri">Corollaria</head>
+          
+        <p xml:id="l111-eiqdic"><g ref="#dbslash"/>Ex istis quacumque 
           <lb ed="#R"/>via data inferentur corollaria.</p>
         <div>
-          <head>Primum corollarium</head>
-        <p><g ref="#slash"/>Primum est quod tota 
+          <head xml:id="l111-Hpcmpcm">Primum corollarium</head>
+        <p xml:id="l111-peqaci"><g ref="#slash"/>Primum est quod tota 
           <lb ed="#R"/>naturalis influentia corporum caelestium non se 
           <lb ed="#R"/>extendit ad aliquam electionem liberam 
           <lb ed="#R"/>taliter patet quia secundum omnes influentiae corproum 
@@ -376,8 +416,8 @@
           <lb ed="#R"/>inferiorum.</p>
       </div>
       <div>
-        <head>Secundum corollarium</head>
-        <p><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur quod si fiant productiones 
+        <head xml:id="l111-Hscmscm">Secundum corollarium</head>
+        <p xml:id="l111-ssqsps"><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur quod si fiant productiones 
           <lb ed="#R"/>et seditiones non debent imputari <name>saturno</name> 
           <lb ed="#R"/>nec etiam <name>marti</name> debet imputari aliquod <choice><orig>vicium</orig><reg>vitium</reg></choice> 
           <cb ed="#R" n="174ra"/><lb ed="#R"/>unde sunt aliqui qui sua <choice><orig>vicia</orig><reg>vitia</reg></choice> imponunt plane<g ref="#slash"/><lb ed="#R"/>tis 
@@ -391,8 +431,8 @@
           dignitas existit in suo potentissimo statu.</p>
       </div>
         <div>
-          <head>Tertium corollarium</head>
-          <p><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod nec illa quae pertinent ad religio<g ref="#slash"/><lb ed="#R"/>nem 
+          <head xml:id="l111-Htcmtcm">Tertium corollarium</head>
+          <p xml:id="l111-tsqdts"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod nec illa quae pertinent ad religio<g ref="#slash"/><lb ed="#R"/>nem 
             sacram nec illa quae pertinent ad sacrilegia 
             <lb ed="#R"/>reducuntur in corpora caelestia vel astrologia, <choice><orig>ymo</orig><reg>immo</reg></choice> prae<g ref="#slash"/><lb ed="#R"/>cise 
             <del rend="strikethrough">s</del> talia fiunt bonitate vel <choice><orig>malicia</orig><reg>malitia</reg></choice> hominum 
@@ -421,8 +461,8 @@
           
         </div>
         <div>
-          <head>Quartum corollarium</head>
-          <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> 
+          <head xml:id="dll109Hqcmqcm">Quartum corollarium</head>
+          <p xml:id="l111-qsqpqa"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> 
             <lb ed="#R"/>sequitur quod elevationes quae fiunt in certis constella<g ref="#slash"/><lb ed="#R"/>tionibus 
             non habent effectum nisi reducendo 
             <lb ed="#R"/>ad coporalem dispositionem ut stat quod ratione di<g ref="#slash"/><lb ed="#R"/>positionis 
@@ -430,21 +470,21 @@
             <lb ed="#R"/>gratus et tunc expedit illum hac hora ma<g ref="#slash"/><lb ed="#R"/>gis 
             adire principem quam alia.</p>
           
-          <p><g ref="#dbslash"/>Consequenter eleva<g ref="#slash"/><lb ed="#R"/>tiones 
+          <p xml:id="l111-ceqsah"><g ref="#dbslash"/>Consequenter eleva<g ref="#slash"/><lb ed="#R"/>tiones 
             quae tangunt regimen naturale non 
             <lb ed="#R"/>sunt negandae ut de flebotomia, <g ref="#slash"/>et 
             <lb ed="#R"/>ita per dei gratiam interpretandum est de aliquibus 
             <cb ed="#R" n="174rb"/><lb ed="#R"/>quod resolvant se ad hoc.</p>
         </div>
         <div>
-          <head>Quintum corollarium</head>
-          <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> sequitur quod magnae 
+          <head xml:id="l111-Hqcmqcm">Quintum corollarium</head>
+          <p xml:id="l111-Hqsqeat"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> sequitur quod magnae 
             <lb ed="#R"/>coniunctiones quae fiunt commutatione triplicis non 
             <lb ed="#R"/>sunt causa commutationis regni, <g ref="#slash"/>quia nec corpora 
             <lb ed="#R"/>caelestia nec eorum habitudo se extendit ad 
             <lb ed="#R"/>talia.</p>
           
-          <p><g ref="#slash"/>Consimiliter potest inferri de materia nativitatis 
+          <p xml:id="l111-Hcpiaap"><g ref="#slash"/>Consimiliter potest inferri de materia nativitatis 
             <lb ed="#R"/>quod casus qui accidunt nato alicui, <g ref="#slash"/>et alia 
             <lb ed="#R"/>quae a vetulis vel ab aliquibus astrologis 
             <lb ed="#R"/>dicuntur accidere non dependent a corporali<g ref="#slash"/><lb ed="#R"/>bus 
@@ -457,13 +497,16 @@
             <lb ed="#R"/>et alius erit malus. <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod staret 
             <lb ed="#R"/>quod unus esset generatus a reget et alius a 
             <lb ed="#R"/>paupere.</p>
-          
-          <p><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> et ultimo sequitur quod fatalis 
+        </div>
+          <div>
+            <head xml:id="l111-Hsxmsxm">Sextum corollarium</head>
+          <p xml:id="l111-Hseuaie"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> et ultimo sequitur quod fatalis 
             <lb ed="#R"/>series rerum prout capitur communiter nullam imponit <del rend="strikethrough/expunctuated">me</del> 
             <lb ed="#R"/>necessitatem libero arbitrio, <g ref="#slash"/>nam tota etiam con<g ref="#slash"/><lb ed="#R"/>cathenatio 
             causarum superiorum et inferiorum 
             <lb ed="#R"/>nullam posset imponere <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> libero arbitrio 
             <lb ed="#R"/>igitur etc.</p>
+        </div>
         </div>
           
         
