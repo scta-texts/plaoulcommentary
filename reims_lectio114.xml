@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,66 +31,84 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio114">
-      <head>Lectio 114, de Libertate [Reims Transcription]</head>
-       <p><lb ed="#R"/><hi>a<desc>space for three line drop cap</desc></hi>ntequam respondeatur ad rationes praedictas 
-         <lb ed="#R"/>sciendum est quod praedictas doctor capitulo <choice><orig>4o</orig><reg>quarto</reg></choice> <choice><orig>3ae</orig><reg>tertiae</reg></choice> 
-       partis <title ref="deCausaDei">summae</title> suae describit contingens ad utrumlibet 
+      <head xml:id="l114-Hldlldl">Lectio 114, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l114-Hpbdbdc">Propositiones Bradwardini de contingentibus</head>
+       <p xml:id="l114-arappp"><lb ed="#R"/><hi>a<desc>space for three line drop cap</desc></hi>ntequam respondeatur ad rationes praedictas 
+         <lb ed="#R"/>sciendum est quod <seg ana="#Bradwardine">praedictas doctor</seg> capitulo <choice><orig>4o</orig><reg>quarto</reg></choice> <choice><orig>3ae</orig><reg>tertiae</reg></choice> 
+       partis <title ref="#deCausaDei">summae</title> suae describit contingens ad utrumlibet 
          <lb ed="#R"/>quod est actus agendi libere per se et primo quo posito 
          <lb ed="#R"/>cum omnibus dispositionibus naturaliter primus non <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
          <lb ed="#R"/>sequitur ipsum produci sed utralibet <choice><orig>parcium</orig><reg>partium</reg></choice> potest stare aequaliter 
          <lb ed="#R"/>et in alio capitulo <choice><orig>5o</orig><reg>quinto</reg></choice> sequenti ponit propositiones plures.</p>
         
-        <p><lb ed="#R"/><g ref="#slash"/>Prima est quod propositiones de contingenti ad utrumlibe 
+        <p xml:id="l114-peqcmq"><lb ed="#R"/><g ref="#slash"/>Prima est quod propositiones de contingenti ad utrumlibet
           <lb ed="#R"/>aequaliter convertuntur modicam qualitatem.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio aliqua 
+        <p xml:id="l114-spasec"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio aliqua 
           <lb ed="#R"/>consequentia est bona quae non est <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> simpliciter nec ut 
           <lb ed="#R"/>nunc, sed est contingens.</p> 
         
-        <p><g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> aliqua causa indeterminata ad 
+        <p xml:id="l114-tacaae"><g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> aliqua causa indeterminata ad 
           <lb ed="#R"/>agendum agit aliquem effectum.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> omnis et solus 
-          <lb ed="#R"/>actus liber libertatem contradictionis est actus liber 
+        <p xml:id="l114-qoellc"><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> omnis et solus 
+          <lb ed="#R"/>actus liber libertatem contradictionis est</p> 
+          
+          <!-- homoeteleoton or other sort of omission here in Reims -->
+          
+          <p xml:id="l114-qnellc">actus liber 
           <lb ed="#R"/>libertate contradictionis.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>6a</orig><reg>sexta</reg></choice> contingentia ad utrumlibet 
+        <p xml:id="l114-scannr"><g ref="#dbslash"/><choice><orig>6a</orig><reg>sexta</reg></choice> contingentia ad utrumlibet 
           <lb ed="#R"/>et <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> non repugnat.</p>
         
-        <p><choice><orig>7ma</orig><reg>septima</reg></choice> contingentia dicitur 
+        <p xml:id="l114-scdprp"><choice><orig>7ma</orig><reg>septima</reg></choice> contingentia dicitur 
           <lb ed="#R"/>proprie respectu praesentis.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>8va</orig><reg>octava</reg></choice> libertas dicitur proprie respectu praesentis.</p>
+        <p xml:id="l114-oldprp"><g ref="#dbslash"/><choice><orig>8va</orig><reg>octava</reg></choice> libertas dicitur proprie respectu praesentis.</p>
         
-        <p><lb ed="#R"/><g ref="#slash"/><choice><orig>9na</orig><reg>nona</reg></choice> nullus actus creaturae dicitur simpliciter esse contens[?] 
-          <lb ed="#R"/>aequaliter sed tantum in determinato genere putat respectu causarum 
+        <p xml:id="l114-nacrci"><lb ed="#R"/><g ref="#slash"/><choice><orig>9na</orig><reg>nona</reg></choice> nullus actus creaturae dicitur simpliciter esse contingens[?] 
+          <lb ed="#R"/>aequaliter sed tantum in determinato genere, putat respectu causarum 
           <lb ed="#R"/>inferiorum.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>10ma</orig><reg>decima</reg></choice> nullus actus creaturae est liber 
+        <p xml:id="l114-dnarcs"><g ref="#dbslash"/><choice><orig>10ma</orig><reg>decima</reg></choice> nullus actus creaturae est liber 
           <lb ed="#R"/>simpliciter libertate contradictionis sed secundum quid, scilicet, respectu 
           <lb ed="#R"/>causarum <choice><orig>2arum</orig><reg>secundarum</reg></choice>.</p>
         
-        <p><g ref="#slash"/><choice><orig>11ma</orig><reg>undecima</reg></choice> solus actus voluntatis divinae 
+        <p xml:id="l114-usacea"><g ref="#slash"/><choice><orig>11ma</orig><reg>undecima</reg></choice> solus actus voluntatis divinae 
           <lb ed="#R"/>ad extra est simpliciter ad extra contingens et aequaliter.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>12ma</orig><reg>duodecima</reg></choice> solus actus divinae voluntatis est sim<g ref="#slash"/><lb ed="#R"/>pliciter 
+        <p xml:id="l114-dsallc"><g ref="#dbslash"/><choice><orig>12ma</orig><reg>duodecima</reg></choice> solus actus divinae voluntatis est sim<g ref="#slash"/><lb ed="#R"/>pliciter 
           liber liberate contradictionis.</p>
         
-        <p><g ref="#slash"/><choice><orig>13a</orig><reg>tres decima</reg></choice> propositio prima et 
+        <p xml:id="l114-tdpivd"><g ref="#slash"/><choice><orig>13a</orig><reg>tres decima</reg></choice> propositio prima et 
           <lb ed="#R"/>summa libertas contradictionis simul que[?] contingentia ad 
           <lb ed="#R"/>utrumlibet est in voluntate divina.</p>
-        
-        <p><g ref="#dbslash"/>Istae propositiones 
+        </div>
+        <div>
+          <head xml:id="l114-Hrobrob">Resolutio opinionis Bradwardini</head>
+      
+        <p xml:id="l114-ipsrsp"><g ref="#dbslash"/>Istae propositiones 
           <lb ed="#R"/>sunt valde mirabiles, quia nunc videtur concedere 
-          <lb ed="#R"/><choice><orig>contingenciam</orig><reg>contingentiam</reg></choice>, <g ref="#slash"/>nunc negare, <g ref="#slash"/>et ideo oportet resol<g ref="#slash"/><lb ed="#R"/>vere 
-          suam positionem. <g ref="#slash"/>Resolutio eius stat in hoc 
+          <lb ed="#R"/><choice><orig>contingenciam</orig><reg>contingentiam</reg></choice>, <g ref="#slash"/>nunc[?] negare, <g ref="#slash"/>et ideo oportet resol<g ref="#slash"/><lb ed="#R"/>vere 
+          suam positionem.</p> 
+          
+          <p xml:id="l114-resevt"><g ref="#slash"/>Resolutio eius stat in hoc 
           <lb ed="#R"/>primo videtur dicere quod qualitercumque deus ab aeterno 
           <lb ed="#R"/>disposuit taliter erit, <g ref="#slash"/>et quantum ad hoc ipse communicat 
-          <cb ed="#R" n="177ra"/><lb ed="#R"/>cum fide catholica, et veritate theologica.</p>
+          <cb ed="#R" n="177ra"/><lb ed="#R"/>cum fide catholica et veritate theologica.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> videtur 
+        <p xml:id="l114-svdane"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> videtur 
           <lb ed="#R"/>dicere quod non poterit aliter esse vel non poterit non esse 
           <lb ed="#R"/>quocumque sit provisum, <choice><orig>ymo</orig><reg>immo</reg></choice> <choice><orig>neccesse</orig><reg>necesse</reg></choice> et forae, <g ref="#slash"/>et quantum ad 
           <lb ed="#R"/>istam partem ipse ponit haeresim quod non oportet quod si deus 
@@ -97,17 +117,17 @@
           <lb ed="#R"/>deus vult antichristum fore igitur antichristus <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
           <lb ed="#R"/>erit.</p>
         
-        <p><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> vocat divinam voluntatem liberam quia 
+        <p xml:id="l114-tvdvqa"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> vocat divinam voluntatem liberam quia 
           <lb ed="#R"/>agit volendo quicquid agit.</p>
         
-        <p><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> intendit quod 
+        <p xml:id="l114-qiqssc"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> intendit quod 
           <lb ed="#R"/>quantum est ex parte rerum illae possunt contingenter et 
           <lb ed="#R"/>ad utrumlibet disponi, <g ref="#slash"/>unde et lapis ad utrumlibet ut 
           <lb ed="#R"/>quiescat vel moveatur a potentia motiva ita dicit 
           <lb ed="#R"/>ipse et actus nostri sunt indifferentes et res ob<g ref="#slash"/><lb ed="#R"/>iective 
           quantum est de se sunt contingentes.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> 
+        <p xml:id="l114-qpqvna"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> 
           <lb ed="#R"/>ponit quod voluntas humana quantum est de se habet 
           <lb ed="#R"/>libertatem contradicitionis, <g ref="#slash"/>ita quod positis omnibus causis 
           <lb ed="#R"/>requisitis ad actus voluntatis productionem 
@@ -117,10 +137,10 @@
           <lb ed="#R"/>et maxime positis causis inferioribus praeter primam 
           <lb ed="#R"/>nam signata tota multitudine causarum <choice><orig>2arum</orig><reg>secundarum</reg></choice> re<g ref="#slash"/><lb ed="#R"/>quisitarum 
           ad actus voluntatis productionem vo<g ref="#slash"/><lb ed="#R"/>luntatis 
-          human adhuc posset conformiter agere vel 
+          humanae[?] adhuc posset conformiter agere vel 
           <lb ed="#R"/>non agere.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>6m</orig><reg>sextum</reg></choice> dictum quod istis non obstantibus 
+        <p xml:id="l114-sdqden"><g ref="#dbslash"/><choice><orig>6m</orig><reg>sextum</reg></choice> dictum quod istis non obstantibus 
           <lb ed="#R"/>voluntas in omni suo actu <choice><orig>neccessitatur</orig><reg>necessitatur</reg></choice> non quid 
           <lb ed="#R"/>a causis <choice><orig>2is</orig><reg>secundis</reg></choice> non quin[?] sit libera intrinsece et non 
           <lb ed="#R"/>quin effectus sint contingentes, sed aliunde ac<g ref="#slash"/><lb ed="#R"/>cidit 
@@ -129,7 +149,7 @@
           <lb ed="#R"/>ad utrumlibet flecti seu exequi, <g ref="#slash"/>et eam limi<g ref="#slash"/><lb ed="#R"/>tant 
           ad agendum determinant et <choice><orig>neccessitant</orig><reg>necessitant</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>7m</orig><reg>septimum</reg></choice> 
+        <p xml:id="l114-sdqefv"><g ref="#dbslash"/><choice><orig>7m</orig><reg>septimum</reg></choice> 
           <lb ed="#R"/>dictum quod eius libertas salvatur sufficienter quia intrinsece 
           <lb ed="#R"/>est libera nec potest <choice><orig>neccessitare</orig><reg>necessitare</reg></choice> a causis <choice><orig>2is</orig><reg>secundis</reg></choice>. <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> 
           <lb ed="#R"/>dicitur libera ex eo quod numquam agit nisi vo<g ref="#slash"/><lb ed="#R"/>lens 
@@ -140,7 +160,7 @@
           <lb ed="#R"/>operationes voluntatis sunt in eius potestate 
           <lb ed="#R"/>quia eas facit volens.</p>
         
-        <p><g ref="#slash"/>Consequenter ponit quod liber<g ref="#slash"/><lb ed="#R"/>tas 
+        <p xml:id="l114-cpqvba"><g ref="#slash"/>Consequenter ponit quod liber<g ref="#slash"/><lb ed="#R"/>tas 
           et <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> non repugnant quia operatio 
           <lb ed="#R"/>voluntatis est <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> neccessitate primae causae 
           <lb ed="#R"/>concursus et tamen ipsa est libera, quia sic agendo 
@@ -150,7 +170,7 @@
           <lb ed="#R"/>nam voluntas male agens vult male 
           <lb ed="#R"/>agere licet <choice><orig>neccessitata</orig><reg>necessitata</reg></choice> et bene agens vult bene agere.</p>
         
-        <p><lb ed="#R"/><g ref="#slash"/>Exemplum ponit sic: <name ref="#Sortes">sortes</name> qui vadat ad ecclesiam 
+        <p xml:id="l114-epscsv"><lb ed="#R"/><g ref="#slash"/>Exemplum ponit sic: <name ref="#Sortes">sortes</name> qui vadat ad ecclesiam 
           <lb ed="#R"/>et velit dare elemosinam, <g ref="#slash"/>deinde super 
           <lb ed="#R"/>veniat virtus ipsum <choice><orig>neccessitans</orig><reg>necessitans</reg></choice> ad hoc 
           <lb ed="#R"/>nihilominus <name ref="#Sortes">sortes</name> aeque sponte et libere exequetur 
@@ -164,27 +184,31 @@
           et aliorum doctorum quas ipse inducit contra 
           <lb ed="#R"/>se, scilicet, quod homo non obligatur ad impossibile et huiusmodi au<g ref="#slash"/><lb ed="#R"/>ctoritates 
           dicit quod intelligendae sunt quod voluntas numquam 
-          <lb ed="#R"/>agit coacta seu violenta, <g ref="#slash"/>videtur tamen quod 
+          <lb ed="#R"/>agit coacta seu violenta.</p> 
+          
+          <p xml:id="l114-vtqvvp"><g ref="#slash"/>videtur tamen quod 
           <lb ed="#R"/>dicta sua non sint vera, quia per talem <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> 
           <lb ed="#R"/>quis excusaretur a culpa et tolleretur in eo 
           <lb ed="#R"/>meritum et sine dubio sophistice loquitur et 
           <lb ed="#R"/>subtiliter in hac materia, <g ref="#slash"/>nam positio eius est haeretica 
           <lb ed="#R"/>et est bene mirandum de tam bono doctore, <g ref="#slash"/>tamen 
-          <lb ed="#R"/>dictum est mihi ab alio doctore de anglia quod eum 
+          <lb ed="#R"/>dictum est mihi ab <seg>alio doctore de anglia</seg> quod eum 
           <lb ed="#R"/>iste esse in quadam disputa??ne[?] semel con<lb ed="#R"/>cessit 
           de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> evenire vi argumentorum 
           <lb ed="#R"/>sed per superbiam motus illam viam voluit 
           <lb ed="#R"/>prosequi.</p>
-        
-        <p><g ref="#dbslash"/>Et licet suae rationes et responsiones sint 
-          <lb ed="#R"/>sophisticae tamen videtur quoddam modo illo colarare, <g ref="#slash"/>sed 
+        </div>
+        <div>
+          <head xml:id="l114-Hacbacb">Argumenta contra Bradwardini</head>
+        <p xml:id="l114-elsapl"><g ref="#dbslash"/>Et licet suae rationes et responsiones sint 
+          <lb ed="#R"/>sophisticae tamen videtur quodammodo[?] illo colarare, <g ref="#slash"/>sed 
           <lb ed="#R"/>non hunc fundamentum quia nullo modo posset evitare 
           <lb ed="#R"/>quin deus <choice><orig>neccessitet</orig><reg>necessitet</reg></choice> creaturam ad peccandum 
           <lb ed="#R"/>secundum dicta sua cum dicit quod <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> antecedens non 
           <lb ed="#R"/>cogit voluntatem humanam quin suos actus pro<g ref="#slash"/><lb ed="#R"/>ducat 
           libere.</p>
         
-        <p><g ref="#slash"/>Sed contra arguitur significando volitionem 
+        <p xml:id="l114-scapna"><g ref="#slash"/>Sed contra arguitur significando volitionem 
           <lb ed="#R"/>malam <name ref="#Sortes">sortis</name> nundam productam quia quaereretur utrum 
           <lb ed="#R"/><name ref="#Sortes">sortes</name> qui cras eliciet illam malam volitionem poterit 
           <lb ed="#R"/>per quamcumque potentiam evitare productionem volitionis 
@@ -205,7 +229,7 @@
           <lb ed="#R"/>si non, <g ref="#slash"/>igitur obligatur ad impossibile. <g ref="#slash"/>Si potest evi<g ref="#slash"/><lb ed="#R"/>tare, 
           tunc non est ponenda <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> antecedens.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
+        <p xml:id="l114-sflvfa"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
           <lb ed="#R"/>frustra loquitur de contingentia quae per eum nulla 
           <lb ed="#R"/>penitus est <choice><orig>contingencia</orig><reg>contingentia</reg></choice>. <g ref="#slash"/>Etiam frustra dicit 
           <lb ed="#R"/>quod potentia est intrinsece libera, quia numquam actum 
@@ -213,18 +237,18 @@
           <lb ed="#R"/><g ref="#slash"/>et ideo suae discipulines sunt sophisticae ne videantur 
           <lb ed="#R"/>fidei adversari.</p>
         
-        <p><g ref="#slash"/>Etiam ipse ponit quod causae <choice><orig>2ae</orig><reg>secundae</reg></choice> 
+        <p xml:id="l114-eipade"><g ref="#slash"/>Etiam ipse ponit quod causae <choice><orig>2ae</orig><reg>secundae</reg></choice> 
           <lb ed="#R"/>ab aeterno determinatae sunt igitur <del rend="strikethrough/expunctuated">in</del><add place="aboveLine">ex</add> determinatione 
           <lb ed="#R"/>trahent neccessitatem in effectum quod est falsum patet igitur 
           <lb ed="#R"/>quia radix sua difficulta reducitur ad duos 
           <lb ed="#R"/>errores.</p>
         
-        <p><g ref="#slash"/>Primus est quod ex divina providen<g ref="#slash"/><lb ed="#R"/>tia 
+        <p xml:id="l114-peqmdi"><g ref="#slash"/>Primus est quod ex divina providen<g ref="#slash"/><lb ed="#R"/>tia 
           et ex divino proposito omnia futura evenient 
           <lb ed="#R"/>eodem modo quo sunt praeconcepta in mente divina et de ista 
           <lb ed="#R"/>materia dicetur inferius.</p>
         
-        <p><g ref="#slash"/><choice><orig>2us</orig><reg>secunds</reg></choice> error est quod voluntas 
+        <p xml:id="l114-seeivh"><g ref="#slash"/><choice><orig>2us</orig><reg>secundus</reg></choice> error est quod voluntas 
           <lb ed="#R"/>divina <choice><orig>neccessitas[?]</orig><reg>necessitas[?]</reg></choice> voluntatem humanam in omni suo actu 
           <lb ed="#R"/>praeveniendo et quantum ad hoc apparuit clare 
           <lb ed="#R"/>contraria veritas quia voluntas divina praevenit vo<g ref="#slash"/><lb ed="#R"/>luntatem 
@@ -235,17 +259,21 @@
           incidere in illum errorem nam <name ref="#Cicero">tulius</name> 
           maluit negare providentiam divinam quam liber<g ref="#slash"/><lb ed="#R"/>tatem 
           in voluntate humana.</p>
-        
-        <p><g ref="#dbslash"/>Ad rationes 
+        </div>
+        <div>
+          <head xml:id="l114-Hrararb">Responsiones ad rationes Bradwardini</head>
+        <div>
+          <head xml:id="l114-Hapmapm">Ad primam</head>
+          <p xml:id="l114-arivbd"><g ref="#dbslash"/>Ad rationes 
           <lb ed="#R"/>igitur respondendum est primo iste videtur se fulcire 
           <lb ed="#R"/>quia nisi <choice><orig>oppinio</orig><reg>opinio</reg></choice> sua esset vera tunc rediret 
           <lb ed="#R"/>error <name ref="#Pelagius">pellagii</name>, <g ref="#slash"/>nam ut dicit haec esset 
           <lb ed="#R"/>attribuere voluntati creatae concursus divinae 
           <lb ed="#R"/>voluntatis et libertatem et potestatem dei attri<g ref="#slash"/><lb ed="#R"/>buere 
           pure creaturae ad creaturam quod non 
-          <lb ed="#R"/>videtur bene dictum.</p>
+            <lb ed="#R"/>videtur bene dictum.</p> <!-- homoteleuton in reims here -->
         
-        <p><g ref="#dbslash"/>hic dicuntur aliqua primo 
+        <p xml:id="l114-hdaipd"><g ref="#dbslash"/>hic dicuntur aliqua. primo 
           <lb ed="#R"/>quod <name ref="#Pelagius">pellagius</name> et <name ref="#Augustine">augustinus</name> contendunt 
           <lb ed="#R"/>de praeventione divina per gratiam et per dona 
           <lb ed="#R"/>gratuita et non de praeventione primae causae 
@@ -253,23 +281,26 @@
           <lb ed="#R"/>potissime iste doctor et non de gratuita, <g ref="#slash"/> 
           <lb ed="#R"/>Ex quo clare apparet quod ratio non est ad propositum 
           <lb ed="#R"/>tamen <name ref="#Pelagius">pellagius</name> negaret praeventionem 
-          <lb ed="#R"/>gratuitam non specialiter praeventa sed generali modo 
+          <lb ed="#R"/>gratuitam.</p> 
+          
+          <!-- add break in reims | another homoeteleuton --> 
+          <p xml:id="l114-sdqipd">non specialiter praeventa sed generali modo 
           <cb ed="#R" n="177vb"/><lb ed="#R"/>non sufficit in actum dilectionis dei super omnia 
           <lb ed="#R"/>ista probata est in prima distinctione.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur 
+        <p xml:id="l114-tdqass"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur 
           <lb ed="#R"/>quod voluntas informata caritate sive specialis 
           <lb ed="#R"/>spiritus sancti vivificatoine non sufficit in actum dilectionis 
           <lb ed="#R"/>dei super omnia, <g ref="#slash"/>nam ut dictum est caritas 
           <lb ed="#R"/>non exit plenarie in actum nisi ducta et 
           <lb ed="#R"/>praeventa a spiritu sancto.</p>
         
-        <p><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicitur quod voluntas informata 
+        <p xml:id="l114-qdqdso"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicitur quod voluntas informata 
           <lb ed="#R"/>caritate et vivificata spiritus sancti assistentia suffi<g ref="#slash"/><lb ed="#R"/>ceret 
           in actus meritorios et diligere deum super 
           <lb ed="#R"/>omnia.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> dicitur quod cum istis adiutoriis positis 
+        <p xml:id="l114-qdqmpd"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> dicitur quod cum istis adiutoriis positis 
           <lb ed="#R"/>voluntas sufficeret naturaliter in actum exire qui 
           <lb ed="#R"/>est meritorius nec hoc faciet errori <name ref="#Pelagius">pellagii</name> 
           <lb ed="#R"/>quia voluntas humana non <del rend="strikethrough">s</del> ob hoc arguitur 
@@ -297,8 +328,10 @@
           actum bonum vel malum <choice><orig>ymo</orig><reg>immo</reg></choice> posset 
           <lb ed="#R"/>poni quod intenditur executio libertatis secundum ma<g ref="#slash"/><lb ed="#R"/>iorem 
           praeventionem divinam.</p>
-        
-        <p><g ref="#dbslash"/>Ad <choice><orig>2am</orig><reg>secundum</reg></choice> rationem 
+        </div>
+        <div>
+          <head xml:id="l114-HHasrasr">Ad secundum rationem</head>
+        <p xml:id="l114-asrvnp"><g ref="#dbslash"/>Ad <choice><orig>2am</orig><reg>secundum</reg></choice> rationem 
           <lb ed="#R"/>cum dicit deus vult a voluntate producere 
           <lb ed="#R"/><g ref="#dot"/>p[?]<g ref="#dot"/> actum, ergo voluntas producet <g ref="#dot"/>p[?]<g ref="#dot"/> antecedens 
           <lb ed="#R"/>non est in potestate voluntatis creatae ergo nec consequens. 
@@ -312,7 +345,9 @@
           <lb ed="#R"/>sed solus deus habet in potestate quamcumque creaturam de 
           <lb ed="#R"/>qua potuit facere ad libitum, si ante aliquid dicatur 
           <lb ed="#R"/>esse in potestate voluntatis humanae, <g ref="#slash"/>quia in libertate 
-          <lb ed="#R"/>eius est illud ponere vel non ponere, <g ref="#slash"/>positis 
+          <lb ed="#R"/>eius est illud ponere vel non ponere.</p> 
+          
+          <p xml:id="l114-poavic"><g ref="#slash"/>positis 
           <lb ed="#R"/>omnibus aliis causis requisitis, <g ref="#slash"/>ita quod si omnis 
           <lb ed="#R"/>causae <choice><orig>2ae</orig><reg>secundae</reg></choice> ad hoc requisitae applicarentur 
           <lb ed="#R"/>voluntas posset ponere illud vel non ponere et sic concedendum 
@@ -332,15 +367,17 @@
           <lb ed="#R"/>quia sic est in potestate voluntatis sequitur quod voluntas 
           <lb ed="#R"/>ibi concurrit.</p>
         
-        <p><g ref="#slash"/>Sed contra antecedens non est in potestate volun<g ref="#slash"/><lb ed="#R"/>tatis 
+        <p xml:id="l114-scaiic"><g ref="#slash"/>Sed contra antecedens non est in potestate volun<g ref="#slash"/><lb ed="#R"/>tatis 
           auucrative[?] igitur nec consequens <g ref="#slash"/><del rend="strikethrough">nec</del> negatur consequentia quia 
           <lb ed="#R"/>consequens est in potestate voluntatis auctoritative quia 
           <lb ed="#R"/>voluntas est divina suorum actuum et habet potestatem 
           <lb ed="#R"/>non ponendi actum. <g ref="#slash"/>Sed causa quare consequentia non valet 
           <lb ed="#R"/>est quia aliquid includitur in antecedente, scilicet, sub auctoritas 
           <lb ed="#R"/>quae tamen non includitur in consequente.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> ratio nisi 
+        </div>
+          <div>
+            <head xml:id="l114-Hatratr">Ad tertiam rationem</head>
+        <p xml:id="l114-trnpin"><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> ratio nisi 
           <lb ed="#R"/>deus praeveniret voluntatem creatam sequitur 
           <lb ed="#R"/>quod voluntas posset facere deum periurum et mendacem 
           <lb ed="#R"/>ut arguebatur heri, <g ref="#slash"/>hic dicitur quod si deus 
@@ -354,24 +391,29 @@
           <lb ed="#R"/>ita nec revelatio potest esse falsa quia sequitur 
           <lb ed="#R"/>conformiter de natura sua <del rend="strikethrough/expunctuated">suam</del> veram et 
           <lb ed="#R"/>ista est mobilis perfectio infinitae nobilitatis.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
+          </div>
+          <div>
+            <head xml:id="l114-Haqraqr">Ad quartam rationem</head>
+        <p xml:id="l114-qrqird"><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
           <lb ed="#R"/>ratio quaelibet potentia <choice><orig>forcior</orig><reg>fortior</reg></choice> potest debiliorem <choice><orig>neccessitare</orig><reg>necessitare</reg></choice> 
           <cb ed="#R" n="178rb"/><lb ed="#R"/>igitur divina voluntas quae est in infinitum perfectior quam huma<g ref="#slash"/><lb ed="#R"/>na 
           <choice><orig>neccessitabit</orig><reg>necessitabit</reg></choice> voluntatem humanam ista ratio 
-          <lb ed="#R"/><choice><orig>defficit</orig><reg>deficit</reg></choice> primo quia assumit unum falsum dividendo generatur 
+          <lb ed="#R"/><choice><orig>defficit</orig><reg>deficit</reg></choice>.</p> 
+            
+            <p xml:id="l114-pqanaa">primo quia assumit unum falsum dividendo generatur 
           <lb ed="#R"/>quod quaelibet potentia <choice><orig>forcior</orig><reg>fortior</reg></choice> possit <choice><orig>neccessitare</orig><reg>necessitare</reg></choice> inferiorem 
           <lb ed="#R"/>ad agendum, <g ref="#slash"/>nam ignis est fortior activitas quam 
-          <lb ed="#R"/>aeque et tamen non posset eam <choice><orig>neccesitare</orig><reg>necessitare</reg></choice> ad agendum 
-          <lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod argumentum non est ad propositum, quia iste dicit 
+          <lb ed="#R"/>aeque et tamen non posset eam <choice><orig>neccesitare</orig><reg>necessitare</reg></choice> ad agendum.</p>
+            
+          <p xml:id="l114-sdqcsn"><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod argumentum non est ad propositum, quia iste dicit 
           <lb ed="#R"/>de facto quod quaelibet voluntas creata semper <choice><orig>neccessitatur</orig><reg>necessitatur</reg></choice>.</p>
           
-          <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod dato quod in quolibet actu divina 
+          <p xml:id="l114-tdqqnn"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod dato quod in quolibet actu divina 
             <lb ed="#R"/>praeventio <choice><orig>neccessitaret</orig><reg>necessitaret</reg></choice> voluntatem creatam, <g ref="#slash"/>dicitur 
             <lb ed="#R"/>tamen quod contingenter <choice><orig>neccessitaret</orig><reg>necessitaret</reg></choice>, <g ref="#slash"/>nam iste habet probare[?] 
             <lb ed="#R"/>quod <choice><orig>neccessario</orig><reg>necessario</reg></choice> <choice><orig>neccessitaret</orig><reg>necessitaret</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicitur quod de possibili 
+        <p xml:id="l114-qdqlvc"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicitur quod de possibili 
           <lb ed="#R"/>implicat contradictionem causam prima <choice><orig>neccessitare</orig><reg>necessitare</reg></choice> volun<g ref="#slash"/><lb ed="#R"/>tatem 
           creatam respectu sui actus liberi concurrendo ac<g ref="#slash"/><lb ed="#R"/>tive 
         per modum autem obiecti vel finis, <g ref="#slash"/>si aliter 
@@ -387,12 +429,12 @@
           <lb ed="#R"/>de facto sed etiam de possibili implicat contradictionem 
           <lb ed="#R"/>causam primam neccessitare libertatem voluntatis creatae.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> dicitur quod dato quod divina voluntas cum con<g ref="#slash"/><lb ed="#R"/>curreret 
+        <p xml:id="l114-qdqpen"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> dicitur quod dato quod divina voluntas cum con<g ref="#slash"/><lb ed="#R"/>curreret 
           cum humana, <g ref="#slash"/>nec posset humana resi<g ref="#slash"/><lb ed="#R"/>lire 
           voluntati divinae nihilominus voluntas divina 
           <lb ed="#R"/>non posset eam <choice><orig>neccessitare</orig><reg>necessitare</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> dicitur quod licet 
+        <p xml:id="l114-sdqfob"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> dicitur quod licet 
           <lb ed="#R"/>voluntas divina <del rend="strikethrough/expunctuated">non posset eam neccessitare</del> 
           <lb ed="#R"/>faceret voluntatem humanam <choice><orig>neccessitari</orig><reg>necessitari</reg></choice>, <g ref="#slash"/>tunc 
           <lb ed="#R"/>ipsa non concurreret cum divina voluntate secundum 
@@ -421,7 +463,8 @@
           <lb ed="#R"/>est nobilior quam activitas libera. <g ref="#slash"/>Unde nihilominus 
           <lb ed="#R"/>valde bene staret nec esset inconvenines quod deus 
           <lb ed="#R"/><choice><orig>neccessitaret</orig><reg>necessitaret</reg></choice> creaturas in patria in fruitione obiecti bea<g ref="#slash"/><lb ed="#R"/>tifici.</p>
-        
+          </div>
+        </div>
       </div>
     </body>
   </text>
