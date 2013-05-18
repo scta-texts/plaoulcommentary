@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,16 +31,26 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio116">
-      <head>Lectio 116, de Libertate [Reims Transcription]</head>
-        <p><lb ed="#R"/><hi>c<desc>room left for three line drop cap</desc></hi>Irca generalem manuductionem 
+      <head xml:id="l116-Hldlldl">Lectio 116, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l116-Hqderfc">Quare difficultas est intelligere concordiam divinae praescientiae respectu futurorum contingentium</head>
+          
+          <p xml:id="l116-cigpca"><lb ed="#R"/><hi>c<desc>room left for three line drop cap</desc></hi>Irca generalem manuductionem 
           <lb ed="#R"/>materiae praesentis dictum est quod ad immensitatem 
           <lb ed="#R"/>divinae <del rend="strikethrough/expunctuated">resolutionis</del> cognitionis resolvenda 
-          <lb ed="#R"/>est praesens materia propter ignorantaim oritur difficultas ma<g ref="#slash"/><lb ed="#R"/>xima 
+          <lb ed="#R"/>est praesens materia propter ignorantiam oritur difficultas ma<g ref="#slash"/><lb ed="#R"/>xima 
         in praesenti lectione vel materia, <g ref="#slash"/>quare 
           <lb ed="#R"/>circa hoc est advertendum quod in hiis quae transcendunt 
-          <lb ed="#R"/>limites nostrae cognitonis et naturalis seu hu<lb ed="#R"/>manae 
+          <lb ed="#R"/>limites nostrae cognitionis et naturalis seu hu<lb ed="#R"/>manae 
         investigationis locus ab auctoritate est 
           <lb ed="#R"/>argumentum potissimum[?] et semper debet rationi praeponderari 
           <lb ed="#R"/>et tam est quia infirmitas rationis in tali materia 
@@ -47,7 +59,7 @@
           <lb ed="#R"/>in arte domificatoria quantumcumque ingenio 
           <cb ed="#R" n="180ra"/><lb ed="#R"/>polleat credit artifici.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod 
+          <p xml:id="l116-snepad"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod 
           <lb ed="#R"/>sicut dictum est corruptela peccati est causa adhaesi<g ref="#slash"/><lb ed="#R"/>onis 
           falsitatum <choice><orig>concernencium</orig><reg>concernentium</reg></choice> humanam felici<g ref="#slash"/><lb ed="#R"/>tatem 
         et falsarum <choice><orig>apparencium</orig><reg>apparentium</reg></choice>. <g ref="#slash"/>Et ubi non est 
@@ -58,16 +70,23 @@
           <lb ed="#R"/><choice><orig>vicia</orig><reg>vitia</reg></choice> et <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> evenientibus imponere, <g ref="#slash"/>et 
           <lb ed="#R"/>pertinenter applicando dicitur.</p>
         
-        <p><choice><orig>3o</orig><reg>tertio</reg></choice> quod apud indifferentem 
+          <p xml:id="l116-tqapap"><choice><orig>3o</orig><reg>tertio</reg></choice> quod apud indifferentem 
           <lb ed="#R"/>bene dispositum in lumine naturali <choice><orig>apparencius</orig><reg>apparentius</reg></choice> 
           <lb ed="#R"/>concluditur concordiam divinae praescientiae respectu futurorum 
           <lb ed="#R"/><choice><orig>contingencium</orig><reg>contingentium</reg></choice> cum libero arbitrio quod eius contrarium 
           <lb ed="#R"/>ita quod circumscripta fide rationes inde venientes 
           <lb ed="#R"/>sunt vehementiores pro illa concordia ad salvandum 
           <lb ed="#R"/><choice><orig>contingenciam</orig><reg>contingentiam</reg></choice> futurorum <choice><orig>procedencium</orig><reg>procedentium</reg></choice> a divina 
-          <lb ed="#R"/>praescientia cum libero arbitrio quam pro alia parte, <g ref="#slash"/>pro 
+          <lb ed="#R"/>praescientia cum libero arbitrio quam pro alia parte.</p> 
+        </div>
+        <div>
+          <head xml:id="l116-Hrfppel">Rationes fundamentales pro concordia praescientiae et libertatis</head>
+          
+          <p xml:id="l116-pcdpup"><g ref="#slash"/>pro 
           <lb ed="#R"/>cuius declaratione inducuntur rationes fundamentales 
-          <lb ed="#R"/>pro utraque parte prima est haec consequentia est bona in 
+          <lb ed="#R"/>pro utraque parte.</p> 
+          
+          <p xml:id="l116-pehcdp">prima est haec consequentia est bona in 
           <lb ed="#R"/>lumine naturali et <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> deus est universaliter perfectus, 
           <lb ed="#R"/>ergo ipse omni sciens et per consequens contradictoriae liber 
           <lb ed="#R"/>ista consequentia est apparentissima in lumine naturali apud 
@@ -76,7 +95,7 @@
           quae dicunt perfectione, ergo conveniunt universaliter 
           <lb ed="#R"/>perfectio quod est deus et antecedens concedunt omnes philosophi 
           <lb ed="#R"/>dicentes deum esse cuius centrum est ubique et 
-          <lb ed="#R"/><choice><orig>circumferencia</orig><reg>circumferentia</reg></choice> cum dei praescientia, <g ref="#slash"/>nam ex hoc quod deus 
+          <lb ed="#R"/><choice><orig>circumferencia</orig><reg>circumferentia</reg></choice> cum dei praescientia. <g ref="#slash"/>nam ex hoc quod deus 
           <lb ed="#R"/>est omnisciens sequitur quod nulla veritas eum latet 
           <lb ed="#R"/>et ex hoc est contradictoriae liber. <g ref="#slash"/>Sequitur quod indifferenter 
           <lb ed="#R"/>potest <g ref="#dot"/><c>a</c><g ref="#dot"/>futurum producere vel non producere igitur apud 
@@ -84,7 +103,7 @@
           <lb ed="#R"/>affectatum deducitur apparenter concordia futurorum 
           <lb ed="#R"/><choice><orig>contingencium</orig><reg>contingentium</reg></choice> cum divina praescientia.</p> 
         
-        <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> ratio deus 
+          <p xml:id="l116-srdapp"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> ratio deus 
           <lb ed="#R"/>est optimus gubernator ergo ipse praescit mala 
           <lb ed="#R"/>contingenter futura evenire patet deductio 
           <lb ed="#R"/>quia eo ipso quod ipse est optimus ipse non cognoscit 
@@ -93,7 +112,7 @@
           <lb ed="#R"/>eveniat hoc est contingenter modo antecedens conceditur 
           <lb ed="#R"/>a pluribus philosophis.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> ratio deus est cum sciens 
+          <p xml:id="l116-trdaia"><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> ratio deus est cum sciens 
           <lb ed="#R"/>et <name ref="#Sortes">sortes</name> libere producit <g ref="#dot"/><c>a</c><g ref="#dot"/> actum igitur praescientia divina 
           <lb ed="#R"/>est futuris contingentibus compossibilis deductio est nota 
           <cb ed="#R" n="180rb"/><lb ed="#R"/>quia ex prima parte antecedentis, scilicet, quod deus est omnisciens 
@@ -103,7 +122,7 @@
           <lb ed="#R"/>non producere ut levare, <g ref="#slash"/>nec est contra materiam 
           <lb ed="#R"/>de praescientia futurum argumentum ita apparens.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
+          <p xml:id="l116-qraaee"><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
           <lb ed="#R"/>ratio ad universaliter perfectum spectat res cognoscere 
           <lb ed="#R"/>secundum omnes suas habitudines proprietates, ergo deus 
           <lb ed="#R"/>cognoscit res contingere et cognoscit eam fore 
@@ -114,22 +133,26 @@
           <lb ed="#R"/>divina cognitio nullo modo repugnat contingentiae 
           <lb ed="#R"/>rerum alias esset error.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur haec positio 
+          <p xml:id="l116-qahrfc"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur haec positio 
           <lb ed="#R"/>non est solum propria fidei, sed convenit cuilibet vere phanti[?]. 
           <lb ed="#R"/><g ref="#slash"/>Ex quo apparet quod circumscripta fide apparenter con<lb ed="#R"/>cluditur 
           concordia divinae praescise cul libero ar<g ref="#slash"/><lb ed="#R"/>bitrio 
           respectu futurorum <choice><orig>contingencium</orig><reg>contingentium</reg></choice>.</p>
-        
-        <p><g ref="#dbslash"/>Pro parte 
+          </div>
+          <div>
+            <head xml:id="l116-Hrococc">Rationes oppositae: contra concordiam</head>
+            <p xml:id="l116-ppface"><g ref="#dbslash"/>Pro parte 
           <lb ed="#R"/>falsitatis tunc oportebit quod <choice><orig>discuciant</orig><reg>discutiant</reg></choice> rationes 
           <lb ed="#R"/>oppositae praemissis nam prima radix pro parte 
           <lb ed="#R"/>falsitatis est ista quod deus ab aeterno sit noverit 
-          <lb ed="#R"/>a fore futurum, ergo neccessario ita erit ista consequentia 
+          <lb ed="#R"/>a fore futurum, ergo <choice><orig>neccessario</orig><reg>necessario</reg></choice> ita erit. ista consequentia 
           <lb ed="#R"/>videtur apparentissima, quia ab aeterno aliquid convenit 
           <lb ed="#R"/>deo videtur quod omnino immutabiliter et invariabiliter 
-          <lb ed="#R"/>et <choice><orig>neccessario</orig><reg>necessario</reg></choice> hoc sit sicut ab aeterno conceptum est <g ref="#slash"/> 
+          <lb ed="#R"/>et <choice><orig>neccessario</orig><reg>necessario</reg></choice> hoc sit sicut ab aeterno conceptum est.</p> 
+            
+            <p xml:id="l116-usriad"><g ref="#slash"/> 
           <lb ed="#R"/>unde <choice><orig>2a</orig><reg>secunda</reg></choice> ratio reducitur ad hoc quod deus cognoscit 
-          <lb ed="#R"/><g ref="#dot"/><c>a</c><g ref="#dot"/> futurm immutabiliter igitur deus cognoscit <g ref="#dot"/><c>a</c><g ref="#dot"/> <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
+          <lb ed="#R"/><g ref="#dot"/><c>a</c><g ref="#dot"/> futurum immutabiliter igitur deus cognoscit <g ref="#dot"/><c>a</c><g ref="#dot"/> <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
           <lb ed="#R"/>fore futurum ista videtur apud homines equi<g ref="#slash"/><lb ed="#R"/>polere[?] 
           immutabiliter et ab aeterno et <choice><orig>neccessario</orig><reg>necessario</reg></choice> <g ref="#slash"/> 
           <lb ed="#R"/>et sic tota radix <choice><orig>errancium</orig><reg>errantium</reg></choice> in hac materia re<g ref="#slash"/><lb ed="#R"/>dupliciter 
@@ -137,8 +160,10 @@
           <lb ed="#R"/>aeterno <g ref="#dot"/><c>a</c><g ref="#dot"/> futurum igitur <choice><orig>neccessario</orig><reg>necessario</reg></choice> erit, <g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> consequentia deus 
           <lb ed="#R"/>scit immutabiliter <c>a</c><g ref="#dot"/> futurum <g ref="#dot"/>igitur <g ref="#dot"/><c>a</c><g ref="#dot"/> <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
           erit.</p>
-        
-        <p><g ref="#dbslash"/>Circa <choice><orig>2am</orig><reg>secundam</reg></choice> dicitur quod ratio est sophistica nec 
+          </div>
+        <div>
+          <head xml:id="l116-Hrarrcc">Responsiones ad rationes contra concordiam</head>
+          <p xml:id="l116-csdisp"><g ref="#dbslash"/>Circa <choice><orig>2am</orig><reg>secundam</reg></choice> dicitur quod ratio est sophistica nec 
           <lb ed="#R"/>debet intellectum ratione sui parvi ponderis, <g ref="#slash"/>sed movet 
           <lb ed="#R"/>ratione <choice><orig>deffectus</orig><reg>defectus</reg></choice> considerantis, <g ref="#slash"/>et habet <choice><orig>deffectum</orig><reg>defectum</reg></choice> 
           <lb ed="#R"/>ex indispositione recipientis declaratur 
@@ -150,7 +175,9 @@
           <lb ed="#R"/>formaliter et adaequate. <g ref="#slash"/>Unde omnes habent 
           <lb ed="#R"/>concedere quod deus scivit istam negativam 
           <cb ed="#R" n="180va"/><lb ed="#R"/>antichristus non est et erit eius scientia usque 
-          <lb ed="#R"/>ad instans suae productionis, <g ref="#slash"/>sed in primo in<lb ed="#R"/>stanti 
+          <lb ed="#R"/>ad instans suae productionis.</p> 
+            
+          <p xml:id="l116-sipdcf"><g ref="#slash"/>sed in primo in<lb ed="#R"/>stanti 
           suae productionis scientia divina erit 
           <lb ed="#R"/>scientia de eius opposita seu contraria et ita 
           <lb ed="#R"/>considerata immensitate divinae praescientiae  nulla arguitur 
@@ -162,7 +189,7 @@
           <lb ed="#R"/>deus ab aeterno scivit <g ref="#dot"/><c>a</c><g ref="#dot"/> futurum igitur <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
           <lb ed="#R"/>erit nam datur eiusdem <choice><orig>instancia</orig><reg>instantia</reg></choice> posito 
           <lb ed="#R"/>per impossibile quod deus non esset vel nihil ad extra 
-          <lb ed="#R"/>cognosceret futrum est quod antichristus erit ab aeterno 
+          <lb ed="#R"/>cognosceret futurum est quod antichristus erit ab aeterno 
           <lb ed="#R"/>futurum fuit et si sic contentus[?] potest non fore 
           <lb ed="#R"/>nam licet ab aeterno futurm fuerit potest 
           <lb ed="#R"/>tamen non esse sic quod numquam erit futurum igitur non est 
@@ -178,8 +205,10 @@
           <lb ed="#R"/>habeamus quod divina scientia possit esse iudicium 
           <lb ed="#R"/>contrariorum, <g ref="#slash"/>tunc salvatur faciliter cum libertate 
           <lb ed="#R"/>et praescientia divina <choice><orig>contingencia</orig><reg>contingentia</reg></choice> futurorum.</p>
-        
-        <p><g ref="#dbslash"/>
+          </div>
+          <div>
+            <head xml:id="l116-Hcnecne">Conclusiones negativae</head>
+            <p xml:id="l116-pmtamf"><g ref="#dbslash"/>
           <lb ed="#R"/>Pro maiori tamen declaratione materiae et de modo 
           <lb ed="#R"/>cognoscendi futura <choice><orig>contingencia</orig><reg>contingentia</reg></choice> cum divina prae<g ref="#slash"/><lb ed="#R"/>scientia 
           ut cum ea sint incompossibilia ponuntur 
@@ -187,13 +216,13 @@
           <lb ed="#R"/>modos falsos.</p>
         
         <div>
-          <head>Prima propositio negativa</head>
-        <p><g ref="#slash"/>prima est ex divina essentia 
+          <head xml:id="l116-Hppnppn">Prima propositio negativa</head>
+          <p xml:id="l116-peefti"><g ref="#slash"/>prima est ex divina essentia 
           <lb ed="#R"/>non per hoc evidenter cognoscit futura contin<g ref="#slash"/><lb ed="#R"/>gentia 
           quod eius aeternitas coexistat toti 
           <lb ed="#R"/>durationi vel fluxui temporis <choice><orig>ymagina<g ref="#slash"/><lb ed="#R"/>rii</orig><reg>imaginarii</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/>Pro quo est advertendum quod aliqui 
+          <p xml:id="l116-pqeldc"><g ref="#dbslash"/>Pro quo est advertendum quod aliqui 
           <lb ed="#R"/>doctores dixerunt deum per hoc cognoscere 
           <lb ed="#R"/>futura <choice><orig>contingencia</orig><reg>contingentia</reg></choice> quia divina aeternitas co<g ref="#slash"/><lb ed="#R"/>existit 
           toti tempori a parte ante et post. <g ref="#slash"/>Et 
@@ -206,9 +235,9 @@
           <lb ed="#R"/>licet iustans temporis relativum est ad divinam aeternitatem 
           <lb ed="#R"/>immensam quae est omnium cognoscibilium cognitio et pos<lb ed="#R"/>sibilitas 
           producendi secundum eius benplacitum et 
-          <lb ed="#R"/>ista <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> ponit <name ref="#Anselm">anselmus</name> in libro de con<lb ed="#R"/>cordia.</p>
+          <lb ed="#R"/>ista <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> ponit <name ref="#Anselm">anselmus</name> in libro <title>de con<lb ed="#R"/>cordia</title>.</p>
         
-        <p><g ref="#dbslash"/>Sed contra istam positionem probando conclusionem 
+          <p xml:id="l116-sciiap"><g ref="#dbslash"/>Sed contra istam positionem probando conclusionem 
           <lb ed="#R"/>positam arguitur quia pnia[?] creaturae est totaliter 
           <lb ed="#R"/>impertinens ad divinam cognitionem vel ad hoc quod a deo 
           <lb ed="#R"/>cognosicitur igitur positio est falsa. antecdedens apparet quia creatura ad di<lb ed="#R"/>vinam 
@@ -217,7 +246,7 @@
           a creaturis nec dependere potest igitur illa 
           <lb ed="#R"/>est impertinens ad propositum.</p>
         
-          <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur quod <name ref="#Anselm">venera<lb ed="#R"/>bilis 
+          <p xml:id="l116-saqami"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur quod <name ref="#Anselm">venera<lb ed="#R"/>bilis 
             anselmus</name> non capit habitudinem aeternitatis 
             <lb ed="#R"/>ad tempus nam ipse videtur <choice><orig>ymmaginari</orig><reg>imaginari</reg></choice> quod 
             <lb ed="#R"/>habitudo aeternitatis ad tempus sit per modum 
@@ -228,7 +257,7 @@
             <lb ed="#R"/>licet sic contentivus temporis non est tamen extensivus 
             <lb ed="#R"/>ad motum illius.</p>
           
-          <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> ex hoc sequitur evidenter 
+          <p xml:id="l116-tehtdn"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> ex hoc sequitur evidenter 
             <lb ed="#R"/>quod tanta sic libertas divinae praescientiae respectu praeteri<lb ed="#R"/>torum 
             sicut respectu futurorum et praesencium consequens est contra 
             <lb ed="#R"/>articulum parisiensis et etiam philosophi non concesserunt quod 
@@ -252,14 +281,14 @@
           
         </div>
         <div>
-          <head>Secunda propositio negativa</head>
-          <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio per nullam intrinsecam contingentiam 
+          <head xml:id="l116-Hspnspn">Secunda propositio negativa</head>
+          <p xml:id="l116-scpcfc"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio per nullam intrinsecam contingentiam 
             <lb ed="#R"/>cogerit[?] deus futura <choice><orig>contingencia</orig><reg>contingentia</reg></choice> quod est contra 
             <lb ed="#R"/>aliquos dicentes quod deus realiter ad 
             <lb ed="#R"/><del rend="strikethrough/expunctuated">extra</del> intra <choice><orig>contingencia</orig><reg>contingentia</reg></choice> est aliqua in deo 
             <cb ed="#R" n="181ra"/><lb ed="#R"/>quae est ratio cognoscendi futura contingentia.</p>
           
-          <p><g ref="#slash"/>Consequenter 
+          <p xml:id="l116-ccifrc"><g ref="#slash"/>Consequenter 
             <lb ed="#R"/>concedit ista <choice><orig>oppinio</orig><reg>opinio</reg></choice> quod sicut futura contingentia 
             <lb ed="#R"/>possunt realiter non esse ita ratio intrinseca quae 
             <lb ed="#R"/>realiter est deus potest non esse, <g ref="#slash"/>nam ratio cognoscendi 
@@ -275,8 +304,10 @@
             <lb ed="#R"/>sic ipsa formaliter deus et est ratio formalis rerum 
             <lb ed="#R"/><choice><orig>contingencium</orig><reg>contingentium</reg></choice>.</p>
         
-          <p><g ref="#dbslash"/>Contra istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> posita 
-            <lb ed="#R"/>est conclusio praedicta et probatur multipliciter, <g ref="#slash"/>primo quia 
+          <p xml:id="l116-cioepm"><g ref="#dbslash"/>Contra istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> posita 
+            <lb ed="#R"/>est conclusio praedicta et probatur multipliciter.</p> 
+          
+          <p xml:id="l116-pqierc"><g ref="#slash"/>primo quia 
             <lb ed="#R"/>in deo et parte rei circumscriptis conceptibus in 
             <lb ed="#R"/>deo non potest esse contingentia, quia deus est simpliciter 
             <lb ed="#R"/>aeternus immutabilis secundum se et quodlibet est simpliciter 
@@ -284,12 +315,12 @@
             <lb ed="#R"/>purus actus habens omnem possibilem perfectionem 
             <lb ed="#R"/>igitur in eo nulla est realis <choice><orig>contingencia</orig><reg>contingentia</reg></choice>.</p>
           
-          <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
+          <p xml:id="l116-siadva"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
             <lb ed="#R"/>in aeternis non differunt posset et esse, <g ref="#slash"/>et etiam secundum igitur 
             <lb ed="#R"/>illa quae sunt aeterna vel deus <choice><orig>neccessario</orig><reg>necessario</reg></choice> sunt deus 
             <lb ed="#R"/>vel aeterna.</p>
           
-          <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> signetur contingentia in deo et sic 
+          <p xml:id="l116-tsccdp"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> signetur contingentia in deo et sic 
             <lb ed="#R"/><g ref="#dot"/><c>a</c><g ref="#dot"/> <g ref="#slash"/><g ref="#dot"/><c>a</c><g ref="#dot"/> non est accidens deo inhaerens ut met isti 
             <lb ed="#R"/>concedunt igitur est deus, <g ref="#slash"/>et ultra arguitur, <g ref="#dot"/><c>a</c> potest 
             <lb ed="#R"/>desinere esse et est pure contingens igitur deus 
@@ -298,7 +329,7 @@
             <lb ed="#R"/>non esse haec res est deus igitur deus potest non esse 
             <lb ed="#R"/>quod est falsum et contra divinam perfectionem.</p>
           
-          <p><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> si deus sic 
+          <p xml:id="l116-qsdsso"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> si deus sic 
             <lb ed="#R"/>contingentia sequitur quod potest realiter mutari quod 
             <lb ed="#R"/>est falsum, <g ref="#slash"/>patet quia potest incipere esse aliquam contingentiam 
             <lb ed="#R"/>quae non fuit ipse, <g ref="#slash"/>et potest desinere ut non sit 
@@ -308,24 +339,31 @@
             <lb ed="#R"/>potest desinere scientiam illius sed etiam scientia suae 
             <lb ed="#R"/>oppositae.</p>
           
-          <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> capitur divina essentia secundum rationem 
+          <p xml:id="l116-qcdpic"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> capitur divina essentia secundum rationem 
             <lb ed="#R"/>pure essentialem consideratam, <g ref="#slash"/>tunc quaeritur utrum 
             <lb ed="#R"/>secundum rationem essentialem repraesentant antichristum 
             <lb ed="#R"/>fore, <g ref="#slash"/>vel non, <g ref="#slash"/>si <choice><orig>2m</orig><reg>secundum</reg></choice> tunc sequitur quod ipsa 
             <lb ed="#R"/>non est essentialiter perfecta nec omnisciens, <g ref="#slash"/>si primum 
-            <lb ed="#R"/>tunc frustra ponitur illa contingentia. <g ref="#slash"/>Contra 
+            <lb ed="#R"/>tunc frustra ponitur illa contingentia.</p> 
+        </div>
+      </div>
+        <div>
+          <head xml:id="l116-Hcpccpc">Contra primam conclusionem</head>
+          <p xml:id="l116-ctpcdp"><g ref="#slash"/>Contra 
             <lb ed="#R"/>tamen primam conclusionem arguitur quia <name ref="#Anselm">anselmus</name> in libro prae<lb ed="#R"/>allegato 
             videtur ponere quod princialitas[?] aeternitas 
             <cb ed="#R" n="181rb"/><lb ed="#R"/>ad fluxum temporis sit modus salvandi contingentiam 
             <lb ed="#R"/>futurorum cum divina praescientia.</p>
-          
-          <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> <name ref="#Boethius">boecius</name> in <choice><orig>5o</orig><reg>Vo</reg></choice> 
+        
+          <p xml:id="l116-sbiala"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> <name ref="#Boethius">boecius</name> in <choice><orig>5o</orig><reg>Vo</reg></choice> 
             <lb ed="#R"/><title ref="#Consolation">de consolatione</title> ex eadem radice hoc idem videtur 
             <lb ed="#R"/>ponere quod ex habitudine aeternitatis ad fluxum 
             <lb ed="#R"/>temporis salvatur <choice><orig>contingencia</orig><reg>contingentia</reg></choice> futurorum cum praescientia 
             <lb ed="#R"/>divina ac libero arbitrio.</p>
-          
-          <p><g ref="#dbslash"/>Contra <choice><orig>2am</orig><reg>secundum</reg></choice> conclusionem 
+        </div>
+          <div>
+            <head xml:id="l116-Hcscscs">Contra secundam conclusionem</head>
+            <p xml:id="l116-cscrdi"><g ref="#dbslash"/>Contra <choice><orig>2am</orig><reg>secundum</reg></choice> conclusionem 
             <lb ed="#R"/>arguitur deus secundum nullam rationem intrinsecam 
             <lb ed="#R"/>est scientia futurorum igitur conclusio falsa, ita quod nulla ratione 
             <lb ed="#R"/>essentiali deus est futurorum <choice><orig>contingencium</orig><reg>contingentium</reg></choice> notitia 
@@ -333,15 +371,17 @@
             cuiuslibet oppositum potest fore <choice><orig>scante</orig><reg>stante</reg></choice> 
             ratione dei intrinseca.</p>
           
-          <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nam signata ratione 
+            <p xml:id="l116-snsenn"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nam signata ratione 
             <lb ed="#R"/>quae est in deo futuri contingentis repraesentativa 
             <lb ed="#R"/>tunc arguitur sic ex illius esse arguitur futurum 
             <lb ed="#R"/>contingenter fore sed consequens igitur antecedens 
             <lb ed="#R"/>et per consequens huiusmodi rationem esse et conceptus, <g ref="#slash"/>et tunc 
             <lb ed="#R"/>ratio cognoscendi futurum contingens est contingens et 
             <lb ed="#R"/>non <choice><orig>neccessaria</orig><reg>necessaria</reg></choice>.</p>
-          
-          <p><g ref="#dbslash"/>Ad primum reapondetur uqod intentio 
+          </div>
+          <div>
+            <head xml:id="l116-Hraaraa">Responsio ad argumenta contra conclusiones</head>
+            <p xml:id="l116-aprhap"><g ref="#dbslash"/>Ad primum respondetur quod intentio 
             <lb ed="#R"/><name ref="Anselm">anselmi</name> et <name ref="#Boethius">boecii</name> est salvare possibilitatem 
             <lb ed="#R"/>futurorum contingentium cum divina praescientia ex immen<g ref="#slash"/><lb ed="#R"/>sitate 
             divinae praescientiae et aeternitatis eius con<g ref="#slash"/><lb ed="#R"/>siderando maxime illam immensitatem cui non 
@@ -367,7 +407,7 @@
             <lb ed="#R"/>suos diverso modo se habentes inter se et tamen 
             <lb ed="#R"/>habent eandem habitudinem ad punctum.</p>
           
-          <p><g ref="#dbslash"/>Ad rationes 
+            <p xml:id="l116-arqfec"><g ref="#dbslash"/>Ad rationes 
             <lb ed="#R"/>quae fiebant contra <choice><orig>2am</orig><reg>secundam</reg></choice> conclusionem quando dicitur secundum nullam 
             <lb ed="#R"/>rationem intrinsecam deus est notitia contingentium 
             <lb ed="#R"/>futurorum igitur negatur antecedens et ad probationem quia 
@@ -380,7 +420,7 @@
             <lb ed="#R"/>non potest competere cognitioni sue notitiae finitae 
             <lb ed="#R"/>et creatae.</p>
           
-          <p><g ref="#dbslash"/>Ad <choice><orig>2am</orig><reg>secundum</reg></choice> rationem cum arguitur signata 
+            <p xml:id="l116-asrmit"><g ref="#dbslash"/>Ad <choice><orig>2am</orig><reg>secundum</reg></choice> rationem cum arguitur signata 
             <lb ed="#R"/>ratione qua deus gratia exempli vult anti<g ref="#slash"/><lb ed="#R"/>christum 
             fore sed consequens est contingens et antecedens, <g ref="#slash"/>hic dicitur 
             <lb ed="#R"/>inquirendo <del rend="strikethrough">q</del> an intelligitur per illam rationem qua deus 
@@ -396,15 +436,11 @@
             <lb ed="#R"/>et ideo apparet quia argumentum procedit ex malo intentu 
             <lb ed="#R"/>terminorum.</p> 
           
-          <p><g ref="#slash"/>Alii sunt modi <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> compossibilitatem 
+            <p xml:id="l116-asmils"><g ref="#slash"/>Alii sunt modi <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> compossibilitatem 
             <lb ed="#R"/>divinae praescientiae cum futuris contingentibus quae dicentur 
             <lb ed="#R"/>in lectione sequenti.</p>
-            
-      
+          </div>      
         </div>
-          
-      
-      </div>
     </body>
   </text>
 </TEI>
