@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,15 +31,26 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio117">
-      <head>Lectio 117, de Libertate [Reims Transcription]</head>
-        
-        <p><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio non est possibile futura 
+      <head xml:id="l117-Hldlldl" subtype="title">Lectio 117, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l117-Htpotpo">Tertio propositio</head>
+          <!-- add cross reference note to previous two propositions -->
+        <p xml:id="l117-tpndne"><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio non est possibile futura 
         <lb ed="#R"/>intrinsece esse <choice><orig>contingencia</orig><reg>contingentia</reg></choice> et <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> ad divinam 
-          <lb ed="#R"/>relata intuitum, <g ref="#slash"/>unde aliqui exerunt futura 
+          <lb ed="#R"/>relata intuitum. <g ref="#slash"/>unde aliqui exerunt futura 
           <lb ed="#R"/><choice><orig>contingencia</orig><reg>contingentia</reg></choice> in se considerata esse <choice><orig>contingencia</orig><reg>contingentia</reg></choice> 
-          <lb ed="#R"/>relata tamen ad deum <choice><orig>neccessario</orig><reg>necessario</reg></choice> eveniunt, <g ref="#slash"/>et istam 
+          <lb ed="#R"/>relata tamen ad deum <choice><orig>neccessario</orig><reg>necessario</reg></choice> eveniunt.</p> 
+          
+          <p xml:id="l117-eivibf"><g ref="#slash"/>et istam 
           <lb ed="#R"/>viam tenuit doctor sanctus, scilicet, <name ref="#Aquinas">beatus tho<lb ed="#R"/>mas</name> 
         qui pro sua <choice><orig>oppinione</orig><reg>opinione</reg></choice> videtur esse fulcitus[?] 
           <lb ed="#R"/>auctoritate <name ref="#Boethius">boecii</name> <choice><orig>5o</orig><reg>quinto</reg></choice> <title>de consolatione</title> dicentis fate<lb ed="#R"/>bor 
@@ -46,7 +59,10 @@
         nam quod idem futurum ad divinam notionem 
           <lb ed="#R"/>refertur <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> consui iam in parte fatetur esse 
           <lb ed="#R"/>liberam proorsus[?] ita quod conclusio <name ref="#Aquinas">sancti thomae</name> videtur 
-          <lb ed="#R"/>concerni[?] in <name ref="#Boethius">boecio</name> formaliter, <g ref="#slash"/>pro conclusione posita et contra 
+          <lb ed="#R"/>concerni[?] in <name ref="#Boethius">boecio</name> formaliter.</p>
+        <div>
+          <head xml:id="l117-Hrpcost">Rationes pro conclusione et contra opinionem Sancti Thomae</head>
+          <p xml:id="l117-pcpeii"><g ref="#slash"/>pro conclusione posita et contra 
           <lb ed="#R"/>istam conclusione adducuntur rationes, <g ref="#slash"/>nam si positio <name ref="#Aquinas">sancti 
           <lb ed="#R"/>thomae</name> esset vera sequitur quod deus <choice><orig>neccessario</orig><reg>necessario</reg></choice> produ<g ref="#slash"/><lb ed="#R"/>xisset 
           mundum consequens est falsum probatur consequentia nam ante 
@@ -57,20 +73,20 @@
           <lb ed="#R"/>hoc esset contra ipsam, <g ref="#slash"/>vel <choice><orig>neccessario</orig><reg>necessario</reg></choice> produceretur mundus 
           <cb ed="#R" n="101vb"/><lb ed="#R"/>quod est inconveniens illatum[?].</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur haec consequentia est 
+          <p xml:id="l117-sahenc"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur haec consequentia est 
           <lb ed="#R"/>bona <g ref="#dot"/><c>b</c><g ref="#dot"/> effectus habet neccessitatem in aliquo igitur 
           <lb ed="#R"/><g ref="#dot"/><c>b</c><g ref="#dot"/> habet <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> tenet consequentia quia undecumque recipit 
           <lb ed="#R"/><choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> eo ipso recipit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> habet <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> 
           <lb ed="#R"/>ergo si <g ref="#dot"/><c>b</c><g ref="#dot"/> habet <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> a prima causa igitur habet 
           <lb ed="#R"/><choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> et per consequens <g ref="#dot"/><c>b</c><g ref="#dot"/> est <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> et non contingens.</p> 
           
-        <p><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> <title ref="ArticlesOfParis">articulus parisiensis</title> est dicere quod nihil contingenter 
+          <p xml:id="l117-tapqac"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> <title ref="#ArticlesOfParis">articulus parisiensis</title> est dicere quod nihil contingenter 
           <lb ed="#R"/>eveniat considerandum omnes eius causas est 
           <lb ed="#R"/>error igitur considerando quod effectus in ordine 
           <lb ed="#R"/>ad divinam <choice><orig>providenciam</orig><reg>providentiam</reg></choice> eveniant <choice><orig>neccessario</orig><reg>necessario</reg></choice> et non 
           <lb ed="#R"/>contingenter est quasi articulus condampnatus.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> 
+          <p xml:id="l117-qapqap"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> 
           <lb ed="#R"/>arguitur vel deus in se est sic determinatus 
           <lb ed="#R"/>ad effectus productionem quod in nullius potestate 
           <lb ed="#R"/>est quin producitur et si sic tunc effectus de <choice><orig>neccess<lb ed="#R"/>tate</orig><reg>necessi<lb ed="#R"/>tate</reg></choice> 
@@ -79,7 +95,7 @@
           <lb ed="#R"/>contingenter producitur effectus producibilis 
           <lb ed="#R"/>licet relatus sit ad divinam praescientiam.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur 
+          <p xml:id="l117-qaascc"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur 
           <lb ed="#R"/><g ref="#dot"/><c>a</c><g ref="#dot"/> praescitur a deo a fore igitur <g ref="#dot"/><c>a</c><g ref="#dot"/> erit antecedens est <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> 
           <lb ed="#R"/>per istum doctorem met quia per eum antecedens signatur <g ref="#dot"/><c>a</c><g ref="#dot"/> 
           <lb ed="#R"/>referri praecise ad praescientiam divinam et consequentia est 
@@ -87,8 +103,10 @@
           <lb ed="#R"/><g ref="#dot"/><c>a</c><g ref="#dot"/> refertur praecise ad divinam praescientiam igitur consequens 
           <lb ed="#R"/>est <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> tenet consequentia quia ex antecedente <choice><orig>neccessario</orig><reg>necessario</reg></choice> 
           <lb ed="#R"/>non sequitur consequens contingens.</p>
-        
-        <p><g ref="#slash"/>Ex quo apparet quod positio non 
+            </div>
+        <div>
+          <head xml:id="l117-Hraoaob">Responsio ad opinionem Boetii</head>
+          <p xml:id="l117-eqahme"><g ref="#slash"/>Ex quo apparet quod positio non 
           <lb ed="#R"/>sit sustinibilis, <g ref="#slash"/>et sic solum restat respondere ad auctoritatem 
           <lb ed="#R"/><name ref="#Boethius">boecii</name>, nam dicitur quod <name ref="#Boethius">boecius</name> in illo loco 
           <lb ed="#R"/>expressissime distinguit duplicem <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> unam 
@@ -96,7 +114,7 @@
           <lb ed="#R"/>duae sunt <choice><orig>neccessitates</orig><reg>necessitates</reg></choice> una simplex veluti 
           <lb ed="#R"/>quod <choice><orig>neccesse</orig><reg>necesse</reg></choice> est omnes homines mortales esse.</p>
         
-        <p><g ref="#slash"/>
+          <p xml:id="l117-dnnemg"><g ref="#slash"/>
           <lb ed="#R"/>de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> naturali intelligit altera condicio<g ref="#slash"/><lb ed="#R"/>nata 
         ut si quid ambulare scientias ipsum 
           <lb ed="#R"/>ambulare <choice><orig>neccesse</orig><reg>necesse</reg></choice> est, <g ref="#slash"/>et licet in istis verbis 
@@ -112,7 +130,7 @@
           <lb ed="#R"/>autem istam intentionem habuit <name rend="#Aquinas">sanctus thomas</name> eodem modo 
           <lb ed="#R"/>glosatur.</p> 
         
-        <p><g ref="#dbslash"/>Circa hoc cum est advertendum 
+          <p xml:id="l117-chcfif"><g ref="#dbslash"/>Circa hoc cum est advertendum 
           <cb ed="#R" n="182ra"/><lb ed="#R"/>quod <name ref="#Augustine">augustinus</name> <name ref="#Anselm">anselmus</name> et doctores dicunt quod 
           <lb ed="#R"/><choice><orig>neccesse</orig><reg>necesse</reg></choice> est futurm esse futurm et multa talia dicta 
           <lb ed="#R"/>quae omnia glosanda sunt de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> condicio<g ref="#slash"/><lb ed="#R"/>nali 
@@ -125,7 +143,7 @@
           <lb ed="#R"/>in paradiso esset aliquis beatus quia eo ipso quod 
           <lb ed="#R"/>sic faceret iustitissimae[?] faceret.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum 
+          <p xml:id="l117-snefef"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum 
           <lb ed="#R"/>est quia <name ref="Anselm">anselmus</name> concedit istam quod <choice><orig>neccesse</orig><reg>necesse</reg></choice> omne futurum 
           <lb ed="#R"/>esse futurm, <g ref="#slash"/>et tamen negat omne praeteritum posse non 
           <lb ed="#R"/>esse praeteritum. <g ref="#slash"/>Et circa hoc respondet <name ref="#Wodeham">adam</name> quod <name ref="#Anselm">ansel<g ref="#slash"/><lb ed="#R"/>mus</name> 
@@ -136,18 +154,21 @@
         <g ref="#slash"/>ubi ver praedicatur[?] vel subicitur idem de se ipso 
           <lb ed="#R"/>concedit nam omnes propositiones de futuro contingenti 
           <lb ed="#R"/>in quibus non praedicatur idem de se ipso negat et illam 
-          <lb ed="#R"/>nis idem praedciatur[?] de se ipso recipit <choice><orig>neccessarias</orig><reg>necessarias</reg></choice> ex conditione 
-          <lb ed="#R"/>ut <choice><orig>neccesse</orig><reg>necesse</reg></choice> est hoc futurum esse futurm si hoc erit 
+          <lb ed="#R"/>nisi idem praedciatur[?] de se ipso recipit <choice><orig>neccessarias</orig><reg>necessarias</reg></choice> ex conditione 
+          <lb ed="#R"/>ut <choice><orig>neccesse</orig><reg>necesse</reg></choice> est hoc futurum esse futurum si hoc erit 
           <lb ed="#R"/>demonstrando antichristum, <g ref="#slash"/>et isto modo melius 
           <lb ed="#R"/>resolveretur <name ref="#Anselm">anselmus</name> quia antiqui doctorum re<g ref="#slash"/><lb ed="#R"/>putaverunt 
         propositiones <choice><orig>neccessarias</orig><reg>necessarias</reg></choice> in quibus praedicatur[?] 
           <lb ed="#R"/>idem de se ipso, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> dicunt quod ista propositio homo 
           <lb ed="#R"/>est animalis est <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> dato quod nullus esset homo <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> conditio<g ref="#slash"/><lb ed="#R"/>nata, 
         quia si hoc est homo est animal verum est quod in scolis 
-          <lb ed="#R"/>non debet concedi ista <choice><orig>neccesse</orig><reg>necesse</reg></choice> est omen futurm esse 
+          <lb ed="#R"/>non debet concedi ista <choice><orig>neccesse</orig><reg>necesse</reg></choice> est omen futurum esse 
           <lb ed="#R"/>futurum.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> proposition est ista contra <name ref="HenryOfGhent">doctorem solemenem</name>, 
+        </div>
+        </div>
+        <div>
+          <head xml:id="l117-Hqpoqpo">Quarta propositio</head>
+          <p xml:id="l117-qpeido"><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> propositio est ista contra <name ref="HenryOfGhent">doctorem solemenem</name>, 
           <lb ed="#R"/>scilicet, <name ref="#HenryOfGhent">henricum de gandavo</name>, <g ref="#slash"/>et contra <name ref="#Scotus">doctorem subtilem</name>, 
           <lb ed="#R"/>scilicet, <name ref="#Scotus">scotum</name> deus non cognovit futura contingentia per 
           <lb ed="#R"/>determinationem suae <del rend="strikethrough/expunctuated">boni</del> voluntatis cuius contrarium 
@@ -171,18 +192,19 @@
           <lb ed="#R"/>res nullam imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> et ista est grata <choice><orig>ymagi<g ref="#slash"/><lb ed="#R"/>natio</orig><reg>imaginatio</reg></choice>, 
           <g ref="#slash"/>sed hoc non est intelligendum quod inter intellectum 
           <lb ed="#R"/>divinum et voluntatem sic aliqua successivo, sed aliqualis 
-          <lb ed="#R"/>prioritas ut alias dicebatur de prioritate naturae 
-          <lb ed="#R"/>propter tamen aliquas rationes tenetur oppositum quia probat 
+          <lb ed="#R"/>prioritas ut alias dicebatur de prioritate naturae.</p>
+          
+          <p xml:id="l117-ptaido"><lb ed="#R"/>propter tamen aliquas rationes tenetur oppositum quia probat 
           <lb ed="#R"/>istam <choice><orig>4am</orig><reg>quartam</reg></choice> conclusionem et improbant illorum doctorum 
           <lb ed="#R"/><choice><orig>oppinionem</orig><reg>opinionem</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/>prima ratio nam intellectus divinus ordine 
+          <p xml:id="l117-prnprn"><g ref="#dbslash"/>prima ratio nam intellectus divinus ordine 
           <lb ed="#R"/>naturali est prior quam voluntas quo ad omnes suos actus 
           <lb ed="#R"/>igitur ordine naturae actus intelligendi dei intellectus 
           <lb ed="#R"/>non sequitur determinatione suae voluntatis, sed praecederet 
           <lb ed="#R"/>ratione naturali.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic intellectus divinus habet aliquorum scientiam 
+          <p xml:id="l117-ssieec"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic intellectus divinus habet aliquorum scientiam 
           <lb ed="#R"/>ad quae non praecedit determinatio divinae voluntatis 
           <lb ed="#R"/><del rend="strikethrough/expunctuated">y</del> igitur <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> falsa antecedens probatur de formidinibus[?] et 
           <lb ed="#R"/>culpis et <choice><orig>deffectibus</orig><reg>defectibus</reg></choice> moralibus de quibus intellectus 
@@ -191,7 +213,7 @@
           divina non elicit culpam nec deformitates 
           <lb ed="#R"/>nec est earum causa.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sic quia isti non evadunt 
+          <p xml:id="l117-tsqqic"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sic quia isti non evadunt 
           <lb ed="#R"/>difficultatem qui aequalis difficultas esset determinationem 
           <lb ed="#R"/>divinae voluntatis concordare ad effectus con<g ref="#slash"/><lb ed="#R"/>tingentes 
           sicut de praescientia igitur frustra ponunt 
@@ -206,7 +228,7 @@
           <lb ed="#R"/>divinae voluntatis quia essentia divina non potest plus 
           <lb ed="#R"/>mutari in voluntate quam in cognitione.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur 
+          <p xml:id="l117-qaddfc"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur 
           <lb ed="#R"/>determinatio divinae voluntatis si aliquis debeat suf<lb ed="#R"/>fragari 
           ponetur libera, <g ref="#slash"/>nam divina voluntas est 
           <lb ed="#R"/>ibi indifferens ad eius productionem quia ex absoluta de<g ref="#slash"/><lb ed="#R"/>terminatione 
@@ -217,7 +239,7 @@
           <lb ed="#R"/>voluntate divina determinari respectu producibilium nec elicere 
           <cb ed="#R" n="182va"/><lb ed="#R"/>iudicium assertivum propositionis de futuro contingenti.</p>
         
-        <p><g ref="#dbslash"/>
+          <p xml:id="l117-qavnam"><g ref="#dbslash"/>
           <choice><orig>5o</orig><reg>quinto</reg></choice> arguitur voluntas divina est summae rationalis, igitur ipsa 
           <lb ed="#R"/>non est nata exire in actum nisi praecedente dictamen 
           <lb ed="#R"/>dei intellectus vel saltem caeno sibi, scilicet, quod hoc est agendum 
@@ -225,15 +247,17 @@
           <lb ed="#R"/>rebus producibilibus non sequitur determinationem voluntatis 
           <lb ed="#R"/>divinae nec ipsa praecedit naturaliter nec alio modo.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> voluntas divina determinata ad effectum producendum 
+          <p xml:id="l117-svdiip"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> voluntas divina determinata ad effectum producendum 
           <lb ed="#R"/>est summe actuata et in ultima perfectione ad ef<g ref="#slash"/><lb ed="#R"/>fectus 
           productionem, igitur in illo priori ipsa potest exire 
           <lb ed="#R"/>in actum et per consequens cum ipsa sic perfectissima sequitur 
           <lb ed="#R"/>alterum duorum <hi>inconvenientium<desc>a line above "u" looks crossed out</desc></hi> vel quod agit non assentive, quia 
           <lb ed="#R"/>non inducit hoc agendum vel non agendum, <g ref="#slash"/>vel 
           <lb ed="#R"/><del rend="strikethrough/expunctuated">non agendum</del> sequitur quod iudicium intellectus praecedit.</p>
-        
-        <p><lb ed="#R"/><g ref="#dbslash"/><choice><orig>5a</orig><reg>quinta</reg></choice> propositio negativa futurum contingens non esse determinate 
+        </div>
+        <div>
+          <head xml:id="l117-Hqnoqno">Quinta propositio</head>
+          <p xml:id="l117-qpnvvf"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>5a</orig><reg>quinta</reg></choice> propositio negativa futurum contingens non esse determinate 
           <lb ed="#R"/>verum nihil confert ad concordiam divinae praescientiae futurorum 
           <lb ed="#R"/><choice><orig>contingencia</orig><reg>contingentia</reg></choice>, <g ref="#slash"/>nam ad salvandum istam concordiam 
           <lb ed="#R"/>dixerunt aliqui quod propositiones de futuro <choice><orig>contingenci</orig><reg>contingenti</reg></choice> 
@@ -245,19 +269,19 @@
           <lb ed="#R"/>acque cuilibet quod sequitur evidenter quod ipsa est vera 
           <lb ed="#R"/>vel falsa.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o </orig><reg>secundo</reg></choice> sequitur ex descriptione propositionis 
+          <p xml:id="l117-ssevsf"><g ref="#dbslash"/><choice><orig>2o </orig><reg>secundo</reg></choice> sequitur ex descriptione propositionis 
           <lb ed="#R"/>vere quod est vera, quia significat aliqualiter fore qualiter 
           <lb ed="#R"/>erit, <g ref="#slash"/>et hoc concludit propositionem veram, <g ref="#slash"/>nam dato op<g ref="#slash"/><lb ed="#R"/>posito 
           propositio non esset vera, sed falsa.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod 
+          <p xml:id="l117-tsqcui"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod 
           <lb ed="#R"/>ultimum iudicium fore non sit verum quia per hanc po<g ref="#slash"/><lb ed="#R"/>sitionem 
           nulla talis propositio esset vera et per consequens iudicium 
           <lb ed="#R"/>futurum fore non est verum et ex consequenti sequitur quod fides 
           <lb ed="#R"/>nos obligat ad assentiendum falso, <g ref="#slash"/>vel quod non obli<g ref="#slash"/><lb ed="#R"/>gat 
           nos ad credendum ultimum iudicium.</p>
         
-        <p><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> quia nullus 
+          <p xml:id="l117-qqnrec"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> quia nullus 
           <lb ed="#R"/>deberet sperare beatitudinem futuram per merita 
           <lb ed="#R"/>sua. <g ref="#slash"/>name secundum istam positione hoc non est verum, quia 
           <lb ed="#R"/>hoc est de futuro et ex consequenti sequitur quod non debe<g ref="#slash"/><lb ed="#R"/>mus 
@@ -272,11 +296,14 @@
           <lb ed="#R"/>isti negant istam antichristus est futurus. <g ref="#slash"/>Sed ista 
           <cb ed="#R" n="182vb"/><lb ed="#R"/>difficultas stat in terminis, <g ref="#slash"/>ideo pro nunc studentibus 
           <lb ed="#R"/>relinquitur et cetera.</p>
-        
-        <p><g ref="#dbslash"/>Circa tamen <del rend="strikethrough/expunctuated">propostione</del> positionem 
-          <lb ed="#R"/>negantem propostiones de futuro <choice><orig>contingenci</orig><reg>contingenti</reg></choice> esse 
+        <div>
+          <head xml:id="l117-Hobines">Obiectiones</head>
+          <p xml:id="l117-ctprps"><g ref="#dbslash"/>Circa tamen <del rend="strikethrough/expunctuated">propostione</del> positionem 
+          <lb ed="#R"/>negantem propositiones de futuro <choice><orig>contingenci</orig><reg>contingenti</reg></choice> esse 
           <lb ed="#R"/>veras vel falsas, <g ref="#slash"/>notandum est quod illa de illa <choice><orig>oppinio<lb ed="#R"/>ne</orig><reg>opinio<lb ed="#R"/>ne</reg></choice> 
-          habent duas rationes pro se. <g ref="#slash"/>prima <g ref="#carrot"/><add place="aboveLine">est</add> quia si propositiones 
+          habent duas rationes pro se.</p> 
+          
+          <p xml:id="l117-peqcnc"><g ref="#slash"/>prima <g ref="#carrot"/><add place="aboveLine">est</add> quia si propositiones 
           <lb ed="#R"/>de futuro contingenti essent vere vel falsae, sequitur 
           <lb ed="#R"/>quod huiusmodi veritas vel falsitas esset immutabilis 
           <lb ed="#R"/>non signata veritate huiusmodi antichristus erit in 
@@ -286,7 +313,7 @@
           in falsitatem igitur illa veritas est immutabilis 
           <lb ed="#R"/>et per consequens non contingens.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> ratio est philosophi in primo <title ref="#Perihermenias">pery<g ref="#slash"/><lb ed="#R"/>armenias</title> 
+          <p xml:id="l117-sreuin"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> ratio est philosophi in primo <title ref="#Perihermenias">pery<g ref="#slash"/><lb ed="#R"/>armenias</title> 
           dicentis quod in propositionibus de praesenti et in 
           <lb ed="#R"/>propositionibus de praeterito <choice><orig>neccesse</orig><reg>necesse</reg></choice> est quod sic sit sicut per illas 
           <lb ed="#R"/>signatur sine illae sint singulares sive universales, <g ref="#slash"/>in 
@@ -299,44 +326,55 @@
           <lb ed="#R"/>in re et per consequens apparet quod homo non est contingens ad utrumque 
           <lb ed="#R"/><choice><orig>ymo</orig><reg>immo</reg></choice> <choice><orig>neccessarius</orig><reg>necessarius</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur <name ref="#Aristotle">philosophus</name>, quia si aliqua 
+          <p xml:id="l117-sapsis"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur <name ref="#Aristotle">philosophus</name>, quia si aliqua 
           <lb ed="#R"/>propositio de futuro esset vera vel falsa, tunc ab aeterno 
           <lb ed="#R"/>fuisset vera si sit vera patet quia fuisset sicut ipsa servat 
           <lb ed="#R"/>igitur veritas eius fuit immutabilis et per consequens <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
           <lb ed="#R"/>fuit ita esse sicut ipsa significat.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> orationes et 
+          <p xml:id="l117-soefne"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> orationes et 
           <lb ed="#R"/>signata per eas se habent proportionaliter quia ab eo quod res 
           <lb ed="#R"/>est vel non est dicitur oratio vera vel falsa, <g ref="#slash"/>sed signata 
           <lb ed="#R"/>sut ad utrum licet ergo orationes nec sunt plus verae
           <lb ed="#R"/>quam falsae nec econverso.</p>
+        </div>
+        <div>
+          <head xml:id="l117-Hresnes">Responsiones</head>
+          <div>
+            <head xml:id="l117-Hardrdi">Ad rationes de immutabilitate</head>
         
-        <p><g ref="#dbslash"/>Ad istas rationes respondetur 
+            <p xml:id="l117-airpsc"><g ref="#dbslash"/>Ad istas rationes respondetur 
           <lb ed="#R"/>primo ad rationes de immutabilitate circa cuius 
           <lb ed="#R"/>solutionem dicuntur aliqua primo quod veritas non 
           <lb ed="#R"/>debet dici immutabilis quae est de futuro, <g ref="#slash"/>licet 
-          <lb ed="#R"/>ab aeterno veritas fuerit. <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod licet talis 
+          <lb ed="#R"/>ab aeterno veritas fuerit.</p> 
+            
+            <p xml:id="l117-sdqrie"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod licet talis 
           <lb ed="#R"/>veritas fuerit ab aeterno veritas tamen potest transire 
           <lb ed="#R"/>de veritate in falsitatem paret remotionem vel 
           <lb ed="#R"/>positionem rei in esse, <g ref="#slash"/>nam per remotionem futro ipsa 
           <lb ed="#R"/>veritas desinit esse veritas in instanti positionis 
-          <lb ed="#R"/>rei in esse. <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod ante positionem rei in esse 
+          <lb ed="#R"/>rei in esse.</p> 
+            
+            <p xml:id="l117-tdqpsc"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod ante positionem rei in esse 
           <lb ed="#R"/>potest esse falsitas, <g ref="#slash"/>patet quia in quolibet instanti ipsa 
           <lb ed="#R"/>potuit esse falsa, quia semper ita fuit ante instans 
-          <lb ed="#R"/>productionis rei in esse quod illud futurm non fore 
-          <lb ed="#R"/>et sic tales propositiones sunt concedendae, <g ref="#slash"/>prima 
+          <lb ed="#R"/>productionis rei in esse quod illud futurm unon fore 
+          <lb ed="#R"/>et sic tales propositiones sunt concedendae.</p> 
+            
+            <p xml:id="l117-potaff"><g ref="#slash"/>prima 
           <cb ed="#R" n="183ra"/><lb ed="#R"/>omnis talis propositio ante instans positionis rei in esse 
           <lb ed="#R"/>potuit esse falsa et tamen non est possibile quod fiat falsa 
           <lb ed="#R"/>in illos instanti ante, <g ref="#slash"/>patet si sit falsa in illo in stan<g ref="#slash"/><lb ed="#R"/>ti 
           priori ab aeterno fuisset falsa.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio haec est 
+            <p xml:id="l117-sphief"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio haec est 
           <lb ed="#R"/>concedenda talis veritas non est falsa et potest esse falsa 
           <lb ed="#R"/>in quolibet instanti ante productionem rei in esse 
           <lb ed="#R"/>et tamen non potest in aliquo instanti incipere esse 
           <lb ed="#R"/>falsa.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio haec est <hi>concedenda<desc>looks like a correction has been made</desc></hi> talis propositio potest esse 
+            <p xml:id="l117-tphpfc"><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio haec est <hi>concedenda<desc>looks like a correction has been made</desc></hi> talis propositio potest esse 
           <lb ed="#R"/>vera et potest esse falsa in illo tempore ante instans 
           <lb ed="#R"/>productionis rei in esse et tamen nec simul potest esse 
           <lb ed="#R"/>falsa nec successive in illo instanti licet bene in 
@@ -354,10 +392,12 @@
           <lb ed="#R"/>cognosceret per impossibile etc. <g ref="#slash"/>Et etiam illud posset 
           <lb ed="#R"/>resolvi ad modum enunciandi, <g ref="#slash"/>nam deus continet 
           <lb ed="#R"/>evidenter omnem modum enunciandi, <g ref="#slash"/>et 
-          <lb ed="#R"/>ideo non est difficiel eius prescientiam cum hiis quae 
+          <lb ed="#R"/>ideo non est difficile eius praescientiam cum hiis quae 
           <lb ed="#R"/>contingenter producuntur faciliter concordare.</p>
-        
-          <p><lb ed="#R"/><g ref="#dbslash"/>Ad rationes <name ref="#Aristotle">aristotelis</name>, <g ref="#slash"/>nam aliqui doctorum 
+          </div>
+          <div>
+            <head xml:id="l117-Haraara">Ad rationes aristotelis</head>
+            <p xml:id="l117-arapqp"><lb ed="#R"/><g ref="#dbslash"/>Ad rationes <name ref="#Aristotle">aristotelis</name>, <g ref="#slash"/>nam aliqui doctorum 
             <lb ed="#R"/>dubitant an ipse fuerit illius <choice><orig>oppinionis</orig><reg>opinionis</reg></choice>, 
             <lb ed="#R"/>scilicet, quod de futuris contingentibus non sit veritas 
             <lb ed="#R"/>nec falsitas, <g ref="#slash"/>tamen <name ref="#Rimini">gregorius</name> et <del rend="strikethrough/expunctuated">dicu</del> <name ref="#Scotus">scotus</name> dicunt 
@@ -374,7 +414,7 @@
             <lb ed="#R"/>veritatis, <g ref="#slash"/>nam <name ref="#Adam">adam</name> non potest non fuisse per 
             <lb ed="#R"/>quamcumque potentiam.</p>
         
-        <p><g ref="#dbslash"/>Sed de propositionibus de praesenti 
+            <p xml:id="l117-sdpnsp"><g ref="#dbslash"/>Sed de propositionibus de praesenti 
           <lb ed="#R"/>tenendo viam quod omen quod est quando est <choice><orig>neccesse</orig><reg>necesse</reg></choice> est 
           <lb ed="#R"/>esse, <g ref="#slash"/>dicitur quod haec consequentia est bona <g ref="#dot"/><c>a</c><g ref="#dot"/> est igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
           <cb ed="#R" n="183rb"/><lb ed="#R"/><c>a</c><g ref="#dot"/> esse vel fuisse et per consequens propositiones de praesenti 
@@ -385,10 +425,10 @@
           <lb ed="#R"/>creatura posset effectum futrum non ponere in esse 
           <lb ed="#R"/>quicquid tamen sit de hoc effectus erit ubi non 
           <lb ed="#R"/>erit, <g ref="#slash"/>licet tamen causa verificatonis propositionis de futuro 
-          <lb ed="#R"/>quae est de terminis suppositinoibus pro effectu producendo <choice><orig>nundum</orig><reg>nondum</reg></choice> 
+          <lb ed="#R"/>quae est de terminis suppositionibus pro effectu producendo <choice><orig>nundum</orig><reg>nondum</reg></choice> 
           <lb ed="#R"/>sit posita.</p>
-        
-        <p><g ref="#dbslash"/>Et tunc ad rationes <name ref="#Aristotle">aristotlis</name> 
+          
+            <p xml:id="l117-etaaev"><g ref="#dbslash"/>Et tunc ad rationes <name ref="#Aristotle">aristotlis</name> 
           <lb ed="#R"/>in forma dicitur quod si propositio de futuro contingenti 
           <lb ed="#R"/>esset determinate veritatis sic quod esset vera in fu<g ref="#slash"/><lb ed="#R"/>turum 
           secludendo <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> ratio bene concluderet tamen dicitur 
@@ -400,11 +440,11 @@
           in esse sed sufficit quod sit positialis[?] in esse et quod 
           <lb ed="#R"/>ponatur et hoc sufficit ad eius verificationem.</p>
         
-        <p><g ref="#dbslash"/> 
+            <p xml:id="l117-asrsde"><g ref="#dbslash"/> 
           <lb ed="#R"/>Ad <choice><orig>2am</orig><reg>secundam</reg></choice> <del rend="strikethrough/expunctuated">verificationem</del> rationem negatur consequentia et 
           <lb ed="#R"/>de illa satis dictum est.</p>
         
-        <p><g ref="#dbslash"/>Ad <choice><orig>3am</orig><reg>tertiam</reg></choice> quia sicut 
+            <p xml:id="l117-atqeas"><g ref="#dbslash"/>Ad <choice><orig>3am</orig><reg>tertiam</reg></choice> quia sicut 
           <lb ed="#R"/>a parte rei ita est quod res contingenter est igitur 
           <lb ed="#R"/>propositiones de terminis suppositis pro talibus rebus 
           <lb ed="#R"/>sunt contingentes c??tur[?] nam sicut contingenter ponitur 
@@ -419,9 +459,9 @@
           <lb ed="#R"/>essentia iudicium divinum esse lapsum in praeteritum 
           <lb ed="#R"/>et sic deceptio proventi aliquando ex <choice><orig>deffectu</orig><reg>defectu</reg></choice> locutae[?] 
           <lb ed="#R"/>vel mala consideratione vel ex ambobus simul.</p>
-        
-        
-        
+          </div>
+        </div>
+        </div>
       </div>
     </body>
   </text>
