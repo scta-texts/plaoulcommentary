@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,12 +31,19 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio122">
-      <head>Lectio 122, de Libertate [Reims Transcription]</head>
+      <head xml:id="l122-Hldlldl">Lectio 122, de Libertate [Reims Transcription]</head>
         <div>
-          <head>De concordiae revelationum cum contingentia: division quaestionis</head>
-        <p><g ref="#dbslash"/>Post materiam<add type="marginalNote">articulus</add> 
+          <head xml:id="l122-Hdcrcdq">De concordiae revelationum cum contingentia: divisio quaestionis</head>
+          <p xml:id="l122-pmcmdv"><g ref="#dbslash"/>Post materiam<add type="marginalNote">articulus</add> 
           <lb ed="#R"/>concordiae futurorum contingentium cum divina praescientia 
           <lb ed="#R"/>restat videndum de concordia revelationum 
           factarum creatura cum contingentia. <g ref="#slash"/><choice><orig>2m</orig><reg>secundum</reg></choice> est difficilius 
@@ -52,8 +61,8 @@
           veritatem.</p>
         </div>
         <div>
-          <head>Primum: responsio generalis</head>
-        <p><g ref="#dbslash"/>Quantum ad primum: conclusio 
+          <head xml:id="l122-Hprgprg">Primum: responsio generalis</head>
+          <p xml:id="l122-qapnae"><g ref="#dbslash"/>Quantum ad primum: conclusio 
           <lb ed="#R"/>certa tenenda est quod revelatio certa et infal<g ref="#slash"/><lb ed="#R"/>libilis 
           facta creaturae nullam imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> fu<g ref="#slash"/><lb ed="#R"/>turis 
           evenientibus, <g ref="#slash"/>Ita quod infallibilis 
@@ -66,29 +75,29 @@
           <lb ed="#R"/>omnes actus futuros cognoscit, <g ref="#slash"/>et minor est nota 
           <lb ed="#R"/>ad <choice><orig>experiencias</orig><reg>experientias</reg></choice>.</p>
         
-        <p><g ref="#dbslash"/>Confirmatur quia anima 
+          <p xml:id="l122-cqaeqr"><g ref="#dbslash"/>Confirmatur quia anima 
           <cb ed="#R" n="190ra"/><lb ed="#R"/>christi vel christus secundum hominem vel secundum animam cognoscit 
           <lb ed="#R"/>futurum iudicium et tamen potest non fore igitur conclusio vera 
           <lb ed="#R"/>maior apparet quia ipse erit executor illius Iudicii 
           <lb ed="#R"/>igitur non latet eum nam ipse scit omnem dispositionem 
           <lb ed="#R"/><choice><orig>ecclessiae</orig><reg>ecclesiae</reg></choice> qua regit.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> affirmatur, quia prophetae ha<g ref="#slash"/><lb ed="#R"/>buerunt 
+          <p xml:id="l122-saqfsp"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> affirmatur, quia prophetae ha<g ref="#slash"/><lb ed="#R"/>buerunt 
           cognitionem de futuris contingentibus 
           <lb ed="#R"/>quia per revelationem multa dixerunt contingentia 
           <lb ed="#R"/>et maxime christus qui fuit summus prophetarum.</p> 
         
-        <p><g ref="#slash"/>
+          <p xml:id="l122-tcdssc"><g ref="#slash"/>
           <lb ed="#R"/><choice><orig>3o</orig><reg>tertio</reg></choice> confirmatur de fide tam actuali quam habituali 
           <lb ed="#R"/>quia fides est revelatio sine actualis sine 
           <lb ed="#R"/>habitualis quia reducitur ad idem genus reve<g ref="#slash"/><lb ed="#R"/>lationum 
           sine supernaturalium cognitionum.</p>
         </div>
         <div>
-          <head>Secundum: Decima obiectiones contra conclusio</head>
+          <head xml:id="l122-Hsdoocc">Secundum: Decima obiectiones contra conclusio</head>
           <div>
-            <head>Prima obiectio</head>
-        <p><g ref="#dbslash"/>Sed ut 
+            <head xml:id="l122-Hpoopoo">Prima obiectio</head>
+            <p xml:id="l122-sumdsd"><g ref="#dbslash"/>Sed ut 
           <lb ed="#R"/>materia particularius aperiatur arguitur contra conclusionem 
           <lb ed="#R"/>positam, <g ref="#slash"/>nam si conclusio esset vera sequeretur quod in 
           <lb ed="#R"/>potestate mea esset christum decipere. consequens est 
@@ -100,7 +109,7 @@
           <lb ed="#R"/>errare propter denominationes quae dicerentur de 
           <lb ed="#R"/>supposito divino.</p>
         
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> apparet quod consequens sit falsum quia 
+            <p xml:id="l122-saqpcf"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> apparet quod consequens sit falsum quia 
           <lb ed="#R"/>nullum bonum[?] possum decipere quia tunc in potestate 
           <lb ed="#R"/>mea esset ipsum facere cadere a beatitudine, igitur 
           <lb ed="#R"/>nec animam christi possum decipere quae est beatissima 
@@ -117,8 +126,8 @@
           <lb ed="#R"/>revelationem quis possit cognoscere futura <g ref="#slash"/></p> 
           </div>
           <div>
-            <head>Secunda obiectio</head>
-          <p><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> si conclusio esset vera sequeretur ex <choice><orig>ypothesi</orig><reg>hypothesi</reg></choice> data quod 
+            <head xml:id="l122-Hsoosoo">Secunda obiectio</head>
+            <p xml:id="l122-sscpdd"><lb ed="#R"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> si conclusio esset vera sequeretur ex <choice><orig>ypothesi</orig><reg>hypothesi</reg></choice> data quod 
             <lb ed="#R"/>aliquis posset salvari ex falsa credulitate et 
             <lb ed="#R"/>ex errore et ex mala electione et aliquis 
             <lb ed="#R"/>posset dampnari ex vera credulitate et bona 
@@ -147,8 +156,8 @@
             <lb ed="#R"/>dampnatione.</p>
         </div>
           <div>
-            <head>Tertia obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> arguitur quia si conclusio esset vera 
+            <head xml:id="l122-Htootoo">Tertia obiectio</head>
+            <p xml:id="l122-taqnss"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> arguitur quia si conclusio esset vera 
           <lb ed="#R"/>sequeretur quod aliquis in casu licite posset 
           <lb ed="#R"/>desperare de sua salute et velle non salva<lb ed="#R"/>ri, 
           <g ref="#slash"/>consequens est falsum, quia desperatio est peccatum in spiritum 
@@ -161,8 +170,8 @@
           velit nolet suam salutem.</p>
           </div>
           <div>
-            <head>Quarta obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur 
+            <head xml:id="l122-Hqooqoo">Quarta obiectio</head>
+            <p xml:id="l122-qasdnd"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur 
           <lb ed="#R"/>si sic tunc in aliquo casu staret quod aliquis 
           <lb ed="#R"/>obligaretur ad peccandum consequens implicat et 
           <lb ed="#R"/>divinae bonitati repugnat quia si <choice><orig>neccessaret</orig><reg>necessaret</reg></choice> 
@@ -179,8 +188,8 @@
           <lb ed="#R"/>eligeret esse de numero dampnatorum.</p>
         </div>
         <div>
-          <head>Quinta obiectio</head>
-        <p><g ref="#slash"/><choice><orig>5o</orig><reg>quinto</reg></choice> 
+          <head xml:id="l122-Hqnoqno">Quinta obiectio</head>
+          <p xml:id="l122-qcfqac"><g ref="#slash"/><choice><orig>5o</orig><reg>quinto</reg></choice> 
           <lb ed="#R"/>cognitio futurorum contingentium praecipue clara 
           <lb ed="#R"/>infallibilis et certa est propria divinae essentiae igitur 
           <lb ed="#R"/>non potest convenire alicuiu creaturae nec sibil communica<g ref="#slash"/><cb ed="#R" n="190va"/><lb ed="#R"/>ri, 
@@ -195,8 +204,8 @@
           <lb ed="#R"/>quo ad cognitionem.</p>
         </div>
           <div>
-            <head>Sexta obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> arguitur nulla reve<lb ed="#R"/>latio 
+            <head xml:id="l122-Hsxosxo">Sexta obiectio</head>
+            <p xml:id="l122-sanvaa"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> arguitur nulla reve<lb ed="#R"/>latio 
           est certa vel cum certitudine, igitur conclusio falsa antecedens arguitur 
           <lb ed="#R"/>nulla revelatio potest evidenter sciri esse a deo 
           <lb ed="#R"/>igitur creatura habet dubitare semper an sit dei vel alterius 
@@ -214,7 +223,7 @@
           in se dubiae an sint a deo vel 
           <lb ed="#R"/>ab alio.</p>
         
-        <p><g ref="#dbslash"/>Confirmatur quia omnis revelatio facta 
+            <p xml:id="l122-cqonsq"><g ref="#dbslash"/>Confirmatur quia omnis revelatio facta 
           <lb ed="#R"/>est talis quod cum illa stat aeque evidens 
           <lb ed="#R"/>iudicium de possibiltate ad contrarium igitur nulla poterit 
           <lb ed="#R"/>esset per revelationem certitudo vel assecuratio[?]. 
@@ -224,8 +233,8 @@
         
       </div>
         <div>
-        <head>Septima obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>7mo</orig><reg>septimo</reg></choice> arguitur positio quod 
+          <head xml:id="l122-Hspospo">Septima obiectio</head>
+          <p xml:id="l122-sapnsc"><g ref="#dbslash"/><choice><orig>7mo</orig><reg>septimo</reg></choice> arguitur positio quod 
           <lb ed="#R"/>revelatione <name ref="#Sortes">sortes</name> assentit quod antichristus erit, <g ref="#slash"/>arguitur 
           <lb ed="#R"/>sic <name rend="#Sortes">sortes</name> assentit per revelationem quod antichristus erit, 
           <lb ed="#R"/>igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> est <name ref="#Sortes">sortes</name> assensisse quod antichristus erit 
@@ -239,8 +248,8 @@
           <lb ed="#R"/>facta non stat contingentia.</p>
         </div>
           <div>
-            <head>Octava obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>8vo</orig><reg>octavo</reg></choice> arguitur quia 
+            <head xml:id="l122-Hocooco">Octava obiectio</head>
+            <p xml:id="l122-oaqcno"><g ref="#dbslash"/><choice><orig>8vo</orig><reg>octavo</reg></choice> arguitur quia 
           <lb ed="#R"/>si conclusio esset vera sequeretur quod illud quod iam est praeteri<g ref="#slash"/><lb ed="#R"/>tum 
           posset numquam fuisse consequens est falsum patet consequentia 
           <lb ed="#R"/>recipiendo tempus quo christus oravit patrem 
@@ -253,8 +262,8 @@
           christus non orasse.</p>
           </div>
           <div>
-            <head>Nona obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>9no</orig><reg>nono</reg></choice> arguitur aliquae 
+            <head xml:id="l122-Hnoonoo">Nona obiectio</head>
+            <p xml:id="l122-naavrc"><g ref="#dbslash"/><choice><orig>9no</orig><reg>nono</reg></choice> arguitur aliquae 
           <lb ed="#R"/>sunt veritates de praesenti quae non possunt creaturae 
           <lb ed="#R"/>revelari igitur a fortiori nec futurae veritates 
           <lb ed="#R"/>tenet consequentia quia videtur quod minus repugnat veritati de 
@@ -264,8 +273,8 @@
           <lb ed="#R"/>vel revelatur creaturae.</p>
           </div>
           <div>
-            <head>Decima obiectio</head>
-        <p><g ref="#dbslash"/><choice><orig>10mo</orig><reg>decimo</reg></choice> arguitur contracta tota 
+            <head xml:id="l122-Hdoodoo">Decima obiectio</head>
+            <p xml:id="l122-dacqin"><g ref="#dbslash"/><choice><orig>10mo</orig><reg>decimo</reg></choice> arguitur contracta tota 
           <lb ed="#R"/>latitudine revelationum nulla est in eis certitudo 
           <lb ed="#R"/>probatur per <choice><orig>hystorias</orig><reg>historias</reg></choice> canonis, ubi factae fuerunt 
           <lb ed="#R"/>revelationes quae non habuerunt effectum et 
