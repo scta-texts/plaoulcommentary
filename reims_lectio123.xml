@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,10 +31,19 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio123">
-      <head>Lectio 123, de Libertate [Reims Transcription]</head>
-      <p><g ref="#dbslash"/>Antequam <choice><orig>agrediatur</orig><reg>aggrediatur</reg></choice> materiam sciendum est iuxta 
+      <head xml:id="l123-Hldlldl">Lectio 123, de Libertate [Reims Transcription]</head>
+        <div>
+          <head xml:id="l123-Htmvtmr">Tertia modi visionis et tres modis revelationum</head>
+          <p xml:id="l123-aamtmr"><g ref="#dbslash"/>Antequam <choice><orig>agrediatur</orig><reg>aggrediatur</reg></choice> materiam sciendum est iuxta 
         <lb ed="#R"/>modum distinguendi <name ref="#Augustine">augustini</name> <g ref="#dot"/>12mo<g ref="#dot"/> capitulo 
         <lb ed="#R"/><title ref="#OnGenesis">supra genesim ad litteram</title> quod tripplex ex vi<g ref="#slash"/><lb ed="#R"/>sio, 
       <g ref="#slash"/>quaedam est corporalis, alia spiritualis et 
@@ -46,19 +57,22 @@
         <lb ed="#R"/>sicut visio exterior. <g ref="#slash"/>Sed omnino fit interius da<lb ed="#R"/>to 
       quod fiat per speciem. <g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> est visio intellectualis 
         <lb ed="#R"/>quae fit per vim <del rend="strikethrough/expunctuated">effectivam</del> intellectiva <sic>astractam</sic> a 
-        <lb ed="#R"/>materia et per speciem non senssibilem. <g ref="#slash"/>Et iuxta tres 
+        <lb ed="#R"/>materia et per speciem non senssibilem.<g ref="#slash"/>Et iuxta tres 
         <lb ed="#R"/>modos visionis seu revelationis sunt tres 
         <lb ed="#R"/>modi revelationum.</p>
-        
-        <p><g ref="#slash"/>Unus est sensibiliter et per signum 
+        <div>
+          <head xml:id="l123-Hpmspms">Primus modus</head>
+          <p xml:id="l123-uested"><g ref="#slash"/>Unus est sensibiliter et per signum 
           <lb ed="#R"/>sensibilel iuxta primum modum visionis, <g ref="#slash"/>et isto modo 
           <lb ed="#R"/>fuit de visione et revelatione facta <name>regi 
             <lb ed="#R"/>balthazar</name> ut habetur da <g ref="#dot"/><choice><orig>5o</orig><reg>quinto</reg></choice> qui oculo cor<g ref="#slash"/><lb ed="#R"/>porali 
         vidit manum scribentem in pariete 
           <cb ed="#R" n="191ra"/><lb ed="#R"/>licet non intellexerit ministerium illud tamen exposuit 
           <lb ed="#R"/><name ref="#Daniel">daniel</name>.</p>
-        
-        <p><g ref="#dbslash"/>Correspondenter ad <choice><orig>2m</orig><reg>secundum</reg></choice> habetur in <title ref="#Acts">actibus 
+        </div>
+          <div>
+            <head xml:id="l123-Hsmssms">Secundus modus</head>
+            <p xml:id="l123-shigpd"><g ref="#dbslash"/>Correspondenter ad <choice><orig>2m</orig><reg>secundum</reg></choice> habetur in <title ref="#Acts">actibus 
           <lb ed="#R"/>apostolorum</title> de <name ref="#Peter">petro</name> qui vidit in spiritu vis 
           <lb ed="#R"/><choice><orig>4or</orig><reg>quattuor</reg></choice> lintheis[?] alligatum de caelo missum 
           <lb ed="#R"/>multis animalibus repletum et ista visio fuit 
@@ -73,7 +87,7 @@
           <lb ed="#R"/>difficilem, <g ref="#slash"/>aliquando magis similem et ita de <choice><orig>2o</orig><reg>secundo</reg></choice> genere 
           <lb ed="#R"/>posset dici.</p>
         
-        <p><g ref="#dbslash"/>Circa quod est advertendum quod circa 
+            <p xml:id="l123-cqeese"><g ref="#dbslash"/>Circa quod est advertendum quod circa 
           <lb ed="#R"/>utrumque visiones possunt concurrere multi errores 
           <lb ed="#R"/>nam <choice><orig>Iudicium</orig><reg>iudicium</reg></choice> quod ex puris naturalibus communiter elicitur 
           <lb ed="#R"/>certa tales visiones seu revelationes est 
@@ -85,8 +99,10 @@
           <lb ed="#R"/><name>balthazar</name> ex signo apparente nesciunt 
           <lb ed="#R"/>elicere Iudicium nec elicere praesumpsit, <g ref="#slash"/>sed <name ref="#Daniel">daniel</name> 
           <lb ed="#R"/>ei significationem explicavit.</p>
-        
-        <p><g ref="#slash"/><choice><orig>3us</orig><reg>tertius</reg></choice> est modus visionum 
+          </div>
+          <div>
+            <head xml:id="l123-Htmstms">Tertius modus</head>
+            <p xml:id="l123-temsdv"><g ref="#slash"/><choice><orig>3us</orig><reg>tertius</reg></choice> est modus visionum 
           <lb ed="#R"/>et revelationum intellectualium, <g ref="#slash"/>et iste modus sub<lb ed="#R"/>dividitur 
           <lb ed="#R"/>in <choice><orig>3s</orig><reg>tres</reg></choice> partiales modos in primo gradu 
           <lb ed="#R"/>reperiuntur visiones et revelationes in verbo 
@@ -101,20 +117,27 @@
           <lb ed="#R"/>quem non sunt immediate in verbo nec sunt fideles 
           <lb ed="#R"/>actualis sive habitualis aenigmatica et pos<lb ed="#R"/>sent 
         poni gradus et species secundum differentias visionum.</p>
-        
-          <p><lb ed="#R"/><g ref="#slash"/>ulterius est advertendum quod iste <choice><orig>3us</orig><reg>tertius</reg></choice> modus quantum 
+          
+            <p xml:id="l123-ueamrc"><lb ed="#R"/><g ref="#slash"/>ulterius est advertendum quod iste <choice><orig>3us</orig><reg>tertius</reg></choice> modus quantum 
             <lb ed="#R"/>ad <choice><orig>3s</orig><reg>tres</reg></choice> gradus potest iterum subdividi, <g ref="#slash"/>quia quid 
             <lb ed="#R"/>est modus revelationis absolute sive sit in verbo 
             <lb ed="#R"/>sive in prophetia sive sit per fidem aenigmaticam 
             <lb ed="#R"/>est modus revelationis conditionatae[?], <g ref="#slash"/>et alius est 
-            <cb ed="#R" n="191rb"/><lb ed="#R"/>modus revelationis comminatoriae[?]. <g ref="#slash"/>Sed quia primus modus 
+            <cb ed="#R" n="191rb"/><lb ed="#R"/>modus revelationis comminatoriae[?].</p> 
+          </div>
+        </div>
+          <div>
+            <head xml:id="l123-Hccdipg">Conclusio contradictoriam[?] de revelatio tertii generis in primo gradu</head>
+            <p xml:id="l123-sqpcfr"><g ref="#slash"/>Sed quia primus modus 
             <lb ed="#R"/>habet maiorem difficultatem quantum ad materiam praesentem etiam 
             <lb ed="#R"/>de primo genere distinctionis primae, scilicet, de revelatione 
             <lb ed="#R"/>corporali, <g ref="#slash"/>et de <choice><orig>2o</orig><reg>secundo</reg></choice> modo, scilicet, de revelatione spiritua<lb ed="#R"/>li 
           non est ad propositum. <g ref="#slash"/>Sed de revelatione <choice><orig>3ii</orig><reg>tertii</reg></choice> generis 
             <lb ed="#R"/>in primo gradu de revelatione absoluta est difficultas 
             <lb ed="#R"/>qualiter salvaretur cum illo contingentia futurorum 
-            <lb ed="#R"/>revelatorum, <g ref="#slash"/>et quia intendo concordare absolutam 
+            <lb ed="#R"/>revelatorum.</p> 
+            
+            <p xml:id="l123-eqivmf"><g ref="#slash"/>et quia intendo concordare absolutam 
             <lb ed="#R"/>revelationem ad futura contingentia, <g ref="#slash"/>ideo circa hoc po<g ref="#slash"/><lb ed="#R"/>no 
           conclusionem contradictoriam cuidem errori, scilicet, quod absoluta 
             <lb ed="#R"/>revelatio futuri eventus nullatenus tollit 
@@ -127,9 +150,16 @@
             <lb ed="#R"/>si deus revelaverit aliquid <choice><orig>neccesse</orig><reg>necesse</reg></choice> est sic eve<lb ed="#R"/>nire 
           sicut revelaverit, quia illud iam transivit 
             <lb ed="#R"/>in praeteritum et contraxit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice>, <g ref="#slash"/>et quia illud non 
-            <lb ed="#R"/>videtur <choice><orig>ymo</orig><reg>immo</reg></choice> videtur male fundamentum. <g ref="#slash"/>ideo posui 
+            <lb ed="#R"/>videtur <choice><orig>ymo</orig><reg>immo</reg></choice> videtur male fundamentum.</p>
+      </div>
+        <div>
+          <head xml:id="l123-Hrpcpcc">Rationes pro conclusio contradictoriam[?]</head>
+          <p xml:id="l123-ipctie"><g ref="#slash"/>ideo posui 
             <lb ed="#R"/>conclusionem contradictoriam quae probatur multipliciter improbando 
-            <lb ed="#R"/>tamen illum errorem. <g ref="#slash"/>primo quia talis notitia creata 
+            <lb ed="#R"/>tamen illum errorem.</p>
+        <div>
+          <head xml:id="l123-Hpropro">Prima ratio</head>
+          <p xml:id="l123-pqtdqr"><g ref="#slash"/>primo quia talis notitia creata 
             <lb ed="#R"/>scilicet notitia de futuro contingenti est impertinens quantum 
             <lb ed="#R"/>ad habitudinem causalitatis effective vel fi<g ref="#slash"/><lb ed="#R"/>nalis 
           ad effectum revelationum igitur eius positio 
@@ -142,15 +172,17 @@
             sublata aeque contingenter poneretur ef<lb ed="#R"/>fectus 
           dato quod revelaretur.</p>
         
-        <p><g ref="#dbslash"/>Confirmatur quia 
+          <p xml:id="l123-cqnenc"><g ref="#dbslash"/>Confirmatur quia 
           <lb ed="#R"/>notitia divina ut dictum est nullam imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> 
         eventibus futuris igitur nec notitia creata, <g ref="#slash"/>tenet consequentia quia 
           <lb ed="#R"/>creata notitia minorem efficaciam habet respectu effectus 
           <lb ed="#R"/>futuri quam divina notitia vel scientia et tamen ut probatum 
           <lb ed="#R"/>ipsam nullam imponit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> rebus futuris igitur 
           <lb ed="#R"/>nec revelatio quae est notitia creata.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur 
+        </div>
+      <div>
+        <head xml:id="l123-Hsrosro">Secunda ratio</head>
+        <p xml:id="l123-sasefn"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> arguitur 
           <lb ed="#R"/>si esse una intelligentia quae esset pure speculativa 
           <lb ed="#R"/>et nullo modo praedicata <del rend="strikethrough/expunctuated">eius</del> cuius intrinseca <choice><orig>condicio</orig><reg>conditio</reg></choice> esset 
           <lb ed="#R"/>distincte cum cogitare omnem veritatem talis 
@@ -165,8 +197,10 @@
           <lb ed="#R"/>nec habet apparentiam quae inducat ad hoc nisi ex 
           <lb ed="#R"/><choice><orig>deffectu</orig><reg>defectu</reg></choice> nostro in considerando ut alias extitit fore 
           <lb ed="#R"/>nomen[??].</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> arguitur dato illo errore sequitur quod christus 
+      </div>
+        <div>
+          <head xml:id="l123-Htrotro">Tertia ratio</head>
+          <p xml:id="l123-tadcci"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> arguitur dato illo errore sequitur quod christus 
           <lb ed="#R"/>et tota trinitas cum <g ref="#carrot"/><add place="aboveLine">toto</add> exercitu angelorum non potuisset 
           <lb ed="#R"/>praeservare christum a passione sua, <g ref="#slash"/>consequens est absurdum 
           <lb ed="#R"/>patet consequentia quia animae christi in incarnatione verbi fuit 
@@ -175,15 +209,17 @@
           <lb ed="#R"/><choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> et inevitabilitatem ad passionem christi sequitur 
           <lb ed="#R"/>clare conveniens illatum.</p>
         
-        <p><g ref="#dbslash"/>Confirmatur quia si sic, tunc 
+          <p xml:id="l123-cqsdpv"><g ref="#dbslash"/>Confirmatur quia si sic, tunc 
           <lb ed="#R"/>falsum esset dictum christi dicentis <name ref="#Pilate">pilato</name>, <g ref="#slash"/>nefas, quia 
           <lb ed="#R"/>possum rogare patrem meum ut mittat mihi 
           <lb ed="#R"/><g ref="#dot"/>10<g ref="#dot"/> legiones angelorum quod non fecit quia re<lb ed="#R"/>velatum 
           erat ei quod non vocaret auxilium patris 
           <lb ed="#R"/>vel angelorum ne impediretur eius passio quae erat 
           <lb ed="#R"/>a deo patre volita.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur quia nisi conclusio esset vera 
+        </div>
+      <div>
+        <head xml:id="l123-Hqrrqrr">Quarta ratio</head>
+        <p xml:id="l123-qaqnic"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur quia nisi conclusio esset vera 
           <lb ed="#R"/>sequeretur quod deus posset suam potentia diminere[?], <g ref="#slash"/>consequens 
           <lb ed="#R"/>est erroneum. <g ref="#slash"/>patet consequentia ponendo quod deus revelet 
           <lb ed="#R"/>se non facturum ad possibilem quod tamen <del rend="strikethrough/expunctuated">cras fiet</del> posset 
@@ -191,8 +227,10 @@
           <lb ed="#R"/>adversarium et post revelationem non potest qui 
           <lb ed="#R"/>revelaverit quod non <del rend="strikethrough/expunctuated">fiet</del> faciet <g ref="#quotationmark"/>igitur <g ref="#quotationmark"/><c>a</c><g ref="#dot"/> ipse non 
           <lb ed="#R"/>faciet <g ref="#dot"/><c>a</c><g ref="#dot"/> antecedens est <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> igitur consequens.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur 
+        </div>
+        <div>
+          <head xml:id="l123-Hqnoqno">Quinta ratio</head>
+          <p xml:id="l123-qaspvd"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur 
           <lb ed="#R"/>secundum <name ref="#Lombard">magistri</name> <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> ponentis quod anima christi congoscit 
           <lb ed="#R"/>omnia quae verbum per revelationem, <g ref="#slash"/>tunc hoc dato 
           <lb ed="#R"/>sequitur quod verbum in sua incarnationem se imposs<g ref="#slash"/><lb ed="#R"/>bilitavit 
@@ -202,7 +240,7 @@
           <lb ed="#R"/>consequens ad illa ad quae poterat se impossibilitavit igitur 
           <lb ed="#R"/>incarnatio fuit potentiae verbi dimitio[??].</p>
         
-        <p><g ref="#dbslash"/>Confirmatur 
+          <p xml:id="l123-cqsinn"><g ref="#dbslash"/>Confirmatur 
           <lb ed="#R"/>quia si error staret sequitur quod verbum dei non po<g ref="#slash"/><lb ed="#R"/>tuisset 
           aliter redimere genus genus humanum de potentia 
           <lb ed="#R"/>sua nisi per mortem, <g ref="#slash"/>consequens est contra <name ref="#Augustine">augustinum</name> et 
@@ -211,7 +249,7 @@
           <lb ed="#R"/>homines igitur non poterat aliter redimere si reve<g ref="#slash"/><lb ed="#R"/>latio 
         induceret nec <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice>.</p>
         
-        <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> confirmatur quia 
+          <p xml:id="l123-scqnps"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> confirmatur quia 
           <lb ed="#R"/>si sic sequitur quod <name ref="#Peter">petrus</name> <choice><orig>neccessario</orig><reg>necessario</reg></choice> peccavit post re<g ref="#slash"/><cb ed="#R" n="191vb"/><lb ed="#R"/>velationem 
         sibi factam a christo, <g ref="#slash"/>patet consequentia quia fuit ei 
           <lb ed="#R"/>revelatum quod negaret christum igitur revelatio 
@@ -224,16 +262,21 @@
           <lb ed="#R"/>quicquid evenient de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> eveniet 
           <lb ed="#R"/>quod est erroneum, <g ref="#slash"/>nam ex hoc apparet quod nullus 
           <lb ed="#R"/>electus posset dampnari nec praescitus sal<g ref="#slash"/><lb ed="#R"/>vari.</p>
-        
-        <p><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> ultimo arguitur investigando ad 
+        </div>
+      <div>
+        <head xml:id="l123-Hsxrsxr">Sexta ratio</head>
+        <p xml:id="l123-suacre"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> ultimo arguitur investigando ad 
           <lb ed="#R"/>radicem, <g ref="#slash"/>quaeritur enim bene provenit huiusmodi <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> 
           <lb ed="#R"/><g ref="#slash"/>non enim ex divina scientia quia ipsa esset dato quod 
           <lb ed="#R"/>nulla esset revelatio facta, <g ref="#slash"/>etiam ipsa est 
           <lb ed="#R"/>compossibilis futuris contingentibus nec provenit <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> 
           <lb ed="#R"/>a notitia creata, quia ipsa non se habet causaliter respectu effectus.</p> 
-          
-        <p><lb ed="#R"/><g ref="#dbslash"/>Istis inconveniens est dicere quod notitia, scilicet, revelatio 
-          <lb ed="#R"/>trahat divinam notitiam ad <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> est extrinseca ad potentiam 
+      </div>
+      </div>
+      <div>
+        <head xml:id="l123-Hcorium">Corollarium</head>
+        <p xml:id="l123-iiened"><lb ed="#R"/><g ref="#dbslash"/>Istis inconveniens est dicere quod notitia, scilicet, revelatio 
+          <lb ed="#R"/>trahat divinam notitiam ad <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice>, est extrinseca ad potentiam 
           <lb ed="#R"/>effectus et excutionem eius, <g ref="#slash"/>nam etiam ex hoc 
           <lb ed="#R"/>sequitur quod illa <choice><orig>neccessitas</orig><reg>necessitas</reg></choice> faceret ex potentia <g ref="#quotationmark"/>libera 
           <lb ed="#R"/><g ref="#quotationmark"/>divina ac pure activa potentiam naturalem et naturaliter 
@@ -244,6 +287,7 @@
           illam causalitatem liberam in naturaliter agen<g ref="#slash"/><lb ed="#R"/>tem 
         vel per modum naturae concurrentes et pure naturalem 
           <lb ed="#R"/>quo nullatenus est dicendum.</p>
+      </div>
       </div>
     </body>
   </text>
