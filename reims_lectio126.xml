@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2013-03-26">March 26, 2013</date>  
       </publicationStmt>
@@ -29,16 +31,23 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio126">
-      <head>Lectio 126, de Libertate [Reims Transcription]</head>
+      <head xml:id="l126-Hldlldl" subtype="title">Lectio 126, de Libertate [Reims Transcription]</head>
         <div>
-          <head>Responsiones ad rationes inductas (see lectio 120)</head>
-           <p><lb ed="#R"/><g ref="#dbslash"/>Restat respondere ad rationes alias inductas 
+          <head xml:id="l126-Hrarari">Responsiones ad rationes alias (lectio 120) inductas</head>
+          <p xml:id="l126-rraihm"><lb ed="#R"/><g ref="#dbslash"/>Restat respondere ad rationes alias inductas 
              <lb ed="#R"/>in hac materia.</p>
         <div>
-          <head>Ad primam</head>
-        <p><g ref="#slash"/>prima erat quod si <choice><orig>scaret</orig><reg>staret</reg></choice> futurorum 
+          <head xml:id="l126-Hapmapm">Ad primam</head>
+          <p xml:id="l126-peqacd"><g ref="#slash"/>prima erat quod si <choice><orig>scaret</orig><reg>staret</reg></choice> futurorum 
           <lb ed="#R"/>contingentia cum revelatione sequeretur quod in 
           <lb ed="#R"/>potestate nostra esset decipere christum consequens est 
           <lb ed="#R"/>absonum sed consequentia apparet et sit <g ref="#dot"/><c>a</c><g ref="#dot"/> per me factu<g ref="#slash"/><lb ed="#R"/>rum 
@@ -47,7 +56,7 @@
           <lb ed="#R"/>elicere oppositum revelationis christi, <g ref="#slash"/>et sic si 
           <lb ed="#R"/>mihi placet possum inficiens animam christi de<g ref="#slash"/><lb ed="#R"/>cipiere.</p>
           
-          <p><g ref="#dbslash"/>Respondetur breviter ad formam negando 
+          <p xml:id="l126-rbaeoc"><g ref="#dbslash"/>Respondetur breviter ad formam negando 
             <lb ed="#R"/>consequentiam <choice><orig>ymo</orig><reg>immo</reg></choice> non est in potestate dei absoluta 
             <lb ed="#R"/>animam christi verbo unicam decipiere et hoc sonat 
             <lb ed="#R"/>articulus parisiensis, <g ref="#slash"/>per communicationem <choice><orig>ydiomatum</orig><reg>idiomatum</reg></choice> sequitur 
@@ -58,7 +67,7 @@
             <lb ed="#R"/>consequentiam, <g ref="#slash"/>nam si non facias <g ref="#dot"/><c>a</c><g ref="#dot"/> anima christi numquam 
             <lb ed="#R"/>assensit isti facies <g ref="#dot"/><c>a</c><g ref="#dot"/> sed eius opposito contra<lb ed="#R"/>dictorio.</p>
           
-          <p><g ref="#slash"/>Si tamen ponatur casus quod illud quod ultimo 
+          <p xml:id="l126-stpapc"><g ref="#slash"/>Si tamen ponatur casus quod illud quod ultimo 
             <lb ed="#R"/>ponitur tamen alio remaneat, <g ref="#slash"/>tunc casus est 
             <lb ed="#R"/>impossibilis, <g ref="#slash"/>unde pro generali in materia revelationum eodemmodo 
             <lb ed="#R"/>respondendum est sicut in materia de praescientia dei, <g ref="#slash"/>dei, <g ref="#slash"/>nam 
@@ -68,14 +77,14 @@
             <cb ed="#R" n="194vb"/><lb ed="#R"/>de revelatione dei quia ipsa sequitur dei iudicii verita<g ref="#slash"/><lb ed="#R"/>tem 
             et istam oportet dicere propter articulos parisiensis condempnatos.</p> 
           
-          <p><g ref="#dbslash"/>secundum alias vias posset responderi, <g ref="#slash"/>nam secundum viam quae 
+          <p xml:id="l126-savesp"><g ref="#dbslash"/>secundum alias vias posset responderi, <g ref="#slash"/>nam secundum viam quae 
             <lb ed="#R"/>concedit quod praeteritum potest non fuisse, <g ref="#slash"/>dicere quod dato 
             <lb ed="#R"/>quod revelatio sit facta et sit respectu futuri contingentis 
             <lb ed="#R"/>tamen illam qualitatem fuisse est contingens. <g ref="#slash"/>Et sicut effectus 
             <lb ed="#R"/>futurus potest non esse, <g ref="#slash"/>ita assensus potest tolli, <g ref="#slash"/>et ideo 
             <lb ed="#R"/>si ista via non esset <choice><orig>condempnata</orig><reg>condemnata</reg></choice> esset satis proba<g ref="#slash"/><lb ed="#R"/>bilis.</p>
           
-          <p><g ref="#dbslash"/>Sed via angelorum concederet de potentia dei 
+          <p xml:id="l126-svaeai"><g ref="#dbslash"/>Sed via angelorum concederet de potentia dei 
             <lb ed="#R"/><sic>absolute</sic> revelatione facta potest quis decipi non tamen 
             <lb ed="#R"/>potest de potentia dei ordinata, <g ref="#slash"/>Sed facilior est via 
             <lb ed="#R"/>quae dicit quoe revelatio quantum ad assensum sequitur divinum 
@@ -84,8 +93,8 @@
           
         </div>
           <div>
-            <head>Ad secundum</head>
-            <p><g ref="#dbslash"/>Ad secundum quando arguitur 
+            <head xml:id="l126-Hasmasm">Ad secundum</head>
+            <p xml:id="l126-asqrnf"><g ref="#dbslash"/>Ad secundum quando arguitur 
               <lb ed="#R"/>quia si sic, sequeretur quod aliquis ex assensu falso posset 
               <lb ed="#R"/>salvari et vitam aeternam mereri consequens est falsum 
               <lb ed="#R"/>et patet consequentia in casu quod deus revelaret <name ref="#Sortes">sorti</name> 
@@ -119,8 +128,8 @@
               <cb ed="#R" n="195ra"/><lb ed="#R"/>iudicia naturalia et revelationem nobis factam.</p>
         </div>
         <div>
-          <head>Ad tertiam</head>
-          <p><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3m</orig><reg>tertium</reg></choice> argumentum tangebat utrum existenti in 
+          <head xml:id="l126-Hatmatm">Ad tertiam</head>
+          <p xml:id="l126-tatvae"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>3m</orig><reg>tertium</reg></choice> argumentum tangebat utrum existenti in 
             <lb ed="#R"/>caritate possit futura <choice><orig>dampnatio</orig><reg>damnatio</reg></choice> revela<lb ed="#R"/>ri 
           quia facta revelatione creatura cogitur ad peccandum 
             <lb ed="#R"/>et desperandum, <g ref="#slash"/>et ad firmiter tenendum quod ipsa non 
@@ -128,7 +137,7 @@
           tractetur a doctoribus puta ad <name ref="#Oyta">de heuta</name> et 
             <lb ed="#R"/><name ref="#Wodeham">adam</name>, <g ref="#slash"/>ideo mitto[?] vos ad eos.</p>
           
-          <p><g ref="#slash"/>Tamen hic dico 
+          <p xml:id="l126-thddid"><g ref="#slash"/>Tamen hic dico 
             <lb ed="#R"/>aliqua primo quod in casu alicui revelaretur 
             <lb ed="#R"/>sua <choice><orig>dampnatio</orig><reg>damnatio</reg></choice> non propter hoc talis haberet desperare 
             <lb ed="#R"/>causa est quia species est habitus magis proprie potentiae 
@@ -140,7 +149,7 @@
             <lb ed="#R"/><g ref="#slash"/>non enim sequitur <name ref="#Sortes">sortes</name> firmiter credit quod erit damp<g ref="#slash"/><lb ed="#R"/>natus 
           igitur desperat.</p>
           
-          <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dico quod dato quod <name ref="#Sortes">sorti</name> 
+          <p xml:id="l126-sdqasi"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dico quod dato quod <name ref="#Sortes">sorti</name> 
             <lb ed="#R"/>revelatur sua futura dampnatio potest tamen credere 
             <lb ed="#R"/>nisi ordinatio dei sit mutata quod aequaliter 
             <lb ed="#R"/>potest salvari sicut alii nec revelatio suae 
@@ -160,7 +169,7 @@
             <lb ed="#R"/>quod ordinaret deus non velle concurrere ad 
             <lb ed="#R"/>salutem illius.</p>
           
-          <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo casus est impossibilis quia re<g ref="#slash"/><lb ed="#R"/>pugnat 
+          <p xml:id="l126-smcevp"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo casus est impossibilis quia re<g ref="#slash"/><lb ed="#R"/>pugnat 
           divinae voluntati creaturam <choice><orig>neccessitare</orig><reg>necessitare</reg></choice> ad 
             <lb ed="#R"/>peccandum, <g ref="#slash"/>quia isto modo creatura non haberet spera<g ref="#slash"/><lb ed="#R"/>re 
             quod salvatur tamen in illo casu deberet elicere 
@@ -173,8 +182,8 @@
             <cb ed="#R" n="195rb"/><lb ed="#R"/>probabile.</p> 
         </div>
           <div>
-            <head>Ad quartam</head>
-          <p><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur sic si revelationes essent 
+            <head xml:id="l126-Haqmaqm">Ad quartam</head>
+            <p xml:id="l126-qaseis"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> arguitur sic si revelationes essent 
             <lb ed="#R"/>possibiles stare cum futuris contingentibus sequitur 
             <lb ed="#R"/>quod aliquis obligatur ad peccandum consequens est contra 
             <lb ed="#R"/>divinam bonitatem sed patet consequentia in casu quod reveletur 
@@ -196,16 +205,16 @@
             
           </div>
           <div>
-            <head>Ad quintam</head>
+            <head xml:id="l126-Haqnaqn">Ad quintam</head>
             
-            <p><g ref="#dbslash"/><choice><orig>5a</orig><reg>quinta</reg></choice> ratio est 
+            <p xml:id="l126-qrescf"><g ref="#dbslash"/><choice><orig>5a</orig><reg>quinta</reg></choice> ratio est 
               <lb ed="#R"/>quod proprium est divinae immensitati cognoscere futura con<g ref="#slash"/><lb ed="#R"/>tingentia, 
               igitur non potest communicari creaturae, <g ref="#slash"/>antecedens probatur 
               <lb ed="#R"/>quia cognoscere futura contingentia consurgit ex 
               <lb ed="#R"/>immensitate aeternitatis igitur soli deo competit sic 
               <lb ed="#R"/>cognoscere futura.</p>
             
-            <p><g ref="#dbslash"/>Respondetur quod dubium est utrum 
+            <p xml:id="l126-rqdesa"><g ref="#dbslash"/>Respondetur quod dubium est utrum 
               <lb ed="#R"/>soli deo competit naturaliter sic quod ipse solus cognoscit 
               <lb ed="#R"/>futura et quod illa cognitio nisi creaturae sic communicabilis 
               <lb ed="#R"/>non est tamen improbabile quod <choice><orig>supprema</orig><reg>suprema</reg></choice> intelligentia 
@@ -219,14 +228,14 @@
             
           </div>
           <div>
-            <head>Ad sextam</head>
-            <p><g ref="#dbslash"/><choice><orig>6a</orig><reg>sexta</reg></choice> ratio di<g ref="#slash"/><lb ed="#R"/>cebat 
+            <head xml:id="l126-Hasxasx">Ad sextam</head>
+            <p xml:id="l126-srdaqf"><g ref="#dbslash"/><choice><orig>6a</orig><reg>sexta</reg></choice> ratio di<g ref="#slash"/><lb ed="#R"/>cebat 
               quod nulla revelatio est certa quia nescitur 
               <lb ed="#R"/>quo spiritu fiat quia quicquid agitur circa 
               <lb ed="#R"/>revelationem potest communicari creaturae igitur quaelibet habet de re<g ref="#slash"/><lb ed="#R"/>velatione 
               dubitare a quo fiat.</p> 
             
-            <p><g ref="#slash"/>Ad illud 
+            <p xml:id="l126-airtup"><g ref="#slash"/>Ad illud 
               <lb ed="#R"/>responsum fuit circa prohemium[?] iuxta <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> 
               <lb ed="#R"/><name ref="#WilliamOfParis">guillelmi parisiensis</name> et <name ref="WilliamOfAuxerre">altissiodorensis</name> qui dicunt quod deus 
               <lb ed="#R"/>non permitteret creaturam ultra potestatem temptari 
@@ -236,7 +245,7 @@
               <lb ed="#R"/>faciat quod in se est numquam permitteret deus 
               <cb ed="#R" n="195va"/><lb ed="#R"/>temptari ultra posse.</p>
             
-            <p><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod ars est tradi<g ref="#slash"/><lb ed="#R"/>ta 
+            <p xml:id="l126-tdqvms"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod ars est tradi<g ref="#slash"/><lb ed="#R"/>ta 
             in scriptura discernendum inter revelationem bonam 
               <lb ed="#R"/>et malam condicitur a fructibus eorum cognoscentis 
               <lb ed="#R"/>eos, <g ref="#slash"/>nam videndum est utrum ille revelationes 
@@ -248,8 +257,8 @@
               <lb ed="#R"/>fiant a bono vel malo spiritu.</p>
           </div>
           <div>
-            <head>Ad septimam</head>
-            <p><g ref="#dbslash"/>Septimum argumentum 
+            <head xml:id="l126-Haspasp">Ad septimam</head>
+            <p xml:id="l126-sadals"><g ref="#dbslash"/>Septimum argumentum 
               <lb ed="#R"/>dicit <choice><orig>neccesse</orig><reg>necesse</reg></choice> est <name ref="#Sortes">sortem</name> assesisse quod <c>a</c><g ref="#dot"/> erit igitur <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> 
               <lb ed="#R"/><c>a</c><g ref="#dot"/>, <g ref="#slash"/>negatur antecedens quia superius dictum est quod <del rend="expunctuated">et</del> 
               <lb ed="#R"/>assensus contingenter est assensus illius <g ref="#dot"/><c>a</c><g ref="#dot"/> erit 
@@ -260,9 +269,9 @@
             ad lucem summam.</p>
           </div>
           <div>
-            <head>Ad octavam</head>
+            <head xml:id="l126-Haomaom">Ad octavam</head>
             
-            <p><g ref="#dbslash"/>Ad <choice><orig>8vam</orig><reg>octavam</reg></choice> deus reve<lb ed="#R"/>lavit 
+            <p xml:id="l126-aodpsc"><g ref="#dbslash"/>Ad <choice><orig>8vam</orig><reg>octavam</reg></choice> deus reve<lb ed="#R"/>lavit 
               <g ref="#dot"/><c>a</c><g ref="#dot"/> fore igitur <g ref="#dot"/><c>a</c><g ref="#dot"/> erit negatur consequentia quia daretur 
               <lb ed="#R"/><choice><orig>instancia</orig><reg>instantia</reg></choice>, <g ref="#slash"/>quia deus revelavit <name ref="#Peter">petro</name> 
               <lb ed="#R"/>quod peccabit non tamen sequitur quod peccaret quia 
@@ -283,8 +292,8 @@
               <lb ed="#R"/>contingenti ideo tales propositiones sunt contingentes.</p>
           </div>
           <div>
-            <head>Ad nonam</head>
-              <p><lb ed="#R"/>Ad nonum, si sic sequeretur quod praeteritum posset non 
+            <head xml:id="l126-Hanmanm">Ad nonam</head>
+            <p xml:id="l126-anseep"><lb ed="#R"/>Ad nonum, si sic sequeretur quod praeteritum posset non 
                 <lb ed="#R"/>fuisse. negatur consequentia et ad probationem et capiatur 
                 <lb ed="#R"/>modus localis quem habuit christus procedendo ad assensum 
                 <lb ed="#R"/>quem habuit quod ipse pateretur, <g ref="#slash"/>tunc in illo medio 
@@ -295,7 +304,7 @@
                 <lb ed="#R"/>effectum, scilicet, modum et volitionem qui erant effectus 
                 <cb ed="#R" n="195vb"/><lb ed="#R"/>passionis.</p>
             
-            <p><g ref="#dbslash"/>hic est difficultas maior quam ante quia ita 
+            <p xml:id="l126-hediap"><g ref="#dbslash"/>hic est difficultas maior quam ante quia ita 
               <lb ed="#R"/>non potest dici de christo nec de aliis, <g ref="#slash"/>dicitur cum quod ab 
               <lb ed="#R"/>assensu de morte futura non dependent effective 
               <lb ed="#R"/>huiusmodi modus localis seu voluntas <choice><orig>paciendi</orig><reg>patiendi</reg></choice> 
@@ -309,7 +318,7 @@
               <lb ed="#R"/>illa volitio moriendi illa tristitia ille modus quo 
               <lb ed="#R"/>christus ibat ad passionem.</p>
             
-            <p><g ref="#dbslash"/>Pro isto notandum quod huiusmodi 
+            <p xml:id="l126-pinevh"><g ref="#dbslash"/>Pro isto notandum quod huiusmodi 
               <lb ed="#R"/>operationes non causantur ab assensu revelationum in 
               <lb ed="#R"/>christo de passione sua, <g ref="#slash"/>sed causantur ex imperio 
               <lb ed="#R"/>rationis imperantis viribus inferioribus ut 
@@ -327,7 +336,7 @@
               <lb ed="#R"/>acerbissimum dolorem passus redividendo[?] genus 
               <lb ed="#R"/>humanum ut ostenderet se esse verum <del rend="strikethrough">hieu</del> hominem.</p>
             
-            <p><lb ed="#R"/><g ref="#dbslash"/>Aliter posset dici quod apprhaenso est simplex vel 
+            <p xml:id="l126-apduea"><lb ed="#R"/><g ref="#dbslash"/>Aliter posset dici quod apprhaenso est simplex vel 
               <lb ed="#R"/>opposita in revelatione facta, <g ref="#slash"/>et aliud est 
               <lb ed="#R"/>ibi tanquam iudicium et tunc in revelatione illud 
               <lb ed="#R"/>quod est per modum apprehensionis potest causare tristitiam 
@@ -338,9 +347,9 @@
             
           </div>
           <div>
-            <head>Ad decimam</head>
+            <head xml:id="l126-Hadmadm">Ad decimam</head>
             
-            <p><g ref="#dbslash"/>Decimo arguebatur aliqua 
+            <p xml:id="l126-daacac"><g ref="#dbslash"/>Decimo arguebatur aliqua 
               <lb ed="#R"/>est veritas quae non est revelabilis, igitur etc. <g ref="#slash"/>
               <lb ed="#R"/>negatur consequentia <g ref="#slash"/>et ad probationem, quia ita de ista videtur 
               <lb ed="#R"/>quod non est revelabilis, scilicet, deus nihil revelat 
@@ -358,8 +367,8 @@
             
           </div>
           <div>
-            <head>Ad undecimum</head>
-              <p><g ref="#dbslash"/>Ad undecimum 
+            <head xml:id="l126-Haumaum">Ad undecimum</head>
+            <p xml:id="l126-auqner"><g ref="#dbslash"/>Ad undecimum 
                 <lb ed="#R"/>quando dicitur de prophetiis quia multae fuerunt falsae negatur, 
                 <lb ed="#R"/>quia spiritus est qui loquitur per prophetas <choice><orig>ymo</orig><reg>immo</reg></choice> impossibile 
                 <lb ed="#R"/>est per fidem vel per revelationem aliquem 
@@ -375,8 +384,8 @@
             
           </div>
           <div>
-            <head>Ad ultimum</head>
-            <p><g ref="#dbslash"/>Ad ultimum bene sequitur <name ref="#Sortes">sortes</name> 
+            <head xml:id="l126-Haddadd">Ad duodecimum</head>
+            <p xml:id="l126-aubcif"><g ref="#dbslash"/>Ad ultimum bene sequitur <name ref="#Sortes">sortes</name> 
               <lb ed="#R"/>naturali assensus assensit quod antichritus erit igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
               <lb ed="#R"/>est illum sic assensisse conceditur consequntia, <g ref="#slash"/>Sed dicitur 
               <lb ed="#R"/>quod haec consequentia non valet <name ref="#Sortes">sortes</name> assensit tempore praeterito assensu 
