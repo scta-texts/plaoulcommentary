@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio134">
       <head xml:id="l134-Hldildi">Lectio 134, de Incarnatione</head>
@@ -48,7 +57,7 @@
               <lb ed="#SV"/>naturae servare quantum ad formarum primam productionem.</p>
         
             <p xml:id="l134-ppacvg">prima pars apparet iuxta 
-              <lb ed="#SV"/>imaginationem <name ref="#Vicentius">vincencii</name> sui libri <title>hystorialis</title> libro septimo capitulo 77 
+              <lb ed="#SV"/>imaginationem <name ref="#VincentOfBeauvais">vincencii</name> sui libri <title ref="#SpeculumHistoriale">hystorialis</title> libro septimo capitulo 77 
               <lb ed="#SV"/>ubi ponit quod spiritus sanctus superveniens virginem gloriosam 
               <lb ed="#SV"/>producit quattuor actus, scilicet, decisionem solidationem conversionem et 
               <lb ed="#SV"/>formationem, ita quod de ipsa virgine benedicta fuit materia decise 
@@ -144,16 +153,16 @@
             <lb ed="#SV"/>mater dei, sed ad supplicationem <name ref="#Cyril">cirili</name> fuit oppositum 
             <lb ed="#SV"/>determinatum, et opinio <name ref="#Nestorius">nestorii</name> condempnata tamquam haeretica 
             <cb ed="#SV" n="370ra"/><lb ed="#SV"/>et in illo consilio fuit determinatum quod virgo gloriosa est mater dei 
-            <lb ed="#SV"/>mater christi et quod ipsa genuit deum. Et <name ref="#JohnDamescene">damascenus</name> IIIo 
+            <lb ed="#SV"/>mater christi et quod ipsa genuit deum. Et <name ref="#JohnDamescene"><unclear>damascenus[?]</unclear></name> IIIo 
             <lb ed="#SV"/><title>sentenciarum</title> suarum negandum est inquit quod virgo sancta sit 
             <lb ed="#SV"/>christi totam, id est, genitricem non quin hoc sit verum, sed negat 
             <lb ed="#SV"/>hoc ad sensum <name ref="#Nestorius">nestorii</name> nam idem est adaequate suppositum verbum 
             <lb ed="#SV"/>dei et christus, ideo dicit quod virgo sanctissima debet dici nedum 
-            <lb ed="#SV"/>christi totum, sed <unclear>theototum[?]</unclear>.</p>
+            <lb ed="#SV"/><term>christitokum[?]</term>, sed <unclear><term>theotokum[?]</term></unclear>.</p>
         
           <p xml:id="l134-eiapgh">Ex istis apparet quod partus virgineus continet 
             <lb ed="#SV"/>evidenter totam latitudinem residuam humanae generationis. unde 
-            <lb ed="#SV"/>habetur Xmo <title><unclear>metaphyiscae[?]</unclear></title> quod omnia quae habent ordinem in aliquo 
+            <lb ed="#SV"/>habetur Xmo <title ref="#Metaphysics"><unclear>metaphyiscae[?]</unclear></title> quod omnia quae habent ordinem in aliquo 
             <lb ed="#SV"/>genere habent aliquod primum et quia ille partus est infinitus 
             <lb ed="#SV"/>infra totam latitudinem generationis humanae sequitur quod continet eminenter 
             <lb ed="#SV"/>residuam partem generationis humanae.</p>
@@ -265,7 +274,7 @@
             <lb ed="#SV"/>nobilior quam si pater concurrisset ex parte spiritus sancti et virginis 
             <lb ed="#SV"/>benedictae qui fuit infinitus et infinito modo applicatus. Ex quo 
             <lb ed="#SV"/>arguitur eius nobilitas et illud videtur concedere <name ref="#JohnDamascene">damascenus</name> in tertio 
-            <lb ed="#SV"/><title>sententiarum</title> et <name><unclear>crisostomus[?]</unclear></name> super illo verbo quod in ea natum est 
+            <lb ed="#SV"/><title>sententiarum</title> et <name ref="#JohnChrysostom">Chrysostom</name> super illo verbo quod in ea natum est 
             <lb ed="#SV"/>de spiritu sancto natum est praecessit inquit veritas per se non 
             <lb ed="#SV"/>materialiter sed effective nobiliori modo quam semen patris concurri<lb ed="#SV"/>sset.</p>
         
@@ -329,7 +338,7 @@
             <p xml:id="l134-aiblvg"><lb ed="#SV"/>Ad illud breviter Respondetur quod in tota latitudine perfectionis 
               <lb ed="#SV"/>creaturae uniformiter difformi virgo gloriosa tenet 
               <lb ed="#SV"/>supremum gradum ut tenet <name ref="#Anselm">anselmus</name> in libro 
-              <lb ed="#SV"/><title>de conceptu virginali</title> et ad idem <name ref="#Albert">albertus magnus</name> 
+              <lb ed="#SV"/><title ref="#deConceptuVirginali">de conceptu virginali</title> et ad idem <name ref="#Albert">albertus magnus</name> 
               <cb ed="#SV" n="370vb"/><lb ed="#SV"/>in <title>laudibus virginis gloriose</title>.</p>
           </div>
           <div>
