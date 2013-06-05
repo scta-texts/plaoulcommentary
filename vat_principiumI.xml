@@ -1,246 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:math="http://www.w3.org/1998/Math/MathML"
-  xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Title</title>
+        <title>Principium I [Vatican Transcription]</title>
+        <author xml:id="PP">Petrus Plaoul</author>
+        <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
+      <editionStmt>
+        <edition n="2012.11">
+          <title>Principium I [Vatican Transcription]</title>
+          <date when="2012-11-01">November 1, 2012</date>
+        </edition>
+      </editionStmt>
       <publicationStmt>
-        <p>Publication Information</p>
+        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <pubPlace>Baltimore, MD</pubPlace>
+        <availability status="free">
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+        </availability>
+        <date when="2012-11-01">November 1, 2012</date>  
       </publicationStmt>
       <sourceDesc>
-        <p>Information about the source</p>
+        <listWit>
+          <witness xml:id="V">Vatican</witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
   </teiHeader>
-  <text>
+  <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
-      <div>
-        <head>Collatio</head>
-        <p><lb ed="V"/>Circa primum librum 
-        <lb ed="V"/>Senteniarum, primo quaeritur utrum 
-          <lb ed="V"/>creatura rationalis sic as<lb ed="V"/>cendere 
+      <div xml:id="principiumI">
+        <head>Principium I [Vatican Transcription]</head>
+        <div>
+          <head>Utrum creatura posset participare omnem divinam perfectionem</head>
+        <p><cb ed="#V" n="1ra"/><lb ed="#V"/><space><desc>Left for drop Cap C</desc></space>irca primum librum 
+        <lb ed="#V"/>Sententiarum, primo quaeritur utrum 
+          <lb ed="#V"/>creatura rationalis sic as<lb ed="#V"/>cendere 
           possit in palmam 
-          <lb ed="V"/>summae fecunditatis quod 
-          <lb ed="V"/>apprehendere seu participare valeat omnem 
-          <lb ed="V"/>fructum suae bonitatis, id est, Utrum possit par<lb ed="V"/>ticipare 
+          <lb ed="#V"/>summae fecunditatis quod 
+          <lb ed="#V"/>apprehendere seu participare valeat omnem 
+          <lb ed="#V"/>fructum suae bonitatis, id est, Utrum possit par<lb ed="#V"/>ticipare 
           omnem divinam perfectionem.</p>
-        
-        <p>Aliter[?] 
-          <lb ed="V"/>quod sic aliqua est possibilis creatura 
-          <lb ed="V"/>habens per divinam participationem quicquid habet Deus per 
-          <lb ed="V"/>essentiam ergo propositum. Antecedens patet, quia omnis 
-          <lb ed="V"/>plenitudo ad intra exhibita potest exhi<lb ed="V"/>beri 
+        </div>
+        <div>
+          <head>Rationes principales</head>
+        <p><g ref="#dbslash"/>Arguitur
+          <lb ed="#V"/>quod sic aliqua est possibilis creatura 
+          <lb ed="#V"/>habens per divinam participationem quidquid habet Deus per 
+          <lb ed="#V"/>essentiam, ergo propositum. Antecedens patet, quia omnis 
+          <lb ed="#V"/>plenitudo ad intra exhibita potest exhi<lb ed="#V"/>beri 
           ad extra cum liberalitas magis 
-          <lb ed="V"/>attendatur ex parte communicationis ad 
-          <lb ed="V"/>extra quam ad intra Deus autem est libera<lb ed="V"/>lissimus 
-          quare[?] etc.</p>
+          <lb ed="#V"/>attendatur ex parte communicationis ad 
+          <lb ed="#V"/>extra quam ad intra Deus autem est libera<lb ed="#V"/>lissimus, 
+          quare etc.</p>
         
-        <p>Confirmatur nam 
-          <lb ed="V"/>quicquid perfectionis est in Deo per essentiam communica<lb ed="V"/>tum 
+        <p><g ref="#dbslash"/>Confirmatur nam 
+          <lb ed="#V"/>quicquid perfectionis est in Deo per essentiam communica<lb ed="#V"/>tum 
           est humanitati Christi, ergo etc. Assumptum 
-          <lb ed="V"/>patet <name>Apostolum</name> dicens quod in ipso habitat omnis 
-          <lb ed="V"/>plenitudo divinitatis corporatur. Item da<lb ed="V"/>tus
+          <lb ed="#V"/>patet <name ref="#Paul">Apostolum</name> dicens quod in ipso habitat omnis 
+          <lb ed="#V"/>plenitudo divinitatis corporatur. Item da<lb ed="#V"/>tus
           est ei Spiritus non ad mensuram 
-          <lb ed="V"/>Ioannes[?] 3[?]. Secundo Deus potest creare unam speciem 
-          <lb ed="V"/>in quam concurrat omnes perfectiones communica<lb ed="V"/>biles, 
-          ergo propositum. <space extent="fourlines"></space>.</p>
+          <lb ed="#V"/><title ref="#JohnGospel">Ioannes</title> <g ref="#dot"/>3<g ref="#dot"/>.</p> 
+          
+          <p><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> Deus potest creare unam speciem 
+          <lb ed="#V"/>in quam concurrat omnes perfectiones communica<lb ed="#V"/>biles, 
+          ergo propositum.</p> 
+          
+          <p><space extent="fourlines"></space>.</p>
         
-        <p><lb ed="V"/>Antecedens patet per <name>Brachani[??bachalarium]</name> legentem in Na<lb ed="V"/>varra, 
+        <p><lb ed="#V"/>antecedens patet per <name><choice><orig>bachalarium</orig><reg>bacalarium</reg></choice> legentem in na<lb ed="#V"/>varra</name>, 
         qui ponit quod eandem humanitatem 
-          <lb ed="V"/>praesenti accipere patere Filius et Spiritus Sanctus quma 
-          <lb ed="V"/>verbum assumpst[??].</p>
+          <lb ed="#V"/>praesenti accipere patere filius et spiritus sanctus quam 
+          <lb ed="#V"/>verbum assumpsit.</p>
         
-        <p>Quarto arguitur auctoritate <name>Boethii</name> 
-          <lb ed="V"/>quarto <title>de Consolatione</title> prosa? 18, ubi infert 
-          <lb ed="V"/>corollarium[?] porisina[?] quod sicut ins??e 
-          <lb ed="V"/>adeptione fiunt homines in?fa? sic part?? 
-          <lb ed="V"/>divinitatis fiunt omnes dii. Unde concludit omnis 
-          <lb ed="V"/>ergo beatus Deus.</p>
-        
+        <p><choice><orig>4o</orig><reg>quarto</reg></choice>Quarto arguitur auctoritate <name>Boethii</name> 
+          <lb ed="#V"/>quarto <title>de Consolatione</title> prosa? 18, ubi infert 
+          <lb ed="#V"/>corollarium[?] porisina[?] quod sicut ins??e 
+          <lb ed="#V"/>adeptione fiunt homines in?fa? sic part?? 
+          <lb ed="#V"/>divinitatis fiunt omnes dii. Unde concludit omnis 
+          <lb ed="#V"/>ergo beatus Deus.</p>
+        </div>
+        <div>
+          <head>Sed contra</head>
         <p>Oppositum arguitur, quia 
-          <lb ed="V"/>esse certis limitationibus circumscriptum esse de<lb ed="V"/>pendens 
-          sunt proprietates proprie creatura compe<lb ed="V"/>tentes 
+          <lb ed="#V"/>esse certis limitationibus circumscriptum esse de<lb ed="#V"/>pendens 
+          sunt proprietates proprie creatura compe<lb ed="#V"/>tentes 
         ergo Deus non potest tribuere contrarias. 
-          <cb ed="V" n="1rb"/><lb ed="V"/>Item quaelibet est finita ergo non potest infinite. 
-          <lb ed="V"/>Antecedens apparet per divinum Petrum de salvente re<lb ed="V"/>ligiosum 
-        legentem in Navarra, quia 
-          <lb ed="V"/>ponit quamlibet creaturam esse finitae capacitatis 
-          <lb ed="V"/>praecise.</p>
-        
+          <cb ed="#V" n="1rb"/><lb ed="#V"/>Item quaelibet est finita ergo non potest infinite. 
+          <lb ed="#V"/>Antecedens apparet per divinum <name>Petrum de salvente re<lb ed="#V"/>ligiosum 
+        legentem in Navarra</name>, quia 
+          <lb ed="#V"/>ponit quamlibet creaturam esse finitae capacitatis 
+          <lb ed="#V"/>praecise.</p>
+        </div>
+        <div>
+          <head>Divisio Quaestionis</head>
         <p>In ista quaestione primo videbitur 
-          <lb ed="V"/>de ascensu multiplici in palma, id est in 
-          <lb ed="V"/>divinam essentiam. Secundo de eius mira?li natura. 
-          <lb ed="V"/>Tertio de fructibus palmae, id est, origine 
-          <lb ed="V"/>personarum.</p>
-        
+          <lb ed="#V"/>de ascensu multiplici in palma, id est in 
+          <lb ed="#V"/>divinam essentiam. Secundo de eius mira?li natura. 
+          <lb ed="#V"/>Tertio de fructibus palmae, id est, origine 
+          <lb ed="#V"/>personarum.</p>
+        </div>
+        <div>
+          <head>Primo de ascensu in divina essentiam</head>
         <p>Quantum ad primum est primo notandum 
-          <lb ed="V"/>quod ascensus in palmam potest multipliciter 
+          <lb ed="#V"/>quod ascensus in palmam potest multipliciter 
         imaginari. <space extent="fourLines"/></p>
         
-        <p>Pro cuius intellectu est advertendum quod doc<lb ed="V"/>tores 
+        <p>Pro cuius intellectu est advertendum quod doc<lb ed="#V"/>tores 
         solent quaerere utrum sine gratia et 
-          <lb ed="V"/>alio dono creato Deus possit aliquem 
-          <lb ed="V"/>acceptare ad vitam aeternam. Et respondet 
+          <lb ed="#V"/>alio dono creato Deus possit aliquem 
+          <lb ed="#V"/>acceptare ad vitam aeternam. Et respondet 
         quod sicut quia liberalitas non est obli?ta[?] 
-          <lb ed="V"/>huiusmodi accidentibus licet de lege communi non 
-          <lb ed="V"/>sic faciat. Unde in gratificatione creare 
-          <lb ed="V"/>de facto concurrunt fides, spes, et caritas 
-          <lb ed="V"/>et dicta acceptatio, quae facit principatur 
-          <lb ed="V"/>totum, ideo ipsa sola sufficit reddere gratum 
-          <lb ed="V"/>omni alio dono circumscripto et sic salva<lb ed="V"/>retur 
+          <lb ed="#V"/>huiusmodi accidentibus licet de lege communi non 
+          <lb ed="#V"/>sic faciat. Unde in gratificatione creare 
+          <lb ed="#V"/>de facto concurrunt fides, spes, et caritas 
+          <lb ed="#V"/>et dicta acceptatio, quae facit principatur 
+          <lb ed="#V"/>totum, ideo ipsa sola sufficit reddere gratum 
+          <lb ed="#V"/>omni alio dono circumscripto et sic salva<lb ed="#V"/>retur 
         quod licet anima rationalis esset solum 
-          <lb ed="V"/>finitae capacitatis, tamen potest in infinitum <name>Apostolus</name>
-          <lb ed="V"/>dignificari et beatificari, quia repleta capacitate 
-          <lb ed="V"/>illa dilectio potest continue esse maior et maior.</p>
+          <lb ed="#V"/>finitae capacitatis, tamen potest in infinitum <name>Apostolus</name>
+          <lb ed="#V"/>dignificari et beatificari, quia repleta capacitate 
+          <lb ed="#V"/>illa dilectio potest continue esse maior et maior.</p>
         
         <p>Ex hoc sequitur quod staret creaturam habere 
-          <lb ed="V"/>beatitudinum formalem praecise finitam, et tamen in<lb ed="V"/>finite 
+          <lb ed="#V"/>beatitudinum formalem praecise finitam, et tamen in<lb ed="#V"/>finite 
         diligeretur vel beatificaretur per tale 
-          <lb ed="V"/>acceptationem.</p>
+          <lb ed="#V"/>acceptationem.</p>
         
-        <p>Sed contra praedictam arguitur per unum ca<lb ed="V"/>sum 
-          quem ponit Olcot[?], scilicet quod Deus accep<lb ed="V"/>tet 
+        <p>Sed contra praedictam arguitur per unum ca<lb ed="#V"/>sum 
+          quem ponit Olcot[?], scilicet quod Deus accep<lb ed="#V"/>tet 
         Sortem in prima parte proportionali huius 
-          <lb ed="V"/>homine et in[? secunda deacceptet, et sic consequentur 
-          <lb ed="V"/>sic quod Sortes sit in partibus imparibus acceptus 
-          <lb ed="V"/>et in partibus paribus sit deacceptus et 
-          <lb ed="V"/>sic mortus Sortis in fine[?] homine.</p>
+          <lb ed="#V"/>homine et in[? secunda deacceptet, et sic consequentur 
+          <lb ed="#V"/>sic quod Sortes sit in partibus imparibus acceptus 
+          <lb ed="#V"/>et in partibus paribus sit deacceptus et 
+          <lb ed="#V"/>sic mortus Sortis in fine[?] homine.</p>
         
         <p>Tunc 
-          <lb ed="V"/>quaeritur quid Deus faciet de Sortis utrum 
-        <cb ed="V" n="1va"/>dampnabitur vel salvabitur. Ad hoc dicitur 
-          <lb ed="V"/>primo quod iste casus non stat de lege 
+          <lb ed="#V"/>quaeritur quid Deus faciet de Sortis utrum 
+        <cb ed="#V" n="1va"/>dampnabitur vel salvabitur. Ad hoc dicitur 
+          <lb ed="#V"/>primo quod iste casus non stat de lege 
         currente. Et si dicatur quod cum casu agat 
-          <lb ed="V"/>Deus lege stante, tunc dubitaretur 
-          <lb ed="V"/>de utraque parte an esset dampnatus vel sal?tus[?] 
-          <lb ed="V"/>et hoc logicatur[?] respondendo. Secundo dico 
-          <lb ed="V"/>magis doctrinaliter[?] quod verisimiliter ipse salva<lb ed="V"/>retur 
-          cum quia Deus est magis pro<lb ed="V"/>nus 
-          ceteris paribus ad meriam[?} quam ad pe<lb ed="V"/>nam. 
+          <lb ed="#V"/>Deus lege stante, tunc dubitaretur 
+          <lb ed="#V"/>de utraque parte an esset dampnatus vel sal?tus[?] 
+          <lb ed="#V"/>et hoc logicatur[?] respondendo. Secundo dico 
+          <lb ed="#V"/>magis doctrinaliter[?] quod verisimiliter ipse salva<lb ed="#V"/>retur 
+          cum quia Deus est magis pro<lb ed="#V"/>nus 
+          ceteris paribus ad meriam[?} quam ad pe<lb ed="#V"/>nam. 
           Tum secundo, quia datao primo instanti non 
-          <lb ed="V"/>esse Sortis videtur sufficere ad hoc quod Sortes 
-          <lb ed="V"/>salvetur quod immediate ante hoc erat accep<lb ed="V"/>tatus 
+          <lb ed="#V"/>esse Sortis videtur sufficere ad hoc quod Sortes 
+          <lb ed="#V"/>salvetur quod immediate ante hoc erat accep<lb ed="#V"/>tatus 
         Deo et nunc non derelinquit aliquid ergo 
-          <lb ed="V"/>etc.</p>
+          <lb ed="#V"/>etc.</p>
         
         <p>Sequitur de ascensu creaturae rationalis 
-          <lb ed="V"/>in palmam, sive in Deum, ipsa ad hoc 
-          <lb ed="V"/>aliquid conferente et iste ascensus est multiplex[?] secundum 
-          <lb ed="V"/>quid multiplex est habet conferens. Primo per viam 
-          <lb ed="V"/>iuntatur[?] directivam; secundo pro fine; tertio pro agen<lb ed="V"/>te; 
+          <lb ed="#V"/>in palmam, sive in Deum, ipsa ad hoc 
+          <lb ed="#V"/>aliquid conferente et iste ascensus est multiplex[?] secundum 
+          <lb ed="#V"/>quid multiplex est habet conferens. Primo per viam 
+          <lb ed="#V"/>iuntatur[?] directivam; secundo pro fine; tertio pro agen<lb ed="#V"/>te; 
         quarto pro natura impellente; quinto pro 
-          <lb ed="V"/>habitu dirigente et hoc multiplicitur[??] secundum quod multiplex[?[ 
-          <lb ed="V"/>est habitus quid, scilicet, moralis alius naturalis.
-          <lb ed="V"/>Pro quo sciendum est quod multiplex est directivum
-          <lb ed="V"/>in palma, quia quod est directivum in pal<lb ed="V"/>mam 
+          <lb ed="#V"/>habitu dirigente et hoc multiplicitur[??] secundum quod multiplex[?[ 
+          <lb ed="#V"/>est habitus quid, scilicet, moralis alius naturalis.
+          <lb ed="#V"/>Pro quo sciendum est quod multiplex est directivum
+          <lb ed="#V"/>in palma, quia quod est directivum in pal<lb ed="#V"/>mam 
           ultimum finis pollitici[?] lex autem ad 
-          <lb ed="V"/>finem polliticis[?] dirigit sed quaedam est lex 
-          <lb ed="V"/>nobis innata quae mihi aliud est quam 
-          <lb ed="V"/>tendentia in finum principium quam tendentiam 
-          <lb ed="V"/>habet quaelibet creatura in ordine ad primum 
-          <lb ed="V"/>principium inquantum est quaedam participata[?] similitudo 
-          <lb ed="V"/>primum principii dicit <name>Eustratius</name> supra primum 
-          <lb ed="V"/><title>Ethicorum</title> et haec est semper recta quantum est ex parte 
-          <lb ed="V"/>sub quam <name>Boethius</name> vocant legem anti<lb ed="V"/>quam 
-          primo <title>De Consolatio</title> inet[?]o quinto di<lb ed="V"/>ml[??] 
+          <lb ed="#V"/>finem polliticis[?] dirigit sed quaedam est lex 
+          <lb ed="#V"/>nobis innata quae mihi aliud est quam 
+          <lb ed="#V"/>tendentia in finum principium quam tendentiam 
+          <lb ed="#V"/>habet quaelibet creatura in ordine ad primum 
+          <lb ed="#V"/>principium inquantum est quaedam participata[?] similitudo 
+          <lb ed="#V"/>primum principii dicit <name>Eustratius</name> supra primum 
+          <lb ed="#V"/><title>Ethicorum</title> et haec est semper recta quantum est ex parte 
+          <lb ed="#V"/>sub quam <name>Boethius</name> vocant legem anti<lb ed="#V"/>quam 
+          primo <title>De Consolatio</title> inet[?]o quinto di<lb ed="#V"/>ml[??] 
           antiqua lege solutum linquit proprie stationis opus omnia certo sive guberna 
-          <lb ed="V"/>hominum[?] solas respuis actus. Hac autem 
-          <lb ed="V"/>lege communicatio naturalis instinctivae[?] dirigitur 
-          <lb ed="V"/>de qua agit <name>Plato</name> in <title>Thimeo</title> et de 
-          <lb ed="V"/>hac dicit inscianus[?] in instincta quod hoc 
-          <lb ed="V"/>est lex quam natura docuit omnia animalia 
-          <lb ed="V"/>forte etiam quod haec lex est illa virtutis 
-          <lb ed="V"/>scientia quae <name>Tullius</name> in <title>Tuscuulionibus Quaestionibus</title> 
-          <cb ed="V" n="1vb"/><lb ed="V"/>dicit nobis est innata sic inquaerens[?] nobis 
-          <lb ed="V"/>innata sunt virtutis secam[?] quaesi adoles<lb ed="V"/>cere 
+          <lb ed="#V"/>hominum[?] solas respuis actus. Hac autem 
+          <lb ed="#V"/>lege communicatio naturalis instinctivae[?] dirigitur 
+          <lb ed="#V"/>de qua agit <name>Plato</name> in <title>Thimeo</title> et de 
+          <lb ed="#V"/>hac dicit inscianus[?] in instincta quod hoc 
+          <lb ed="#V"/>est lex quam natura docuit omnia animalia 
+          <lb ed="#V"/>forte etiam quod haec lex est illa virtutis 
+          <lb ed="#V"/>scientia quae <name>Tullius</name> in <title>Tuscuulionibus Quaestionibus</title> 
+          <cb ed="#V" n="1vb"/><lb ed="#V"/>dicit nobis est innata sic inquaerens[?] nobis 
+          <lb ed="#V"/>innata sunt virtutis secam[?] quaesi adoles<lb ed="#V"/>cere 
           liceret nos utique ad vitam aeternam per 
-          <lb ed="V"/>ducerent et ideo levo[?] acutissimus philosophus 
-          <lb ed="V"/>ponit felicitatem confiscere in huius legis et 
-          <lb ed="V"/>inclinatoinis primum principium conformitate ut 
-          <lb ed="V"/>recitat <name>Albertus</name> cornatem[?] in suo ru<lb ed="V"/>dimento.
+          <lb ed="#V"/>ducerent et ideo levo[?] acutissimus philosophus 
+          <lb ed="#V"/>ponit felicitatem confiscere in huius legis et 
+          <lb ed="#V"/>inclinatoinis primum principium conformitate ut 
+          <lb ed="#V"/>recitat <name>Albertus</name> cornatem[?] in suo ru<lb ed="#V"/>dimento.
           Sed hic occurit consideratio grata, 
-          <lb ed="V"/>sed difficilis de habitudine causae finalis ad 
-          <lb ed="V"/>efficientem respectu effectus quae, scilicet, praecedit in causando.</p>
+          <lb ed="#V"/>sed difficilis de habitudine causae finalis ad 
+          <lb ed="#V"/>efficientem respectu effectus quae, scilicet, praecedit in causando.</p>
           
-          <p><lb ed="V"/>Et primo dico quod causa finalis prius concurrit 
-            <lb ed="V"/>in producendo effectum quam efficiens, quia movet 
-            <lb ed="V"/>efficientem efficiens autem agit propter finem et 
-            <lb ed="V"/>ideo non videtur omnino irrationalis positio <name>Aristoteles</name> et sui 
-            <lb ed="V"/>Commentatorum in <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title>, qui ponunt primam 
-            <lb ed="V"/>causam solum causare in genere causae finalis.</p>
+          <p><lb ed="#V"/>Et primo dico quod causa finalis prius concurrit 
+            <lb ed="#V"/>in producendo effectum quam efficiens, quia movet 
+            <lb ed="#V"/>efficientem efficiens autem agit propter finem et 
+            <lb ed="#V"/>ideo non videtur omnino irrationalis positio <name>Aristoteles</name> et sui 
+            <lb ed="#V"/>Commentatorum in <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title>, qui ponunt primam 
+            <lb ed="#V"/>causam solum causare in genere causae finalis.</p>
         
         <p>Secundo 
-          <lb ed="V"/>dico quod creatura per prius nam est bona quam 
-          <lb ed="V"/>sit ita quod si essentia et bonitas essent realiter 
-          <lb ed="V"/>distincta bonitas praecedet entitatem. Unde et finis 
-          <lb ed="V"/>qui non est bene modum et haec non est no<lb ed="V"/>va 
+          <lb ed="#V"/>dico quod creatura per prius nam est bona quam 
+          <lb ed="#V"/>sit ita quod si essentia et bonitas essent realiter 
+          <lb ed="#V"/>distincta bonitas praecedet entitatem. Unde et finis 
+          <lb ed="#V"/>qui non est bene modum et haec non est no<lb ed="#V"/>va 
           <choice><orig>oppinio</orig><reg>opinio</reg></choice>, sed fuit <name>Platonis</name> dicentis quod bonum 
-          <lb ed="V"/>est prius ente ex hoc posset haberi quod si esset ordo inter perfectiones, divinas bonitas esset 
-          <lb ed="V"/>prior quam entitas, quia bonitas de se 
-          <lb ed="V"/>non requirit productionem.</p>
+          <lb ed="#V"/>est prius ente ex hoc posset haberi quod si esset ordo inter perfectiones, divinas bonitas esset 
+          <lb ed="#V"/>prior quam entitas, quia bonitas de se 
+          <lb ed="#V"/>non requirit productionem.</p>
         
         <p>Secundas gradus 
-          <lb ed="V"/>directivus in fine est quaedam tendentiam 
-          <lb ed="V"/>in fines medios per diversa media 
-          <lb ed="V"/>et haec est tota <choice><orig>concathenatio</orig><reg>concatenatio</reg></choice> causarum 
-          <lb ed="V"/>quam qui intelliget opificem intelligeret et 
-          <lb ed="V"/>sic beatus esset secundum philosophos. Unde <name>Alga<lb ed="V"/>sel</name>
+          <lb ed="#V"/>directivus in fine est quaedam tendentiam 
+          <lb ed="#V"/>in fines medios per diversa media 
+          <lb ed="#V"/>et haec est tota <choice><orig>concathenatio</orig><reg>concatenatio</reg></choice> causarum 
+          <lb ed="#V"/>quam qui intelliget opificem intelligeret et 
+          <lb ed="#V"/>sic beatus esset secundum philosophos. Unde <name>Alga<lb ed="#V"/>sel</name>
           in <title>Metaphysica</title> sua dicit intellectum humanum 
-            <lb ed="V"/>esse beatum cum in se ipso descripserit mundum[?] 
-            <lb ed="V"/>intellectualem talem qualis est iste mundus 
-            <lb ed="V"/>sensibilis haec autem cathena[?] voluntari potest fa<lb ed="V"/>tum 
+            <lb ed="#V"/>esse beatum cum in se ipso descripserit mundum[?] 
+            <lb ed="#V"/>intellectualem talem qualis est iste mundus 
+            <lb ed="#V"/>sensibilis haec autem cathena[?] voluntari potest fa<lb ed="#V"/>tum 
           secundum <name>Boethium</name> quarto de <title>de Consolatio</title> prosa 6 lu?et[?] 
-            <lb ed="V"/>doctores catholici nomen fati abhorre 
-            <lb ed="V"/>aut sicut <name>Gregorius</name> in omn?ie? Ephesiae[?], unde dicit 
-            <lb ed="V"/>absit acordibus fidelium ut fatum esse 
-            <lb ed="V"/>dicamus hoc tamen est propter errorem gentilium 
-            <lb ed="V"/>sicut patet per <name>Augustinum</name> quinto <title>De Civitatem Dei</title> capitulo 9
-            <lb ed="V"/>ubi dicit quod gentiles dixerunt illam 
-            <cb ed="V" n="2ra"/><lb ed="V"/><choice><orig>conchatenationem</orig><reg>concatenationem</reg></choice> esse causarum neccessitantium respectu 
-            <lb ed="V"/>cuiuslibet effectus, et sic fatum nihil est, ut 
-          <lb ed="V"/>dicit <name>Gregorius</name> et <name>Augustinus</name> ad hoc allegat 
-          <lb ed="V"/>se necam[?] dicens[?] ducunt volentem fata vle[?] 
-          <lb ed="V"/>te trahunt et idem videtur esse eiusdem in<lb ed="V"/>te??is 
+            <lb ed="#V"/>doctores catholici nomen fati abhorre 
+            <lb ed="#V"/>aut sicut <name>Gregorius</name> in omn?ie? Ephesiae[?], unde dicit 
+            <lb ed="#V"/>absit acordibus fidelium ut fatum esse 
+            <lb ed="#V"/>dicamus hoc tamen est propter errorem gentilium 
+            <lb ed="#V"/>sicut patet per <name>Augustinum</name> quinto <title>De Civitatem Dei</title> capitulo 9
+            <lb ed="#V"/>ubi dicit quod gentiles dixerunt illam 
+            <cb ed="#V" n="2ra"/><lb ed="#V"/><choice><orig>conchatenationem</orig><reg>concatenationem</reg></choice> esse causarum neccessitantium respectu 
+            <lb ed="#V"/>cuiuslibet effectus, et sic fatum nihil est, ut 
+          <lb ed="#V"/>dicit <name>Gregorius</name> et <name>Augustinus</name> ad hoc allegat 
+          <lb ed="#V"/>se necam[?] dicens[?] ducunt volentem fata vle[?] 
+          <lb ed="#V"/>te trahunt et idem videtur esse eiusdem in<lb ed="#V"/>te??is 
           in t??agediis[?] cum dicit fatis agitur 
-          <lb ed="V"/>etc. Et in principio loquens tu[?] sola etc. non al<lb ed="V"/>legavit 
+          <lb ed="#V"/>etc. Et in principio loquens tu[?] sola etc. non al<lb ed="#V"/>legavit 
           in qua te?gedia et aliquis 
-          <lb ed="V"/>poeta te tua fata trahunt et idem secuta[??] 
-          <lb ed="V"/>expressus videtur esse eiusdem intentionis 
-          <lb ed="V"/><choice><orig>sexto</orig><reg>VIo</reg></choice> libro <title>de naturalibus quaestionibus</title> ubi agit 
-          <lb ed="V"/>de fuluum?bus[?] ubi inter alia dicit fata 
-          <lb ed="V"/>irrevocabitur ius fuum[??] per agunt nec ulla 
-          <lb ed="V"/>conmoventur prae?ae[?] nec numa[??] flectit non 
-          <lb ed="V"/>gra[??] faciunt cursum irrevocabilem ingesta 
-          <lb ed="V"/>ex destinata fluunt, credo tamen quod so??ca[?]
-          <lb ed="V"/>qui inter alios fuit maximus materialis[??] 
-          <lb ed="V"/>non credit actus nostros de <choice><orig>neccesitate</orig><reg>necessitate</reg></choice> eve<lb ed="V"/>nire, 
+          <lb ed="#V"/>poeta te tua fata trahunt et idem secuta[??] 
+          <lb ed="#V"/>expressus videtur esse eiusdem intentionis 
+          <lb ed="#V"/><choice><orig>sexto</orig><reg>VIo</reg></choice> libro <title>de naturalibus quaestionibus</title> ubi agit 
+          <lb ed="#V"/>de fuluum?bus[?] ubi inter alia dicit fata 
+          <lb ed="#V"/>irrevocabitur ius fuum[??] per agunt nec ulla 
+          <lb ed="#V"/>conmoventur prae?ae[?] nec numa[??] flectit non 
+          <lb ed="#V"/>gra[??] faciunt cursum irrevocabilem ingesta 
+          <lb ed="#V"/>ex destinata fluunt, credo tamen quod so??ca[?]
+          <lb ed="#V"/>qui inter alios fuit maximus materialis[??] 
+          <lb ed="#V"/>non credit actus nostros de <choice><orig>neccesitate</orig><reg>necessitate</reg></choice> eve<lb ed="#V"/>nire, 
           quia tunc non esse minus[?] laudandi vel 
-          <lb ed="V"/>vituperandi de actibus nostris, tunc etiam non 
-          <lb ed="V"/>esset consiliendum[?], tunc etiam cessarent penae[?] 
-          <lb ed="V"/>malorum et praemia bonorum sicut arguit 
-          <lb ed="V"/><name>Philosophus</name> in <choice><orig>primo</orig><reg>Io</reg></choice> <title><choice><orig>Peryarmenias</orig><reg>Peri Hermeneias</reg></choice></title>, quae omnia sivit[?] 
-          <lb ed="V"/>absurda, et ideo credebat quod intelli<lb ed="V"/>gebat 
-          <lb ed="V"/>dicta sua respectu effectuum naturalium quantum 
-          <lb ed="V"/>ad augmentationes, diminutiones, alterationes, et a<lb ed="V"/>lios 
-          motus naturales sicut nosivit[??] concedi<lb ed="V"/>mus 
+          <lb ed="#V"/>vituperandi de actibus nostris, tunc etiam non 
+          <lb ed="#V"/>esset consiliendum[?], tunc etiam cessarent penae[?] 
+          <lb ed="#V"/>malorum et praemia bonorum sicut arguit 
+          <lb ed="#V"/><name>Philosophus</name> in <choice><orig>primo</orig><reg>Io</reg></choice> <title><choice><orig>Peryarmenias</orig><reg>Peri Hermeneias</reg></choice></title>, quae omnia sivit[?] 
+          <lb ed="#V"/>absurda, et ideo credebat quod intelli<lb ed="#V"/>gebat 
+          <lb ed="#V"/>dicta sua respectu effectuum naturalium quantum 
+          <lb ed="#V"/>ad augmentationes, diminutiones, alterationes, et a<lb ed="#V"/>lios 
+          motus naturales sicut nosivit[??] concedi<lb ed="#V"/>mus 
           nec hoc est inconveniens nam si 
-          <lb ed="V"/>non esset liberum arbitrum omnia evenirent 
-          <lb ed="V"/>de communitate[?] naturali, si tamen secundum sensum quem 
-          <lb ed="V"/>verba videntur dicere intellexissent ratio 
-          <lb ed="V"/>naturabiliter ab <name>Augustino</name> reprobantur 
-          <lb ed="V"/>ut sibi allegatum est, sed sic non fuit <name>Bo<lb ed="V"/>ethius</name> 
+          <lb ed="#V"/>non esset liberum arbitrum omnia evenirent 
+          <lb ed="#V"/>de communitate[?] naturali, si tamen secundum sensum quem 
+          <lb ed="#V"/>verba videntur dicere intellexissent ratio 
+          <lb ed="#V"/>naturabiliter ab <name>Augustino</name> reprobantur 
+          <lb ed="#V"/>ut sibi allegatum est, sed sic non fuit <name>Bo<lb ed="#V"/>ethius</name> 
           immo conformiter cum <name>Augustino</name> 
-          <lb ed="V"/>licet <name>Augustinus</name> non velit nominare nomine 
-          <lb ed="V"/>fati, sicut facit <name><choice><orig>Boetius</orig><reg>Boethius</reg></choice></name>. Et ideo videtur 
-          <lb ed="V"/>alter?o[?] de nomine magis quam de re. Unde <choice><orig>quinto</orig><reg>Vo</reg></choice> 
-          <lb ed="V"/><title>De civitate</title> capitulo 9o ordinem causarum ubi voluntas 
-          <lb ed="V"/>Dei plurimum[?] poterit neque vocamus neque fati 
+          <lb ed="#V"/>licet <name>Augustinus</name> non velit nominare nomine 
+          <lb ed="#V"/>fati, sicut facit <name><choice><orig>Boetius</orig><reg>Boethius</reg></choice></name>. Et ideo videtur 
+          <lb ed="#V"/>alter?o[?] de nomine magis quam de re. Unde <choice><orig>quinto</orig><reg>Vo</reg></choice> 
+          <lb ed="#V"/><title>De civitate</title> capitulo 9o ordinem causarum ubi voluntas 
+          <lb ed="#V"/>Dei plurimum[?] poterit neque vocamus neque fati 
           <lb ed="#V"/>voca?le[?] nuncupamus, sic capti <name><choice><orig>Boetius</orig><reg>Boethius</reg></choice></name> 
           <lb ed="#V"/>saepe legem et meto[?] quinto primum legem 
           <lb ed="#V"/>que pati sidera cogis et bene ardus silunter[???] 
