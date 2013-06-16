@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-09-22">September 22, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
         <div xml:id="lectio76">
           <head xml:id="l76-Hldtldt" subtype="title">Lectio 76, de Trinitate</head>
@@ -66,18 +75,18 @@
                 <lb ed="#SV"/>ita de mediis attingendis deus supernaturaliter pro<lb ed="#SV"/>vidit. 
                 prima pars est evidens quia actus beatificus est naturalis 
                 <lb ed="#SV"/>et ad illum naturaliter non possumus attingere, immo qui 
-                <lb ed="#SV"/>teneret contrarium esset error <name>pellagii</name> vel haeresis. 
+                <lb ed="#SV"/>teneret contrarium esset error <name ref="#Pelagius">pellagii</name> vel haeresis. 
                 <lb ed="#SV"/>Secunda pars sequitur ex divina providentia dei circa genus 
                 <lb ed="#SV"/>humanum. et non solum circa cultores veri Dei, immo 
-                <lb ed="#SV"/>circa Rectores politiarum ut de angelo[?] regente persas[?] 
+                <lb ed="#SV"/>circa Rectores politiarum ut de <unclear>angelo[?]</unclear> regente <unclear>persas[?]</unclear> 
                 <lb ed="#SV"/>ex divina providentia ita quod principares nec regant habent 
                 <lb ed="#SV"/>haec ex divina providentia, ut per eos vitiam domentur, 
                 <lb ed="#SV"/>licet non sit in eis bonitas moralis. prosunt tamen ibi 
-                <lb ed="#SV"/>ex hoc quod per eos vitia Impediuntur. unde <name>Iulius cae<lb ed="#SV"/>sar</name> 
-                prosequendo <name>pompeium</name> in parva navicula dicit nautae "noli timere <name>caesarem</name> vehis".</p>
+                <lb ed="#SV"/>ex hoc quod per eos vitia Impediuntur. unde <name ref="#JuliusCaesar">Iulius cae<lb ed="#SV"/>sar</name> 
+                prosequendo <name ref="#Pompey">pompeium</name> in parva navicula dicit nautae <quote>"noli timere <name ref="#JuliusCaesar">caesarem</name> vehis"</quote>.</p>
             </div>
               <div>
-                <head xml:id="l76-Hspspsp">Secunda propositio: quod ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur salutarum[?] directio</head>
+                <head xml:id="l76-Hspspsp">Secunda propositio: quod ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur <unclear>salutarum[?]</unclear> directio</head>
                 
                 <p xml:id="l76-ispgdp">Infertur secunda 
                   <lb ed="#SV"/>propositio quod sicut ad non ponere obicem interius sequitur 
@@ -140,8 +149,8 @@
                 <head xml:id="l76-Hqpqpqp">Quarta propositio: quod sententia praelatorum, qui sunt defectus, non renuenda in hiis quae sunt necessaria ad salutem</head>
                 
                 <p xml:id="l76-scqnas">Sequitur corollarium quartum quod licet defectus 
-                  <lb ed="#SV"/>praelatorum sit multum laesivus[?] membrorum ecclesiae dei, 
-                  <lb ed="#SV"/>non propter hoc formidienda[?] vel renuenda est sententia 
+                  <lb ed="#SV"/>praelatorum sit multum <unclear>laesivus[?]</unclear> membrorum ecclesiae dei, 
+                  <lb ed="#SV"/>non propter hoc <unclear>formidienda[?]</unclear> vel renuenda est sententia 
                   <lb ed="#SV"/>eorum in hiis quae sunt necessaria ad salutem.</p> 
                 
                 <p xml:id="l76-ppetmc">prima 
@@ -161,40 +170,40 @@
                   <lb ed="#SV"/>praelatorum vel aliorum in eo existentium non tolleret 
                   <lb ed="#SV"/>efficaciam illius, quia non sunt praesides principales, sed orga<lb ed="#SV"/>na 
                   sancti spiritus, qui loquitur in eis, ut proportionaliter lo<lb ed="#SV"/>cuta 
-                  est asina <name>balaam</name> ut malediceret populo 
+                  est asina <name ref="#Balaam">balaam</name> ut malediceret populo 
                   <lb ed="#SV"/>dei, et tamen benedixit populo, licet coactus, ut patet 
-                  <lb ed="#SV"/><title>numeri</title> 20 et 23o capitulis, Ita in materia fidei aggregati 
+                  <lb ed="#SV"/><title ref="#NumbersBook">numeri</title> 20 et 23o capitulis, Ita in materia fidei aggregati 
                   <lb ed="#SV"/>in consilio generali spiritus sanctus per eos loquitur veri<lb ed="#SV"/>tatem. 
                   et hoc est ex divina providentia respectu huma<lb ed="#SV"/>ni 
                   generis in necessariis pro nostro sive consequendum 
                   <cb ed="#SV" n="292ra"/><lb ed="#SV"/>quod non esset nisi consilio generali daretur auctoritas infa<lb ed="#SV"/>llibilis 
                   non obstante ministrorum malitia. unde sicut 
-                  <lb ed="#SV"/>de <name>balaam</name> cum audiret <name>balaa</name>  benedicere populo 
+                  <lb ed="#SV"/>de <name ref="#Balaam">balaam</name> cum audiret <name ref="#Balak"><unclear>balaa[?]</unclear></name>  benedicere populo 
                   <lb ed="#SV"/>debes. dicit quid est haec quod agis non quid vocavi 
-                  <lb ed="#SV"/>te ut malediceres meis mimicis <sic>balaam</sic>. Respondit 
+                  <lb ed="#SV"/>te ut malediceres meis mimicis <name ref="#Balaam">balaam</name>. Respondit 
                   <lb ed="#SV"/>non possum aliud loqui nisi quae Iussent dicens, et 
                   <lb ed="#SV"/>ideo ubi agitur de instructione populi christam quamcumque <del rend="strikethrough">ba</del> 
                   <lb ed="#SV"/>convalesceret malitia assistentium illi tamen mali 
-                  <lb ed="#SV"/>homines possent cum <name>balaam</name> non possumus aliud 
-                  <lb ed="#SV"/>loqui nisi quae iussent dicens. unde secunda vice[?] dicens 
-                  <lb ed="#SV"/><name>balaam</name> Respondendo balac benedictionem prophetare non va<lb ed="#SV"/>leo 
-                  tantum, quia pluries benedicit <name>balaam</name> populis. unde 
+                  <lb ed="#SV"/>homines possent cum <name ref="#Balaam">balaam</name> non possumus aliud 
+                  <lb ed="#SV"/>loqui nisi quae iussent dicens. unde secunda <unclear>vice[?]</unclear> dicens 
+                  <lb ed="#SV"/><name ref="#Balaam">balaam</name> Respondendo <name ref="#Balak">balac</name> benedictionem prophetare non va<lb ed="#SV"/>leo 
+                  tantum, quia pluries benedicit <name ref="#Balaam">balaam</name> populis. unde 
                   <lb ed="#SV"/>adhuc dicit non est deus quasi homo nec mentiatur nec 
                   <lb ed="#SV"/>filius hominis ut mutetur, nam sicut deus in lege 
                   <lb ed="#SV"/>moysaica specialiter Regebat populum sibi ele<lb ed="#SV"/>ctum, 
                   ita specialiori modo nunc Regit sanctam ecclesiam 
-                  <lb ed="#SV"/>dei, et sicut Repromiser[?] deus antiquis patribus in 
+                  <lb ed="#SV"/>dei, et sicut <unclear>Repromiser[?]</unclear> deus antiquis patribus in 
                   <lb ed="#SV"/>veteri lege, ita in nova Regeneratione promisit 
                   <lb ed="#SV"/>vitam aeternam ipso dicente vobiscum ero usque ad 
                   <lb ed="#SV"/>consummatione simili. ecce quomodo providet humano generi.</p>
             
-                <p xml:id="l76-sevega"><lb ed="#SV"/>secundo ecclesiam vocat petram in tantum quod portae[?] inferi 
+                <p xml:id="l76-sevega"><lb ed="#SV"/>secundo ecclesiam vocat petram in tantum quod <unclear>portae[?]</unclear> inferi 
                   <lb ed="#SV"/>non praevalebunt adversus eam, ut resistere posset 
                   <lb ed="#SV"/>mendaciis haeretice pravitatis non invicte, tamen igno<lb ed="#SV"/>ranter 
                   prophetarent veritatem. et ideo dupliciter potest intelli<lb ed="#SV"/>gi 
                   aliquae veritatem prophetare. uno modo invicte et 
-                  <lb ed="#SV"/>violenter ut apparet in exemplo de <name>balaam</name>. secundo modo 
-                  <lb ed="#SV"/>ignoranter ut de <name>caypha</name> qui sacramentum nostrae re<lb ed="#SV"/>demptionis 
+                  <lb ed="#SV"/>violenter ut apparet in exemplo de <name ref="#Balaam">balaam</name>. secundo modo 
+                  <lb ed="#SV"/>ignoranter ut de <name ref="#Caiaphas">caypha</name> qui sacramentum nostrae re<lb ed="#SV"/>demptionis 
                   et valorum et fructum incarnationis 
                   <lb ed="#SV"/>et passionis expressit, licet non intelligeret. dicit enim 
                   <lb ed="#SV"/>expedit ut unus homo moriatur pro populo. altum 
@@ -202,7 +211,7 @@
                   <lb ed="#SV"/>congregatarum malitia in consilio generali, non sapientes 
                   <lb ed="#SV"/>veritatem. tamen eam prophetarent. et similiter argueretur de 
                   <lb ed="#SV"/>prophetis qui huiusmodi sententiam protulerunt, ut 
-                  <lb ed="#SV"/><name>augustinus</name> exponit <name>virgilium</name> in <title>bucolicis</title> dicentem, 
+                  <lb ed="#SV"/><name ref="#Augustine">augustinus</name> exponit <name ref="#Virgil">virgilium</name> in <title ref="#Bucolics">bucolicis</title> dicentem, 
                   <lb ed="#SV"/>iam non progenies venit de sedibus altis, 
                   <lb ed="#SV"/>et versus sequens in praedictis ponitur, et ita sacra<lb ed="#SV"/>menta 
                   nostrae fidei prophetasse Iudaei et gentiles 
@@ -210,13 +219,13 @@
                 
               <p xml:id="l76-iipfst">Item illud potest aliunde fundari ex 
                 <lb ed="#SV"/>speciali regimine sanctae ecclesiae <del rend="strikethrough">qi</del> cui deputatus est 
-                <lb ed="#SV"/>tanquam <del rend="strikethrough">magister</del> minister spiritualis <name>micael archan<lb ed="#SV"/>gelus</name>, 
+                <lb ed="#SV"/>tanquam <del rend="strikethrough">magister</del> minister spiritualis <name ref="#MichaelArchangel">micael archan<lb ed="#SV"/>gelus</name>, 
                 quoniam sicut ante christum adventum deputabatur 
-                <lb ed="#SV"/>ad custodiam sinagoge cui ex officio inconbit[?] 
+                <lb ed="#SV"/>ad custodiam sinagoge cui ex officio <unclear>inconbit[?]</unclear> 
                 <lb ed="#SV"/>non permittere haeresim in sacra ecclesia <sic>pululare</sic>. 
                 <lb ed="#SV"/>et ideo dicit quod nunc ipse est nunc custos ecclesiae 
                 <lb ed="#SV"/>militantis nec permitteret eam errare, igitur 
-                <lb ed="#SV"/>stante praelatorum malitia <name>michael archan<lb ed="#SV"/>gelus</name> 
+                <lb ed="#SV"/>stante praelatorum malitia <name ref="#MichaelArchangel">michael archan<lb ed="#SV"/>gelus</name> 
                 non permitteret aliqua conclusione fidei subversivam 
                 <lb ed="#SV"/>transire.</p>
               </div>
@@ -240,25 +249,25 @@
               
               </div>
               <div>
-                <head xml:id="l76-Hsxpsxp">Sexta propositio: quod concedendum <name>Beatum Michaelem</name> speciali assistentia toti ecclesiae assistere</head>
+                <head xml:id="l76-Hsxpsxp">Sexta propositio: quod concedendum <name ref="#MichaelArchangel">Beatum Michaelem</name> speciali assistentia toti ecclesiae assistere</head>
                 
                 <p xml:id="l76-speede">Sexta 
-                  <lb ed="#SV"/>propositio est ista: verisimiliter concedendum <name>beatum michaelem</name> 
+                  <lb ed="#SV"/>propositio est ista: verisimiliter concedendum <name ref="#MichaelArchangel">beatum michaelem</name> 
                   <lb ed="#SV"/>speciali assistentia toti ecclesiae assistere. patet ex deputa<lb ed="#SV"/>tione 
                   officii et Regnis ad ecclesiam quia ecclesiae regimen est deputatum ei.</p>
                 
               </div>
               <div>
-                <head xml:id="l76-Hsppspp">Septima propositio: quod assistentia spiritus sancti et <name>Michaelis Archangeli</name> est respectu actuum et operationum quae sunt extra caritatem. </head>
+                <head xml:id="l76-Hsppspp">Septima propositio: quod assistentia spiritus sancti et <name ref="#MichaelArchangel">Michaelis Archangeli</name> est respectu actuum et operationum quae sunt extra caritatem. </head>
                 
                 <p xml:id="l76-spceea">septima propositio corollaria quod 
-                  <lb ed="#SV"/>assistentia spiritus sancti et <name>michaelis archangeli</name> 
+                  <lb ed="#SV"/>assistentia spiritus sancti et <name ref="#MichaelArchangel">michaelis archangeli</name> 
                   <lb ed="#SV"/>est respectu actuum et operationum quae sunt extra caritatem. 
                   <lb ed="#SV"/>patet quia ad Regimen ecclesiae sunt officia ordinata ad 
-                  <lb ed="#SV"/>quae complenda spiritus sanctus et <name>beatus michael</name> 
-                  <lb ed="#SV"/>assistunt, igitur sicut malitia in sacrandum[?] non tol<lb ed="#SV"/>lit 
+                  <lb ed="#SV"/>quae complenda spiritus sanctus et <name ref="#MichaelArchangel">beatus michael</name> 
+                  <lb ed="#SV"/>assistunt, igitur sicut malitia in <unclear>sacrandum[?]</unclear> non tol<lb ed="#SV"/>lit 
                   quin ex gradu suo consecret sacerdos 
-                  <lb ed="#SV"/>malus, ita ex assistentia spiritus sancti et <name>beati michae<lb ed="#SV"/>lis</name> 
+                  <lb ed="#SV"/>malus, ita ex assistentia spiritus sancti et <name ref="#MichaelArchangel">beati michae<lb ed="#SV"/>lis</name> 
                   non tollit <del rend="strikethrough">mlicia</del> malitia quin consilium 
                   <lb ed="#SV"/>generale habeat effectum et auctoritatem.</p>
               </div>
@@ -271,7 +280,7 @@
                   erunt gradus et proportiones auctoritatum 
                   <lb ed="#SV"/>et effectuum, ergo non obstante malitia summi 
                   <lb ed="#SV"/>pontificis, in hoc genere tamen est sibi summus gradus 
-                  <lb ed="#SV"/>assistentiae spiritus sancti et <name>beati michaelis</name>.</p>
+                  <lb ed="#SV"/>assistentiae spiritus sancti et <name ref="#MichaelArchangel">beati michaelis</name>.</p>
            
               </div>
               <div>
@@ -286,10 +295,10 @@
               </div>
               
               <div>
-                <head xml:id="l76-depdep">Decima propositio: spiritus sanctus et <name>michael archangelus</name> habent specialem assistentiam respectu sacrorum librorum </head>
+                <head xml:id="l76-depdep">Decima propositio: spiritus sanctus et <name ref="#MichaelArchangel">michael archangelus</name> habent specialem assistentiam respectu sacrorum librorum </head>
                 
                 <p xml:id="l76-dpcare">decima propositio corollaria 
-                  <lb ed="#SV"/>quod spiritus sanctus et <name>michael archangelus</name> habent 
+                  <lb ed="#SV"/>quod spiritus sanctus et <name ref="#MichaelArchangel">michael archangelus</name> habent 
                   <lb ed="#SV"/>specialem assistentiam respectu sacrorum librorum in quibus 
                   <lb ed="#SV"/>continetur vita spiritualis fidelium. et hoc spectat 
                   <lb ed="#SV"/>ad Regimen ecclesiae.</p>
@@ -312,9 +321,9 @@
                 
                 <p xml:id="l76-dceuer">Duodecimum corollarium est quod doctrina ad<lb ed="#SV"/>dita 
                   sacrae scripturae est indicium suae incorporationis 
-                  <lb ed="#SV"/>et vivificationis. et ex hoc arguit <name>gama<lb ed="#SV"/>lielis</name> 
-                  in <title>actibus apostolorum</title>,<note>Acts 5:39</note> "si ex deo est, tunc ita 
-                  <lb ed="#SV"/>erit. nam additione facta respectu librorum sacrorum 
+                  <lb ed="#SV"/>et vivificationis. et ex hoc arguit <name ref="#Gamaliel">gama<lb ed="#SV"/>lielis</name> 
+                  in <title ref="#ActsOfApostles">actibus apostolorum</title>,<note type="editorNote">Acts 5:39</note> <quote type="Biblical">"si ex deo est, tunc ita 
+                  <lb ed="#SV"/>erit."</quote> nam additione facta respectu librorum sacrorum 
                   <lb ed="#SV"/>inter quos includuntur determinationes consiliorum genera<lb ed="#SV"/>lium 
                   et alia per ecclesiam ordinata pro salute huma<lb ed="#SV"/>na 
                   hoc est signum verificationis, scilicet, quod ex unica 
@@ -322,10 +331,10 @@
              
               </div>
               <div>
-                <head xml:id="l76-Hdtpdtp">Tertia decima propositio: quod additio facta in symbolo quod cantatur in missa est pars incomparabiliter[?] a spiritu sancto Recepta</head>
+                <head xml:id="l76-Hdtpdtp">Tertia decima propositio: quod additio facta in symbolo quod cantatur in missa est pars <unclear>incomparabiliter[?]</unclear> a spiritu sancto Recepta</head>
                 
                 <p xml:id="l76-tpssab"><cb ed="#SV" n="292v"/><lb ed="#SV"/>Tertia decima propositio sequitur quod additio facta in symbolo quod cantatur 
-                  <lb ed="#SV"/>in missa est pars incomparabiliter[?] a spiritu sancto Recepta, quia 
+                  <lb ed="#SV"/>in missa est pars <unclear>incomparabiliter[?]</unclear> a spiritu sancto Recepta, quia 
                   <lb ed="#SV"/>spiritus sanctus assistebat in consilio, nisi fuit talis a<lb ed="#SV"/>dditio 
                   determinata, et ipse specialiter assistit libro sa<lb ed="#SV"/>cro 
                   pro doctrina sacra in tantum quod eis non permitteret 
@@ -357,7 +366,7 @@
                   <lb ed="#SV"/>ecclesia vel doctores approbari seu inspirati, quia 
                   <lb ed="#SV"/>illud est scripturae eandem veritatem diversis modis ex<lb ed="#SV"/>primere. 
                   Et eandem veritatem quasi contrariis verbis pro<lb ed="#SV"/>ferre. 
-                  unde liber translationis <name>Ieromi</name> est biblia 
+                  unde liber translationis <name ref="#Jerome">Ieromi</name> est biblia 
                   <lb ed="#SV"/>et eius Receptio sunt signum vivificationis in creaturis. 
                   <lb ed="#SV"/>et per hoc possent solvi multa argumenta quae fiunt 
                   <lb ed="#SV"/>communiter de translatione bibliae, quia semper fideles se de<lb ed="#SV"/>bent 
@@ -384,7 +393,7 @@
                 
                <p xml:id="l76-spsesc">Septima decima propositio sequitur quod ecclesia 
                  <lb ed="#SV"/>in primaria sui significatione nihil aliud est nisi aggregatio 
-                 <lb ed="#SV"/>fidelium qui fuerunt et erunt ab <name>abel</name> iusto 
+                 <lb ed="#SV"/>fidelium qui fuerunt et erunt ab <name ref="#Abel">abel</name> iusto 
                  <lb ed="#SV"/>usque ad finem mundi. etiam sacra scriptura et 
                  <lb ed="#SV"/>ecclesia quae nunc est unirentur ad idem punctum et 
                  <lb ed="#SV"/>ad eadem Regulam primae veritatis adaequate inni<lb ed="#SV"/>tuntur, 
@@ -392,7 +401,7 @@
                  <lb ed="#SV"/>necessaria est immediate a spiritu sancto Revelante, igitur 
                  <lb ed="#SV"/>sicut deus non potuit prophetas immediate decipere, nec 
                  <lb ed="#SV"/>falsum Revelare, sic nec scriptura posset esse 
-                 <lb ed="#SV"/>falsa ad sensum ad quem data est <hi>nec<desc>looks like the "c" has been corrected</desc></hi> ecclesia aliquid 
+                 <lb ed="#SV"/>falsa ad sensum ad quem data est nec ecclesia aliquid 
                  <lb ed="#SV"/>determinat nisi quantum sacra Religio et consilium et 
                  <lb ed="#SV"/>scriptura concernunt.</p>
               
@@ -402,7 +411,7 @@
                 
                 <p xml:id="l76-opiaii">Octava decima propositio: istis non obstantibus, 
                   <cb ed="#SV" n="292vb"/><lb ed="#SV"/>ecclesia videtur aliquo modo maiorum auctoritas 
-                  <lb ed="#SV"/>quam scriptura sacra. patet quia ecclesia sumpta paria[?] 
+                  <lb ed="#SV"/>quam scriptura sacra. patet quia ecclesia sumpta <unclear>paria[?]</unclear> 
                   <lb ed="#SV"/>significatione ut sumitur septemdecima propositione Recipit im<lb ed="#SV"/>mediate 
                   a spiritu sancto totam doctrinam in biblia contentam, 
                   <lb ed="#SV"/>et modo nobiliori in subiecto vitali quam 
@@ -421,9 +430,9 @@
                   <lb ed="#SV"/>causando ecclesiam pro aggregatione fidelium vel praela<lb ed="#SV"/>torum 
                   in consilio celebrando, quantum ad hoc scriptura 
                   <lb ed="#SV"/>videtur maioris auctoritatis, saltem numeraliter quantum 
-                  <lb ed="#SV"/>ad multitudinem, quia per plures et magis autenticos[?] 
+                  <lb ed="#SV"/>ad multitudinem, quia per plures et magis <unclear>autenticos[?]</unclear> 
                   <lb ed="#SV"/>christo Revelante scriptura est nobis determinata, 
-                  <lb ed="#SV"/>ergo considerando artifices scriptura, praeferendum[?a?] 
+                  <lb ed="#SV"/>ergo considerando artifices scriptura, <unclear>praeferendum[?a?]</unclear> 
                   <lb ed="#SV"/>est congregatum fidelium.</p>
               
               </div>
@@ -431,7 +440,7 @@
                 <head xml:id="l76-Hobiobi">Obiectio</head>
                 
                 <p xml:id="l76-srepip">Sed Respondendum est ad 
-                  <lb ed="#SV"/><name>augustinum</name> dicentem <quote>"euangelio non crederem 
+                  <lb ed="#SV"/><name ref="#Augustine">augustinum</name> dicentem <quote>"euangelio non crederem 
                     <lb ed="#SV"/>nisi auctoritas ecclesiae adhoc me compelleret,"</quote> 
                   <lb ed="#SV"/>ergo auctoritas ecclesiae est maior quam auctoritas scripturae 
                   <lb ed="#SV"/>quod est contra propositione immediate praecedentem.</p>
@@ -440,9 +449,9 @@
               <div>
                 <head xml:id="l76-Hressio">Responsio</head>
                 <p xml:id="l76-rdudmr">Respondetur 
-                  <lb ed="#SV"/>dupliciter. uno modo quod <name>augustinus</name> sumpsit 
+                  <lb ed="#SV"/>dupliciter. uno modo quod <name ref="#Augustine">augustinus</name> sumpsit 
                   <lb ed="#SV"/>ecclesiam. Secundo modo scilicet pro aggregatione fidelium 
-                  <lb ed="#SV"/>qui fuerunt ab <name>abel</name> sunt et erunt usque ad 
+                  <lb ed="#SV"/>qui fuerunt ab <name ref="#Abel">abel</name> sunt et erunt usque ad 
                   <lb ed="#SV"/>consummationem saeculi. et hoc christo incluso qui 
                   <lb ed="#SV"/>tantae fuit auctoritatis quod scriptura debet merito 
                   <lb ed="#SV"/>recipi.</p> 
