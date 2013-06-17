@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-09-22">September 22, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio77">
           <head xml:id="l77-Hldtldt" subtype="title">Lectio 77, de Trinitate</head>
@@ -53,7 +62,7 @@
                   infinita secundum infinitos casus possibiles potest nobis 
                   <lb ed="#SV"/>veritatem ostendere.</p>
               
-                <p xml:id="l77-ppesid"><g ref="#slash"/>prima pars est <name>augustini</name> in libro 
+                <p xml:id="l77-ppesid"><g ref="#slash"/>prima pars est <name ref="#Augustine">augustini</name> in libro 
                   <lb ed="#SV"/>de doctrina christiana, ubi communiter allegatur quidquid 
                   <lb ed="#SV"/>in aliis scripturis invenitur, scilicet utile, est in scri<lb ed="#SV"/>ptura 
                   sacra Reperitur, si inutile in eadem reprobatur, 
@@ -92,7 +101,7 @@
                     <lb ed="#SV"/>possibiles de quibus ecclesia non est actualiter in<lb ed="#SV"/>structa 
                     et tamen continentur in scriptura sacra. 
                     <lb ed="#SV"/><g ref="#slash"/>tamen ecclesia est per quamlibet veritatem in qua non 
-                    <lb ed="#SV"/>actualiter est instructa fecundibilis[?].</p>
+                    <lb ed="#SV"/>actualiter est instructa <unclear>fecundibilis[?]</unclear>.</p>
                 </div>
                 <div>
                   <head xml:id="l77-Hscscsc">Secundum corollarium: maior et altior est scripturae continentia quam sit angeli notitia beatifica</head>
@@ -105,7 +114,7 @@
                     mysterium esset in scriptura sacra 
                     <lb ed="#SV"/>sufficienter descriptum nihilominus, tamen latuit angelo. 
                     <lb ed="#SV"/><g ref="#slash"/>bene ex ignorantia dicebant angeli ante incar<lb ed="#SV"/>nationem 
-                    quis est iste, qui venit de edon[?] tutis[?] 
+                    quis est iste, qui venit de <unclear>edon[?]</unclear> <unclear>tutis[?]</unclear> 
                     <lb ed="#SV"/>vestibus borra. <g ref="#slash"/>et admirantes de incarna<lb ed="#SV"/>tione 
                     haec clamabant, <g ref="#slash"/>et tamen incarnatio 
                     <lb ed="#SV"/>Relucebat in scriptura.</p>
@@ -134,12 +143,12 @@
                     <lb ed="#SV"/>quod habemus initium divinae providentiae et spiritualis re<lb ed="#SV"/>giminis 
                     ante verbi incarnationem, <g ref="#slash"/>et habuimus consummationem 
                     <lb ed="#SV"/>illius et in incarnatione et in passione, <g ref="#slash"/>et haec fuit 
-                    <lb ed="#SV"/>intensio prophetarum. <g ref="#slash"/>unde <name>solomon</name> ait in <title>canticis</title> primo 
+                    <lb ed="#SV"/>intensio prophetarum. <g ref="#slash"/>unde <name ref="#Solomon">solomon</name> ait in <title ref="#SongOfSongs">canticis</title> primo 
                     <lb ed="#SV"/>capitulo oculetur me osculo oris tui, <g ref="#slash"/>et licet ma<lb ed="#SV"/>trimonium 
                     tunc temporis esse inceptum, <g ref="#slash"/>non tamen erat consum<lb ed="#SV"/>matum, 
-                    <g ref="#slash"/>sed osculando inflaverit[?] spiritum gratiae et dona 
+                    <g ref="#slash"/>sed osculando <unclear>inflaverit[?]</unclear> spiritum gratiae et dona 
                     <lb ed="#SV"/>gratuita quibus ecclesia habundat in fide. et sic sponsus 
-                    <lb ed="#SV"/>numquam permitteret eam deficere quin ipsa sit fecundabilis[?] 
+                    <lb ed="#SV"/>numquam permitteret eam deficere quin ipsa sit <unclear>fecundabilis[?]</unclear> 
                     <lb ed="#SV"/>veritate in hiis quae tangunt fidem et bonos mores. 
                     <lb ed="#SV"/>secunda pars corollarii patet, quia scriptura sacra est infinitae continentiae 
                     <lb ed="#SV"/>et continet infinitas altissimas veritates <g ref="#slash"/>et nulli 
@@ -150,7 +159,7 @@
             <p xml:id="l77-uneiei"><g ref="#dbslash"/>ubi notandum est quod in incarnatione verbi humanitatis christi, 
               <lb ed="#SV"/>primo legit in verbo omnem veritatem. <g ref="#slash"/>et quid in scriptura 
               <lb ed="#SV"/>sacra continuetur <g ref="#slash"/>et legendo intellexit quia secundum sen<lb ed="#SV"/>tenciam 
-              <lb ed="#SV"/><g ref="#dot"/>ma[?]<g ref="#dot"/> in instanti anima christi novit omnia 
+              <lb ed="#SV"/><g ref="#dot"/><unclear>ma[?]</unclear><g ref="#dot"/> in instanti anima christi novit omnia 
               <lb ed="#SV"/>quae verbum plenariae, <g ref="#slash"/>et ratione idoneitatis christus 
               <lb ed="#SV"/>consecratus est in sacerdotem et Regalem dignitatem <g ref="#slash"/>et propter eius Reverentiam reconsiliatum est totum genus 
               <lb ed="#SV"/>humanum deo patri in eodem instanti.</p>
@@ -179,14 +188,14 @@
                   
                   <p xml:id="l77-scqimo"><g ref="#dbslash"/>sextum corollarium quod in sacra scriptura omnes 
                     <lb ed="#SV"/>leges iustae et regulae morales vere et plena<lb ed="#SV"/>rie 
-                    continentur <g ref="#slash"/>patet ex probatione <name>augustini</name> ad hoc 
+                    continentur <g ref="#slash"/>patet ex probatione <name ref="#Augustine">augustini</name> ad hoc 
                     <lb ed="#SV"/>evidente, quia vel alibi invenitur, si est utile quin sacra scriptura eum contineat, <g ref="#slash"/>si inutile quin illud Reprobet, 
                     <lb ed="#SV"/>ergo omnes Regulae boni sunt in sacra scriptura contente, 
                     <cb ed="#SV" n="293va"/><lb ed="#SV"/>et consimiliter dicitur hoc esse verum nedum de moralibus, 
-                    <lb ed="#SV"/>sed de speciebus. <g ref="#slash"/>unde tenet <name>Iosefus</name>, <name>hactus[?]</name>, <name>ra<lb ed="#SV"/>bi 
+                    <lb ed="#SV"/>sed de speciebus. <g ref="#slash"/>unde tenet <name ref="#Josephus">Iosefus</name>, <name><unclear>hactus[?]</unclear></name>, <name ref="#Maimonides">ra<lb ed="#SV"/>bi 
                       moyses</name> quod singularem artes in scriptura sacra con<lb ed="#SV"/>tinentur, 
-                    licet alio typo[?] tradendum, nec[?] artifex est 
-                    <lb ed="#SV"/>alius, scilicet spiritus sanctus <name>Rabbi moyses</name> illud eze[?] <g ref="#dot"/> de 
+                    licet alio <unclear>typo[?]</unclear> tradendum, <unclear>nec[?]</unclear> artifex est 
+                    <lb ed="#SV"/>alius, scilicet spiritus sanctus <name ref="#Maimonides">Rabbi moyses</name> illud <unclear>eze[?]</unclear> <g ref="#dot"/> de 
                     <lb ed="#SV"/>Rota in medio rotae. <g ref="#slash"/>exponit ita quod Iudaei antiqui 
                     <lb ed="#SV"/>qui intellexerunt scripturam dixerunt in esse traditam 
                     <lb ed="#SV"/>de mobilibus corporum caelestium et quod spiritus erat 
@@ -209,8 +218,8 @@
                   
                 <p xml:id="l77-ocqpsi"><g ref="#dbslash"/>octavum corollarium quod 
                   <lb ed="#SV"/>prophetae non plene intellexerunt suas prophetias, 
-                  <lb ed="#SV"/><g ref="#slash"/>nec <name>moyses</name> plenariae intellexit illud quod 
-                  <lb ed="#SV"/>prophetavit in suis 5 libris, <g ref="#slash"/>quia scripsit infinitas[?] 
+                  <lb ed="#SV"/><g ref="#slash"/>nec <name ref="#Moses">moyses</name> plenariae intellexit illud quod 
+                  <lb ed="#SV"/>prophetavit in suis 5 libris, <g ref="#slash"/>quia scripsit <unclear>infinitas[?]</unclear> 
                   <lb ed="#SV"/>veritates, <g ref="#slash"/>sive in eis infinitae veritates continentur quarum 
                   <lb ed="#SV"/>eius anima non erat capax, <g ref="#slash"/>et infinitum altiora 
                   <lb ed="#SV"/>et plura scripsit quam intellexit, quia fuit purum 
@@ -218,24 +227,24 @@
                   <lb ed="#SV"/>populi sufficienter intellexerit.</p>
                 </div>
                 <div>
-                  <head xml:id="l77-Hncncnc">Nonum corollarium: quod probabile est dicere quod quinque libri <name>Moysi</name> contineant totum novum testamentum</head>
+                  <head xml:id="l77-Hncncnc">Nonum corollarium: quod probabile est dicere quod quinque libri <name ref="#Moses">Moysi</name> contineant totum novum testamentum</head>
                   
                   <p xml:id="l77-ciqanv"><g ref="#dbslash"/>Consequenter infertur quod 
-                    <lb ed="#SV"/>probabile est dicere quod quinque libri <name>moysi</name> contineant 
+                    <lb ed="#SV"/>probabile est dicere quod quinque libri <name ref="#Moses">moysi</name> contineant 
                     <lb ed="#SV"/>totum novum testamentum quantum ad sententias, scilicet quod 
                     <lb ed="#SV"/>continent totum vetus testamentum quantum ad veritates. <g ref="#slash"/>et 
                     <lb ed="#SV"/>ideo secundum doctores quod Rota sit in medio rotae intelligitur 
                     <lb ed="#SV"/>quod novum testamentum intelligitur in veteri. <g ref="#slash"/>ideo ait sal<lb ed="#SV"/>vator 
-                    quod <name>moyses</name> scripsit de me. <g ref="#slash"/>pro quo notandum est 
-                    <lb ed="#SV"/>quod scriptura licet cernerit[?] non fuit tantum quantum ad vigorem 
+                    quod <name ref="#Moses">moyses</name> scripsit de me. <g ref="#slash"/>pro quo notandum est 
+                    <lb ed="#SV"/>quod scriptura licet <unclear>cernerit[?]</unclear> non fuit tantum quantum ad vigorem 
                     <lb ed="#SV"/>principalem. <g ref="#slash"/>Sed debet imaginari quantum ad modum pervi cuius 
                     <lb ed="#SV"/>eadem est anima a principio usque ad finem vitae <g ref="#slash"/>et quantum ad 
                     <lb ed="#SV"/>principalem non perficitur partem, sed perficitur puer quantum ad aliquid. <g ref="#slash"/>sic 
                     <lb ed="#SV"/>in proposito quantum ad continuam virtualem <g ref="#slash"/>illud quod additum 
                     <lb ed="#SV"/>est veteri testamento, scilicet, nonum testamentum continetur 
-                    <lb ed="#SV"/>in veteri, immo quod additur <title>penthatuco</title>, id est, quinque libris 
-                    <lb ed="#SV"/><name>moysi</name> sive fuerit de novo testamento sive de 
-                    <lb ed="#SV"/>veteri continetur in illis <g ref="#dot"/>5<g ref="#dot"/> libris <name>moysi</name>. <g ref="#slash"/>et quantum ad 
+                    <lb ed="#SV"/>in veteri, immo quod additur <title ref="#Pentatuch">penthatuco</title>, id est, quinque libris 
+                    <lb ed="#SV"/><name ref="#Moses">moysi</name> sive fuerit de novo testamento sive de 
+                    <lb ed="#SV"/>veteri continetur in illis <g ref="#dot"/>5<g ref="#dot"/> libris <name ref="#Moses">moysi</name>. <g ref="#slash"/>et quantum ad 
                     <lb ed="#SV"/>fidem et consilia generalia non creverunt veritates, 
                     <lb ed="#SV"/>licet ad plura obligemur ex determinatione ecclesiae et con<lb ed="#SV"/>silii 
                     generalis, licet crescere posset per explicationem non 
@@ -320,7 +329,7 @@
                     <lb ed="#SV"/>non tollitur vita ecclesiae, quia in fide principaliter 
                     <lb ed="#SV"/>est unio fidelium et in caritate <g ref="#slash"/>nam fides 
                     <lb ed="#SV"/>et caritas potissime et principaliter uniunt fideles 
-                    <lb ed="#SV"/>iuxta illud in <title>actu apostolorum</title> multitudinis credentium 
+                    <lb ed="#SV"/>iuxta illud in <title ref="#ActsOfApostles">actu apostolorum</title> multitudinis credentium 
                     erat cor unum.</p>
             
                   <p xml:id="l77-tcieem"><g ref="#dbslash"/>tertio caput influens 
@@ -334,7 +343,7 @@
                     <lb ed="#SV"/>vita consequens est falsum, quia dato hoc quod sedes 
                     <lb ed="#SV"/>apostolica vacaret nihilominus adhuc Remaneret 
                     <cb ed="#SV" n="294ra"/><lb ed="#SV"/>unio ecclesiae in incarnatione et fide in quo consistit 
-                    <lb ed="#SV"/>sponsi et sponsae coniunctio, ergo nec ecclesia monetur[?] 
+                    <lb ed="#SV"/>sponsi et sponsae coniunctio, ergo nec ecclesia <unclear>monetur[?]</unclear> 
                     <lb ed="#SV"/>ex sublatione pontificis, <g ref="#slash"/>nec ecclesia Redderetur 
                     <lb ed="#SV"/>sine capite principali licet aliquo capite privaretur, 
                     <lb ed="#SV"/>tamen esset unitas capitis principalis cum sponsa etc.</p>
@@ -354,12 +363,12 @@
                     <lb ed="#SV"/>et non ex primaria sui significatione, sed ex usu 
                     <lb ed="#SV"/>doctorum hoc est. <g ref="#slash"/>nam si aliqua propositio sequitur 
                     <lb ed="#SV"/>ex fide contradictorium eius Repugnat fidei 
-                    <lb ed="#SV"/>sed non tangit illum modum <name>augustinus</name> <title>supra 
+                    <lb ed="#SV"/>sed non tangit illum modum <name ref="#Augustine">augustinus</name> <title ref="#supraGenesim">supra 
                       <lb ed="#SV"/>genesim</title>. <g ref="#slash"/>ubi loquitur de varietate opinionum 
                     <lb ed="#SV"/>contra fidem dicens quod tandiu non est contra fidem quam<lb ed="#SV"/>diu 
                     non est determinatum per ecclesiam esse tale. <g ref="#slash"/>et 
                     <lb ed="#SV"/>ad illud cogimur dicere nisi teneamus erro<lb ed="#SV"/>rem 
-                    de monson[?]. <g ref="#slash"/>unde ex usu doctorum aliquid 
+                    de <unclear>monson[?]</unclear>. <g ref="#slash"/>unde ex usu doctorum aliquid 
                     <lb ed="#SV"/>esse contra fidem est quia Repugnat evidenter fi<lb ed="#SV"/>dei 
                     vel quod determinatum est esse Repugnans fidei per 
                     <lb ed="#SV"/>ecclesiam vel consilium generale. <g ref="#slash"/>nam ex articulo 
