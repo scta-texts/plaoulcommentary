@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Sacramento, CA</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2011-03-25">March 23rd, 2011</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio11">
         <head subtype="title">Lectio 11, Prologus</head>
@@ -45,26 +54,26 @@
           
           <p xml:id="l11-pphbea"><g ref="#slash"/>prima pars 
             <lb ed="#SV"/>huius conclusionis patet per exemplum prius positum de gustu, <g ref="#slash"/>nam sicut 
-            <lb ed="#SV"/>est de gustu corporali sive<!-- sine/sive? --> sensuali,<!-- spirituali? --> <g ref="#slash"/>ita videtur esse de 
+            <lb ed="#SV"/>est de gustu corporali sive spirituali, <g ref="#slash"/>ita videtur esse de 
             <lb ed="#SV"/>intellectuali, <g ref="#slash"/>sed infirmitas organi sensitivi sic 
             <lb ed="#SV"/>immutat gustum corporalem quod facit apparere 
             <lb ed="#SV"/>dulce amarum <g ref="#slash"/>et e contra. <g ref="#slash"/>et ita videtur esse de gu<lb ed="#SV"/>stu 
-            intellectuali, <lb ed="#SV"/>ut alias allegatum fuit 
-            <lb ed="#SV"/><title>Isaiae</title> <!-- "y"? ymmo...?-->quinto: <g ref="#slash"/>"vae qui dicitis bonum malum <g ref="#slash"/>et malum 
-            <cb ed="SV#?"/><lb ed="#SV"/>bonum." <!-- does "<note>" mean your note? --><note>Isaias 5:20, "dicitis malum bonum et bonum malum ponentes tenebras lucem et lucem tenebras ponentes amarum in dulce et dulce in amarum".</note> <g ref="#pilcrow"/>Item Istud posset probari per comparationem 
+            intellectuali, <g ref="#slash"/>ut alias allegatum fuit 
+            <lb ed="#SV"/><title ref="#IsaiahBook">ysaiae</title> <choice><orig>5o</orig><reg>quinto</reg></choice>: <g ref="#slash"/><quote type="Biblical">"vae qui dicitis bonum malum <g ref="#slash"/>et malum 
+            <cb ed="#SV" n="201ra"/><lb ed="#SV"/>bonum."</quote> <g ref="#pilcrow"/>Item Istud posset probari per comparationem 
             <lb ed="#SV"/>affectivae ad intellectum, <g ref="#slash"/>nam post lapsum, affectiva semper 
             <lb ed="#SV"/>tendit ad <choice><orig>yma</orig><reg>ima</reg></choice> dimissa suae naturae <g ref="#slash"/>et magis tendit 
-            <lb ed="#SV"/>in creaturam quam in Deum, in malum quam in bonum, igitur <choice><orig>eciam</orig><reg>etiam</reg></choice> intellectus 
+            <lb ed="#SV"/>in creaturam quam in deum, in malum quam in bonum, igitur <choice><orig>eciam</orig><reg>etiam</reg></choice> intellectus 
             <lb ed="#SV"/>magis movetur falso quam vero. <g ref="#slash"/>Et in ista Radice fundatur 
-            <lb ed="#SV"/>positio sanctorum doctorum antiquorum, qui omnino<!-- omnis ?--> conveniunt in hoc 
-            <lb ed="#SV"/>quod: stando[?] in experientiis<!-- ? --> naturalibus sine<!-- sine/sive? --> speciali dei gratia hoc non 
-            <lb ed="#SV"/>potest bene mortaliter agere sive<!--  ?--> operari sicut fuerit <name>ori<lb ed="#SV"/>gines</name>, 
-            <name>lactantius</name>, et <name>augustinus</name>. <g ref="#slash"/>Et si non ita loquuntur docto<lb ed="#SV"/>res 
-            moderni de gratia gratum faciente <g ref="#slash"/>tamen dicunt quod Requi<lb ed="#SV"/>ritur 
-            specialis dei gratia gratis, data sicut fuit bradwar<lb ed="#SV"/>dinus 
+            <lb ed="#SV"/>positio sanctorum doctorum antiquorum, qui omnes conveniunt in hoc 
+            <lb ed="#SV"/>quod: stando in puris naturalibus sine speciali dei gratia homo non 
+            <lb ed="#SV"/>potest bene moraliter agere sive operari sicut fuerunt <name ref="#Origen">ori<lb ed="#SV"/>genes</name>, 
+            <name ref="#Lactantius">lactantius</name>, et <name ref="#Augustine">augustinus</name>. <g ref="#slash"/>Et si non ita loquuntur <name ref="#Moderni">docto<lb ed="#SV"/>res 
+            moderni</name> de <seg>gratia gratum faciente</seg> <g ref="#slash"/>tamen dicunt quod Requi<lb ed="#SV"/>ritur 
+            <seg>specialis dei gratia gratis</seg>, data sicut fuit <name ref="#Bradwardine">bravvar<lb ed="#SV"/>dini</name> 
             et alii.</p>
           
-          <p xml:id="l11-spcsss"><g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> pars conclusionis probatur ex ista<!-- ita? --> Radice, quod 
+          <p xml:id="l11-spcsss"><g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> pars conclusionis probatur ex ista Radice, quod 
             <lb ed="#SV"/>ars in suo processu non supponit principia falsa, quia alias non esset 
             <lb ed="#SV"/>ars. igitur nihil infert falsum ex suis principiis. tenet consequentia 
             <lb ed="#SV"/>quia in bona consequentia ex vero non sequitur, nisi verum, <g ref="#slash"/>ita quod si 
@@ -72,7 +81,7 @@
             <lb ed="#SV"/>illis principiis, <g ref="#slash"/>et si inferatur ex illis sophisticis in logica, 
             <lb ed="#SV"/>quia non bene infertur in bona consequentia, <g ref="#slash"/>ita quod si aliquid inferunt 
             <lb ed="#SV"/>contra articulos fidei, <g ref="#slash"/>non inferunt ex principiis alicuius artis, 
-            <lb ed="#SV"/><!-- vel or nihil? --> si inferant ex illis principiis, hoc non est in bona 
+            <lb ed="#SV"/>vel si inferant ex illis principiis, hoc non est in bona 
             <lb ed="#SV"/>consequentia, sed solum sophistice.</p>
           
         </div>
@@ -85,8 +94,8 @@
             <lb ed="#SV"/>quia omne verum omni vero consonat.</p>
           
           <p xml:id="l11-sccepi"><g ref="#pilcrow"/><choice><orig>2m</orig><reg>secundum</reg></choice> corollarium: contra 
-            <lb ed="#SV"/><name>holcot</name> quod articuli fidei non sunt contra rationem naturalem, sicut 
-            <lb ed="#SV"/>'deum esse incarnatum'. <g ref="#slash"/>ipse enim <name>holcot</name> expresse ponit 
+            <lb ed="#SV"/><name ref="#Holcot">holcot</name> quod articuli fidei non sunt contra rationem naturalem, sicut 
+            <lb ed="#SV"/>'deum esse incarnatum'. <g ref="#slash"/>ipse enim <name ref="#Holcot">holcot</name> expresse ponit 
             <lb ed="#SV"/>oppositum, dicens quod "articuli fidei Repugnant rationibus natura<lb ed="#SV"/>libus, 
             sicut 'deum incarnari,' 'virginem  parere', <g ref="#slash"/>quia, sequendo 
             <lb ed="#SV"/>rationem naturalem, oppositum sequeretur sive concluderetur quod 'virgo 
@@ -98,18 +107,18 @@
             <lb ed="#SV"/>scientiis ex eisdem principiis introductis.</p> 
           
           <p xml:id="l11-suqovc"><g ref="#slash"/>sequitur ulterius 
-            <lb ed="#SV"/>quod istae propositiones 'deus non<!-- ^inserted --> est trinus et unus' et quod 'ab eodem 
+            <lb ed="#SV"/>quod istae propositiones 'deus <g ref="#carrot"/><add place="aboveLine">non</add> est trinus et unus' et quod 'ab eodem 
             <lb ed="#SV"/>uniformiter se habente non possunt produci diversari effectus 
             <lb ed="#SV"/>in mediante' non sunt conclusiones philosophiae, <choice><orig>ymmo</orig><reg>immo</reg></choice> sunt contra philosophiam, 
             <lb ed="#SV"/>Ita quod sunt quaedam propositiones falsae praesumptiose assumptae 
             <lb ed="#SV"/>absque hoc quod sequerentur ex principiis naturalibus. <g ref="#slash"/>et maxima 
-            <lb ed="#SV"/>secunda<!-- 2a or illa? -->, quae est principium omnium errorum in philosophia, <g ref="#slash"/>et propter hoc 
+            <lb ed="#SV"/>illa, quae est principium omnium errorum in philosophia, <g ref="#slash"/>et propter hoc 
             <lb ed="#SV"/>dixerunt antiqui quod a voluntate antiqua non procedit 
             <lb ed="#SV"/>actio nova, quia tunc mutaretur. <g ref="#slash"/>per hoc <choice><orig>eciam</orig><reg>etiam</reg></choice> tolleretur 
-            <lb ed="#SV"/>libertas<!-- habitas --> primae causae; <g ref="#slash"/>propter hoc <choice><orig>eciam</orig><reg>etiam</reg></choice> <name>avicenna</name> finxit 
+            <lb ed="#SV"/>libertas primae causae; <g ref="#slash"/>propter hoc <choice><orig>eciam</orig><reg>etiam</reg></choice> <name ref="#Avicenna">avicenna</name> finxit 
             <lb ed="#SV"/>primam causam solummodo producere unam intelligentiam. <g ref="#slash"/>et de isto 
             <lb ed="#SV"/>magis videbitur in materia de trinitate, <g ref="#slash"/>quia istam viam secuti 
-            <cb ed="SV#?"/><lb ed="#SV"/>sunt haeretici in illa materia. <g ref="#slash"/>Ex quo patet falsum est aliquam propositio<lb ed="#SV"/>nem 
+            <cb ed="#SV" n="201rb"/><lb ed="#SV"/>sunt haeretici in illa materia. <g ref="#slash"/>Ex quo patet falsum est aliquam propositio<lb ed="#SV"/>nem 
             esse falsam in philosophia et esse veram in theologia vel e contra, 
             <lb ed="#SV"/>quia ex veris principiis non sequitur nisi verum. <g ref="#slash"/>ideo si 
             <lb ed="#SV"/>aliqua propositio est vera in philosophia, est vera simpliciter; <g ref="#slash"/>modo 
@@ -124,8 +133,8 @@
             <lb ed="#SV"/>sicut denominatio 'esse', <g ref="#slash"/>ita quod <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod sicut 
             <lb ed="#SV"/>nulla causa secunda potest aliquid agere nisi prima causa 
             <lb ed="#SV"/>illud concauset <g ref="#slash"/>sic nulla lex sortitur denominationem 
-            <lb ed="#SV"/>legis, nisi a prima lege. <g ref="#slash"/>et hoc testatur <name>tullius</name><!-- Cicero?! -->, qui 
-            <lb ed="#SV"/>fuit legista Rationarum[?] legum, <g ref="#slash"/>ubi est notandum 
+            <lb ed="#SV"/>legis, nisi a prima lege. <g ref="#slash"/>et hoc testatur <name ref="#Cicero">tulius</name>, qui 
+            <lb ed="#SV"/>fuit legista Romanarum legum, <g ref="#slash"/>ubi est notandum 
             <lb ed="#SV"/>quod tres sunt leges. <g ref="#slash"/>prima est lex divina. <g ref="#slash"/>secunda lex 
             <lb ed="#SV"/>est humana ratio. <g ref="#slash"/>tertia lex est humana positiva. <g ref="#slash"/>primae 
             <lb ed="#SV"/>semper est obediendum. <g ref="#slash"/>secundae <choice><orig>eciam</orig><reg>etiam</reg></choice>, quia conformatur primae 
@@ -137,7 +146,7 @@
           
           <p xml:id="l11-uvihsv"><g ref="#slash"/>ulterius vero in casu in quo lex rationis et lex 
             <lb ed="#SV"/>principis discordarent, non esset obediendum legi 
-            <lb ed="#SV"/>principis, <choice><orig>ymmo</orig><reg>immo</reg></choice> rationi, <g ref="#slash"/>quia ratio habet superioritatem essentialem 
+            <lb ed="#SV"/>principis, <choice><orig>ymo</orig><reg>immo</reg></choice> rationi, <g ref="#slash"/>quia ratio habet superioritatem essentialem 
             <lb ed="#SV"/>ad legem principis, <lb ed="#SV"/>quia eo ipso quod lex humana pos<lb ed="#SV"/>itiva 
             sive lex principis discordaret rationi non 
             <lb ed="#SV"/>esset lex. <g ref="#slash"/>ideo non esset obediendum ei in illo casu, 
@@ -156,36 +165,37 @@
             inter se. <g ref="#slash"/>patet, quia consonant rationi.</p>
           
           <p xml:id="l11-suqets"><g ref="#pilcrow"/>Sequitur 
-            <lb ed="#SV"/>ulterius quod in secta mathematici[?] sunt traditae 
+            <lb ed="#SV"/>ulterius quod in secta <name ref="#Muhummad">machometi</name> sunt traditae 
             <lb ed="#SV"/>plures leges quae nulli proprie sunt conformes, 
-            <lb ed="#SV"/><g ref="#slash"/>ita dicendum est de tyrrannis[?] qui multas leges 
+            <lb ed="#SV"/><g ref="#slash"/>ita dicendum est de tyrannis qui multas leges 
             <lb ed="#SV"/>introduxerunt, quae nulli legi consonant, 
-            <lb ed="#SV"/><choice><orig>ymmo</orig><reg>immo</reg></choice> sunt contra leges. <lb ed="#SV"/>habeo enim testem 
-            <lb ed="#SV"/><choice><orig>ydoneum</orig><reg>idoneum</reg></choice> de primo, scilicet, <name>senecam</name>, qui dicitur fuisse 
-            <cb ed="sv#?"/><lb ed="#SV"/>de secta mathematici[?] et de progenie sua. <g ref="#slash"/>Unde 
+            <lb ed="#SV"/><choice><orig>ymo</orig><reg>immo</reg></choice> sunt contra leges. <g ref="#slash"/>habeo enim testem 
+            <lb ed="#SV"/><choice><orig>ydoneum</orig><reg>idoneum</reg></choice> de primo, scilicet, <name ref="#Seneca">senecam</name>, qui dicitur fuisse 
+            <cb ed="#SV" n="201va"/><lb ed="#SV"/>de secta <name ref="#Muhummad">machometi</name> et de progenie sua. <g ref="#slash"/>Unde 
             <lb ed="#SV"/>dicit quod leges corporis sive voluptatis bene tradidit 
-            <lb ed="#SV"/>propheta noster mathomet[??]<!-- same as above. but what?-->, <g ref="#slash"/>sed leges animae alicuius 
+            <lb ed="#SV"/>propheta noster <name ref="#Muhummad">machomet</name>, <g ref="#slash"/>sed legem animae altius 
             <lb ed="#SV"/>tradidit theologia, <g ref="#slash"/>et lex ista animae contradicit primae 
             <lb ed="#SV"/>legi, scilicet, legi corporis et voluptatis quia docet 
             <lb ed="#SV"/>tollere voluptates. intantum quod propter evitationem vo<lb ed="#SV"/>luptatum 
             et huiusmodi quis secundum legem animae posset 
             <lb ed="#SV"/>devenire ad spiritum propheticum quod cognosceret talis de 
-            <lb ed="#SV"/>futuro, <g ref="#slash"/>et hoc expresse  testatur <name>seneca</name>.</p>
+            <lb ed="#SV"/>futuro, <g ref="#slash"/>et hoc expresse testatur <name ref="#Seneca">senecca</name>.</p>
           
           <p xml:id="l11-suqpmc"><g ref="#pilcrow"/>Sequitur 
             <lb ed="#SV"/>ulterius quod lex humana aliter consonat legi naturali quam 
-            <lb ed="#SV"/>lex divina. <g ref="#slash"/>Ubi<!-- capitol U? --> advertendum est quod lex humana po<lb ed="#SV"/>sitiva<!-- looks like somethign else after po... --> 
+            <lb ed="#SV"/>lex divina. <g ref="#slash"/>ubi advertendum est quod lex humana <sic>poni<lb ed="#SV"/>sitiva</sic> 
             derivatur a lege naturali  <g ref="#slash"/>et est quasi consequens ad 
             <lb ed="#SV"/>suum antecedens, <g ref="#slash"/>Ita quod lex naturalis debet <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> per modum 
             <lb ed="#SV"/>antecedentis inferentis, legem humanam per modum consequentis.</p>
           
-        <div><head xml:id="l11-Hslnsln">[Significatio legis naturalis]</head>
+        <div>
+          <head xml:id="l11-Hslnsln">[Significatio legis naturalis]</head>
         
           <p xml:id="l11-pcilhp"><g ref="#slash"/>pro cuius 
             <lb ed="#SV"/>intellectu <g ref="#slash"/>notandum est quod lex naturalis potest capi multipliciter. 
             <lb ed="#SV"/>Uno modo pro instinctu naturali ad bonum et ista lex 
-            <lb ed="#SV"/>naturalis est communis[?] hominibus<!-- ? --> et brutis. <g ref="#slash"/>Unde <name>gratianus</name> dicit 
-            <lb ed="#SV"/>quod "Ius naturale est quod omnia dirigit in bonum." <g ref="#slash"/>alio modo 
+            <lb ed="#SV"/>naturalis est communis <sic>ominibus</sic> et brutis. <g ref="#slash"/>unde <name ref="#Gratian">gratianus</name> dicit 
+            <lb ed="#SV"/>quod <quote>"Ius naturale est quod omnia dirigit in bonum."</quote> <g ref="#slash"/>alio modo 
             <lb ed="#SV"/>capitur lex naturalis strictius prout pertinet ad intellectum 
             <lb ed="#SV"/>practicum humanum <g ref="#slash"/>et isto modo est quod lumen practi<lb ed="#SV"/>cum 
             humanum in quo Relucent principia practica moralia, 
@@ -215,9 +225,9 @@
             <lb ed="#SV"/>non deducitur a nobis, <g ref="#slash"/>nec a quocumque alio, quia lex 
             <lb ed="#SV"/>naturalis non continet omnia puncta legis divinae, quia ibidem 
             <lb ed="#SV"/>sunt aliqua puncta quae transcendunt totam legem 
-            <cb ed="SV#?"/><lb ed="#SV"/>naturalem, sicut incarnatio verbi et huiusmodi.  <g ref="#slash"/>Dico 
+            <cb ed="#SV" n="201vb"/><lb ed="#SV"/>naturalem, sicut incarnatio verbi et huiusmodi.  <g ref="#slash"/>Dico 
             <lb ed="#SV"/>ulterius quod viceversa, Ius naturale est consequens ad Ius divinum, <g ref="#slash"/>Unde 
-            <lb ed="#SV"/><name>gratianus</name> dicit expresse quod "Ius divinum est quod in evangelio 
+            <lb ed="#SV"/><name ref="#Gratian">gratianus</name> dicit expresse quod Ius divinum est quod in evangelio 
             <lb ed="#SV"/>continetur <g ref="#slash"/>et ratione suae aequitatis et veritatis eminenter[?] et 
             <lb ed="#SV"/>continentur et magis perfecte quam quacumque quae continentur In 
             <lb ed="#SV"/>Iure naturali. <g ref="#slash"/>Ideo Ius naturale est tamquam consequens ad ipsum 
@@ -230,34 +240,34 @@
         </div>
         <div><head xml:id="l11-Hrpepni">[Rationes pro erroribus de miraculis in processu naturalis investigationis]</head>
          
-          <p xml:id="l11-eppiea"><g ref="#pilcrow"/>Ex praedictis, patet quod peccat in processu naturalis in<lb ed="#SV"/>vestigationis 
-            <!-- double slash? -->concludens 'virginem non posse parere.' <g ref="#slash"/>patet ex 
+          <p xml:id="l11-eppiea"><g ref="#pilcrow"/>Ex praedictis, patet quod peccat in processu naturalis in<lb ed="#SV"/><g ref="#dbslash"/>vestigationis 
+            concludens 'virginem non posse parere.' <g ref="#slash"/>patet ex 
             <lb ed="#SV"/>dictis <choice><orig>eciam</orig><reg>etiam</reg></choice> ex alia causa, quia talis peccat dupliciter. <g ref="#slash"/>primo 
             <lb ed="#SV"/>quia praesumptiose contra divinam potentiam concludit quod tota resolutio 
             <lb ed="#SV"/>philosophorum est in hoc, quod non sunt ita experti, igitur ita non est 
             <lb ed="#SV"/><g ref="#slash"/>modo. ista consequentia non valet: <g ref="#slash"/>non est expertus quod ita sit, igitur ita 
-            <lb ed="#SV"/>non potest esse. <g ref="#slash"/>Unde non esset vere philosophus, qui <dot>a</dot>  proprietatem ne<lb ed="#SV"/>garet 
+            <lb ed="#SV"/>non potest esse. <g ref="#slash"/>Unde non esset vere philosophus, qui <g ref="#dot"/><c>a</c><g ref="#dot"/> proprietatem ne<lb ed="#SV"/>garet 
             a planta vel huiusmodi, <g ref="#slash"/>Ita quod impossibile est quod philosophus 
             <lb ed="#SV"/>experiatur istam negativam, herba vel planta non habet 
-            <lb ed="#SV"/>istam proprietatem <dot>a</dot>, quia ad hoc Requireretur applicatio <dot>a</dot> ad 
-            <lb ed="#SV"/>omnia passa, <g ref="#slash"/>modo hoc esset sibi impossibile, <g ref="#slash"/><choice><orig>ymmo</orig><reg>immo</reg></choice> dato quod 
+            <lb ed="#SV"/>istam proprietatem <c>a</c><g ref="#dot"/>, quia ad hoc Requireretur applicatio <g ref="#dot"/><c>a</c><g ref="#dot"/> ad 
+            <lb ed="#SV"/>omnia passa, <g ref="#slash"/>modo hoc esset sibi impossibile, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> dato quod 
             <lb ed="#SV"/>applicaret haec forte quod ibi esset aliqua influentia vel 
             <lb ed="#SV"/>aliquod agens particulare impediens eius actionem.</p>
           
-          <p xml:id="l11-idqphf"><g ref="#slash"/>Item 
+          <p xml:id="l11-idqphf"><g ref="#dbslash"/>Item 
             <lb ed="#SV"/>dato quod non esset aliquod Impediens, <g ref="#slash"/>adhuc bene staret 
-            <lb ed="#SV"/>quod <dot>a</dot> haberet aliquam actionem cum alio quam non haberet 
-            <lb ed="#SV"/>se sola. <g ref="#slash"/>et sic, si adhuc dato quod <name>philosophus</name> posset experiri 
+            <lb ed="#SV"/>quod <g ref="#dot"/><c>a</c><g ref="#dot"/> haberet aliquam actionem cum alio quam non haberet 
+            <lb ed="#SV"/>se sola. <g ref="#slash"/>et sic, si adhuc dato quod <name ref="#Philosophers">philosophus</name> posset experiri 
             <lb ed="#SV"/>omnes proprietates convenientes sibi soli, <g ref="#slash"/>non tamen cum aliis, quia  
             <lb ed="#SV"/>staret quod se sola esset productiva unius effectus <g ref="#slash"/>et 
             <lb ed="#SV"/>cum alio agente sit productiva sui oppositi, ergo si non experiatur 
             <lb ed="#SV"/>'virginem parere', non habet negare a deo quin deus posset 
             <lb ed="#SV"/>hoc facere.</p>
           
-          <p xml:id="l11-ipnmvp"><g ref="#pilcrow"/>Item possibilitas naturae non est cognita a philosopho. 
+          <p xml:id="l11-ipnmvp"><g ref="#pilcrow"/>Item possibilitas naturae non est cognita a <name ref="#Philosophers">philosopho</name>. 
             <lb ed="#SV"/><g ref="#pilcrow"/>Et hic est advertendum quod possibilitas naturae est secundum 
             <lb ed="#SV"/>quod congruit decori universi ex divina dei providentia, 
-            <lb ed="#SV"/><g ref="#slash"/>nam capiamus aerem vel aliquod aliud ens<!-- eus? --> imperfectum; 
+            <lb ed="#SV"/><g ref="#slash"/>nam capiamus aerem vel aliquod aliud ens imperfectum; 
             <lb ed="#SV"/>certum est quod potentia eius motiva videtur esse infinitam, quia 
             <lb ed="#SV"/>subito movetur ad Repletionem vacui; <g ref="#slash"/>modo istud arguit 
             <lb ed="#SV"/>infinitatem potentiae quia potentia quantificatur penes quantitatem actus, 
@@ -266,19 +276,19 @@
             'virginem parere', <name>philosophus</name> non haberet hoc negare, 
             <lb ed="#SV"/>Ita <choice><orig>eciam</orig><reg>etiam</reg></choice> credo ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice>. <g ref="#slash"/>et hoc haberet dicere <name>philosophus</name>, 
             <lb ed="#SV"/>si non esset nisi una mulier adhuc ipsa pareret,<g ref="#slash"/> 
-            <lb ed="#SV"/><g ref="#slash"/>Et si omnes homines essent annihilati<!-- adulanti? -->, quod adhuc pro<lb ed="#SV"/>ducerentur 
+            <lb ed="#SV"/><g ref="#slash"/>Et si omnes homines essent <choice><orig>adnihilati</orig><reg>annihilati</reg></choice>, quod adhuc pro<lb ed="#SV"/>ducerentur 
             <lb ed="#SV"/>homines. <g ref="#slash"/>ideo videtur esse ita in proposito. <g ref="#slash"/>per istam 
-            <lb ed="#SV"/>deductionem volo<!-- volo or nolo? --> investigare, 'utrum posset salvari 
+            <lb ed="#SV"/>deductionem volo investigare, 'utrum posset salvari 
             <lb ed="#SV"/>quod virgo peperisset virgo?' <g ref="#slash"/>et non est dubium quod illud 
             <lb ed="#SV"/>fuit miraculum, <g ref="#slash"/>ideo non teneo unam partem nec aliam, 
-            <cb/><lb ed="#SV"/>tamen dico quod <name>philosophus</name> non habet hoc negare <g ref="#slash"/>vel quod saltem negando 
+            <cb/><lb ed="#SV"/>tamen dico quod <name ref="#Philosophers">philosophus</name> non habet hoc negare <g ref="#slash"/>vel quod saltem negando 
             <lb ed="#SV"/>transgreditur modum vere philosophandi.</p>
           
           <p xml:id="l11-aehapn"><g ref="#slash"/>alia exempla habebantur 
             <lb ed="#SV"/>in quibus apparere poterat quomodo natura in casu necessitatis vel con<lb ed="#SV"/>gruentiae
             decoris universi est mirabilis activitatis. <g ref="#slash"/>unum est 
             <lb ed="#SV"/>de quod puero, qui erat mutus, cuius pater fuit devictus 
-            <lb ed="#SV"/>in bello <g ref="#slash"/>et adversarii volebant<!-- volo or nolo? --> eum occidere, credebant<!-- credo or credendo or...? --> 
+            <lb ed="#SV"/>in bello <g ref="#slash"/>et adversarii volebant eum occidere, credendo 
             <lb ed="#SV"/>quod non esset nisi unus simplex miles quando mutus ille, 
             <lb ed="#SV"/>qui puer erat, locutus est <g ref="#slash"/>et illud bene potest Reduci ad 
             <lb ed="#SV"/><choice><orig>providenciam</orig><reg>providentiam</reg></choice> naturae.</p>
@@ -295,12 +305,12 @@
             <lb ed="#SV"/>bene potest adhuc devenire quod sciret se non posse deve<lb ed="#SV"/>nire 
             ad notitiam seu determinationem articulorum fidei. <g ref="#slash"/>patet 
             <lb ed="#SV"/>consequenter quod, vere philosophando, essent paucae propositiones scitae 
-            <g ref="#slash"/>in philosophia excepta mathematica, <choice><orig>ymmo</orig><reg>immo</reg></choice> quasi nullae, <g ref="#slash"/><choice><orig>ymmo</orig><reg>immo</reg></choice> 
-            <lb ed="#SV"/>scientia naturalis esset quaedam hypothesis<!-- not sure if this is the right word... --> ex quadam ypo<lb ed="#SV"/>stasis[?].<!-- ? --> 
+            <lb ed="#SV"/>in philosophia excepta mathematica, <choice><orig>ymmo</orig><reg>immo</reg></choice> quasi nullae, <g ref="#slash"/><choice><orig>ymmo</orig><reg>immo</reg></choice> 
+            <lb ed="#SV"/>scientia naturalis esset quaedam <choice><orig>ypostasis</orig><reg>hypothesis</reg></choice> ex quadam <choice><orig>ypo<lb ed="#SV"/>stasi</orig><reg>hypo<lb ed="#SV"/>sthesi</reg></choice> 
             <lb ed="#SV"/><choice><orig>eciam</orig><reg>etiam</reg></choice> ponendo materiam primam, fingendo eam ad 
             <lb ed="#SV"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice>, <g ref="#slash"/>et sic per istum modum salvarentur actiones 
             <lb ed="#SV"/>et passiones quas experiuntur melius quam per modum 
-            <lb ed="#SV"/><name>anaxagorae</name> ponentis quodlibet esse in quolibet.</p>
+            <lb ed="#SV"/><name ref="#Anaxagoras">anaxagorae</name> ponentis quodlibet esse in quolibet.</p>
         </div>
         </div>
     </body>
