@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-10-25">October 25, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio57">
         <head xml:id="l57-Hldtdlt" subtype="title">Lectio 57, de Trinitate</head>
@@ -92,7 +101,7 @@
       
           <p xml:id="l57-uchqmc">unde circa hoc aliqui doctores 
             <lb ed="#SV"/>dicunt quod quaelibet creatura est Realiter composita etc intelligentia 
-            <lb ed="#SV"/>et est divisibilis de potentia dei absoluta et hanc ponit <name>hugolinus</name> 
+            <lb ed="#SV"/>et est divisibilis de <term ana="#potentiaabsoluta">potentia dei absoluta</term> et hanc ponit <name ref="#HugolinoOfOrvieto">hugolinus</name> 
             <lb ed="#SV"/>octava distinctione primi. Et praeter ponentes distinctiones formales, qui 
             <lb ed="#SV"/>ponunt distinctionem in quamlibet creaturam, et sic quoddam modo compositionem.</p>
         </div>
@@ -194,10 +203,10 @@
               <lb ed="#SV"/>simplicissima, excedit tamen in duratione totam latitudinem temporis i<lb ed="#SV"/>maginarii 
               infinitam, a parte ante et a parte post et immen<lb ed="#SV"/>se 
               excedit. quod autem aeternitas sit sic duratio subitanea 
-              <lb ed="#SV"/>et simplicissima habetur ex dictis <name>boecii</name> Vo <title>de consolatione</title>, ubi 
+              <lb ed="#SV"/>et simplicissima habetur ex dictis <name ref="#Boethius">boecii</name> Vo <title ref="#Consolation">de consolatione</title>, ubi 
               <lb ed="#SV"/>dicit quod aeternitas est interminabilis vitae tota simul possessio et 
               <lb ed="#SV"/>ibi Recte ponit quod aliud esset semper modum existere tempori. aliud esset 
-              <lb ed="#SV"/>ipsum esse aeternum. unde <name>anselmus</name> <title>monoligion</title> dicit quod deus ex 
+              <lb ed="#SV"/>ipsum esse aeternum. unde <name ref="#Anselm">anselmus</name> <title ref="#Monologion">monoligion</title> dicit quod deus ex 
               <lb ed="#SV"/>sua duratione est ante creaturas et etiam post creaturas perpe<lb ed="#SV"/>tuo 
               duraturas non quid temporali duratione sed duratione 
               <lb ed="#SV"/>perfectiori in infinitum quam sit duratio successiva. Unde ad imaginandum 
@@ -242,7 +251,7 @@
       
             <p xml:id="l57-eqspct">Ex quo sequitur quod in divinis 
               <lb ed="#SV"/>non est ponenda prioritas originis quo ad signa vel instantia 
-              <lb ed="#SV"/>naturae quae consuevit ponere <name>doctor subtilis.</name> unde <name>doctor sub<lb ed="#SV"/>tilis</name> 
+              <lb ed="#SV"/>naturae quae consuevit ponere <name ref="#Scotus">doctor subtilis.</name> unde <name ref="#Scotus">doctor sub<lb ed="#SV"/>tilis</name> 
               imaginatur quod quia ad intra est emanatio personarum oportet 
               <lb ed="#SV"/>quod servetur ordo. et sic per consequens est ibi aliqua prioritas. unde 
               <lb ed="#SV"/>imaginatur quod pater concipitur vel consideratur prius quam filius, 
