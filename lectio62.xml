@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-22">November 22, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio62">
         <head xml:id="l62-Hldtldt" subtype="title">Lectio 62, de Trinitate</head>
@@ -40,34 +49,34 @@
         <head xml:id="l62-Hvodods">Variae opiniones discipuli Scoti</head>
         
         <p xml:id="l62-aetimf">Attendendum est tamen quod sicut ex dictis 
-          <lb ed="#SV"/><name>socratis</name> discipuli eius varia sumpserunt et senserunt, Ita 
-          <lb ed="#SV"/>de opinione <name>scoti</name> discipuli eius et sequaces varia sumpserunt 
+          <lb ed="#SV"/><name ref="#Socrates">socratis</name> discipuli eius varia sumpserunt et senserunt, Ita 
+          <lb ed="#SV"/>de opinione <name ref="#Scotus">scoti</name> discipuli eius et sequaces varia sumpserunt 
           <lb ed="#SV"/>seu senserunt in materia formalitatum.</p>
         
         <div>
           
-          <head xml:id="l62-Hocococ">Opinio Chatton</head>
+          <head xml:id="l62-Hocococ">Opinio <name ref="#Chatton">Chatton</name></head>
           
-          <p xml:id="l62-ucqurf">unde <name>chaton</name>, qui fuit 
+          <p xml:id="l62-ucqurf">unde <name ref="#Chatton">chaton</name>, qui fuit 
             <lb ed="#SV"/>acutus et subtilis in ingenio expresse tenet quod numquam 
-            <lb ed="#SV"/>fuit opinio <name>scoti</name> ponere distinctionem formalitatum a parte Rei, 
+            <lb ed="#SV"/>fuit opinio <name ref="#Scotus">scoti</name> ponere distinctionem formalitatum a parte Rei, 
             <lb ed="#SV"/>sed praecise per non identitatem quam posuit in attributis 
-            <lb ed="#SV"/>divinis intellexit ut dicit <name>chaton</name> quod non est in illis 
+            <lb ed="#SV"/>divinis intellexit ut dicit <name ref="#Chatton">chaton</name> quod non est in illis 
             <lb ed="#SV"/>'perseitas' primum modi dicendi per se ut sapientiae ad bonitatem, 
             <lb ed="#SV"/>ut hoc non est primo et per se vera sapientia divina est bonitas 
             <lb ed="#SV"/>divina, nec consequenter ista est per se et primo vera deus est 
             <lb ed="#SV"/>sapiens deus est bonus, licet ista sit per se et primo vera 
-            <lb ed="#SV"/>deus est ens, deus est deus, quia dicit quod si aliquando <name>doctor 
+            <lb ed="#SV"/>deus est ens, deus est deus, quia dicit quod si aliquando <name ref="#Scotus">doctor 
               <lb ed="#SV"/>subtilis</name> istius contrarium videatur sentire per verba ponendo 
             <lb ed="#SV"/>distinctionem formalitatum a parte Rei. hoc est ut dicit 
-            <lb ed="#SV"/><name>chaton</name> secundum modum loquendi doctorum currentium 
-            <lb ed="#SV"/>tempore suo, ideo post ea <name>scotus</name> tractavit quamdam quaestionem 
+            <lb ed="#SV"/><name ref="#Chatton">chaton</name> secundum modum loquendi doctorum currentium 
+            <lb ed="#SV"/>tempore suo, ideo post ea <name ref="#Scotus">scotus</name> tractavit quamdam quaestionem 
             <lb ed="#SV"/>ubi Reprobat formalitates.</p> 
           
           <p xml:id="l62-uidhes">unde imaginatio de 
-            <lb ed="#SV"/>'perseitate' Resolvitur apud <name>chaton</name> sit haec propositio 
-            <cb ed="#SV" n="273va"/><lb ed="#SV"/>'deus est sapiens' non est ita per se, sicut ista 'deus est ens' 
-            <lb ed="#SV"/>vel 'deus est deus' et causa est duplex. primo, quia 
+            <lb ed="#SV"/><mentioned>'perseitate'</mentioned> Resolvitur apud <name ref="#Chatton">chaton</name> sit haec propositio 
+            <cb ed="#SV" n="273va"/><lb ed="#SV"/><mentioned>'deus est sapiens'</mentioned> non est ita per se, sicut ista <mentioned>'deus est ens'</mentioned> 
+            <lb ed="#SV"/>vel <mentioned>'deus est deus'</mentioned> et causa est duplex. primo, quia 
             <lb ed="#SV"/>ex forma enuntiandi et ex habitudine terminorum inter se 
             <lb ed="#SV"/>ista non est plus per se deus est sapiens quam ista homo 
             <lb ed="#SV"/>est sapiens.</p> 
@@ -75,39 +84,39 @@
           <p xml:id="l62-udqlqr">unde dicit quod si per imaginationem vel contradi<lb ed="#SV"/>ctionem 
             corresponderent Res distinctae abstractis et attri<lb ed="#SV"/>butis. Ita quod sapientia divina esset Res distincta 
             <lb ed="#SV"/>a deo, et a bonitate divina, ista non esset per se et 
-            <lb ed="#SV"/>primo vera 'deus est sapiens'. modo illud est impertinens ad 
+            <lb ed="#SV"/>primo vera <mentioned>'deus est sapiens'</mentioned>. modo illud est impertinens ad 
             <lb ed="#SV"/>'perseitatem propositionis primi modi. utrum essentia divina 
             <lb ed="#SV"/>concurrat identice cum sapientia divina et econtra. Ideo 
-            <lb ed="#SV"/>dicit <name>chaton</name> quod opinio <name>scoti</name> Resolvitur ad hoc 
+            <lb ed="#SV"/>dicit <name ref="#Chatton">chaton</name> quod opinio <name ref="#Scotus">scoti</name> Resolvitur ad hoc 
             <lb ed="#SV"/>quod quando dicit quod deus non est formaliter sapiens. Hoc est 
             <lb ed="#SV"/>haec propositio 'deus est sapiens' non est per se et primo 
-            <lb ed="#SV"/>vera. et sic opinio <name>scoti</name> secundum <name>chaton</name> Resolvitur 
+            <lb ed="#SV"/>vera. et sic opinio <name ref="#Scotus">scoti</name> secundum <name ref="#Chatton">chaton</name> Resolvitur 
             <lb ed="#SV"/>ad terminos et conceptus et ad materiam logicalem. et sic 
             <lb ed="#SV"/>secundum eum ista materia est magis logicalis quam Realis.</p>
         </div>
         <div>
-          <head xml:id="l62-Hoaoaoa">Opinio Adam</head>
+          <head xml:id="l62-Hoaoaoa">Opinio <name ref="#Wodeham">Adam</name></head>
           
-          <p xml:id="l62-catdps"><lb ed="#SV"/>Tamen <name>adam</name> tenet quod ista esset per se et primo 
+          <p xml:id="l62-catdps"><lb ed="#SV"/>Tamen <name ref="#Wodeham">adam</name> tenet quod ista esset per se et primo 
             <lb ed="#SV"/>vera 'deus est sapiens' et sui sequaces etiam. unde ipsi 
             <lb ed="#SV"/>supponunt quod sapientia dicatur univoce de omni sapientia, 
             <lb ed="#SV"/>ergo univoce dicitur de sapientia increata et creata. ideo 
             <lb ed="#SV"/>de pro nomine demonstrante sapientiam divinam praedicabitur 
-            <lb ed="#SV"/>in quid, nam si praedicetur li 'sapiens' de deo 'in quid', 
+            <lb ed="#SV"/>in quid, nam si praedicetur li <mentioned>'sapiens'</mentioned> de deo <term ana="#inquid">'in quid'</term>, 
             <lb ed="#SV"/>abstractum praedicatur de deo 'in quid' et ista est secunda quaestio 
-            <lb ed="#SV"/><name>adae</name>. unde quando per idem adaequate abstractum et concretum 
+            <lb ed="#SV"/><name ref="#Wodeham">adae</name>. unde quando per idem adaequate abstractum et concretum 
             <lb ed="#SV"/>competunt alicui. tunc si concretum dicitur de deo 'in quid' 
             <lb ed="#SV"/>et etiam abstractum, et ideo dicunt quod Resolutio 
-            <lb ed="#SV"/><name>scoti</name> per istum <name>chaton</name> non valet. et ista materia secundum eos 
+            <lb ed="#SV"/><name ref="#Scotus">scoti</name> per istum <name ref="#Chatton">chaton</name> non valet. et ista materia secundum eos 
             <lb ed="#SV"/>est magis verbalis quam Realis nec Restat nisi 
             <lb ed="#SV"/>quae propositio est in primo modo dicendi per se.</p>
         </div>
         
         <div>
           
-          <head xml:id="l62-Hohdhdh">Opinio Henrici de Huta</head>  
+          <head xml:id="l62-Hohdhdh">Opinio <name ref="#Oyta">Henrici de Huta</name></head>  
           
-          <p xml:id="l62-edhdps">Et <name>de huta</name> 
+          <p xml:id="l62-edhdps">Et <name ref="#Oyta">de huta</name> 
             <lb ed="#SV"/>declarando istam materiam de perseitate dicit 
             <lb ed="#SV"/>quod dupliciter propositio dicitur esse in primo modo dicendi per se.</p> 
           
@@ -123,15 +132,15 @@
             <lb ed="#SV"/>genus vel differentia et tunc secundum illum modum haec non esset 
             <lb ed="#SV"/>per se 'deus est sapiens'. et ista est via logicalis secundum 
             <lb ed="#SV"/>istum secundum modum exponendi et secundum illum secundum modum 
-            <lb ed="#SV"/>exponendi <name>scotus</name> differt a <name>magistro Iohanne de Rippa</name>, 
-            <lb ed="#SV"/>quia <name>de Rippa</name> ponit expresse formalitates a parte 
+            <lb ed="#SV"/>exponendi <name ref="#Scotus">scotus</name> differt a <name ref="#Ripa">magistro Iohanne de Rippa</name>, 
+            <lb ed="#SV"/>quia <name ref="#Ripa">de Rippa</name> ponit expresse formalitates a parte 
             <lb ed="#SV"/>Rei. Unde in octava distinctione ponit quod agere et velle in di<cb ed="#SV" n="273vb"/><lb ed="#SV"/>vinis 
             sunt idem formaliter, et tamen hoc non est per se primo modo 
             <lb ed="#SV"/>agere divinum et velle divinum, quia formaliter deus agit per suum 
             <lb ed="#SV"/>velle, et tamen hoc non est per se primo modo vera velle divinum 
             <lb ed="#SV"/>est agere divinum.</p> 
           
-          <p xml:id="l62-iesmdf">Item etiam secundum <name>de Rippa</name> alia est formalitas 
+          <p xml:id="l62-iesmdf">Item etiam secundum <name ref="#Ripa">de Rippa</name> alia est formalitas 
             <lb ed="#SV"/>vivendi et alia essendi, et tamen haec est per se et primo 
             <lb ed="#SV"/>vera 'vivens est ens', ideo 'perseitas' primi modi est imperti<lb ed="#SV"/>nens 
             ad materiam de formmalitatibus.</p>
@@ -140,7 +149,7 @@
           <head xml:id="l62-Haopaop">Alia opinio</head>
           
           <p xml:id="l62-aisfsd">Alii Imposuerunt 
-            <lb ed="#SV"/><name>scoto</name> quod posuerit in deo infinitas formalitates distinctas 
+            <lb ed="#SV"/><name ref="#Scotus">scoto</name> quod posuerit in deo infinitas formalitates distinctas 
             <lb ed="#SV"/>sic quod sunt infinitae quarum una non est alia, licet concurrerent 
             <lb ed="#SV"/>identitate in essentia. Et Iterum istud potest apparere falsum 
             <lb ed="#SV"/>ex processu suo in octava distinctione, quia noluit concedere in attri<lb ed="#SV"/>butis 
@@ -150,13 +159,13 @@
             <lb ed="#SV"/>sapientia divina.</p>
         </div>
         <div>
-          <head xml:id="l62-ogdgda">Opinio Gregorii de Arminio</head>
+          <head xml:id="l62-ogdgda">Opinio <name ref="#Rimini">Gregorii de Arminio</name></head>
           
           <p xml:id="l62-ieahth">Ideo est alius modus imaginandi apud 
-            <lb ed="#SV"/><name>scotum</name> quam sit modus quam imponit sibi <name>chaton</name>. unde <name>gregorius 
+            <lb ed="#SV"/><name ref="#Scotus">scotum</name> quam sit modus quam imponit sibi <name ref="#Chatton">chaton</name>. unde <name ref="#Rimini">gregorius 
               <lb ed="#SV"/>de ariminio</name> in octava distinctione expresse probat quod modus quem ponit 
-            <lb ed="#SV"/><name>chaton</name> non fuit de mente <name>scoti</name>. et qui voluerit videre 
-            <lb ed="#SV"/>videat. unde circa octavam distinctionem dicitur <name>doctor subtilis</name> quod 
+            <lb ed="#SV"/><name ref="#Chatton">chaton</name> non fuit de mente <name ref="#Scotus">scoti</name>. et qui voluerit videre 
+            <lb ed="#SV"/>videat. unde circa octavam distinctionem dicitur <name ref="#Scotus">doctor subtilis</name> quod 
             <lb ed="#SV"/>ista diversitas formalitatum stat cum identitate et simplicitate. 
             <lb ed="#SV"/>et ideo non est multitudo formalitatum sic quod una non 
             <lb ed="#SV"/>sit alia simpliciter et ad magis habendum imaginationem suam 
@@ -215,9 +224,9 @@
             <lb ed="#SV"/>Recte proportionaliter in deo concurrunt rationes formalitatum iden<lb ed="#SV"/>titate, 
             licet non omnimoda identitate, quia alterius officium 
             <lb ed="#SV"/>est intelligere aliud velle. et sic potest imaginari quid ima<lb ed="#SV"/>ginatus 
-            est <name>doctor subtilis</name>, tamen alia opinio quam in<lb ed="#SV"/>tendo 
+            est <name ref="#Scotus">doctor subtilis</name>, tamen alia opinio quam in<lb ed="#SV"/>tendo 
             tenere est magis probabilis ut videbitur, licet 
-            <lb ed="#SV"/>positio <name>doctoris subtilis</name> sit multum subtilis et cum 
+            <lb ed="#SV"/>positio <name ref="#Scotus">doctoris subtilis</name> sit multum subtilis et cum 
             <lb ed="#SV"/>magno labore venerit ad eam.</p>
         </div>
       </div>
@@ -242,7 +251,7 @@
           <lb ed="#SV"/>suppositi vel essentiae.</p>
         
           <p xml:id="l62-uisieh">unde imaginati sunt aliqui iuxta 
-            <lb ed="#SV"/>imaginatione <name>magistri Iohannis de Rippa</name> quod alia forma consti<lb ed="#SV"/>tuitur 
+            <lb ed="#SV"/>imaginatione <name ref="#Ripa">magistri Iohannis de Rippa</name> quod alia forma consti<lb ed="#SV"/>tuitur 
             Res in esse corporum et alia in esse animalis et alia 
             <lb ed="#SV"/>in esse hominis.</p> 
         
