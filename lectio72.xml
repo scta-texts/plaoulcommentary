@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-13">December 13, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio72">
         <head xml:id="l72-Hldtldt" subtype="title">Lectio 72, de Trinitate</head>
@@ -69,7 +78,7 @@
         <lb ed="#SV"/>quia non potest produci a simpliciori, quia non habet, nec ab aequali, 
         <lb ed="#SV"/>quia non habet aequale, nec est aequalitas in trinitate essentiarum sim<lb ed="#SV"/>plicium, 
         quia non sunt ibi plures essentiae, nec posset produci 
-        <lb ed="#SV"/>a se, quia nihil producit se ut sic, quia <name>augustinus</name> Reputat 
+        <lb ed="#SV"/>a se, quia nihil producit se ut sic, quia <name ref="#Augustine">augustinus</name> Reputat 
         <lb ed="#SV"/>illos maxime errare dicentes divinam essentiam producere se, 
         <lb ed="#SV"/>ut patet primo de trinitate, nec potest produci ab inferiori, 
         <lb ed="#SV"/>ut constat, igitur a nullo divina essentia producitur.</p>
@@ -103,7 +112,7 @@
           <lb ed="#SV"/>est immense diffusive per adaequationem termini et Rei cui diffunditur 
           et non multitudo essentiam, ergo generando aliam subsistentiam, 
           <lb ed="#SV"/>quae est eadem essentiam et in hiis quae dicunt perfectionem absolute 
-          <lb ed="#SV"/>idem est esse et posse ut met concedit <name>philosophus</name>. nam si deus 
+          <lb ed="#SV"/>idem est esse et posse ut met concedit <name ref="#Aristotle">philosophus</name>. nam si deus 
           <lb ed="#SV"/>est diffusivus sequitur quod diffundit se.</p>
           
         </div>
@@ -176,7 +185,7 @@
           
           <p xml:id="l72-pmtamt"><lb ed="#SV"/><hi rend="dropCapThreeLines">P</hi>ro materiae trinitatis declaratione, licet sit in<lb ed="#SV"/>effabilis 
             intantum quod in ea sileat vox ange<lb ed="#SV"/>lorum, 
-            ut ait <name>ambrosius</name>, praemissis tribus principiis, 
+            ut ait <name ref="#Ambrose">ambrosius</name>, praemissis tribus principiis, 
             <lb ed="#SV"/>alias positis. ponetur positio fidei quae 
             <lb ed="#SV"/>consistit in tribus propositionibus. secundo ponentur tria genera propositio<lb ed="#SV"/>num 
             ad quae Reducuntur omnes propositiones pertinentis ad 
@@ -191,7 +200,7 @@
                 <lb ed="#SV"/>personae distinctae, vel tria supposita vel tres subsi<lb ed="#SV"/>stentiae, 
                 quarum una non est alia. etiam debet supponi materia 
                 <lb ed="#SV"/>fidei et proprietates naturae immensae iuxta primum principium, quia 
-                <lb ed="#SV"/>ut ait <name>aristoteles</name> infinitum secundum quod infinitum est ignotum. et sic, 
+                <lb ed="#SV"/>ut ait <name ref="#Aristotle">aristoteles</name> infinitum secundum quod infinitum est ignotum. et sic, 
                 <lb ed="#SV"/>Revelatum est nobis. ideo debet supponi.</p>
             </div>
             <div>
@@ -243,7 +252,7 @@
           <p xml:id="l72-avarat"><lb ed="#SV"/>Antequam veniatur ad Reductionem difficultatum particularium 
             <lb ed="#SV"/>Pro fortificatione intellectus, sunt aliquae manuductio<lb ed="#SV"/>nes 
             adducendae. et antequam aliquid dicatur iuxta doctrinam 
-            <lb ed="#SV"/><name>augustini</name> et <name>beati dionysii</name>, inducuntur auctoritates 
+            <lb ed="#SV"/><name ref="#Augustine">augustini</name> et <name ref="#Dionysius">beati dionysii</name>, inducuntur auctoritates 
             <lb ed="#SV"/>veteris testamenti contra Iudaeos ad ostendendum quod in veteri 
             <lb ed="#SV"/>testamento Relucet articulus trinitatis.</p> 
           
@@ -266,9 +275,9 @@
               <lb ed="#SV"/>eius a patre, nisi innuebatur articulus trinitatis.</p>
             
             <p xml:id="l72-taiptp">tertio alibi 
-              <lb ed="#SV"/><unclear>ihuns[?]</unclear> in prophetando Iudaeis ait <name>moyses</name> scripsit 
-              <lb ed="#SV"/>de me circa istam materiam facit <name>magister</name> in distinctione 
-              <lb ed="#SV"/>secunda, auctoritates testamenti veteris et nihilominus <name>de 
+              <lb ed="#SV"/><unclear>ihuns[?]</unclear> in prophetando Iudaeis ait <name ref="#Moses">moyses</name> scripsit 
+              <lb ed="#SV"/>de me circa istam materiam facit <name ref="#Lombard">magister</name> in distinctione 
+              <lb ed="#SV"/>secunda, auctoritates testamenti veteris et nihilominus <name ref="#NicholasOfLyra">de 
                 <lb ed="#SV"/>lira</name> probat quod Iudaei habent concedere trinitatis articulum 
               <lb ed="#SV"/>et concludit quod sufficienter deducitur in veteri testa<lb ed="#SV"/>mento, 
               licet non evidenter. sed in hoc quod dicit non evi<lb ed="#SV"/>denter 
@@ -276,7 +285,7 @@
               <lb ed="#SV"/>notandum est quod <sic>quod</sic> evidentia deductionis non debet atten<lb ed="#SV"/>di, 
               nisi penes intelligentem et capientem scripturam, 
               <lb ed="#SV"/>quia nisi sic,  tunc non evidenter deduceretur ex 
-              <lb ed="#SV"/>commento <unclear>campani[?]</unclear> in Io <name>euclid</name> quod supra lineam 
+              <lb ed="#SV"/>commento <unclear>campani[?]</unclear> in Io <name ref="#Euclid">euclid</name> quod supra lineam 
               <lb ed="#SV"/>rectam contingit triangulum aequilatrium <unclear>collo??rae[?]</unclear>, quod est 
               <lb ed="#SV"/>falsum, nam ad hoc quod aliquid deducatur evidenter oportet quod 
               <lb ed="#SV"/>potentia sit bene disposita, et cum hoc quod intelligat 
@@ -305,16 +314,16 @@
               <lb ed="#SV"/>est pluralitas personarum. et ista est positio fidei 
               <lb ed="#SV"/>de alio testamento, scilicet novo, non Revocatur in dubium 
               <lb ed="#SV"/>quin deducat evidenter et ponant trinitatem personarum 
-              <lb ed="#SV"/>esse ut <name>Ioahnnes</name> ponit in sua canonica est in aliis 
+              <lb ed="#SV"/>esse ut <name ref="#John">Ioahnnes</name> ponit in sua canonica est in aliis 
               <lb ed="#SV"/>locis scripturae quam innumeris ponitur ille articulus et in 
               <lb ed="#SV"/>consiliis generalibus. et sic nullum est dubium quin sit positio 
               <lb ed="#SV"/>fidei, scilicet, ponere trinitatem personarum.</p>
           </div>
           <div>
-            <head xml:id="l72-Hdmcdmc">Duae manudcutiva Chatton</head>
+            <head xml:id="l72-Hdmcdmc">Duae manudcutiva <name ref="#Chatton">Chatton</name></head>
             
             <p xml:id="l72-dstcss">Duo sunt tamen 
-              <lb ed="#SV"/>manuductiva quae ponit <name>chaton</name> supra sententias.</p> 
+              <lb ed="#SV"/>manuductiva quae ponit <name ref="#Chatton">chaton</name> supra sententias.</p> 
             
             <p xml:id="l72-uiqpea">Unde 
               <lb ed="#SV"/>imaginatur quod sint duae Res Repraesentes relative 
@@ -354,7 +363,7 @@
               <lb ed="#SV"/>habet distinctionem et non ad essentiam.</p>
             
             <p xml:id="l72-sicene">secunda imaginatio 
-              <cb ed="#SV" n="288rb"/><lb ed="#SV"/><name>chaton</name> est ista quod ipse imaginatur quod sint 
+              <cb ed="#SV" n="288rb"/><lb ed="#SV"/><name ref="#Chatton">chaton</name> est ista quod ipse imaginatur quod sint 
               <lb ed="#SV"/>duo genera distinctionum realiter distincta, quia est alia distinctio 
               <lb ed="#SV"/>relativa. et alia est essentialis et haec in eadem Re, ut 
               <lb ed="#SV"/>Res Relativa distinguitur ab alia Relativa modo istae duae 
