@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,6 +31,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio97">
       <head xml:id="l97-Hldldld" subtype="title">Lectio 97, de Libertate</head>
@@ -273,7 +282,7 @@
             <lb ed="#SV"/>patiantur vel non.</p>
         
         <p xml:id="l97-srqivr">secunda Responsio quod deus qui est sapientissimus 
-          <lb ed="#SV"/>et optimus medicus animarum ut habetur in <title>psalmo</title>, qui 
+          <lb ed="#SV"/>et optimus medicus animarum ut habetur in <title ref="#Psalms">psalmo</title>, qui 
           <lb ed="#SV"/>sanat omnes iniquitates vel infirmitates tuas, et ali<lb ed="#SV"/>bi 
           qui sanat iniquitates propter me. Et ideo ut sanemur 
           <lb ed="#SV"/>deus applicat diversa pro Regimine sanitatis nostrae. et 
@@ -325,7 +334,7 @@
             <lb ed="#SV"/><name ref="#Boethius">boecius</name> Respondet.</p>
           
           <p xml:id="l97-pnpsmp">primo ne propter bonitatem et exce<lb ed="#SV"/>llentiam 
-            cadant in superbiam ut de <name rend="#Paul">paulo</name> qui habuit 
+            cadant in superbiam ut de <name ref="#Paul">paulo</name> qui habuit 
             <lb ed="#SV"/>angelum <name ref="Satan">sathanae</name> et temptationem de peccato carnis 
             <lb ed="#SV"/>intensissimam, ideo ne magnitudo Revelationum me ex<lb ed="#SV"/>tollat 
             datus est mihi stimulus carnis et angelus 
