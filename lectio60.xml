@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-19">November 19, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
     <div xml:id="lectio60">
       <head xml:id="l60-Hldfldf" subtype="title">Lectio 60, de Trinitate</head>
@@ -50,11 +59,11 @@
           <lb ed="#SV"/>et difficultates quas Reducam ad clara pro posse.</p>
         
         <div>
-          <head xml:id="l60-Hoididr">Opinio <name>Iohannes de Rippa</name></head>  
+          <head xml:id="l60-Hoididr">Opinio <name ref="#Ripa">Iohannes de Rippa</name></head>  
           
           <p xml:id="l60-protef">primo 
-            <lb ed="#SV"/>Recitabo opinionem <name>magistri Iohannis de Rippa</name> et ima<lb ed="#SV"/>ginationem 
-            eius, et post ea opinionem <name>doctoris subtilis</name>, 
+            <lb ed="#SV"/>Recitabo opinionem <name ref="#Ripa">magistri Iohannis de Rippa</name> et ima<lb ed="#SV"/>ginationem 
+            eius, et post ea opinionem <name ref="#Scotus">doctoris subtilis</name>, 
             <lb ed="#SV"/>et post dicam opinionem quae videtur magis consona 
             <lb ed="#SV"/>veritati theologicae et fidei.</p>
           
@@ -62,7 +71,7 @@
             <lb ed="#SV"/>non est ad praesens difficultas, quia eadem Res simplicissima 
             <lb ed="#SV"/>potest concipi diversis rationibus. Est ergo sciendum quod circumscripto 
             <lb ed="#SV"/>opere intellectus in Re ad extra inveniuntur quattuor modi distinctionum secundum 
-            <lb ed="#SV"/><name>magistrum Iohannem de Rippa</name>.</p> 
+            <lb ed="#SV"/><name ref="#Scotus">magistrum Iohannem de Rippa</name>.</p> 
           
           <p xml:id="l60-pmeemd">primus modus est essentialis, 
             <lb ed="#SV"/>scilicet, quando essentiae duae sunt, et una non est alia, et ista 
@@ -141,7 +150,7 @@
             uni quam alteri, ita quod intensior isti quam illi imaginatur 
             <lb ed="#SV"/>enim quod tota Ratio entis creabilis sit in ratione formali sua 
             <lb ed="#SV"/>sumpta sit eiusdem rationis in omnibus creaturis ut esse quid est 
-            <lb ed="#SV"/>in <name>sorte</name> et esse quod est in lapide in ratione formali est omnino 
+            <lb ed="#SV"/>in <name ref="#Sortes">sorte</name> et esse quod est in lapide in ratione formali est omnino 
             <lb ed="#SV"/>adaequate eiusdem rationis, est tamen in intensiori gradu in 
             <lb ed="#SV"/>uno quam in alio, quia homo habet plures gradus essendi quam lapis 
             <lb ed="#SV"/>et lapis quam elementum et secundum hoc terminis transcendentibus absolutis 
@@ -187,12 +196,12 @@
           <head xml:id="l60-Hcididr">Conclusiones Iohannis de Rippa</head>
           
           <p xml:id="l60-iiepsc">In ista ergo materia 
-            <lb ed="#SV"/><name>magister Iohannes de Rippa</name> ponit aliquas propositiones, et 
+            <lb ed="#SV"/><name ref="#Ripa">magister Iohannes de Rippa</name> ponit aliquas propositiones, et 
             <lb ed="#SV"/>quia ista materia est bene subtilis et bonum est eam inte<lb ed="#SV"/>lligere, 
             ideo ponam suas conclusiones.</p> 
           <div>
             
-            <head xml:id="l60-Hpcdfed">Prima conclusio de Rippa: in qualibet creatura reperitur multitudo graduum eiusdem rationis formalis et denominationis</head>
+            <head xml:id="l60-Hpcdfed">Prima conclusio <name ref="#Ripa">de Rippa</name>: in qualibet creatura reperitur multitudo graduum eiusdem rationis formalis et denominationis</head>
             
             <p xml:id="l60-peimqa">ponit ergo istam conclusionem: 
               <lb ed="#SV"/>in qualibet creatura Reperitur multitudo graduum eiusdem rationis 
@@ -207,7 +216,7 @@
               <lb ed="#SV"/>distinctio quarti gradus est minor quolibet alia.</p>
           </div>
           <div>
-            <head xml:id="l60-Hscdard">Secunda conclusio de Rippa: distinctio gradus rationis formaliter et adaequate repugnat Deo<note>double check</note></head>
+            <head xml:id="l60-Hscdard">Secunda conclusio <name ref="#Ripa">de Rippa</name>: distinctio gradus rationis formaliter et adaequate repugnat Deo<note>double check</note></head>
             
             <p xml:id="l60-acduiv">Alia conclusio: 
               <lb ed="#SV"/>distinctio quarti gradus, scilicet, graduum eiusdem rationis, formaliter 
@@ -228,7 +237,7 @@
           
           <div>
             
-            <head xml:id="l60-tcdrdf">Tertia conclusio de Rippa: Quod sicut in Deo, ita in creatura reperitur distinctio formalis</head>
+            <head xml:id="l60-tcdrdf">Tertia conclusio <name ref="#Ripa">de Rippa</name>: Quod sicut in Deo, ita in creatura reperitur distinctio formalis</head>
             
             <p xml:id="l60-acsdfi"><lb ed="#SV"/>Alia conclusio: sicut in deo, ita in creatura Reperitur distinctio forma<lb ed="#SV"/>lis. 
               unde sicut <c>d</c> tactum est doctor iste imaginatur quod secundum 
@@ -242,7 +251,7 @@
           </div>
           <div>
             
-            <head xml:id="l60-Hacddcr">Quarta conclusio de Rippa de distinctione causalium rationum</head>
+            <head xml:id="l60-Hacddcr">Quarta conclusio <name ref="#Ripa">de Rippa</name> de distinctione causalium rationum</head>
             
             <p xml:id="l60-acpipi">Aliam conclusionem ponit de distinctione causalium rationum, sed 
               <lb ed="#SV"/>quia ista materia tangit materiam de ideis, ideo istam conclusionem 
@@ -251,7 +260,7 @@
             
             <p xml:id="l60-eisidr">Et 
               <lb ed="#SV"/>ista materia est bene difficilis ad intelligendum, ideo ista introducto 
-              <lb ed="#SV"/>pro Iuvenibus, et ista sunt in generali de opinione <name>magistri 
+              <lb ed="#SV"/>pro Iuvenibus, et ista sunt in generali de opinione <name ref="#Ripa">magistri 
                 <lb ed="#SV"/>Iohannis de Rippa</name>, et cetera.</p>
           </div>
         </div>
