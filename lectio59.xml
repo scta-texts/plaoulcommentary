@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-09">November 29, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio59">
         
@@ -70,7 +79,7 @@
             
          <p xml:id="l59-tidaef"><lb ed="#SV"/>tertio in deo est pluralitas idearum et Realis distinctio earum, 
            <lb ed="#SV"/>ergo ibi non est summa simplicitas. immo est ibi idearum di<lb ed="#SV"/>stinctarum 
-           infinitas. unde <name>augustinus</name> <title>octoginta-trium quaestionum</title> 
+           infinitas. unde <name ref="#Augustine">augustinus</name> <title ref="#deDiversisQuaestionibus">octoginta-trium quaestionum</title> 
            quaestione 86 ponit quod alia ratione factus est homo, alia ratione 
            <lb ed="#SV"/>factus est aequus, ergo in deo sunt ideae variae specierum ad 
            <lb ed="#SV"/>extra factive.</p> 
@@ -80,13 +89,13 @@
              <lb ed="#SV"/>sunt variae mensurae Rerum rationes[?] producibilium Regulae ful<lb ed="#SV"/>gores 
              origines et  esse rerum.</p> 
             
-            <p xml:id="l59-uatdcb">unde <name>augustinus</name> IIIo 
-              <lb ed="#SV"/><title>de trinitate</title> 16o capitulo dicit de deo quod penes ipsum sunt men<lb ed="#SV"/>surae, 
-              numeri, et pondera, et XIVo <title>de trinitate</title> dicit apud 
+            <p xml:id="l59-uatdcb">unde <name ref="#Augustine">augustinus</name> IIIo 
+              <lb ed="#SV"/><title ref="#deTrinitate">de trinitate</title> 16o capitulo dicit de deo quod penes ipsum sunt men<lb ed="#SV"/>surae, 
+              numeri, et pondera, et XIVo <title ref="#deTrinitate">de trinitate</title> dicit apud 
               <lb ed="#SV"/>dictum esse Regulas aeternas, quae scriptae sunt in libro lucis, quae 
-              <lb ed="#SV"/>est veritas. et VIo <title>de trinitate</title> dicit quod filius est ars omni<lb ed="#SV"/>potentis 
-              plena rationum viventium. et <name>dionysius</name> <title>de caelesti 
-                <lb ed="#SV"/><sic>gerarchia</sic></title> vocat ideas fulgores, et <name>ambrosius</name> in <title>exa<lb ed="#SV"/>meron</title> 
+              <lb ed="#SV"/>est veritas. et VIo <title ref="#deTrinitate">de trinitate</title> dicit quod filius est ars omni<lb ed="#SV"/>potentis 
+              plena rationum viventium. et <name ref="#Dionysius">dionysius</name> <title ref="#deCaelestiHierarchia">de caelesti 
+                <lb ed="#SV"/><sic>gerarchia</sic></title> vocat ideas fulgores, et <name ref="#Ambrose">ambrosius</name> in <title ref="#Hexameron">exa<lb ed="#SV"/>meron</title> 
               vocat ideas origines et causas Rerum. et sic apparet quod 
               <lb ed="#SV"/>doctores ponunt diversitatem et pluralitatem idearum in 
               <lb ed="#SV"/>divina essentia. et ista dimitto causa brevitatis.</p> 
@@ -102,7 +111,7 @@
       <div>
         <head xml:id="l59-Hprprpr">Prima ratio</head>
       
-        <p xml:id="l59-epaepn">Et primo arguo per rationes <name>scoti</name> qui 
+        <p xml:id="l59-epaepn">Et primo arguo per rationes <name ref="#Scotus">scoti</name> qui 
           <lb ed="#SV"/>vult probare quod inter divinam sapientiam et divinam bonitatem 
           <lb ed="#SV"/>sit non identitas, et ita de aliis attributis primo 
           <lb ed="#SV"/>sit, si infinita sapientia esset formaliter bonitas infinita, 
@@ -163,7 +172,7 @@
                   <lb ed="#SV"/>et voluntas divina non vult mala.</p>
       
       <p xml:id="l59-aiaqef">Ad idem arguit 
-        <lb ed="#SV"/><name>magister Iohannes de Rippa</name>. primo sic: divina essentia 
+        <lb ed="#SV"/><name ref="#Ripa">magister Iohannes de Rippa</name>. primo sic: divina essentia 
         <lb ed="#SV"/>est participalis in esse ab aliquo. et ab eodem non partici<lb ed="#SV"/>patur 
         in esse vitae, ergo in deo est aliqualis distinctio inter 
         <lb ed="#SV"/>esse et esse vitae. nam si participatio dei in esse simpliciter a 
@@ -187,13 +196,13 @@
             
             <head xml:id="l59-Hraootp">Rationes ad oppositum trium propositionum</head>
             
-            <p xml:id="l59-aoiepd"><lb ed="#SV"/>Ad oppositum istorum trium arguitur auctoritate <name>dionysii</name> ponentis 
+            <p xml:id="l59-aoiepd"><lb ed="#SV"/>Ad oppositum istorum trium arguitur auctoritate <name ref="#Dionysius">dionysii</name> ponentis 
               <lb ed="#SV"/>quod circa divina non est aliquid assentiendum nisi quod divina docent 
               <lb ed="#SV"/>eloquia. et per consequens cum non habeamus ex sacra scriptura, 
               <lb ed="#SV"/>nec ex determinatione ecclesiae, nec ex auctoritate ligante 
               <lb ed="#SV"/>nec ex ratione convincente quod sit huiusmodi pluralitas 
               <lb ed="#SV"/>formalitatum. videtur quod nullo modo, licet talia circa deitatem 
-              <lb ed="#SV"/>asserere, et maxime considerata <name>venerabilis anselmi</name> 
+              <lb ed="#SV"/>asserere, et maxime considerata <name ref="#Anselm">venerabilis anselmi</name> 
               <lb ed="#SV"/>regula dicentis quod in divinis omnia sunt idem, ubi non obviat 
               <lb ed="#SV"/>relationis opposito, ergo praecise inter personas relativas ex ponenda 
               <lb ed="#SV"/>distinctio.</p>
