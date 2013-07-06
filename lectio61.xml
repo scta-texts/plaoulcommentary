@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-21">November 21, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio61">
         <head xml:id="l61-Hldtldt" subtype="title">Lectio 61, de Trinitate</head>
@@ -52,7 +61,7 @@
       <p xml:id="l61-ecpidr">Et circa primum est 
         <lb ed="#SV"/>insistendum, ideo ut habeatur fundamentum et imaginatio 
         <lb ed="#SV"/>et intelligatur, positio de formalitatibus ponam iterum aliquas 
-        <lb ed="#SV"/>propositiones secundum imaginationem <name>magistri Iohannes de Rippa</name>.</p>
+        <lb ed="#SV"/>propositiones secundum imaginationem <name ref="#Ripa">magistri Iohannes de Rippa</name>.</p>
       <div>
         
         <head xml:id="l61-Hppoppo">Prima propositio:</head>
@@ -148,7 +157,7 @@
         <lb ed="#SV"/>et ex concursu rationis vitae cum ratione intellectivi causatur 
         <lb ed="#SV"/>species superior, quia secundum eum ex concursu istarum rationum obiectialium 
         <lb ed="#SV"/>constituuntur[?] species. et sic generat ex istis concursibus rationum 
-        <lb ed="#SV"/>formalium causantur Rerum specierum secundum <name>magistrum Iohannem de Rippa.</name></p> 
+        <lb ed="#SV"/>formalium causantur Rerum specierum secundum <name ref="#Ripa">magistrum Iohannem de Rippa.</name></p> 
           
           <p xml:id="l61-secuae"><lb ed="#SV"/>Si ergo sequamur istam viam quod, scilicet, per quamdam annologiam et 
             <lb ed="#SV"/>similitudinem conceptuum inter se Recipiatur a parte Rei distinctio 
@@ -184,7 +193,7 @@
           <div>
             <head xml:id="l61-Hppdpsr">Plus propositiones de Rippa</head>
           
-            <p xml:id="l61-eiiiap">Ex ista imaginatione <name>de Rippa</name> infert aliquas propositio<lb ed="#SV"/>nes.</p>
+            <p xml:id="l61-eiiiap">Ex ista imaginatione <name ref="#Ripa">de Rippa</name> infert aliquas propositio<lb ed="#SV"/>nes.</p>
       
             <div>
         
@@ -244,7 +253,7 @@
         essentialiter non tamen formaliter. per istam viam imaginari 
         <lb ed="#SV"/>posset distinctio inter esse et essentiam. per hanc viam ima<lb ed="#SV"/>ginaretur 
         etiam compositio angeli ex actuali et potentiali. sicut 
-        <lb ed="#SV"/>posuit <name>sanctus thomas</name>, licet sit omnino simplex et indivisibilis. 
+        <lb ed="#SV"/>posuit <name ref="#Aquinas">sanctus thomas</name>, licet sit omnino simplex et indivisibilis. 
         <lb ed="#SV"/>per istam viam imaginaretur distinctio idearum quod esset una 
         <lb ed="#SV"/>ydea incorruptibilis et indivisibilis concurret tamen 
         <lb ed="#SV"/>identice cum aliquo corruptibili et ideo licet ista positio 
@@ -292,10 +301,9 @@
         <lb ed="#SV"/>simplicitatem et intendo colorare quod arguit summam simplicitatem 
         <lb ed="#SV"/>et quod est summa simplicitas cum trinitate. et in hoc intendo 
         <lb ed="#SV"/>fundare omnimodam simplicitatem divinae essentiae. de opinione 
-        <lb ed="#SV"/><name>scoti</name> alias videbitur.</p>
+        <lb ed="#SV"/><name ref="#Scotus">scoti</name> alias videbitur.</p>
             </div>
           </div>
-        
           <div>
             <head xml:id="l61-Hrprrpr">Ratio pro repetitione</head>
             
