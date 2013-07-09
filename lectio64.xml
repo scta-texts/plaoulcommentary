@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-28">November 28, 2012</date>  
       </publicationStmt>
@@ -32,24 +34,31 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio64">
         <head xml:id="l64-ldtldt" subtype="title">Lectio 64, de Trinitate</head>
         <div>
         <head xml:id="l64-Hrdfrdf">Recapitulatio de formalitatibus</head>
       
-          <p xml:id="l64-ialhei"><lb ed="#SV"/><hi rend="dropCapThreeLines">I</hi>n aliis lectionibus visum est quod non sit ponenda 
+          <p xml:id="l64-ialhei"><lb ed="#SV"/>In aliis lectionibus visum est quod non sit ponenda 
             <lb ed="#SV"/>distinctio in deo propter eius summam simplicitatem, 
-            <lb ed="#SV"/>quod si ad aliquem sensum visum[?verum] videantur doctores ponere 
+            <lb ed="#SV"/>quod si ad aliquem sensum <unclear>visum[?verum]</unclear> videantur doctores ponere 
             <lb ed="#SV"/>in deo distinctione formalem, intelligatur Resolvendo ad 
-            <lb ed="#SV"/>sensum logicalem, scilicet, ad non 'perseitatem' primi modi enuntiationis 
+            <lb ed="#SV"/>sensum logicalem, scilicet, ad non <term ana="#perseitatem">'perseitatem'</term> primi modi enuntiationis 
             <lb ed="#SV"/>unius extremi de altero, quod si a parte Rei ponant distinctionem 
             <lb ed="#SV"/>inter perfectiones divinas essentiales ut inter voluntatem, 
             <lb ed="#SV"/>sapientiam, iustitiam, et sic de aliis, hoc est improbatum.</p>
           
           <p xml:id="l64-ergpap">et 
             <lb ed="#SV"/>Radix generalis, praeter particulares rationes, erat tripartita. primo 
-            <lb ed="#SV" n="276rb"/>ex immensitate dei. secundo ex Regula <name>anselmi</name>, ubi dicit 
+            <lb ed="#SV" n="276rb"/>ex immensitate dei. secundo ex Regula <name ref="#Anselm">anselmi</name>, ubi dicit 
             <lb ed="#SV"/>quod in deo omnia sunt idem, ubi non obviat relationis oppositio. 
             <lb ed="#SV"/>et tertio tanquam fundamentum habemus supponere summae simplicitatis 
             <lb ed="#SV"/>divinae quod nihil est negandum de uno attributo quin negetur 
@@ -173,7 +182,7 @@
         <lb ed="#SV"/>accidentalis vel compositio. si sit substantialis, ergo si divina essentia 
         <lb ed="#SV"/>communicetur per modum formae creaturae, communicabit sibi operationes suas 
         <lb ed="#SV"/>intrinsecas, ergo creatura producet filium ad intra et spira<lb ed="#SV"/>bit 
-        spiritum sanctum. Impossibile enim est quod forma communicetur quin[?] communicetur 
+        spiritum sanctum. Impossibile enim est quod forma communicetur <unclear>quin[?]</unclear> communicetur 
         <lb ed="#SV"/>secundum latitudinem totam suae perfectionis, ergo et operationis ergo 
         <lb ed="#SV"/>operationes suae communicabuntur suo formabili, et sic sequitur quod materia 
         <lb ed="#SV"/>prima posset generare filium in divinis et spirare spiritum sanctum.</p> 
@@ -208,7 +217,7 @@
           causae agentis, scilicet, quia non posset effectum se solo pro<lb ed="#SV"/>ducere 
           absque concursu causae. secundo sic quod causa secunda necessario requiratur 
           <lb ed="#SV"/>ad effectus productionem. et sic antecedens est falsum, quia non revocatur in duplum, 
-          <lb ed="#SV"/>quin[?] deus posset se solo absque concursu cuiuscumque causae secundae aliquem 
+          <lb ed="#SV"/><unclear>quin[?]</unclear> deus posset se solo absque concursu cuiuscumque causae secundae aliquem 
           <lb ed="#SV"/>effectum producere. sed hoc non est proprie supplere vicem causae secundae. 
           <lb ed="#SV"/>Sed proprie supplere causae secundae hoc est concurrere proportionali concursu, 
           <lb ed="#SV"/>sicut causa secunda concurrit. Ita quod deus concurreret ad effectus 
@@ -255,19 +264,19 @@
           <lb ed="#SV"/>sit mutatio in creatura, ergo illam unionem, quae est mutatio 
           <lb ed="#SV"/>efficit tota trinitatis, ergo tota trinitas unit. et ego dico 
           <lb ed="#SV"/>istud contra unum quem vidi semel Respondere in scolis, qui 
-          <lb ed="#SV"/>dicit quod stat unam personam formaliter influere, quin[?] quaelibet 
+          <lb ed="#SV"/>dicit quod stat unam personam formaliter influere, <unclear>quin[?]</unclear> quaelibet 
           <lb ed="#SV"/>formaliter influat, quia opus influendi est indistinctum, ideo non 
-          <lb ed="#SV"/>potest uni personae competere, quin[?] competat alteri.</p>
+          <lb ed="#SV"/>potest uni personae competere, <unclear>quin[?]</unclear> competat alteri.</p>
         
         <p xml:id="l64-insnbs">Item non 
-          <lb ed="#SV"/>stat quod fiat huiusmodi unio, quoniam[?] tota Trinitas influat 
+          <lb ed="#SV"/>stat quod fiat huiusmodi unio, <unclear>quoniam[?]</unclear> tota Trinitas influat 
           <cb ed="#SV" n="277ra"/><lb ed="#SV"/>effective. ideo dicere quod una persona possit influere absque alia 
           <lb ed="#SV"/>immo absque hoc quod aliae ad huiusmodi influxum concurrant 
           <lb ed="#SV"/>credo quod non sit verum. Ita data ista positione non cogeremur 
-          <lb ed="#SV"/>dicere quod tota trinitas effectissime[?] unionem hypostaticam, nam sicut per 
+          <lb ed="#SV"/>dicere quod tota trinitas <unclear>effectissime[?]</unclear> unionem hypostaticam, nam sicut per 
           <lb ed="#SV"/>adversarium ex hoc quod una persona unitatur creaturae tamquam forma 
           <lb ed="#SV"/>non Requiritur operatio aliarum personarum pari ratione unio hypostatica, 
-          <lb ed="#SV"/>quae non videtur tantae intu?tatis[?] quae terminatur ad personam solum 
+          <lb ed="#SV"/>quae non videtur tantae <unclear>intu?tatis[?]</unclear> quae terminatur ad personam solum 
           <lb ed="#SV"/>non Requirit influxum, et concursum trium personarum, sicut 
           <lb ed="#SV"/>nec unio formalis. modo ponere unionem hypostaticam effici 
           <lb ed="#SV"/>absque concursu totius trinitatis credo quod non bene sonaret.</p>
@@ -293,7 +302,7 @@
           <lb ed="#SV"/>videndi infinite visio, vel finite tantum. Ita quod vel esset 
           <lb ed="#SV"/>creaturae vitalis immutatio infinite vel finite tantum. si dicatur quod finite, 
           <lb ed="#SV"/>ergo prius est in se finite notitia quam alteri, quia nulla notitia 
-          <lb ed="#SV"/>potest esse notitia alteri quin[?] sit prius in se talis notitia, quia 
+          <lb ed="#SV"/>potest esse notitia alteri <unclear>quin[?]</unclear> sit prius in se talis notitia, quia 
           <lb ed="#SV"/>oportet quod prius formaliter habeat conditionem in se quem communicet in se 
           <lb ed="#SV"/>illi cui communicat. si infinite, hoc est impossibile, quia creatura non est 
           <lb ed="#SV"/>infinitae notitiae capax sic quod per eam infinite cognoscat.</p>
@@ -329,8 +338,8 @@
         <p xml:id="l64-sppvss">secundo ponamus per adversarium quod fi<lb ed="#SV"/>lius 
           in divinis immutet potentiam cognitivam sive intellectivam 
           <lb ed="#SV"/>in esse sapientiae vel notitiae, tunc ista notitia immensa, quae Realiter 
-          <lb ed="#SV"/>actuat <name>sortem</name> dicitur a patre, ergo pater non est omnis sapientia 
-          <lb ed="#SV"/>immensa, quia illa notitia qua immutat <name>sortem</name> non est pater, 
+          <lb ed="#SV"/>actuat <name ref="#Sortes">sortem</name> dicitur a patre, ergo pater non est omnis sapientia 
+          <lb ed="#SV"/>immensa, quia illa notitia qua immutat <name ref="#Sortes">sortem</name> non est pater, 
           <lb ed="#SV"/>quia immutat per adversarium in suo esse personali, et sic non 
           <lb ed="#SV"/>erit pater. et per consequens pater non erit omnis notitia immensa 
           <cb ed="#SV" n="277rb"/><lb ed="#SV"/>pari ratione diceretur de amore respectu spiritus sancti et pari ratione 
@@ -344,7 +353,7 @@
           obiective absque aliis personis. unde esse visionem est 
           <lb ed="#SV"/>magis opus ad extra quam videri, ergo si filius potest esse visio 
           <lb ed="#SV"/>formalis, ergo et obiectialis. tunc ponatur quod filius beatificet in 
-          <lb ed="#SV"/>suo esse personali, ergo stabit[?] quod aliquis beatificetur et tamen non 
+          <lb ed="#SV"/>suo esse personali, ergo <unclear>stabit[?]</unclear> quod aliquis beatificetur et tamen non 
           <lb ed="#SV"/>videbit divinam essentiam nec patrem nec spiritum sanctum.</p>
         
         <p xml:id="l64-iicahp">Item 
@@ -362,12 +371,12 @@
           <lb ed="#SV"/>sequitur quod non erit sapientia, quia filius erit sapientia, qui dicitur 
           <lb ed="#SV"/>ab eo, et ista sunt contra divinam immensitatem, ergo, etc., ergo concedendum 
           <lb ed="#SV"/>est quod divina essentia non potest concurrere formaliter nec immutare 
-          <lb ed="#SV"/>vitaliter, et si posset, tunc non esse possibile, quin[?] ibi esset 
+          <lb ed="#SV"/>vitaliter, et si posset, tunc non esse possibile, <unclear>quin[?]</unclear> ibi esset 
           <lb ed="#SV"/>operatio totius trinitatis</p> 
       </div>
       <div>
         <head xml:id="l64-Hrdrrdr">Rationes de Rippa</head>
-        <p xml:id="l64-cicial">circa istas conclusiones sunt rationes <name>de 
+        <p xml:id="l64-cicial">circa istas conclusiones sunt rationes <name ref="#Ripa">de 
           <lb ed="#SV"/>Rippa</name>, quae inducentur in aliis lectionibus, et cetera.</p>        
       </div>
           </div>
