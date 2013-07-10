@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-30">November 30, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,11 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
     <body>
       <div xml:id="lectio65">
         <head xml:id="l65-Hldtldt" subtype="title">Lectio 65, de Trinitate</head>
@@ -53,16 +60,16 @@
           
             <p xml:id="l65-peisia">primo 
               <lb ed="#SV"/>ex imaginatione philosophorum ponentium quod deus est anima mundi. 
-              <lb ed="#SV"/>Unde <name>virgilius</name> in VIo <title>eneydos</title> ponit quod omnia spiritus iutus 
+              <lb ed="#SV"/>Unde <name ref="#Virgil">virgilius</name> in VIo <title ref="#Eneads">eneydos</title> ponit quod omnia spiritus iutus 
               <lb ed="#SV"/>alit.</p> 
           
-            <p xml:id="l65-esrend">et sicut Recitat <name>albertus</name> fuit intensio philosophorum quod 
+            <p xml:id="l65-esrend">et sicut Recitat <name ref="#Albert">albertus</name> fuit intensio philosophorum quod 
               <lb ed="#SV"/>deus est unica forma omnium Rerum, scilicet, secundum gradus complexionum 
               <lb ed="#SV"/>sunt gradus operabilium, et quod nobiliores exercet operationes 
               <lb ed="#SV"/>ubi materia est nobilius disposita.</p> 
            
-          <p xml:id="l65-aiepea">Ad idem est <name>Rabbi moyses</name> 
-            <lb ed="#SV"/>in libro <title>de duce dubiorum</title>, qui ponit quod mundus debet imaginari 
+          <p xml:id="l65-aiepea">Ad idem est <name ref="#Maimonides">Rabbi moyses</name> 
+            <lb ed="#SV"/>in libro <title ref="#GuideForThePerplexed">de duce dubiorum</title>, qui ponit quod mundus debet imaginari 
             <lb ed="#SV"/>tanquam quod vivens habens diversa membra, alia terrestria, 
             <lb ed="#SV"/>alia minus terrestria, et alia spiritualia, et ponit expresse 
             <lb ed="#SV"/>quod deus se habet in triplici genere causae efficientis, scilicet, et 
@@ -70,35 +77,35 @@
             <lb ed="#SV"/>quod deus est realiter forma mundi et non de possibili solum, 
             <lb ed="#SV"/>sed de facto et quod actuet tamquam forma principissima et actua<lb ed="#SV"/>lissima.</p> 
           
-          <p xml:id="l65-icicrf">Item <name>commentator</name> in pluribus commentis in XIIo <title>metaphysicae</title> 
-            <lb ed="#SV"/>Reponit deum sub triplici genere causae, <add place="aboveLine">scilicet</add>, formalis, efficientis, 
+          <p xml:id="l65-icicrf">Item <name ref="#Averroes">commentator</name> in pluribus commentis in XIIo <title ref="#MetaphysicsCommentary">metaphysicae</title> 
+            <lb ed="#SV"/>Reponit deum sub triplici genere causae, scilicet, formalis, efficientis, 
             <lb ed="#SV"/>et finalis, ergo ex intentione philosophorum est quod deus est prima 
             <lb ed="#SV"/>forma concurrens in genere causae formalis respectu cuius<lb ed="#SV"/>cumque 
             Rei formalis.</p>
           
-            <p xml:id="l65-ibdevv">Item <name>beatus dionysius</name> in suis 
+            <p xml:id="l65-ibdevv">Item <name ref="#Dionysius">beatus dionysius</name> in suis 
               <cb ed="#SV" n="277va"/><lb ed="#SV"/>libris quasi in  locis innumeris ponit expresse quod deus 
               <lb ed="#SV"/>est esse entium et vita viventium.</p>
           
-          <p xml:id="l65-aeifrm"><name>augustinus</name> eciam in li<lb ed="#SV"/>bro 
-            <title>confessionum</title> omnes formas mutabiles subordinat in aliquem 
+          <p xml:id="l65-aeifrm"><name ref="#Augustine">augustinus</name> eciam in li<lb ed="#SV"/>bro 
+            <title ref="#Confessions">confessionum</title> omnes formas mutabiles subordinat in aliquem 
             <lb ed="#SV"/>immutabilem in eodem genere causae proportionaliter, sicut de efficientibus, 
             <lb ed="#SV"/>ergo videtur quod deus concurrat in genere causae formalis, ut 
             <lb ed="#SV"/>est aliud genus esse ab aliis, ergo deus de facto concurrit 
-            <lb ed="#SV"/>in genere causae formalis. et X <title>confessionum</title> expresse <name>augustinus</name> 
-            <lb ed="#SV"/>approbat sententiam <name>plotini</name> philosophi platonici ponentes 
+            <lb ed="#SV"/>in genere causae formalis. et X <title ref="#Confessions">confessionum</title> expresse <name ref="#Augustine">augustinus</name> 
+            <lb ed="#SV"/>approbat sententiam <name ref="#Plotinus">plotini</name> philosophi <name ref="#Platonists" type="group">platonici</name> ponentes 
             <lb ed="#SV"/>quod deus sit Realiter forma Rerum mutabilium.</p>
           
             <p xml:id="l65-aiesap">Ad idem etiam  
-              <lb ed="#SV"/>est <name>linconiensis</name> supra librum <title>de divinis nominibus</title>. Conformiter 
-              <lb ed="#SV"/>ad <name>dionysium</name> qui ponit quod deus est sic forma mutabilium, 
+              <lb ed="#SV"/>est <name ref="#Grosseteste">linconiensis</name> supra librum <title ref="#deDivinisNominibus">de divinis nominibus</title>. Conformiter 
+              <lb ed="#SV"/>ad <name ref="#Dionysius">dionysium</name> qui ponit quod deus est sic forma mutabilium, 
               <lb ed="#SV"/>sicut impressio sigilli in forma liquidi. et quidquid sit 
               <lb ed="#SV"/>utrum sit forma extrinseca, tamen eam ibi dicit esse formam, 
               <lb ed="#SV"/>et hoc sufficit ad propositum.</p>
           
         </div>
         <div>
-          <head xml:id="l65-Hresnes">Responsiones[?]</head>
+          <head xml:id="l65-Hresnes"><unclear>Responsiones[?]</unclear></head>
           
           <p xml:id="l65-dargcf">Deinde arguitur rationibus. 
             <lb ed="#SV"/>primo sic: nulla secunda causa sufficit influere in aliquo genere 
@@ -149,19 +156,19 @@
             non dicit imperfectionem, tunc potest deo competere, ergo deus 
             <lb ed="#SV"/>potest formaliter influere quod est contra prius dicta.</p>
           
-          <p xml:id="l65-idecsm">Item deus est univocalis[?universalis?] in esse personali naturae humanae, sicut de facto est, ergo 
-            <lb ed="#SV"/>est univocalis[?] et communicabilis essentialiter et formaliter. antecedens est clarum 
+          <p xml:id="l65-idecsm">Item deus est <unclear>univocalis[?universalis?]</unclear> in esse personali naturae humanae, sicut de facto est, ergo 
+            <lb ed="#SV"/>est <unclear>univocalis[?]</unclear> et communicabilis essentialiter et formaliter. antecedens est clarum 
             <lb ed="#SV"/>de unione verbi ad naturam humanam. et consequentia probatur, quia 
             <lb ed="#SV"/>de ratione essentiae est quod sit communicabilis et communicatur in divinis 
             <lb ed="#SV"/>ad intra, in divinis autem persona non communicatur ad intra, ergo si sit 
-            <lb ed="#SV"/>in esse per se univocalis[?], ergo in esse essentiae est univocalis[?] communicando suam 
+            <lb ed="#SV"/>in esse per se <unclear>univocalis[?]</unclear>, ergo in esse essentiae est <unclear>univocalis[?]</unclear> communicando suam 
             <lb ed="#SV"/>perfectionem.</p>
           
           <p xml:id="l65-ceehic">Confirmatur essentia est communicabilis ad intra 
             <lb ed="#SV"/>per plenitudinem ad extra communicatur per plenitudinem participatione. 
             <lb ed="#SV"/>ex quo non dicit imperfectionem et nulla de necessitate coniuncta, 
             <lb ed="#SV"/>forte diceretur quod ex parte dei communicabilis non est Repugnantia 
-            <lb ed="#SV"/>quin[?] sit de se communicabilis, sed oritur ex defectu creaturae 
+            <lb ed="#SV"/><unclear>quin[?]</unclear> sit de se communicabilis, sed oritur ex defectu creaturae 
             <lb ed="#SV"/>quae non est huiusmodi influxus capax.</p> 
           
             <p xml:id="l65-eitsue">Et illud tollitur 
@@ -169,7 +176,7 @@
               <lb ed="#SV"/>capax unionis essentialis et formalis essentiae et influxus 
               <lb ed="#SV"/>formalis ab essentia quam sit capax unionis ad personam, sed 
               <lb ed="#SV"/>natura humana est capax unionis verbi ad ipsam, ergo non est 
-              <lb ed="#SV"/>Repugnantia creaturae, quin[?] sit univocalis[?universalis?] essentia.</p>
+              <lb ed="#SV"/>Repugnantia creaturae, <unclear>quin[?]</unclear> sit <unclear>univocalis[?universalis?]</unclear> essentia.</p>
           
           <p xml:id="l65-ipcpic">Item potentialitas 
             <lb ed="#SV"/>creaturae ad huiusmodi uniones supernaturales non est intrinseca, sed ex<lb ed="#SV"/>trinseca, 
@@ -178,12 +185,12 @@
             <lb ed="#SV"/>creaturae.</p>
           
           <p xml:id="l65-ipospd"><lb ed="#SV"/>Item potentia obedientalis non est intrinseca, sed quantificatur secundum gradum 
-            <lb ed="#SV"/>potentiae extrinsecae sic[?] potentis uti tali vel tali instrumento 
+            <lb ed="#SV"/>potentiae extrinsecae <unclear>sic[?]</unclear> potentis uti tali vel tali instrumento 
             <lb ed="#SV"/>nec quantificatur penes gradum intrinsecum creaturae, sed magis 
             <lb ed="#SV"/>penes gradum potentiae sit ordinantis. et sic patet quod ex parte 
             <lb ed="#SV"/>creaturae considerata obedientiali potentia et immensitate 
-            <lb ed="#SV"/>dei non est Repugnantia quin[?] sit formaliter deo univocalis[?], et 
-            <lb ed="#SV"/>quin[?] deus posset concurrere formaliter influendo.</p>
+            <lb ed="#SV"/>dei non est Repugnantia <unclear>quin[?]</unclear> sit formaliter deo <unclear>univocalis[?]</unclear>, et 
+            <lb ed="#SV"/><unclear>quin[?]</unclear> deus posset concurrere formaliter influendo.</p>
           
           <p xml:id="l65-ineedd">Item nihil 
             <lb ed="#SV"/>est denegandum vel Removendum a divina omnipotentia, nisi appa<lb ed="#SV"/>reat 
@@ -196,23 +203,23 @@
           <p xml:id="l65-cempdc">Confirmatur et magis apparenter quia 
             <lb ed="#SV"/>deitas de facto est creaturae communicata per Realem informationem, 
             <lb ed="#SV"/>ergo istud non est deo denegandum de possibili respectu cuiuscumque 
-            <lb ed="#SV"/>creaturae. antecedens patet per <name>apostolum</name> in <title>epistola ad colossenses</title> de humanitate 
+            <lb ed="#SV"/>creaturae. antecedens patet per <name ref="#Paul">apostolum</name> in <title ref="#CollosiansEpistle">epistola ad colossenses</title> de humanitate 
             <cb ed="#SV" n="278ra"/><lb ed="#SV"/>christi dicentem quod in eo habitat plenitudo deitatis corporaliter.</p> 
           
             <p xml:id="l65-ehahcc">et hanc 
               <lb ed="#SV"/>auctoritatem exponunt doctores ad huiusmodi intellectum huiusmodi 
-              <lb ed="#SV"/>communicationis formalis, nam <name>hugo</name> in libro <title>de sapientia animae christi</title> 
+              <lb ed="#SV"/>communicationis formalis, nam <name ref="#HughOfStVictor">hugo</name> in libro <title ref="#deSapientiaAnimaeChristi">de sapientia animae christi</title> 
               <lb ed="#SV"/>allegando auctoritatem dicit quod animae christi sive humanitati christi communica<lb ed="#SV"/>tum 
               est gratiose quidquid deus habet per naturam, ergo tota plenitudo 
               <lb ed="#SV"/>deitatis est humanitati christi communicata.</p> 
           
-            <p xml:id="l65-aiapsc">Ad idem allegatur <name>ambrosius</name> 
+            <p xml:id="l65-aiapsc">Ad idem allegatur <name ref="#Ambrose">ambrosius</name> 
               <lb ed="#SV"/>qui expresse tenet quod deus humanitati christi communicavit quicquid habet 
               <lb ed="#SV"/>in se essentialiter et naturaliter. et hoc non potuit fieri nisi 
               <lb ed="#SV"/>per intrinsecam unionem animae christi secundum suam totam plenitudinem 
               <lb ed="#SV"/>se communicatam.</p> 
           
-            <p xml:id="l65-aieufs">Ad idem est <name>Richardus</name> de contemplatione parte quinta, 
+            <p xml:id="l65-aieufs">Ad idem est <name ref="#RichardOfStVictor">Richardus</name> de contemplatione parte quinta, 
               <lb ed="#SV"/>qui inquit de communicabiitate essentiae divinae vel perfectionis ad humanitatem 
               <lb ed="#SV"/>christi. et dicit quod non solum communicata est animae christi omnis scientia, sed 
               <lb ed="#SV"/>etiam omnipotentia. Tunc ultra animae christi communicata est omnipotentia, 
@@ -234,13 +241,13 @@
             <lb ed="#SV"/>causam nisi ad causam formalem ergo deus unitur formaliter creaturae.</p>
           
           <p xml:id="l65-ipqhvs">Item probatur quod deus possit vitaliter immutare et auctoritas 
-            <lb ed="#SV"/><name>magistri</name> est expresse ad hoc et inducit etiam auctoritates 
-            <lb ed="#SV"/><name>augustini</name> quae hoc videntur sonare.</p>
+            <lb ed="#SV"/><name ref="#Lombard">magistri</name> est expresse ad hoc et inducit etiam auctoritates 
+            <lb ed="#SV"/><name ref="#Augustine">augustini</name> quae hoc videntur sonare.</p>
         
             <div>
-              <head xml:id="l65-Hurdrdr">Una ratio De Rippa</head>
+              <head xml:id="l65-Hurdrdr">Una ratio <name ref="#Ripa">de Rippa</name></head>
               <p xml:id="l65-atpess">Arguo tamen per uni<lb ed="#SV"/>cam 
-                rationem quae in hac materia movet <name>magistrum Iohanned de 
+                rationem quae in hac materia movet <name ref="#Ripa">magistrum Iohannes de 
                   <lb ed="#SV"/>Rippa</name> ubi praesupponit quod notitia habet multiplicem habitudinem ad potentiam 
                 <lb ed="#SV"/>perceptivam, quia notitia habet ad potentiam perceptivam habitudinem 
                 <lb ed="#SV"/>inhaesionis, quia communiter quodlibet accidens dependet a suo subiecto et 
@@ -250,7 +257,7 @@
               <lb ed="#SV"/>ut activam.</p>
         
           <p xml:id="l65-tnhefp">tertio notitia habet habitudinem, ut vitaliter immutativam. 
-            <lb ed="#SV"/>modo sequestremus duas primas habitudines quae sunt omnino impertinentes[?], 
+            <lb ed="#SV"/>modo sequestremus duas primas habitudines quae sunt omnino <unclear>impertinentes[?]</unclear>, 
             <lb ed="#SV"/>nam inhaesio est impertinens qualitati vitali ad hoc quod immutet 
             <lb ed="#SV"/>nec ratione inhaesionis notitia dicitur vitaliter immutare, quia 
             <lb ed="#SV"/>potest absque inhaesione vitaliter immutare, ergo notitia non 
@@ -276,7 +283,7 @@
                 <lb ed="#SV"/>deo competere, ergo deus potest vitaliter immutare.</p>
           
             <p xml:id="l65-eieppn">Et ista est 
-              <lb ed="#SV"/>tota radix <name>magistri Iohannis de Rippa</name> breviter in ista materia, 
+              <lb ed="#SV"/>tota radix <name ref="#Ripa">magistri Iohannis de Rippa</name> breviter in ista materia, 
               <lb ed="#SV"/>quia ex  habitudinibus formarum substantialium et accidentalium ad 
               <lb ed="#SV"/>sua formabilia proveniunt magnae difficultates, ideo circa ista 
               <lb ed="#SV"/>tractabo aliqua et non plus pro nunc.</p>
