@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-02">December 2, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio66">
         <head xml:id="l66-Hldtldt" subtype="title">Lectio 66, de Trinitate</head>
@@ -140,10 +149,10 @@
                   <lb ed="#SV"/>quod anima esset homo vi <unclear>intuitis[?]</unclear> unionis ipsius animae 
                   <lb ed="#SV"/>ad materiam et unibilitas ipsius ad constitutum. et quod est tota 
                   <lb ed="#SV"/>quiditas hominis et totum constitutum, et istius imaginationis 
-                  <lb ed="#SV"/>fuerunt multi autentici, sicut <name>hugo de sancto victore</name> 
-                  <lb ed="#SV"/>et <name>guillelmus parisiensis</name> et multi alii, et dicunt <name>aristoteles</name> 
-                  <lb ed="#SV"/>fuisse illius opinionis et huiusmodi imaginationis in X <title>ethicorum.</title> 
-                  Et <name>guillelmus parisiensis</name> ex hoc fecit quaedam tractatum 
+                  <lb ed="#SV"/>fuerunt multi autentici, sicut <name ref="#HughOfStVictor">hugo de sancto victore</name> 
+                  <lb ed="#SV"/>et <name ref="#WilliamOfParis">guillelmus parisiensis</name> et multi alii, et dicunt <name ref="#Aristotle">aristoteles</name> 
+                  <lb ed="#SV"/>fuisse illius opinionis et huiusmodi imaginationis in X <title ref="#Ethics">ethicorum.</title> 
+                  Et <name ref="#WilliamOfParis">guillelmus parisiensis</name> ex hoc fecit quaedam tractatum 
                   <lb ed="#SV"/>ubi multa de hoc ponit et vidi eum alis et diu 
                   <lb ed="#SV"/>est, multa inconvenientia sequerentur contra istam opinionem, 
                   <lb ed="#SV"/>sed illa non sequor pro praesenti.</p>
@@ -195,7 +204,7 @@
                   <lb ed="#SV"/>est ultimate in subsistentiam et in informabile secundum rationem 
                   <lb ed="#SV"/>suppositibilem.</p> 
                 
-                <p xml:id="l66-eisers">Ex isto sequitur contra <name>magistrum Iohannem 
+                <p xml:id="l66-eisers">Ex isto sequitur contra <name ref="#Ripa">magistrum Iohannem 
                   <lb ed="#SV"/>de Rippa</name> quod licet deus informaret suam humanitatem et communicaretur 
                   <lb ed="#SV"/>per modum informationis nihilominus illa humanitas propter 
                   <lb ed="#SV"/>hoc non denominaretur deus. patet quia semper denominatio concretiva 
@@ -218,9 +227,9 @@
                   concretivae vi informationis formae contingenter 
                   <lb ed="#SV"/>competit  naturae eo quod natura potest desinere esse subsistentia, 
                   <lb ed="#SV"/>et sic non est limitata, sed potest esse denominatio unius et 
-                  <lb ed="#SV"/>alterius. unde vi unionis animae ad materiam in <name>sortis</name> communicatur 
+                  <lb ed="#SV"/>alterius. unde vi unionis animae ad materiam in <name ref="#Sortes">sortis</name> communicatur 
                   <lb ed="#SV"/>sibi quod sit homo, et tamen hoc est contingens, quia potest assumi 
-                  <lb ed="#SV"/>a verbo, et tunc <name>sortis</name> admittet suam subsistenciam 
+                  <lb ed="#SV"/>a verbo, et tunc <name ref="#Sortes">sortis</name> admittet suam subsistenciam 
                   <lb ed="#SV"/>et Iterum verbum potest dimittere, et tunc accipiet propriam 
                   <lb ed="#SV"/>subsistentiam. Et Iterum pater potest assumere, et tunc admi<lb ed="#SV"/>ttet 
                   propriam subsistentiam. et sic quantum est ex vi communicationis 
@@ -323,12 +332,12 @@
                     <lb ed="#SV"/>in quem omnia alia tendunt etiam innituntur.</p>
                   
                   <p xml:id="l66-ehpqdi">Ex 
-                    <lb ed="#SV"/>hoc patet quod positio <name>magistri Iohannis de Rippa</name> est falsa. 
+                    <lb ed="#SV"/>hoc patet quod positio <name ref="#Ripa">magistri Iohannis de Rippa</name> est falsa. 
                     <lb ed="#SV"/>et tunc propositiones suae quas ponit in hac materia, 
                     <lb ed="#SV"/>scilicet, quod deus potest creaturae communicari per modum formae infor<lb ed="#SV"/>mantis, 
                     et quod falsum est quod humanitas christi vi 
                     <lb ed="#SV"/>unionis ad verbum ratione huius communicationis sit deus. 
-                    <lb ed="#SV"/>unde <name>de Rippa</name> imaginatur quod vi unionis verbi 
+                    <lb ed="#SV"/>unde <name ref="#Ripa">de Rippa</name> imaginatur quod vi unionis verbi 
                     <lb ed="#SV"/>ad humanitatem, sicut humanitas communicat verbo 
                     <lb ed="#SV"/>quod sit homo. ita econtra verbum communicat humanitati 
                     <lb ed="#SV"/>christi quod sit deus, et illud patet falsum, quia huiusmodi 
@@ -341,8 +350,8 @@
               sed deo quia huiusmodi denominationes concretive non 
               <lb ed="#SV"/>sistunt in <unclear>informalibus[?]</unclear>, sed tendunt in suppositionabilem rationem 
               <lb ed="#SV"/>et ultimatam subsistentiam. alias multas propositiones 
-              <lb ed="#SV"/>ponit <name>magister Iohannes de Rippa</name> in prologo libri 
-              <lb ed="#SV"/><title>sententiarum</title>, qui videre voluerit videat. et sic patet quod 
+              <lb ed="#SV"/>ponit <name ref="#Ripa">magister Iohannes de Rippa</name> in prologo libri 
+              <lb ed="#SV"/><title ref="#SentencesRipa">sententiarum</title>, qui videre voluerit videat. et sic patet quod 
               <lb ed="#SV"/>deus non potest communicari ut forma informativa, quia 
               <lb ed="#SV"/>actuatio non sufficit ad informationem, sed informatio 
               <lb ed="#SV"/>semper est cum <unclear>intentia[?].</unclear> et sic patet quantum ad hoc quod deus non 
