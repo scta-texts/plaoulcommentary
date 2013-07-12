@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-03">December 3, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio67">
         <head xml:id="l67-Hldtldt" subtype="title">Lectio 67, de Trinitate</head>
@@ -97,24 +106,24 @@
         <p xml:id="l67-sqpepe">Sequitur quod proprie loquendo forma non debet 
           <lb ed="#SV"/>denominari fieri vel generari nam huiusmodi de<lb ed="#SV"/>nominationes, 
           scilicet, fieri et generari competunt subsistentiae 
-          <lb ed="#SV"/>et composito. et ad istud propositum locutus est <name>aristoteles</name> 
+          <lb ed="#SV"/>et composito. et ad istud propositum locutus est <name ref="#Aristotle">aristoteles</name> 
           <lb ed="#SV"/>ut potest videri ex processu commenti et processu eius.</p>
           
           <p xml:id="l67-upfvso"><lb ed="#SV"/>Ulterius patet fundamentum quare dicitur quod actiones et 
-            <lb ed="#SV"/>passiones sunt suppositorum. Unde et <name>aristotles</name> videtur 
+            <lb ed="#SV"/>passiones sunt suppositorum. Unde et <name ref="#Aristotle">aristotles</name> videtur 
             <lb ed="#SV"/>ab anima Remonere praedicata concretiva. Ita quod proprie non 
             <lb ed="#SV"/>attribuitur animae quod sic vel sic operetur sed mediante 
             <lb ed="#SV"/>anima compositum dicitur sic vel sic operari.</p>
           
             <p xml:id="l67-puvemd">patet ulterius 
-              <lb ed="#SV"/>veritas illius opinionis <name>crilli <unclear>alexandrini[?]</unclear> episcopi</name>, 
-              <lb ed="#SV"/>qui contra <name>nestorium</name> procuravit determinationem huius veritatis 
-              <lb ed="#SV"/><name>virgo gloriosa</name> genuit deum et est Realiter 
+              <lb ed="#SV"/>veritas illius opinionis <name ref="#Cyril">crilli <unclear><unclear>alexandrini[?]</unclear></unclear> episcopi</name>, 
+              <lb ed="#SV"/>qui contra <name ref="#Nestorius">nestorium</name> procuravit determinationem huius veritatis 
+              <lb ed="#SV"/><name ref="#Mary">virgo gloriosa</name> genuit deum et est Realiter 
               <lb ed="#SV"/>mater dei sine addito. nam tota actio quae terminabatur 
               <lb ed="#SV"/>ad humanitatem debet attribui subsistentiae principali, 
               <lb ed="#SV"/>et illa est deus, ergo proprie deus denominatur genitus et non 
               <cb ed="#SV" n="279vb"/><lb ed="#SV"/>illa humanitas christi, sed magis proprie ipsum suppositum vel persona 
-              <lb ed="#SV"/>divina, ideo <unclear>proprissime[?]</unclear> concedendum quod <name>virgo gloriosa</name> genuit deum 
+              <lb ed="#SV"/>divina, ideo <unclear><unclear>proprissime[?]</unclear></unclear> concedendum quod <name ref="#Mary">virgo gloriosa</name> genuit deum 
               <lb ed="#SV"/>et quod ipsa est mater dei.</p>
         
         <p xml:id="l67-uaeerq">ulterius advertendum est quod quaedam 
@@ -188,7 +197,7 @@
             <p xml:id="l67-ppppie">prima pars patet, nam secundum philosophiam et 
               <lb ed="#SV"/>fidei non contradicit materia respectu formae, habet aliqualem in<lb ed="#SV"/>fluxum 
               eductivum praeter potentiam pure Receptivam. 
-              <lb ed="#SV"/>ponit enim <name>aristoteles</name> et illi, qui ponunt novarum 
+              <lb ed="#SV"/>ponit enim <name ref="#Aristotle">aristoteles</name> et illi, qui ponunt novarum 
               <lb ed="#SV"/>formarum eductiones formas educi de potentia materiae 
               <lb ed="#SV"/>modo ista potentia materiae debet imaginari quid influxus 
               <lb ed="#SV"/>materialis, qui non est pure Receptivus, sed magis activus, 
@@ -217,7 +226,7 @@
            
             <head xml:id="l67-oauscc">Opinio Adam: utrum potentia creativa sit creatura communicabilis?</head>
             
-        <p xml:id="l67-eioscc">Et istam opinionem videtur tenere <name>adam</name> 
+        <p xml:id="l67-eioscc">Et istam opinionem videtur tenere <name ref="#Wodeham">adam</name> 
           <lb ed="#SV"/>in principio quarti, ubi inquit utrum potentia creativa sit creaturae 
           <lb ed="#SV"/>communicabilis?</p>
           
@@ -232,14 +241,14 @@
         
         <p xml:id="l67-aehaed">alia est habitudo 
           <lb ed="#SV"/>materiae ad formam ut sibi inhaereat forma et iterum quantum 
-          <lb ed="#SV"/>ad hoc dicit <name>de Rippa</name> quod maiorem perfectionem 
+          <lb ed="#SV"/>ad hoc dicit <name ref="#Ripa">de Rippa</name> quod maiorem perfectionem 
           <lb ed="#SV"/>dicit in materia quam in forma, quia inhaerere alteri est quodam 
           <lb ed="#SV"/>modo ab eo dependere.</p>
         
         <p xml:id="l67-therie">tertia habitudo est informationis, et de 
-          <lb ed="#SV"/>hiis habitudinibus ponit <name>de Rippa</name> quod una potest esse sine 
+          <lb ed="#SV"/>hiis habitudinibus ponit <name ref="Ripa">de Rippa</name> quod una potest esse sine 
           <lb ed="#SV"/>alia. Sed in hoc contradico sibi, quia dico quod habitudo 
-          <lb ed="#SV"/>inhaesionis et informationis sunt idem. unde <name>de 
+          <lb ed="#SV"/>inhaesionis et informationis sunt idem. unde <name ref="#Ripa">de 
             <lb ed="#SV"/>Rippa</name> ponit quod stat formam educi de potentia materiae, 
           <lb ed="#SV"/>et tamen sibi non inhaerere et hoc concedo, quia concursus 
           <lb ed="#SV"/>eductivus cum influentia generali est sufficiens ad 
@@ -247,7 +256,7 @@
               
           </div>
           <div>
-            <head xml:id="l67-Hcaasei">Contra Adam: anima humana inhaeret sibi eam informat</head>
+            <head xml:id="l67-Hcaasei">Contra <name ref="#Wodeham">Adam</name>: anima humana inhaeret sibi eam informat</head>
             
             <p xml:id="l67-cpqdii">Consequenter ponit quod anima huma<lb ed="#SV"/>na 
               non inhaeret, et contra hoc pono istam propositionem: 
@@ -389,7 +398,7 @@
             <lb ed="#SV"/>simile est in subordinatione causarum materialium ut, scilicet, materia prima 
             <lb ed="#SV"/>sit simplex elementum. deinde ex elementis componuntur 
             <lb ed="#SV"/>aliquae materiae antequam veniatur ad materiam aptam pro Receptione 
-            <lb ed="#SV"/>formarum mixtorum perfectiorum. Ideo <name>Rasis</name> ponit 
+            <lb ed="#SV"/>formarum mixtorum perfectiorum. Ideo <name>Rasis[?]</name> ponit 
             <lb ed="#SV"/>duodecim elementa. primo ponit materiam primam, deinde ponit 
             <lb ed="#SV"/>elementum simplicia insensibilia nobis, et post<lb ed="#SV"/>ea 
             ponit illa sensibilia quae nos vocamus elementa 
