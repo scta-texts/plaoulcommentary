@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio95">
       <head xml:id="l95-Hldldld" subtype="title">Lectio 95, de Libertate [St. Victor Transcription]</head>
@@ -67,7 +76,7 @@
                 <lb ed="#SV"/>voluntatem necessitant.</p>
         
               <p xml:id="l95-eoiraa">Et <name ref="#Ovid">ovidus</name> in <title ref="#Metamorphoses">methamorophon</title> 
-                <lb ed="#SV"/>introduxit venerem supplicitatem ad <name>Jovem</name> propter <name ref="#Aeneas">aeve<lb ed="#SV"/>am</name> 
+                <lb ed="#SV"/>introduxit venerem supplicitatem ad <name ref="#Jupiter">Jovem</name> propter <name ref="#Aeneas">aeve<lb ed="#SV"/>am</name> 
                 ut non pateretur infortunia, qui Respondit 
                 <lb ed="#SV"/>quod non poterat fata imitare, igitur fatalis dispositio 
                 <lb ed="#SV"/>causarum necessitat causas inferiores respectu actuum absolute. </p>
@@ -80,7 +89,7 @@
               <lb ed="#SV"/>et sic possibile et contingens nihil sunt nisi coincidant cum necessario.</p>
         
             <p xml:id="l95-scqscs"><lb ed="#SV"/>secundo confirmatur, quia istae mundus inferior regitur a causis 
-              <lb ed="#SV"/>superioribus secundum sententiam <name ref="#Aristotle">aristotelis</name> in primo <name>meteorologicarum</name> 
+              <lb ed="#SV"/>superioribus secundum sententiam <name ref="#Aristotle">aristotelis</name> in primo <title ref="#Meteorology">meteorologicarum</title> 
               igitur iste mundus eis obedit. modo si mundus sequatur 
               <lb ed="#SV"/>earum impulsum sequitur propositum quod omnis effectus 
               <lb ed="#SV"/>necessario evenient. et haec deducit <name ref="#Avicenna">avicenna</name> et 
@@ -210,22 +219,22 @@
             <lb ed="#SV"/>Ad idem est tota multitudo philosophorum approbatorum et ma<lb ed="#SV"/>xime 
             in moralibus. et <name ref="#Cicero">tullius</name> in tantum quod ut apparet in quinto 
             <lb ed="#SV"/><title ref="#CityOfGod">de civitate dei</title> capitulo nono ipse maluit negare scientiam 
-            <lb ed="#SV"/>divinam quam libertatem arbitrii, quia non ponere liberta<lb ed="#SV"/>tem 
-            arbitrii esset subvertere totum Regimen politicum 
+            <lb ed="#SV"/>divinam quam libertatem arbitrii, <seg ana="#politica">quia non ponere liberta<lb ed="#SV"/>tem 
+            arbitrii esset subvertere totum Regimen politicum</seg> 
             <lb ed="#SV"/>consilia deliberationes et totam humanam prudentiam 
             <lb ed="#SV"/>et dare <sic>habenas</sic> voluntati ut faceret quidquid 
-            <lb ed="#SV"/>vellet, et haec est contra rationem, immo <name>pagani</name> di<lb ed="#SV"/>cerent 
+            <lb ed="#SV"/>vellet, et haec est contra rationem, immo <name ref="#Pagans">pagani</name> di<lb ed="#SV"/>cerent 
             quod non ponere liberum arbitrium esset ma<lb ed="#SV"/>lum 
-            et pernitio???mum[?] propter licentiam male agendum.</p> 
+            et <unclear>pernitio???mum[?]</unclear> propter licentiam male agendum.</p> 
         </div>
         <div>
           <head xml:id="l95-Hdqsdqs">Divisio quaestiones</head>
           <p xml:id="l95-iimtao"><lb ed="#SV"/>In ista materia erunt octo articuli. primus habebit 
             <lb ed="#SV"/>duas partes in quarum prima videbitur qui nomine fati 
-            <lb ed="#SV"/>intelligatur. In secunda parte videbitur seu tracta<lb ed="#SV"/>bitur 
+            <lb ed="#SV"/>intelligatur. <seg ana="#politica">In secunda parte videbitur seu tracta<lb ed="#SV"/>bitur 
             utrum corpora caelestia habeant efficaciam supra 
             <lb ed="#SV"/>actus libere voluntatis seu liberi arbitrii quantum 
-            <lb ed="#SV"/>ad Regimen politicum. Alii articuli erunt secundum ar<lb ed="#SV"/>gumenta 
+            <lb ed="#SV"/>ad Regimen politicum</seg>. Alii articuli erunt secundum ar<lb ed="#SV"/>gumenta 
             tacta ante oppositum.</p>
         </div>
         </div>
