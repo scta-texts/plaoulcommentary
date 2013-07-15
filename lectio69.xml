@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-07">December 7, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio69">
         <head xml:id="l69-Hldtldt" subtype="title">Lectio 69, de Trinitate</head>
@@ -329,7 +338,7 @@
           <lb ed="#SV"/>esse hypostasis, ergo essentia ut essentia non potest esse ulterius 
           <lb ed="#SV"/>terminus huiusmodi unionis. non dico tamen quoniam ratione iden<lb ed="#SV"/>titatis 
           eo ipso quod persona divina est unica essentia divina est unica, 
-          <lb ed="#SV"/>ut dicit <name>magister</name> in IIIo. non tamen est formalis terminus, quia si persona 
+          <lb ed="#SV"/>ut dicit <name ref="#Lombard">magister</name> in IIIo. non tamen est formalis terminus, quia si persona 
           <lb ed="#SV"/>et essentia distinguerentur, diceremus quod ista unio est personalis 
           <lb ed="#SV"/>et non essentialis. Ita quod si per impossibile persona et essentia di<lb ed="#SV"/>stingueretur 
           persona divina esset unica et non essentia, quia 
@@ -382,7 +391,7 @@
         <p xml:id="l69-aarcac">Ad aliam ratione, quia 
           <lb ed="#SV"/>de facto verbum est communicatum humanitati christi secundum plenitudinem 
           <lb ed="#SV"/>deitatis, ergo nedum potest formaliter influere, immo de facto forma<lb ed="#SV"/>liter 
-          influit. antecedens patet per <name>apostolum</name> <title><unclear>ad collossanos[?]</unclear></title> IIo, ubi dicit 
+          influit. antecedens patet per <name ref="#Paul">apostolum</name> <title ref="#CollosiansEpistle"><unclear>ad collossanos[?]</unclear></title> IIo, ubi dicit 
           <lb ed="#SV"/>quod christo inhabitat plenitudo deitatis corporaliter. si ergo corporaliter, 
           <lb ed="#SV"/>ergo per Realem influxum in corpus christi vel humanitatem 
           <lb ed="#SV"/>eius assumptam, quia per corporaliter videtur excludere dona 
@@ -390,10 +399,10 @@
         
         <p xml:id="l69-reuisc">Respondendum est ut prius tenendo 
           <lb ed="#SV"/>positionem quod ista ratio nihil petit nisi expositione auctoritatis 
-          <lb ed="#SV"/><name>apostoli</name> qua expositionem ponit <name>augustinus</name>. et eam 
-          <lb ed="#SV"/>Recitat  <name>magister</name> IIIo <title>sententiarum</title> circa distinctionem 13am, 
+          <lb ed="#SV"/><name ref="#Paul">apostoli</name> qua expositionem ponit <name ref="#Augustine">augustinus</name>. et eam 
+          <lb ed="#SV"/>Recitat  <name ref="#Lombard">magister</name> IIIo <title ref="#Sentences">sententiarum</title> circa distinctionem 13am, 
           <lb ed="#SV"/>cuius sententia stat in hoc imaginandum est ut dicit 
-          <lb ed="#SV"/><name>augustinus</name> quod christus secundum humanitatem sit caput ecclesiae, et 
+          <lb ed="#SV"/><name ref="#Augustine">augustinus</name> quod christus secundum humanitatem sit caput ecclesiae, et 
           <lb ed="#SV"/>tota ecclesia debet imaginari, sicut corpus.</p> 
           
           <p xml:id="l69-epsphu">et post ea sicut 
@@ -415,18 +424,18 @@
             <lb ed="#SV"/>informationem, sed quia deitas est humanitati coniuncta per hypostaticam 
             <lb ed="#SV"/>unionem.</p>
         
-          <p xml:id="l69-pispai">Postea inductae sunt auctoritates <name>am<lb ed="#SV"/>brosii</name> 
-            et <name>hugonis</name> quae videntur dicere quod quidquid 
+          <p xml:id="l69-pispai">Postea inductae sunt auctoritates <name ref="#Ambrose">am<lb ed="#SV"/>brosii</name> 
+            et <name ref="#HughOfStVictor">hugonis</name> quae videntur dicere quod quidquid 
             <lb ed="#SV"/>deus habet per naturam humanitatis christi vel christus secundum huma<lb ed="#SV"/>nitatem 
             habet per gratiam, ergo tota deitas est huma<lb ed="#SV"/>nitati 
             christi communicata, alias non haberet omnipotentiam, 
-            <lb ed="#SV"/>cuius oppositum dicit <name>hugo</name>. Est ergo opinio doctoris 
+            <lb ed="#SV"/>cuius oppositum dicit <name ref="#HughOfStVictor">hugo</name>. Est ergo opinio doctoris 
             <lb ed="#SV"/>quod Realiter omnis intrinseca denominatio deitatis est a 
             <lb ed="#SV"/>deo communicata, ergo deitas per modum formae est humanitati 
             <lb ed="#SV"/>christi communicata secundum totam latitudinem perfectionis 
             <lb ed="#SV"/>ad intra.</p> 
           
-          <p xml:id="l69-iasppd">istae auctoritates solvuntur bene a <name>magistro</name>. 
+          <p xml:id="l69-iasppd">istae auctoritates solvuntur bene a <name ref="#Lombard">magistro</name>. 
             <lb ed="#SV"/>ubi advertendum est quod licet verbum ab aeterno fuerit, 
             <lb ed="#SV"/>tamen temporaliter incepit esse homo  et ex 
             <lb ed="#SV"/>gratia, id est, ex sua liberalitate. et sic patet quod idem est verbum 
