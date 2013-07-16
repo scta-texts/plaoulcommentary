@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
     <titleStmt>
@@ -17,7 +19,7 @@
       <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
       <pubPlace>Baltimore, MD</pubPlace>
       <availability status="free">
-        <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+        <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
       </availability>
       <date when="2012-12-07">December 7, 2012</date>  
     </publicationStmt>
@@ -32,6 +34,13 @@
   </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
     <div xml:id="lectio70">
       <head xml:id="l70-Hldtldt" subtype="title">Lectio 70, de Trinitate</head>
@@ -303,7 +312,7 @@
                 
             <p xml:id="l70-eirias">Ex ista Radice 
               <lb ed="#SV"/>posset inferri contra <name ref="#Aquinas">Sanctam Thomam</name> dicentem oppositum 
-              <lb ed="#SV"/>doctorum in prima parte <title>summae</title> circa duodecimum articulum, 
+              <lb ed="#SV"/>doctorum in prima parte <title ref="#SummaTheologica">summae</title> circa duodecimum articulum, 
               <lb ed="#SV"/>ubi ponit quod lumen gloriae vel species divinae 
               <lb ed="#SV"/>essentiae est Realiter essentia actuans memoriam eius. 
               <lb ed="#SV"/>praecipua ratio est ista quod deus est incircumscriptibilis et 
@@ -402,7 +411,7 @@
             
            <p xml:id="l70-eqspvb"><lb ed="#SV"/>Ex quo sequitur quod deus non est nec potest esse formalis 
              <lb ed="#SV"/>visio beatifica nec dilectio cuius contrarium tenent aliqui fun<lb ed="#SV"/>dantes 
-             se in sacra scriptura et primo super illud <title>Isaiae</title> 
+             se in sacra scriptura et primo super illud <title ref="#IsaiahBook">Isaiae</title> 
              <lb ed="#SV"/>64, ubi deus ad loquitur beatos, non erit tibi amplius 
              <lb ed="#SV"/>sol ad lucendum per diem, nec splendor lunae illuminabit 
              <lb ed="#SV"/>te, sed erit tibi <unclear>dicens[?]</unclear> in lucem sempiternam, et sic evacua<lb ed="#SV"/>bitur 
@@ -411,14 +420,14 @@
              <lb ed="#SV"/>et actus videndi intuitive in ipsum immediate, et tunc apparet 
              <lb ed="#SV"/>quod deus erit in patria visio beatorum.</p> 
            
-           <p xml:id="l70-saseli">secundo <title>apocalypti</title> 21mo 
+           <p xml:id="l70-saseli">secundo <title ref="#Revalations">apocalypti</title> 21mo 
              <lb ed="#SV"/>capitulo, ubi loquitur de civitate sancta, id est, de patria caelesti 
              <lb ed="#SV"/>et statu beatorum. ait sic claritas dei illuminabit 
              <lb ed="#SV"/>eam et lucerna eius est agnus filius dei, scilicet, christus deus, 
              <lb ed="#SV"/>ergo Deus erit formalis lucerna beatorum et lux illu<lb ed="#SV"/>minans.</p>
             
             <p xml:id="l70-tahfho">Tertio ad hoc <name ref="#Augustine">Augustinus</name> in locis innumeris videtur 
-              <lb ed="#SV"/>favere et primo XIVmo <title>de trinitate</title> capitulo 15mo ponit 
+              <lb ed="#SV"/>favere et primo XIVmo <title ref="#deTrinitate">de trinitate</title> capitulo 15mo ponit 
               <lb ed="#SV"/>in viam Deum esse lucem qua cernitur omnes veritas et rectae 
               <lb ed="#SV"/>iustitiae quibus sit iustum vel iniustum cogitur non sunt 
               <lb ed="#SV"/>scriptae, nisi in libro lucis, quia veritas dicitur in quo etiam 
@@ -427,7 +436,7 @@
               <lb ed="#SV"/>auctoritates quibus videtur quod <name ref="#Augustine">Augustinus</name> fuerit huius 
               <lb ed="#SV"/>opinionis.</p>
             
-            <p xml:id="l70-ehiass">Et <name ref="#HughOfStVictor">Hugo</name> in libro <title>de sapientia animae christi</title>, 
+            <p xml:id="l70-ehiass">Et <name ref="#HughOfStVictor">Hugo</name> in libro <title ref="#deSapientiaAnimaeChristi">de sapientia animae christi</title>, 
               <lb ed="#SV"/>ubi tenet quod divina essentia est formaliter animae christi sa<lb ed="#SV"/>pientia, 
               et hoc deduxit in suo libro per totum proce<lb ed="#SV"/>ssum. 
               hoc <name ref="#Lombard">Magister</name> in XVIIma distinctione ponit quod spiritus 
@@ -497,9 +506,9 @@
             
             <p xml:id="l70-ssqqit">secunda suppositio 
               <lb ed="#SV"/>quod circumferentia huius sphera est locus spiritualis animarum et 
-              <lb ed="#SV"/>per se quietantes animas in ipso. probatur per illud <title>apocalyptum</title> XXImo 
+              <lb ed="#SV"/>per se quietantes animas in ipso. probatur per illud <title ref="#Revalations">apocalyptum</title> XXImo 
               <lb ed="#SV"/>capitulo, ubi dicitur, "dominus deus templum illius est," id est animae 
-              <lb ed="#SV"/>beatae. et <name ref="#Augustine">Augustinus</name>: <quote xml:id="l70-QAicnqit" type="Scholastic">"inquietum cor nostrum domine, 
+              <lb ed="#SV"/>beatae. et <name ref="#Augustine">Augustinus</name>: <quote xml:id="l70-QAicnqit" type="Patristic">"inquietum cor nostrum domine, 
               <lb ed="#SV"/>donec quiescat in te."</quote></p> 
             
            <p xml:id="l70-eqheep">ex quo huiusmodi circum<lb ed="#SV"/>ferentiae 
