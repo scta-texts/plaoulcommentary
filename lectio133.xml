@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
+    </front>
     <body>
       <div xml:id="lectio133">
       <head xml:id="l133-Hldildi">Lectio 133, de Incarnatione</head>
@@ -323,7 +332,7 @@
         
           <p xml:id="l133-ascmpd">Alii sunt 
             <lb ed="#SV"/>casus particulares sequentes ex istis Radicibus quos ponit <name ref="#NicholasOresme">ma<lb ed="#SV"/>gister 
-              nicholaus oresme</name> in suo libro <title>de communicatione idiotatum</title>.  
+              nicholaus oresme</name> in suo libro <title ref="#deCommunicationeIdiomatum">de communicatione idiomatum</title>.  
             <lb ed="#SV"/>ideo vos Remitto ibi eo quod tempus non patitur ut in ista materia 
             <lb ed="#SV"/>plura dicam.</p>
         </div>
