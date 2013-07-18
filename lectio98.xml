@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,8 +34,15 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
-      <div>
+      <div xml:id="lectio98">
       <head xml:id="l98-Hldlldl" subtype="title">Lectio 98, de Libertate</head>
      <div>
         <head xml:id="l98-Hcdpcdp">Circa divinam providentiam</head>
@@ -167,7 +176,7 @@
               <lb ed="#SV"/>quod expedit quosdam peccasse turpiter ut post<lb ed="#SV"/>ea 
               in peccatum superbiae ad quod proni erant non declina<lb ed="#SV"/>rent, 
               et sic providentia divina elicit virtutes ut humi<lb ed="#SV"/>litatem 
-              post gravia peccata ideo dicebat <name>apostolus</name> quod dili<lb ed="#SV"/>gentibus 
+              post gravia peccata ideo dicebat <name ref="#Paul">apostolus</name> quod dili<lb ed="#SV"/>gentibus 
               deum omnia cooperantur in bonum, scilicet, electis qui 
               <lb ed="#SV"/>diligunt deum, nam Recordatio peccatoris est humilitas 
               <lb ed="#SV"/>inductio, et superbiae vitatio, et habuerunt puni<lb ed="#SV"/>tionem 
@@ -258,7 +267,7 @@
           <lb ed="#SV"/>praevisione, et sic quantum ad hoc propter ignorantiam 
           <lb ed="#SV"/>vulgus finxit fortunam esse minime et quamdam 
           <lb ed="#SV"/>causam latentem quod non oportet dicere quia sufficit 
-          <lb ed="#SV"/>doctrina <name rend="#Aristotle">aristotelis</name> tradita in IIo <title rend="#Physics">physicorum</title> et in 
+          <lb ed="#SV"/>doctrina <name ref="#Aristotle">aristotelis</name> tradita in IIo <title ref="#Physics">physicorum</title> et in 
           <lb ed="#SV"/>libro <title>de bona fortuna</title>, nam ex ignorantia habi<lb ed="#SV"/>tudinis 
           Rerum contingit quod agens agat fortuite, 
           <lb ed="#SV"/>nihilominus est advertendum quod fortuna quandoque potest capi 
@@ -268,9 +277,9 @@
           agat per accidens, nam deus potest diligere <name ref="#Sortes">sor<lb ed="#SV"/>tem</name> 
           ut vadat ad agrum ut <unclear>ditetur[?]</unclear> etiam haec possibile quod duo homines concurrerent respectu eiusdem effectus 
           <lb ed="#SV"/>et quod effectus esset fortuitus respectu unus et intentus 
-          <lb ed="#SV"/>respectu alterius ut si <name rend="#Plato">plato</name> posuisset aurum in agrum 
+          <lb ed="#SV"/>respectu alterius ut si <name ref="#Plato">plato</name> posuisset aurum in agrum 
           <lb ed="#SV"/>sciens tamen locum et vellet quod <name ref="#Sortes">sortes</name> Reperiret et 
-          <lb ed="#SV"/>haberet, modo si <name rend="#Sortes">sortes</name> fodiat terram ratione culturae 
+          <lb ed="#SV"/>haberet, modo si <name ref="#Sortes">sortes</name> fodiat terram ratione culturae 
           <lb ed="#SV"/>et Reperiat aurum, tunc Repertio illa esset effectus 
           <lb ed="#SV"/>fortuitus respectu <name ref="#Sortes">sortis</name> et intentus respectu <name ref="#Plato">platonis</name>, et in 
           <lb ed="#SV"/>ista materia possent multa dici ad particularia quomodo, 
@@ -321,7 +330,7 @@
             <lb ed="#SV"/>suis exigentibus demeritis fuerunt a deo Relicti in manibus 
             <lb ed="#SV"/>diaboli, et cum hoc testantur ista historiae gentilium 
             <lb ed="#SV"/>nec Reprobantur in hoc quod dicunt quod in idolis habitabant 
-            <lb ed="#SV"/>daemones et dabant Responsa ut de idolo <name>apolinis</name> 
+            <lb ed="#SV"/>daemones et dabant Responsa ut de idolo <name ref="#Apollo">apolinis</name> 
             <lb ed="#SV"/>delfici quod fuit multum famosum idolum et in illo 
             <lb ed="#SV"/>diabolus dabat Responsa et potuit ita esse quod daemo<lb ed="#SV"/>nes 
             dixerunt aliqua de puris futura ut collerentur 
@@ -351,12 +360,12 @@
         <p xml:id="l98-spriot">Sed prima Ra
           <lb ed="#SV"/>dix deficit in hoc quia dato quod ita esset non debemus 
           <lb ed="#SV"/>propter hoc ponere necessitatem fati quia daemon est mendax. 
-          <lb ed="#SV"/>Unde habetur <title>Johannem</title> 8vo quod ipse est pater mendacii et homi<lb ed="#SV"/>cida, 
+          <lb ed="#SV"/>Unde habetur <title ref="#JohnGospel">Johannem</title> 8vo quod ipse est pater mendacii et homi<lb ed="#SV"/>cida,<note>Cf. Augustine, De Mandacio, cap 6</note> 
           et ideo dictum diaboli non imponit necessitatem immo 
           <lb ed="#SV"/>quod plus est dictum dei et Revelatio divina nullam penitus 
           <lb ed="#SV"/>imponunt necessitatem igitur nec a fortiori sermo diaboli 
-          <lb ed="#SV"/>imponit necessitatem quia ipse ab initio peccavit ut habetur 
-          <lb ed="#SV"/>primae <title>Johannes</title>  3o et Invidit humano generi, quia invidia dia<lb ed="#SV"/>boli 
+          <lb ed="#SV"/>imponit necessitatem quia ipse <quote type="Biblical">ab initio peccavit</quote> ut habetur 
+          <lb ed="#SV"/>primae <title ref="#IJohnEpistle">Johannes</title>  3o,<note type="editorNote">Cf. I John 3:8</note> et Invidit humano generi, quia invidia dia<lb ed="#SV"/>boli 
           intravit in orbem terrarum.</p>
         
         <p xml:id="l98-qapsdm">Quantum ad prosecutionem 
