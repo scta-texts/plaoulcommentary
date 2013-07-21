@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-15">December 15, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio73">
         <head xml:id="l73-Hldtldt" subtype="title">Lectio 73, de Trinitate</head>
@@ -119,7 +128,7 @@
           <lb ed="#SV"/>disposita ad Receptionem formae intellectivae. deinde quod 
           <lb ed="#SV"/>in illo instanti in quo materia est sufficienter disposita ad effusionem 
           <lb ed="#SV"/>animae quod anima <name ref="#Sortes">sortis</name> Realiter in huiusmodi materia ponatur 
-          <lb ed="#SV"/>ipsa eadem Remanente in <name ref="#Sortes">sorte</name>, tunc in illo casu <name>sortis</name> et filius 
+          <lb ed="#SV"/>ipsa eadem Remanente in <name ref="#Sortes">sorte</name>, tunc in illo casu <name ref="#Sortes">sortis</name> et filius 
           <lb ed="#SV"/>suus, qui sit <name ref="#Plato">plato</name> gratia exempli, sunt eadem essentia, quia in utroque 
           <lb ed="#SV"/>est eadem materia et eadem forma, et tamen adhuc manet inter 
           <lb ed="#SV"/><name ref="#Sortes">sortem</name> et <name ref="#Plato">platonem</name> distinctio relativa, quia unus est filius et 
@@ -277,7 +286,7 @@
         <head xml:id="l73-Hmitmit">Modi imaginandi Trinitatem</head>
         
         <p xml:id="l73-eqsass"><lb ed="#SV"/>ex quo sequitur quod non est evidens Repugnantia 
-          <lb ed="#SV"/>quod <name>sortis</name> sit essentialiter idem cum <name ref="#Plato">platone</name>, licet sit re<lb ed="#SV"/>pugnantia, 
+          <lb ed="#SV"/>quod <name ref="Sortes">sortis</name> sit essentialiter idem cum <name ref="#Plato">platone</name>, licet sit re<lb ed="#SV"/>pugnantia, 
           sed illa est ex rationibus individualibus 
           <lb ed="#SV"/>descendendo ad materiam, quia dictum est quod ex parte 
           <lb ed="#SV"/>essentialis conditionis non Repugnat personas iden<lb ed="#SV"/>tice 
