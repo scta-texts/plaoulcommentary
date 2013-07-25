@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -17,7 +19,7 @@
                 <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
                 <pubPlace>Baltimore, MD</pubPlace>
                 <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
                 </availability>
                 <date when="2012-10-15">October 15, 2012</date>  
             </publicationStmt>
@@ -29,6 +31,13 @@
         </fileDesc>
     </teiHeader>
     <text xml:lang="la">
+        <front>
+            <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+                <xi:fallback>
+                    <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+                </xi:fallback>
+            </xi:include>
+        </front>
         <body>
             <div xml:id="lectio80">
                 <head xml:id="l80-Hldcldc" subtype="title">Lectio 80, de Caritate [Vatican Transcription]</head>
@@ -55,7 +64,7 @@
             <lb ed="#V"/>ultimi finis consecutione sunt in hominis naturali potestate 
             <lb ed="#V"/>ergo supernaturalia dona superflue sunt ponenda.</p> 
             
-        <p xml:id="l80-tipdgi"><cb ed="#V" n="??a"/><lb ed="#R"/><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> inducit contra <name>pelagium</name> et suos sequaces 
+        <p xml:id="l80-tipdgi"><cb ed="#V" n="164ra"/><lb ed="#R"/><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> inducit contra <name>pelagium</name> et suos sequaces 
             <lb ed="#V"/>qui ex puris naturalibus dixerunt vitam aeter<lb ed="#V"/>nam 
             nos posset consequi.</p>
     </div>
@@ -122,7 +131,7 @@
             <lb ed="#V"/>divisibilis vel indivisibilis. non indivisibilis quia tunc 
             <lb ed="#V"/>omnes existentes in caritate essent aequatur deo cari 
             <lb ed="#V"/>nec contingeret in caritate proficere ultra caritate 
-            <cb ed="#V" n="??b"/><lb ed="#V"/>vel gratiam baptismalem ratione suae indivi??tis[?] 
+            <cb ed="#V" n="164rb"/><lb ed="#V"/>vel gratiam baptismalem ratione suae indivi??tis[?] 
             <lb ed="#V"/>si autem ponatur divisibilis per peccatum veniale iuxta 
             <lb ed="#V"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> <name>guillelmus altissidorensis</name> qui hoc ponit 
             <lb ed="#V"/>sed hoc est impossibile quia ex hoc sequerentur 
@@ -177,7 +186,7 @@
             <lb ed="#V"/>consequentia ponendo casum quod caritas continue intendatur 
             <lb ed="#V"/>in <name>sorte</name> per totam hora in praesentem sic quod in 
             <lb ed="#V"/>instanti terminante horam praesentem, si <name>sortes</name> vulet[?] 
-            <cb ed="#V" n="?va"/><lb ed="#V"/>tunc haberet gratiam, ut decem ponatur tamen quod <name>sortis</name> 
+            <cb ed="#V" n="164va"/><lb ed="#V"/>tunc haberet gratiam, ut decem ponatur tamen quod <name>sortis</name> 
             <lb ed="#V"/>in instanti illo terminante illam horam praesentem.</p>
         
         <p xml:id="l80-upqnps">primo non sic, tunc in isto casu deus nesciret 
@@ -230,7 +239,7 @@
         
         <p xml:id="l80-dschva">Item 
             <lb ed="#V"/>si caritas esset sic intensiva vel intensibilis 
-            <lb ed="#V"/>sequeretur quod secundum ordinem graduum <choice><orig>scatuum</orig><reg>statuum</reg></choice> deberet esse or<lb ed="#V"/>do 
+            <cb ed="#V" n="164vb"/><lb ed="#V"/>sequeretur quod secundum ordinem graduum <choice><orig>scatuum</orig><reg>statuum</reg></choice> deberet esse or<lb ed="#V"/>do 
             et <choice><orig>scatus</orig><reg>status</reg></choice> distributionis caritatis et ista materia 
             <lb ed="#V"/>tangit multas difficultates quae videbuntur 
             <lb ed="#V"/>deo duce[?] inferius tangit, enim difficultatem illam 
