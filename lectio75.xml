@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-11-07">November 22, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio75">
         <head xml:id="l75-Hldtldt" subtype="title">Lectio 75, de Trinitate</head>
@@ -43,7 +52,7 @@
             <lb ed="#SV"/>diversitatem distinctionum proprietatumque a persona. 
             <lb ed="#SV"/>Alii posuerunt distinctionem inter personam et essentiam, 
             <lb ed="#SV"/>et primi possunt subdividi secundum multiplices errores 
-            <lb ed="#SV"/>in hac materia. Sed contra istos est Regula <name>anselmi</name>, scilicet, 
+            <lb ed="#SV"/>in hac materia. Sed contra istos est Regula <name ref="#Anselm">anselmi</name>, scilicet, 
             <lb ed="#SV"/>quod in divinis omnia sunt idem nisi ubi obviat relationis 
             <lb ed="#SV"/>oppositio. nam huius constitutiones proprietatum cum personalibus 
             <lb ed="#SV"/>Repugnant summae simplicitati.</p> 
@@ -59,12 +68,12 @@
         
           <p xml:id="l75-tsqndp">tertio sequitur quod separantes hanc materiam a for<lb ed="#SV"/>mis 
             syllogisticis non considerant quae virtutes habeant dici 
-            <lb ed="#SV"/>de omni, quia considerato <name>aristotelis</name> processus nulla alia ars 
+            <lb ed="#SV"/>de omni, quia considerato <name ref="#Aristotle">aristotelis</name> processus nulla alia ars 
             <lb ed="#SV"/>tradenda est ad syllogizandum in hac materia quam ars philosophi 
             <lb ed="#SV"/>tradita. unde omnis syllogismus debito modo ordinatus 
             <lb ed="#SV"/>et Regulatus per dici de omni. Si sit affirmativus et dici de nullo. si sit negativus tenet evi<lb ed="#SV"/>denter 
-            in materia trinitatis. ubi notat <name>gregorius</name> quod 
-            <lb ed="#SV"/>circa secundam partem textus <name>aristotelis</name>, <name>averroys</name> ponit ple<lb ed="#SV"/>nam 
+            in materia trinitatis. ubi notat <name ref="#Rimini">gregorius</name> quod 
+            <lb ed="#SV"/>circa secundam partem textus <name ref="#Aristotle">aristotelis</name>, <name ref="#Averroes">averroys</name> ponit ple<lb ed="#SV"/>nam 
             differentiam inter propositionem universalem et propositionem 
             <lb ed="#SV"/>de dici de omni vel de nullo. nam ad hoc quod 
             <lb ed="#SV"/>propositio sit universalis sufficit quod praedicatum dicatur de quolibet 
@@ -91,8 +100,8 @@
         <head xml:id="l75-Hcgacga">Circa generationem aeternam</head>
         
         <p xml:id="l75-pmivpl">pro maiori 
-        <cb ed="#SV" n="290vb"/><lb ed="#SV"/>intellectu aeternae generationis inducitur ratio <name>arrii</name> 
-          <lb ed="#SV"/>quam fecit contra <name>victorium</name>, nam ipse arguit quia 
+        <cb ed="#SV" n="290vb"/><lb ed="#SV"/>intellectu aeternae generationis inducitur ratio <name ref="#Arius">arrii</name> 
+          <lb ed="#SV"/>quam fecit contra <name ref="#Victorinus">victorium</name>, nam ipse arguit quia 
           <lb ed="#SV"/>filius non potest procedere per quamcumque viam generationis, 
           <lb ed="#SV"/>igitur ille non procedit a patre cum identitate essentiae. unde 
           <lb ed="#SV"/>dicit sic: filius non procedit a patre, sicut linea a 
@@ -168,7 +177,7 @@
             <cb ed="#SV" n="291ra"/><lb ed="#SV"/>quam aliquod aliud. etiam in eius symbolo ponitur quod spiritus sanctus 
             <lb ed="#SV"/>a patre procedit, et in fine additur quod quicumque huic 
             <lb ed="#SV"/>symbolo addiderit vel aliquid ab eo subtraxerit ana<lb ed="#SV"/>thema 
-            sit. et illud ponitur in canonibus <name>isodori</name>, 
+            sit. et illud ponitur in canonibus <name ref="#IsidoreOfSeville">isodori</name>, 
             <lb ed="#SV"/>et tunc arguitur sic illud <name>consilium <del rend="strikethrough">ve</del> nicenum</name> fuit 
             <lb ed="#SV"/>tantae auctoritatis quod numquam aliquod consilium nisi 
             <lb ed="#SV"/>esset generaliter celebratum potuit esse maioris 
@@ -205,13 +214,13 @@
         </div>
       </div>
         <div>
-          <head xml:id="l75-Hcaacaa">Circa argumentum <name>Arrii</name></head>
+          <head xml:id="l75-Hcaacaa">Circa argumentum <name ref="#Arius">Arrii</name></head>
           
-          <p xml:id="l75-caaich">Circa Argumentum <name>arrii</name>, est 
+          <p xml:id="l75-caaich">Circa Argumentum <name ref="#Arius">arrii</name>, est 
             <lb ed="#SV"/>notandum quod causa erroris eius fuit ex hoc, quod ipse 
             <lb ed="#SV"/>per similitudinem creaturam procedebat ad concludendum proprie<lb ed="#SV"/>tates 
-            dei. unde arguebat sic: '<name>sortis</name> est homo, <name>plato</name> 
-            <lb ed="#SV"/>est homo, <name>cicero</name> est homo, ergo <name>sortis</name>, <name>plato</name>, <name>cicero</name> sunt 
+            dei. unde arguebat sic: '<name ref="#Arius">sortis</name> est homo, <name ref="Plato">plato</name> 
+            <lb ed="#SV"/>est homo, <name ref="#Cicero">cicero</name> est homo, ergo <name ref="#Sortes">sortis</name>, <name ref="#Plato">plato</name>, <name ref="#Cicero">cicero</name> sunt 
             <lb ed="#SV"/>tres homines distincti et ita volebat arguere 
             <lb ed="#SV"/>de tribus personis divinis, et ideo deficit, sed 
             <lb ed="#SV"/>debuisset arguere 'pater est deus, filius est deus, spiritus sanctus 
@@ -242,7 +251,7 @@
             <lb ed="#SV"/>ideo est perfectio quo ad aequalitatem. et imperfectio est, 
             <lb ed="#SV"/>quia effectus non est coaevus suae causae. dividantur, igitur illae 
             <lb ed="#SV"/>duae imperfectiones, scilicet inaequalitas in productione splendoris, 
-            <lb ed="#SV"/>et non <del rend="strikethrough/expunctuated&gt;coive">coive</del> coaevitis[?] in productione hominis. et capiantur 
+            <lb ed="#SV"/>et non <del rend="strikethrough/expunctuated">coive</del> coaevitis[?] in productione hominis. et capiantur 
             <lb ed="#SV"/>perfectiones, puta aequalitas hominis et coaevitas splen<lb ed="#SV"/>doris. 
             et combinentur illae habitudines, scilicet esse coaevum et 
             <lb ed="#SV"/>esse aequale suae causae. et abstrahamus quidquid sit ibi im<lb ed="#SV"/>perfectionis, 
