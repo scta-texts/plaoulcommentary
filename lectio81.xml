@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-12-20">December 20, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio81">
         <head xml:id="l81-Hldcldc" subtype="title">Lectio 81, de Caritate</head>
@@ -198,7 +207,7 @@
 
         
 <p xml:id="l81-unepcl">ubi notandum est quod <name ref="#Augustine">Augustinus</name> in libro 
-  <lb ed="#SV"/><title>de natura et gratia</title>, qui comparat animam sanitati. unde 
+  <lb ed="#SV"/><title ref="#onNatureAndGrace">de natura et gratia</title>, qui comparat animam sanitati. unde 
   <lb ed="#SV"/>notat ibidem quod status innocentiae habuit sanitatem omnium 
   <lb ed="#SV"/>virium in Regno animae regimen illarum constituentem. 
   <lb ed="#SV"/>unde superior ratio habuit in anima 
@@ -264,8 +273,8 @@
              patet quia illa potest immediate in actum prudentiae. modo nullus 
              <lb ed="#SV"/>habitus potest in actum prudentiae nisi sit habitus cognitivus. immo 
              <lb ed="#SV"/>sequitur quod caritas potest vocari prudentia, scientia, et sapientia, 
-             <lb ed="#SV"/>et huic concordat scriptura in canonica <title>Iohannis</title> dicentis 
-             <lb ed="#SV"/>quod caritas est <unclear>uncio[?]</unclear> docens de omnibus.</p> 
+             <lb ed="#SV"/>et huic concordat scriptura in <title ref="#JohnEpistleI">canonica Iohannis</title><note type="editorNote" subtype="citation" corresp="#l81-Quddddo"><bibl><title>Ioannis I</title> 2:27</bibl></note> dicentis 
+             <lb ed="#SV"/>quod caritas est <quote xml:id="l81-Quddddo" type="Biblical">unctio docens de omnibus</quote>.</p> 
            <!-- comparing with vat, it seemed like something might be left out here. dbcheck against sorb -->  
              
            <p xml:id="l81-endddo">et nedum diri<lb ed="#SV"/>git 
@@ -338,7 +347,7 @@
             <head xml:id="l81-Hscqead">Septimum corollarium: quod pro quocumque regimine caritas est aptissima dispositio</head>
             
             <p xml:id="l81-ssqset"><lb ed="#SV"/>septimo sequitur quod pro quocumque Regimine caritas est 
-              <lb ed="#SV"/>aptissima dispositio. patet quia pro Regimine Regni animae 
+              <lb ed="#SV"/>aptissima dispositio. <seg ana="#politica">patet quia pro Regimine Regni animae 
               <lb ed="#SV"/>ipsa est sufficientissima et continet omnes virtutes refre<lb ed="#SV"/>nativas 
               omni passionum, et est sufficiens ad re<lb ed="#SV"/>gnum 
               politiae. primo, quia potest Regere Regnum animae 
@@ -349,15 +358,15 @@
               non Regit propter bonum politicum, sed propter bonum 
               <cb ed="#SV" n="298va"/><lb ed="#SV"/>proprium. et Ideo caritas est aptissima dispositio ad 
               <lb ed="#SV"/>Regimen nedum animae, sed politicarum. et sic caritas 
-              <lb ed="#SV"/>potest applicari ad Regimen spirituale et temporale.</p>
+              <lb ed="#SV"/>potest applicari ad Regimen spirituale et temporale.</seg></p>
          
           </div>
          <div>
            <head xml:id="l81-Hocqqaa">Octavum corollarium: quod in regimine politico et spirituali debet attendi ad caritatem tam ad consilia quam ad quoscumque alios actus</head>
            
-           <p xml:id="l81-eqoheo"><lb ed="#SV"/>Ex quo octavo, sequitur quod in Regimen politico 
+           <p xml:id="l81-eqoheo"><lb ed="#SV"/><seg ana="#politica">Ex quo octavo, sequitur quod in Regimen politico 
              <lb ed="#SV"/>et spirituali debet attendi ad caritatem tam ad con<lb ed="#SV"/>silia 
-             quam ad quoscumque alios actus. patet, quia caritas 
+             quam ad quoscumque alios actus.</seg> patet, quia caritas 
              <lb ed="#SV"/>est docens omnem scientiam sufficienter. et Repraesentat 
              <lb ed="#SV"/>Res secundum debitum ordinem nec deum repraesentat 
              <lb ed="#SV"/>sic quod omnes in eum tendunt. et habent essentialem 
