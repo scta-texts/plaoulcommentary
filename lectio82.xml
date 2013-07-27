@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
       <fileDesc>
         <titleStmt>
@@ -32,6 +34,13 @@
       </fileDesc>
     </teiHeader>
     <text xml:lang="la">
+        <front>
+          <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+            <xi:fallback>
+              <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+            </xi:fallback>
+          </xi:include>
+        </front>
         <body>
             <div xml:id="lectio82">
               <head xml:id="l82-Hldcldc" subtype="title">Lectio 82, de Caritate</head>
@@ -322,7 +331,7 @@
             <lb ed="#SV"/>ex quo sequitur quod impossibile est diligere aliquem 
             <lb ed="#SV"/>nisi <unclear>Rametur[?]</unclear>.</p>
            
-               <p xml:id="l82-scpied">Secundo confirmatur<note>See <bibl><author>Petrus Aureoli</author>, <title>Scriptum</title>, d. 17, p. 1, a. 2, (1596), 409 E b</bibl></note> per illud <title>Iohannis</title> 14mo 
+               <p xml:id="l82-scpied">Secundo confirmatur<note>See <bibl><author>Petrus Aureoli</author>, <title>Scriptum</title>, d. 17, p. 1, a. 2, (1596), 409 E b</bibl></note> per illud <title ref="#JohnGospel">Iohannis</title> 14mo 
             <lb ed="#SV"/>capitulo, "si quis diligit me sermonem meum serva<lb ed="#SV"/>bit 
             et pater meus diliget eum." et per hoc ex<lb ed="#SV"/>primitur 
             dilectio quae est in creatura. alias deus non 
@@ -360,7 +369,7 @@
             </div>
           </div>
           <div>
-            <head xml:id="l82-Hrdaadw">Positio de <name>Adam de Wodeham</name></head>
+            <head xml:id="l82-Hrdaadw">Positio de <name ref="#Wodeham">Adam de Wodeham</name></head>
             
           <p xml:id="l82-ariedg">Aliam rationem 
             <lb ed="#SV"/>inducit <name ref="Wodeham">Adam</name> sit: ita quod <name ref="#Sortes">Sortes</name> sit non deo gratus et 
