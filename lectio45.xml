@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-08-02">August 02, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio45">
         <head xml:id="l45-Hldldld" subtype="title">Lectio 45, de Fruitione</head>
@@ -82,7 +91,7 @@
             <p xml:id="l45-airdsf">Ad ista, Respondendum 
               <lb ed="#SV"/>est primo cum distinctione, quia in prima ratione, nam sic fruens 
               <lb ed="#SV"/>deo, vel fruitur ex officio occupatus circa divinum cultum 
-              <lb ed="#SV"/>specialiter, sicut sacerdos in consecratione corporis dominici[?], vel 
+              <lb ed="#SV"/>specialiter, sicut sacerdos in consecratione corporis <unclear>dominici[?]</unclear>, vel 
               <lb ed="#SV"/>est persona privata quae contemplando ex devotione propria 
               <lb ed="#SV"/>voluntaria fruitur deo.</p>
       
@@ -103,7 +112,7 @@
               <lb ed="#SV"/>non consilium. ideo ratione obligationis debemus magis 
               <lb ed="#SV"/>obedire quam ratione bonitatis obiecti in se. sic dicitur quod, licet fruitio 
               <lb ed="#SV"/>dei quantum est de se esset melior quam subvenire proximo, 
-              <lb ed="#SV"/>tamen in illo casu subventio[?] proximi esset melior, nec 
+              <lb ed="#SV"/>tamen in illo casu <unclear>subventio[?]</unclear> proximi esset melior, nec 
               <lb ed="#SV"/>quando subveniret proximo esset obligatus ad fruendum deo, 
               <lb ed="#SV"/>immo tunc teneretur subvenire proximo.</p>
           
@@ -192,7 +201,7 @@
           <lb ed="#SV"/>plures.</p> 
                  
       <p xml:id="l45-esvetd">Et similiter viceversa potest poni quod sit aliquis, qui 
-        <lb ed="#SV"/>ab instanti sui <del rend="strikethrough">pat</del> baptizati fuerit in gratia, et tamen dampnabitur. 
+        <lb ed="#SV"/>ab instanti sui  baptizati fuerit in gratia, et tamen dampnabitur. 
         <lb ed="#SV"/>nam sit aliquis baptizatus, qui semper continet gratiam suam et 
         <lb ed="#SV"/>augeat semper suam gratiam. tunc praecipiatur sibi quod eliciat 
         <lb ed="#SV"/>actum <c>a</c> qui potest elici in instanti, tamen non limitetur sibi 
@@ -216,25 +225,25 @@
         <lb ed="#SV"/>quod, ubi praecedit aliqua mora terminata ad aliquod instans, 
         <lb ed="#SV"/>iudicandum est in illo instanti quantum ad habitudinem creaturae 
         <lb ed="#SV"/>ac si creatura esset in illo instanti. verbi gratia solet poni 
-        <lb ed="#SV"/>casus: sint <name>sortes</name> et <name>plato</name>, qui sint in aequali gratia et 
+        <lb ed="#SV"/>casus: sint <name ref="#Sortes">sortes</name> et <name ref="#Plato">plato</name>, qui sint in aequali gratia et 
         <lb ed="#SV"/>operantur taliter quod meritorie quod gratia intendatur in utroque aequaliter 
-        <lb ed="#SV"/>per unam totam horam. et in fine horae <name>plato</name> decedat et 
-        <lb ed="#SV"/><name>sortes</name> Remaneat sine profectu gratiae, tunc <name>sortes</name>, qui Remanet 
+        <lb ed="#SV"/>per unam totam horam. et in fine horae <name ref="#Plato">plato</name> decedat et 
+        <lb ed="#SV"/><name ref="#Plato">sortes</name> Remaneat sine profectu gratiae, tunc <name ref="#Plato">sortes</name>, qui Remanet 
         habebit gratiam ut decem, et tunc sibi correspondebit gloria 
         <lb ed="#SV"/>proportionalis suae gratiae.</p>
       
-      <p xml:id="l45-etdact">Et tunc de <name>platone</name> qui decedit quaeritur 
+      <p xml:id="l45-etdact">Et tunc de <name ref="#Plato">platone</name> qui decedit quaeritur 
         <lb ed="#SV"/>quam gloriam habebit, quia numquam habuit gratiam, ut decem, 
         <lb ed="#SV"/>quia dato instanti in quo habuisset inter illud et instans 
         <lb ed="#SV"/>suae mortis est instans medium, et in illo acquisiuisset 
-        <lb ed="#SV"/>gratiam. ideo iudicandum est in isto casu de praemio <name>platonis</name> 
+        <lb ed="#SV"/>gratiam. ideo iudicandum est in isto casu de praemio <name ref="#Plato">platonis</name> 
         <lb ed="#SV"/>ac si maneret in instanti in quo decedit. Ita dico de 
         <lb ed="#SV"/>bene vel male agere, si aliquis disponit se per totum tempus, 
-        <lb ed="#SV"/>tunc in illo instanti <del rend="strikethrough">tempus</del> temporis si decebat iudicandum est 
-        <lb ed="#SV"/>ac si esset. unde si <name>sortes</name> semper fuisset in tota vita 
+        <lb ed="#SV"/>tunc in illo instanti temporis si decebat iudicandum est 
+        <lb ed="#SV"/>ac si esset. unde si <name ref="#Sortes">sortes</name> semper fuisset in tota vita 
         <lb ed="#SV"/>sua peccator et disponeret se. et in fine dispositionis 
-        <lb ed="#SV"/>suae moriretur, tunc iudicandum esset de <name>sorte</name> ac si 
-        <lb ed="#SV"/>maxamisset[?] in illo instanti. ita etiam si sic, aliquis 
+        <lb ed="#SV"/>suae moriretur, tunc iudicandum esset de <name ref="#Sortes">sorte</name> ac si 
+        <lb ed="#SV"/><unclear>maxamisset[?]</unclear> in illo instanti. ita etiam si sic, aliquis 
         <cb ed="#SV" n="252va"/><lb ed="#SV"/>qui fuerit in gratia per totam vitam suam et sibi praecipiatur 
         <lb ed="#SV"/>aliquid fieri quod possit adimplere in quolibet instanti vitae 
         <lb ed="#SV"/>suae, et non Impleat, tunc iudicandum est de illo quod esset 
@@ -246,7 +255,7 @@
             <lb ed="#SV"/>tunc quaereretur, utrum salvaretur. tamen dicitur quod casus non est possibilis le<lb ed="#SV"/>ge 
             stante, quia deus ordinavit, quia quicumque salvabitur realiter 
             <lb ed="#SV"/>fuerit vel sit decoratus virtutibus et gratia. et sic non erit 
-            <lb ed="#SV"/>casus possibilis, quia ordinatum est quod nullus salvabitur, quoniam habuerit[?] 
+            <lb ed="#SV"/>casus possibilis, quia ordinatum est quod nullus salvabitur, quoniam <unclear>habuerit[?]</unclear> 
             <lb ed="#SV"/>gratiam vel virtutem in vita sua, tamen viso casu quo quis 
             <lb ed="#SV"/>se sic disponeret deus praeveniret mortem suam et illud 
             <lb ed="#SV"/>est satis probabile propter scripturam, et illud quod ponit scriptura, 
@@ -256,8 +265,7 @@
             ad gratiam sustinendam.</p> 
           
           <p xml:id="l45-ciiint">consequenter in ista materia, quia tactum 
-            <lb ed="#SV"/>est quod numquam quis in aliquo instanti tenetur frui deo, <del rend="expunctuated">quo<lb ed="#SV"/>tiens 
-            materia praecepti</del> dicitur communiter quod tenetur in aliquo, licet in nullo 
+            <lb ed="#SV"/>est quod numquam quis in aliquo instanti tenetur frui deo,  dicitur communiter quod tenetur in aliquo, licet in nullo 
             <lb ed="#SV"/>teneatur.</p> 
               
         <p xml:id="l45-sirtsd">Sed ista Responsio non videtur sufficiens. primo quia 
@@ -272,21 +280,21 @@
             materiam praecepti de fruendo deo, quia tenetur exire in actum 
             <lb ed="#SV"/>fidei, ut deum collat. ideo tenetur pro aliquo tempore limitato 
             <lb ed="#SV"/>frui deo. Etiam, quia in quolibet die Recipit bona, ideo tenetur 
-            <lb ed="#SV"/>Regratiari[?] deo.</p>
+            <lb ed="#SV"/><unclear>Regratiari[?]</unclear> deo.</p>
       
       <p xml:id="l45-itftfd">Item tenetur facere orationes contra temptationes 
         <lb ed="#SV"/>diaboli, ergo Requiritur et tenetur exire in actum et facere 
         <lb ed="#SV"/>sibi occurrere materiam de fruitione dei et hoc secundum gradum 
         <lb ed="#SV"/>status, nam praelati plus tenentur quam simplices, quia eorum vita 
         <lb ed="#SV"/>debet esse activa et contemplativa. et sic non est verum quod in nullo 
-        <lb ed="#SV"/><del rend="strikethrough">casu</del>instanti creatura tenetur frui Deo, immo in multis 
+        <lb ed="#SV"/>instanti creatura tenetur frui Deo, immo in multis 
         <lb ed="#SV"/>instantibus tenetur frui deo.</p>
        
         <p xml:id="l45-updeps">unde praeceptum de dilectione dei 
           <lb ed="#SV"/>quantum ad habitum obligat ad semper, non quod semper. unde praecepta 
           <lb ed="#SV"/>affirmativa obligant ad semper, licet non quod semper, id est, sum obligatus 
           <lb ed="#SV"/>semper ad habendum habitum dilectionis dei et sic de aliis, id est, numquam 
-          <lb ed="#SV"/>est disposito[?] in affirmativis qui semper sit in habitu, sed non pro semper, 
+          <lb ed="#SV"/>est <unclear>disposito[?]</unclear> in affirmativis qui semper sit in habitu, sed non pro semper, 
           <lb ed="#SV"/>quia non tenetur exire in actum, nisi quando materia debet occurrere 
           <lb ed="#SV"/>et occurrit. negativa autem obligant ad semper et pro semper.</p> 
          
@@ -317,7 +325,7 @@
            
         <p xml:id="l45-epesim">et posset etiam poni gradus secundus quod adveniente 
           materia furti voluntas Resistat tali motioni, id est, non eli<lb ed="#SV"/>ciat 
-          velle prosequutum[?], nec volitivum, sed solum Resistat 
+          velle <unclear>prosequutum[?]</unclear>, nec volitivum, sed solum Resistat 
           <lb ed="#SV"/>tunc ille est gradus imaginabilis quod voluntas impleret praece<lb ed="#SV"/>ptum 
           negativum absque actu, et tunc sicut aliqua pura obmi<lb ed="#SV"/>ssio 
           boni esset peccatum, ita aliqua pura obmissio ma<lb ed="#SV"/>li 
