@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-05-07">May 7th, 2012</date>
       </publicationStmt>
@@ -35,6 +37,13 @@
     </encodingDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio31">
         <head xml:id="d3a5l30Hldalda" subtype="title">Lectio 31, de Notitia</head>
@@ -138,7 +147,7 @@
             <p xml:id="d3a5l30suqrit">Sequitur 
                 <lb ed="#R"/>ulterius quod nullum obiectum finium est summae propor<lb ed="#R"/>tionatum 
                 potentiae creatae intellectivae, quia nullum 
-                <lb ed="#R"/>obiectum finium est summae quietatum[?] intellectus. 
+                <lb ed="#R"/>obiectum finium est summae <unclear>quietatum[?]</unclear> intellectus. 
                 <lb ed="#R"/>Item nulla creatura habet rationem infiniti et ultimi 
                 <lb ed="#R"/>finis. Modo, sicut alias dictum est, proportionalis ordo est 
                 <lb ed="#R"/>causarum finalium, sicut agentium, ita quod, sicut causa 
@@ -146,7 +155,7 @@
                 <lb ed="#R"/>infinite et immense activa. Item causa finalis 
                 <lb ed="#R"/>secundaria potest esse causa finalis per accidens alicuius 
                 <lb ed="#R"/>ordinati in ipsam, et non se sola, sed mediante 
-                <lb ed="#R"/>ultimo sive immenso, etc. Ideo dicit <name>Augustinus</name><lb ed="#R"/><quote type="ChurchFathers">"inquietum est cor nostrum, Domine, donec requiescat 
+                <lb ed="#R"/>ultimo sive immenso, etc. Ideo dicit <name ref="#Augustine">Augustinus</name><lb ed="#R"/><quote type="Patristic">"inquietum est cor nostrum, Domine, donec requiescat 
                 <lb ed="#R"/>in te."</quote></p>
             
             <p xml:id="d3a5l30usqpee">Ulterius sequitur quod nulli potentiae propor<lb ed="#R"/>tionatum 
@@ -167,7 +176,7 @@
             
             <p xml:id="d3a5l30suqfnq">Sequitur 
             <lb ed="#R"/>ulterius quod dependenti independens et finito 
-            <lb ed="#R"/>infinitum sunt proportionativa[?issima?], ita quod independens 
+            <lb ed="#R"/>infinitum sunt <unclear>proportionativa[?issima?]</unclear>, ita quod independens 
             <lb ed="#R"/>est proportionum dependenti, quia nisi obiectum depen<lb ed="#R"/>dentis 
             esset independens, non quietaret de<lb ed="#R"/>pendendum, 
             nec dependentis ad dependendum posset 
@@ -199,7 +208,7 @@
             <head xml:id="d3a5l30Hrasasr">Responsio ad secundam rationem</head>
             
             <p xml:id="d3a5l30spaiee">Secundo principaliter arguebatur<note>See above <ref type="crossReference" target="dthreelecture19.xml#d3l19spanis">lectio 19, para.</ref></note> quod impossibile 
-              <lb ed="#R"/>sit de De habere notitiam, et hoc ratione infinitis[?] 
+              <lb ed="#R"/>sit de De habere notitiam, et hoc ratione <unclear>infinitis[?]</unclear> 
               <lb ed="#R"/>distantiae obiecti a potentia per similitudinem de mobili 
               <lb ed="#R"/>localiter. Nam si esset aliquod mobile localiter quod 
               <lb ed="#R"/>distaret infinite a loco, non posset tale mobile 
@@ -216,7 +225,7 @@
             <lb ed="#R"/>essentialem perfectionem essentia divina infinite 
             <lb ed="#R"/>distat a creatura, non tamen infinite distat quantum 
             <lb ed="#R"/>ad propositum. Spectat, quia divina essentia non 
-            <lb ed="#R"/>distat infinite cognoscentis[?] a creatura. Ita quod 
+            <lb ed="#R"/>distat infinite <unclear>cognoscentis[?]</unclear> a creatura. Ita quod 
             <lb ed="#R"/>ita quod cognoscere divinam essentiam non est infinitae 
             <lb ed="#R"/>difficultatis. Unde possumus imagina<lb ed="#R"/>ri 
             aliquas res secundum unam rationem infinite dis<lb ed="#R"/>tare 
@@ -238,7 +247,7 @@
             <p xml:id="d3a5l30sdqcab">Secundo dicitur 
           <cb ed="#R" n="53ra" /><lb ed="#R"/>quod: si esset in argumento aliquis color hoc es<lb ed="#R"/>set 
           ad probandum quod impossibile sit creaturae divinam 
-          <lb ed="#R"/>essentiam<app><lem>essentiam</lem><rdg wit="#R" type="add.sed.del."><del>esse</del></rdg></app> attingere comprehensive, quia ad 
+          <lb ed="#R"/>essentiam<app><lem/><rdg wit="#R" type="add.sed.del."><del>esse</del></rdg></app> attingere comprehensive, quia ad 
           <lb ed="#R"/>comprehendendum divinam essentiam, oportet habere notitiam 
           <lb ed="#R"/>aeque perfectam in esse notitiae, sicut est obiectum in se. 
           <lb ed="#R"/>Ita quod notitia, per quam obiectum, quod est Deus, comprehen<lb ed="#R"/>deretur, 
@@ -257,9 +266,9 @@
           <lb ed="#R"/>intelligibilem immaterialem, ergo nec intellectus 
           <lb ed="#R"/>ad rem infinitam et immensam. Probatur consequentia, quia multo 
           <lb ed="#R"/>magis Deus excedit nostrum intellectum quam intellectus 
-          <lb ed="#R"/>sensum. Si ergo sensus non sufficit intelligere[?] materiam[?] 
+          <lb ed="#R"/>sensum. Si ergo sensus non sufficit <unclear>intelligere[?]</unclear> <unclear>materiam[?]</unclear> 
           <lb ed="#R"/>abstractam a materia, sequitur quod intellectus non suf<lb ed="#R"/>ficiet 
-          in Deum mi?eum[??], qui est obiectum immensum 
+          in Deum <unclear>mi?eum[??]</unclear>, qui est obiectum immensum 
           <lb ed="#R"/>absolute.</p>
             
             <p xml:id="d3a5l30reqcie">Respondendum est quod huiusmodi excessus 
@@ -310,10 +319,10 @@
             <lb ed="#R"/>Deum et proximum, et quod vitaliter seipso ipsam 
             <lb ed="#R"/>immutat potentiam affectivam, scilicet, voluntatem 
             <lb ed="#R"/>per modum habitus vel actus secundum aliquos, sicut 
-            <lb ed="#R"/>ponit <name>Magister</name>. Eadem difficultas est utrum posset 
+            <lb ed="#R"/>ponit <name ref="#Lombard">Magister</name>. Eadem difficultas est utrum posset 
             <lb ed="#R"/>esse realiter notitia creaturae, et ista materia habet 
-            <lb ed="#R"/>prolixius tractari circa distinctione 17. Tamen licet <name>Magister</name><lb ed="#R"/>in hoc multi videantur negare, reputo illud 
-            <lb ed="#R"/>satis probabile, sicut dicunt plures, ut <name>Magister 
+            <lb ed="#R"/>prolixius tractari circa distinctione 17. Tamen licet <name ref="#Lombard">Magister</name><lb ed="#R"/>in hoc multi videantur negare, reputo illud 
+            <lb ed="#R"/>satis probabile, sicut dicunt plures, ut <name ref="#Ripa">Magister 
             <lb ed="#R"/>Ioannes de Ripa</name>.</p>
            
             <p xml:id="d3a5l30uchdai">Unde circa hoc respondeo ad rationem: 
@@ -355,7 +364,7 @@
                   <lb ed="#R"/>esset creaturae creatae vel tantae cognitio.</p>
             
             <p xml:id="d3a5l30eaitqg">Et ad istam 
-            <lb ed="#R"/>rationem respondet <name>Magister Ioannes de Ripa</name> sub 
+            <lb ed="#R"/>rationem respondet <name ref="#Ripa">Magister Ioannes de Ripa</name> sub 
           <lb ed="#R"/>aliis verbis, dicit enim sic: quod si Deus sit 
           <lb ed="#R"/>notitia creaturae, sicut ipse tenet, tunc Deus erit 
           <lb ed="#R"/>notitia infinita quantum ad speciem, finita tamen 
@@ -365,7 +374,7 @@
           <lb ed="#R"/>non potest stare, quia licet Deus absolute sibi et 
               <cb ed="#R" n="53va" /><lb ed="#R"/>et<app><lem>et</lem><rdg wit="#R" type="add."><add place="inline">et</add></rdg></app> intrinsece sit infinita notitia, tamen non est notitia 
           <lb ed="#R"/>creaturae secundum tantam denominationem secundum quam est sibi 
-          <lb ed="#R"/>notitiam. Nam si modus secundum quae[?] Deus est notitia 
+          <lb ed="#R"/>notitiam. Nam si modus secundum <unclear>quae[?]</unclear> Deus est notitia 
           <lb ed="#R"/>creaturae esset infinitus et immensus, ratio demon<lb ed="#R"/>straret, 
           ut mihi videtur, quod Deus infinite 
           <lb ed="#R"/>immutaret creaturam, quia perfectius immutaret 
@@ -391,9 +400,9 @@
             <lb ed="#R"/>habitudinem ad potentiam et obiectum se habet, sicut 
             <lb ed="#R"/>notitia cuius vicem supplet. Et per consequens quantum 
             <lb ed="#R"/>ad hoc potest dici: eiusdem speciei cum notitia 
-            <lb ed="#R"/>illa cuius vicem supplet<app><lem>supplet</lem><rdg wit="#R" type="add.sed.del."><del rend="strikethrough"><add>et per consequens quantum ad hoc 
+            <lb ed="#R"/>illa cuius vicem supplet<app><lem/><rdg wit="#R" type="add.sed.del."><del rend="strikethrough"><add>et per consequens quantum ad hoc 
               <lb ed="#R"/>potest dici eiusdem speciei cum notitia illa</add></del></rdg></app>, igitur etc. 
-            <lb ed="#R"/>Et sic non concederem cum <name>Magistri Ioannes de Ripa</name> quod 
+            <lb ed="#R"/>Et sic non concederem cum <name ref="#Ripa">Magistri Ioannes de Ripa</name> quod 
             <lb ed="#R"/>Deus esset infinita notitia quoad specie. Unde 
             <lb ed="#R"/>data quacumque notitia creata in eadem proportione, 
             <lb ed="#R"/>Deus potest libere immutare potentiam; et 
@@ -428,7 +437,7 @@
           <lb ed="#R"/>perfecta sicut Deus, ergo. Modo secunda notitia animae Christi non esset 
           <lb ed="#R"/>aeque clara in se nec aequae perfecta sictu Deus, ideo etc.</p>
             
-            <p xml:id="d3a5l30stdapn">Sed tunc dicit <name>Adam</name> penes quid attenditur 
+            <p xml:id="d3a5l30stdapn">Sed tunc dicit <name ref="#Wodeham">Adam</name> penes quid attenditur 
             <lb ed="#R"/>perfectio notitiae.</p>
            
             <p xml:id="d3a5l30refhic">Responsio est facilis penes ima<lb ed="#R"/>ginationem 
@@ -445,7 +454,7 @@
             <lb ed="#R"/>anima Christi cognitionum, sed habuit suprema in speciem possibilem, 
             <lb ed="#R"/>quia Deus dedit sibi tantum quantum potuit et exten<lb ed="#R"/>sive 
             et intensive. Et ideo cum reverentia ipsius 
-            <lb ed="#R"/><name>Adae</name> videtur mihi quod non bene dicit declarando se 
+            <lb ed="#R"/><name ref="#Wodeham">Adae</name> videtur mihi quod non bene dicit declarando se 
             <lb ed="#R"/>dicens quod: si Sortes et Plato cognovissent istam 
             <lb ed="#R"/>conclusionem 'triangulus habet tres' etc., aeque 
             <lb ed="#R"/>perfecte cognovisset unus sicut alter. Verum est 
@@ -454,9 +463,9 @@
             <lb ed="#R"/>conclusionem, aeque perfectam notitiam habuisset unus sicut 
             <lb ed="#R"/>alter. Et consequentur dicit quod: si Sortes cognoscat triangulum 
             <lb ed="#R"/>habere tres, etc. aeque perfecte, cognoscit sicut Deus 
-            <lb ed="#R"/>cognoscit, quia Deus respectu huius conclusionis triangulus hoc[?] etiam 
+            <lb ed="#R"/>cognoscit, quia Deus respectu huius conclusionis triangulus <unclear>hoc[?]</unclear> etiam 
             <lb ed="#R"/>adaequate cognovit finite sicut Sortis, licet 
-            <lb ed="#R"/>de substantia[?] illius conclusionis habeat infinitas cognitiones.</p>
+            <lb ed="#R"/>de <unclear>substantia[?]</unclear> illius conclusionis habeat infinitas cognitiones.</p>
             
             <p xml:id="d3a5l30iuviel">Istud ut videtur non bene stat, quia Deus eandem 
             <lb ed="#R"/>conclusionem multum clarius et perfectius cognoscit 
@@ -473,10 +482,10 @@
             <lb ed="#R"/>inconveniens quod Deus cognoscat contingenter, ergo non 
             <lb ed="#R"/>est inconveniens quod cognoscat finite. Salva sui 
             <lb ed="#R"/>reverentia, consequentia non valet, immo ex hoc, scilicet, quod cognoscit 
-            <cb ed="#R" n="54ra" /><lb ed="#R"/>contingenter cum hoc, quod est substantia[?] immutabilis, sequitur 
+            <cb ed="#R" n="54ra" /><lb ed="#R"/>contingenter cum hoc, quod est <unclear>substantia[?]</unclear> immutabilis, sequitur 
             <lb ed="#R"/>ipsius immensitas et infinita perfectio; 
             <lb ed="#R"/>ergo non sequitur, contingenter cognoscit, ergo finite 
-            <lb ed="#R"/>cognoscit; immo ex antecedente[?], cum uno addito, vero 
+            <lb ed="#R"/>cognoscit; immo ex <unclear>antecedente[?]</unclear>, cum uno addito, vero 
               <lb ed="#R"/>sequitur oppositum recte, scilicet, quod infinite cognoscit. 
               <lb ed="#R"/>Nam bene sequitur Deus contingenter cognoscit et 
               <lb ed="#R"/>non est mutabilis, ergo infinite cognoscit. Et ita 
@@ -525,7 +534,7 @@
           <lb ed="#R"/>facie est apparens, tamen ipsius possunt esse variae 
             <lb ed="#R"/>possunt esse solutiones. Primo igitur, quia tenendum est 
             <lb ed="#R"/>quod ipsa est finita et finitae perfectiones, ideo 
-            <lb ed="#R"/>restat respondere ad rationem unde <name>Magister Ioannes 
+            <lb ed="#R"/>restat respondere ad rationem unde <name ref="#Ripa">Magister Ioannes 
               <lb ed="#R"/>de Ripa</name> ponit quod non est processus in in<lb ed="#R"/>finitum 
             in notiis huiusmodi causatis ab 
             <lb ed="#R"/>obiectis, quia tenet quod tota latitudo et totus numerus 
@@ -543,7 +552,7 @@
             <lb ed="#R"/>difficultas argumenti non est aliqua apud ipsum, quia illa 
             <lb ed="#R"/>notitia erit perfectior quam notitia Dei creata, quia est una 
             <lb ed="#R"/>intelligentia et notitia Dei est accidens. Ideo ista 
-            <lb ed="#R"/>ratio non est difficilis in aliquo. Dicendo[?] consequenter 
+            <lb ed="#R"/>ratio non est difficilis in aliquo. <unclear>Dicendo[?]</unclear> consequenter 
             <lb ed="#R"/>ad sua principia.</p>
             
             <p xml:id="d3a5l30veqaec">Verum est quod ista positio, licet sit 
@@ -561,7 +570,7 @@
               <lb ed="#R"/>dubii. Et causa est, nam valde bene possibile 
               <lb ed="#R"/>est quod aliquod idem obiectum uniformi concursu 
               <lb ed="#R"/>quantum est ex parte sui esset variarum notitiarum 
-              <lb ed="#R"/>diversarum specierum exemplum[?] de obiecto sensibili quod causatis[?] 
+              <lb ed="#R"/>diversarum specierum <unclear>exemplum[?]</unclear> de obiecto sensibili quod <unclear>causatis[?]</unclear> 
               <lb ed="#R"/>notitiam intellectivam et sensitivam immaterialem 
               <lb ed="#R"/>et alterius speciei quam sit notitia sensitiva ab eo 
               <lb ed="#R"/>causata.</p>
@@ -588,7 +597,7 @@
               contingit quod idem obiectum causet infini<lb ed="#R"/>tas 
               notitias, ita descendendo, quia sicut intuitivam 
           <cb ed="#R" n="54va" /><lb ed="#R"/>notitiam in homine, ita sensitivam, deinde potest causare 
-          <lb ed="#R"/>aliam notitiam in potentia sensitiva, deinde potest causare<app><lem>causare</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough"><add>non</add></del></rdg></app><lb ed="#R"/>aliam notitiam<app><lem>notitiam</lem><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">sensitivam</del></rdg></app> in potentia sensitiva minus bene 
+          <lb ed="#R"/>aliam notitiam in potentia sensitiva, deinde potest causare<app><lem>causare</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough"><add>non</add></del></rdg></app><lb ed="#R"/>aliam notitiam<app><lem/><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">sensitivam</del></rdg></app> in potentia sensitiva minus bene 
           <lb ed="#R"/>disposita, et sic in infinitum continue dividendo 
             <lb ed="#R"/>vel diceretur quod ex alia radice ascendendo per 
             <lb ed="#R"/>obiecta contingit devenire ad aliqua quae 
@@ -598,7 +607,7 @@
             <lb ed="#R"/>secreta, ideo etc.</p>
             
             <p xml:id="d3a5l30qdqddn">Quarto dicitur quod non dantur huiusmodi 
-          <lb ed="#R"/>proportiones, sicut imaginatur <name>Adam</name>, et quod in 
+          <lb ed="#R"/>proportiones, sicut imaginatur <name ref="#Wodeham">Adam</name>, et quod in 
           <lb ed="#R"/>perfectionibus essentialibus notitiarum non erit processus 
           <lb ed="#R"/>in infinitum secundum perfectionem obiectorum, ita quod 
           <lb ed="#R"/>semper perfectioris obiecti erit perfectior notitia. Et sic 
@@ -621,7 +630,7 @@
             
             <p xml:id="d3a5l30ampesp">Alio modo potest dici quodlibet adhuc ad modum 
           <lb ed="#R"/>loquendi communem et causa doctrinae admitteretur 
-          <lb ed="#R"/>quod aliquo obiecto dato dabilem[?] est perfectius 
+          <lb ed="#R"/>quod aliquo obiecto dato <unclear>dabilem[?]</unclear> est perfectius 
           <lb ed="#R"/>in duplo, in triplo, et sic in infinitum secundum quod 
           <lb ed="#R"/>placuerit diceretur quod non esset eadem proportio 
           <lb ed="#R"/>notitiarum, sicut obiectorum, quia non oportet quod causatas obiectiva 
@@ -630,7 +639,7 @@
           activa. Videmus enim quod non est ordo 
           <lb ed="#R"/>causalitatis activae secundum ordinem perfectionis rerum, 
           <lb ed="#R"/>quia materia prima ponitur perfectior quam causalitas, et 
-          <lb ed="#R"/>tamen materia prima non est activa. Et calidum[??] est activa, 
+          <lb ed="#R"/>tamen materia prima non est activa. Et <unclear>calidum[??]</unclear> est activa, 
           <lb ed="#R"/>ita in proposito potest dici quod causalitas obiectiva non 
           <lb ed="#R"/>correspondet proportionaliter ad perfectionem essentialem et 
           <lb ed="#R"/>intrinsecam rerum secundum congruentiam et indigentiam 
@@ -657,7 +666,7 @@
             <p xml:id="d3a5l30sdaiml">Sexto dicunt aliqui quod aliquo 
           <lb ed="#R"/>modo visio Dei est infinita, licet non absolute, quoniam 
           <lb ed="#R"/>scilicet in eadem specie posset dari maior et inten<lb ed="#R"/>sior. 
-					Et istud dicit <name>Adam</name>.<note>Cf. <name>Name</name>, <title>Lectura Secunda</title>, I, prol., q. 5, sect. 10 (Wood I:127s)</note> Non capio, ideo repu<lb ed="#R"/>diat. 
+					Et istud dicit <name ref="#Wodeham">Adam</name>.<note>Cf. <bibl><author>Adam Wodeham</author>, <title>Lectura Secunda</title>, I, prol., q. 5, sect. 10 (Wood I:127s)</bibl></note> Non capio, ideo repu<lb ed="#R"/>diat. 
           Tamen iste modus potest satis sustineri secundum 
           <lb ed="#R"/>unum modum loquendi, quia quando loquimur de perfectione 
           <lb ed="#R"/>visionis, utrum sit finita vel infinita, non loquimur 
@@ -671,10 +680,10 @@
           <lb ed="#R"/>absolute est finita. Et istud potest satis stari secundum 
           <lb ed="#R"/>istum modum loquendi.</p>
             
-            <p xml:id="d3a5l30araqao"><lb ed="#R"/>Aliter respondet <name>Adam</name> imaginando 
+            <p xml:id="d3a5l30araqao"><lb ed="#R"/>Aliter respondet <name ref="#Wodeham">Adam</name> imaginando 
           <lb ed="#R"/>quod ex parte capacitatis animae evadetur huiusmodi 
           <lb ed="#R"/>difficultas. Nam dicit ipse, dato quod omnia obiecta 
-          <lb ed="#R"/>essent creata quae posset[?] concurrere obiective ad 
+          <lb ed="#R"/>essent creata quae <unclear>posset[?]</unclear> concurrere obiective ad 
           <lb ed="#R"/>sui notitiam causandum et quod influerent secundum ultimum sui 
           <lb ed="#R"/>posse, quia est anima est finitae capacitatis, non 
           <lb ed="#R"/>posset agere notitiam ultra gradum capacitatis animae. 
@@ -693,7 +702,7 @@
           <lb ed="#R"/>quantum ad speciem et etiam quantum ad obiectum.</p>
             <div>
               
-              <head xml:id="d3a5l30Hcoacoa">Contra opinionem <name>Adam</name></head>
+              <head xml:id="d3a5l30Hcoacoa">Contra opinionem <name ref="#Wodeham">Adam</name></head>
               
               <p xml:id="d3a5l30isnned"><lb ed="#R"/>Ista 
           <lb ed="#R"/>solutio non sufficit iudicio meo nec eva<lb ed="#R"/>cuat 
@@ -704,7 +713,7 @@
           <lb ed="#R"/>de capacitate animae, utrum sit finita vel infinita;
           <lb ed="#R"/>quia capiatur angelus, vel ex quo est processus 
           <lb ed="#R"/>in infinitum in obiectis secundum perfectionem, iste processus 
-          <cb ed="#R" n="56ra" /><lb ed="#R"/>ponit<app><lem>ponit</lem><rdg wit="#R" type="add.sed.del."><del>suffi</del></rdg></app> potentias sufficientes et sufficientes capacitates.
+          <cb ed="#R" n="56ra" /><lb ed="#R"/>ponit<app><lem/><rdg wit="#R" type="add.sed.del."><del>suffi</del></rdg></app> potentias sufficientes et sufficientes capacitates.
           <lb ed="#R"/>Ideo de illis fiat augmentum, nam sicut in 
           <lb ed="#R"/>infinitum per obiecta perfectioris et perfectioris speciei 
           <lb ed="#R"/>causabant, etiam perfectiorem et perfectiorem notitiam 
@@ -726,7 +735,7 @@
           <lb ed="#R"/>et quantum ad latitudinem specierum, et non quantum 
           <lb ed="#R"/>ad perfectionem graduum eiusdem speciei. Et sic ad<lb ed="#R"/>huc 
           <lb ed="#R"/>restabit difficultas, quia de huiusmodi perfectio<lb ed="#R"/>ne 
-          <lb ed="#R"/>specifica, <name>Adam</name> non respondet. Verum est 
+          <lb ed="#R"/>specifica, <name ref="#Wodeham">Adam</name> non respondet. Verum est 
           <lb ed="#R"/>quod iudicio meo ipse ponit notitiam Dei perfectio<lb ed="#R"/>rem 
           quoad speciem et quoad intentionem 
           <lb ed="#R"/>graduum quam notitia creaturae, licet non expresse.</p>
@@ -849,16 +858,16 @@
           <lb ed="#R"/>eorum esset nobis utilis, nisi quod in ea reluceret 
           <lb ed="#R"/>divina essentia quae relucentia satis apparet in aliis. Ideo 
           <lb ed="#R"/>quantum ad hoc notitia fidei est perfectior quam quaecumque notitia 
-          <lb ed="#R"/>alia, quia est ad fidem. Et licet non immediate feratur[?] 
+          <lb ed="#R"/>alia, quia est ad fidem. Et licet non immediate <unclear>feratur[?]</unclear> 
           <lb ed="#R"/>in finem ultimum, tamen disponit immediate ad 
           <lb ed="#R"/>finem ultimum et etiam cognitio sui multum confert. 
           <lb ed="#R"/>Quantum ad hoc, quia facit homini cogitare fragilitatem 
-          <lb ed="#R"/>suam et appetere virtutes per quas creatura<lb ed="#R"/><app><lem>creatura</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">dum</del></rdg></app> 
+          <lb ed="#R"/>suam et appetere virtutes per quas creatura<lb ed="#R"/><app><lem/><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">dum</del></rdg></app> 
           ducitur in finem suum. Et sic finaliter 
           <lb ed="#R"/>quantum ad hoc, quaelibet notitia Dei est perfectior 
           <lb ed="#R"/>quam quaecumque alia notitia.</p>
              
-              <p xml:id="d3a5l30sqpncd">Sexto quo[?] potest intelligi 
+              <p xml:id="d3a5l30sqpncd">Sexto <unclear>quo[?]</unclear> potest intelligi 
           <lb ed="#R"/>sumendo extrinsece perfectionem notitiae, scilicet ex perfectione 
           <lb ed="#R"/>obiecti. Et tunc isto modo notitia Dei esset infinita, 
           <lb ed="#R"/>quia esset infiniti obiecti repraesentativa, cum hoc 
@@ -875,21 +884,21 @@
           sive deficit ab adaequata comprehensione 
           <lb ed="#R"/>sui obiecti. Ideo isto modo ipsa est imperfectissima, 
           <lb ed="#R"/>quia quaelibet notitia creaturae magis appropinquat ad<lb ed="#R"/>aequatam 
-          comprehendentem[?] sui obiecti quam quaecumque 
+          <unclear>comprehendentem[?]</unclear> sui obiecti quam quaecumque 
           <cb ed="#R" n="55vb" /><lb ed="#R"/>notitia creata Dei.</p>
               
-              <p xml:id="d3a5l30unmaim">Unde uno modo creatura<app><lem>creatura</lem><rdg wit="#R" type="add.sed.del."><del rend="expunctated">debet</del></rdg></app> est 
+              <p xml:id="d3a5l30unmaim">Unde uno modo creatura<app><lem/><rdg wit="#R" type="add.sed.del."><del rend="expunctated">debet</del></rdg></app> est 
           <lb ed="#R"/>comprehensibilis ab illa creatura, et alio modo non. 
           <lb ed="#R"/>Pro quo notandum est quod creaturam comprehendi ab alia 
           <lb ed="#R"/>creatura potest dupliciter intelligi. Uno modo pro cognoscitur 
-          <lb ed="#R"/>secundum omnem praedicatum disci?le[?] de ea, et tunc isto modo 
+          <lb ed="#R"/>secundum omnem praedicatum <unclear>disci?le[?]</unclear> de ea, et tunc isto modo 
           <lb ed="#R"/>non potest creatura comprehendi ab creatura, nisi mi<lb ed="#R"/>raculose 
           et supernaturaliter, sicut secundum aliquos 
           <lb ed="#R"/>est de anima Christi propter infinitas habitudines 
           <lb ed="#R"/>quas habet ad se et ad alias res. Tamen istud non 
           <lb ed="#R"/>denego ab anima Christi, sed cuicumque alteri de lege 
               <lb ed="#R"/>ordinata. Alio modo potest intelligi quod cognoscitur 
-          <lb ed="#R"/>secundum omnia praedicata essentialia disci?lia[?] de ea, et 
+          <lb ed="#R"/>secundum omnia praedicata essentialia <unclear>disci?lia[?]</unclear> de ea, et 
           <lb ed="#R"/>tunc creatura bene est comprehensibilis ab alia isto modo.</p>
               
               <p xml:id="d3a5l30eisiqr">Ex istis statis apparet qualiter uno modo quantificandi notitias, 
