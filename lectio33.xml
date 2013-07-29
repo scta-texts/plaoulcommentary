@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-05-07">May 7th, 2012</date>
       </publicationStmt>
@@ -35,6 +37,13 @@
     </encodingDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio33">
         <head xml:id="d3a6l3H1ldalda" subtype="title">Lectio 33, de Notitia</head>
@@ -61,13 +70,13 @@
   <lb ed="#R"/>esse obiectum alterius notitiae, ergo etc.</p>
             
             <p xml:id="l33-airoop">Ad istam 
-  <lb ed="#R"/>rationem respondet <name>Adam</name> quando dicitur: si daretur notitia, 
+  <lb ed="#R"/>rationem respondet <name ref="#Wodeham">Adam</name> quando dicitur: si daretur notitia, 
   <lb ed="#R"/>quae esset infinitorum obiectorum et cuiuscumque distincte re<lb ed="#R"/>prasentativa, 
   illa esset infinita. Concedit ergo notitia 
   <lb ed="#R"/>Dei est infinita; negat consequentiam, et causa est, quia 
   <lb ed="#R"/>notitia ipsius Dei non est adaequate ipsius et 
   <lb ed="#R"/>perfecte repraesentativa, ita quod notitia Dei in infinitum 
-  <lb ed="#R"/><choice><orig>defficit</orig><reg>deficit</reg></choice> a comprehendente ipsius Dei. Si enim ar<lb ed="#R"/>gueretur 
+  <lb ed="#R"/>deficit a comprehendente ipsius Dei. Si enim ar<lb ed="#R"/>gueretur 
   de notitia ipsius Dei quod adaequate 
   <lb ed="#R"/>et comprehensive esset repraesentativa, bene conce<lb ed="#R"/>deretur 
   quod esset infinita et immensa, quia 
@@ -75,7 +84,7 @@
   <lb ed="#R"/>Verum est quod ipse dicit quod antecedens est 
   <lb ed="#R"/>impossibile, scilicet quod sit aliqua notitia infinitorum obiectorum 
   <lb ed="#R"/>et cuiuslibet distincte repraesentativa. Sed 
-  <lb ed="#R"/>in <name>Adam</name><choice><orig>abreviato</orig><reg>abbreviato</reg></choice> notum est per <name>Magisterum Henricum de Huta</name> vel <name>Magistrum Henri<lb ed="#R"/>cum 
+  <lb ed="#R"/>in <name ref="#Wodeham">Adam</name>abbreviato notum est per <name ref="#Oyta">Magisterum Henricum de Huta</name> vel <name ref="#Langenstein">Magistrum Henri<lb ed="#R"/>cum 
   de Hassia</name> quod notitia quantum est de se aequaliter 
   <cb ed="#R" n="56ra" /><lb ed="#R"/>potest esse plurium obiectorum distinctiva sicut unius, ut si 
   <lb ed="#R"/>ponerentur infinita ova adaequate in eodem loco 
@@ -132,7 +141,7 @@
             <p xml:id="l33-eqsena">Ex quo sequitur quod non 
         <cb ed="#R" n="56rb" /><lb ed="#R"/>stat aliquam notitiam creatam ab obiecto creato esse 
         <lb ed="#R"/>plurium distincte repraesentativa, quia data aliquo 
-        <lb ed="#R"/>obiecto, si<app><lem>si</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">circa</del></rdg></app> concurrat ad sui notitiam producendum, talis 
+        <lb ed="#R"/>obiecto, si<app><lem/><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">circa</del></rdg></app> concurrat ad sui notitiam producendum, talis 
         <lb ed="#R"/>notitia non est repraesentativa, nisi illius obiecti quod obiective 
         <lb ed="#R"/>se obicit adaequate causando illam notitiam, 
         <lb ed="#R"/>ita quod, si sint Sortes et Plato praesentes alicui 
@@ -142,16 +151,16 @@
         <lb ed="#R"/>notitia unius erit notitia alterius.</p>
             
             <p xml:id="l33-iseanc">Ideo satis 
-        <lb ed="#R"/>ex<app><lem>ex</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">dictis</del></rdg></app> istis videtur apparere quod secundum dictum est 
+        <lb ed="#R"/>ex<app><lem/><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">dictis</del></rdg></app> istis videtur apparere quod secundum dictum est 
           <lb ed="#R"/>falsum, scilicet, quod possibile est aliquam notitiam ab obiecto causa<lb ed="#R"/>to 
           esse infinitorum obiectorum et cuiuslibet distincte re<lb ed="#R"/>praesentativa, 
           sicut si essent infinita ova in eodem 
           <lb ed="#R"/>loco adaequate applicata potentiae perceptivae, 
           <lb ed="#R"/>quia vel quodlibet ovum concurreret obiective ad produ<lb ed="#R"/>cendum 
-          notitiam sui et etiam <choice><orig>opportebit</orig><reg>oportebit</reg></choice> dicere 
+          notitiam sui et etiam oportebit dicere 
           <lb ed="#R"/>quod in potentia illa causabuntur infinitae notitiae, et quod potentia 
           <lb ed="#R"/>illa cognoscet simul per infinitas notitias vel 
-          <lb ed="#R"/><choice><orig>opportebit</orig><reg>oportebit</reg></choice> dicere quod omnia illa ova unam notitiam 
+          <lb ed="#R"/>oportebit dicere quod omnia illa ova unam notitiam 
           <lb ed="#R"/>confusam illorum, sicut notitia infinitarum partium continui concurrentium ad<app><lem>ad</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">cand</del></rdg></app> causandum notitiam alicuius 
           <lb ed="#R"/>continui, immo in tali casu sensus non discerneret 
           <lb ed="#R"/>utrum essent ibi plura ova; immo habendo actum 
@@ -166,14 +175,14 @@
           <lb ed="#R"/>causabit notitiam sui. Et sic erunt impossibilia[?] tali infinitae 
           <lb ed="#R"/>notitiae vel quod ex ordinatione et limitatione causae super<lb ed="#R"/>ioris 
           aliquod ovum vel aliqua causabunt notitiam sui 
-          <lb ed="#R"/>et non alia secundum quod possibilia erit capax, <choice><orig>quidquid</orig><reg>quicquid</reg></choice>, 
+          <lb ed="#R"/>et non alia secundum quod possibilia erit capax, quicquid, 
           <lb ed="#R"/>tamen dicatur non stat quod sit aliqua notitia creata 
           <lb ed="#R"/>infinitorum obiectorum et cuiuslibet distincte repraesentativa immediate 
           <lb ed="#R"/>vel mediate causata ab obiecto <choice><sic>creata</sic><corr>creato</corr></choice>. Et quantum ad hoc conce<lb ed="#R"/>do 
-          cum <name>Adam</name> quod non stat quod sit aliqua notitia 
+          cum <name ref="#Wodeham">Adam</name> quod non stat quod sit aliqua notitia 
           <lb ed="#R"/>immediate ab obiecto creato causata, quae sit infinitorum 
           <lb ed="#R"/>obiectorum et cuiuslibet distincte repraesentativa nisi forte prove<lb ed="#R"/>niret 
-          ex parte potentiae, sicut esset de <choice><orig>supprema</orig><reg>suprema</reg></choice><lb ed="#R"/>intelligentia, si daretur de qua non videretur magnum 
+          ex parte potentiae, sicut esset de suprema<lb ed="#R"/>intelligentia, si daretur de qua non videretur magnum 
           <lb ed="#R"/>inconveniens quod per praesentiam alicuius obiecti singularum causa<lb ed="#R"/>ret 
           notitiam obiecti ipsius et cuiuslibet individui illius 
           <lb ed="#R"/>speciei repraesentativam distincte, quia sicut tactum est in praecedentibus, 
@@ -182,7 +191,7 @@
           secundum perfectionem specierum, semper perfectior species 
           <cb ed="#R" n="56va" /><lb ed="#R"/>perfectiori modo concurrit. Et perfectiorem notitiam producit 
           <lb ed="#R"/>cum eodem concursu obiectivo omnino quantum est ex parte 
-          <lb ed="#R"/>obiecti. Et ideo non videtur magnum inconveniens si <choice><orig>sup<lb ed="#R"/>prema</orig><reg>sup<lb ed="#R"/>rema</reg></choice> 
+          <lb ed="#R"/>obiecti. Et ideo non videtur magnum inconveniens si sup<lb ed="#R"/>rema 
           intelligentia daretur quod per praesentiam eiusdem 
           <lb ed="#R"/>obiecti cum eodem concursu omnino posset causare notitiam 
           <lb ed="#R"/>ipsius et cuiuslibet individui illius speciei repraesentativa[?m}. 
@@ -245,12 +254,12 @@
           appareret bonum infinitum ad istum sensum quod mediante 
           <lb ed="#R"/>illa notitia immediate eliceretur iudicium quod est bonum 
           <lb ed="#R"/>infinitum. Unde illa simplex notitia esset quaedam 
-          <lb ed="#R"/>apparentia illius iudicii, sicut ponit <name>Adam</name><lb ed="#R"/>de baculo cuius una pars est in<app><lem>in</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">qu</del></rdg></app> aqua et alia 
+          <lb ed="#R"/>apparentia illius iudicii, sicut ponit <name ref="#Wodeham">Adam</name><lb ed="#R"/>de baculo cuius una pars est in<app><lem>in</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">qu</del></rdg></app> aqua et alia 
           <lb ed="#R"/>extra in aere, ita quod per illum modum secundum quem 
           <lb ed="#R"/>baculus sic videtur homo, qui non esset in<lb ed="#R"/>structus 
           in scientia in mathematica et perspectiva 
           <lb ed="#R"/>statim eliceret iudicium quod baculus esset fractus, 
-          <lb ed="#R"/>ita quod per illum modum dicit <name>Adam</name> quod per istam 
+          <lb ed="#R"/>ita quod per illum modum dicit <name ref="#Wodeham">Adam</name> quod per istam 
           <lb ed="#R"/>notitiam simplicem baculus apparet fractus, id est, quod 
           <lb ed="#R"/>mediate illa notitia immediate homo non imbutus 
           <lb ed="#R"/>in perspectivam eliceret iudicum quod talis baculus esset 
@@ -264,7 +273,7 @@
           <lb ed="#R"/>habet de ipso Deo.</p>
             
             <p xml:id="l33-apdnui">Aliter potest dici secundum opinionem 
-          <lb ed="#R"/><name>Magistri Ioannis de <choice><orig>Rippa</orig><reg>Ripa</reg></choice></name> ponentis rationes 
+          <lb ed="#R"/><name ref="#Ripa">Magistri Ioannis de Ripa</name> ponentis rationes 
           <lb ed="#R"/>formales in Deo quae absolute dicunt perfectio<lb ed="#R"/>nem 
           simpliciter et sunt ordinata inter se secundum 
           <lb ed="#R"/>praedicata essentialia, et tunc Deus per notitiam 
@@ -320,7 +329,7 @@
           <lb ed="#R"/>hic in via, sicut habuit Paulus, vel in patria, 
           <lb ed="#R"/>sicut habent beati potest causare evidens iudicum quod 
           <lb ed="#R"/>Deus habet infinitas perfectiones ipsum latentes, 
-          <lb ed="#R"/>ita quod<app><lem>quod</lem><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">ipsum</del></rdg></app> bene stat quod videns Deum 
+          <lb ed="#R"/>ita quod<app><lem/><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">ipsum</del></rdg></app> bene stat quod videns Deum 
           <lb ed="#R"/>intuitive eliciat evidens iudicum 
           <lb ed="#R"/>quod Deus habet infinitas perfectiones et quod infini<lb ed="#R"/>tae 
           sunt veritates de ipso Deo, ita quod infinita 
@@ -344,38 +353,38 @@
             <lb ed="#R"/>sicut est obiectum in se, quod est falsum. Nec proba<lb ed="#R"/>retur 
             infinitas notitiae per hoc quod repraesen<lb ed="#R"/>taret 
             obiectum infinitum secundum omne praedicatum de 
-            <cb ed="#R" n="57rb" /><lb ed="#R"/>Deo dicibile, nisi extrinseca denominatione, <choice><orig>sicud</orig><reg>sicut</reg></choice><lb ed="#R"/>patuit in lectione praecedenti.</p>
+            <cb ed="#R" n="57rb" /><lb ed="#R"/>Deo dicibile, nisi extrinseca denominatione, sicut<lb ed="#R"/>patuit in lectione praecedenti.</p>
           </div>
           <div>
             <head xml:id="l33-Hraoaor">Responsio ad octavam rationem</head>
             <p xml:id="l33-arqeir">Aliae rationes<note>See below <ref type="crossReference" target="dthreelecture19.xml#d3l19opadid">lectio 19, para.</ref></note> 
           <lb ed="#R"/>quae fundantur in comparatione sensus ad intellectum 
           <lb ed="#R"/>reducuntur breviter ad tria puncta. Aliquae 
-          <lb ed="#R"/>enim illarum procedunt et <choice><orig>defficiunt</orig><reg>dificiunt</reg></choice> in hoc: 
+          <lb ed="#R"/>enim illarum procedunt et dificiunt in hoc: 
           <lb ed="#R"/>quod sensus utitur organo corporeo et intellectus 
           <lb ed="#R"/>non, ideo sensus limitatur ad <sic>assentiendum</sic> obiectum 
           <lb ed="#R"/>sibi proportionatum ratione organi corporei, 
-          <lb ed="#R"/>intellectus autem non sic. Aliae <choice><orig>deffici<lb ed="#R"/>unt</orig><reg>defici<lb ed="#R"/>unt</reg></choice><lb ed="#R"/>ex illo <choice><orig>deffectu</orig><reg>defectu</reg></choice>, quia obiectum corpora<lb ed="#R"/>le 
+          <lb ed="#R"/>intellectus autem non sic. Aliae defici<lb ed="#R"/>unt<lb ed="#R"/>ex illo defectu, quia obiectum corpora<lb ed="#R"/>le 
           non potest applicari sensum, sicut spirituale 
           <lb ed="#R"/>intellectui, quia obiectum corporale requirit certam 
           <lb ed="#R"/>distantiam et certum angulum respectu potentiae sensitivae, 
           <lb ed="#R"/>obiectum autem spirituale est totaliter praesens intellectui 
           <lb ed="#R"/>nec requiritur distantia eius ab[ad?] intellectum[?], nec 
           <lb ed="#R"/>multiplicatio specierum, saltem localis. Ideo comparatio 
-          <lb ed="#R"/>sensus intellectum <choice><orig>defficit</orig><reg>deficit</reg></choice> ex illa radice.</p>
+          <lb ed="#R"/>sensus intellectum deficit ex illa radice.</p>
             
-            <p xml:id="l33-iadcid">Item aliae <choice><orig>defficiunt</orig><reg>deficiunt</reg></choice> ex alio, quia intendunt 
+            <p xml:id="l33-iadcid">Item aliae deficiunt ex alio, quia intendunt 
         <lb ed="#R"/>probare quod Deus non est cognoscibilis comprehensive, et 
         <lb ed="#R"/>hoc conceditur bene eis. Verum est quod in principio 
         <lb ed="#R"/>fuerunt adductae auctoritates ad probandum 
         <lb ed="#R"/>quod Deus non est a nobis cognoscibilis, quia Deum 
         <lb ed="#R"/>nemo vidit unquam, ergo Deus non est visibilis. 
-        <lb ed="#R"/>Item Apostolis "Deus inhabitat lucem inaccessibile."<note>1 Tim VI, 16[?]</note></p>
+        <lb ed="#R"/>Item <name ref="#Apostles" type="group">Apostolis</name> <quote type="Biblical">"Deus inhabitat lucem inaccessibile."</quote><note>1 Tim VI, 16[?]</note></p>
             
             <p xml:id="l33-aiacid">Ad istas auctoritates respondetur: primo 
-        <lb ed="#R"/>quod omnes huiusmodi[?} auctoritates possunt intelligi 
+        <lb ed="#R"/>quod omnes huiusmodi[?] auctoritates possunt intelligi 
         <lb ed="#R"/>de notitia adaequate comprehensiva ipsius Dei. 
-        <lb ed="#R"/>Ita quod Deum nemo vidit <choice><orig>unquam</orig><reg>umquam</reg></choice> adaequate 
+        <lb ed="#R"/>Ita quod Deum nemo vidit umquam adaequate 
         <lb ed="#R"/>comprehensive, Deus inhabitat lucem inaccessi<lb ed="#R"/>bilem 
       cognitive adaequate comprehensiva ipsius 
         <lb ed="#R"/>Dei.</p>
@@ -428,12 +437,12 @@
         quod homo sit in caritate.</p>
             
             <p xml:id="l33-acamaf">Aliam 
-        <lb ed="#R"/>causam assignant <name>Sanctus Thomas</name> et plures alii, 
+        <lb ed="#R"/>causam assignant <name ref="#Aquinas">Sanctus Thomas</name> et plures alii, 
         <lb ed="#R"/>quare, scilicet, licet 'Deum esse' sit scientifice demonstrabile, 
         <lb ed="#R"/>tamen traditur ad credendum per modum articuli fidei.</p>
             
             <p xml:id="l33-uecone">
-              <lb ed="#R"/>Una est causa <choice><orig>deffectus</orig><reg>defectus</reg></choice> ingenii, quia licet 
+              <lb ed="#R"/>Una est causa defectus ingenii, quia licet 
         <lb ed="#R"/>'Deum esse' sit scientifice demonstrabile, tamen non nisi ingeniosis. Modo, fides est omnibus necessaria, ideo 
         <lb ed="#R"/>etc.</p>
             
@@ -466,11 +475,11 @@
             <p xml:id="l33-edsevd">Ex dictis sequitur quod huma<lb ed="#R"/>na 
           investigatio indiget fide et theologicis 
           <lb ed="#R"/>veritatibus, nam humana investigatio non 
-          <lb ed="#R"/>adiuta fide vel gratia Dei non attingeret<lb ed="#R"/><app><lem>attingeret</lem><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">vel</del></rdg></app> 
+          <lb ed="#R"/>adiuta fide vel gratia Dei non attingeret<lb ed="#R"/><app><lem/><rdg wit="#R" type="add.sed.del."><del rend="strikethrough">vel</del></rdg></app> 
           ad Dei notitiam. Et per consequens vel humana in<lb ed="#R"/>vestigatio 
           debet esse iuta a fide et veritatibus 
           <lb ed="#R"/>theologicis vel totaliter deficeret. Unde circa 
-          <cb ed="#R" n="57vb" /><lb ed="#R"/>hoc ponit <name>Philosophus</name><choice><orig><num>primo</num></orig><reg><num>Io</num></reg></choice><title>Ethicorum</title>, et etiam quaedam 
+          <cb ed="#R" n="57vb" /><lb ed="#R"/>hoc ponit <name ref="#Aristotle">Philosophus</name> <num>Io</num> <title ref="#Ethics">Ethicorum</title>, et etiam quaedam 
           <lb ed="#R"/>poeta vocatus triplicem esse virum. Unum 
           <lb ed="#R"/>quae sufficit sibi ipsi et aliis, et hic est 
           <lb ed="#R"/>optimus vir. Sed alius vir est qui non sufficit 
@@ -480,11 +489,11 @@
           <lb ed="#R"/>Ita quod in proposito, humana investigatio debet 
           <lb ed="#R"/>medium tenere et fides et veritates theologicae 
           <lb ed="#R"/>tenent primum. Si enim humana investigatio 
-          <lb ed="#R"/>sibi derelinquetur, <choice><orig>defficit</orig><reg>deficit</reg></choice>, si autem dirigatur 
+          <lb ed="#R"/>sibi derelinquetur, deficit, si autem dirigatur 
           <lb ed="#R"/>a fide et a veritatibus theologicis non poterit erra<lb ed="#R"/>re 
-          vel <choice><orig>defficere</orig><reg>deficere</reg></choice>.</p>
+          vel deficere.</p>
             
-            <p xml:id="l33-eiafne">Ex istis apparet contra <choice><orig><name>Averoyim</name></orig><reg><name>Averroes</name></reg></choice><lb ed="#R"/>dicentem quod fides sit imprae[?]vidium[?] et impedimentum do<lb ed="#R"/>ctrinae. 
+            <p xml:id="l33-eiafne">Ex istis apparet contra <name ref="#Averroes">Averroes</name> <lb ed="#R"/>dicentem quod fides sit imprae[?]vidium[?] et impedimentum do<lb ed="#R"/>ctrinae. 
             Immo alias doctrina sine fide nulla 
             <lb ed="#R"/>esset.</p>
             
@@ -498,24 +507,24 @@
         <lb ed="#R"/>suas causas. Patet etiam in philosophia morali de 
         <lb ed="#R"/>sua felicitate, et sic de aliis. Et generaliter theologia 
         <lb ed="#R"/>est omnium scientiarum perfectissime directiva, et istud 
-        <lb ed="#R"/>concordat directe dicot <name>Apostoli</name><title>ad Ephesios</title><lb ed="#R"/>VIo[?IV], nam amplius inquit "ambulant gentes 
+        <lb ed="#R"/>concordat directe dicat[?] <name ref="#Paul">Apostoli[?]</name> <title>ad Ephesios</title><lb ed="#R"/>VIo[?IV], nam amplius inquit "ambulant gentes 
         <lb ed="#R"/>in vanitate sensus tenebris intellectum obscuratum 
-        <lb ed="#R"/>habentes." Secundum illud <choice><orig><title>Ysaiae</title></orig><reg>Isaiae</reg></choice> 18 ponam universales 
+        <lb ed="#R"/>habentes." Secundum illud Isaiae 18 ponam universales 
         <lb ed="#R"/>filios meos doctos a domino.</p>
             
             <p xml:id="l33-sefpss">Sequendo ergo fidem 
         <lb ed="#R"/>et veritates theologicas, possumus cognoscere 'Deum 
           <lb ed="#R"/>esse', et istud est primum principium et prima veritas in 
-          <lb ed="#R"/>theologia ex qua <choice><orig><name>Brawardin</name></orig><reg>Bradwardine</reg></choice> infert plusquam 
+          <lb ed="#R"/>theologia ex qua <name ref="#Bradwardine">Bradwardine</name> infert plusquam 
           <lb ed="#R"/>quinquaginta conclusiones. Et ideo remitto vos 
-          <lb ed="#R"/>ad ipsum in prima parte <title>Summae</title> suae.</p>
+          <lb ed="#R"/>ad ipsum in prima parte <title ref="#CausaDei">Summae</title> suae.</p>
             
             <p xml:id="l33-eiansa">Ex istis apparet 
           <lb ed="#R"/>quomodo testibus contra fidem respondendum sit. Respondendum sic: Primus[?Primis?] enim 
           <lb ed="#R"/>testis est insinuat se: "dicit insipiens 
           <lb ed="#R"/>in corde suo 'non est Deus'." Ideo humana in<lb ed="#R"/>vestigatio 
           directa fide percipit clare quod 
-          <lb ed="#R"/>huiusmodi testes sunt indispositi et non <choice><orig>ydonei</orig><reg>idonei</reg></choice>. 
+          <lb ed="#R"/>huiusmodi testes sunt indispositi et non idonei. 
           <lb ed="#R"/>Ideo respondendum est quod se diffamant et non sunt 
           <lb ed="#R"/>audiendi.</p>
             
