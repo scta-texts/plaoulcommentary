@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-07">July 7th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
+    </front>
     <body>
       <div xml:id="lectio40">
         <head subtype="title" xml:id="l40-Hldfldf">Lectio 40, de Fruitione</head>
@@ -75,10 +84,10 @@
           <lb ed="#SV"/>qua ratione pater diligit filium, et sic si filius in esse personali 
           <lb ed="#SV"/>non dicat rationem fruibilis, ergo nec rationem bonitatis.</p>
         
-        <p xml:id="l40-eqdsde"><lb ed="#SV"/>Etiam quaereretur de tota civitate, etiam apud formalizantes quaere<lb ed="#SV"/>retur 
+        <p xml:id="l40-eqdsde"><lb ed="#SV"/>Etiam quaereretur de tota civitate, etiam apud <name ref="#formalizantes" type="group">formalizantes</name> quaere<lb ed="#SV"/>retur 
           sub qua ratione compraehendit se divina essentia.</p>
       
-        <p xml:id="l40-iaqpoe">Item<note type="crossReference">See below <ref target="donelecture39.xml#d1l39schuvf">Lecture 39, para. </ref> and response at <ref target="donelecture39.xml#d1l39crsuef">Lecture 39, para</ref></note> confirmatur[?] 
+        <p xml:id="l40-iaqpoe">Item<note type="crossReference">See below <ref target="donelecture39.xml#d1l39schuvf">Lecture 39, para. </ref> and response at <ref target="donelecture39.xml#d1l39crsuef">Lecture 39, para</ref></note> <unclear>confirmatur[?]</unclear> 
           <lb ed="#SV"/>quia idem actus est usus et fruitio ordinata sit, ergo ille actus <c>a</c>, 
           tunc est fruitio et habet creaturam pro obiecto, ergo.</p>
       </div>
@@ -94,7 +103,7 @@
                 <lb ed="#SV"/>concurrere ad dilectionem dei fruitivam primo ut ostensiva 
                 <lb ed="#SV"/>rationis diligibilitatis intrinsece nam ex diffinitione bonitatis ad extra 
                 <lb ed="#SV"/>arguitur interior bonitas, et ideo beneficia sunt iudicativa 
-                <lb ed="#SV"/>intrinsece bonitatis, et hoc est <sic>conlusione</sic>, quia omnis operatio liberalitatis 
+                <lb ed="#SV"/>intrinsece bonitatis, et hoc est conclusione, quia omnis operatio liberalitatis 
                 <lb ed="#SV"/>iudicat virtutem in dante et isto modo  beneficia 
                 <lb ed="#SV"/>divina arguunt ad intra summam bonitatem et largitatem modo 
                 <lb ed="#SV"/>ex hoc quod beneficia solum iudicant non propter hoc habent 
@@ -137,10 +146,10 @@
                 <lb ed="#SV"/>li 'propter' se capitur negative vel positive, dicendum quod positive capitur 
                 <lb ed="#SV"/>et non negative, quia tunc illa dilectio propter quam diligeretur 
                 <lb ed="#SV"/>deus non referretur. Sed ibi est difficultas in modo exprimendi, 
-                <lb ed="#SV"/>et breviter <name>okam</name> dicit quod deus diligitur propter se, quia deus 
+                <lb ed="#SV"/>et breviter <name ref="#Ockahm">okam</name> dicit quod deus diligitur propter se, quia deus 
                 <lb ed="#SV"/>diligitur et propter nullum aliud, et quodlibet aliud diligitur 
                 <lb ed="#SV"/>propter ipsum loquendo semper de dilectione fruitiva. et in hoc dicitur 
-                <lb ed="#SV"/>deus diligi propter se secundum imaginationem <name>okam</name> sed illud pro praesenti 
+                <lb ed="#SV"/>deus diligi propter se secundum imaginationem <name ref="#Ockham">okam</name> sed illud pro praesenti 
                 <lb ed="#SV"/>non Reprobabitur.</p>
       
               <p xml:id="l40-seasod">Sed est alius modus magis gratus, ubi 
@@ -151,7 +160,7 @@
                 <lb ed="#SV"/>hoc assumitur maior quae est legis et hanc maiorem accepto 
                 <lb ed="#SV"/>per fidem, quia credo ex fide deum esse super omnia diligendum, 
                 <lb ed="#SV"/>et minor sumitur participaliter et illa sumitur aliquod supponens 
-                <lb ed="#SV"/>quod deo, nam hic li propter se vel Refert<add place="aboveLine">ad</add> maiorem universalem 
+                <lb ed="#SV"/>quod deo, nam hic li propter se vel Refert ad maiorem universalem 
                 <lb ed="#SV"/>vel ad medium quod sumitur in minori, et debet li propter re<lb ed="#SV"/>ferri 
                 ad notitiam de illo pro quo supponit in minore, quia 
                 <lb ed="#SV"/>non est aliud dicere quod consideratio deitatis est medium 
