@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-10">July 10th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio41">
         <head subtype="title" xml:id="l41-Hldfldf">Lectio 41, de Fruitione</head>
@@ -43,7 +52,7 @@
             <p xml:id="l41-aecasp">Advertendum 
               <lb ed="#S"/>est circa materiam motam quae realiter est materia prae<lb ed="#S"/>cepti 
               de dilectione dei et proximi quantum ad sui 
-              <lb ed="#S"/>principatem[?].</p>
+              <lb ed="#S"/><unclear>principatem[?]</unclear>.</p>
       
             <p xml:id="l41-qeadpd">quantum est ad punctum materiae doctores sa<lb ed="#S"/>tis 
               concordant quod secundum ordinem rerum esset 
@@ -79,7 +88,7 @@
           <head xml:id="l41-Hpsvsve">Propositiones sequendo viam <name>Eliphatus</name></head>
           
           <p xml:id="l41-pdmpap">pro declaratione materiae 
-            <lb ed="#S"/>sequendo viam <name>eliphat</name> pono aliquas propositiones.</p>
+            <lb ed="#S"/>sequendo viam <name ref="#RobertHalifax">eliphat</name> pono aliquas propositiones.</p>
           
           <div>
           
@@ -112,7 +121,7 @@
          
           <div>
           
-            <head xml:id="l41-Htpqoud">Tertia propositio: Quod[? ... ?] aliud a Deo potest esse obiectum usus diligenti[??]</head>  
+            <head xml:id="l41-Htpqoud">Tertia propositio: <unclear>Quod[?..?]</unclear> aliud a Deo potest esse obiectum usus <unclear>diligenti[??]</unclear></head>  
           
             <p xml:id="l41-tpotsb">tertia propositio: omne aliud a deo potest esse 
               <lb ed="#S"/>obiectum usus ordinati, immo debet esse, patet ex habitudine 
@@ -135,12 +144,12 @@
           <div>
             <head xml:id="l41-Hqpqvpa">Quinta propositio: quicquid vult voluntas, vult propter se vel propter aliud</head>
             
-            <p xml:id="l41-qpqiqi">auinta propositio: quicquid 
+            <p xml:id="l41-qpqiqi">quinta propositio: quicquid 
               <lb ed="#S"/>vult voluntas, vult propter se vel propter aliud. et 
               <lb ed="#S"/>in ista propositione stat tota radix materiae praesentis, 
-              <lb ed="#S"/>&gt;probatur nam voluntas est causa per se ergo agis propter finem, 
-              <lb ed="#S"/>et hoc trahitur ex IIo <title>physicorum</title> et commento <title>metaphysicae</title>. Item 
-              <lb ed="#S"/>ad idem est <name>anselmus</name> in variis locis, ubi ponit 
+              <lb ed="#S"/>probatur nam voluntas est causa per se ergo agis propter finem, 
+              <lb ed="#S"/>et hoc trahitur ex IIo <title ref="#Physics">physicorum</title> et <title ref="#MetaphysicsCommentary">commento metaphysicae</title>. Item 
+              <lb ed="#S"/>ad idem est <name ref="#Anselm">anselmus</name> in variis locis, ubi ponit 
               <lb ed="#S"/>quod voluntas numquam exit in actum, nisi habeat cur 
               <lb ed="#S"/>hoc est nisi propter aliquem finem quem intendit vel 
               <lb ed="#S"/>propter aliud ad quod ordinat ipsum quod 
@@ -180,22 +189,22 @@
           
           </div>
         <div>
-          <head xml:id="l41-Hcecece">Conclusio <name>Elipahti</name></head>
+          <head xml:id="l41-Hcecece">Conclusio <name ref="#RobertHalifax">Elipahti</name></head>
           
           <p xml:id="l41-tsiorc">tunc secundum ista apparet in sequendo viam 
-            <lb ed="#S"/><name>eliphat</name> quomodo omnis actus voluntatis deliberatus est 
+            <lb ed="#S"/><name ref="#RobertHalifax">eliphat</name> quomodo omnis actus voluntatis deliberatus est 
             <lb ed="#S"/>usus vel fruitio, et quomodo non potest haberi licite 
             <lb ed="#S"/>usus respectu dei nec fruitio ordinata respectu creaturae.</p>
         </div>
           </div>
       <div>
         
-        <head xml:id="l41-Hocvcve">Obiecto contra viam <name>Eliphati</name></head>
+        <head xml:id="l41-Hocvcve">Obiecto contra viam <name ref="#RobertHalifax">Eliphati</name></head>
         
         <p xml:id="l41-schuvf"><lb ed="#S"/>Sed contra hoc est argumentum, quia bonum sub ratione boni in communi 
           <lb ed="#S"/>diligitur propter se sine relatione ad aliud. Item idem actus 
           <lb ed="#S"/>est usus et fruitio et sic fruitio habet aliquid creatum pro obiecto. 
-          <lb ed="#S"/>hic Respondet <name>eliphat</name> quod nullo modo voluntas potest habere 
+          <lb ed="#S"/>hic Respondet <name ref="#RobertHalifax">eliphat</name> quod nullo modo voluntas potest habere 
           <lb ed="#S"/>actum deliberatum quin sit usus vel fruitio.</p>
       
         <p xml:id="l41-ucadps">unde 
@@ -252,7 +261,7 @@
               propter finem, licet non experiamur ut quia 
               <lb ed="#S"/>damus propter deum ex aliqua speciali volitio<lb ed="#S"/>ne, 
               et sic datio elemosivae est usus licitus, vel 
-              <lb ed="#S"/>damus ex affectione commodo[?}, vel propter vanam \
+              <lb ed="#S"/>damus ex affectione commodo[?}, vel propter vanam 
               <lb ed="#S"/>gloriam vel timore, et sic non est licitus, 
               <lb ed="#S"/>quia debet fieri propter alium finem, et sic non 
               <lb ed="#S"/>stat voluntatem aliquid agere nisi directa a 
@@ -263,8 +272,8 @@
               ad bonum finem vel ad malum, 
               <lb ed="#S"/>et ex consequenti haberet dicere iste doctor 
               <lb ed="#S"/>quod nullus est actus deliberatus quoniam sit meritum 
-              <lb ed="#S"/>vel culpa et ad hoc allegat <name>augustinum</name> 
-              <lb ed="#S"/>contra <name>Iulianum</name>, ubi dicit quod omnis actus deli<lb ed="#S"/>beratus 
+              <lb ed="#S"/>vel culpa et ad hoc allegat <name ref="#Augustine">augustinum</name> 
+              <lb ed="#S"/>contra <name ref="#Julian">Iulianum</name>, ubi dicit quod omnis actus deli<lb ed="#S"/>beratus 
               infidelis est peccatum et ponit exemplum, 
               <lb ed="#S"/>si infidelis pascat famelicum vel 
               <lb ed="#S"/>iudicat nudum hoc facit ex vana gloria, 
@@ -281,11 +290,11 @@
               circa huiusmodi obiectum ex quo est bonum 
               <lb ed="#S"/>hoc potest, tunc ille actus non erit usus 
               <lb ed="#S"/>vel fruitio, non usus quia tunc exponentis 
-              <lb ed="#S"/>se periculo et distrim[?], quia tunc uteretur 
+              <lb ed="#S"/>se periculo et <unclear>distrim[?]</unclear>, quia tunc uteretur 
               <lb ed="#S"/>deo.</p>
       
             <p xml:id="l41-ineupe">Item nec esset fruitio, quia eodem modo 
-              <lb ed="#S"/>se exponeret periculo et distritum[?], quia 
+              <lb ed="#S"/>se exponeret periculo et <unclear>distritum[?]</unclear>, quia 
               <lb ed="#S"/>nescit utrum sit deus vel creatura, 
               <lb ed="#S"/>igitur cum necessario non habebit actum malum 
               <lb ed="#S"/>habebit actum bonum et ille non erit usus 
@@ -297,7 +306,7 @@
               <lb ed="#S"/>stante casu si frueretur vel uteretur expo<lb ed="#S"/>neret 
               se periculo, ideo in isto casu voluntas 
               <lb ed="#S"/>non exibit in actum sed tunc fortitudo 
-              <lb ed="#S"/>casum ponatur canus[?] quod deus revelet 
+              <lb ed="#S"/>casum ponatur <unclear>canus[?]</unclear> quod deus revelet 
               <lb ed="#S"/>sibi quod sit deus vel creatura et tunc 
               <lb ed="#S"/>praecipiat voluntati quod eliciat actum. Respondetur 
               <lb ed="#S"/>quod casus est impossibilis nisi revelet sibi 
@@ -353,7 +362,7 @@
             <p xml:id="l41-cpeidd"><lb ed="#S"/>circa primum est advertendum quod dilectio appreciative causatur 
               <lb ed="#S"/>dupliciter. uno modo dilectio appreciativa est sequens iudicium 
               <lb ed="#S"/>de divina perfectione, et solet quantificari secundum 
-              <lb ed="#S"/>iudicium praecedens in intellectu, ut si <name>sortes</name> 
+              <lb ed="#S"/>iudicium praecedens in intellectu, ut si <name ref="#Sortes">sortes</name> 
               <lb ed="#S"/>iudicet quod deus est summum bonum, tunc di<lb ed="#S"/>lectio 
               sequens est dilectio appreciativa et quantificatur 
               <lb ed="#S"/>secundum iudicium quod est in intellectu et 
