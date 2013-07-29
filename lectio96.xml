@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio96">
         <head xml:id="l96-Hldlldl" subtype="title">Lectio 96, de Libertate</head>
@@ -65,20 +74,20 @@
           
           <p xml:id="l96-usqcsv">unde secundum 
             <lb ed="#SV"/>quod legitur in <title>itinerario elementis</title> ubi introducitur 
-            <lb ed="#SV"/>disputatio <name rend="#Peter">petri</name> contra <name>simonem magum</name> narratur 
+            <lb ed="#SV"/>disputatio <name ref="#Peter">petri</name> contra <name ref="#SimonMagician">simonem magum</name> narratur 
             <lb ed="#SV"/>ibi quosdam coluisse <unclear>stepitum[?]</unclear> ventris.</p>
           
-          <p xml:id="l96-ircrcf">Item <name>romani</name> colebant 
+          <p xml:id="l96-ircrcf">Item <name ref="#Romans" type="group">romani</name> colebant 
             febrem deum.</p> 
           
           <p xml:id="l96-igpaes">Item <name rend="#WilliamOfParis">guillelmus parisiensis</name> in libro 
-            <lb ed="#SV"/><title>de fide et legibus</title> dicit quosdam barbaros <unclear>aquilonares[?]</unclear> 
+            <lb ed="#SV"/><title ref="#OnFaithAndLaws">de fide et legibus</title> dicit quosdam barbaros <unclear>aquilonares[?]</unclear> 
             <lb ed="#SV"/>tanquam deum tonitruum colere propter mirabilitatem effectus 
             <lb ed="#SV"/>illius apud eos immo et omnis species idolatriae et 
             <lb ed="#SV"/>superstitionum a vulgo indocto fide et philosophia carente videtur 
             <lb ed="#SV"/>sumpsisse originem. et ideo scribitur in <title ref="#Psalms">psalmo</title> mutaverunt 
             <lb ed="#SV"/>gloriam dei in similitudinem vituli <unclear>comendentes[?]</unclear> fenum 
-            <lb ed="#SV"/>et <title>ad Romanos</title> primo capitulo scribitur mutaverunt gloriam 
+            <lb ed="#SV"/>et <title ref="#RomansEpistle">ad Romanos</title> primo capitulo scribitur mutaverunt gloriam 
             <lb ed="#SV"/>incorruptibilem dei in similitudinem imaginis corruptibilis 
             <lb ed="#SV"/>hominis et <unclear>voluc??m[?]</unclear> et quadrupedum et serpentum.</p>
           
@@ -105,8 +114,8 @@
             ad litteram et sic de varietate et pluralitate 
             <lb ed="#SV"/>deorum varii varia scripserunt poetae. ideo alii 
             <lb ed="#SV"/>posuerunt unum deum esse primum sequentes doctrinam 
-            <lb ed="#SV"/><name>parmenidis</name> qui posuit aquam esse deum. et alii 
-            <lb ed="#SV"/>posuerunt unum deum sequendo viam <name rend="#Aristotle">aristotelis</name> ponentis 
+            <lb ed="#SV"/><name ref="#Parmenides">parmenidis</name> qui posuit aquam esse deum. et alii 
+            <lb ed="#SV"/>posuerunt unum deum sequendo viam <name ref="#Aristotle">aristotelis</name> ponentis 
             <lb ed="#SV"/>unam prima causam.</p>
           
           <p xml:id="l96-cqeppd">Circa quod est advertendum quod 
@@ -160,7 +169,7 @@
           <p xml:id="l96-arsapn">Alii 
             <lb ed="#SV"/>Resolvunt se mixti ad divinam providentiam cum con<lb ed="#SV"/>catenatione 
             causarum secondarium, et sic secundum varios modos 
-            <lb ed="#SV"/>est intentio dicere de fato iuxta opinionem <name rend="#Aristotle">philosophi</name> et <name rend="#Avicenna">avicennae</name> 
+            <lb ed="#SV"/>est intentio dicere de fato iuxta opinionem <name ref="#Aristotle">philosophi</name> et <name ref="#Avicenna">avicennae</name> 
             et aliorum philosophorum notabiliorum.</p>
         </div>
         <div>
@@ -187,9 +196,9 @@
         
             <p xml:id="l96-siodid">Sed ista opinio nedum est contra sa<lb ed="#SV"/>cram 
               scripturam seu doctrinam et fidem orthodoxam, 
-              <lb ed="#SV"/>sed etiam contra philosophiam. nam quod sit supremus princeps 
-              <lb ed="#SV"/>et non curet de Regimine politiae est veritati atque 
-              <lb ed="#SV"/>sapientiae dissonum. ideo dicebat <name ref="#Aristotle">aristoteles</name> entia no<lb ed="#SV"/>lo 
+              <lb ed="#SV"/>sed etiam contra philosophiam. <seg ana="#politica">nam quod sit supremus princeps 
+              <lb ed="#SV"/>et non curet de regimine politiae est veritati atque 
+              <lb ed="#SV"/>sapientiae dissonum</seg>. ideo dicebat <name ref="#Aristotle">aristoteles</name> entia no<lb ed="#SV"/>lo 
               male Regi unus, ergo princeps, et ista via 
               <lb ed="#SV"/>secutus est <unclear>epiculus[?]</unclear> et sui sequaces sed, quia posuit 
               <lb ed="#SV"/>felicitatem consistere in voluptatibus ideo ut volu<lb ed="#SV"/>ptatibus 
@@ -224,8 +233,8 @@
               <lb ed="#SV"/><name ref="#Aristotle">aristoteles</name> apparet quod non est verum quod ipse hanc opinionem 
               <lb ed="#SV"/>tenuerit. et probatur ratione, quia ut allegatum est in XIIo 
               <lb ed="#SV"/><title ref="#Metaphysics">metaphysicae</title> <name ref="#Aristotle">aristoteles</name> loquitur decens entia nolo ma<lb ed="#SV"/>le 
-              Regi unus ergo princeps, igitur deus est Rector 
-              <lb ed="#SV"/>unibilis politiae.</p>
+              Regi unus ergo princeps, <seg ana="#politica">igitur deus est Rector 
+              <lb ed="#SV"/><unclear>unibilis[?]</unclear> politiae</seg>.</p>
             
             <p xml:id="l96-sacsei">secundo arguitur confirmando si ima<lb ed="#SV"/>ginetur 
               quod maior mundus sit ad modum animalis 
