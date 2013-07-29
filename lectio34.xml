@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-05-29">May 29th, 2012</date>  
       </publicationStmt>
@@ -35,6 +37,13 @@
     </encodingDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio34">
         <head xml:id="l34-Hldldld" subtype="title">Lectio 34, de Fruitione</head>
@@ -48,11 +57,11 @@
         <lb ed="#R"/>intellectum.</p> 
           
           <p xml:id="l34-eeqcphf">Et quia circa felicitatem erraverunt 
-        <lb ed="#R"/>multi antiqui ut, scilicet, declarat <name>Augustinus</name> et <name>Aristoteles</name>
-        <lb ed="#R"/>Io <title>Ethicorum</title> ut Epicuri qui posuerunt fe<lb ed="#R"/>licitatem 
+        <lb ed="#R"/>multi antiqui ut, scilicet, declarat <name ref="#Augustine">Augustinus</name> et <name ref="#Aristotle">Aristoteles</name>
+        <lb ed="#R"/>Io <title ref="#Ethics">Ethicorum</title> ut <name ref="#Epicurus">Epicuri</name> qui posuerunt fe<lb ed="#R"/>licitatem 
       in voluptatibus et sic de aliis. Ideo ad hoc, quod humana 
         <lb ed="#R"/>investigatio sit certa<app><lem>certa</lem><rdg wit="R" type="om."/></app> circa hoc indiget<app><lem>indiget</lem><rdg wit="R" type="om."/></app> theologia et sapientia. Et 
-        <lb ed="#R"/>istam partem sapientiae tradidit<app><lem>tradidit</lem><rdg wit="S">tradit</rdg></app> <name>Magister</name> in prima 
+        <lb ed="#R"/>istam partem sapientiae tradidit<app><lem>tradidit</lem><rdg wit="S">tradit</rdg></app> <name ref="#Lombard">Magister</name> in prima 
         <lb ed="#R"/>distinctione. Probatur ergo ratione quod in nulla creatura sit ponenda 
         <lb ed="#R"/>huiusmodi<app><lem>huiusmodi</lem><rdg wit="SV">huius</rdg></app> felicitas.</p> 
           
@@ -84,24 +93,24 @@
           <p xml:id="l34-sinrpb"><lb ed="#R"/>Secundo, in nulla creatura reperitur ratio perfectae 
         <lb ed="#R"/>bonitatis.</p>
         
-          <p xml:id="l34-mfepob">Modo <quote xml:id="d1l34QBfesbap" type="ChurchFathers">"felicitas est status omnium 
-        <lb ed="#R"/>bonorum aggregative perfectus."</quote><note><name>Boethius</name>, <title>Consolatio Philosophiae</title>, III, 2, Liquet igitur esse beatitudinem statum bonorum omnium congregatione perfectum</note> per <name>Boetium</name>. 
+          <p xml:id="l34-mfepob">Modo <quote xml:id="d1l34QBfesbap" type="Patristic">"felicitas est status omnium 
+        <lb ed="#R"/>bonorum aggregative perfectus."</quote><note><name ref="#Boethius">Boethius</name>, <title ref="#Consolation">Consolatio Philosophiae</title>, III, 2, Liquet igitur esse beatitudinem statum bonorum omnium congregatione perfectum</note> per <name ref="#Boethius">Boetium</name>. 
         <lb ed="#R"/>Modo, in nulla creatura est plenitudo 
         <lb ed="#R"/>omnium bonorum.</p> 
           
           <p xml:id="l34-iichbf">Item in creatura sunt imperfectiones 
-            <lb ed="#R"/>multae, ideo in nulla creatura potest esse terminus<app><lem>terminus</lem><rdg wit="R" type="add.sed.del."><del rend="expunctuated">habitudines</del></rdg></app> 
+            <lb ed="#R"/>multae, ideo in nulla creatura potest esse terminus<app><lem/><rdg wit="R" type="add.sed.del."><del rend="expunctuated">habitudines</del></rdg></app> 
             <lb ed="#R"/>beatitudinis finalis.</p> 
       
           <p xml:id="l34-iofpef">Item obiectum finale 
         <lb ed="#R"/>sub ratione finis est quod sit principium omnium bonorum 
-        <lb ed="#R"/>et plenitudo fundamentaria[?] et productiva omnium, 
+        <lb ed="#R"/>et plenitudo <unclear>fundamentaria[?]</unclear> et productiva omnium, 
         <lb ed="#R"/>et quod omnia redeunt in illud principium. Modo 
         <lb ed="#R"/>nulla creatura est illo modo principium, ergo in solo Deo quod 
         <lb ed="#R"/>est principium fundamentale et plenitudo omnium bo<lb ed="#R"/>norum 
         ad quem redeunt omnes creaturae est 
-        <lb ed="#R"/>felicitas. Ideo non sine causa vocatur Deus a[?] in 
-        <lb ed="#R"/><title>Apocalypsis</title> <quote xml:id="d1l34QBaeopef" type="BibleVerse">"alpha et omega principium et finis."&gt;</quote></p>
+        <lb ed="#R"/>felicitas. Ideo non sine causa vocatur Deus <unclear>a[?]</unclear> in 
+        <lb ed="#R"/><title ref="#Revalations">Apocalypsis</title> <quote xml:id="d1l34QBaeopef" type="Biblical">"alpha et omega principium et finis."&gt;</quote></p>
       
         </div>
         </div>
@@ -111,7 +120,7 @@
             
           <p xml:id="l34-eeiiep">Et 
         <lb ed="#R"/>ex istis, sequitur evidenter quod Deus est sum<lb ed="#R"/>ma bonitas mentis quietativa in quo 
-        <lb ed="#R"/>ponendus est finis laetitiae. Et ideo <name>Magister</name> 
+        <lb ed="#R"/>ponendus est finis laetitiae. Et ideo <name ref="#Lombard">Magister</name> 
         <lb ed="#R"/>usus est istis terminis 'frui' et 'uti', utrum est 
         <lb ed="#R"/>quod ista materia tractatur sub aliis terminis dando 
         <lb ed="#R"/>mandatum de dilectione Dei, scilicet, "dilige Dominum 
@@ -119,7 +128,7 @@
         <lb ed="#R"/>corde, ex totis viribus," scilicet quod mens feratur 
         <lb ed="#R"/>se tota, scilicet, ex totis viribus in Deum 
         <lb ed="#R"/>et illud mandatum est maximum et et ma<lb ed="#R"/>ximum 
-        in lege per cuius observationem, ingre<lb ed="#R"/>ditur[?] 
+        in lege per cuius observationem, <unclear>ingre<lb ed="#R"/>ditur[?]</unclear> 
             quis vitam. Dilectio ergo Dei ex 
         <lb ed="#R"/>tota anima, scilicet propter se, non est propter commodum 
         <lb ed="#R"/>est fruitio. Consequenter praecipit diligi proximum 
@@ -130,7 +139,7 @@
           <head xml:id="l34-Hqddped">Quomodo Deus debemus diligi toto corde et proximus est diligendus</head>
         
           <p xml:id="l34-eimddt"><lb ed="#R"/>Et ideo materia huius distinctionis tractatur quomodo Deus 
-        <lb ed="#R"/>debemus[?] diligi toto corde et proximus est 
+        <lb ed="#R"/><unclear>debemus[?]</unclear> diligi toto corde et proximus est 
         <lb ed="#R"/>diligendus. Et dilectio Dei super omnia est 
         <lb ed="#R"/>dilectio quae non debet referi in aliud, sed diligi 
         <lb ed="#R"/>debet propter suam bonitatem. Et diligere proximum 
@@ -153,22 +162,22 @@
         <lb ed="#R"/>relatione actuali.</p>
       
           <p xml:id="l34-tsphia">Tertio, strictius pro actu vo<lb ed="#R"/>luntatis 
-        respectu obiecti inre?fi?liter[?] actu vel habitu 
+        respectu obiecti <unclear>inre?fi?liter[?]</unclear> actu vel habitu 
         <lb ed="#R"/>in aliud.</p> 
         
           <p xml:id="l34-escuca">Et sic capitur in proposito, et posterius 
         <lb ed="#R"/>videbitur, utrum eodem actu diligitur Deus 
         <lb ed="#R"/>et creatura, et hoc non refert quantum ad materiam. 
-        <lb ed="#R"/>Similiter, usus quandoque causatur communissime[?], ut in <name>To<lb ed="#R"/>picis</name> 
-      cum dicitur[?], cuius usus bonus ipsum quoque 
+        <lb ed="#R"/>Similiter, usus quandoque causatur <unclear>communissime[?]</unclear>, ut in <name ref="#Topics">To<lb ed="#R"/>picis</name> 
+      cum <unclear>dicitur[?]</unclear>, cuius usus bonus ipsum quoque 
         <lb ed="#R"/>bonum est.</p> 
           
           <p xml:id="l34-apapas">Aliquando pro acceptare vel deac<lb ed="#R"/>ceptare 
-        propter aliud sumendum[?].</p> 
+        propter aliud <unclear>sumendum[?]</unclear>.</p> 
         
         <p xml:id="l34-apauca">Aliquando pro 
         <lb ed="#R"/>acceptare vel deacceptare aliquid propter 
-        <lb ed="#R"/>aliud quo sumendum[?] est. Et isto modo dicitur uti 
+        <lb ed="#R"/>aliud quo <unclear>sumendum[?]</unclear> est. Et isto modo dicitur uti 
         <lb ed="#R"/>contra abuti.</p>
         </div>
        </div> 
@@ -189,9 +198,9 @@
         <p xml:id="l34-paphsf">Primo<note type="crossReference">See above <ref target="donelecture33.xml#d1l33ptfuea">Lecture 33, para. </ref></note> 
         <lb ed="#R"/>arguitur pro ratione humana sic: finita.</p> 
         
-        <p xml:id="l34-cdereq"><lb ed="#R"/>Confirmatur<note type="crossReference">See below <ref target="donelecture35.xml#d1l35qdisii">Lecture 35, para. </ref></note> divina essentia movet[?] bonum 
+        <p xml:id="l34-cdereq"><lb ed="#R"/>Confirmatur<note type="crossReference">See below <ref target="donelecture35.xml#d1l35qdisii">Lecture 35, para. </ref></note> divina essentia <unclear>movet[?]</unclear> bonum 
         <lb ed="#R"/>praecise finite, ergo aliqua creatura in maiori 
-        <lb ed="#R"/>proportione potest movere rationem et quietative[?].</p>
+        <lb ed="#R"/>proportione potest movere rationem et <unclear>quietative[?]</unclear>.</p>
         
         <p xml:id="l34-cqpdmc"><lb ed="#R"/>Confirmatur,<note type="crossReference">See below <ref target="donelecture35.xml#d1l35savebc">Lecture 35, para. </ref></note> quia per divinam essentiam praecise 
         <lb ed="#R"/>finite est bonum creaturae, ergo potest dari creatura quae 
@@ -211,7 +220,7 @@
         <p xml:id="l34-icmdoc"><lb ed="#R"/>Item<note type="crossReference">See below <ref target="donelecture35.xml#d1l35arfpod">Lecture 35, para. </ref></note> creatura magis inclinatur ad se quam ad 
         <lb ed="#R"/>Deum, quia creatura non potest se odire nec 
         <cb ed="#R" n="58va"/><lb ed="#R"/>actu nec habitu. Sed creatura potest odire Deum, 
-          <lb ed="#R"/>et sic Deus non erit finis creaturae. Et sic,<app><lem>sic</lem><rdg wit="R" type="add.sed.del."><del rend="strikethrough">dt</del></rdg></app> si diligit 
+          <lb ed="#R"/>et sic Deus non erit finis creaturae. Et sic,<app><lem/><rdg wit="R" type="add.sed.del."><del rend="strikethrough">dt</del></rdg></app> si diligit 
         <lb ed="#R"/>Deum, hoc est ut bonum sit. Et ideo, quicquid creatura appetit, 
         <lb ed="#R"/>hoc est propter sui conservationem.</p> 
         
@@ -230,7 +239,7 @@
             <p xml:id="l34-spnpep">Secundo 
         <lb ed="#R"/>principaliter non videtur rationale creaturae diligere 
         <lb ed="#R"/>Deum, quia non potest ex sua naturali facilitate 
-        <lb ed="#R"/>Deum diligere supra alia propter errorem <name>Pelagii</name>.</p>
+        <lb ed="#R"/>Deum diligere supra alia propter errorem <name ref="#Pelagius">Pelagii</name>.</p>
       
             <p xml:id="l34-ineaaf">Item non est ex voluntate liberatis obiectum 
         <lb ed="#R"/>huius velle, quia nullus est actus liber, quia respectu 
@@ -241,7 +250,7 @@
         <lb ed="#R"/>Unde prima causa non solum facit effectum 
         <lb ed="#R"/>sed etiam movet causam. Unde sequitur Deus 
         <lb ed="#R"/>vult quod voluntas agat, ergo voluntas agit, 
-        <lb ed="#R"/>sed <sic>anon[antecedens?]</sic> non est in potestate voluntatis. Ergo 
+        <lb ed="#R"/>sed <sic><unclear>anon[antecedens?]</unclear></sic> non est in potestate voluntatis. Ergo 
         <lb ed="#R"/>nec consequens immo Deus est causa necessitans 
         <lb ed="#R"/>quia quando vult agere aliquid, illud agitur, alias fru<lb ed="#R"/>straretur.</p>
       
@@ -257,7 +266,7 @@
         <lb ed="#R"/>magis diligenda. Et sic Deus non propter 
         <lb ed="#R"/>se absolute est diligendus.</p>
       
-            <p xml:id="l34-iddfqd">Item <name>David</name> dicit: 
+            <p xml:id="l34-iddfqd">Item <name ref="#David">David</name> dicit: 
         <lb ed="#R"/>si servasse legem propter retributionem, ergo 
         <lb ed="#R"/>retributio est finale quod diligitur.</p>
       
@@ -276,7 +285,7 @@
           <div>
             <head xml:id="l34-Hararar">Aliae rationes</head>
             
-            <p xml:id="l34-arfrfe">A<lb ed="#R"/>lias rationes facit Climento.<note><name>Ricardus Kilvington</name></note><index indexName="Names"><term>Ricardus Kilvington</term></index></p> 
+            <p xml:id="l34-arfrfe">A<lb ed="#R"/>lias rationes facit <name ref="#Kilvignton">Climento</name>.</p> 
         
             <p xml:id="l34-equdqp">Et quaerit utrum 
         <lb ed="#R"/>Deus sit in infinitum magis diligendus quam 
@@ -287,17 +296,17 @@
         <lb ed="#R"/>dilectioni Dei. Si infinite, non posset creatura 
         <lb ed="#R"/>adimplere.</p>
       
-            <p xml:id="l34-iascam">Item arguit sic, sicut <name>Sortes</name> 
-        <lb ed="#R"/>et <name>Plato</name> quorum quilibet diligat A gradu 
-              <lb ed="#R"/>et velit <name>Sortes</name> suum gradum esse magis<app><lem>magis</lem><rdg wit="R" type="add.sed.del."><del rend="strikethrough">amp</del></rdg></app> 
-        <lb ed="#R"/>adimpletivum[??] praecepti quam <name>Platonis</name> gradus, 
-        <lb ed="#R"/>tunc videtur quod <name>Sortes</name> magis meritatur cum illa 
-        <cb ed="#R" n="58vb"/>circumstantia, tunc ponatur quod <name>Plato</name> intendat suum 
-        <lb ed="#R"/>gradum usque ad summum, et <name>Sortes</name> actum suum 
-        <lb ed="#R"/>quo vult esse magis adimpletivum[??] et ma<lb ed="#R"/>neat 
-        dilectio <name>Sortis</name> A gradu, tunc aequaliter 
-        <lb ed="#R"/>merebuntur, quia <name>Sortes</name> illa circumstantia tantum meretur 
-        <lb ed="#R"/>sicut <name>Plato</name> et tamen inaequaliter diligent, et sic inaequa<lb ed="#R"/>liter 
+            <p xml:id="l34-iascam">Item arguit sic, sicut <name ref="#Sortes">Sortes</name> 
+        <lb ed="#R"/>et <name ref="#Plato">Plato</name> quorum quilibet diligat <rs>A</rs> gradu 
+              <lb ed="#R"/>et velit <name ref="#Sortes">Sortes</name> suum gradum esse magis<app><lem/><rdg wit="R" type="add.sed.del."><del rend="strikethrough">amp</del></rdg></app> 
+        <lb ed="#R"/><unclear>adimpletivum[??]</unclear> praecepti quam <name ref="#Plato">Platonis</name> gradus, 
+        <lb ed="#R"/>tunc videtur quod <name ref="#Sortes">Sortes</name> magis meritatur cum illa 
+        <cb ed="#R" n="58vb"/>circumstantia, tunc ponatur quod <name ref="#Plato">Plato</name> intendat suum 
+        <lb ed="#R"/>gradum usque ad summum, et <name ref="#Sortes">Sortes</name> actum suum 
+        <lb ed="#R"/>quo vult esse magis <unclear>adimpletivum[??]</unclear> et ma<lb ed="#R"/>neat 
+        dilectio <name ref="#Sortes">Sortis</name> A gradu, tunc aequaliter 
+        <lb ed="#R"/>merebuntur, quia <name ref="#Sortes">Sortes</name> illa circumstantia tantum meretur 
+        <lb ed="#R"/>sicut <name ref="#Plato">Plato</name> et tamen inaequaliter diligent, et sic inaequa<lb ed="#R"/>liter 
         diligentes Deum ex caritate aequaliter 
         <lb ed="#R"/>merebuntur.</p>
       
@@ -306,25 +315,25 @@
         <lb ed="#R"/>obiectum, unde utrum potentia finita sit in causando vel 
         <lb ed="#R"/>infinita. Unde potest imaginari et sustineri quod potentia 
         <lb ed="#R"/>sit infinita in esse capacitatis, et fortior ratio 
-        <lb ed="#R"/>contra illam positionem est, quia omne perceptivum[?] est 
+        <lb ed="#R"/>contra illam positionem est, quia omne <unclear>perceptivum[?]</unclear> est 
         <lb ed="#R"/>denominatio perfectionis simpliciter, ergo competit 
         <lb ed="#R"/>limitate potentiae.</p> 
             
             <p xml:id="l34-iidiie">Istis ista denominatio non est 
         <lb ed="#R"/>de primis modo posteriores communicantur in remissi<lb ed="#R"/>ori 
         gradu ex eo quod gradus posteriores includit 
-        <lb ed="#R"/>priorum, quia quilibet gradus esse perceptivum[?] includit 
+        <lb ed="#R"/>priorum, quia quilibet gradus esse <unclear>perceptivum[?]</unclear> includit 
         <lb ed="#R"/>quemlibet gradum esse entis communicati sub perceptio. 
-        <lb ed="#R"/>Unde, si communicetur denominatio esse perceptivum[?], tunc 
-        <lb ed="#R"/>latitudo graduum supra perceptivum[?] communicatur 
-        <lb ed="#R"/>perceptivo, et sic non stat aliquid esse infinitum im<lb ed="#R"/>percepti??ce[?] 
+        <lb ed="#R"/>Unde, si communicetur denominatio esse <unclear>perceptivum[?]</unclear>, tunc 
+        <lb ed="#R"/>latitudo graduum supra <unclear>perceptivum[?]</unclear> communicatur 
+        <lb ed="#R"/>perceptivo, et sic non stat aliquid esse infinitum <unclear>im<lb ed="#R"/>percepti??ce[?]</unclear> 
         et non esse infinitum in entitate.</p>
       
             <p xml:id="l34-scqeic">Sed 
-        <lb ed="#R"/>contra, quia dicit <name>Philosophus</name> IIo <title>De Anima</title> quod sensus propter excel<lb ed="#R"/>lens 
+        <lb ed="#R"/>contra, quia dicit <name ref="#Aristotle">Philosophus</name> IIo <title ref="#deAnima">De Anima</title> quod sensus propter excel<lb ed="#R"/>lens 
         sensibile laeditur. Sed intellectus quanto altiora 
-        <lb ed="#R"/>intelligit redditur aptior ad intellectum[?], 
-        <lb ed="#R"/>ergo esse[?cum?] in infinitum contingit ascendere in intentione 
+        <lb ed="#R"/>intelligit redditur aptior ad <unclear>intellectum[?]</unclear>, 
+        <lb ed="#R"/>ergo <unclear>esse[?cum?]</unclear> in infinitum contingit ascendere in intentione 
         <lb ed="#R"/>superioris cuius contrarium est in potentiis organicis 
         <lb ed="#R"/>quae laeduntur ab excellenti sensibili, sequitur 
         <lb ed="#R"/>quod intellectus est infinitae capacitatis.</p> 
@@ -338,15 +347,15 @@
         <lb ed="#R"/>et istae sunt specierum constitutivae, et sic ens est prima. 
         <lb ed="#R"/>Modo de istis, nulla est communicabilis creaturae nisi finite.</p>
       
-            <p xml:id="l34-asmsea"><lb ed="#R"/>Aliae sunt morales[??] accidentales et extrinsecae 
+            <p xml:id="l34-asmsea"><lb ed="#R"/>Aliae sunt <unclear>morales[??]</unclear> accidentales et extrinsecae 
         <lb ed="#R"/>et istae possunt intentius communicari vel remissius 
         <lb ed="#R"/>ut esse activum communicatur intentius vel re<lb ed="#R"/>missius 
         secundum Dei bene placitum. Unde materia quae 
         est perfectior caritate non est activa, et tamen caritas 
         <lb ed="#R"/>est activa, ita quod esse activuum est deno<lb ed="#R"/>minatio 
-        extrinseca accidentalis moralis[?] 
+        extrinseca accidentalis <unclear>moralis[?]</unclear> 
         <lb ed="#R"/>et tunc diceretur quod esse perceptivum est denominatio 
-        <lb ed="#R"/>accidentalis moralis[?], et sic esse capax vitaliter 
+        <lb ed="#R"/>accidentalis <unclear>moralis[?]</unclear>, et sic esse capax vitaliter 
         <lb ed="#R"/>est denominatio moralis variabilis ad voluntatem 
         <lb ed="#R"/>Dei, sicut esse activum. Unde posset communicari 
         <lb ed="#R"/>angelo quod produceret infinitum et cum esset 
@@ -357,10 +366,10 @@
         <lb ed="#R"/>est solum finitae capacitatis, et sic passio non convertibilis.
         <lb ed="#R"/>Et per hoc salvatur de anima Christi quod licet infinita partici<lb ed="#R"/>paret 
         tamen esset finitae capacitatis, et per hoc 
-        <lb ed="#R"/>possent solvi argumenta <name>Adae</name>. Unde arguit 
+        <lb ed="#R"/>possent solvi argumenta <name ref="#Wodeham">Adae</name>. Unde arguit 
         <lb ed="#R"/>quod esse aliquis qui tantum meretur quod non posset prae<lb ed="#R"/>miari. 
         Unde diceretur quod non esset dabilis ma<lb ed="#R"/>ximus 
-        gradus visibilis[?] et visionis[??] et gradu[?].</p>
+        gradus <unclear>visibilis[?]</unclear> et <unclear>visionis[??]</unclear> et <unclear>gradu[?]</unclear>.</p>
       
           </div>
           </div>
