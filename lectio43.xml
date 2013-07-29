@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-19">July 19th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio43">
         <head xml:id="l43-Hldfldf" subtype="title">Lectio 43, de Fruitione</head>
@@ -55,7 +64,7 @@
             <head xml:id="l43-Hqiauef">Quod idem actus est usus et fruitio</head>
             
             <p xml:id="l43-suirvr">Sequitur ulterius 
-              <lb ed="#SV"/>iuxta viam <name>okam</name> et <name>adae</name> ponendo quod idem actus est usus et fruitio 
+              <lb ed="#SV"/>iuxta viam <name ref="#Ockham">okam</name> et <name ref="#Wodeham">adae</name> ponendo quod idem actus est usus et fruitio 
               <lb ed="#SV"/>quod omne odium est lectum. et cum non sit processus in infinitum, 
               <lb ed="#SV"/>oportet quod habeat finem propter quem ultimate diligitur.</p>
           
@@ -74,7 +83,7 @@
             <lb ed="#SV"/>nolitio, nisi propter bonum, et ille idem actus est acceptio boni, 
             <lb ed="#SV"/>tamen stat quod sit idem actus adaequate quo Respuitur malum et 
             <lb ed="#SV"/>acceptatur bonum, et quod bonum sit per eundum volitum, ut 
-            <lb ed="#SV"/>ponatur quod sit <name>sortes</name> <del rend="strikethrough">q</del> cui praesentetur aliquod malum, nullum 
+            <lb ed="#SV"/>ponatur quod sit <name ref="#Sortes">sortes</name> <del rend="strikethrough">q</del> cui praesentetur aliquod malum, nullum 
             <lb ed="#SV"/>tamen habens actum voluntatis, tunc voluntas non necessitatur 
             <lb ed="#SV"/>habere actum volitionis, et sic in sua liberate est Respuere 
             <lb ed="#SV"/>illud obiectum absque volitione praevia, quo facto habebit nole 
@@ -102,9 +111,7 @@
               ad deum. illa est sic amor quod non odium, tamen posset 
               <lb ed="#SV"/>esse odium, quia staret quod illa dilectio non solum haberet 
               <cb ed="#SV" n="249vb"/><lb ed="#SV"/>deum pro obiecto, sed etiam malum, et sic esset odium respectu ma<lb ed="#SV"/>li.</p>
-          
           </div>
-          
           <div>
             <head xml:id="l43-Hcqdeui">Contra quemdam doctorem qui ponit quod idem actus est fruitio illius quod contingit ordinate frui, et tamen est usus inordinatus</head>
             
@@ -168,10 +175,10 @@
       
             <p xml:id="l43-iipnav">Item Iudaei propter zaelum 
               <lb ed="#SV"/>legis volentis christum persequi credebant frui deo 
-              <lb ed="#SV"/>et tamen non fruebantur, nam secundum <name>apostolum</name>, licet haberent 
+              <lb ed="#SV"/>et tamen non fruebantur, nam secundum <name ref="#Paul">apostolum</name>, licet haberent 
               <lb ed="#SV"/>zaelum dei, non tamen secundum scientiam, unde in casu nostro, licet 
               <lb ed="#SV"/>ille intendit impendere honorem deo, tamen non impendit, 
-              <lb ed="#SV"/>et hoc propter aliquem finem vicentem[?] quae deordinat 
+              <lb ed="#SV"/>et hoc propter aliquem finem <unclear>vicentem[?]</unclear> quae deordinat 
               <lb ed="#SV"/>fruitionem illam. unde, licet Iudaei credebant se obsequiuum 
               <lb ed="#SV"/>praestare deo, non tamen impendebant, quia propter bonum temporale 
               <lb ed="#SV"/>vel invidiam vel aliquod tale male afficiebantur 
@@ -189,9 +196,7 @@
               <lb ed="#SV"/>deum super omnia, ergo non esset in peccato, quia non stat 
               <lb ed="#SV"/>quod quis sit in peccato, et diligat deum super omnia, 
               <lb ed="#SV"/>ut probabo inferius.</p>
-          
           </div>
-          
           <div>
             <head xml:id="l43-Hqouvam">Quod omnis usus ordinatus est vitae aeternae meritorius</head>
             
@@ -228,9 +233,9 @@
               <lb ed="#SV"/>meritoria actio est fruitio, ergo habet Deum pro obiecto. Ex quo 
               <lb ed="#SV"/>patet quod magna debet esse solicitudo omnis actus suos delibera<lb ed="#SV"/>tos 
               Referendi in deum quia si non referret, tunc tales actus 
-              <lb ed="#SV"/>essent creaturae fruitio quod quae secundum <name>augustinum</name> est summa perversitas. 
-              <lb ed="#SV"/>Et istud fundatur in scriptura sacra, nam <name>apostolus</name> scribit in 
-              <lb ed="#SV"/>epistola <title>ad corinthios</title> sive manducatis sive bibitis sive 
+              <lb ed="#SV"/>essent creaturae fruitio quod quae secundum <name ref="#Augustine">augustinum</name> est summa perversitas. 
+              <lb ed="#SV"/>Et istud fundatur in scriptura sacra, nam <name ref="#Paul">apostolus</name> scribit in 
+              <lb ed="#SV"/>epistola <title ref="#ICorinthiansEpistle">ad corinthios</title> sive manducatis sive bibitis sive 
               <lb ed="#SV"/>aliquid aliud facitis in dei gloriam facite. et sic praecipit 
               <lb ed="#SV"/>omnis actus actualiter vel habitualiter refferre in deum. hoc 
               enim est Deum ex toto corde diligere, scilicet, intende per quamcumque 
@@ -238,7 +243,7 @@
               <lb ed="#SV"/>diligere sic quin nihil faciat homo quin cor totum illud in deum 
               <lb ed="#SV"/>Referat.</p>
       
-            <p xml:id="l43-isaoae">Item scribit <name>apostolus</name>, IIae <title>ad corinthios</title>, in captivitatem 
+            <p xml:id="l43-isaoae">Item scribit <name ref="#Paul">apostolus</name>, IIae <title ref="#IICorinthiansEpistle">ad corinthios</title>, in captivitatem 
               <lb ed="#SV"/>Redigentes omnem intellectum in obsequium christi. et hic est ex 
               <lb ed="#SV"/>tota mente deum diligere. unde debet sic diligere ex tota 
               <lb ed="#SV"/>mente quod captivet intellectum sic quod credat quaecumque <sic>revala</sic>, et sic 
@@ -247,17 +252,15 @@
               <lb ed="#SV"/>se dare deo.</p> 
             
             <p xml:id="l43-egqoae">Etiam generaliter quod anima omnem affectionem 
-              <lb ed="#SV"/>in deum dirigat, IIae <title>ad corinthios</title> quod caritas christi nos 
+              <lb ed="#SV"/>in deum dirigat, IIae <title ref="#IICorinthiansEpistle">ad corinthios</title> quod caritas christi nos 
               <lb ed="#SV"/>urget. Et ibi <sic>postille</sic> <sic>glosant</sic> quod caritas christi 
               <lb ed="#SV"/>afficit nos sic quod nullam habemus affectionem quoniam eam 
               <lb ed="#SV"/>in deum dirigamus tandem omnia opera exteriora dant re<lb ed="#SV"/>fferri 
               in deum et hoc est diligere ex tota fortitudine, quia 
               <lb ed="#SV"/>fortitudo est respectu executionis operum ad extra.</p> 
-      </div>
-        
+        </div>
         <div>
           <head xml:id="l43-Hrectio">Recapitulatio</head>
-          
           <p xml:id="l43-redpnm">Recapi<lb ed="#SV"/>tulando, 
             ergo, debemus deum diligere ex toto corde, scilicet, 
             <lb ed="#SV"/>quando tota intentio Reffertur in deum ex tota mente propter 
