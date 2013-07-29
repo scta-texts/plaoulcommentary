@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio100">
       <head xml:id="l100-Hldlldl">Lectio 100, de Libertate</head>
@@ -90,7 +99,7 @@
           <lb ed="#SV"/>sufficientia nostra ex deo est igitur anima cupiditati substantia ten<lb ed="#SV"/>dit 
           in errores, nec sufficit in veritates cogno<lb ed="#SV"/>scendas 
           de sua felicitate aliquid cogitare, unde <name ref="#Augustine">augustinus</name> contra 
-          <lb ed="#SV"/><name>iulianum</name> et <name ref="#Pelagius">pellagium</name> plura scripsit ad istam, tamen 
+          <lb ed="#SV"/><name ref="#Julian">iulianum</name> et <name ref="#Pelagius">pellagium</name> plura scripsit ad istam, tamen 
           <lb ed="#SV"/>imaginationem consonat, nam ipse ait quod oportet anima cu<lb ed="#SV"/>piditate 
           vel caritate dirigi nec anima sufficit 
           <lb ed="#SV"/>quantum ad intellectum practicum habere intellectum Rectum de 
@@ -207,8 +216,8 @@
             <lb ed="#SV"/>determinores quanto vehementius mens movetur in eas.</p>
         
         <p xml:id="l100-qspouc">quarto sequitur probabile dicere amarum diligere denarium 
-          <lb ed="#SV"/>absque relatione in aliud nam secundum institutionem politicam de<lb ed="#SV"/>narius 
-          est constitutus ad procurandum necessaria modo constat 
+          <lb ed="#SV"/>absque relatione in aliud <seg ana="#politica">nam secundum institutionem politicam de<lb ed="#SV"/>narius 
+          est constitutus</seg> ad procurandum necessaria modo constat 
           <lb ed="#SV"/>aliquem tantum delicare quod denarium ad usum non diligit 
           <lb ed="#SV"/>ut apparet in experimento quod quis <unclear>habundet[?]</unclear> denariis 
           <lb ed="#SV"/>non propter usum sed tantum diligat propter formam, et sic ava<lb ed="#SV"/>ritia 
@@ -216,13 +225,13 @@
           <lb ed="#SV"/>pro fine ultimo prostituat sibi divitias omni usu circum<lb ed="#SV"/>scripto.</p>
         
         <p xml:id="l100-qspscc">quinto sequitur possibilitas adorationis ignis per 
-          <lb ed="#SV"/><name>caldeos</name> unde <name ref="#Abraham">abraham</name> deus liberavit de vi <name>caldeorum</name> 
-          <lb ed="#SV"/>nam <name ref="#Abraham">abraham</name> natus est in <name>caldea</name> nisi colebatur ignis 
+          <lb ed="#SV"/><name ref="#Chaldeans">caldeos</name> unde <name ref="#Abraham">abraham</name> deus liberavit de vi <name ref="#Chaldeans">caldeorum</name> 
+          <lb ed="#SV"/>nam <name ref="#Abraham">abraham</name> natus est in <name type="place">caldea</name> nisi colebatur ignis 
           <lb ed="#SV"/>tanquam deus sed quia Reprobavit hoc ponendo differentiam inter 
           <lb ed="#SV"/>agens principalem et eius instrumentum, ideo fuit in igne 
-          <lb ed="#SV"/>positus et deus eum liberavit et hoc est quod ait <name>esdras</name> 
-          <lb ed="#SV"/><name>neemiae</name> quarto capitulo faciens suam orationem ait  <unclear>tu<lb ed="#SV"/>dinem[?]</unclear> 
-          deus qui eripuisti <name ref="#Abraham">abraham</name> de igne <name>caldeorum</name> 
+          <lb ed="#SV"/>positus et deus eum liberavit et hoc est quod ait <name ref="#Ezra">esdras</name> 
+          <lb ed="#SV"/><name ref="#Nehemiah">neemiae</name> quarto capitulo faciens suam orationem ait  <unclear>tu<lb ed="#SV"/>dinem[?]</unclear> 
+          deus qui eripuisti <name ref="#Abraham">abraham</name> de igne <name ref="#Chaldeans">caldeorum</name> 
           <lb ed="#SV"/>et tanta potest esse deliratio creaturae quod ipsa adoret 
           <lb ed="#SV"/>corporale tanquam deum. unde sapientiae 13mo scribitur 
           <lb ed="#SV"/>nec operibus attendentes cognoverunt quis esset 
@@ -233,19 +242,19 @@
         <div>
           <head xml:id="l100-Hocecer">Obiecto <unclear>caldaeis[?]</unclear> et responsio</head>
           
-        <p xml:id="l100-scaavc">Sed contra arguitur de <name>caldeis</name> quia gens 
-          <lb ed="#SV"/><name>caldesim</name> est gens <name>caldeica</name> et tamen adoraverunt 
+        <p xml:id="l100-scaavc">Sed contra arguitur de <name ref="#Chaldeans">caldeis</name> quia gens 
+          <lb ed="#SV"/><name ref="#Chaldeans">caldesim</name> est gens <name ref="#Chaldeans">caldeica</name> et tamen adoraverunt 
           <lb ed="#SV"/>solem pro deo principali, et lunam pro deo minus principali 
           <lb ed="#SV"/>ex eo quod experiebantur nobiles operationes solis et 
           <lb ed="#SV"/>lunae, et tamen scriptura dicit quod <name rend="#Abraham">abraham</name> est deliberatus 
-          <cb ed="#SV" n="320va"/><lb ed="#SV"/>ab vi <name>caldeorum</name>.</p>
+          <cb ed="#SV" n="320va"/><lb ed="#SV"/>ab vi <name ref="#Chaldeans">caldeorum</name>.</p>
         
-          <p xml:id="l100-rqcien">Respondetur quod <name>caldeorum</name> opinio fuit quod cae<lb ed="#SV"/>lum 
+          <p xml:id="l100-rqcien">Respondetur quod <name ref="#Chaldeans">caldeorum</name> opinio fuit quod cae<lb ed="#SV"/>lum 
             sit de natura ignis, probatio quod sit ignis, nam dicit 
             <lb ed="#SV"/><name rend="#Cicero">tulius</name> in VIo <title>de republica</title> hoc sententialiter nam 
             <lb ed="#SV"/>ipse vocat stellas sempiternos ignes scilicet, in textu 
             <lb ed="#SV"/>quem exponit <name rend="#Macrobius">macrobius</name> et sic non est discrepantia 
-            <lb ed="#SV"/>quod <name>caldei</name> colant solem et ignem tanquam deum summum 
+            <lb ed="#SV"/>quod <name ref="#Chaldeans">caldei</name> colant solem et ignem tanquam deum summum 
             <lb ed="#SV"/>et inter omnes effectus existentes infra concavum orbis 
             <lb ed="#SV"/>lunae ignis est nobilior.</p>
         
