@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-07">July 7th, 2012</date>  
       </publicationStmt>
@@ -32,21 +34,26 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
     <body>
       <div xml:id="lectio37">
         <head subtype="title" xml:id="l37-Hldfldf">Lectio 37, de Fruitione</head>
         <div>
           <head xml:id="l37-Hqinpef">Quod in nulla creatura potest esse felicitas</head>
           
-      <p xml:id="l37-ehcees"><lb ed="#SV"/><hi rend="dropCapThreeLines">E</hi>x habitudine creaturae ad deum ostensum fuit quod in 
+      <p xml:id="l37-ehcees"><lb ed="#SV"/>Ex habitudine creaturae ad deum ostensum fuit quod in 
           <lb ed="#SV"/>nulla creatura potest esse obiectalis felicitas quae<lb ed="#SV"/>quid 
           dependentia non est nova nec noviter 
-          <lb ed="#SV"/>opinata, quia est opinio sacrae scripturae ut ait <name>apostolus</name>, 
-          <lb ed="#SV"/>quia per ipsum et in ipso facta sunt omnia; et <title>actuum</title> 17o 
-          <lb ed="#SV"/>in ipso movetur unius et suus. et etiam <name>augustinus</name> 
-          <lb ed="#SV"/><title>supra genesim</title> comparat creaturam ad deum sicut Radium so<lb ed="#SV"/>lis 
-          ad solem. Immo <name>aristoteles</name> ponit quod a deo depen<lb ed="#SV"/>det 
-          caelum et tota natura, et <name>avicenna</name> dicit quod opinio 
+          <lb ed="#SV"/>opinata, quia est opinio sacrae scripturae ut ait <name ref="#Paul">apostolus</name>, 
+          <lb ed="#SV"/>quia per ipsum et in ipso facta sunt omnia; et <title ref="#ActsOfApostles">actuum</title> 17o 
+          <lb ed="#SV"/>in ipso movetur unius et suus. et etiam <name ref="#Augustine">augustinus</name> 
+          <lb ed="#SV"/><title ref="#supraGenesim">supra genesim</title> comparat creaturam ad deum sicut Radium so<lb ed="#SV"/>lis 
+          ad solem. Immo <name ref="#Aristotle">aristoteles</name> ponit quod a deo depen<lb ed="#SV"/>det 
+          caelum et tota natura, et <name ref="#Avicenna">avicenna</name> dicit quod opinio 
           <lb ed="#SV"/><name>aristotelis</name> fuit quodlibet mundus fuerit ab aeterno. tamen omnis res 
           <lb ed="#SV"/>mundi ceperunt esse per productionem a deo. unde licet 
           <lb ed="#SV"/>ex necessitate naturae et naturaliter produxerit eas et conservet, 
@@ -56,7 +63,7 @@
       <p xml:id="l37-sqnlin">Sed quare non corrumpuntur, hoc 
           <lb ed="#SV"/>est ex bonitate summa dei quam vult ad extra communica<lb ed="#SV"/>re. 
           et ideo aliqui poetae dixerunt in ipso movetur 
-          <lb ed="#SV"/>unius et suus. unde dato quod <name>aristotles</name> ponat quod de 
+          <lb ed="#SV"/>unius et suus. unde dato quod <name ref="#Aristotle">aristotles</name> ponat quod de 
           <lb ed="#SV"/>necessitate naturae deus conservet caelum, tamen si per imaginationem 
           subtraheretur influentia eius tunc propter dependentiam 
           <lb ed="#SV"/>eius de necessitate laberetur in nihilum.</p> 
@@ -78,9 +85,9 @@
           "Os hominis sublime dedit caelumque videre," etc.</p>
       </div>
       <div>
-        <head xml:id="l37-Hcohhdh">Contra opinionem Henrici de Huta</head>
+        <head xml:id="l37-Hcohhdh">Contra opinionem <name ref="#Oyta">Henrici de Huta</name></head>
         
-          <p xml:id="l37-sccerq"><lb ed="#SV"/>Sequitur consequenter contra <name>henricum de huta</name> quod nulla est 
+          <p xml:id="l37-sccerq"><lb ed="#SV"/>Sequitur consequenter contra <name ref="#Oyta">henricum de huta</name> quod nulla est 
               <lb ed="#SV"/>possibilis rationalis creatura quae posset in aliquo bono finito 
               <lb ed="#SV"/>quietari, quia nullum bonum creatum habet rationem quietalis, 
               <lb ed="#SV"/>ergo cum ibi non Reperitur sequitur quod creaturae ad creaturam 
@@ -233,7 +240,7 @@
         <lb ed="#SV"/>gradum intensius non tamen delectaret quietative.</p>
       
       <p xml:id="l37-arehfu">Aliter Respondet 
-        <lb ed="#SV"/><name>eliphat</name>, et dicit quod casus non est possibilis quia si aliqua crea<lb ed="#SV"/>tura 
+        <lb ed="#SV"/><name ref="#RobertHalifax">eliphat</name>, et dicit quod casus non est possibilis quia si aliqua crea<lb ed="#SV"/>tura 
         deletur[?] in deum. et alia deletur[?] in creatura et obiectum 
         <lb ed="#SV"/>duppletur non oportet quod causetur duppla delectatio, et causa est 
         <lb ed="#SV"/>quia non dupplatur habitus diligendi huiusmodi creaturam. 
@@ -335,7 +342,7 @@
        <lb ed="#SV"/>non potest se odire, et tamen potest odire Deum.</p> 
             
             <p xml:id="l37-hreesp">hic Respondet 
-              <lb ed="#SV"/><name>eliphat</name> distinguendo de dilectione, quia creatura diligit 
+              <lb ed="#SV"/><name ref="#RobertHalifax">eliphat</name> distinguendo de dilectione, quia creatura diligit 
               <lb ed="#SV"/>se affectione commodi et affectione iusti, quantum ad 
               <lb ed="#SV"/>affectionem commodi neccesario diligit se, non autem di<lb ed="#SV"/>ligit 
               se neccesario quantum ad affectionem iusti, et sic non valet 
