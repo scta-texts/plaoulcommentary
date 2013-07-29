@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio102">
       <head xml:id="l102-Hldlldl" subtype="title">Lectio 102, de Libertate</head>
@@ -40,12 +49,12 @@
           
           <p xml:id="l102-cmince"><lb ed="#SV"/>Circa materiam in alia lectione tacta quantum 
            <lb ed="#SV"/>ad opinionem <name ref="#Avicenna">avicennae</name> <name ref="#Albert">albertus</name> Recitat eam 
-            <lb ed="#SV"/>in libro <title>de sompno et vigilia</title> libro tertio 
+            <lb ed="#SV"/>in libro <title ref="#deSomnoEtVigilia">de somno et vigilia</title> libro tertio 
             <lb ed="#SV"/>quem vocat a divinatione et capitulo VIo quod incipit 
-            <lb ed="#SV"/>si neque certa etc.</p> 
+            <lb ed="#SV"/>"si neque certa", etc.</p> 
         
           <p xml:id="l102-uiaudi">Unde iste <name ref="#Albert">albertus</name> Recitat opinionem 
-            <lb ed="#SV"/><name ref="Avicenna">avicennae</name> et <name>algazar</name> qui fuerunt concordes in materia 
+            <lb ed="#SV"/><name ref="Avicenna">avicennae</name> et <name ref="#Algasar">algazar</name> qui fuerunt concordes in materia 
             <lb ed="#SV"/>praesenti. et primo Recitat eorum unum fundamentum, 
             <lb ed="#SV"/>scilicet, quod intellectus humanus non est in corpore. verum est tamen quod intentio 
             <lb ed="#SV"/>eorum non est quin intellectus sit corpori praesens, sed inten<lb ed="#SV"/>dunt 
