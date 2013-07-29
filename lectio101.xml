@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio101">
         <head xml:id="l101-Hldlldl" subtype="title">Lectio 101, de Libertate</head>
@@ -126,11 +135,11 @@
           <lb ed="#SV"/>causa variae inquirentium de felicitate humana quam quid veritas 
           <lb ed="#SV"/>christianae fidei verae docet. Sed fuit Impedita per sacri<lb ed="#SV"/>legium 
           vel huiusmodi artes sacrilegas, nam de <name ref="#Moses">moyse</name> 
-          <lb ed="#SV"/>qui legem asserebat legitur quod <name>magi pharaonis</name> fecerunt 
+          <lb ed="#SV"/>qui legem asserebat legitur quod <name ref="#MagiOfPharaoh">magi pharaonis</name> fecerunt 
           <lb ed="#SV"/>similia mirabilia unde veritas fidei orthodoxae quasi in <sic>aequilibra</sic> 
-          <lb ed="#SV"/>tunc ponebatur et miracula <name>apostolorum</name> confundebantur per artem 
-          <lb ed="#SV"/>magicam <name ref="#SimonMagus">simionis magi</name> ideo tempore <name>apostolorum</name> quando lex nostra 
-          <lb ed="#SV"/>divulgabatur non defuit ars magica cum <name ref="#SimonMagus">simon magus</name> 
+          <lb ed="#SV"/>tunc ponebatur et miracula <name ref="#Apostles">apostolorum</name> confundebantur per artem 
+          <lb ed="#SV"/>magicam <name ref="#SimonMagician">simionis magi</name> ideo tempore <name ref="#Apostles">apostolorum</name> quando lex nostra 
+          <lb ed="#SV"/>divulgabatur non defuit ars magica cum <name ref="#SimonMagician">simon magus</name> 
           <lb ed="#SV"/>erat consimili faciens miracula.</p>
         </div>
         <div>
@@ -139,9 +148,9 @@
             <head xml:id="l101-Hpqssvv">Primum: quod semper vincit veritas</head>
         <p xml:id="l101-cpdism">Circa praedicta duo notanda 
           <lb ed="#SV"/>sunt. primum quod hoc non obstante semper vincit veritas, nam 
-          <lb ed="#SV"/><name>magi pharaonis</name> deferunt in tertio signo et hoc fuit 
+          <lb ed="#SV"/><name ref="#MagiOfPharaoh">magi pharaonis</name> deferunt in tertio signo et hoc fuit 
           <lb ed="#SV"/>ad sufficientem differentiam verorum miraculorum a falsis. et tempore intro<lb ed="#SV"/>ductionis 
-          christianae legis in detestationem sacrilegi cultus interiit[?] <name ref="#SimonMagus">simon magus</name>.</p>
+          christianae legis in detestationem sacrilegi cultus interiit[?] <name ref="#SimonMagician">simon magus</name>.</p>
           </div>
         <div>
           <head xml:id="l101-Hsqphla">Secundum: quod providentia praemissus est artes magicae ut mens humiliter legem acceptaret</head>
@@ -182,7 +191,7 @@
         <p xml:id="l101-nethup">notandum est tamen quod omnes effectus contingentes 
           <lb ed="#SV"/>quid philosophi voluerunt Reducere ad causas pure naturales 
           <lb ed="#SV"/>et non propter hoc concedendi sunt daemones operare, licet 
-          <lb ed="#SV"/>autem dicant hoc ut <name>platonici</name>.</p>
+          <lb ed="#SV"/>autem dicant hoc ut <name ref="#Platonists">platonici</name>.</p>
           
           <p xml:id="l101-echpns">Et circa hoc <name ref="#Avicenna">avicenna</name> 
           <cb ed="#SV" n="321va"/><lb ed="#SV"/>in VIo <title>naturalium</title> et <name ref="#Albert">albertus</name> hoc Recitat in <title>parvis naturalibus</title> 
