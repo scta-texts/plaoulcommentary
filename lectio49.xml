@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-08-17">August 17, 2012</date>  
       </publicationStmt>
@@ -32,10 +34,16 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio49">
         <head>Lectio 49, de Fruitione</head>
-        
       <div>
         <head xml:id="l49-Hduembe">Difficultas: Utrum ex puris naturalibus potest quis actum moraliter bonum elicere?</head>
       
@@ -64,7 +72,7 @@
             <head xml:id="l49-Hogebmo">Opinio Gregorii et Bradwardini: Quod ex puris naturalibus nullus potest bene moraliter operari</head>
           
           <p xml:id="l49-uaqsnf">Ubi ad<lb ed="#SV"/>vertendum 
-            quod opinio <name>gregorii</name>, <name>bravvoardin</name>, et aliorum, quae 
+            quod opinio <name ref="#Rimini">gregorii</name>, <name ref="#Bradwardine">bravvoardin</name>, et aliorum, quae 
             <lb ed="#SV"/>ponit quod ex puris naturalibus non potest quis bene moraliter 
             <lb ed="#SV"/>operari, fundat se in Radice ista quod voluntas ratione corru<lb ed="#SV"/>ptelle 
             peccati originalis omnem actum suum retorquet in se 
@@ -72,7 +80,7 @@
             <lb ed="#SV"/>diligendi debet habere finem debitum alium a creatura. 
             <lb ed="#SV"/>ideo ad huiusmodi actum habendum requiritur aliquid super creaturam 
             <lb ed="#SV"/><del rend="strikethrough">ad</del> iuvans voluntatem ad producendum talem actum. sic ergo 
-            <cb ed="#SV" n="246va"/><lb ed="#SV"/>quia natura corrupta naturaliter tendit in se et <title>adae</title>, non tamen lo<lb ed="#SV"/>quendo 
+            <cb ed="#SV" n="246va"/><lb ed="#SV"/>quia natura corrupta naturaliter tendit in se et <name ref="#Adam">adae</name>, non tamen lo<lb ed="#SV"/>quendo 
             de prava naturali tendentia, sed de naturali inclinatione 
             <lb ed="#SV"/>quae est post peccatum et quae corruptiva peccati, ideo non potest se 
             <lb ed="#SV"/>supra se elevare ad ordinandum debite actus deliberatos. ideo 
@@ -106,14 +114,14 @@
             <lb ed="#SV"/>fruitione, qui nunc sit cum caritate, quia ex ordinatione causarum trium respectu 
             <lb ed="#SV"/>actus fruitionis, qui nunc producitur, nam ibi est prima causa quae specia<lb ed="#SV"/>liter 
             concurrit in genere causandi sic quod per eius substractionem impe<lb ed="#SV"/>diretur 
-            effectus producitio[?], sicut per substractionem gratiae impediretur 
+            effectus <unclear>producitio[?]</unclear>, sicut per substractionem gratiae impediretur 
             <lb ed="#SV"/>voluntas respectu actus meritorii ita per substractionem causae 
             <lb ed="#SV"/>principalis et specialis quae Requiritur ad illum actum producendum 
             <lb ed="#SV"/>impediretur illius productio.</p>
       
       <p xml:id="l49-idddic">Ideo dixerunt doctores quod voluntas 
         <lb ed="#SV"/>et gratia non sufficiunt ad meritum nec ad temptationes 
-        <lb ed="#SV"/>diaboli vel carnabiles[?] videndas, sed Requirit deus specialiori modo 
+        <lb ed="#SV"/>diaboli vel <unclear>carnabiles[?]</unclear> videndas, sed Requirit deus specialiori modo 
         <lb ed="#SV"/>concurrens quam aliqua duarum illarum causarum.</p>
       
       <p xml:id="l49-sdqifd">secunda dato quod caritas 
@@ -133,13 +141,13 @@
       
             </div>
         <div>
-          <head xml:id="l49-Hcogcog">Circa opinionem <name>Gregorii</name></head>
+          <head xml:id="l49-Hcogcog">Circa opinionem <name ref="#Rimini">Gregorii</name></head>
           
           <p xml:id="l49-aeqqmp"><lb ed="#SV"/>Advertendum est quod quantum est de materia actuum moralium, utrum 
             <cb ed="#SV" n="246vb"/><lb ed="#SV"/>ex puris naturalibus quis posset bene moraliter operari, quia 
             <lb ed="#SV"/>hoc habet aliam difficultatem quam materia praesens.</p>
           
-        <p xml:id="l49-uogsra">Unde opinio <name>gregorii</name> 
+        <p xml:id="l49-uogsra">Unde opinio <name ref="#Rimini">gregorii</name> 
           <lb ed="#SV"/>habet auctoritates fundatas in sacra scriptura cuius imaginatio 
           <lb ed="#SV"/>est quod voluntas ex puris naturalibus non potest bene Reffer<lb ed="#SV"/>re 
           actum suum ad debitum finem. ideo actus suus caret 
@@ -155,7 +163,7 @@
       <p xml:id="l49-uaqhep">Unde advertendum quod respectu speciei humanae, 
         <lb ed="#SV"/>deus habet influentiam generalem et etiam specialem quam habet 
         <lb ed="#SV"/>respectu peccatorum qua pulsat peccatores movendo et inclinando, ut 
-        <lb ed="#SV"/>convertantur ad deum. ideo dicitur in <title>appocalypti</title> tertio capitulo, "ego sto ad 
+        <lb ed="#SV"/>convertantur ad deum. ideo dicitur in <title ref="#Revalations">appocalypti</title> tertio capitulo, "ego sto ad 
         <lb ed="#SV"/>hostium et pulso."</p>
       
       <p xml:id="l49-stdbmo">Sed tunc diceretur duae quomodo diceretur 
@@ -189,7 +197,7 @@
             <lb ed="#SV"/>non sunt ordinati in finem supremum, sed in bonum commune potenciae.</p> 
           
           <p xml:id="l49-nsaepn"><lb ed="#SV"/>nam sicut anima comparatur ad corpus, nam ex hoc est debita 
-            <lb ed="#SV"/>dispositio, et pe??tis[?] corporum, quia quodlibet membrum habet suam 
+            <lb ed="#SV"/>dispositio, et <unclear>pe??tis[?]</unclear> corporum, quia quodlibet membrum habet suam 
             <lb ed="#SV"/>propriam dispositionem et habet illud quod si oportet ut exeat 
             <lb ed="#SV"/>in suam debitam operationem, sic est de felicitate communitatis, quia 
             <lb ed="#SV"/>si in communitate sit bona dispositio et quodlibet membrum velit 
@@ -280,7 +288,7 @@
         <lb ed="#SV"/>quam sit vincere illecebram et temptationem superare.</p>
       
       <p xml:id="l49-idbiuf">Item 
-        dicit <name>bernardus</name> in libro <title>de diligendo deo</title> quod voluntas sibi dereli<lb ed="#SV"/>cta 
+        dicit <name ref="#Bernard">bernardus</name> in libro <title ref="#OnTheLoveOfGod">de diligendo deo</title> quod voluntas sibi dereli<lb ed="#SV"/>cta 
         Retorquet totum in se, ergo non potest deo frui. unde ad hoc 
         <lb ed="#SV"/>allegat illam auctoritatem omnia quaerunt quae sua sunt. et sic voluntas 
         <lb ed="#SV"/>magis afficitur sibi quam ipsi ultimo frui.</p>
@@ -290,7 +298,7 @@
         <lb ed="#SV"/>naturaliter non potest non affici affectione commodi, nisi adiuvetur 
         <lb ed="#SV"/>de super.</p>
       
-      <p xml:id="l49-ipcidc">Item <name>pellagius</name> concessit specialem dei instructionem 
+      <p xml:id="l49-ipcidc">Item <name ref="#Pelagius">pellagius</name> concessit specialem dei instructionem 
         <lb ed="#SV"/>et non propter hoc fuit condemnatus, sed quia posuit quod voluntas 
         <lb ed="#SV"/>ex puris naturalibus potest se conformare iudicio intellectus et 
         <lb ed="#SV"/>bona opera facere. ideo condemnatus est. ideo neganda est consequentia intellectus 
@@ -299,13 +307,13 @@
           
           <p xml:id="l49-eahnpd">et ad hoc datur clara instantia, stat quod intellectus dictet <c>a</c> 
             obiectum esse diligendum ut decem. ponatur tamen quod maximus cognatus 
-            <lb ed="#SV"/>voluntatis tieretur[?] ad unum vel ad quattuor. tunc certum est quod vo<lb ed="#SV"/>luntas 
+            <lb ed="#SV"/>voluntatis <unclear>tieretur[?]</unclear> ad unum vel ad quattuor. tunc certum est quod vo<lb ed="#SV"/>luntas 
             non poterit se dictamini intellectus conformare. ideo non est 
             <lb ed="#SV"/>mirum si intellectus ditet aliquid vel aliqualiter esse diligendum 
             <lb ed="#SV"/>quod vel qualiter non potest diligere.</p>
           
         <p xml:id="l49-esvtne">Etiam sunt varii 
-          <lb ed="#SV"/>modi dilectionis. et perfectius diligit anima christi quam <name>sortes</name> 
+          <lb ed="#SV"/>modi dilectionis. et perfectius diligit anima christi quam <name ref="#Sortes">sortes</name> 
           <lb ed="#SV"/>in via. Si ergo intellectus dictaret quod deus esset diligendus 
           <lb ed="#SV"/>a speciei quae excederet naturalem facultatem voluntatis, tunc vo<lb ed="#SV"/>luntas 
           non posset sic conformiter agere ad illud dicta<lb ed="#SV"/>men. 
@@ -351,12 +359,12 @@
               <lb ed="#SV"/>dicunt qui tamen ex substractione boni temporalis vel beneficii 
               <lb ed="#SV"/>substrahunt dilectionem dei. Ideo valde difficile est scire 
               <lb ed="#SV"/>de dilectione, utrum sit Rei propter se. unde si aliquis dili<lb ed="#SV"/>geret 
-              deum qui haberet habendantiam[?] temporalium, si bene Resolveretur 
+              deum qui haberet <unclear>habendantiam[?]</unclear> temporalium, si bene Resolveretur 
               <lb ed="#SV"/>se forsan Reperiret se non diligere deum propter se ultima<lb ed="#SV"/>te.</p>
       
       <p xml:id="l49-cpiiev">Consequenter potest inferri quod maximum signum est non 
         <lb ed="#SV"/>exeundi in caritate tanta affectio temporalium. Aliter tamen dicunt 
-        <lb ed="#SV"/>quid, scilicet, <name>eliphat</name> dicendo de illo, qui est in caritate quod vel habet 
+        <lb ed="#SV"/>quid, scilicet, <name ref="#RobertHalifax">eliphat</name> dicendo de illo, qui est in caritate quod vel habet 
         <lb ed="#SV"/>caritatem intensam vel Remissam.</p>
         
         <p xml:id="l49-dcriee">De caritate Remissa 
@@ -371,7 +379,7 @@
         vel Reprobatione vel odio, scilicet, quod nullus sit utrum sit 
         <lb ed="#SV"/>praedestinatus vel praestitus. unde aliqui praestiti aliquando deum dile<lb ed="#SV"/>xerunt 
         et fuerunt in caritate et aliqui praedestinati 
-        <lb ed="#SV"/>deum offenderunt vehementer sicut <name>david</name> <name>paulus</name> et sic 
+        <lb ed="#SV"/>deum offenderunt vehementer sicut <name ref="#David">david</name> <name ref="#Paul">paulus</name> et sic 
         <lb ed="#SV"/>de allis. et sic nemo sit utrum amore vel odio 
         <cb ed="#SV" n="157vb"/><lb ed="#SV"/>dignus sit quantum ad praedestinationem dei aeternam vel Reprobationem vel 
         <lb ed="#SV"/>secundo dicit quod intelligitur de gratia finali vel gratia perseverantiae, quia 
@@ -387,7 +395,7 @@
                 potest habere aliquem actum deliberatum circa deum et non 
                 <lb ed="#SV"/>necessario malum, ergo bonum, ergo poterit frui deo ex puris natura<lb ed="#SV"/>libus 
                 quando dicitur quod voluntas ex puris naturalibus potest deum fruitive 
-                <lb ed="#SV"/>diligere. conceditur de vi locutae[?] et etiam conceditur quod non necessario habet 
+                <lb ed="#SV"/>diligere. conceditur de vi <unclear>locutae[?]</unclear> et etiam conceditur quod non necessario habet 
                 <lb ed="#SV"/>actum malum, quia potest se disponere et esse in gratia. Ad argumentum 
                 <lb ed="#SV"/>tamen secundum intensionem quam praetendit argumentum dicitur quod si voluntas 
                 <lb ed="#SV"/>circa deum habet aliquem ex puris naturalibus habet actum pravum quia 
