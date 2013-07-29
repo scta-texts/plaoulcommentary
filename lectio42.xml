@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-10">July 10th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio42">
         
@@ -40,7 +49,7 @@
         <div>
           <head xml:id="l42-Hrcqefo">Recapitulatio conclusionis: quod dilectio Dei propter se est fruitio ordinata</head>
         
-         <p xml:id="l42-ehedfo"><lb ed="#SV"/><hi rend="dropCapThreeLines">E</hi>x habitudine et conditione creaturam, dictum est 
+         <p xml:id="l42-ehedfo"><lb ed="#SV"/>Ex habitudine et conditione creaturam, dictum est 
            <lb ed="#SV"/>quod nulla habet rationem quietativum, ideo nulla creatura 
            <lb ed="#SV"/>est fruendum. consequenter dictum est quod dilectio dei 
            <lb ed="#SV"/>propter se est fruitio ordinata et illa fuit descriptio 
@@ -154,7 +163,7 @@
       
           <p xml:id="l42-ihpeab"><lb ed="#SV"/>Item huiusmodi proprietas est cognoscibilis et alicuius cognoscentis 
             <lb ed="#SV"/>tamquam obiectum Realiter existens, ergo est alicuius entitatis tenet 
-            <lb ed="#SV"/>consequentia ex doctrina <name>philosophi</name> IIo <title>metaphysicae</title>, quia proportionaliter se habet 
+            <lb ed="#SV"/>consequentia ex doctrina <name ref="#Aristotle">philosophi</name> IIo <title ref="#Metaphysics">metaphysicae</title>, quia proportionaliter se habet 
             <lb ed="#SV"/>res ad esse, sicut ad cognosci, et quantae est cognoscentis tantae 
             <lb ed="#SV"/>est entitatis. et ultra est alicuius entitatis, ergo est alicuius 
             <lb ed="#SV"/>bonitatis.</p>
@@ -175,7 +184,7 @@
             <lb ed="#SV"/>alias illo non diligerent.</p>
           
         <p xml:id="l42-eirndr">Ex istis rationibus videtur 
-          <lb ed="#SV"/>evidenter quod fundatum o??tarum[?] rationum, nullum est quia fundantur 
+          <lb ed="#SV"/>evidenter quod fundatum <unclear>o??tarum[?]</unclear> rationum, nullum est quia fundantur 
           <lb ed="#SV"/>in hoc quod ratio personalitatis in esse tali nullam dixit perfec<lb ed="#SV"/>tionem 
           nec diligibilitatis rationem.</p>
         
@@ -193,7 +202,7 @@
             <lb ed="#SV"/>ita in esse personali est immensae diligibilitatis. nam di<lb ed="#SV"/>cere 
             quod persona in esse personali non sit immensae no<cb ed="#SV" n="248vb"/><lb ed="#SV"/>bilitatis 
             et perfectionis nundum est contra doctores ut contra 
-            <lb ed="#SV"/><name>augustinum</name> et <name>magistrum</name> in alios, immo est contra divinas 
+            <lb ed="#SV"/><name ref="#Augustine">augustinum</name> et <name ref="#Lombard">magistrum</name> in alios, immo est contra divinas 
             <lb ed="#SV"/>personas blasphemia.</p> 
           
           <p xml:id="l42-usefrp">unde, sicut essentia divina est 
@@ -248,7 +257,7 @@
               <lb ed="#SV"/>non dicit perfectionem, negatur consequentia, quia licet illud 
               <lb ed="#SV"/>vocabulum secundum quod vocabulum non dicat perfectionem, tunc 
               <lb ed="#SV"/>supponit pro perfectionem simpliciter ideo quaelibet persona 
-              <lb ed="#SV"/>est obiectum fruibile. Unde <name>magister</name> pluraliter loquitur 
+              <lb ed="#SV"/>est obiectum fruibile. Unde <name ref="#Lombard">magister</name> pluraliter loquitur 
               <lb ed="#SV"/>in prima distinctione cum dicit Res quibus fruendum est 
               <cb ed="#SV" n="249ra"/><lb ed="#SV"/>sunt pater filius et spiritus sanctus, et tamen sunt ad obiectum 
               <lb ed="#SV"/>fruibile sicut tota trinitas Sed utrum una persona divina 
@@ -275,7 +284,7 @@
       
               <p xml:id="l42-echeae">Et circa hoc solet inquiri 
                 <lb ed="#SV"/>utrum productio creatura ad extra supponat emanationem 
-                <lb ed="#SV"/>divinarum personarum ad intra, et teneo opinionem <name>gan<lb ed="#SV"/>daventis</name> 
+                <lb ed="#SV"/>divinarum personarum ad intra, et teneo opinionem <name ref="#HenryOfGhent">gan<lb ed="#SV"/>daventis</name> 
                 quod sic et alias declarabitur, et sic patet quod ratio 
                 <lb ed="#SV"/>non valet, quia imaginatur quod persona in esse personali ad extra 
                 <lb ed="#SV"/>non sit communicabilis immo et eandem bonitatem diffun<lb ed="#SV"/>dunt 
@@ -290,9 +299,9 @@
       
             <p xml:id="l42-aaqeif">Ad aliud quando dicitur, tunc pater beatificaretur in alio, 
               <lb ed="#SV"/>Responsum est quod pater et filius sunt idem obiectum fruibile 
-              <lb ed="#SV"/>et beatificibile[?], et ideo non in alio beatificatur pater fruendo filio, 
+              <lb ed="#SV"/>et <unclear>beatificibile[?]</unclear>, et ideo non in alio beatificatur pater fruendo filio, 
               <lb ed="#SV"/>si tamen intelligeretur quod aliquis esset alius a patre 
-              <lb ed="#SV"/>qui esset obiectum beatificibile[?], tunc bene concederetur quod pater beatificaretur 
+              <lb ed="#SV"/>qui esset obiectum <unclear>beatificibile[?]</unclear>, tunc bene concederetur quod pater beatificaretur 
               <lb ed="#SV"/>in alio.</p> 
             
             <p xml:id="l42-paqeif">Post ea arguitur quod ratio fruibilitatis est perfectionis 
@@ -357,7 +366,7 @@
               tunc non invenietur causa aliqua nisi bonitas quae re<lb ed="#SV"/>peritur 
               in illo obiecto. Et usus ordinatus potest sic describi. 
               <lb ed="#SV"/>Usus ordinatus est dilectio creaturae propter deum. Et usus 
-              <lb ed="#SV"/>inordinatus est dilectio alicuius propter creaturam ubitate[??]. et 
+              <lb ed="#SV"/>inordinatus est dilectio alicuius propter creaturam <unclear>ubitate[??]</unclear>. et 
               <lb ed="#SV"/>usus in communi potest describi quod est dilectio alicuius propter aliud. 
               <lb ed="#SV"/>et fruitio inordinata quod est dilectio creaturae propter se et 
               <lb ed="#SV"/>ista intelliguntur secundum proprietatem terminorum quantum spectat ad 
