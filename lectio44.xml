@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-21">July 21, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio44">
       <head xml:id="l44-Hldfldf" subtype="title">Lectio 44, de Fruitione</head>
@@ -55,7 +64,7 @@
           <lb ed="#S"/>arguitur primo, <g ref="#slash"/>nam rationes obiectales usus et 
           <lb ed="#S"/>fruitionis differunt specifice, ergo et actus. consequentia 
           <lb ed="#S"/>tenet, quia actus distinguuntur per obiecta. antecedens patet, quia 
-          <lb ed="#S"/>ratio obiectiva usus est referitas[?]. et ratio 
+          <lb ed="#S"/>ratio obiectiva usus est <unclear>referitas[?]</unclear>. et ratio 
           <lb ed="#S"/>fruitionis obiectiva est irreferitas. modo, istae rationes 
           <lb ed="#S"/>et conditiones nedum differunt specifice, 
           <lb ed="#S"/><choice><orig>ymo</orig><reg>immo</reg></choice> totaliter sunt oppositae.</p>
@@ -150,9 +159,9 @@
             
             <p xml:id="l44-iaapdd"><g ref="#pilcrow"/>Item<note>See below <ref target="donelecture43.xml#d1l43uchtep">Lectio 43, para</ref></note> aliud a deo est 
               <lb ed="#S"/>dilective praeferendum, ergo alio a deo est fruendum. 
-              <lb ed="#S"/>probatur antecedens in casu in quo <name>sortes</name> frueretur deo 
+              <lb ed="#S"/>probatur antecedens in casu in quo <name ref="#Sortes">sortes</name> frueretur deo 
               <lb ed="#S"/>et videret proximum in extrema <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> constitutum, 
-              <lb ed="#S"/>in illo casu <name>sortes</name> teneretur <del rend="strikethrough">deo et vident 
+              <lb ed="#S"/>in illo casu <name ref="#Sortes">sortes</name> teneretur <del rend="strikethrough">deo et vident 
               <lb ed="#S"/>proximum</del> subvenire proximo et relinquere dilectionem 
               <lb ed="#S"/>dei, ergo videtur quod dilectio proximi sit praeferenda 
               <lb ed="#S"/>dilectioni dei.</p>
@@ -203,11 +212,11 @@
             
             <head xml:id="l44-Hduomum">septimum</head>
         
-            <p xml:id="l44-icesod"><g ref="#pilcrow"/>Item<note><name>Holcot</name>, <title>Super Sententias</title>, q. 4, a. 3, concl. 2, f.?b, T (Lyon 1518), 
+            <p xml:id="l44-icesod"><g ref="#pilcrow"/>Item<note><name ref="#Holcot">Holcot</name>, <title>Super Sententias</title>, q. 4, a. 3, concl. 2, f.?b, T (Lyon 1518), 
               "potest etiam esse error invincibilis in aliquo quod diabolus sit deus; si transfiguraret se, sic de quamcumque creatura argui potest"; See below <ref target="donelecture44.xml#d1l44arffcc">lectio 44, para.</ref></note> creatura est fruendum patet in casu in 
               <lb ed="#S"/>quo angelus <choice><orig>sathanae</orig><reg>satanae</reg></choice> transfiguraret se in 
-              <lb ed="#S"/>angelum lucis, et in illo casu apparet <name>sorti</name>, tunc 
-              <lb ed="#S"/>in illo casu <name>sortes</name> eliciet respectu illius dilectionem 
+              <lb ed="#S"/>angelum lucis, et in illo casu apparet <name ref="#Sortes">sorti</name>, tunc 
+              <lb ed="#S"/>in illo casu <name ref="#Sortes">sortes</name> eliciet respectu illius dilectionem 
               <lb ed="#S"/>super omnia, igitur erit super omnia diligendus.</p> 
           
           </div>
@@ -408,7 +417,7 @@
               <p xml:id="l44-aacres"><g ref="#pilcrow"/>ad aliam, creatura est fruendum, 
                 <lb ed="#S"/><g ref="#slash"/>negatur quia illa est summa perversitas. <g ref="#slash"/>ad probationem, 
                 <lb ed="#S"/>voluntates sunt propter se diligendae. <g ref="#pilcrow"/>hic ad<lb ed="#S"/>vertendum 
-                quod <name>philosophus</name> dicit quod aliqua sunt eligibilia propter 
+                quod <name ref="#Aristotle">philosophus</name> dicit quod aliqua sunt eligibilia propter 
                 <lb ed="#S"/>se ut virtutes. alia de per accidens <g ref="#slash"/>alia 
                 <lb ed="#S"/>sunt indifferentia. <g ref="#slash"/>ideo propter diffinitiones prae<lb ed="#S"/>dictas 
                 est notandum quod aliqua sunt quae 
@@ -438,7 +447,7 @@
                 <lb ed="#S"/>finis, ideo sunt de per se diligenda li per se, 
                 <lb ed="#S"/>tamen non denotat finem, sed solum removet 
                 <lb ed="#S"/>causam extrinsecam. et sic apparet quomodo intelligendus est 
-                <lb ed="#S"/><name>magister</name> <g ref="#slash"/>virtutes sunt propter se diligendae, 
+                <lb ed="#S"/><name ref="#Lombard">magister</name> <g ref="#slash"/>virtutes sunt propter se diligendae, 
                 <lb ed="#S"/>id est, per se habent ordinem essentialem ad finis 
                 <lb ed="#S"/>consecutionem respectu nostri. et sic illa ratio est soluta.</p>
         
@@ -452,7 +461,7 @@
                 <lb ed="#S"/>quia apprehenditur ut dependendum, sicut accidens 
                 <lb ed="#S"/>non potest concipi absolute sine relatione ad 
                 <lb ed="#S"/>subiectum, ita creatura in ordine ad deum 
-                <lb ed="#S"/>non potest concipi absolute. <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> sicut dicit <name>Guillelmus pari<lb ed="#S"/>siensis</name> 
+                <lb ed="#S"/>non potest concipi absolute. <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> sicut dicit <name ref="#WilliamOfParis">Guillelmus pari<lb ed="#S"/>siensis</name> 
                 deus est met esse creaturae.</p> 
         
       <p xml:id="dl42sdqsrf"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dico 
@@ -484,7 +493,7 @@
                 <lb ed="#S"/>finis, nec esse diligibiles propter se, sed propter 
                 <lb ed="#S"/>deum qui est finis ulterius quam clamant 
                 <lb ed="#S"/>non habere esse a se, nam multi philosophi et 
-                <lb ed="#S"/><name>aristoteles</name> videtur dicere quod deus non agat 
+                <lb ed="#S"/><name ref="#Aristotle">aristoteles</name> videtur dicere quod deus non agat 
                 <lb ed="#S"/>adextra, et quod deus non agit nisi ut 
                 <lb ed="#S"/>amatum, id est, ut finis omnium agen<lb ed="#S"/>tium. 
                 et est gratia cuius alia agentia agunt. 
