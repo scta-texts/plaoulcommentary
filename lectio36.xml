@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-06-02">June 6th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,11 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
     <body>
       <div xml:id="lectio36">
         <head subtype="title" xml:id="l36-Hldfldf">Lectio 36, de Fruitione</head>
@@ -68,20 +75,20 @@
             <lb ed="#SV"/>perfectioris, tamen qui vellet dicere posset quod terminatur anima quo 
             <lb ed="#SV"/>ad gradum et quo ad speciem, tamen non posset venire 
             <lb ed="#SV"/>ad suppremum gradum cuius est capax quantumcumque viveret. et 
-            <lb ed="#SV"/>ista est Responsio <name>hybernici</name> quae est probabilis.</p>
+            <lb ed="#SV"/>ista est Responsio <name ref="#RichardFitzRalph">hybernici</name> quae est probabilis.</p>
           
           <p xml:id="l36-ueqmec">verum est quod notat hic 
-            <lb ed="#SV"/><name>adam</name> unam distinctionem. primo notat quod multiplex est capacitas.</p> 
+            <lb ed="#SV"/><name ref="#Wodeham">adam</name> unam distinctionem. primo notat quod multiplex est capacitas.</p> 
       
             <p xml:id="l36-psevid">primo subiectiva et ista est infinita, et anima aliter 
               <lb ed="#SV"/>se habet in Recipiendo ut subiectum, quia se habet ut passiva, et aliter 
               <lb ed="#SV"/>in participiendo, quia se habet ut activa. et sic capacitas subiectiva 
               <lb ed="#SV"/>est infinita, quia secundum quod deus potest agere, potest Recipere, et tunc 
               <lb ed="#SV"/>si anima Reciperet infinitam visionem, tamen finite perciperet. unde 
-              <lb ed="#SV"/>hic <name>adam</name> dicit unum quod est verum. unde ponatur quod potentia 
+              <lb ed="#SV"/>hic <name ref="#Wodeham">adam</name> dicit unum quod est verum. unde ponatur quod potentia 
               <lb ed="#SV"/>sit perceptiva ut decem, et primo ponat visionem 
               <lb ed="#SV"/>ut decem, et iterem aliam ut decem. tunc dico quod non 
-              <cb ed="#SV" n="241vb"/><lb ed="#SV"/>videbit nisi ut decem, licet <name>adam</name> dicat quod videbit 
+              <cb ed="#SV" n="241vb"/><lb ed="#SV"/>videbit nisi ut decem, licet <name ref="#Wodeham">adam</name> dicat quod videbit 
               <lb ed="#SV"/>in duplo.</p>
       
           <p xml:id="l36-aecpec">alia est capacitas eminenter contentiva et ista 
@@ -96,8 +103,8 @@
       
           <p xml:id="l36-aecicc">alia est capacitas 
             <lb ed="#SV"/>coexistentiva. et sic capere non est aliud, nisi alteri coexistere. 
-            <lb ed="#SV"/>et sic coexistimus[?] deum et suus infinitae capacitatis. immo quaelibet 
-            <lb ed="#SV"/>res mundi, ut granum <sic>milii[?]</sic> est infinitae capacitatis 
+            <lb ed="#SV"/>et sic <unclear>coexistimus[?]</unclear> deum et suus infinitae capacitatis. immo quaelibet 
+            <lb ed="#SV"/>res mundi, ut granum <sic><unclear>milii[?]</unclear></sic> est infinitae capacitatis 
             <lb ed="#SV"/>coexistentiae.</p>
         </div>
         
@@ -117,10 +124,10 @@
       
           <p xml:id="l36-pqgutf">primo quod generaliter omnis creatura, 
             <lb ed="#SV"/>sive cognitiva sive non, appetit summum bonum tamquam 
-            <lb ed="#SV"/>suum finem ultimum. illud est de intentione <name>philosophi</name> Io 
-            <lb ed="#SV"/><title>ethicorum</title> dicentis "bonum est quod omnia appetunt." et antiqua 
+            <lb ed="#SV"/>suum finem ultimum. illud est de intentione <name ref="#Aristotle">philosophi</name> Io 
+            <lb ed="#SV"/><title ref="#Ethics">ethicorum</title> dicentis "bonum est quod omnia appetunt." et antiqua 
             <lb ed="#SV"/>translatio habet bene enuntiaverunt antiqui dicentes 
-            <lb ed="#SV"/>bonum est quod omnia appetunt, et <name>eustratius</name> dicit in commento 
+            <lb ed="#SV"/>bonum est quod omnia appetunt, et <name ref="#Eustratius">eustratius</name> dicit in <title ref="#EustratiusCommentary">commento</title> 
             <lb ed="#SV"/>quod per bonum debemus intelligere deum. et sic creatura 
             <lb ed="#SV"/>rationalis appetit bonum ultimum tamquam finem.</p>
       
@@ -132,8 +139,8 @@
             <lb ed="#SV"/>imperium, quia deus non solum Reducit ea solum quae sunt 
             <lb ed="#SV"/>in se finem; immo illa quae non sunt vocat tanquam 
             <lb ed="#SV"/>ea quae sunt. secundo modo potest imaginari huiusmodi 
-            <lb ed="#SV"/>appetitus in inanimatis[?] ut coniungantur suo principio effe<lb ed="#SV"/>ctivo 
-            secundum imaginationem <name>boetii</name>. unde multiplex Reperitur 
+            <lb ed="#SV"/>appetitus in <unclear>inanimatis[?]</unclear> ut coniungantur suo principio effe<lb ed="#SV"/>ctivo 
+            secundum imaginationem <name ref="#Boethius">boetii</name>. unde multiplex Reperitur 
             in Rebus bonum. unum quod concernit individuum, aliud 
             <lb ed="#SV"/>quod concernit speciem, aliud genus, aliud universum.</p>
       
@@ -159,7 +166,7 @@
             <lb ed="#SV"/>quam aliae, quia ipsius est capax dilectione et cognitione 
             <lb ed="#SV"/>per quos actus transformatur in deum. ideo creatura rationalis 
             <lb ed="#SV"/>singulariter ipsum omnibus gradibus appetendi appetit per quos 
-            <lb ed="#SV"/>deus potest appeti. <add place="margin" type="marginalNote">conclusio</add> Veniendo ergo ad materiam conclusio Repraesentativa 
+            <lb ed="#SV"/>deus potest appeti. Veniendo ergo ad materiam conclusio Repraesentativa 
             <lb ed="#SV"/>quod creatura rationalis non potest in aliquo bono finito quie<lb ed="#SV"/>tari 
             etiam de potentia dei absoluta illud probatur ante per 
             <lb ed="#SV"/>aliquas rationes; primo ex insufficientia creaturae quae non sufficit 
@@ -194,7 +201,7 @@
               <lb ed="#SV"/>corollarium: latitudo honestatis naturalis et essentialis 
               <lb ed="#SV"/>perfectionis correspondent sibi adaequate. honestas enim 
               <lb ed="#SV"/>est habitudo Rei ad suum finem, sicut naturalis iustitia. 
-              <lb ed="#SV"/>unde <name>plato</name> vocat eas operationes naturae ultimate re<lb ed="#SV"/>gulatas. 
+              <lb ed="#SV"/>unde <name ref="#Plato">plato</name> vocat eas operationes naturae ultimate re<lb ed="#SV"/>gulatas. 
               unde quanto operatio honestatis est naturalis est 
               <lb ed="#SV"/>optime Regulata et ad finem directa tanto est 
               <lb ed="#SV"/>magis naturalis iustitia. et sic ex hoc sequitur quanto 
@@ -238,7 +245,7 @@
           </div>
           
           <div>
-            <head xml:id="l36-Hscqian">Sextum corollarium: quod illud con[??] dictum creaturae inclinatur ad non-esse</head>
+            <head xml:id="l36-Hscqian">Sextum corollarium: quod illud <unclear>con[??]</unclear> dictum creaturae inclinatur ad non-esse</head>
             
             <p xml:id="l36-ehspsc">Ex hoc sequitur 
               <lb ed="#SV"/>quod illud commune dictum creaturae inclinantur ad non esse. debet 
