@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -17,7 +19,7 @@
                 <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
                 <pubPlace>Sacramento, CA</pubPlace>
                 <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
                 </availability>
                 <date when="2011-09-01">September 1st, 2011</date>  
             </publicationStmt>
@@ -35,6 +37,13 @@
         </encodingDesc>
     </teiHeader>
     <text xml:lang="la">
+        <front>
+            <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+                <xi:fallback>
+                    <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+                </xi:fallback>
+            </xi:include>
+        </front>
         <body>
             <div xml:id="lectio20">
                 <head subtype="title">Lectio 20, de Notitia</head>
@@ -74,8 +83,8 @@
                         <p xml:id="l20-cedanc">Consequenter ex <lb ed="#V"/>dictis 
                             <lb ed="#R"/>fidei, arguit quod Deus non est a nobis cognoscibilis, 
                             <lb ed="#R"/><cb ed="#V" n="39ra"/><lb ed="#V"/>et quod ita sit testatur Scriptura Sacra, quia <lb ed="#V"/>scriptum est<app><lem>quia scriptum est</lem><rdg wit="R" type="om."/></app> "Deum ne<lb ed="#R"/>mo 
-                            vidit umquam." <lb ed="#V"/>Etiam <name>Apostolus</name> dicit quod "Deus<app><lem>Deus</lem><rdg wit="R" type="om."/></app> in<lb ed="#R"/>habitat 
-                            lucem inaccessa<lb ed="#V"/>bilem." <name>Dionysius</name> 
+                            vidit umquam." <lb ed="#V"/>Etiam <name ref="#Paul">Apostolus</name> dicit quod "Deus<app><lem>Deus</lem><rdg wit="R" type="om."/></app> in<lb ed="#R"/>habitat 
+                            lucem inaccessa<lb ed="#V"/>bilem." <name ref="#Dionysius">Dionysius</name> 
                             <cb ed="#R" n="29vb"/><lb ed="#R"/>etiam dicit quod "de ipso non est scientia <lb ed="#V"/>nec opinio 
                             <lb ed="#R"/>nec fantasia, ergo non est <lb ed="#V"/>a nobis cognoscibilis."</p> 
                     </div>
@@ -143,8 +152,8 @@
                         
                         <p xml:id="l20-iefiqg">Si daretur<app><lem>daretur</lem><rdg wit="V" type="add."><add place="inline">et</add></rdg></app><lb ed="#R"/>ista<app><lem>ista</lem><rdg wit="V">et ista</rdg></app> est <cb ed="#V" n="30rb"/><lb ed="#V"/>fortior ratio in materia<app><lem>in materia</lem><rdg wit="R" type="om."/></app> tenentium quod Deus non<app><lem>non</lem><rdg wit="V" type="om."/></app> 
                             <lb ed="#R"/>potest esse <lb ed="#V"/>notitia creaturae et supplere vicem 
-                            <lb ed="#R"/>speciei <lb ed="#V"/>et volitionis. Et <name>Magister Ioannes de 
-                                <lb ed="#R"/><choice><orig>Rippa</orig><reg>Ripa</reg></choice></name> dicit <lb ed="#V"/>quod Deus supplens vicem speciei 
+                            <lb ed="#R"/>speciei <lb ed="#V"/>et volitionis. Et <name ref="Ripa">Magister Ioannes de 
+                                <lb ed="#R"/>Ripa</name> dicit <lb ed="#V"/>quod Deus supplens vicem speciei 
                             <lb ed="#R"/>et volitionis <lb ed="#V"/>et<app><lem>et</lem><rdg wit="R" type="om."/></app> est notitia infinita quoad 
                             <lb ed="#R"/>speciem, et fi<lb ed="#V"/>nita<app><lem>finita</lem><rdg wit="R">infinita</rdg></app> quoad gradum.</p> 
                         
@@ -183,7 +192,7 @@
                     </div>
                     <div>  
                         <head xml:id="l20-Hqirqir">Quinta ratio</head>
-                        <p xml:id="l20-iqniee">Item quinto<note>See below <ref type="crossReference" target="dthreeasixlecture30.xml#d3a5l30qrpinc">lectio 30, para.</ref></note> notitia talis 
+                        <p xml:id="l20-iqniee">Item quinto<note type="crossReference">See below <ref type="crossReference" target="dthreeasixlecture30.xml#d3a5l30qrpinc">lectio 30, para.</ref></note> notitia talis 
                             <lb ed="#R"/><lb ed="#V"/>esset<app><lem>esset</lem><rdg wit="R">est</rdg></app> simpliciter infinita. Istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> patet proportionando 
                             <lb ed="#R"/><lb ed="#V"/>notitias secundum proportionem obiectorum. Nam generaliter 
                             <lb ed="#R"/><lb ed="#V"/>perfectioris obiecti est perfectior cognitio, et specialiter 
@@ -198,7 +207,7 @@
                             <lb ed="#R"/>obiectorum <lb ed="#V"/>creatorum, et tamen notitia infinitorum 
                             <lb ed="#R"/>obiectorum creatorum, et<app><lem>et</lem><rdg wit="R" type="om."/></app> si esset, esset<app><lem>esset</lem><rdg wit="V" type="om."/></app> infinita, ergo etc.</p>
                         
-                        <p xml:id="l20-esdiap">Et si dicatur, quod<app><lem>quod</lem><rdg wit="V">duae[?]</rdg></app> non est eadem proportio cognitionum 
+                        <p xml:id="l20-esdiap">Et si dicatur, quod<app><lem>quod</lem><rdg wit="V"><unclear>duae[?]</unclear></rdg></app> non est eadem proportio cognitionum 
                             <lb ed="#R"/>inter se, <lb ed="#V"/>sicut obiectorum ita quod non semper oportet quod 
                             <lb ed="#R"/>obiecti perfectioris <cb ed="#V" n="39va"/><lb ed="#V"/>in duplo sit notitia perfectior 
                             <lb ed="#R"/>in duplo, re<lb ed="#V"/>torquetur ratio iterum. Verbi gratia, datis 
@@ -221,7 +230,7 @@
                         <p xml:id="l20-itdcse">Item<note>See below <ref type="crossReference" target="dthreeasixlecture31.xml#d3a6l31easnee">lectio 31, para.</ref></note> 
                             <lb ed="#R"/>talis Dei notitia <lb ed="#V"/>esset perfectior quam esset una alia 
                             <lb ed="#R"/>quae esset<app><lem>quae esset</lem><rdg wit="V" type="om."/></app> infinitorum obiectorum creatorum, et cuius<lb ed="#R"/>libet 
-                            distincte, <lb ed="#V"/>sed<app><lem>sed</lem><rdg wit="V">si</rdg></app> illa<app><lem>illa</lem><rdg wit="V">ipsa</rdg></app> <lb ed="#V"/>esset infinita, ergo etc.<app><lem>ergo etc.</lem><rdg wit="V"><add place="aboveLine">etc.</add></rdg></app> Et istam ratione facit <name>Adam</name><app><lem><name>Adam</name></lem><rdg wit="R">idem</rdg></app>idem, quod autem notitia 
+                            distincte, <lb ed="#V"/>sed<app><lem>sed</lem><rdg wit="V">si</rdg></app> illa<app><lem>illa</lem><rdg wit="V">ipsa</rdg></app> <lb ed="#V"/>esset infinita, ergo etc.<app><lem>ergo etc.</lem><rdg wit="V"><add place="aboveLine">etc.</add></rdg></app> Et istam ratione facit <name ref="#Adam">Adam</name><app><lem><name>Adam</name></lem><rdg wit="R">idem</rdg></app> idem, quod autem notitia 
                             <lb ed="#R"/>ipsius Dei esset perfectior quam notitia infinitorum 
                             <lb ed="#R"/>obiectorum creatorum, et cuiuslibet distincte, si essent.<app><lem>quod autem notitia . . . distincte, si essent</lem><rdg wit="V" type="om."/></app> Patet<app><lem>patet</lem><rdg wit="V">Antecedens patet</rdg></app> 
                             <lb ed="#R"/>quia<app><lem>quia</lem><rdg wit="V">quod</rdg></app> <lb ed="#V"/>Deus est perfectius obiectum in se quam tota multi<lb ed="#R"/>tudo<app><lem>multitudo</lem><rdg wit="V">latitudo</rdg></app> 
@@ -271,9 +280,9 @@
                         <p xml:id="l20-idqmqa"><lb ed="#R"/>Item dato quod Deus esset imaginabilis vel conceptibilis, non  
                             <lb ed="#R"/>non sequitur quod Deus esset. Sicut enim non sequitur: vacuum est 
                             <lb ed="#R"/>imaginabile vel chimera vel impossibile, ergo va<lb ed="#R"/>cuum 
-                            est, etc., quia sicut dicit <name>Philosophus</name> <num>IIIo</num> <title>Physicorum</title>
+                            est, etc., quia sicut dicit <name ref="#Aristotle">Philosophus</name> <num>IIIo</num> <title ref="#Physics">Physicorum</title>
                             <lb ed="#R"/>circa finem: "Imaginatum non est credendum."
-                            <lb ed="#R"/>Et<app><lem></lem><rdg wit="R" type="add.sed.del"><del rend="strikethrough"><add place="inline">da</add></del></rdg></app> per consequens, dato quod primae rationes vera[?], 
+                            <lb ed="#R"/>Et<app><lem/><rdg wit="R" type="add.sed.del"><del rend="strikethrough"><add place="inline">da</add></del></rdg></app> per consequens, dato quod primae rationes <unclear>vera[?]</unclear>, 
                             <lb ed="#R"/>concluderent quin Deus esse<app><lem>imaginabilis vel conceptibilis non  . . . concluderent quin Deus esse</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>imaginabilis vel con<lb ed="#R"/>ceptibilis, 
                             propter hoc sequitur quod <lb ed="#V"/>Deus esset. Omnis 
                             <lb ed="#R"/>enim ratio facta ad probandum 'quod Deus <lb ed="#V"/>sit' est 
@@ -291,7 +300,7 @@
                     </div>
                     <div>
                         <head xml:id="l20-Hnornor">Nona ratio</head>
-                        <p xml:id="l20-ideefh">Item<note>See below <ref type="crossReference" target="dthreeasixlecture31.xml#d3a6l31uaqfee">lectio 31, para.</ref></note> 'Deum <lb ed="#V"/>esse' traditur<app><lem>traditur</lem><rdg wit="V">creditur</rdg></app> ad credendum, igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> non 
+                        <p xml:id="l20-ideefh">Item<note type="crossReference">See below <ref type="crossReference" target="dthreeasixlecture31.xml#d3a6l31uaqfee">lectio 31, para.</ref></note> 'Deum <lb ed="#V"/>esse' traditur<app><lem>traditur</lem><rdg wit="V">creditur</rdg></app> ad credendum, igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> non 
                             <lb ed="#R"/>potest <lb ed="#V"/>probari, quia si posset evidenter probari, 
                             <lb ed="#R"/>non <lb ed="#V"/>exiret limites animae creatae nec<app><lem>nec</lem><rdg wit="V">ac</rdg></app> etiam 
                             <lb ed="#R"/>investi<lb ed="#V"/>gationes humanae, et per consequens non 
