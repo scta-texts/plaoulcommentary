@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio99">
       <head xml:id="l99-ldlldl" subtype="title">Lectio 99, de Libertate</head>
@@ -62,7 +71,7 @@
              ultimam bonitatem propter se. et non di<lb ed="#SV"/>ligit 
              nisi in ordine ad ultimam bonitatem et ita 
              <lb ed="#SV"/>de aggressu honorificentiae et ista propositio fundatur in dicto 
-             <lb ed="#SV"/><name ref="#Aristotle">philosophi</name> declarato per <name>albertum</name> et alios commentatores cum 
+             <lb ed="#SV"/><name ref="#Aristotle">philosophi</name> declarato per <name ref="#Albert">albertum</name> et alios commentatores cum 
              <lb ed="#SV"/>ait <name ref="#Aristotle">aristoteles</name> quod omnia bonum appetunt quia ulterius appe<lb ed="#SV"/>titus 
              creaturae rationalis est semper Rectus et bonus ut ait 
              <lb ed="#SV"/><name ref="#Boethius">boecius</name> IIIo <title ref="#Consolation">de consolatione</title> dicens quod semper Recta est naturalis 
@@ -157,7 +166,7 @@
                <lb ed="#SV"/>et hoc vocando naturale secundum statum naturae nunc 
                <lb ed="#SV"/>currentes ex inclinatione innata ex corruptela peccati 
                <lb ed="#SV"/>et hoc deduxit <name ref="#WilliamOfParis">guillelmus parisiensis</name> in libro 
-               <lb ed="#SV"/><title rend="#onFaithAndLaws">de fide et legibus</title> vocando naturale quod competit 
+               <lb ed="#SV"/><title ref="#OnFaithAndLaws">de fide et legibus</title> vocando naturale quod competit 
                <lb ed="#SV"/>creaturae secundum statum talem, ut ex consuetudine 
                <lb ed="#SV"/>nutritus malo cilo vel veneno quod fit conve<lb ed="#SV"/>niens 
                et naturale per consuetudinem. exemplum ponit 
@@ -317,10 +326,10 @@
           fatales eis praedicere statum puerorum et ordinare propria 
           <lb ed="#SV"/>potestate alia causa Reducta ad eandem Radicem est ex 
           <lb ed="#SV"/>appetitu inanis gloriae, ergo nulla minima persona caret 
-          <lb ed="#SV"/>ut ait <name>valerius</name> nam plene sunt historiae <name>Romanarum</name> 
+          <lb ed="#SV"/>ut ait <name>valerius</name> nam plene sunt historiae <name ref="#Romans">Romanarum</name> 
           <lb ed="#SV"/>de simplicibus se fingentibus cum diis conversari ut magis 
-          <lb ed="#SV"/>venerarentur. Unde <name ref="AlexanderTheGreat">alexander magnus</name> dicit se fuisse 
-          <lb ed="#SV"/>genitum a <name ref="#Jupiter">Iove</name> in specie serpentis, et <name><sic>nabugodonosor</sic></name> 
+          <lb ed="#SV"/>venerarentur. Unde <name ref="#AlexanderTheGreat">alexander magnus</name> dicit se fuisse 
+          <lb ed="#SV"/>genitum a <name ref="#Jupiter">Iove</name> in specie serpentis, et <name ref="#Nebuchadnezzar"><sic>nabugodonosor</sic></name> 
           <lb ed="#SV"/>fecit destrui omnia idola sui Regni et voluit se 
           <lb ed="#SV"/>adorari tanquam deum.</p>
         
