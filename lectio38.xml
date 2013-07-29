@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-07-07">July 7th, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,11 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+      <xi:fallback>
+        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+      </xi:fallback>
+    </xi:include>
     <body>
       <div xml:id="lectio38">
         <head xml:id="l38-ldfldf" subtype="title">Lectio 38, de Fruitione</head>
@@ -60,7 +67,7 @@
             <lb ed="#SV"/>ultra illud nihil appeteret per active volendi, et 
             <lb ed="#SV"/>tamen talis creatura non esset quietata, quia adhuc esset 
             <lb ed="#SV"/>motio naturalis illius creaturae rationalis in deum, propter 
-            <lb ed="#SV"/>quod dicit <name>augustinus</name> domine, fecisti nos ad te, 
+            <lb ed="#SV"/>quod dicit <name ref="#Augustine">augustinus</name> domine, fecisti nos ad te, 
             <lb ed="#SV"/>ibi denominatur causae finalis habitudo, et inquietum est cor 
             <lb ed="#SV"/>nostrum donec Requiescat in te.</p> 
             
@@ -74,9 +81,9 @@
                 <lb ed="#SV"/>naturaliter quod esset aliqua inquietudo in creatura et tamen causam 
                 <lb ed="#SV"/>ignosceret, et sic talis creatura non quietaretur.</p>
             
-        <p xml:id="l38-usiiei">Unde si <name>Sortes</name> 
+        <p xml:id="l38-usiiei">Unde si <name ref="#Sortes">Sortes</name> 
             <lb ed="#SV"/>velit habere <c>a</c> et non possit habere <c>a</c> ex hoc 
-            <lb ed="#SV"/>consurgit obiectum tristabile[?], et sic talis creatura posset 
+            <lb ed="#SV"/>consurgit obiectum <unclear>tristabile[?]</unclear>, et sic talis creatura posset 
             <lb ed="#SV"/>experiri in tali creatura male esse, licet nesciret 
             <lb ed="#SV"/>resolvere causam, et sic in quietaretur quia non haberet 
             <lb ed="#SV"/>illud quod naturaliter desiderat habere, et etiam ibi 
@@ -124,8 +131,8 @@
           <div>
             <head xml:id="l38-Hadreof">Aegidius de Roma et tres causas quod Deus est obiectum felicitatis</head>
             
-            <p xml:id="l38-echatc">Et circa hoc <name>aegidius de Roma</name> in 
-                <lb ed="#SV"/><title>quolibetis</title> suis assignat tres causas.</p> 
+            <p xml:id="l38-echatc">Et circa hoc <name ref="#GilesOfRome">aegidius de Roma</name> in 
+                <lb ed="#SV"/><title ref="#QuodlibetsGilesOfRome">quolibetis</title> suis assignat tres causas.</p> 
            <div>
              <head xml:id="l38-Hpcpcpc">Prima causa</head>
         
@@ -136,14 +143,14 @@
                  <lb ed="#SV"/>est quod deus se habeat ad creaturam. non sicut impressio figurae sigilli 
                  <lb ed="#SV"/>ad creaturam, quia talis impressio Remanet in cera sigillo amoto, 
                  <lb ed="#SV"/>sed se habet sicut impressio figurae sigilii ad aquam, qui continue 
-                 <lb ed="#SV"/>Requirit praesentialiter[?] figuram sigilli, quia per eius subtractionem, 
+                 <lb ed="#SV"/>Requirit <unclear>praesentialiter[?]</unclear> figuram sigilli, quia per eius subtractionem, 
                  <lb ed="#SV"/>desineret in aqua figura sigilli, sic creatura remota influentia 
-                 <lb ed="#SV"/>conservativa eius desineret esse quia semper Requirit praesentiam conservatis[?] 
+                 <lb ed="#SV"/>conservativa eius desineret esse quia semper Requirit praesentiam <unclear>conservatis[?]</unclear> 
                  <lb ed="#SV"/>ipsius dei.</p> 
              
-             <p xml:id="l38-udmepe">unde deus magis <add place="aboveLine">est</add> intimus creaturae quam creatura sibi 
+             <p xml:id="l38-udmepe">unde deus magis est intimus creaturae quam creatura sibi 
                  <lb ed="#SV"/>met. et sic creatura habet magis esse in deo quam in se et iuxta 
-                 <lb ed="#SV"/>hoc <name>guillelmus parisiensis</name> ponit quod magis Realiter deus est 
+                 <lb ed="#SV"/>hoc <name ref="#WilliamOfParis">guillelmus parisiensis</name> ponit quod magis Realiter deus est 
                  <lb ed="#SV"/>esse creaturae quam creatura sit. unde dato quod de per se creatura ma<lb ed="#SV"/>gis 
                  diligeret se quam deum. tamen magis debet diligere deum quia 
                  <lb ed="#SV"/>magis debet diligere suum esse quam suum non esse modo ad deum 
@@ -199,7 +206,7 @@
                 <lb ed="#SV"/>qua beatus eum sic diligit fruitione.</p> 
               
         <p xml:id="l38-epderd">et primo dicit 
-            <lb ed="#SV"/>de <name>Rippa</name> quod deus sub unica ratione formali vel sub duabus 
+            <lb ed="#SV"/>de <name ref="#Ripa">Rippa</name> quod deus sub unica ratione formali vel sub duabus 
             <lb ed="#SV"/>vel sub finitis solum ostensus non est obiectum fruibilie. Imaginatur 
             <lb ed="#SV"/>enim distinctionem formalitatum secundum distinctionem praedicatorum essentialium ut 
             <lb ed="#SV"/>dicebatur supra, ut si videretur in esse entis bene apparet infinitum 
@@ -207,7 +214,7 @@
             <lb ed="#SV"/>quo diligeretur sub illa ratione esse actus medius inter 
             <lb ed="#SV"/>usum et fruitionem, et sic divina essentia apprehendens seipsam 
             <lb ed="#SV"/>sub unica ratione formali illa non est ratio  formalis 
-            <lb ed="#SV"/>obiectiva fruitionis[?]. et sic ratio obiectiva formalis est resultans 
+            <lb ed="#SV"/>obiectiva <unclear>fruitionis[?]</unclear>. et sic ratio obiectiva formalis est resultans 
             <lb ed="#SV"/>ex omnibus rationibus formalibus, et illa forsitan est ratio distinctis.</p>
      
             <p xml:id="l38-scqiir"><lb ed="#SV"/>Sed contra quia non oportet quod beatus videat deum secundum quamlibet rationem 
@@ -220,7 +227,7 @@
         <p xml:id="l38-eichob">Et ideo circa illud potest aliter dici sive ponatur distinctio 
             <lb ed="#SV"/>formalis in deo sive non, quia quicumque videt deum videt eum 
             <lb ed="#SV"/>sub ratione fruibili et summi boni. unde dato quod ponantur 
-            <lb ed="#SV"/>rationes formales sicut <name>de Ripa</name> ponit diceretur quod ex visione 
+            <lb ed="#SV"/>rationes formales sicut <name ref="#Ripa">de Ripa</name> ponit diceretur quod ex visione 
             <lb ed="#SV"/>unius potest elici Iudicium quod deus est summe bonus et summe 
             <lb ed="#SV"/>bonum et obiectum fruibile, et ideo eo ipso magis Reputatur, 
             <lb ed="#SV"/>quia beatus videns sub unica ratione iudicat eum habere 
@@ -231,7 +238,7 @@
             <lb ed="#SV"/>quia statim potest elici iudicium quod est summum bonum quamcumque 
             <lb ed="#SV"/>videtur secundum pauca praedicata sibi competentia.</p> 
               
-        <p xml:id="l38-scdqit">Sed contra <name>durandum</name> 
+        <p xml:id="l38-scdqit">Sed contra <name ref="#Durandus">durandum</name> 
             <lb ed="#SV"/>quod habitio dei vel habere Deum non est obiectum quietativum, quia illud 
             <lb ed="#SV"/>Refertur ad utilitatem creaturae quia habitio dei est creaturae visio, 
             <lb ed="#SV"/>et sic illud est bonum creaturae. et sic diligere deum ut videantur 
@@ -260,7 +267,7 @@
       <p xml:id="l38-ehsmee">Ex hoc sequitur quod deus iuste potest quos vult 
           <lb ed="#SV"/>ad praedestinationem vocare et quos vult Reprobare. et 
           <lb ed="#SV"/>licet hoc fuerit supra praedicatum, tamen hoc sinunt ex alia Radice quam 
-          <lb ed="#SV"/>nunc et hoc tangit <name>apostolus</name> sub similitudine figuli qui est 
+          <lb ed="#SV"/>nunc et hoc tangit <name ref="#Paul">apostolus</name> sub similitudine figuli qui est 
           <lb ed="#SV"/>dicens suorum vasorum, ideo potest unum facere et ordinare 
           <lb ed="#SV"/>in honorem et aliud in contumeliam. modo divinum dei respectu creaturae 
           <lb ed="#SV"/>est in infinitum maius. ergo etc.</p>
@@ -293,7 +300,7 @@
       
           <p xml:id="l38-suqmsn">Sequitur ulterius 
               <lb ed="#SV"/>quod nullius creaturae ad aliam est essentialis habitudo subie<lb ed="#SV"/>ctionis, 
-              quia, licet sit respectu dei essentiale divinum[?], tamen respectu creaturae 
+              quia, licet sit respectu dei essentiale <unclear>divinum[?]</unclear>, tamen respectu creaturae 
               <lb ed="#SV"/>actualiter competit divinum sive morale sive naturale, etc.</p>
       </div>
         </div>
