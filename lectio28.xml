@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Sacramento, CA</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2011-08-01">August 1st, 2011</date>  
       </publicationStmt>
@@ -35,6 +37,13 @@
     </encodingDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio28">
         <head subtype="title">Lectio 28, de Notitia</head>
@@ -95,7 +104,7 @@
             per ali<lb ed="#V"/>quem conceptum, et etiam concipitur per aliquem 
             <lb ed="#R"/>conceptum,<app><lem>et etiam concipitur per aliquem conceptum</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> et etiam significatur per terminum<app><lem>per terminum</lem><rdg wit="V" type="om."/></app> re<lb ed="#V"/>positum in 
             <lb ed="#R"/>aliquo genere vel<app><lem>genere vel</lem><rdg wit="V" type="om."/></app> praedicamento. Et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> probat 
-            <lb ed="#R"/>sic, quia <lb ed="#V"/>istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> non detrahit de sua perfectio<lb ed="#R"/>ne et simpli<lb ed="#V"/>citate, quia illud non arguit<app><lem>arguit</lem><rdg wit="R" type="add.sed.del."><del><add>[?]</add></del></rdg></app><del>[?]</del> 
+            <lb ed="#R"/>sic, quia <lb ed="#V"/>istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> non detrahit de sua perfectio<lb ed="#R"/>ne et simpli<lb ed="#V"/>citate, quia illud non arguit<app><lem/><rdg wit="R" type="add.sed.del."><del><add>[?]</add></del></rdg></app><del>[?]</del> 
             <lb ed="#R"/>aliquam <lb ed="#V"/>imperfectionem sive compositionem in ipso 
             <lb ed="#R"/>Deo, <cb ed="#V" n="57vb"/><lb ed="#V"/>quia impertinens est sibi, si sic vel sic 
             <lb ed="#R"/>concipiamus<app><lem>concipiamus</lem><rdg wit="V">capiamus</rdg></app> <lb ed="#V"/>ipsum. Et per consequens, si concipiatur aliquo 
@@ -281,7 +290,7 @@
           <lb ed="#R"/>philosophi tenuerunt quod Deus 
           <lb ed="#V"/>non est in praedicamento; immo 
           <lb ed="#R"/>voluerunt <lb ed="#V"/>aliqui doctores dicere quod opinio 
-          <lb ed="#R"/><name>Aristotelis</name> fuit <lb ed="#V"/>quod omnes intelligentiae separatae et<app><lem>et</lem><rdg wit="V" type="om."/></app> omnia 
+          <lb ed="#R"/><name ref="#Aristotle">Aristotelis</name> fuit <lb ed="#V"/>quod omnes intelligentiae separatae et<app><lem>et</lem><rdg wit="V" type="om."/></app> omnia 
           <lb ed="#R"/>immateri<lb ed="#V"/>alia essent extra<app><lem>extra</lem><rdg wit="V" type="add"><add>in</add></rdg></app> genus. <name ref="#Ripa">Magister Ioannes 
             <lb ed="#R"/>de Ripa</name> <lb ed="#V"/>vult inducere per auctoritates<app><lem>auctoritates</lem><rdg wit="V">auctoritatem</rdg></app> ipsius <name ref="#Aristotle">Aristotelis</name> 
           <lb ed="#R"/>quod <lb ed="#V"/>res immateriales non reponuntur in <cb ed="#V" n="58vb"/><lb ed="#V"/>genere, 
