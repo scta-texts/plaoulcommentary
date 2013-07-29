@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -17,7 +19,7 @@
                 <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
                 <pubPlace>Baltimore, MD</pubPlace>
                 <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
                 </availability>
                 <date when="2013-02-01">February 1, 2013</date>  
             </publicationStmt>
@@ -32,6 +34,13 @@
         </fileDesc>
     </teiHeader>
     <text xml:lang="la">
+        <front>
+            <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+                <xi:fallback>
+                    <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+                </xi:fallback>
+            </xi:include>
+        </front>
         <body>
             <div xml:id="lectio94">
                 <head xml:id="l94-Hldcldc" subtype="title">Lectio 94, de Caritate</head>
@@ -86,8 +95,8 @@
         <lb ed="#SV"/>ultra praecepta. Ad illud tamen opus tenentur pastores 
         <lb ed="#SV"/>ecclesiae. unde pastoribus ecclesiae generaliter debet esse conten<lb ed="#SV"/>tus 
         sui propter deum et proximum. ideo dicebat salvator 
-        <lb ed="#SV"/><title>Iohannes</title> IXno "ego pastor bonus et bonus pastor 
-        <lb ed="#SV"/>est qui animam ponit pro ovibus suis." et quia ibi 
+        <lb ed="#SV"/><title ref="#JohnGospel">Iohannes</title> IXno <quote type="Biblical">"ego pastor bonus et bonus pastor 
+        <lb ed="#SV"/>est qui animam ponit pro ovibus suis."</quote> et quia ibi 
         <lb ed="#SV"/>loquitur de vita corporali, igitur episcopus tenetur pro ovibus suis 
         <lb ed="#SV"/>exponere vitam corporalem. et per consequens tenetur ex<lb ed="#SV"/>ponere 
         se morti pro proximo Iuvando et corporalem 
