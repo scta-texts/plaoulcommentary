@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +19,7 @@
         <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
         <pubPlace>Baltimore, MD</pubPlace>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
         </availability>
         <date when="2012-08-17">August 17, 2012</date>  
       </publicationStmt>
@@ -32,6 +34,13 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <xi:include href="../XMLFragments/citationlists_include.xml" xpointer="include_list">
+        <xi:fallback>
+          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
+        </xi:fallback>
+      </xi:include>
+    </front>
     <body>
       <div xml:id="lectio48">
         <head xml:id="l48-Hldfldf" subtype="title">Lectio 48, de Fruitione</head>
@@ -41,7 +50,7 @@
         
           <p xml:id="l48-ccmege"><lb ed="#SV"/>Consequenter continuando materiam, ego faciam unam rationem<note type="crossReference">See below for response <ref target="donelecture48.xml#d1l48aadpbt">lectio 47, para.</ref></note> 
         <lb ed="#SV"/>quod fruitio dei posset esse sine gratia. et illud probatur 
-        <lb ed="#SV"/>de opere obstetricum de quo habetur <title>exodi</title> primo capitulo, quia fece<lb ed="#SV"/>runt 
+        <lb ed="#SV"/>de opere obstetricum de quo habetur <title ref="#Exodus">exodi</title> primo capitulo, quia fece<lb ed="#SV"/>runt 
         bonum opus, immo ex illo fuerunt Remuneratae. bene 
         <lb ed="#SV"/>dicitur ibi unde ergo fecit deus obstetricibus. et quia timuerunt 
         <lb ed="#SV"/>obstetrices deum aedificavit illis domos, ergo opus earum 
@@ -50,8 +59,8 @@
         <lb ed="#SV"/>ergo erat usus creaturae. et per consequens fruitio dei, et tamen extra 
         <lb ed="#SV"/>gratiam ergo.</p>
       
-      <p xml:id="l48-carcfd">Confirmatur a Rectractionibus[?] Rei pu?te[?] romanorum 
-        <lb ed="#SV"/>et aliarum potentiarum, et licet secundum <name>augustinum</name> essent mali 
+      <p xml:id="l48-carcfd">Confirmatur a <unclear>Rectractionibus[?]</unclear> Rei <unclear>pu?te[?]</unclear> romanorum 
+        <lb ed="#SV"/>et aliarum potentiarum, et licet secundum <name ref="#Augustine">augustinum</name> essent mali 
         <lb ed="#SV"/>fecerunt, tamen aliqua mala opera quae opera debebant Re
         <lb ed="#SV"/>munerari saltem per aliquod bonum temporale. et per consequens actus 
         <lb ed="#SV"/>eorum erant boni. et per consequens fruitio dei.</p>
@@ -60,7 +69,7 @@
             <head xml:id="l48-Hcaqidc">Contra antecedens quod intellectus ex puris naturalibus potest dicare Deum esse summum bonum et voluntas poterat se illi dictamini conformare</head>
             
       <p xml:id="l48-aradce">Ad rationes 
-        <lb ed="#SV"/>ante oppositum factas. ad primam rationem,<note>See above <ref target="donelecture45.xml#d1l45eappsc">lectio 45, para.</ref></note> unde in prima ratione 
+        <lb ed="#SV"/>ante oppositum factas. ad primam rationem,<note type="crossReference">See above <ref target="donelecture45.xml#d1l45eappsc">lectio 45, para.</ref></note> unde in prima ratione 
         <lb ed="#SV"/>tangebatur quod intellectus ex puris naturalibus potest dicare deum 
         <lb ed="#SV"/>esse summum bonum et super omnia diligendum. et voluntas 
         <lb ed="#SV"/>poterat se illi dictamini conformare, ergo.</p>
@@ -75,10 +84,10 @@
         <lb ed="#SV"/>ex puris naturalibus nec investigatio humana possunt 
         <lb ed="#SV"/>pertingere ex se nisi ad notitiam substantiarum corporearum. 
         <lb ed="#SV"/>nec possunt concludere esse incorporeum ut patuit de puris 
-        <lb ed="#SV"/>philosophibus[?], qui posuerunt deum esse corporalem. et de 
+        <lb ed="#SV"/><unclear>philosophibus[?]</unclear>, qui posuerunt deum esse corporalem. et de 
         <lb ed="#SV"/>illis qui ponebant deum esse solem. alii stellas et 
-        <lb ed="#SV"/>propter hoc <name>aristotles</name> dicit quod veritas philosophiae fuerit Revela<lb ed="#SV"/>ta 
-        philosophis. et <name>Iosephus</name> in libro antiquitatum dicit 
+        <lb ed="#SV"/>propter hoc <name ref="#Aristotle">aristotles</name> dicit quod veritas philosophiae fuerit Revela<lb ed="#SV"/>ta 
+        philosophis. et <name ref="#Josephus">Iosephus</name> in libro <title ref="#Antiquities">antiquitatum</title> dicit 
         <lb ed="#SV"/>quod veritas philosophiae fuit Revelata et communicata populo iudaico. 
         <cb ed="#SV" n="246ra"/><lb ed="#SV"/>Et ideo circa illud antecedens potest negari quod ex puris naturali<lb ed="#SV"/>bus 
         cum influentia dei generali, nisi esset Revelatio posset 
@@ -117,7 +126,7 @@
               
       <p xml:id="l48-tdqnpp">tertio diceretur quod licet intellectus quantum 
         <lb ed="#SV"/>est de se ex puris naturalibus posset devenire ad hanc veritatem 
-        <lb ed="#SV"/>deus est sicut videtur innuere <name>apostolus</name> quod intellectus ex creaturis 
+        <lb ed="#SV"/>deus est sicut videtur innuere <name ref="#Paul">apostolus</name> quod intellectus ex creaturis 
         <lb ed="#SV"/>potest cognoscere deum esse. et licet etiam devenisset ad illam 
         <lb ed="#SV"/>notitiam quod deus est et quod deus est summum bonum, et deus 
         <lb ed="#SV"/>est obiectum fruibile, tamen malitia eorum excaecavit eos sic 
