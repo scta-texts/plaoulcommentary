@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Lectio 1, Prologus [Palantine Transcription]</title>
+        <title>Lectio 1, de Fide [Palantine Transcription]</title>
         <author xml:id="PP">Petrus Plaoul</author>
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
         <edition n="2011.10-dev-master">
-          <title>Lectio 1, Prologus [Palantine Transcription]</title>
+          <title>Lectio 1, de Fide [Palantine Transcription]</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <publisher>LombardPress</publisher>
         <pubPlace>Boston, MA</pubPlace>
         <availability status="free">
           <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -32,23 +32,23 @@
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
       <div xml:id="lectio1">
-        <head subtype="title">Lectio 1, Prologus [Palantine Transcription]</head>
+        <head subtype="title">Lectio 1, de Fide [Palantine Transcription]</head>
         <div>
 <head xml:id="l1-Hquipfs">[Quaestio: utrum in causa iudicali fidei contra traditionem pure humanitus adinventam iudex idoneus feret pro fide sententiam]</head>
-          <head><hi rend="largeFont">Lectio 2a</hi></head>
-<p xml:id="l1-cpspfs">Circa prologum quaeritur utrum 
-  <lb ed="#PV"/>in causa Iudicali fidei contra 
-  <lb ed="#PV"/>traditionem pure humanitus ad<lb ed="#PV"/>inventam 
+          
+          <p xml:id="l1-cpspfs"><lb ed="#PV"/><hi rend="largeFont">Lectio 2a</hi>
+            <lb ed="#PV"/>Circa prologum quaeritur utrum 
+  <lb ed="#PV"/>in causa Iudiciali fidei contra 
+  <lb ed="#PV"/><choice><orig>tradicionem</orig><reg>traditionem</reg></choice> pure humanitus ad<lb ed="#PV"/>inventam 
   <g ref="#slash"/>iudex <choice><orig>ydoneus</orig><reg>idoneus</reg></choice> pro fide 
-  <lb ed="#PV"/>ferret sententiam.</p>
+  <lb ed="#PV"/>ferret sententiam</p>
         </div>
         
         <div><head xml:id="l1-Hcccccc">[Conclusio]</head>
@@ -134,8 +134,7 @@ sunt tamquam principia ex quibus alia theologice deducuntur.</p>
             <lb ed="#PV"/>assensus primi principii et per rationem 
             <lb ed="#PV"/>sophisticam possit aliquis 
             <lb ed="#PV"/>dubitari primum principium</p>
-            <lb ed="#PV"/>
-          </p>
+            
           
           
 <p xml:id="l1-uaqriv"><choice><orig>3s</orig><reg>tres</reg></choice> 

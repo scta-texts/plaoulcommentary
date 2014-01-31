@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Lectio 1, Prologus [Palantine Transcription]</title>
+        <title>Lectio 1, de Fide [Erlangen Transcription]</title>
         <author xml:id="PP">Petrus Plaoul</author>
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
         <edition n="2011.10-dev-master">
-          <title>Lectio 1, Prologus [Palantine Transcription]</title>
+          <title>Lectio 1, de Fide [Erlangen Transcription]</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <publisher>LombardPress</publisher>
         <pubPlace>Boston, MA</pubPlace>
         <availability status="free">
           <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -25,44 +25,35 @@
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="PV">Palantine</witness>
+          <witness xml:id="E">Erlangen</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
       <div xml:id="lectio1">
-        <head subtype="title">Lectio 1, Prologus [Palantine Transcription]</head>
+        <head subtype="title">Lectio 1, de Fide [Elangen Transcription]</head>
         <div>
 <head xml:id="l1-Hquipfs">[Quaestio: utrum in causa iudicali fidei contra traditionem pure humanitus adinventam iudex idoneus feret pro fide sententiam]</head>
-          <head><hi rend="largeFont">Lectio 2a</hi></head>
-<p xml:id="l1-cpspfs">Circa prologum quaeritur utrum 
-  in causa Iudicali fidei contra 
-  traditionem pure humanitus adinventam 
-  <g ref="#slash"/>iudex <choice><orig>ydoneus</orig><reg>idoneus</reg></choice> pro fide 
-  ferret sententiam.</p>
+          
+<p xml:id="l1-cpspfs"><lb ed="#E"/>Circa prologum Quaeritur Utrum in causa Iudiciali fidei contra <choice><orig>tradicionem</orig><reg>traditionem</reg></choice> 
+  <lb ed="#PV"/>pure humanitus adinventam iudex <choice><orig>ydoneus</orig><reg>idoneus</reg></choice> pro fide ferret sententiam</p>
         </div>
         
         <div><head xml:id="l1-Hcccccc">[Conclusio]</head>
           
-<p xml:id="l1-eipdlt"><g ref="#slash"/>prima conclusio quod non 
-  subicitur fides iudicio rationis 
-  quare quia fides est donum dei <g ref="#slash"/>excedens iudicium rationis 
-  humanae <g ref="#slash"/>immediate[?] descendens a patre 
-  luminum per gravum[?]. Alia conclusio 
-  quam arguit ???????????? 
-  In statu <choice><orig>innocenciae</orig><reg>innocentiae</reg></choice> <g ref="#slash"/>fuerunts sub[??] 
-  et hoc habetur ex g[?] <g ref="#slash"/>unum <name>magister <g ref="dot"/>p<g ref="#dot"/></name> 
-  qui dixit condignum quod 
-  <choice><orig>posicio</orig><reg>positio</reg></choice>
+<p xml:id="l1-eipdlt"><pb ed="#E" n="2ra"/><lb ed="#E"/>Prima conclusio Quod non subicitur fides rationi humanae quia fides est donum dei ex<lb ed="#E"/>cedens 
+  iudicium rationis humanae immediate descendens a patre luminum per gratiam Alia conclusio 
+  <lb ed="#E"/>quam arguit <name>Cordig Singula</name> in statu <choice><orig>innocenciae</orig><reg>innocentiae</reg></choice> fuerunt subiecta Et hoc 
+  <lb ed="#E"/>habetur ex <title ref="#Genesis">genesis</title> unde <name>magister <g ref="dot"/>p<g ref="#dot"/></name> qui dixit Cordig quod positio sua non fuit fundata 
+  Ipse multiplicat declaravit eam et primo assumpsit quod dcitum est Item perfectior 
 
 </p> 
   
