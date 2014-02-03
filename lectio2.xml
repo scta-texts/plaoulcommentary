@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
  <teiHeader>
   <fileDesc>
  <titleStmt>
-  <title>Lectio 2, Prologus</title>
+  <title>Lectio 2, de Fide</title>
   <author xml:id="PP">Petrus Plaoul</author>
   <editor xml:id="JW">Jeffrey C. Witt</editor>
  </titleStmt>
    <editionStmt>
     <edition n="2011.10-dev-master">
-     <title>Lectio 2, Prologus</title>
+     <title>Lectio 2, de Fide</title>
      <date when="2011-10-04">October 04, 2011</date>
     </edition>
    </editionStmt>
    <publicationStmt>
-    <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+    <publisher>LombardPress</publisher>
     <pubPlace>Sacramento, CA</pubPlace>
     <availability status="free">
      <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -31,13 +33,19 @@
    </sourceDesc>
   </fileDesc>
   <encodingDesc>
-   <variantEncoding method="double-end-point" location="internal"/>
+   <variantEncoding method="double-end-point" location="external"/>
   </encodingDesc>
  </teiHeader>
  <text xml:lang="la">
+  <front>
+   <div xml:id="includeList">
+    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+   </div>
+  </front>
   <body>
  <div xml:id="lectio2">
-  <head xml:id="l2-Hlprlpr" subtype="title">Lectio 2, Prologus</head>
+  <head xml:id="l2-Hlprlpr" subtype="title">Lectio 2, de Fide</head>
   
   <div>
    <head xml:id="l2-Hdgadga">[Duo genera assensus]</head>
@@ -77,7 +85,7 @@
   </div>
   <div><head xml:id="l2-Hdgvdgv">[Diversa genera veritatis]</head>
 
-   <p xml:id="l2-eamtsh"><lb ed="#V"/>Et ad magis aperiendum<app><lem>aperiendum</lem><rdg wit="V">apparendum</rdg></app> materiam de <lb ed="#R"/>or<lb ed="#V"/>dine veritatum, notandum est<app><lem>est</lem><rdg wit="R" type="om."/></app> quod multiplex <lb ed="#V"/>est veritas. Prima<app><lem>prima</lem><rdg wit="R">primum</rdg></app> <lb ed="#R"/>est divinum iudicium <lb ed="#V"/>quod non potest esse falsum nec <lb ed="#R"/>difformare,<app><lem>difformare</lem><rdg wit="V">deforme</rdg></app> <lb ed="#V"/>ideo est immensa veritas et infal<lb ed="#R"/>libilis. <lb ed="#V"/>Etiam<app><lem>etiam</lem><rdg wit="V">et</rdg></app> <supplied>secundo</supplied> hoc capiendo pro complexa veritate, non<app><lem>non</lem><rdg wit="R" type="add.sed.del"><add place="inline"><del rend="strikethrough">prout</del></add></rdg></app> <lb ed="#R"/>quod in Deo sit complexio realis, sed <lb ed="#V"/>quoad modum <lb ed="#R"/>nostrum loquendi. Ipsa<app><lem>ipsa</lem><rdg wit="V">ista</rdg></app> tamen <lb ed="#V"/>essentia Dei ut ex<lb ed="#R"/>istens vocatur incomplexa, <lb ed="#V"/>ita quod veritas ad extra <lb ed="#R"/>incomplexa non est <lb ed="#V"/>aliud quam res ad extra existens <lb ed="#R"/>ad similitudine extra <cb ed="#V" n="7vb"/><lb ed="#V"/>rem Dei ad intra.<app><lem>intra</lem><rdg wit="V">extra</rdg></app> Tertio:<app><lem>tertio</lem><rdg wit="R">secundo modo</rdg></app> <lb ed="#R"/>veritas complexa in <lb ed="#V"/>rebus est quaedam confor<lb ed="#R"/>mitas in obiecto causa<lb ed="#V"/>ta a divino iudicio, sicut '<name ref="Sortes">Sortem</name> <lb ed="#R"/>currere' <lb ed="#V"/>est veritas derivata a prima veritate, scilicet, <lb ed="#V"/>quia<app><lem>quia</lem><rdg wit="V">quod</rdg></app> <lb ed="#R"/>Deus iudicat quod '<name ref="#Sortes">Sortes</name> currit', ideo <lb ed="#V"/>verum est '<name ref="#Sortes">Sortem</name> currere'. <lb ed="#R"/>Utrum autem istae <lb ed="#V"/>veritates complexae<app><lem>complexae</lem><rdg wit="V">simplices</rdg></app> sint <lb ed="#R"/>res simplices vel <lb ed="#V"/>complexe significabilia, alias<app><lem>alias</lem><rdg wit="V" type="om."/></app> tan<lb ed="#R"/>gebatur quod essent<app><lem>essent</lem><rdg wit="V">esset</rdg></app> complexe <lb ed="#V"/>significabilia. Sed <lb ed="#R"/>pro nunc teneo quod non est <lb ed="#V"/>aliquod complexe significabile <lb ed="#R"/>distinctum a re simplici, <lb ed="#V"/>sed est res sic se habens ita <lb ed="#R"/>quod complexe significabile <lb ed="#V"/>supponit pro re simplici conno<lb ed="#R"/>tando quod ta<lb ed="#V"/>liter se habeat.</p>
+   <p xml:id="l2-eamtsh"><lb ed="#V"/>Et ad magis aperiendum<app><lem>aperiendum</lem><rdg wit="V">apparendum</rdg></app> materiam de <lb ed="#R"/>or<lb ed="#V"/>dine veritatum, notandum est<app><lem>est</lem><rdg wit="R" type="om."/></app> quod multiplex <lb ed="#V"/>est veritas. Prima<app><lem>prima</lem><rdg wit="R">primum</rdg></app> <lb ed="#R"/>est divinum iudicium <lb ed="#V"/>quod non potest esse falsum nec <lb ed="#R"/>difformare,<app><lem>difformare</lem><rdg wit="V">deforme</rdg></app> <lb ed="#V"/>ideo est immensa veritas et infal<lb ed="#R"/>libilis. <lb ed="#V"/>Etiam<app><lem>etiam</lem><rdg wit="V">et</rdg></app> <supplied>secundo</supplied> hoc capiendo pro complexa veritate, non<app><lem>non</lem><rdg wit="R" type="add.sed.del"><add place="inline"><del rend="strikethrough">prout</del></add></rdg></app> <lb ed="#R"/>quod in Deo sit complexio realis, sed <lb ed="#V"/>quoad modum <lb ed="#R"/>nostrum loquendi. Ipsa<app><lem>ipsa</lem><rdg wit="V">ista</rdg></app> tamen <lb ed="#V"/>essentia Dei ut ex<lb ed="#R"/>istens vocatur incomplexa, <lb ed="#V"/>ita quod veritas ad extra <lb ed="#R"/>incomplexa non est <lb ed="#V"/>aliud quam res ad extra existens <lb ed="#R"/>ad similitudinem extra <cb ed="#V" n="7vb"/><lb ed="#V"/>rem Dei ad intra.<app><lem>intra</lem><rdg wit="V">extra</rdg></app> Tertio:<app><lem>tertio</lem><rdg wit="R">secundo modo</rdg></app> <lb ed="#R"/>veritas complexa in <lb ed="#V"/>rebus est quaedam confor<lb ed="#R"/>mitas in obiecto causa<lb ed="#V"/>ta a divino iudicio, sicut '<name ref="Sortes">Sortem</name> <lb ed="#R"/>currere' <lb ed="#V"/>est veritas derivata a prima veritate, scilicet, <lb ed="#V"/>quia<app><lem>quia</lem><rdg wit="V">quod</rdg></app> <lb ed="#R"/>Deus iudicat quod '<name ref="#Sortes">Sortes</name> currit', ideo <lb ed="#V"/>verum est '<name ref="#Sortes">Sortem</name> currere'. <lb ed="#R"/>Utrum autem istae <lb ed="#V"/>veritates complexae<app><lem>complexae</lem><rdg wit="V">simplices</rdg></app> sint <lb ed="#R"/>res simplices vel <lb ed="#V"/>complexe significabilia, alias<app><lem>alias</lem><rdg wit="V" type="om."/></app> tan<lb ed="#R"/>gebatur quod essent<app><lem>essent</lem><rdg wit="V">esset</rdg></app> complexe <lb ed="#V"/>significabilia. Sed <lb ed="#R"/>pro nunc teneo quod non est <lb ed="#V"/>aliquod complexe significabile <lb ed="#R"/>distinctum a re simplici, <lb ed="#V"/>sed est res sic se habens ita <lb ed="#R"/>quod complexe significabile <lb ed="#V"/>supponit pro re simplici conno<lb ed="#R"/>tando quod ta<lb ed="#V"/>liter se habeat.</p>
    
    <p xml:id="l2-eqstgv">Ex quo sequitur quod <lb ed="#R"/>veritas a parte rei est quodammodo prior<app><lem>prior</lem><rdg wit="R" cause="add.sed.del">prior <add place="inline"><del rend="strikethrough">a</del></add></rdg></app> veritate <cb ed="#R" n="3rb"/><lb ed="#R"/>in intellectu nostro, quia veritas<app><lem>a parte rei est quodammodo prior  veritate in intellectu nostro, quia veritas</lem><rdg wit="V" type="om." cause="homoteleuton"/></app> <lb ed="#V"/>in intellectu nostro<app><lem>nostro</lem><rdg wit="V">modo</rdg></app> est <lb ed="#R"/>quoddam<app><lem>quoddam</lem><rdg wit="R">quod</rdg></app> iudicium con<lb ed="#V"/>forme veritati ad extra, <lb ed="#R"/>et contrarium est in <lb ed="#V"/>divino iudicio. Et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> dixi<app><lem>dixi</lem><rdg wit="V">dicitur</rdg></app> ad <lb ed="#R"/>de<lb ed="#V"/>notandum quod fides infusa non reponitur <lb ed="#V"/>sub <lb ed="#R"/>tertio gradu veritatis.</p> 
   </div>
@@ -114,7 +122,7 @@
  
  <p xml:id="l2-qcniec"><lb ed="#R"/>Quartum corollarium: necessarium est prius possibili, <lb ed="#V"/>id est, contingenti.</p>
  
- <p xml:id="l2-qcevpe"><lb ed="#R"/>Quintum corollarium est:<app><lem>est</lem><rdg wit="V" type="om."/></app> necessarium est prius <lb ed="#V"/>impossibili. Et ut <cb ed="#R" n="3va"/><lb ed="#R"/>facilius intelligatur, <lb ed="#V"/>ipse imaginatur quod nullo <lb ed="#R"/>modo potest esse <lb ed="#V"/>verum vel falsum, possibile vel <lb ed="#R"/>impossibile, quin prius <lb ed="#V"/>resolvatur in prima veritate <lb ed="#R"/>causaliter, ita quod Deus <lb ed="#V"/>est realiter<app><lem>realiter</lem><rdg wit="V">sit</rdg></app> causa quare aliqua <lb ed="#R"/>propositio est impossibilis <lb ed="#V"/>vel possibilis, etc.</p>
+ <p xml:id="l2-qcevpe"><lb ed="#R"/>Quintum corollarium est:<app><lem>est</lem><rdg wit="V" type="om."/></app> necessarium est prius <lb ed="#V"/>impossibili. Et ut <cb ed="#R" n="3va"/><lb ed="#R"/>facilius intelligatur, <lb ed="#V"/>ipse imaginatur quod nullo <lb ed="#R"/>modo potest esse <lb ed="#V"/>verum vel falsum, possibile vel <lb ed="#R"/>impossibile, quin prius <lb ed="#V"/>resolvatur in primam veritatem <lb ed="#R"/>causaliter, ita quod Deus <lb ed="#V"/>est realiter<app><lem>realiter</lem><rdg wit="V">sit</rdg></app> causa quare aliqua <lb ed="#R"/>propositio est impossibilis <lb ed="#V"/>vel possibilis, etc.</p>
 
 
 </div>
