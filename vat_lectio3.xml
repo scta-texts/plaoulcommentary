@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Lectio 3, Prologus [Vatican Transcription</title>
+                <title>Lectio 3, de Fide [Vatican Transcription</title>
                 <author xml:id="PP">Petrus Plaoul</author>
                 <editor xml:id="JW">Jeffrey C. Witt</editor>
             </titleStmt>
             <editionStmt>
                 <edition n="2011.10-dev-master">
-                    <title>Lectio 3, Prologus [Vatican Transcription</title>
+                    <title>Lectio 3, de Fide [Vatican Transcription</title>
                     <date when="2011-10-04">October 04, 2011</date>
                 </edition>
             </editionStmt>
             <publicationStmt>
-                <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+                <publisher>Lombard Press</publisher>
                 <pubPlace>Sacramento, CA</pubPlace>
                 <availability status="free">
                     <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -29,310 +31,326 @@
         </fileDesc>
 </teiHeader>
     <text>
+        <front>
+            <div xml:id="includeList">
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+            </div>
+        </front>
         <body>
             <div xml:id="lectio3">
-                <head subtype="title">Lectio 3, Prologus</head>
-                <div><head>[Conclusiones circa fidem]</head> 
-                    <p xml:id="l3-seqiaf">Sciendum est quod quamquam fides 
-<lb ed="#V"/>sit quoddam accidens essentialiter sub qualibet 
-<lb ed="#V"/>specie constitutum, <choice><orig>nichilominus</orig><reg>nihilominus</reg></choice> habet aliquam de<lb ed="#V"/>nominationem 
-perfectionis simpliciter mobile quam, 
-<lb ed="#V"/>de facto, nulla creata substantia habet scilicet, denominationem 
-<lb ed="#V"/>praesentationis conformis divino iudicio. ideo 
-<lb ed="#V"/>quantum ad hoc fides et actus fidei habent 
-<lb ed="#V"/>unam conditionem quae est tantae excellentiae 
-<lb ed="#V"/>quod nulli substantiae creatae competit. unde quantum ad 
-<lb ed="#V"/>hoc, habet modum aliquem aeternitatis, non 
-<lb ed="#V"/>quoniam sit una res temporalis, sed quia 
-<lb ed="#V"/>in repraesentando, non transit in praeteri<lb ed="#V"/>tam, 
-et ideo semper manet contingentia futurorum. 
-<lb ed="#V"/>unde, licet <name>Sortes</name> per assensum fidei assentit quod 
-<lb ed="#V"/>resurrectio mortuorum erit, ille assensus 
-<lb ed="#V"/>quantum ad hoc non trahit aliquam <choice><orig>neccissi<lb ed="#V"/>tatem</orig><reg>necessi<lb ed="#V"/>tatem</reg></choice> 
-                        ex praeteritione illa. <g ref="#slash"/>verum est tamen quod 
-<lb ed="#V"/>illud resolvere est difficile; <g ref="#slash"/>pro cuius de<lb ed="#V"/>claratione, 
-                        ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice>, capiamus aliquam 
-<lb ed="#V"/>creaturam, quae ex sua natura se<lb ed="#V"/>quatur 
-                        regulam divinae intelligentiae, tunc propor<lb ed="#V"/>tionaliter 
-                        <choice><orig>ymaginetur</orig><reg>imaginetur</reg></choice> quod fides de natura 
-<lb ed="#V"/>sua sit conformis divino iudicio. et sic, 
-<lb ed="#V"/>isto dato, proportionaliter dicendum  
-<lb ed="#V"/>est de fide sicut de divino iudico, ita 
-                        <lb ed="#V"/>quod non stat fidem a divino iudico 
-<lb ed="#V"/>discedere, ita quod divinum iudicium sit ex<lb ed="#V"/>emplar 
-                        factum <choice><orig>neccessariam</orig><reg>necessarium</reg></choice> ipsius assensus.</p>
+                <head subtype="title">Lectio 3, de Fide [Vatican Transcription]</head>
+                <div>
+                    <head><supplied>Conclusiones circa fidem</supplied></head> 
+                    
+                    <p xml:id="l3-seqiaf"><g ref="#dbslash"/>Sciendum est quod quamquam fides 
+                    <lb ed="#V"/>sit quoddam accidens essentialiter sub qualibet 
+                    <lb ed="#V"/>specie constitutum <choice><orig>nichilominus</orig><reg>nihilominus</reg></choice> habet aliquam de<lb ed="#V"/>nominationem 
+                    perfectionis simpliciter mobilis quam 
+                    <lb ed="#V"/>de facto nulla creata substantia habet scilicet denominationem 
+                    <lb ed="#V"/>praesentationis conformis divino iudicio ideo 
+                    <lb ed="#V"/>quantum ad hoc fides et actus fidei habent 
+                    <lb ed="#V"/>unam conditionem quae est tantae excellentiae 
+                    <lb ed="#V"/>quod nulli substantiae creatae competit <g ref="#dot"/>unde quantum ad 
+                    <lb ed="#V"/>hoc habet modum aliquem aeternitatis non 
+                    <lb ed="#V"/>quoniam sit una res temporalis sed quia 
+                    <lb ed="#V"/>in repraesentando non transit in praeteri<lb ed="#V"/>tam 
+                    et ideo semper manet contingentia futurorum 
+                    <lb ed="#V"/>unde licet <name ref="#Sortes">sortes</name> per assensum fidei assentit quod 
+                    <lb ed="#V"/>resurrectio mortuorum erit ille assensus 
+                    <lb ed="#V"/>quantum ad hoc non trahit aliquam <choice><orig>neccissi<lb ed="#V"/>tatem</orig><reg>necessi<lb ed="#V"/>tatem</reg></choice> 
+                    ex praeteritione illa <g ref="#slash"/>verum est tamen quod 
+                    <lb ed="#V"/>illud resolvere est difficile <g ref="#slash"/>pro cuius de<lb ed="#V"/>claratione 
+                    ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> capiamus aliquam 
+                    <lb ed="#V"/>creaturam quae ex natura sua se<lb ed="#V"/>quatur 
+                    regulam divinae intelligentiae tunc propor<lb ed="#V"/>tionaliter 
+                    <choice><orig>ymaginetur</orig><reg>imaginetur</reg></choice> quod fides de natura 
+                    <lb ed="#V"/>sua sit conformis divino iudicio et sic 
+                    <lb ed="#V"/>isto dato proportionaliter dicendum  
+                    <lb ed="#V"/>est de fide sicut de divino iudicio ita 
+                    <lb ed="#V"/>quod non stat fidem a divino iudicio 
+                    <lb ed="#V"/>discedere ita quod divinum iudicium sit ex<lb ed="#V"/>emplar 
+                    factum <choice><orig>neccessariam</orig><reg>necessarium</reg></choice> ipsius assensus</p>
                     
                     <p xml:id="l3-iiqead">Item 
 <lb ed="#V"/><choice><orig>ymaginetur</orig><reg>imaginetur</reg></choice> quod deus ostendat formaliter in verbo 
-<lb ed="#V"/>'antichristum fore' et quod <name>sortes</name> ei assentiat; cer<lb ed="#V"/>tum 
-                        est quod illa notitia, quam <name>sortes</name> habebit, 
-<lb ed="#V"/>erit conformis notitiae verbi. <g ref="#slash"/>Item <choice><orig>ymaginetur</orig><reg>imaginetur</reg></choice> 
-<lb ed="#V"/>quod verbum non solum obiective repraesentet 'an<lb ed="#V"/>tichristum 
-                        fore', sed quod realiter sit met notitia 
-<lb ed="#V"/>in eadem proportione, sicut esset una notitia cre<lb ed="#V"/>ata. 
-                        quare ergo non posset deus creare causare u<lb ed="#V"/>nam 
-                        notitiam, quae haberet eundem modum 
-<lb ed="#V"/>repraesentandi <name>sorti</name> sicut ipsum verbum, non 
-<cb ed="#V" n="8vb"/><lb ed="#V"/>enim videtur aliqualis ratio repugnantia. 
-<lb ed="#V"/>Item certum est quod positio est aliqualiter difficilis, 
-<lb ed="#V"/>sed si resolvamus quantitatem potentiae, non erit 
-<lb ed="#V"/>aliqualiter difficultas.</p>
+<lb ed="#V"/>antichristum fore et quod <name ref="#Sortes">sortes</name> ei assentiat cer<lb ed="#V"/>tum 
+est quod illa notitia quam <name ref="#Sortes">sortes</name> habebit 
+<lb ed="#V"/>erit conformis notitiae verbi <g ref="#slash"/>Item <choice><orig>ymaginetur</orig><reg>imaginetur</reg></choice> 
+<lb ed="#V"/>quod verbum non solum obiective repraesentet an<lb ed="#V"/>tichristum 
+fore sed quod realiter sit met <choice><orig>noticia</orig><reg>notitia</reg></choice> 
+<lb ed="#V"/>in eadem proportione sicut esset una notitia cre<lb ed="#V"/>ata 
+quare ergo non posset deus creare causare u<lb ed="#V"/>nam 
+notitiam quae haberet eundem modum 
+<lb ed="#V"/>repraesentandi <name ref="#Sortes">sorti</name> sicut ipsum verbum non 
+<cb ed="#V" n="8vb"/><lb ed="#V"/>enim videtur aliqualis ratio <choice><orig>repugnancia</orig><reg>repugnantia</reg></choice> 
+<lb ed="#V"/>Item certum est quod positio est aliqualiter difficilis 
+<lb ed="#V"/>sed si resolvamus quantitatem potentiae non erit 
+<lb ed="#V"/>aliqualiter difficultas</p>
                     
                     <p xml:id="l3-ieqeqm">Item ex quo fides 
-<lb ed="#V"/>facit credere miranda, scilicet, quod una et 
-<lb ed="#V"/>eadem res simplicissima est tres personae, 
+<lb ed="#V"/>facit credere miranda scilicet quod una et 
+<lb ed="#V"/>eadem res simplicissima est tres personae 
 <lb ed="#V"/>et quod facit intellectum abnegare semet ipsum 
 <lb ed="#V"/>et ferri in obiectum absque apparentia non est 
-<lb ed="#V"/>mirum, si sit alterius conditionis quam alia ac<lb ed="#V"/>cidentia. 
-Imaginando igitur quod ista denominatio sit 
-<lb ed="#V"/>communicabilis creaturae, et cum ista non 
-<lb ed="#V"/>repugnant simul esse, quia reperiri  
-<lb ed="#V"/>competere simul possunt creaturae, quo dato, videtur 
+<lb ed="#V"/>mirum si sit alterius conditionis quam alia ac<lb ed="#V"/>cidentia 
+<choice><orig>ymaginando</orig><reg>imaginando</reg></choice> ergo quod ista denominatio sit 
+<lb ed="#V"/>communicabilis creaturae et cum ista non repu<lb ed="#V"/>gnant 
+simul esse quia reperiri possunt simul   
+<lb ed="#V"/>competere creaturae quo dato videtur 
 <lb ed="#V"/>quod talis creatura non posset errare 
-<lb ed="#V"/>quovis modo.</p> 
+<lb ed="#V"/>quovis modo</p> 
                 </div>
-                <div><head>[Objectio contra illas conclusiones]</head>
+                <div>
+                    <head><supplied>Objectio contra illas conclusiones</supplied></head>
                     
                     <p xml:id="l3-veqaep">verum est quod ista positio 
-<lb ed="#V"/>habet aliquas difficultates, ita quod aliter 
-<lb ed="#V"/>quod quacumque creatura intellectiva, data quantumcumque 
-<lb ed="#V"/>perfecta, esset peccabilis.</p>
+<lb ed="#V"/>habet aliquas difficultates ita quod aliter 
+<lb ed="#V"/>quod quacumque creatura intellectiva data quantumcumque 
+<lb ed="#V"/>perfecta esset peccabilis</p>
                     
-                    <div><head>[Prima ratio]</head> 
+                    <div>
+                        <head><supplied>Prima ratio</supplied></head> 
                         
                         <p xml:id="l3-apqpep">arguitur primo sic quia hac crea<lb ed="#V"/>tura 
-                            data, adhuc esset intrinsece et essentialiter 
-<lb ed="#V"/>libera. respectu <c>a</c><g ref="#dot"/> effectus, tunc potest eum producere 
-<lb ed="#V"/>vel non producere. <g ref="#slash"/>Ulterius ponitur quod deus 
-<lb ed="#V"/>praecipiat sibi facere <g ref="#dot"/><c>a</c><g ref="#dot"/>; quia potest cadere sub 
-<lb ed="#V"/>praecepto, et cum sit libera, tunc poterit 
-                            <lb ed="#V"/>non facere <g ref="#dot"/><c>a</c><g ref="#dot"/>, quia propter praeceptum non mu<lb ed="#V"/>tabitur 
-                            eius libertas; tunc ultra non facit 
-<lb ed="#V"/><c>a</c><g ref="#dot"/> et est sibi praeceptum, ergo peccat.</p>
+                            data adhuc esset intrinsece et essentialiter 
+<lb ed="#V"/>libera respectu <c>a</c><g ref="#dot"/> effectus tunc potest eum producere 
+<lb ed="#V"/>vel non producere <g ref="#slash"/>Ulterius ponitur quod deus 
+<lb ed="#V"/>praecipiat sibi facere <g ref="#dot"/><c>a</c><g ref="#dot"/> quia potest cadere sub 
+<lb ed="#V"/>praecepto et cum sit libera tunc poterit 
+<lb ed="#V"/>non facere <g ref="#dot"/><c>a</c><g ref="#dot"/> quia propter praeceptum non mu<lb ed="#V"/>tabitur 
+eius libertas tunc ultra non facit 
+<lb ed="#V"/><c>a</c><g ref="#dot"/> et est sibi praeceptum ergo peccat</p>
                     </div>
                     
-                    <div><head>[Secunda ratio]</head>
+                    <div>
+                        <head><supplied>Secunda ratio</supplied></head>
                         
-                        <p xml:id="l3-saqsie"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic quia 
+<p xml:id="l3-saqsie"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic quia 
 <lb ed="#V"/>dato quod huiusmodi creatura haberet conditionem 
-<lb ed="#V"/>fidei, ita quod esset <choice><orig>neccessario</orig><reg>necessario</reg></choice> conformis divino 
-<lb ed="#V"/>iudicio in repraesentando, staret quod esset recti<lb ed="#V"/>tudo 
-                            alteri et non sibi, sicut est de fide. 
+<lb ed="#V"/>fidei ita quod esset <choice><orig>neccessario</orig><reg>necessario</reg></choice> conformis divino 
+<lb ed="#V"/>iudicio in repraesentando staret quod esset recti<lb ed="#V"/>tudo 
+alteri et non sibi sicut est de fide 
 <lb ed="#V"/>ergo positio praedicta non est fundata 
-<lb ed="#V"/>bene, quia, data intelligentia tua, non esset 
-<lb ed="#V"/>rectitudo sibi, sed alteri, quia non est repu<lb ed="#V"/>gnantia 
-                            quod aliquid sit aliqualiter notitia 
+<lb ed="#V"/>bene quia data intelligentia tua non esset 
+<lb ed="#V"/>rectitudo sibi sed alteri quia non est <choice><orig>repu<lb ed="#V"/>gnancia</orig><reg>repu<lb ed="#V"/>gnantia</reg></choice> 
+quod aliquid sit aliqualiter notitia 
 <lb ed="#V"/>alicui et non sibi sicut de facto est de ver<lb ed="#V"/>bo 
-                            divino quod potest esse nota creaturae finita 
+divino quod potest esse nota creaturae finita 
 <lb ed="#V"/>et tamen non potest esse nota finita sibi ipsi 
-<lb ed="#V"/>ergo etc.</p>
+<lb ed="#V"/>ergo etc</p>
                         
                     </div>
                     <div>   
                         
-                        <head>[Tertia ratio]</head>   
+                        <head><supplied>Tertia ratio</supplied></head>   
                         
-                        <p xml:id="l3-tsdimp"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sic, data tali creatura, deus 
-                            <cb ed="#V" n="9ra"/><lb ed="#V"/>posset actus suos deacceptare, ergo actus 
-<lb ed="#V"/>sui possunt esse peccata. consequentia tenet quia deacceptatio 
-<lb ed="#V"/>dei reddit opus creaturae culpabile, ergo. <g ref="#dbslash"/>Con<lb ed="#V"/>firmatur, 
-                            quia sola acceptatio dignificat crea<lb ed="#V"/>turam, 
-                            ergo a simile deacceptatio sola sufficit 
-<lb ed="#V"/>indignificat creaturam. antecedens alias fuit 
-<lb ed="#V"/>tactum in meo principio.</p>
+<p xml:id="l3-tsdimp"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sic data tali creatura deus 
+<cb ed="#V" n="9ra"/><lb ed="#V"/>posset actus suos deacceptare ergo actus 
+<lb ed="#V"/>sui possunt esse peccata consequentia tenet quia deacceptatio 
+<lb ed="#V"/>dei reddit opus creaturae culpabile ergo <g ref="#dbslash"/>Con<lb ed="#V"/>firmatur 
+quia sola acceptatio dignificat crea<lb ed="#V"/>turam 
+ergo a simile deacceptatio sola sufficit 
+<lb ed="#V"/>indignificat creaturam antecedens alias fuit 
+<lb ed="#V"/>tactum in meo principio</p>
                         
                     </div>
                     
-                    <div><head>[Quarta ratio]</head>
+                    <div>
+                        <head><supplied>Quarta ratio</supplied></head>
                         
-                        <p xml:id="l3-qqdnrp"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice>, quia dato quod 
-<lb ed="#V"/>talis creatura non commissive posset peccare, 
-                            <lb ed="#V"/>saltem <choice><orig>obmissive</orig><reg>omissive</reg></choice> posset, quia ad <choice><orig>obmis<lb ed="#V"/>sionem</orig><reg>omis<lb ed="#V"/>sionem</reg></choice> 
-                            <choice><orig>nichil</orig><reg>nihil</reg></choice> requiritur positivum.</p>
+<p xml:id="l3-qqdnrp"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> quia dato quod 
+<lb ed="#V"/>talis creatura non commissive posset peccare 
+<lb ed="#V"/>saltem <choice><orig>obmissive</orig><reg>omissive</reg></choice> posset quia ad <choice><orig>obmis<lb ed="#V"/>sionem</orig><reg>omis<lb ed="#V"/>sionem</reg></choice> 
+<choice><orig>nichil</orig><reg>nihil</reg></choice> requiritur positivum</p>
                     </div>
                     
-                    <div><head>[Quinta ratio]</head>
+                    <div>
+                        <head>
+                            <supplied>Quinta ratio</supplied></head>
                         
-                        <p xml:id="l3-ipqptc">Item 
-<lb ed="#V"/>probatur quod posset errare, nam quia eius essentia 
-<lb ed="#V"/>intrinsece subiceretur praeteritioni, sequitur etc., tenen<lb ed="#V"/>do 
-                            posset praedictam, scilicet, quod sit possibilis talis crea<lb ed="#V"/>tura.</p>   
+<p xml:id="l3-ipqptc">Item 
+<lb ed="#V"/>probatur quod posset errare nam quia eius essentia 
+<lb ed="#V"/>intrinsece subiceretur praeteritioni sequitur etc. tenen<lb ed="#V"/>do 
+posset praedictam scilicet quod sit possibilis talis crea<lb ed="#V"/>tura</p>   
                     </div>
                 </div>
                 
-                <div><head xml:id="l3-Hrararp">[Responsio ad rationes praedictas]</head>    
+                <div>
+                    <head xml:id="l3-Hrararp">
+                        <supplied>Responsio ad rationes praedictas</supplied></head>    
                     
-                    <p xml:id="l3-deaarp"><g ref="#dot"/>dicendum est ad rationes praedictas.</p>
+                    <p xml:id="l3-deaarp"><g ref="#dot"/>dicendum est ad rationes praedictas</p>
                     
                     <div>
-                        <head>[Ad primam]</head>
+                        <head><supplied>Ad primam</supplied></head>
                         
-                        <p xml:id="l3-apqdve"><lb ed="#V"/><g ref="#dbslash"/>ad primam: quando dicitur quod adhuc talis 
-<lb ed="#V"/>creatura esset essentialiter libera, posset dici de 
+<p xml:id="l3-apqdve"><lb ed="#V"/><g ref="#dbslash"/>ad primam quando dicitur quod adhuc talis 
+<lb ed="#V"/>creatura esset essentialiter libera posset dici de 
 <lb ed="#V"/>liberate quod forte non esset libera respectu quo<lb ed="#V"/>rumcumque 
-                            actuum. sed ista responsio non valet, quia 
-<lb ed="#V"/>sufficit quod sit libera respectu alicuius actus, 
-<lb ed="#V"/>quia de illo argueretur: ideo dicendum est 
-<lb ed="#V"/>aliter quod loquendum esset de tali creatura, sicut 
+actuum sed ista responsio non valet quia 
+<lb ed="#V"/>sufficit quod sit libera respectu alicuius actus 
+<lb ed="#V"/>quia de illo argueretur ideo dicendum est 
+<lb ed="#V"/>aliter quod loquendum esset de tali creatura sicut 
 <lb ed="#V"/>de beato confirmato in gratia sive sit de anima 
-<lb ed="#V"/>christi, quia eodem modo argueretur quod talis 
-<lb ed="#V"/>posset peccare et, sicut respondetur de anima christi, 
-<lb ed="#V"/>ita responderetur hic: quod non esset possibilis, licet 
-<lb ed="#V"/>quaelibet pars sit possibilis, sed adhuc responsio 
-<lb ed="#V"/>non valet ad radicem. ideo aliter dicendum 
+<lb ed="#V"/>christi quia eodem modo argueretur quod talis 
+<lb ed="#V"/>posset peccare et sicut respondetur de anima christi 
+<lb ed="#V"/>ita responderetur hic quod non esset possibilis licet 
+<lb ed="#V"/>quaelibet pars sit possibilis sed adhuc responsio 
+<lb ed="#V"/>non valet ad radicem ideo aliter dicendum 
 <lb ed="#V"/>est <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> quod in isto casu propria natura 
 <lb ed="#V"/>esset inseparabilis ab huiusmodi creatura est omnino 
-<lb ed="#V"/>sequi iudicum divinum, et sic dicerem quod 
+<lb ed="#V"/>sequi iudicum divinum et sic dicerem quod 
 <lb ed="#V"/>stante praecepto non libere producet 
-<lb ed="#V"/><c>a</c><g ref="#dot"/>, licet ante potuisset produxisse, et causa 
-<lb ed="#V"/>est quia <c>a</c> habet conformitatem divinae rectitudini. 
+<lb ed="#V"/><c>a</c><g ref="#dot"/> licet ante potuisset produxisse et causa 
+<lb ed="#V"/>est quia <c>a</c> habet conformitatem divinae rectitudini 
 <lb ed="#V"/>ideo eo ipso quod aliqui habet conformitatem divino 
-<lb ed="#V"/>iudico, naturaliter talis creatura inclinatur 
-<lb ed="#V"/>ad illud, et ista solutio est melior et 
-<lb ed="#V"/>fundatur in hoc quod naturaliter est ista quod 
-<lb ed="#V"/>feratur in quodcumque cuius <choice><orig>obmissio</orig><reg>omissio</reg></choice> esset sibi \
-<cb ed="#V" n="9rb"/><lb ed="#V"/>obliquitas, et ideo quantum ad hoc motio ad conformi<lb ed="#V"/>tatem 
-                            divinam non esset libera ad producendum 
-<lb ed="#V"/><c>a</c><g ref="#dot"/>, sed naturalis et illud potest exemplificari aliter, 
-<lb ed="#V"/>nam naturaliter inclinatio primaria semper est recta, 
-                            <lb ed="#V"/>quia immediate dirigitur ab agente infallibi<lb ed="#V"/>liter,
-quare non errat, quia si erraret, 
-<lb ed="#V"/>imputaretur deo, quia inclinatio pri<lb ed="#V"/>maria 
-                            naturalis est quid impulsus 
-<lb ed="#V"/>a deo immediate. et tunc consequenter dicitur in casu 
+<lb ed="#V"/>iudicio naturaliter talis creatura inclinatur 
+<lb ed="#V"/>ad illud et ista solutio est melior et 
+<lb ed="#V"/>fundatur in hoc quod naturaliter est isti quod 
+<lb ed="#V"/>feratur in quodcumque cuius <choice><orig>obmissio</orig><reg>omissio</reg></choice> esset sibi 
+<cb ed="#V" n="9rb"/><lb ed="#V"/>obliquitas et ideo quantum ad hoc ad conformi<lb ed="#V"/>tatem 
+divinam non esset libera ad producendum 
+<lb ed="#V"/><c>a</c><g ref="#dot"/> sed naturalis et illud potest exemplificari aliter 
+<lb ed="#V"/>nam naturaliter inclinatio primaria semper est recta 
+<lb ed="#V"/>quia immediate dirigitur ab agente infallibi<lb ed="#V"/>liter
+quare non errat quia si erraret 
+<lb ed="#V"/>imputaretur deo quia inclinatio pri<lb ed="#V"/>maria 
+naturalis est quidam impulsus 
+<lb ed="#V"/>a deo immediate et tunc consequenter dicitur in casu 
 <lb ed="#V"/>in quo esset aliquod praeceptum datum creaturae 
 <lb ed="#V"/>rationali quod esset contra inclinationem eius naturalem 
-<lb ed="#V"/>variaretur eius naturalis inclinatio, quia 
+<lb ed="#V"/>variaretur eius naturalis inclinatio quia 
 <lb ed="#V"/>numquam deus immediate inclinat creaturam 
 <lb ed="#V"/>contra praeceptum datum creaturae rationali quod 
-<lb ed="#V"/>esset contra inclinationem eius naturalem, quia 
+<lb ed="#V"/>esset contra inclinationem eius naturalem quia 
 <lb ed="#V"/>inclinaret immediate ad malum quod repu<lb ed="#V"/>gnat 
-                            immensitati divinae et illud 
-<lb ed="#V"/>poterit <name>Guillelmus parisiensis</name> in libro suo <title>de universo</title> 
-<lb ed="#V"/>et in libro <title>de virtutibus</title>, etc.</p>
+immensitati divinae et illud 
+<lb ed="#V"/>ponit <name ref="#WilliamOfParis">Guillelmus parisiensis</name> in libro suo <title ref="#deUniverso">de universo</title> 
+<lb ed="#V"/>et in libro <title>de virtutibus</title> etc</p>
                         
-                        <p xml:id="l3-edsnfa"><g ref="#slash"/>Ex dictis 
+<p xml:id="l3-edsnfa"><g ref="#slash"/>Ex dictis 
 <lb ed="#V"/>sequitur quod principia extrinseca legis positio vari<lb ed="#V"/>at 
-                            respectu eiusdem operationis speciem causalitatis, 
+respectu eiusdem operationis speciem causalitatis 
 <lb ed="#V"/>quia de specie causalitatis libera efficitur 
-<lb ed="#V"/>naturalis, sicut dictum est. sequitur ultra quod, si 
+<lb ed="#V"/>naturalis sicut dictum est sequitur ultra quod si 
 <lb ed="#V"/>latenter deus ordinaret pro bono uni<lb ed="#V"/>versi 
-                            causare <g ref="#dot"/>a<g ref="#dot"/> actum, creatura <g ref="dot"/><c>a</c><g ref="#dot"/> actum 
-<lb ed="#V"/>mere naturaliter produceret. Sequitur ultra quod, si, ad 
-<lb ed="#V"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice>, talis creatura obligaretur 
-<lb ed="#V"/>ad <c>a</c><g ref="#dot"/>, <choice><orig>neccessario</orig><reg>necessario</reg></choice> faceret <g ref="#dot"/><c>a</c><g ref="#dot"/>.</p>
+causare <g ref="#dot"/>a<g ref="#dot"/> actum creatura <g ref="dot"/><c>a</c><g ref="#dot"/> actum 
+<lb ed="#V"/>mere naturaliter produceret Sequitur ultra quod si ad 
+<lb ed="#V"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> talis creatura obligaretur 
+<lb ed="#V"/>ad <c>a</c><g ref="#dot"/> <choice><orig>neccessario</orig><reg>necessario</reg></choice> faceret <g ref="#dot"/><c>a</c><g ref="#dot"/></p>
                         
-                        <p xml:id="l3-cpanip"><g ref="#dbslash"/>Contra dicta 
-<lb ed="#V"/>arguitur probando quod: talis creatura 
+<p xml:id="l3-cpanip"><g ref="#dbslash"/>Contra dicta 
+<lb ed="#V"/>arguitur probando quod talis creatura 
 <lb ed="#V"/>obligari ad peccare vel errare posset 
-<lb ed="#V"/>quia, stante obligatione, ponitur quod deus 
+<lb ed="#V"/>quia stante obligatione ponitur quod deus 
 <lb ed="#V"/>subtrahat activitatem suam et quod secum non 
 <lb ed="#V"/>concurrat ad causandum etc.</p>
                         
-                        <p xml:id="l3-aidsac"><g ref="#slash"/>ad illud dicitur 
-<lb ed="#V"/>quod transgressio obligationis pro tunc non esset cul<lb ed="#V"/>pabilis, 
-                            <lb ed="#V"/>quia deus contra suam misericordiam ageret 
-<lb ed="#V"/>obligando aliquem ad impossibile. <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dico quod: 
-<lb ed="#V"/>si deus, ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice>, sic faceret, tunc esset 
-<lb ed="#V"/>transgressio legis <choice><orig>obmissive</orig><reg>omissive</reg></choice>, sed imputaretur 
+<p xml:id="l3-aidsac"><g ref="#slash"/>ad illud dicitur 
+<lb ed="#V"/>quod transgressio obligationis pro tunc non esset cul<lb ed="#V"/>pabilis 
+<lb ed="#V"/>quia deus contra suam misericordiam ageret 
+<lb ed="#V"/>obligando aliquem ad impossibile <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dico quod 
+<lb ed="#V"/>si deus ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> sic faceret tunc esset 
+<lb ed="#V"/>transgressio legis <choice><orig>obmissive</orig><reg>omissive</reg></choice> sed imputaretur 
 <lb ed="#V"/>sibi ad culpam.</p>
                         
                     </div>
                     <div>
-                        <head xml:id="l3-Hasasas">[Ad secundam]</head>
+                        <head xml:id="l3-Hasasas"><supplied>Ad secundam</supplied></head>
                         
-                        <p xml:id="l3-asrcof"><g ref="#slash"/>ad <choice><orig>2am</orig><reg>secundam</reg></choice> rationem quando dicitur, 
-                            <cb ed="#V" n="9va"/><lb ed="#V"/>'licet talis creatura posset esse alterius' etc., ista 
-<lb ed="#V"/>ratio 'petit principium', ita quod negatur antecedens. unde probat 
-<lb ed="#V"/>quod ratio adducta pro ista ratione non est evidens, 
-<lb ed="#V"/>sed sufficit quod sit probabilis. et breviter, quando dicitur, 
-<lb ed="#V"/>'sic est de <g ref="#dot"/>ergo negaretur consequentia, quia nulla creatura 
-                            <lb ed="#V"/>rationalis potest esse notitiam alteri, licet sibi, <choice><orig>si<lb ed="#V"/>cud</orig><reg>si<lb ed="#V"/>cut</reg></choice> 
-                            ponitur de ultima intelligentia possibili, et ideo, 
-<lb ed="#V"/>quantum ad hoc, esset conditio opposita fidei.</p>  
+<p xml:id="l3-asrcof"><g ref="#slash"/>ad <choice><orig>2am</orig><reg>secundam</reg></choice> rationem quando dicitur 
+<cb ed="#V" n="9va"/><lb ed="#V"/>licet talis creatura posset esse alterius etc ista 
+<lb ed="#V"/>ratio petit principium ita quod negatur antecedens unde probat 
+<lb ed="#V"/>quod ratio adducta pro ista ratione non est evidens 
+<lb ed="#V"/>sed sufficit quod sit probabilis et breviter quando dicitur 
+<lb ed="#V"/>sic est de <g ref="#dot"/>ergo negaretur consequentia quia nulla creatura 
+<lb ed="#V"/>rationalis potest esse notitiam alteri licet sibi <choice><orig>si<lb ed="#V"/>cud</orig><reg>si<lb ed="#V"/>cut</reg></choice> 
+ponitur de ultima intelligentia possibili et ideo 
+<lb ed="#V"/>quantum ad hoc esset conditio opposita fidei</p>  
                         
                     </div>
                     <div>
-                        <head xml:id="l3-Hatatat">[Ad tertium]</head>
+                        <head xml:id="l3-Hatatat"><supplied>Ad tertium</supplied></head>
                         
                         <p xml:id="l3-atrnes"><g ref="#slash"/>ad 
-<lb ed="#V"/><choice><orig>3am</orig><reg>tertiam</reg></choice> rationem deacceptatione, quia 'deus posset 
-<lb ed="#V"/>deacceptare actus suos,' etc. hic dicitur 
-<lb ed="#V"/>negando consequentiam, et pro responsione oportet 
+<lb ed="#V"/><choice><orig>3am</orig><reg>tertiam</reg></choice> rationem de acceptatione quia deus posset 
+<lb ed="#V"/>deacceptare actus suos etc hic dicitur 
+<lb ed="#V"/>negando consequentiam et pro responsione oportet 
 <lb ed="#V"/>dare aliqua motiva <g ref="#slash"/>primo dicitur quod 
-<lb ed="#V"/>non est simile de acceptatione et de de<lb ed="#V"/>acceptatione, 
-                            quia de acceptatione bene conceditur 
-<lb ed="#V"/>quod, eo ipso quod deus acceptat creaturam, ipsa 
+<lb ed="#V"/>non est simile de acceptatione et de de<lb ed="#V"/>acceptatione 
+quia de acceptatione bene conceditur 
+<lb ed="#V"/>quod eo ipso quod deus acceptat creaturam ipsa 
 <lb ed="#V"/>est deo creata quia non est revocandum in 
-<lb ed="#V"/>dubium quoniam, eo ipso quod deus vult creaturam 
-<lb ed="#V"/>esse bonam, ipsa est bona, quia ipse est principalis pars 
+<lb ed="#V"/>dubium quoniam eo ipso quod deus vult creaturam 
+<lb ed="#V"/>esse bonam ipsa est bona quia ipse est principalis pars 
 <lb ed="#V"/>bonitatis creare quia licet caritas et gratia 
-<lb ed="#V"/>beatificant creaturam, non tamen sine accep<lb ed="#V"/>tatione. 
-    deacceptatio est respectu concurrentium ad 
-<lb ed="#V"/>peccatum non habet istam prioritatem, <choice><orig>ymo</orig><reg>immo</reg></choice> de<lb ed="#V"/>acceptatio 
-                            est prior ad actum malum, quia 
-<lb ed="#V"/>per prius creatura agit quam Deus deacceptet 
-<lb ed="#V"/>eam nec indignatur sibi, quia ma<lb ed="#V"/>la 
-est. econverso autem est in acceptatione, 
-<lb ed="#V"/>quare non est simile.</p>
+<lb ed="#V"/>beatificant creaturam non tamen sine accep<lb ed="#V"/>tatione 
+deacceptatio est respectu concurrentium ad 
+<lb ed="#V"/>peccatum non habet istam prioritatem <choice><orig>ymo</orig><reg>immo</reg></choice> de<lb ed="#V"/>acceptatio 
+est prior ad actum malum quia 
+<lb ed="#V"/>per prius creatura agit quam deacceptet 
+<lb ed="#V"/>eam nec indignatur sibi quia ma<lb ed="#V"/>la 
+est econverso autem est in acceptatione 
+<lb ed="#V"/>quare non est simile</p>
                         
-<p xml:id="l3-iciaam">Item comparando illa, 
-<lb ed="#V"/>quae concurrunt ad actum bonum et ad ac<lb ed="#V"/>ceptationem, 
-    et illa, quae concurrunt ad actum 
-<lb ed="#V"/><del rend="strikethrough">bonum</del> malum ad deacceptationem: accep<lb ed="#V"/>tatio 
-    ad illa, quae concurrunt ad actum bo<lb ed="#V"/>num 
-    habet multo maiorem proportionem quam ad 
-<lb ed="#V"/>illa, quae concurrunt ad actum malum.</p>
+<p xml:id="l3-iciaam">Item comparando illa 
+<lb ed="#V"/>quae concurrunt ad actum bonum et ad ac<lb ed="#V"/>ceptationem 
+et illa quae concurrunt ad actum 
+<lb ed="#V"/><corr><del rend="strikethrough">bonum</del> <add>malum</add></corr> ad deacceptationem <g ref="#dot"/> accep<lb ed="#V"/>tatio 
+ad illa quae concurrunt ad actum bo<lb ed="#V"/>num 
+habet multo maiorem proportionem quam ad 
+<lb ed="#V"/>illa quae concurrunt ad actum malum</p>
                         
-                        <p xml:id="l3-idbnad">Item 
+<p xml:id="l3-idbnad">Item 
 <lb ed="#V"/>divinae bonitatis est acceptare creaturam 
-<lb ed="#V"/>non suis exigentibus meritis, sed deaccep<lb ed="#V"/>tare 
-                            sine meritis: illud specificat[?] ad <choice><orig>dy<lb ed="#V"/>abolum</orig><reg>di<lb ed="#V"/>abolum</reg></choice> 
-                            et non ad Deum.</p>
+<lb ed="#V"/>non suis exigentibus meritis[?] sed deaccep<lb ed="#V"/>tare 
+sine meritis illud specificat[?] ad <choice><orig>dy<lb ed="#V"/>abolum</orig><reg>di<lb ed="#V"/>abolum</reg></choice> 
+et non ad deum</p>
                         
-                        <p xml:id="l3-itdadm"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod 
-<lb ed="#V"/>deacceptatio non potest esse sine culpa, 
-<lb ed="#V"/>ideo dicitur quod casus non est possibilis quod, creatura 
-<lb ed="#V"/>in nullo delinquente, eam deus deacceptet.</p>
+<p xml:id="l3-itdadm"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod 
+<lb ed="#V"/>deacceptatio non potest esse sine culpa 
+<lb ed="#V"/>ideo dicitur quod casus non est possibilis quod creatura 
+<lb ed="#V"/>in nullo delinquente eam deus deacceptet</p>
                         
-                        <p xml:id="l3-qdeaam"><cb ed="#V" n="9vb"/><lb ed="#V"/><g ref="#dbslash"/><choice><orig>4o</orig><reg>Quarto</reg></choice> dicendum est <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> quod peccatum plura 
-<lb ed="#V"/>includit, scilicet, actum liberum libere elicitum contra le<lb ed="#V"/>gem 
-                            et deacceptationem et alias circumstan<lb ed="#V"/>tias 
-                            multas et totale aggregatum proprie dicitur 
-<lb ed="#V"/>peccatum, et sic dicitur quod in casu in quo creatura, 
-<lb ed="#V"/>in nullo delinquente deacceptaretur, non pec<lb ed="#V"/>caret, 
-                            utendo de peccato sicut nunc, quia ad inte<lb ed="#V"/>gritatem 
-                            requiruntur multo plura quam de<lb ed="#V"/>acceptatio. 
-                            modo, ad positionem partis non sequitur 
-<lb ed="#V"/>positio totius, unde sequitur quod haberet aliquam in<lb ed="#V"/>dignationem, 
-                            unde sicut figulus potest ordinare 
+<p xml:id="l3-qdeaam"><cb ed="#V" n="9vb"/><lb ed="#V"/><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicendum est <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> quod peccatum plura 
+<lb ed="#V"/>includit scilicet actum liberum libere elicitum contra le<lb ed="#V"/>gem 
+et deacceptationem et alias circumstan<lb ed="#V"/>tias 
+multas et totale <choice><orig>agregatum</orig><reg>aggregatum</reg></choice> proprie dicitur 
+<lb ed="#V"/>peccatum et sic dicitur quod in casu in quo creatura 
+<lb ed="#V"/>in nullo delinquente deacceptaretur non pec<lb ed="#V"/>caret 
+utendo de peccato sicut nunc quia ad inte<lb ed="#V"/>gritatem 
+requiruntur multo plura quam de<lb ed="#V"/>acceptatio 
+modo ad positionem partis non sequitur 
+<lb ed="#V"/>positio totius unde sequitur quod haberet aliquam in<lb ed="#V"/>dignationem 
+<g ref="#dot"/>unde sicut figulus potest ordinare 
 <lb ed="#V"/>de vasis suis unum ad bonum et aliud ad 
-<lb ed="#V"/>malum, sicut est de deo respectu creaturae quia 
+<lb ed="#V"/>malum sicut est de deo respectu creaturae quia 
 <lb ed="#V"/>deus de sua potestate absoluta potest creaturas ordina<lb ed="#V"/>re 
-                            unam ad bonum et aliam ad malum 
-                            <lb ed="#V"/>etc.</p> 
+unam ad bonum et aliam ad malum 
+<lb ed="#V"/>etc</p> 
                         
                     </div>
-                    <div><head xml:id="l3-Haqaqaq">[Ad quartam]</head>  
+                   <div><head xml:id="l3-Haqaqaq"><supplied>Ad quartam</supplied></head>  
                         
-                        <p xml:id="l3-acdeso"><g ref="#slash"/><lb ed="#V"/>ad confirmatione de <choice><orig>obmissione</orig><reg>omissione</reg></choice> iam responsum 
-<lb ed="#V"/>quod, stante praecepto iam habet habitudinem respectu 
-<lb ed="#V"/>productionis, ideo <choice><orig>neccessario</orig><reg>necessario</reg></choice> facit <c>a</c><g ref="#dot"/>, quia iam 
+                        <p xml:id="l3-acdeso"><g ref="#dbslash"/><lb ed="#V"/>ad confirmatione de <choice><orig>obmissione</orig><reg>omissione</reg></choice> iam responsum 
+<lb ed="#V"/>quod stante praecepto iam habet habitudinem respectu 
+<lb ed="#V"/>productionis ideo <choice><orig>neccessario</orig><reg>necessario</reg></choice> facit <c>a</c><g ref="#dot"/> quia iam 
 <lb ed="#V"/>intrat rectitudinem illorum quorum <choice><orig>obmissio</orig><reg>omissio</reg></choice> 
-<lb ed="#V"/>esset sibi obliquitas.</p>  
+<lb ed="#V"/>esset sibi obliquitas</p>  
                         
                     </div>
                     
-                    <div><head xml:id="l3-Haqnaqn">[Ad quintam]</head>
+                    <div><head xml:id="l3-Haqnaqn"><supplied>Ad quintam</supplied></head>
                         
                         <p xml:id="l3-aaqcdi"><g ref="#dbslash"/>ad aliam quando dicitur 
 <lb ed="#V"/>quod posset errare quia posset transire <g ref="#dot"/>dicendum 
-<lb ed="#V"/>est quod talis creatura, licet quantum ad essentiam 
-<lb ed="#V"/>suam transiret in primum, non tamen quantum ad 
-<lb ed="#V"/>esse iudicium vel cognitionem, sicut tactum 
-<lb ed="#V"/>est de fide, quia licet fides quantum ad 
-<lb ed="#V"/>eius essentiam transeat in peccatum, non 
-<lb ed="#V"/>tamen quantum ad eius praesentare, ideo etc.</p>   
+<lb ed="#V"/>est quod talis creatura licet quantum ad essentiam 
+<lb ed="#V"/>suam transiret in primum non tamen quantum ad 
+<lb ed="#V"/>esse iudicium vel cognitionem sicut tactum 
+<lb ed="#V"/>est de fide quia licet fides quantum ad 
+<lb ed="#V"/>eius essentiam transeat in peccatum non 
+<lb ed="#V"/>tamen quantum ad eius praesentare ideo etc</p>   
                     </div>      
                 </div>
             </div>
