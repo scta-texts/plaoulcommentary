@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Lectio 4, Prologus [Erlangen Transcription]</title>
+                <title>Lectio 4, de Fide [Erlangen Transcription]</title>
                 <author xml:id="PP">Petrus Plaoul</author>
                 <editor xml:id="JW">Jeffrey C. Witt</editor>
             </titleStmt>
             <editionStmt>
                 <edition n="2011.10-dev-master">
-                    <title>Lectio 4, Prologus [Erlangen Transcription]</title>
+                    <title>Lectio 4, de Fide [Erlangen Transcription]</title>
                     <date when="2011-10-04">October 04, 2011</date>
                 </edition>
             </editionStmt>
             <publicationStmt>
-                <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+                <publisher>LombardPress</publisher>
                 <pubPlace>Boston, MA</pubPlace>
                 <availability status="free">
                     <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -25,31 +25,24 @@
             </publicationStmt>
             <sourceDesc>
                 <listWit>
-                    <witness xml:id="SV">St. Victor</witness>
+                    <witness xml:id="E">Erlangen</witness>
                 </listWit>
             </sourceDesc>
         </fileDesc>
-        
     </teiHeader>
     <text xml:lang="la">
         <front>
-            <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-                <xi:fallback>
-                    <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-                </xi:fallback>
-            </xi:include>
+            <div xml:id="includeList">
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+            </div>
         </front>
         <body>
             <div xml:id="lectio4">
-                <head subtype="title">Lectio 4, Prologus [Erlangen Transcription]</head>
-                <div>
-                    <head xml:id="l4-Hfecami">[Fides est conformis divino iudicio: solutiones ad multas instantias]</head>
+                <head subtype="title">Lectio 4, de Fide [Erlangen Transcription]</head>
                     
                     <p xml:id="l4-seqtoa">Ex <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> de fide possunt solvi multae rationes et difficultates quibus involvuntur[?] 
                         <lb ed="#E"/>alii tenentes communem modum.</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hpipipi">[Prima instantia]</head>
                     
                     <p xml:id="l4-upaneu">Prima difficultas utrum aequali certitudine ex 
                         <lb ed="#E"/>fide credatur futuro contingenti. Sicut neccessario verbi <add place="aboveLine">gratia</add> huic de resurectio mortuorum <del rend="strikethrough">orh</del> erit 
@@ -58,534 +51,73 @@
                         <p>videtur quod non quia unum est neccessariam et neccesse esse et aliud 
                     <lb ed="#E"/>contingens licet iudicium futurorum posset <g ref="#carrot"/><add place="aboveLine">non</add> fore tamen assensus fide est tantae certitudinis 
                     <lb ed="#E"/>non potest falli fides non habet suam apparenciam ex parte obiecti licet ex se.</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrapapi">[Responsio ad prima instantia]</head>
-                    
-                    <p xml:id="l4-beiqnv"></p>              
-      
-                    <p xml:id="l4-dtqsni"></p>
-                    
-                    <p xml:id="l4-udqapv"></p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hsieier">[Secunda instantia et rationes]</head>
-                    <p xml:id="l4-ptqsef">Contra arguitur 
-                        <lb ed="#E"/>probando quod praedictam non sint vera, ymo quod fidei possit sub esse falsum</p>
-                    
-                   
-                    <p xml:id="l4-pqdpem">quia spei de facto 
-                        <lb ed="#E"/>sub est falsum igitur fidei tenet consequentia quia spes[?] videtur etc. Antecedens de praescito qui habet spem"
-                        
-                        
-                        
-                        <g ref="#slash"/>primo quia 
-                        <add place="margin" type="marginalNote">doubleline and squiggle</add>de facto spei subest falsum, ergo et fidei. consequentia tenet, 
-                        quia spes videtur esse tantae excellentiae et certitudinis 
-                        sicut fides. <g ref="#pilcrow"/>Item, confirmatur consequentia quia quantum ad hoc, 
-                        quod est credere, spes includit assensum, <g ref="#slash"/>ideo quantum ad hoc 
-                        habet conditionem fidei. <g ref="#slash"/>antecedens probatur de praescito existente in gratia, 
-                        qui Realiter credit se habiturum <del rend="expunctuated">gratiam</del> vitam sempiternam, 
-                        <g ref="#slash"/>et tamen hoc est falsum, <g ref="#slash"/>licet illa credulitas sit 
-                        licita et per eam mereatur.</p>
-                    
-        <p xml:id="l4-cqpcrc"><g ref="#pilcrow"/>Confirmatur quia potest accidere 
-            quod quis ex caritate credat et ex fide falso, <g ref="#slash"/>ut 
-            si quis, in extremo mortis petat corpus christi et presbyter 
-            afferat hostiam non consecratam, credet ex fide quod 
-            ibi sit Realiter corpus christi, quia si presbyter interroget 
-            eum, <g ref="#dot"/>'credis?'<g ref="#dot"/> Respondebit, <g ref="#dot"/> credo'.</p>
-                    
-                    <p xml:id="l4-tcaiaf"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> capiamus aliquem 
-                        qui ante incarnationem crederet 'christum incarnandum', <g ref="#slash"/>ita 
-                        quod mediante habitu fidei exeat in assensum huius: 'christus 
-                        incarnabitur'. <g ref="#slash"/>et ponatur ultra quod in illo assensu, ille 
-                        continetur per dei potentiam usque post incarnationem christi, 
-                        <g ref="#slash"/>tunc assensus ille erit falsus, in instanti incarnationis, 
-                        ergo. <g ref="#pilrow"/>Item de facto ille assentiunt huic 'christus incarnabitur', 
-                        et hoc est falsum, ergo assentiunt falso.</p>
-                    
-                    <p xml:id="l4-qdaeam"><g ref="#slash"/><choice><orig>4o</orig><reg>Quarto</reg></choice>, de facto <name>abraham</name> 
-                        meruit ex fide credendo falsum, ergo solum credendo 
-                        filium suum esse immolandum, quod tamen erat falsum, et 
-                        tamen dicit <name>apostolus</name> "credidit <name>abraham</name> <g ref="#slash"/>et Reputatum est 
-                        ei ad meritum."</p>
-          
-                    <p xml:id="l4-qaacep"><g ref="#pilcrow"/><choice><orig>5o</orig><reg>Quinto</reg></choice> arguitur apparenter sic: spiritus 
-                        sanctus potest concurrere active ad assensum falsum, ergo et fides. 
-                        consequentiam tenet quia aeque perfecte, <choice><orig>ymo</orig><reg>immo</reg></choice> perfectius, spiritus sanctus 
-                        concurrit ad assensum aequalis certitudinis sicut fides. 
-                        <g ref="#slash"/>antecedens probatur, quia spiritus sanctus principaliter concurrit <g ref="#slash"/>et tamquam 
-                        principale agens ad cuiuslibet effectus productionem.</p>
-           
-                    <p xml:id="l4-ssffee"><g ref="#pilcrow"/><choice><orig>6o</orig><reg>Sexto</reg></choice> sic: fides est in potentia obedientali ad cuiuscumque effectus 
-                        productionem secundum quod placuit deo. <g ref="#slash"/>Unde 
-                        <choice><orig>ymaginantur</orig><reg>imaginantur</reg></choice> aliqui quod quaelibet creatura est in potentia obedientali 
-                        ipsi deo, <g ref="#slash"/>ita quod quamlibet creaturarum potest assumere ad concurrendum 
-                        secum ad cuiuscumque effectus productionem secundum quod sibi placuerit, 
-                        ergo deus potest assumere fidem ad productionem assensus 
-                        erronei sive falsi, ergo.</p>
                 
-                </div>
-                <div>
-                    <head xml:id="l4-Hohohoh">[Opinio Holcot]</head>
-                    
-                    <p xml:id="l4-ariqth"><g ref="#pilcrow"/>Alias rationes inducam 
-                        post ea et solvam. <g ref="#pilcrow"/>Sed ante hoc, notanda sunt aliqua, 
-                        quae tangit <name>holcot</name>.</p>
-                    
-                    <p xml:id="l4-ucdnmh"><g ref="#slash"/>unde, cum dicitur quod actus fidei libere 
-                        producitur ab anima, <g ref="#slash"/><name>holcot</name> tenet oppositum, <g ref="#slash"/>et dicit 
-                        quod intellectus numquam credit articulis, nisi <choice><orig>neccessitetur</orig><reg>necessitetur</reg></choice> 
-                        per rationem seu apparentiam <g ref="#slash"/>et ad hoc facit 
-                        aliquas rationes, <g ref="#slash"/>tamen ipse excludit habitum, <g ref="#slash"/>quia 
-                        non est <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> quoniam anima mediante habitu posset libere 
-                        exire in actu. <g ref="#slash"/>Sed mihi videtur quod male Initiat 
-                        quia nullus ponit quod actus fidei sit in potestate animae, 
-                        nisi mediante habitu, <g ref="#slash"/>et causa est quia actus fidei est 
-                        supernaturalis, sicut eius habitus; <g ref="#slash"/>ideo non potest produci ab 
-                        anima, nisi mediate habitu.</p>
-                    
-                    <p xml:id="l4-nchqhi"><g ref="#slash"/>nihilominus tamen anima habet aliquam 
-                        dispositionem primam in sua libera potestate, qua 
-                        posita ex ordinatione et institutione divina, ponitur 
-                        actus fidei, <g ref="#slash"/>et ita diceretur de aliis qualitatibus 
-                        supernaturalibus, <g ref="#slash"/>et ideo iste non vadit ad radicem, quia stante 
-                        habitu fidei solo qualis infunditur in baptismo, non 
-                        est credendum quoniam valde Remissus sit <g ref="#slash"/>et quod se 
-                        solo non sufficit exire in actu respectu credibilium. 
-                        <g ref="#slash"/>Exemplum est de puero baptizato, qui nutritur inter <name>sarracenos</name>, 
-                        <g ref="#slash"/>tunc quando erit adultus, si sibi proponatur 
-                        articulus fidei, non credet. <g ref="#slash"/>Et si quaeratur, tunc non 
-                        erit differentia inter habituatum et non habituatum, tali 
-                        habitu fidei <g ref="#slash"/>differentia enim erit in hoc: <g ref="#slash"/>quia iste, qui habet 
-                        habitum fidei, ceteris paribus, facilius se disponet 
-                        ad actum fidei quam alter. <g ref="#pilcrow"/>Unde ad habendum actum 
-                        primum, Requiritur certa latitudo diligentiae. <g ref="#slash"/>modo, 
-                        illa non erit tanta in habente habitum <g ref="#slash"/>vel saltem 
-                        non Requiritur, <g ref="#slash"/>sicut in non habente, <g ref="#slash"/>ita quod et minor 
-                        diligentia <g ref="#slash"/>et minor labor requiruntur in illo qui 
-                        habet habitum <g ref="#slash"/>quia habitus Iuvat.</p>
-                    
-                    <p xml:id="l4-idfeip"><g ref="#pilcrow"/>Item diligentia facta 
-                        de vita sua in habente habitum <g ref="#slash"/>et qui est etiam in caritate, 
-                        operatio sua est viva <g ref="#slash"/>et augmentat 
-                        caritatem. <g ref="#slash"/>In illo autem qui non habet habitum, operatio 
-                        sua est mortua. <g ref="#slash"/>ideo in habente habitum, actus citius 
-                        et intensior producitur.</p>
-                 
-                    <p xml:id="l4-iupvat"><g ref="#pilcrow"/>Item utrum, posito quantocumque 
-                        habitu fidei intenso, posset anima exire 
-                        in actum credendi, forte si bene consideretur, <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> 
-                        illius actus nobilitates et conditionem, 
-                        erit bene difficile; utrum anima mediante illo solo 
-                        habitu possit exire in actum <g ref="#slash"/>et forte quantum 
-                        multi homines decipiuntur quia quandoque inducunt actum 
-                        illum ex rationibus probabilibus sive ex aliqua apparentia, 
-                        et ille actus non sufficit ad salutem, <g ref="#slash"/>et tamen illum credunt 
-                        esse verum actum fidei. <g ref="#slash"/>unde actus ille est tantae virtutis 
-                        et nobilitatis quod fert animam in bona spiritualia et 
-                        contempnit temporalia. <g ref="#slash"/>modo, illud est maxime difficile, <g ref="#slash"/>ideo 
-                        dicit <name>apostolus</name> quod, propter avaritiam, multi apostataverunt 
-                        a fide, <g ref="#slash"/>ita possibile est dicere quod avaritia in certo gradu 
-                        non est compossibilis actui fidei, <g ref="#slash"/>et ideo mihi videtur quod 
-                        rationes <name>holcot</name> solum procedunt ex actu fidei producto 
-                        mediantibus rationibus probabilibus vel apparentiis tantum.</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrdhrdh">[Rationes de Holcot]</head>
-                    
-                   <p xml:id="l4-otrree"><g ref="#pilcrow"/>Oportet tamen Respondere ad rationes suas, quia dicit 
-                       ipse non est in potestate nostra assentire vel <choice><orig>oppinari</orig><reg>opinari</reg></choice> 
-                       sine motivo, <g ref="#slash"/>nec est in potestate nostra credere sine 
-                       motivo propositioni dubiae; <g ref="#slash"/>datis enim duabus propositionibus 
-                       inevidentibus, ego non possum minus inevidenti assentire 
-                       sine ratione, ergo nec magis inevidenti. <g ref="#slash"/>sed propositio 
-                       mere contingens, sicut ista, '<name>sortes</name> currit' <g ref="#slash"/> vel 'rex sedet', 
-                       est magis inevidens quam ista, 'deus est', <g ref="#slash"/>et tamen non possum 
-                       isti '<name>sortes</name> currit' <g ref="#slash"/>vel 'Rex sedet' assentire sine 
-                       ratione, ergo etc.</p>
-                    
-                    <p xml:id="l4-iqtvvf"><g ref="#pilcrow"/>Item quia tunc in potestate mea esset 
-                        tristari vel gaudere tantum sicut velle, <g ref="#slash"/>et sic in potestate 
-                        mea esset habere tantum gaudium <g ref="#slash"/>vel dolorem, 
-                        sicut habent beatus et dampnatus, <g ref="#slash"/>quia per imperium 
-                        voluntatis possum causare assensum talis propositionis <g ref="#slash"/>'cras 
-                        habebo tantum gaudium sicut <name>petrus</name> et <name>paulus</name>', <g ref="#slash"/>quia 
-                        ad apprehensionem talis propositionis, sequitur quod gaudium 
-                        ex quo assentit. <g ref="#slash"/>et sic videtur quod intellectus omnino non posset 
-                        ferri assentive in aliquam propositionem, nisi per rationes sit 
-                        probata <g ref="#slash"/>vel appareat esse probata, <g ref="#slash"/>nec est in potestate 
-                        voluntatis nostrae propositionem facere esse veram 
-                        vel falsam.</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrarrdh">[Responsio ad rationes de Holcot]</head>
-             
-                    <p xml:id="l4-aehrma"><g ref="#pilcrow"/>Advertendum est hic quod lata est differentia inter 
-                        propositiones indifferentes ad finem hominis consequendum <g ref="#slash"/>et 
-                        inter propositiones, quae habent ordinem <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> ad sui finem 
-                        consequendum <g ref="#slash"/>verbi gratia, <g ref="#slash"/>utrum 'Rex sedeat' <g ref="#slash"/>vel non, <g ref="#slash"/>non est 
-                        <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> saluti hominis; <g ref="#slash"/>utrum autem 'deus sit' est de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> 
-                        hominis salutis. <g ref="#slash"/>Ideo homo ex naturali instinctu inclinatur 
-                        ad assentiendum huiusmodi propositionibus <choice><orig>neccessariis</orig><reg>necessariis</reg></choice> ad suum finem 
-                        consequendum et sic aliis. <g ref="#slash"/>et sic verum est quod natura indiderit[?] cuilibet 
-                        creaturae rationali quamdam inclinationem naturalem ad consequendum 
-                        suum finem, <g ref="#slash"/>pro tanto dicit <name>philosophus</name> <choice><orig>primo</orig><reg>Io</reg></choice> <title>politicae</title> quod 
-                        "homo a natura est animal civile." <g ref="#slash"/>unde quia homo non potest <del rend="expunctuated">omnia</del> 
-                        ex natura sua omnia <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> ad salutem, <g ref="#slash"/>ideo a natura sua 
-                        est animal communicabile et indiget ut Relevetur per potentiam 
-                        <del rend="expunctuated">tentiam</del> et bonum Regimen. <g ref="#slash"/>Unde <choice><orig>ymmaginandum</orig><reg>imaginandum</reg></choice> 
-                        est quod sunt instinctus tales et inclinationes quibus 
-                        homo tendit in deum naturaliter et ad bene operandum 
-                        et ad deum <choice><orig>collendum</orig><reg>colendum</reg></choice> et deo serviendum. <g ref="#slash"/>ideo dicitur: quod 'deum 
-                        esse' est naturaliter inditum homini et a natura <g ref="#slash"/>et ad hoc 
-                        fides inclinat. <g ref="#slash"/>nam dico quod homo inclinatur naturaliter 
-                        ad honorandum et orandum deum, licet propter peccatum originale 
-                        non percipiat se homo talem instinctum habere. <g ref="#slash"/>Et ex 
-                        hoc forte fuit <g ref="#slash"/>et in hac Radice fundatur <choice><orig>ydolatria</orig><reg>idolatria</reg></choice>, 
-                        <g ref="#slash"/>unde omnis creatura naturaliter tendit in deum ex 
-                        quodam naturali instinctu; <g ref="#slash"/>ideo homo secundum partem affectivam 
-                        et intellectivam naturaliter tendit in deum. <g ref="#slash"/>et ex hoc, 
-                        male aliqui sumpserunt sub, quia in simplicibus, ratio 
-                        est debilis, <g ref="#slash"/>ideo sub illa ratione sumpserunt creaturas 
-                        credentes illas 'esse deum', <g ref="#slash"/>et hac optima radice 
-                        male applicata.</p>
-
-                    <p xml:id="l4-iiasei"><g ref="#slash"/>ideo <choice><orig>ydolatraverunt</orig><reg>idolatraverunt</reg></choice> aliqui <g ref="#slash"/>et 
-                        adoraverunt false creaturas, nescientes talem instinctum 
-                        insequi <g ref="#slash"/>et creatori talia attribuere, <g ref="#slash"/>Sed magis 
-                        terrena intendentes, <g ref="#slash"/>propter quod dictum fuit, <g ref="#slash"/>propter avaritiam, 
-                        ceperunt homines apostare a fide; honorem 
-                        soli deo tribuendum creaturae impendentes. <g ref="#slash"/>Et ad 
-                        illud propositum dicebat <name>macrobius</name> in libro <title>de sompno 
-                            cipionis</title> quod sompnia principum et magnatum et 
-                        potentum sunt futurorum quaedam Iudicia et praesagia 
-                        subiungens, quod naturaliter prima causa indiderit[?] ex ordine 
-                        universi quod maxime talibus quam simplicibus, qui sint personae communes 
-                        per quasdam motiones et influentias speciales innotesceret 
-                        quid circa potentiam totam novi effectus vel mirabilis 
-                        accidere deberet sicut verisimilem est fuisse de 
-                        <name>saul</name>, de <name>david</name>, de <name>achas</name>, de <name>caypha</name>, de <name>pharaone</name>, <g ref="#slash"/>de 
-                        <name>nabuchanezzor</name>, <g ref="#slash"/>et<g ref="#dot"/> de pluribus aliis. <g ref="#slash"/>Unde dico quod ex 
-                        eo quod natura humana fuit infecta et corrupta propter peccatum 
-                        nescivit talem motivitatem specialem ad consecutionem 
-                        sui finis ultimi. <g ref="#slash"/>Ideo quid sensualem appetitum insequentes 
-                        Reverentiam deo debitam, creaturae impenderunt ut soli 
-                        vel lumine et sic de aliis. <g ref="#slash"/>Sed gratia et fides intellectum maxime 
-                        Regulatis immediate tendendo in ipsum deum et 
-                        finem ultimum consequendum. <g ref="#slash"/>Et instinctus talis quem 
-                        habemus naturaliter est inclinans ad deum diligendum, 
-                        licet corrupte propter originale, <g ref="#slash"/>nec de se sufficit, <g ref="#slash"/>sed 
-                        adiuvatur ab ipsa fide tamquam regulante appetitus sensitivos 
-                        <g ref="#slash"/>et intellectuales.</p>       
-                    
-                    <p xml:id="l4-epheda"><g ref="#slash"/>et per hoc, apparet solutio eorum 
-                        quae tangit <name>holcot</name> de propositionibus quae nullo modo <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> 
-                        sunt ad salutem. <g ref="#slash"/>secus autem est de propositionibus, quarum veritas 
-                        <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> est homini ad salutem. <g ref="#slash"/>Ideo talis assensus 
-                        respectu propositionum <choice><orig>neccessariarum</orig><reg>necessarium</reg></choice> ad salutem est specialis instinctus naturae 
-                        et gratiae <g ref="carrot"/><add place="aboveLine">et</add> specialis assistentia angeli boni. <g ref="#slash"/>Ita quod sua consequentia 
-                        est semper neganda, quia arguit, propositionibus minus inevidentibus sine 
-                        ratione vel apparentia non possumus assentire, ergo nec magis 
-                        in evidentibus; quia fides naturaliter inclinat ad assentiendum veritatibus 
-                        catholicis Requisitis <choice><orig>neccessario</orig><reg>necessario</reg></choice> ad consequendum salutem, <g ref="#slash"/>non autem 
-                        sic est de aliis.</p>
-                    
-<p xml:id="l4-eaease"><g ref="#slash"/>Ex alia etiam Radice possunt solvi praedictae 
-    rationes, <g ref="#slash"/>quia fides habet alium modum quam aliae qualitates, quia non 
-    movetur ab apparentia obiecti <g ref="#slash"/>nec habet veritatem ex obiecto, <g ref="#slash"/>
-    <g ref="#slash"/>nec Requirit aliquam apparentiam ex parte obiecti; <g ref="#slash"/>sed sic non 
-    est de aliis assensibus, <g ref="#slash"/>ita quod assensus fidei non Requirit aliquam 
-    apparentiam in obiecto, <choice><orig>ymmo</orig><reg>immo</reg></choice> est met apparentia. <g ref="#slash"/>Et si dicatur 
-    quod obiectum intellectus est verum vel apparens verum, <g ref="#slash"/>verum est quod oportet 
-    quod notitia per quam intellectus asserit sit vera vel apparens 
-    vera, <g ref="#slash"/>sic est de fide, quia fides habitualis est quaedam apparentia 
-    et etiam eius actus; <g ref="#slash"/>sed istam apparentiam non habet ab obiecto, 
-    <choice><orig>ymo</orig><reg>immo</reg></choice> est <g ref="#slash"/>met apparentia sua etc.</p>
-
-                </div>
-                <div>
-                    <head xml:id="l4-Hprpier">[Plus rationes pro secunda instantia et responsiones]</head>
-                    <div>
-                        <head xml:id="l4-Htrtrtr">[Tres rationes]</head>
-                        <p xml:id="l4-caqsef"><hi rend="dropCapTwoLine">C</hi><hi rend="twiceAsBigFontSize">onsequenter arguitur</hi> 
-                            quod fidei posset subesse falsum.</p>
-                        
-                        <p xml:id="l4-psppim"><g ref="#slash"/>primo sic: ponamus 
-                            casum quod <name>abraham</name> ante christi incarnationem crediderit ex 
-                            fide 'christum esse incarnandum' <g ref="#slash"/>et quod ex habitu fidei formaverit 
-                            assensum huius propositionis, 'christus incarnabitur', quia hoc poterant 
-                            ponere illi qui erant ante adventum christi. <g ref="#slash"/>ponatur ulterius 
-                            quod 'christus non incarnetur' quia hoc erat possibile, <g ref="#slash"/>quia deus 
-                            aliter poterat Redimere genus humanum secundum <name>augustinum</name> 
-                            <g ref="#slash"/>tunc sic prima pars est <choice><orig>neccessaria</orig><reg>necessaria</reg></choice>, quia est una de praeterito vera 
-                            <g ref="#slash"/>et <choice><orig>2a</orig><reg>secunda</reg></choice> est possibilis, ergo haec copulativa erit possibilis: '<name>abraham</name> 
-                            credidit ex fidei assensu quod christus incarnabitur, 
-                            <g ref="#slash"/>et tamen christus non incarnabitur,' ergo ex fide credidit falsum, 
-                            <g ref="#slash"/>Et potest confirmari, quia fides potest in assensum supernaturalem, 
-                            qui est valde difficilis et valde perfectus, ergo potest in minus 
-                            nobilem et minus difficilem, <g ref="#slash"/>quia qui potest in maius, potest 
-                            in minus.</p>
-  
-<p xml:id="l4-usapce"><g ref="#pilcrow"/>Ulterius sic arguitur: fides inclinat ad 
-    conformiter credendum suo praelato et etiam ecclesiae, <g ref="#slash"/>sed 
-    praelatus potest decipere et potest etiam errare, <g ref="#slash"/>quia possibile est 
-    quod credat deum patrem esse maiorem vel priorem vel 
-    potentiorem filio, <g ref="#slash"/>quia pater generat <g ref="#slash"/>et filius non, ergo 
-    est potentia aliqua in patre, quae non est in filio <g ref="#slash"/>vel aliqua 
-    apparentia ex ratione vel huiusmodi, <g ref="#slash"/>et quod consequenter hoc 
-    praedicet alicui vetulae simplici <g ref="#slash"/>ipsam, hoc credet et 
-    tenebitur credere quia nesciret ubi Refugere, nisi ad praelatum 
-    suum. <g ref="#slash"/>Etiam ecclesia potest errare seu <choice><orig>defficere</orig><reg>deficere</reg></choice>, <choice><orig>ymo</orig><reg>immo</reg></choice> 
-    de facto errat in aliquibus excommunicationibus, sicut in casu 
-    in quo quis contraxerit veraciter cum aliqua muliere 
-    matrimonium <g ref="#slash"/>et <choice><orig>2o</orig><reg>secundo</reg></choice> apparenter contrahat cum <choice><orig>2a</orig><reg>secunda</reg></choice>, <g ref="#slash"/>et in facie 
-    ecclesiae, <g ref="#slash"/>ecclesia coget eum ad habendum <choice><orig>2am</orig><reg>secundam</reg></choice>. <g ref="#pilcrow"/>Item 
-    stat quod maior pars consilii erret, <g ref="#slash"/>quia non habemus ex 
-    scriptura quod fides Remaneat in omnibus, <g ref="#slash"/>sed solum in aliquibus. 
-    <g ref="#slash"/>modo maiori parti credendum est.</p>
-                        
-                        <p xml:id="l4-idpeli"><g ref="#slash"/>Item deus poterit decipere 
-                            creaturas, et per consequens non est sibi credendum, ergo nec 
-                            fidei. consequentia nota. <g ref="#slash"/>antecedens probatur quia potest facere de creatura 
-                            sicut vult. <g ref="#pilcrow"/>Confirmatur, quia creatura aliquando demeretur 
-                            quod sit digna decipi, ergo deus potest eum decipere. <g ref="#slash"/>
-                            <g ref="#pilcrow"/>Item de facto ita fuit, quod deus decepit <name>ieremiam</name> prophetam 
-                            ut patet <title>Ieremiae</title> <g ref="#dot"/>20<g ref="#dot"/>, <g ref="#slash"/>"domine <g ref="#carrot"/><subst><add place="aboveLine"><g ref="#carrot"/>seduxisti</add><del rend="expunctuated">decepisti</del></subst> me."<g ref="#dot"/> <g ref="#dbslash"/>Item 
-                            post Resurrectionem in <name type="place">caena</name> finxit se comedere, <g ref="#slash"/>et tamen 
-                            non vere comedebat, quia habebat corpus glorificatum 
-                            et sic non convertebat cibum in sui substantiam. <g ref="#pilcrow"/>Item finxit 
-                            se coram discipulis euntibus in <name type="place">emaux</name> longius ire.</p>            
-                    </div>
-                    <div>
-                        <head xml:id="l4-Hrrrrrr">[Responsio]</head>
-                        
-                        <p xml:id="l4-iurdii"><g ref="#slash"/>Ita ultima ratio cum contentis ibidem tangit tres 
-                            magnas difficultates quarum quaelibet bene Requirit specialem 
-                            determinationem, <g ref="#slash"/>Ideo de eis breviter aliqua dicta 
-                            <g ref="#slash"/>veniendo ad alias rationes. <g ref="#slash"/><g ref="#slash"/>Ad illud breviter quod 
-                            tangitur de vetula simplici, cui praelatus suus praedicat 
-                            aliquod falsum etc., <g ref="#slash"/>in ista materia egregie loquitur 
-                            <name>guillelmus <del rend="strikethrough">parisiensis</del> altissiodorensis</name>, <g ref="#slash"/>Ipse enim ponit istam 
-                            conclusionem: <g ref="#slash"/>sicut non potest quis agere contra caritatem 
-                            quin[?] peccet mortaliter, <g ref="#slash"/>sic non potest quis agere 
-                            contra fidem quin[?] peccet, <g ref="#slash"/>Ideo dicit quod <choice><orig>ygnorantia</orig><reg>ignorantia</reg></choice> 
-                            Iuris divini directi in fine est peccatum. <g ref="#slash"/>Ideo in isto 
-                            casu, si vetula credat suo praelato peccat mortaliter. 
-                            <g ref="#pilcrow"/>Et tunc Ad rationem, ipse Respondet <g ref="#slash"/>bene et dicit quod 
-                            creatura rationalis habet multiplicem praelatum, <g ref="#slash"/>primus et 
-                            principissimus est ipse deus existens continue animae <g ref="#slash"/>et ipsam 
-                            dirigens et illuminans quantum in se est. <g ref="#slash"/>Ideo 
-                            dicit quod creaturae rationali ignoratum est credere 'deum esse', 
-                            <g ref="#slash"/>et ideo vetula, quia ignoratum est sibi a natura credere 
-                            'deum esse', <g ref="#slash"/>si ipsa secundum instinctum sibi a natura inditum 
-                            <add place="margin" type="marginalNote"><g ref="#threeDotLineFigure"/></add>faciat ipsum credet, laudet, et glorificet, aperiet 
-                            sibi hostium, <g ref="#slash"/>et tunc lux divina eam illuminabit, 
-                            <g ref="#slash"/>ita quod, si non sit culpa ex parte sui <g ref="#slash"/>nec vetula 
-                            ponat obicem, <g ref="#slash"/>lux divina eam illuminabit. 
-                            <g ref="#slash"/>dicit ulterius quod in isto casu, vetula non deberet 
-                            credere suo praelato <g ref="#slash"/>nec angelo sibi hoc annuntiante. 
-                            <g ref="#slash"/>subdit ulterius quod propter culpam subditorum, 
-                            deus aliquando permittit praelatum eos decipere. <g ref="#slash"/>unde in 
-                            praedicto casu, vetula non credit praelato, et si 
-                            credat, <g ref="#slash"/>tamen non credit ex fide, <g ref="#slash"/>et si faceret 
-                            quod 'in se est', <g ref="#slash"/>crederet ex fide deo ipsam illuminante.</p>
-                        
-                        <p xml:id="l4-qediis"><g ref="#dbslash"/>Quantum est de ecclesia, <g ref="#slash"/>dicendum quod ecclesia in suo regimine 
-                            habet aliqua, quae sunt mere <del rend="expunctuated">naturalia</del><add place="inline">spiritualia</add> 
-                            aliqua, quae sunt mere politica, et aliqua mixta. <g ref="#slash"/>quantum 
-                            autem ad illa quae sunt mere spiritualia, sicut sunt sacramenta, 
-                            quae tangunt fidem et caritatem <g ref="#slash"/>et illa quae absolute 
-                            sunt <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> ad finem hominis consequendum, <g ref="#slash"/>ipsa non potest 
-                            errare, <g ref="#slash"/>quia quantum ad hoc dirigitur a spiritu sancto, qui 
-                            non sineret eam errare. <g ref="#slash"/>ecclesia autem in negotio 
-                            mere politico potest errare. <g ref="#slash"/>de mixtis enim, sicut in 
-                            excommunicationibus, <g ref="#slash"/>unde in excommunicationibus ponitur aliquid spirituale 
-                            et aliquid temporale, <g ref="#slash"/>quia quantum ad aliquas penas exteriores 
-                            <g ref="#slash"/>ipsa excommunicatio est politica, <g ref="#slash"/>si, ad <choice><orig>ymmaginationem</orig><reg>imaginationem</reg></choice>, posset 
-                            separari ista pars politica ab alia, scilicet, a spiritualitate. 
-                            <g ref="#slash"/>Et Ideo, quantum ad istam partem, potest errare <g ref="#slash"/>et potest 
-                            cogere aliquem ad sustinendum aliquam penam, <g ref="#slash"/>licet ille de hoc 
-                            sit mere innocens, <g ref="#slash"/>quia hoc facit modo mere politico, 
-                            qui semper Iudicat secundum allegata <g ref="#slash"/>et probata; <g ref="#slash"/>et 
-                            istud non est contra theologos dicentes quod ecclesia non potest 
-                            errare, <g ref="#slash"/>quia ipsi solum hoc intelligunt in spiritualibus.</p>
-                        
-                        <p xml:id="l4-qedehd"><g ref="#pilcrow"/>Quantum est de consilio, dicendum est quod possibile est quod totum 
-                            consilium erret, <g ref="#slash"/>sed tamen propter hoc non percipietur error, 
-                            sicut fuit tempore <name>hylarii</name>. <g ref="#slash"/>Unde tempore <name>hylarii</name> maior 
-                            pars consilii <choice><orig>ymo</orig><reg>immo</reg></choice> propria errabat <g ref="#slash"/>et in signum 
-                            veritatis determinandae fuit, ita quod <name>hylarius</name> proiecit 
-                            mantellum suum super Radium solis <g ref="#slash"/>et permansit 
-                            quasi appensus partice; <g ref="#slash"/>etiam terra se elevavit ad aequalitatem 
-                            maiorum, licet esset humo depressus.</p>
-                        
-                        <p xml:id="l4-sdqdie"><g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> dico quod 
-                            si omnes in consilio essent infideles, tamen prophetarent seu 
-                            dicerent veritatem, <g ref="#slash"/>sicut patet de <name>balaam</name>, et hoc ex 
-                            spirituali <choice><orig>solicitudine</orig><reg>sollicitudine</reg></choice> quam habet tota trinitas <g ref="#slash"/>et christus, 
-                            qui caput ecclesiae ad dirigendum ipsam ecclesiam, etc..</p>
-                        
-                        <p xml:id="l4-qatafc"><g ref="#pilcrow"/>Quantum ad <choice><orig>3m</orig><reg>tertium</reg></choice>, scilicet, utrum Deus possit decipere 
-                            creaturam, <g ref="#slash"/>potest dici quod non; <g ref="#slash"/>et hoc de potentia dei ordinata, 
-                            licet absolute possit <g ref="#slash"/>ut beatus est tutus de sua beatitudine 
-                            <g ref="#slash"/>et tamen sit quod deus eum potest dampnare <g ref="#slash"/>vel 
-                            <choice><orig>annichilare</orig><reg>annihilare</reg></choice> absolute, <g ref="#slash"/>et ita securitas sufficit ad fidei 
-                            certitudinem.</p>
-                       
-<p xml:id="l4-sadpnd"><g ref="#pilcrow"/>Sed alii dicunt quod deus de potentia sua 
-    absoluta non potest aliquem decipere, <g ref="#slash"/>quia dicitur in <title><choice><orig>simbolo</orig><reg>symbolo</reg></choice></title> 
-    omnipotens cum sit non potest decipere <g ref="#slash"/>nec mentiri, 
-    <g ref="#slash"/>et potest istud ratione fundari <g ref="#slash"/>sicut Repugnat suae bonitati facere creaturam peccare <g ref="#slash"/>ita et decipere, 
-    sed primum Repugnat ergo <choice><orig>2m</orig><reg>secundum</reg></choice>; <g ref="#slash"/>et si arguatur deus 
-    producit assensum falsum sive deceptione, ergo decipit. <g ref="#slash"/>Respondetur 
-    negando consequentiam, <g ref="#slash"/>quia non sequitur, deus facit motum, 
-    ergo movetur, <g ref="#slash"/>nec sequitur, deus facit comestionem, 
-    ergo comedit, et sic de aliis. <g ref="#slash"/>ita in proposito, non sequitur, deus facit 
-    deceptionem, ergo decipit. <g ref="#slash"/>etiam, aliquod obiectum 
-    praesentatum potentiae bene concurrit ad producendum errorem, <g ref="#slash"/>et 
-    tamen proprie non decipit.</p>
-
-                    </div>
-                    <div>
-                        <head xml:id="l4-Harpier">[Alia ratio pro secunda instantia et responsio]</head>
-                        
-                        <p xml:id="l4-strvaf"><g ref="#pilcrow"/>Sed tunc Restat difficultas: utrum 
-                            deus se solo posset producere assensum falsum seu <del rend="expunctuated">productionem</del> 
-                            deceptionem, <g ref="#slash"/>tenendum est quod non; <g ref="#pilcrow"/>Sed tunc est una difficultas: 
-                            utrum deus se solo posset creare in mente alicuius 
-                            unum assensum respectu futuri contingentis eiusdem rationis cum assensu 
-                            causato ex ratione probabili seu apparentia <g ref="#slash"/>quem habent multi 
-                            credentes ipsum esse verum assensum fidei.</p>
-                        
-<p xml:id="l4-reqdnf"><g ref="#pilcrow"/>Respondendum est quod non 
-    probatur, sed hoc nolo asserere, <g ref="#slash"/>Sed remaneo sub dubio, 
-    <g ref="#slash"/>utrum possit vel non. <g ref="#slash"/>Et Recitabo motivum tenentium 
-    quod non. <g ref="#slash"/>motivum est illud <g ref="#slash"/>ponatur per adversarium quod ita 
-    sit quod deus creaverit unum praedictum assensum qui non est de natura 
-    fidei.</p>        
-    
-                        <p xml:id="l4-ipupad"><g ref="#pilcrow"/>Item ponatur ulterius quod hoc transierit in praeteritum, 
-                            <g ref="#slash"/>tunc sic <choice><orig>neccesse</orig><reg>necesse</reg></choice> est quod creaverit <g ref="#slash"/>et <choice><orig>neccesse</orig><reg>necesse</reg></choice> est quod habens talem 
-                            assensum per illum assensit, <g ref="#slash"/>quia non est assensus habens conditionem 
-                            fidei, ergo ista est <choice><orig>neccessaria</orig><reg>necessaria</reg></choice>: <g ref="#slash"/>iste assentit huic futuro contingenti 
-                            cuius habuit assensum, <g ref="#slash"/>et tamen possibile est quod numquam eveniet. <g ref="#slash"/>tunc ponamus 
-                            primam cum <choice><orig>2a</orig><reg>secunda</reg></choice>; <g ref="#slash"/>ista copulativa erit possibilis, iste assensit[?] quod antichristus 
-                            erit, <g ref="#slash"/>et tamen numquam erit, ergo decipitur et hoc a 
-                            solo deo, ergo etc. <g ref="#slash"/>Ita quod istud est corollarium sequens ex positione 
-                            quod deus non potest aliquem decipere.</p>
-    
-                        <p xml:id="l4-trechd"><g ref="#slash"/>Tunc Respondendum est ad rationem 
-                            contra hoc arguentem: ad auctoritatem contra hoc arguentem 
-                            <g ref="#slash"/>ad auctoritatem <name>Ieremiae</name> <g ref="#slash"/>potest dici dupliciter <g ref="#slash"/>potest dici primo 
-                            quod non loquebatur in persona propria, sed in persona est <name>zephas</name> false deo 
-                            deceptionem in ponente. <g ref="#slash"/>ideo verba non sunt assertiva 
-                            assertione scripturae sed assertione errandi. <g ref="#slash"/>adhuc aliter 
-                            potest dici quod illud dictum intelligitur secundum <choice><orig>oppinionem</orig><reg>opinionem</reg></choice>, quia 
-                            populus credebat <name>Ieremiam</name> decipi.</p>
-
-<p xml:id="l4-asassp"><g ref="#pilcrow"/>Ad <choice><orig>2am</orig><reg>secundam</reg></choice> auctoritatem 
-    quando dicitur quod christus post resurrectionem finxit se comedere etc. 
-    <g ref="#dbslash"/>Advertendum est quod comedere non dicit <g ref="#slash"/>conversionem cibi in 
-    substantiam comedentis, <g ref="#slash"/>sed comestio est assumptio cibi in 
-    potentia ad digerendum. <g ref="#slash"/>Item comedo totum panem <g ref="#slash"/>et tamen 
-    non totum converto in meam substantiam. <g ref="#pilcrow"/>Item aliqui sunt tam 
-    debilis complexionis quod cibum quem sumunt non possunt digerere, 
-    <g ref="#slash"/>et tamen dicuntur vere comedere, <g ref="#slash"/>ideo dicitur quod christus 
-    vere comedit, <g ref="#slash"/>Sed illud quod comedit non fuit 
-    conversum in eius substantiam, <g ref="#slash"/>sed post ea evaporavit 
-    vel conversus fuit in aliam substantiam sicut sibi placuit.</p>                    
-                       
-                        <p xml:id="l4-aaqica"><g ref="#pilcrow"/>Ad aliam quando dicitur quod finxit se longius Ire etc., <g ref="#slash"/>dicitur 
-                            quod verba illa non debent hic capi ad litteram, 
-                            Sed voluit deo manifestare quod discipuli non habebant fidem 
-                            certam de ipso. <g ref="#pilcrow"/>Item potest dici quod per hoc ostendit 
-                            se in caelum ascendere.</p>
-                    </div>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrarpsi">[Responsio ad rationes pro secunda instantia]</head>
-                    <p xml:id="l4-trrrpf"><g ref="#pilcrow"/>Tunc Restat Respondere 
-                        ad alias rationes prius factas.</p>
-
-<p xml:id="l4-apdiav"><g ref="#slash"/>Ad primam de spe, <g ref="#slash"/>
-    <g ref="#slash"/>Responsio <name>guillelmi altissiodorensis</name> in hoc est bona, <g ref="#slash"/>ipse enim dicit 
-    quod fides et species sunt quaedam veritates <g ref="#slash"/>unde ipse dicit 
-    spes est semper sine quacumque praesumptione, ergo semper 
-    Inclinat ad verum. <g ref="#slash"/>Ideo numquam inclinat absolute aliquem ad 
-    credendum quod ipse absolute habebit vitam aeternam, <g ref="#slash"/>sed 
-    inclinatio fidei est supra illud complexum in generali <g ref="#slash"/>quicumque bene 
-    egerit et perseveraverit usque in finem habebit vitam aeternam 
-    <g ref="#slash"/>et in particulari in quolibet inclinat ad hoc, <g ref="#slash"/>si bene persevero 
-    in bonis operibus, ego habebo vitam aeternam, <g ref="#slash"/>ita quod assensus, 
-    spei non est catholicus, sed conditionalis <g ref="#slash"/>vel reducibilis 
-    ad conditionalem, <g ref="#slash"/>et ita proportionabiliter dicendum est de fide, 
-    quia illa semper est sine quacumque praesumptione, <g ref="#slash"/>ideo semper 
-    inclinat ad verum.</p>
-                    
-<p xml:id="l4-asreif"><g ref="#pilcrow"/>Ad <choice><orig>2am</orig><reg>secundam</reg></choice> rationem principalem 
-    dicitur quod simile est, scilicet in casu ibidem posito, quod alicui 
-    in extrema <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> etc. <g ref="#slash"/>unde dicitur quod talis in illo casu 
-    non deberet credere catholice quod ibi sit corpus christi. 
-    <g ref="#slash"/>sed ex suppositione quadam, scilicet, quod si hostia sit debite 
-    consecrata, ibi est corpus christi, <g ref="#slash"/>potest forte contingere quod 
-    ibi sit una credulitas catholica quod ibi est corpus christi 
-    <g ref="#slash"/>et <choice><orig>2a</orig><reg>secunda</reg></choice> non est multum periculosa, <g ref="#slash"/>sed illa non est generata 
-    ex fide. <g ref="#slash"/>ideo dicitur quod contingit quod ibi sit aliqua 
-    credulitas, <g ref="#slash"/>sed illa non est magnum peccatum, <g ref="#slash"/>sicut aliquando 
-    contingit in missa quod ibi est aliquis <choice><orig>deffectus</orig><reg>defectus</reg></choice> ex parte 
-    sacerdotis in consecratione, <g ref="#slash"/>sed ibidem error ille non 
-    est multum periculosus <g ref="#slash"/>nec multum malus <g ref="#slash"/>nec ibidem 
-    est <choice><orig>ydolatria</orig><reg>idolatria</reg></choice>, quia intendit adorare corpus christi et 
-    ita facit.</p>
-                    
-                 <p xml:id="l4-atdmip"><g ref="#pilcrow"/>Ad <choice><orig>3m</orig><reg>tertiam</reg></choice> de assensu ante incarnationem 
-                     christi quia aliqui assentiebat etc. <g ref="#slash"/>conceditur totum illud quod ponitur 
-                     quod aliqui assentiebant huic christus incarnabitur 
-                     ante eius incarnationem <g ref="#slash"/>et hoc ex fide; <g ref="#slash"/>et quando ulterius 
-                     ponebatur quod continuaretur huiusmodi assensus usque post 
-                     instans incarnationis christi, <g ref="#slash"/>distinguendum est de assensu 
-                     ratione temporis, <g ref="#slash"/>quia existentes ante incarnationem christi tempus 
-                     incarnationis debebant <sic>debebant</sic> scire vel proprie 
-                     secundum praescriptionem prophetarum, <g ref="#slash"/>et certum est quod prophetae 
-                     tempus adventus christi denuntiaverunt; <g ref="#slash"/>non tamen 
-                     ita certe quod possent pro tunc existentes punctualiter 
-                     seu certitudinaliter iudicare de praeciso tempore incarnationis 
-                     christi. <g ref="#slash"/>Distinguendum est ergo de tempore <g ref="#slash"/>quia si 
-                     fuerunt in tempore multum distante ab incarnatione, 
-                     ita quod bene poterant iudicare quod pro tunc christus erat 
-                     incarnandus, <g ref="#slash"/>ille assensus, quo assentiebant isti <g ref="#slash"/>'christus 
-                     incarnabitur', erat licitus et verus; <g ref="#slash"/>Adveniente 
-                     autem tempore quod non poterant Recte discernere <g ref="#slash"/>vel 
-                     distinguere utrum christus erat incarnatus vel 
-                     non, quia ex scriptura hoc non poterant scire, <g ref="#slash"/>tunc, eo ipso 
-                     quod habebant aliqualem dubitationem de tempore incarnationis, 
-                     fides non inclinabat ad illum assensum 'christus incarnabitur', 
-                     Sed inclinabat ad illum assensum 'christus incarnabitur' 
-                     vel 'est incarnatus' <g ref="#slash"/>vel 'de facto incarnatur' sub tali 
-                     distinctione, <g ref="#slash"/>et isto modo tenebantur pro tunc credere. <g ref="#slash"/>et 
-                     per hoc patet quid dicendum sit ad argumentum, <g ref="#slash"/>quia assensus 
-                     fidei semper est verus quia quamdiu bene <del rend="strikethrough">pos</del> poterat 
-                     distingui de tempore incarnationis, fides inclinabat ad 
-                     assentiendum quod 'christus incarnabitur', <g ref="#slash"/>quando autem non poterat 
-                     bene distingui inclinabat ad assentiendum distinctive quod 'christus 
-                     incarnabitur' vel 'est incarnatus' vel 'incarnatur'. <g ref="#slash"/>et 
-                     tunc quando dicitur quod conservetur ille assensus usque ad instans 
-                     incarnationis, <g ref="#slash"/>duplex est hic modus Respondendi. <g ref="#slash"/>unus 
-                     est quod non est casus possibilis. <g ref="#slash"/>alius modus Respondendi esset 
-                     quod ille idem assensus, qui ante incarnationem tempore, quo poterat 
-                     distingui de tempore incarnationis, inclinabat 
-                     ad assentiendum quod christus incarnabitur, post tempus, quo 
-                     non poterat distingui de incarnatione, inclinabat 
-                     ad assentiendum distinctive quod christus incarnabitur <g ref="#slash"/>vel est 
-                     incarnatus <g ref="#slash"/>vel incarnatur. <g ref="#slash"/>Item secundum primum modum, 
-                     diceretur quod spiritus sanctus non valet concurrere ad conservationem 
-                     illius assensus in instanti incarnationis <g ref="#slash"/>vel post; <g ref="#slash"/>assensus, 
-                     inquam per quem assentiretur quod 'christus incarnabitur'. <g ref="#slash"/>Item 
-                     etiam quia hoc Repugnat naturae illius assensus quod false 
-                     Repraesentet, sicut dictum est multotiens in praecedentibus.</p>
-                </div>
+                
+                    <p xml:id="l4-ptqsef">Contra arguitur 
+                        <lb ed="#E"/>probando quod praedictam non sint vera <choice><orig>ymo</orig><reg>immo</reg></choice> quod fidei possit sub esse falsum quia spei de facto 
+                        <lb ed="#E"/>sub est falsum igitur fidei tenet consequentia quia spes videtur etc. Antecedens de praescito qui habet spem quae est quidam 
+                        <lb ed="#E"/>assensus quo assentit se habiturum vitam aeternam et tamen non habebit Secundo quia 
+                        <lb ed="#E"/>hoc potest accedere in isto casu posito quod aliquis existens in extrema <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> debeat accipere 
+                        <lb ed="#E"/>corpus christi et petatur ab eo virum cedat hoc esse corpus christi Respondet credo et illi 
+                        <lb ed="#E"/>potest subesse falsum quia possibile est quod illud non sit corpus christi ymmo quod non sit debita 
+                        <lb ed="#E"/>facta consecratio</p>
+                
+                <p>Tertio capiamus aliquem qui ex habitu fidei exeat in actum 
+                    <lb ed="#E"/>istius enunciabilis quod christus incarnabitur vel quod unus antiquus pater habuerit et contin<lb ed="#E"/>tire[?] 
+                usque ad instans incarnationis tunc qui erit falsus quia in illo instanti non 
+                    <lb ed="#E"/>est unum dicere quod christus incarnabitur ymmo est incarnatus</p>
+                
+                <p>Item abraham de facto 
+                    <lb ed="#E"/>meruit ex fide et tamen per illam credidit falsum quia credidit filium suum esse ymolandum 
+                    <lb ed="#E"/>qui non erat ymo laudus et illi fidei subfuit falsum</p>
+                
+                <p>Item spiritus sanctus potest concurrere active 
+                    <lb ed="#E"/>ab assensui propositionis false igitur fides ?c?? quia fides non est maioris dignitatis neccessaris 
+                    <lb ed="#E"/>quia spiritus sanctus Q?s[?] patet quia nichil potest produci adextra quando deus concurit et spiritus sanctus</p>
+                
+                <p><lb ed="#E"/>Item est in potentia obedientali respectu concu?que deus voluerit ipsam assumere ergo deus potest ipsam assumere 
+                    <lb ed="#E"/>ad assenciendum falso</p>
+                
+                <p>Ala[?] dicit quod inquam intellectus credit propositioni non neccessitatus fuerit 
+                    <lb ed="#E"/>per assensum ad hoc et rationem et excludit habitum fidei sed hoc non videtur ?ni[?] quia 
+                    <lb ed="#E"/>tenes quod actus fidei non est in potestate nostrae vel voluntatis non me?te[?] habitur 
+                    <lb ed="#E"/>habitus infusus in baptismo se solo non sufficit exire in actum utque de parvo baptisato 
+                    <lb ed="#E"/>merito inter sarracenos Sed tunc poetitur quae est d?? dicitur quod iste qui habet habitum 
+                    <lb ed="#E"/>facilius disponitur ab habendum actum fidei quam qui non habet habitum Quia si 
+                    <lb ed="#E"/>uterque facit diligenciam tunc in habituato intenditur caritas ex quo est in gratia et 
+                    <lb ed="#E"/>in alio non quia non in gratia unde requiritur ultra quod sit diligencia odium 
+                    <pb ed="#E" n="5v"/><lb ed="#E"/>mali et amor boni</p>
+                
+                <p>Videtur quod <name ref="#Holcot">holcot</name> <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> de fide quod sit unus habitus acquisitus 
+                    <lb ed="#E"/>etc vel unus habitus opinativus Timendum est quod quam plures credant non ex fide <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> 
+                    <lb ed="#E"/>ad salutem sed ex fide gravata per rationes probabiles ut quod penis est per habitum opina<lb ed="#E"/>tum[?] 
+                scilicet qui est cum formidinie Argumentum <name ref="#Holcot">holcot</name> credo non est in potestate mea sine motivo assentire 
+                    <lb ed="#E"/>propositioni unde propositis duabus una evidenti et alia non tunc illi inevidenti non passum 
+                    <lb ed="#E"/>assentire sine motivo seu ratione modo in articulo trinitatis ex maxime me videncia</p>
+                
+                <p>Adver<g ref="#dbdash"/>tendum quod lata seu magna est differentia inter propositiones indifferentes et omnino inpertinentes Ad fi<lb ed="#E"/>nis 
+                humani consecutionem et alias <choice><orig>neccessario</orig><reg>necessario</reg></choice> ordinatas ad finis humani consecutionem videlicet 
+                    <lb ed="#E"/>inter illas quae sunt de neccessitate salutis quia alias quae non unde natura inducit ho? 
+                    <lb ed="#E"/>inclinationem ad essentiendum illis quae sunt de necessitate salutis et ita est in rebus 
+                    <lb ed="#E"/>pollitticis quia natura ind?t ho??um quod sit alias civile et ergo eciam rationale quod homo plus in<lb ed="#E"/>clinetur 
+                ad propositionem quae est de neccessitate salutis quam ad aliam indifferentem et inpertinentem</p>
+                
+                <p>Gesta radice quod quaelibet creatura rationalis habet instinctum ad deum tam in affectu 
+                    <lb ed="#E"/>quam in intellectu In affectu quantum ad diligere in intellectu quantum ad cognoscere provenit 
+                    <lb ed="#E"/>omnis <choice><orig>ydolatria</orig><reg>idolatria</reg></choice> ex istis</p>
+                
+                <p>Tunc ad rationem <name ref="#Holcot">holcot</name> dicitur quod non est similem de propositionibus indifferentibus 
+                    <lb ed="#E"/>et habentibus neccessariam habitudinem ad finem humanum Aliter potest solvi quod fides habet alium modum 
+                    <lb ed="#E"/>respectu sui obiecti quam aliquando habitus qui actus fidei non habet apparenciam ex parte sui 
+                    <lb ed="#E"/>obiecti Sed diceretur quod esset quod obiectum intellectus sit apparens verum conceditur vel quod ibi sit apparentia 
+                    <lb ed="#E"/>ex parte obiecti vel alterius modo dicitur quod fides ex sua int?istate est apparentia</p>
+                
+                <p>Mota 
+                    <lb ed="#E"/>circa textum quod quando dicitur de partibus <choice><orig>ymaginis</orig><reg>imaginis</reg></choice> memoria non capitur pro memoria sensitiva 
+                    <lb ed="#E"/>sed pro actu actione per speciem intelligibilem et habet se tamquam primum producens et comparatio 
+                    <lb ed="#E"/>pri[?] et inde producitur intellectio quae comperatur filio et ista duo quia diligunt 
+                    <lb ed="#E"/>se producunt spiritum sanctum per modum amoris</p>
+            
             </div>
         </body>
     </text>
