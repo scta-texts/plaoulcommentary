@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -35,167 +35,56 @@
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
         <div xml:id="lectio76">
           <head xml:id="l76-Hldtldt" subtype="title">Lectio 76, de Trinitate</head>
               
-              <p xml:id="l76-dedcgd">Dictum 
-                est de processione spiritus sancti et de controversia inter 
-                <cb ed="#SV" n="291va"/><name ref="#Greeks">graecos</name> et <name ref="#Latins">latinos</name> et ibi fuit introductum 
-                aliquid de materia consilii generalis. Pro cuius declaratione protestor 
-                quod non intendo aliquid tractare de materia praesentis schismatis, 
-                nisi inquantum pertinet ad materiam. Et ideo ad videndum 
-                quanta auctoritas deus determinationibus consiliorum generalium dedit.</p>
-            
+              <p xml:id="l76-dedcgd">Dictum est de processione spiritus sancti et de controversia inter <cb ed="#SV" n="291va"/> <name ref="#Greeks">Graecos</name> et <name ref="#Latins">Latinos</name> et ibi fuit introductum aliquid de materia consilii generalis. Pro cuius declaratione protestor quod non intendo aliquid tractare de materia praesentis schismatis, nisi inquantum pertinet ad materiam.</p>
+            <!-- paragraph adjustment needs to fixed in image coordinates -->
           <div>
-            <head xml:id="l76-Hsqddin">Suppositio: quod deus et natura non deficiunt in necessaris</head>
+            <head xml:id="l76-Hsqddin"><supplied>Suppositio: quod deus et natura non deficiunt in necessaris</supplied></head>
             
-            <p xml:id="l76-pppspv">Ponuntur propositiones praemittendo tamen unicam suppositionem 
-              quae est ista quod deus et natura non deficiunt in 
-              necessaris. Et licet ista suppositio sit fundata in multis locis 
-              sacrae scripturae et libris philosophorum nihilominus ex divina 
-              providentia <cb ed="#R" n="120ra"/>specialiter supra genus humanum providente 
-              apparet quod propter hoc fuit verbi incarnatio sacramentorum 
-              institutio christi passio eius resurrectio. Ex quibus omnibus 
-              cum aliis quibusdam concluditur suppositio praemissa vera.</p>
+            <p xml:id="l76-pppspv">Et ideo ad videndum quanta auctoritas deus determinationibus consiliorum generalium dedit. Ponuntur propositiones praemittendo tamen unicam suppositionem quae est ista quod deus et natura non deficiunt in necessaris. Et licet ista suppositio sit fundata in multis locis sacrae scripturae et libris <name ref="#Philosophers">philosophorum</name>, nihilominus ex divina providentia <cb ed="#R" n="120ra"/> specialiter supra genus humanum providente apparet quod propter hoc fuit verbi incarnatio, sacramentorum institutio, christi passio, eius resurrectio, ex quibus omnibus cum aliis quibusdam concluditur suppositio praemissa vera.</p>
           </div>
             <div>
-              <head xml:id="l76-Hprones">Propositiones</head>
+              <head xml:id="l76-Hprones"><supplied>Propositiones</supplied></head>
             <div>
-              <head xml:id="l76-Hprpprp">Prima propositio: quod finis hominis excedit eius naturalem facultatem</head>
+              <head xml:id="l76-Hprpprp"><supplied>Prima propositio: quod finis hominis excedit eius naturalem facultatem</supplied></head>
               
-              <p xml:id="l76-eqstcv">Ex quo sequitur prima propositio seu primum corollarium, scilicet, quod 
-                sicut finis hominis excedit eius naturalem facultatem, 
-                ita de mediis attingendis deus supernaturaliter providit. 
-                prima pars est evidens quia actus beatificus est naturalis 
-                et ad illum naturaliter non possumus attingere, immo qui 
-                teneret contrarium esset error <name ref="#Pelagius">Pellagii</name> vel haeresis. 
-                Secunda pars sequitur ex divina providentia dei circa genus 
-                humanum. Et non solum circa cultores veri Dei, <seg ana="#politica">immo 
-                circa rectores politiarum ut de <unclear>angelo[?]</unclear> regente <unclear>persas[?]</unclear> 
-                ex divina providentia ita quod principares nec regant habent 
-                haec ex divina providentia</seg>, ut per eos vitiam domentur, 
-                licet non sit in eis bonitas moralis. prosunt tamen ibi 
-                ex hoc quod per eos vitia impediuntur. Unde <name ref="#JuliusCaesar">Iulius Caesar</name> 
-                prosequendo <name ref="#Pompey">Pompeium</name> in parva navicula dicit nautae <quote type="Classical">"noli timere <name ref="#JuliusCaesar">caesarem</name> vehis"</quote>.</p>
+              <p xml:id="l76-eqstcv">Ex quo sequitur prima propositio seu primum corollarium, scilicet, quod sicut finis hominis excedit eius naturalem facultatem, ita de mediis attingendis deus supernaturaliter providit. prima pars est evidens quia actus beatificus est naturalis et ad illum naturaliter non possumus attingere, immo qui teneret contrarium esset error <name ref="#Pelagius">Pellagii</name> vel haeresis. Secunda pars sequitur ex divina providentia dei circa genus humanum. Et non solum circa cultores veri Dei, immo circa rectores politicarum, ut de angelo regente <name>Persas</name>,<note>Cf. Daniel 10:10-14</note> ex divina providentia ita quod principes ut regant habent haec ex divina providentia, ut per eos vitia domentur, licet non sit in eis bonitas moralis, prosunt tamen ibi ex hoc quod per eos vitia impediuntur. Unde <name ref="#JuliusCaesar">Iulius Caesar</name> prosequendo <name ref="#Pompey">Pompeium</name> in parva navicula dicit nautae <quote type="Classical">"noli timere <name ref="#JuliusCaesar">caesarem</name> vehis"</quote>.</p>
             </div>
               <div>
-                <head xml:id="l76-Hspspsp">Secunda propositio: quod ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur <unclear>salutarum[?]</unclear> directio</head>
+                <head xml:id="l76-Hspspsp">Secunda propositio: quod ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur <unclear>salutaris</unclear> directio</head>
                 
-                <p xml:id="l76-ispgdp">Infertur secunda 
-                  propositio quod sicut ad non ponere obicem interius sequitur 
-                  salutarum directio respectu salutarum personae privatae, ita ad 
-                  non ponere obicem exterius vel communicari ecclesiae catholicae 
-                  sequitur salutarum directio, ista propositio fundatur in generali dei providentia.</p>
+                <p xml:id="l76-ispgdp">Infertur secunda propositio quod sicut ad non ponere obicem interius sequitur salutaris directio respectu salutaris personae privatae, ita ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur salutaris directio, ista propositio fundatur in generali dei providentia.</p>
             
-                <p xml:id="l76-uaeccg">Ubi advertendum est quod ex culpa originali 
-                  et excellentia credendorum credenda transcendunt 
-                  humanam facultatem, et ideo requiritur specialis et supernaturalis 
-                  concursus ad eorum Revelationem et licet in scriptura 
-                  hoc contineatur non tamen evidenter et sufficienter pro quolibet. 
-                  et ideo provisum est occurrente difficultate de articulo credendo 
-                  per certum Remedium, scilicet quod in se est facere secundum traditiones 
-                  patrem traditas in celebrationibus consiliorum generalium.</p>
+                <p xml:id="l76-uaeccg">Ubi advertendum est quod ex culpa originali et excellentia credendorum credenda transcendunt humanam facultatem, et ideo requiritur specialis et supernaturalis concursus ad eorum revelationem et licet in scriptura hoc contineatur non tamen evidenter et sufficienter pro quolibet. Et ideo provisum est occurrente difficultate de articulo credendo per certum remedium, scilicet quod in se est facere secundum traditiones patrum traditas in celebrationibus consiliorum generalium.</p>
                 
-                <p xml:id="l76-savscc">Secundo aliquibus videtur quod ex scriptura non habeatur evidenter 
-                  ecclesiam vel fidem in aliquo vel aliquibus remanere 
-                  cuiuscumque status fuerint. Unde dicendum est quod fides posset 
-                  in simplici vetula remanere singulis aliis praelatis 
-                  et viris ecclesiasticis errantibus in fide. Et in illo casu 
-                  sufficit quantum ad exterius forum facere illa quae requiruntur 
-                  ad sacri consilii celebrationem.</p>
+                <p xml:id="l76-savscc">Secundo aliquibus videtur quod ex scriptura non habeatur evidenter ecclesiam vel fidem in aliquo vel aliquibus remanere cuiuscumque status fuerint. Unde dicendum est quod fides posset in simplici vetula remanere singulis aliis praelatis et viris ecclesiasticis errantibus in fide. Et in illo casu sufficit quantum ad exterius forum facere illa quae requiruntur ad sacri consilii celebrationem.</p>
               
               </div>
               <div>
                 <head xml:id="l76-Htptptp">Tertia propositio: quod in consilio sacro aggregati non sunt proprie qui loquuntur sed spiritus sanctus</head>
                 
-                <p xml:id="l76-eqsses">Ex quo sequitur 
-                  <cb ed="#R" n="120rb"/><cb ed="#SV" n="291vb"/>tertia propositio quod in consilio sacro aggregati non sunt proprie 
-                  qui loquuntur sed spiritus sanctus est qui loquitur in eis, 
-                  quia ex quo providentia est sufficiens non requiritur 
-                  in eis bona dispositio, sic quod ipsi sint boni moraliter 
-                  sed semper creatura ibi operatur per spiritu sanctum ut 
-                  per formam verborum cum circa intentione sacramentum 
-                  haberet efficaciam, licet conficiens sacramentum esset 
-                  malus. unde sacerdos quantumcumque pravus de eadem 
-                  materia et observata forma realiter consecraret, igitur 
-                  ex generali providentia si forma a patribus tradita 
-                  servetur videtur quod spiritus sanctus habebit suam efficaciam 
-                  et virtutem ad determinandum secundum quod fuerit ad vitam salubre 
-                  et sanctum.</p>
+                <p xml:id="l76-eqsses">Ex quo sequitur <cb ed="#R" n="120rb"/> <cb ed="#SV" n="291vb"/> tertia propositio quod in consilio sacro aggregati non sunt proprie qui loquuntur sed spiritus sanctus est qui loquitur in eis, quia ex quo providentia est sufficiens non requiritur in eis bona dispositio, sic quod ipsi sint boni moraliter sed semper creatura ibi operatur per spiritu sanctum ut per formam verborum cum circa intentione sacramentum haberet efficaciam, licet conficiens sacramentum esset malus. unde sacerdos quantumcumque pravus de eadem materia et observata forma realiter consecraret, igitur ex generali providentia si forma a patribus tradita servetur videtur quod spiritus sanctus habebit suam efficaciam et virtutem ad determinandum secundum quod fuerit ad vitam salubre et sanctum.</p>
             
-                <p xml:id="l76-eqpnas">Ex quo patet quod implicat contradictionem 
-                  sententiam consilii generalis in necessario 
-                  credendum pro salute deficere. Patet quia ille terminus <mentioned>'consilium 
-                  generale'</mentioned> et alii termini qui determinant de consecratione 
-                  sacramentorum accepti in propria acceptione theologica 
-                  cognoscant quod in consilio generali et consecratione sacramentorum 
-                  operetur spiritus sanctus, ita quod sententia consilii 
-                  generalis est sententia spiritus sancti, et sicut implicat 
-                  contradictionem spiritum sanctum fallere vel decipere, ita implicat 
-                  contradictionem sententiam consilii generalis 
-                  aliquem decipere vel fallere incredendum necessario ad 
-                  salutem.</p>
-              
+                <p xml:id="l76-eqpnas">Ex quo patet quod implicat contradictionem sententiam consilii generalis in necessario credendum pro salute deficere. Patet quia ille terminus <mentioned>'consilium generale'</mentioned> et alii termini qui determinant de consecratione sacramentorum accepti in propria acceptione theologica cognoscant quod in consilio generali et consecratione sacramentorum operetur spiritus sanctus, ita quod sententia consilii generalis est sententia spiritus sancti, et sicut implicat contradictionem spiritum sanctum fallere vel decipere, ita implicat contradictionem sententiam consilii generalis aliquem decipere vel fallere in credendis necessario ad salutem.</p>
+              <!-- confectione versus cosecratione -->
               </div>
               
               <div>
                 <head xml:id="l76-Hqpqpqp">Quarta propositio: quod sententia praelatorum, qui sunt defectus, non renuenda in hiis quae sunt necessaria ad salutem</head>
                 
-                <p xml:id="l76-scqnas">Sequitur corollarium quartum quod licet defectus 
-                  praelatorum sit multum laesivus membrorum ecclesiae dei, 
-                  non propter hoc <unclear>formidienda[?]</unclear> vel renuenda est sententia 
-                  eorum in hiis quae sunt necessaria ad salutem.</p> 
+                <p xml:id="l76-scqnas">Sequitur corollarium quartum quod licet defectus praelatorum sit multum laesivus membrorum ecclesiae dei, non propter hoc formidanda vel renuenda est sententia eorum in hiis quae sunt necessaria ad salutem.</p> 
                 
-                <p xml:id="l76-ppetmc">Prima 
-                  pars est nota in casu quod aliqui essent tales, quia ex officio 
-                  ipsi tenentur pabulum doctrinae ministrare et scitum 
-                  Reservare suis subditis in tantum quod si illo careant 
-                  vel habentes non diffundant a perdunt gregem 
-                  quantum in eis est et turbant membra christi.</p> 
+                <p xml:id="l76-ppetmc">Prima pars est nota in casu quod aliqui essent tales, quia ex officio ipsi tenentur pabulum doctrinae ministrare et scitum reservare suis subditis in tantum quod si illo careant vel habentes non diffundant perdunt gregem quantum in eis est et turbant membra Christi</p> 
                 
-                <p xml:id="l76-spaphg">Secunda pars apparet quia illi non sunt qui loquuntur in consiliis 
-                  generalibus vel in aliis sacramentorum confectionibus, 
-                  sed spiritus dei qui loquitur in eis. et haec observata 
-                  a patribus sanctis praecipue forma tradita, nec malitia 
-                  sacerdotis non impediret christi veram consecrationem, 
-                  quia ad certam formam verborum ordinavit deus se communicare 
-                  corporaliter. Ita in consilio generali malitia 
-                  praelatorum vel aliorum in eo existentium non tolleret 
-                  efficaciam illius, quia non sunt praesides principales, sed organa 
-                  sancti spiritus, qui loquitur in eis, ut proportionaliter <cb ed="#R" n="120va"/>locuta 
-                  est asina <name ref="#Balaam">Balaam</name> ut malediceret populo 
-                  dei, et tamen benedixit populo, licet coactus, ut patet 
-                  <ref><title ref="#num">Numeri</title> 20 et 23o capitulis</ref>, ita in materia fidei aggregati 
-                  in consilio generali spiritus sanctus per eos loquitur veritatem. 
-                  et hoc est ex divina providentia respectu humani 
-                  generis in necessariis pro nostro sive consequendum 
-                  <cb ed="#SV" n="292ra"/>quod non esset nisi consilio generali daretur auctoritas infallibilis 
-                  non obstante ministrorum malitia. Unde sicut 
-                  de <name ref="#Balaam">Balaam</name> cum audiret <name ref="#Balak">Balak></name> benedicere populo 
-                  debes. Dicit quid est haec quod agis non quid vocavi 
-                  te ut malediceres meis mimicis <name ref="#Balaam">Balaam</name>. Respondit 
-                  non possum aliud loqui nisi quae iussent dicens, et 
-                  ideo ubi agitur de instructione populi Christam quamcumque <del rend="strikethrough">ba</del> 
-                  convalesceret malitia assistentium illi tamen mali 
-                  homines possent cum <name ref="#Balaam">Balaam</name> non possumus aliud 
-                  loqui nisi quae iussent dicens. Unde secunda <unclear>vice[?]</unclear> dicens 
-                  <name ref="#Balaam">Balaam</name> respondendo <name ref="#Balak">balac</name> benedictionem prophetare non valeo 
-                  tantum, quia pluries benedicit <name ref="#Balaam">balaam</name> populis. unde 
-                  adhuc dicit non est deus quasi homo nec mentiatur nec 
-                  filius hominis ut mutetur, nam sicut deus in lege 
-                  moysaica specialiter Regebat populum sibi electum, 
-                  ita specialiori modo nunc Regit sanctam ecclesiam 
-                  dei, et sicut <unclear>Repromiser[?]</unclear> deus antiquis patribus in 
-                  veteri lege, ita in nova Regeneratione promisit 
-                  vitam aeternam ipso dicente vobiscum ero usque ad 
-                  consummatione simili. ecce quomodo providet humano generi.</p>
+                <p xml:id="l76-spaphg">Secunda pars apparet quia illi non sunt qui loquuntur in consiliis generalibus vel in aliis sacramentorum confectionibus, sed spiritus dei qui loquitur in eis. Et haec observata a patribus sanctis praecipue forma tradita, nec malitia sacerdotis non impediret christi veram consecrationem, quia ad certam formam verborum ordinavit deus se communicare corporaliter. Ita in consilio generali malitia praelatorum vel aliorum in eo existentium non tolleret efficaciam illius, quia non sunt praesides principales, sed organa sancti spiritus, qui loquitur in eis, ut proportionaliter <cb ed="#R" n="120va"/>locuta est asina <name ref="#Balaam">Balaam</name> ut malediceret populo dei, et tamen benedixit populo, licet coactus, ut patet <ref><title ref="#num">Numeri</title> 20 et 23o capitulis</ref>, ita in materia fidei aggregati in consilio generali spiritus sanctus per eos loquitur veritatem. et hoc est ex divina providentia respectu humani generis in necessariis pro nostro sive consequendum <cb ed="#SV" n="292ra"/>quod non esset nisi consilio generali daretur auctoritas infallibilis non obstante ministrorum malitia. Unde sicut de <name ref="#Balaam">Balaam</name> cum audiret <name ref="#Balak">Balak></name> benedicere populo debes. Dicit quid est haec quod agis non quid vocavi te ut malediceres meis mimicis <name ref="#Balaam">Balaam</name>. Respondit non possum aliud loqui nisi quae iussent dicens, et ideo ubi agitur de instructione populi Christam quamcumque convalesceret malitia assistentium illi tamen mali homines possent cum <name ref="#Balaam">Balaam</name> non possumus aliud loqui nisi quae iussent dicens. Unde secunda <unclear>vice</unclear> dicens <name ref="#Balaam">Balaam</name> respondendo <name ref="#Balak">balac</name> benedictionem prophetare non valeo tantum, quia pluries benedicit <name ref="#Balaam">balaam</name> populis. unde adhuc dicit non est deus quasi homo nec mentiatur nec filius hominis ut mutetur, nam sicut deus in lege moysaica specialiter regebat populum sibi electum, ita specialiori modo nunc Regit sanctam ecclesiam dei, et sicut repromisit deus antiquis patribus in veteri lege, ita in nova regeneratione promisit vitam aeternam ipso dicente <quote ana="#mt28_20">"vobiscum ero usque ad consummatione saeculi"</quote>. Ecce quomodo providet humano generi.</p>
             
                 <p xml:id="l76-sevega">Secundo ecclesiam vocat petram in tantum quod <unclear>portae[?]</unclear> inferi 
                   non praevalebunt adversus eam, ut resistere posset 
