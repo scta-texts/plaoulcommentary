@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,46 +31,52 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio77">
           <head xml:id="l77-Hldtldt" subtype="title">Lectio 77, de Trinitate [Reims Transcription]</head>
             <div>
-              <head xml:id="l77-Hrmipec">Redeundo materiam inceptam: una propositio et corollaria</head>
+              <head xml:id="l77-Hrmipec"><supplied>Redeundo materiam inceptam: una propositio et corollaria</supplied></head>
               
-              <p xml:id="l77-cmipdc"><g ref="#dbslash"/>Continuandum materiam inceptam 
-              <lb ed="#R"/>primo praemittam unam propositionem, <g ref="#slash"/>deinde 
-              <lb ed="#R"/>corollaria.</p>
+              <p xml:id="l77-cmipdc"><g ref="#dbslash"/>Continuando materiam inceptam 
+              <lb ed="#R"/>primo praemittam unam propositionem <g ref="#slash"/>deinde 
+              <lb ed="#R"/>corollaria</p>
             
               <div>
               
-                <head xml:id="l77-Hprotio">Propositio: </head>
+                <head xml:id="l77-Hprotio">Propositio:</head>
                 
-                <p xml:id="l77-peinvo"><g ref="#slash"/>Propositio est ista: sicut ex gratuita Dei 
-              <lb ed="#R"/>providentia scriptura nos sufficienter 
+                <p xml:id="l77-peinvo"><g ref="#slash"/>propositio est ista sicut ex gratuita dei 
+              <lb ed="#R"/><choice><orig>providencia</orig><reg>providentia</reg></choice> scriptura nos sufficienter 
               <lb ed="#R"/>nos erudiens ad salutem est infinitae ca<g ref="#slash"/><lb ed="#R"/>pacitatis 
-              et continue sic Christi sponsa fecunditatis 
-              <lb ed="#R"/>inexhaustibilis existens infinitos modos verita<g ref="#slash"/><lb ed="#R"/>tum 
-              potest nobis parere, id est, ad declarandum infinita 
+              et continue sic christi sponsa fecunditatis 
+              <lb ed="#R"/><sic>inexhaustibilis</sic> existens infinitos modos verita<g ref="#slash"/><lb ed="#R"/>tum 
+              potest nobis parere id est ad declarandum infinita 
               <lb ed="#R"/>secundum infinitos casus possibiles potest nobis 
-              <lb ed="#R"/>veritatem ostendere.</p>
+              <lb ed="#R"/>veritatem ostendere</p>
               
-                <p xml:id="l77-ppesid"><g ref="#slash"/>Prima pars est <name>Augustini</name> 
-              <lb ed="#R"/>in libro de doctrina Christiana, ubi communiter 
-              <lb ed="#R"/>allegatur quidquid in aliis scripturis inve<g ref="#slash"/><lb ed="#R"/>nitur, 
-              si utile, est in Scriptura Sacra re<cb ed="#R" n="121vb"/><lb ed="#R"/>peritur, 
-              si inutile <del rend="strikethrough/expunctuated">rer</del> in eadem reprobatur, ergo quaecumque 
-              <lb ed="#R"/>reperiuntur extra Sacram Scripturam, si utilia ap<g ref="#slash"/><lb ed="#R"/>probantur, 
-              si inutilia <choice><orig>dampnantur</orig><reg>damnantur</reg></choice>.</p> 
+                <p xml:id="l77-ppesid"><g ref="#slash"/>prima pars est <name ref="#Augustine">augustini</name> 
+              <lb ed="#R"/>in libro <title>de doctrina christiana</title> ubi communiter 
+              <lb ed="#R"/>allegatur quidquid in aliis scripturis inve<g ref="#slash"/><lb ed="#R"/>nitur 
+              si utile est in scriptura sacra re<cb ed="#R" n="121vb"/><lb ed="#R"/>peritur 
+              si inutile <corr><del rend="strikethrough/expunctuated">rer</del></corr> in eadem reprobatur igitur quaecumque 
+              <lb ed="#R"/>reperiuntur extra sacram scripturam si utilia ap<g ref="#slash"/><lb ed="#R"/>probantur 
+              si inutilia <choice><orig>dampnantur</orig><reg>damnantur</reg></choice></p> 
               
                 <p xml:id="l77-spaqag"><choice><orig>2a</orig><reg>secunda</reg></choice> pars apparet 
-              <lb ed="#R"/>ex duplici radice. Primo ex immensitate 
-              <lb ed="#R"/>fecunditatis sponsi, qui perfecte convinctus[?] est 
+              <lb ed="#R"/>ex duplici radice primo ex immensitate 
+              <lb ed="#R"/>fecunditatis sponsi qui perfecte coniunctus est 
               <lb ed="#R"/>suae sponsae ad generandum veritates ecclesiae 
               <lb ed="#R"/><choice><orig>neccessarias</orig><reg>necessarias</reg></choice> pro salute et regimine humanae creaturae 
-              <lb ed="#R"/>et nedum generat veritates ad salvum[??? pertinentis,
+              <lb ed="#R"/>et nedum generat veritates ad salutem pertinentes 
               <lb ed="#R"/>sed generat regulas honestatis et non solum 
-              <lb ed="#R"/>quantum ad intellectus reformationem, sed quantum as 
-              <lb ed="#R"/>affectus gratificationem.</p>
+              <lb ed="#R"/>quantum ad intellectus reformationem sed quantum ad 
+              <lb ed="#R"/>affectus gratificationem</p>
             </div>
               <div>
                 <head xml:id="l77-Hcorria">Corollaria</head>
@@ -77,103 +85,103 @@
                   
                   <p xml:id="l77-eppeif"><g ref="#slash"/>Ex prima parte 
               <lb ed="#R"/>sequitur primo quod licet scripturae continentia et ecclesiae 
-              <lb ed="#R"/>fecunditas quantum ad conferentia salutaria ad<g ref="#slash"/><lb ed="#R"/>aequantur. 
-              <g ref="#slash"/>Maior tamen est atualis continentia scripturae 
-              <lb ed="#R"/>quam sit actualis fecunditas ecclesiae, <g ref="#slash"/>vel quam 
-              <lb ed="#R"/>sit fecunditas ecclesiae ad actum reductae. 
-              <lb ed="#R"/>Patet quia scriptura continue est respectu omnium veritatum tan<g ref="#slash"/><lb ed="#R"/>gentium 
+              <lb ed="#R"/>fecunditas quantum ad conferentia salutaria ad<g ref="#slash"/><lb ed="#R"/>aequantur 
+              <g ref="#slash"/>maior tamen est actualis continentia scripturae 
+              <lb ed="#R"/>quam sit actualis fecunditas ecclesiae <g ref="#slash"/>vel quam 
+              <lb ed="#R"/>sit fecunditas ecclesiae ad actum reductae 
+              <lb ed="#R"/>patet quia scriptura continue est respectu omnium veritatum tan<g ref="#slash"/><lb ed="#R"/>gentium 
               humanae speciei et ecclesiae regimen 
-              <lb ed="#R"/>gratuitum[??] et actualiter continet omnem huiusmodi 
-              <lb ed="#R"/>veritatem, <g ref="#slash"/>sed fecunditas ecclesiae non actualiter re<g ref="#slash"/><lb ed="#R"/>ducta 
-              est respectu cuiuscumque veritatis, <g ref="#slash"/>et maxime 
-              <lb ed="#R"/>respectu illorum que sunt ad salutem pertinentia, 
+              <lb ed="#R"/>gratuitum et actualiter continet omnem huiusmodi 
+              <lb ed="#R"/>veritatem <g ref="#slash"/>sed fecunditas ecclesiae non actualiter re<g ref="#slash"/><lb ed="#R"/>ducta 
+              est respectu cuiuscumque veritatis <g ref="#slash"/>et maxime 
+              <lb ed="#R"/>respectu illorum quae sunt ad salutem pertinentia 
               <lb ed="#R"/>licet ecclesia non esset actualiter informata de pro<g ref="#slash"/><lb ed="#R"/>cessione 
-              Spiritus Sancti ai?l[?] connotationem consilii genera<g ref="#slash"/><lb ed="#R"/>lis, 
-              nec in hoc ecclesia erit determinata. <g ref="#slash"/>Ita 
+              spiritus sancti ante convocationem consilii genera<g ref="#slash"/><lb ed="#R"/>lis 
+              nec in hoc ecclesia erit determinata <g ref="#slash"/>Ita 
               <lb ed="#R"/>etiam sunt multi casus possibiles de quibus ecclesia 
               <lb ed="#R"/>non est actualiter instructa et tamen continentur 
-              <lb ed="#R"/>in Scriptura Sacra. <g ref="#slash"/>Tamen ecclesai est per quamlibet 
+              <lb ed="#R"/>in scriptura sacra <g ref="#slash"/>tamen ecclesia est per quamlibet 
               <lb ed="#R"/>veritatem in qua non actualiter est instructa 
-              <lb ed="#R"/>fecunditalis[??].</p>
+              <lb ed="#R"/>fecundabilis.</p>
                 </div>
                 <div>
                   <head xml:id="l77-Hscscsc">Secundum corollarium</head>
                   
-                  <p xml:id="l77-scmris"><g ref="#dbslash"/><choice><orig>2m</orig><reg>Secundum</reg></choice> corollarium: maior et altior 
-              <lb ed="#R"/>est scripturae continentia quam sit <g ref="#dot"/>B<g ref="#dot"/> angeli notitia 
-              <lb ed="#R"/>beatifica. <g ref="#slash"/>Patet, quia scriptura est infinitarum veritatum 
-              <lb ed="#R"/>contentativa[?] angelus solum finitas percipit verita<g ref="#slash"/><lb ed="#R"/>tes, 
-              et patet a signo. <g ref="#slash"/>Nam, licet incarnationis <choice><orig>mi<g ref="#slash"/><lb ed="#R"/>sterium</orig><reg>my<g ref="#slash"/><lb ed="#R"/>sterium</reg></choice> 
-              esset in Scriptura Sacra sufficienter descrip<g ref="#slash"/><lb ed="#R"/>tum 
-              nihilominus, tamen latuit angelos. <g ref="#slash"/>Unde ex ignorantia 
-              <lb ed="#R"/>dicebant angeli ante incarnationem quis est
-              <lb ed="#R"/>iste, qui venit de edon[Edom?] tuntis[?] vestibus de 
-              <lb ed="#R"/>bosra[?]. <g ref="#slash"/>Et admirantes de incarnatione haec 
-              <lb ed="#R"/>clamabant, <g ref="#slash"/>et cum incarnatio relucebat in 
-              <lb ed="#R"/>scriptura.</p> 
+                  <p xml:id="l77-scmris"><g ref="#dbslash"/><choice><orig>2m</orig><reg>Secundum</reg></choice> corollarium maior et altior 
+              <lb ed="#R"/>est scripturae continentia quam sit <g ref="#dot"/><c>b</c><g ref="#dot"/> angeli notitia 
+              <lb ed="#R"/>beatifica <g ref="#slash"/>patet quia scriptura est infinitarum veritatum 
+              <lb ed="#R"/><unclear>contentativa</unclear> angelus solum finitas percipit verita<g ref="#slash"/><lb ed="#R"/>tes 
+              et patet a signo <g ref="#slash"/>nam licet incarnationis <choice><orig>mi<g ref="#slash"/><lb ed="#R"/>sterium</orig><reg>my<g ref="#slash"/><lb ed="#R"/>sterium</reg></choice> 
+              esset in scriptura sacra sufficienter descrip<g ref="#slash"/><lb ed="#R"/>tum 
+              nihilominus tamen latuit angelos <g ref="#slash"/>unde ex ignorantia 
+              <lb ed="#R"/>dicebant angeli ante incarnationem <quote ana="#is63_1">quis est 
+              <lb ed="#R"/>iste qui venit de <choice><orig>edon</orig><reg>edom</reg></choice> tinctis vestibus de 
+              <lb ed="#R"/>bosra</quote> <g ref="#slash"/>et admirantes de incarnatione hoc 
+              <lb ed="#R"/>clamabant <g ref="#slash"/>et cum incarnatio relucebat in 
+              <lb ed="#R"/>scriptura</p> 
                 </div>
                 <div>
                   
                   <head xml:id="l77-Htctctc">Tertium corollarium</head>
                   
-                  <p xml:id="l77-iptiss"><g ref="#slash"/><choice><orig>Ymo</orig><reg>Immo</reg></choice> posset <choice><orig>3o</orig><reg>tertio</reg></choice> inferri quod maior est 
+                  <p xml:id="l77-iptiss"><g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> posset <choice><orig>3o</orig><reg>tertio</reg></choice> inferri quod maior est 
               <lb ed="#R"/>scripturae continentia quam sit tota notitia caelestis 
-              <lb ed="#R"/>paradisi sub Christo et matre eisu propter Christi re<g ref="#slash"/><lb ed="#R"/>verentiam. 
-              <g ref="#slash"/>Ita quod totum residuum circa Christum 
-              <lb ed="#R"/>et matrem eius non cognoscit tot veritatis 
-              <lb ed="#R"/>quot relucent in Scriptura Sacra.</p>
+              <lb ed="#R"/>paradisi sub christo et matre eius propter christi re<g ref="#slash"/><lb ed="#R"/>verentiam 
+              <g ref="#slash"/>Ita quod totum residuum citra christum 
+              <lb ed="#R"/>et matrem eius non cognoscit tot veritates 
+              <lb ed="#R"/>quot relucent in scriptura sacra</p>
                 </div>
                 
                 <div>
                   <head xml:id="l77-Hqcqcqc">Quartum corollarium</head>
                   
-                  <p xml:id="l77-qcsomr"><g ref="#dbslash"/><choice><orig>4m</orig><reg>Quartum</reg></choice> 
-              <lb ed="#R"/>corollarium sicut Sacra Scriptura principaliter 
-              <cb ed="#R" n="122ra"/><lb ed="#R"/>fuit edita propter spiritualem communicatione sponsi 
-              <lb ed="#R"/>ad sponsam sit solus sponsus eam cepit 
-              <lb ed="#R"/>plenaria cognitione. <g ref="#slash"/>Prima pars apparet, quia finis divi<g ref="#slash"/><lb ed="#R"/>nae 
-              providentiae et spiritualis regiminis 
-              <lb ed="#R"/>circa Deum fuit incarnatio et matrimonium 
-              <lb ed="#R"/>spirituale Christi ad sponsam, ita quod habemus 
-              <lb ed="#R"/>initium divinae providentiae et spiritualis regiminis ante 
-              <lb ed="#R"/>Verbi incarnationem, <g ref="#slash"/>et habuimus consummationem 
-              <lb ed="#R"/>illius et in incarnatione et in passione, <g ref="#slash"/>et haec fuit intensio 
-              <lb ed="#R"/>prophetarum. <g ref="#slash"/>Unde <name><choice><orig>Salomon</orig><reg>Solomon</reg></choice></name> ait in <title>Canticis</title> 
-              <lb ed="#R"/>primo capitulo oculetur me osculo oris sui, 
-              <lb ed="#R"/><g ref="#slash"/>et licet matrimonium tunc temporis esse inceptum, <g ref="#slash"/>
-              <lb ed="#R"/>non tamen erat consummatum, <g ref="#slash"/>sed osculando inflaverit[??] 
-              <lb ed="#R"/>spiritum gratiae et dona gratuita quibus ecclesia ha<g ref="#slash"/><lb ed="#R"/>bundat 
-              in fide. <g ref="#slash"/>Et sic sponsus numquam permit<g ref="#slash"/><lb ed="#R"/>teret 
-              eam deficere quin ipsa sit fecundalis[?] veritate 
-              <lb ed="#R"/>in hiis quae tangunt fidem et bonos mo<g ref="#slash"/><lb ed="#R"/>res. 
-              <g ref="#slash"/><choice><orig>2a</orig><reg>Secunda</reg></choice> pars corollarii patet, quia Scriptura Sacra est 
+                  <p xml:id="l77-qcsomr"><g ref="#dbslash"/><choice><orig>4m</orig><reg>quartum</reg></choice> 
+              <lb ed="#R"/>corollarium sicut sacra scriptura principaliter 
+              <cb ed="#R" n="122ra"/><lb ed="#R"/>fuit edita propter spiritualem coniunctionem sponsi 
+              <lb ed="#R"/>ad sponsam sic solus sponsus eam cepit 
+              <lb ed="#R"/>plenaria cognitione <g ref="#slash"/>prima pars apparet quia finis divi<g ref="#slash"/><lb ed="#R"/>nae 
+              <choice><orig>providenciae</orig><reg>providentiae</reg></choice> et spiritualis regiminis 
+              <lb ed="#R"/>circa deum fuit incarnatio et matrimonium 
+              <lb ed="#R"/>spirituale christi ad sponsam ita quod habemus 
+              <lb ed="#R"/><choice><orig>inicium</orig><reg>initium</reg></choice> divinae providentiae et spiritualis regiminis ante 
+              <lb ed="#R"/>verbi incarnationem <g ref="#slash"/>et habuimus consummationem 
+              <lb ed="#R"/>illius et in incarnatione et in passione <g ref="#slash"/>et hoc fuit intentio 
+              <lb ed="#R"/>prophetarum <g ref="#slash"/>unde <name><choice><orig>salomon</orig><reg>solomon</reg></choice></name> ait in <title ref="#cant">canticis</title> 
+              <lb ed="#R"/>primo capitulo oculetur me osculo oris sui 
+              <lb ed="#R"/><g ref="#slash"/>et licet matrimonium tunc temporis esse inceptum <g ref="#slash"/> 
+              <lb ed="#R"/>non tamen erat consummatum <g ref="#slash"/>sed osculando inflavit 
+              <lb ed="#R"/>spiritum gratiae et dona gratuita quibus ecclesia <choice><orig>ha<g ref="#slash"/><lb ed="#R"/>bundat</orig><reg>a<g ref="#slash"/><lb ed="#R"/>bundat</reg></choice> 
+              in fide <g ref="#slash"/>et sic sponsus numquam permit<g ref="#slash"/><lb ed="#R"/>teret 
+              eam deficere quin ipsa sit <unclear cert="medium">fecundabilis</unclear> veritate 
+              <lb ed="#R"/>in hiis quae tangunt fidem et bonos mo<g ref="#slash"/><lb ed="#R"/>res 
+              <g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> pars corollarii patet quia scriptura sacra est 
               <lb ed="#R"/>infinitae continentiae et continet infinitas altissimas veri<g ref="#slash"/><lb ed="#R"/>tates 
               et nulli creaturae communicata est infinitarum 
-              <lb ed="#R"/>veritatum notitia, nisi solum animae Christi, ergo solus Christus 
-              <lb ed="#R"/>habet huiusmodi scripturae plena???am[?] notitiam quo ad omnes 
-              <lb ed="#R"/>modos repraesentandi.</p>
+              <lb ed="#R"/>veritatum notitia nisi solum animae christi igitur solus christus 
+              <lb ed="#R"/>habet huiusmodi scripturae plenariam notitiam quo ad omnes 
+              <lb ed="#R"/>modos repraesentandi</p>
             
                   <p xml:id="l77-uneiei"><g ref="#dbslash"/>Ubi notandum est quod incar<g ref="#slash"/><lb ed="#R"/>natione 
-              verbi humanitatis Christi, primo legit in 
-              <lb ed="#R"/>Verbo omnem veritatem. <g ref="#slash"/>Et quid in scriptura sacra 
-              <lb ed="#R"/>continuetur et legendo intellixit quia secundum sententiam 
-              <lb ed="#R"/>ma[?] in instanti anima Christi novit omnia quae Verbum 
-              <lb ed="#R"/>plenare, <g ref="#slash"/>et ratione <choice><orig>ydoneaitatis</orig><reg>idoneitatis</reg></choice> Christus consecratus 
+              verbi humanitatis christi primo legit in 
+              <lb ed="#R"/>verbo omnem veritatem <g ref="#slash"/>et quid in scriptura sacra 
+              <lb ed="#R"/>continuetur et legendo intellexit quia secundum sententiam 
+              <lb ed="#R"/><name>magistri</name> in instanti anima christi novit omnia quae verbum 
+              <lb ed="#R"/>plenarie <g ref="#slash"/>et ratione <choice><orig>ydoneitatis</orig><reg>idoneitatis</reg></choice> christus consecratus 
               <lb ed="#R"/>est in sacerdotem et regalem dignitatem et 
-              <lb ed="#R"/>propter eius reverentiam reconsiliatum est totum 
-              <lb ed="#R"/>genus humanum Deo Patri in eodem instanti.</p>
+              <lb ed="#R"/>propter eius <choice><orig>reverenciam</orig><reg>reverentiam</reg></choice> <choice><orig>reconsiliatum</orig><reg>reconciliatum</reg></choice> est totum 
+              <lb ed="#R"/>genus humanum deo patri in eodem instanti</p>
                 </div>
                 <div>
                   <head xml:id="l77-Hquiium">Quintum corollarium</head>
                   
-                  <p xml:id="l77-qclans"><g ref="#dbslash"/><choice><orig>5m</orig><reg>Quintum</reg></choice> corollarium licet omnia in scriptura continentur non 
-              <lb ed="#R"/>tamen evidenter nobis, <g ref="#slash"/>causa huius est dupplex, 
-              <lb ed="#R"/>scilicet duae partes. <g ref="#slash"/>Prima est quod infinitas librorum non suf<g ref="#slash"/><lb ed="#R"/>ficeret 
-              ad explicandum ministeria in sacra scriptura 
-              <lb ed="#R"/>contenta, ideo non potuit esse quod ille verita<g ref="#slash"/><lb ed="#R"/>tes 
-              evidenter explicarentur omnes, quia ad hoc re<lb ed="#R"/>quiretur 
-              infinita multitudo volutionum[?] et adhuc 
-              <lb ed="#R"/>non sufficerent.</p> 
+                  <p xml:id="l77-qclans"><lb ed="#R"/><g ref="#dbslash"/><choice><orig>5m</orig><reg>quintum</reg></choice> corollarium licet omnia in scriptura continentur non 
+              <lb ed="#R"/>tamen evidenter nobis <g ref="#slash"/>causa huius est <choice><orig>dupplex</orig><reg>duplex</reg></choice> 
+              <lb ed="#R"/>scilicet duae partes <g ref="#slash"/>prima est quod infinitas librorum non suf<g ref="#slash"/><lb ed="#R"/>ficeret 
+              ad explicandum <sic>ministeria</sic> in sacra scriptura 
+              <lb ed="#R"/>contenta ideo non potuit esse quod illae verita<g ref="#slash"/><lb ed="#R"/>tes 
+              evidenter explicarentur omnes quia ad hoc re<lb ed="#R"/>quiretur 
+              infinita multitudo voluminum et adhuc 
+              <lb ed="#R"/>non sufficerent</p> 
                   
                   <p xml:id="l77-scepsf"><g ref="#slash"/><choice><orig>2a</orig><reg>Secunda</reg></choice> causa est quia ut sponsa 
               <lb ed="#R"/>Christi sub timore viveret et cum denotione 
