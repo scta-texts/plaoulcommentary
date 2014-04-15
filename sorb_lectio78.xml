@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -32,11 +32,10 @@
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
       <div xml:id="lectio78">
@@ -46,12 +45,12 @@
        
           <p xml:id="l78-safaap"><g ref="#pilcrow"/>Sicut alias 
             <lb ed="#S"/>fuit protestatum quod non intenditur tractare aliquid 
-            <lb ed="#S"/>de potestate papae, <g ref="#slash"/>sed illa quae <choice><orig>aducuntur</orig><reg>adducuntur</reg></choice> de papa 
+            <lb ed="#S"/>de potestate papae <g ref="#slash"/>sed illa quae <choice><orig>aducuntur</orig><reg>adducuntur</reg></choice> de papa 
             <lb ed="#S"/>sunt ad colorandum et ad discernendum opinionem 
-            <lb ed="#S"/><name ref="#Latins">latinorum</name> a <name ref="#Greeks">graecis</name> variae qui loquuntur de processione 
-            <lb ed="#S"/>spiritus sancti. et aliqualiter fuit pertinens loqui de 
-            <lb ed="#S"/>papa ut in fine praesentis lectionis apparebit. 
-            <lb ed="#S"/><g ref="#pilcrow"/>pro cuius prosecutione <choice><orig>aducuntur</orig><reg>adducuntur</reg></choice> aliquae propositiones.</p>
+            <lb ed="#S"/><name ref="#Latins">latinorum</name> a <name ref="#Greeks">graecis</name> varie qui loquuntur de processione 
+            <lb ed="#S"/>spiritus sancti et aliqualiter fuit pertinens loqui de 
+            <lb ed="#S"/>papa ut in fine praesentis lectionis apparebit 
+            <lb ed="#S"/><g ref="#pilcrow"/>pro cuius prosecutione <choice><orig>aducentur</orig><reg>adducuntur</reg></choice> aliquae propositiones</p>
       <div>
         <head xml:id="l78-Hprones">Propositiones</head>
         
@@ -61,57 +60,57 @@
           <p xml:id="l78-peqsem"><lb ed="#S"/><g ref="#slash"/>prima est quod non negatur summum pontificem esse 
             <lb ed="#S"/>vicarium ecclesiae pro christo et loco sui et esse caput 
             <lb ed="#S"/><choice><orig>tocius</orig><reg>totius</reg></choice> ecclesiae militantis et habere universalem po<lb ed="#S"/>testatem 
-            regiminis supra ecclesiam militantis.</p>
+            regiminis supra ecclesiam militantis</p>
         
         </div>
         <div>
           <head xml:id="l78-Hspqhhp">Secunda propositio: quod non est ex institutione humana primarie quod pontifex habeat huiusmodi potestatem</head>  
         
           <p xml:id="l78-sdqpfo"><lb ed="#S"/><g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod non est ex institutione humana primarie 
-            <cb ed="#S" n="140va"/><lb ed="#S"/>quod pontifex habeat huiusmodi potestatem. patet 
+            <cb ed="#S" n="140va"/><lb ed="#S"/>quod pontifex habeat huiusmodi potestatem patet 
             <lb ed="#S"/>quia ex deductione scripturae, sicut deducit <name ref="#RichardFitzRalph">alma<lb ed="#S"/>canus</name> 
-            in libro <choice><orig>7mo</orig><reg>VIImo</reg></choice> <title ref="#deQuaestionibusArmenorum">de quaestionibus armenorum</title>, <name ref="#Peter">pe<lb ed="#S"/>trus</name> 
-            fuit summus pontifex constitutus, <g ref="#slash"/>igitur of<lb ed="#S"/>ficium 
+            in libro 7mo <title ref="#deQuaestionibusArmenorum">de quaestionibus armenorum</title> <name ref="#Peter">pe<lb ed="#S"/>trus</name> 
+            fuit summus pontifex constitutus <g ref="#slash"/>igitur of<lb ed="#S"/>ficium 
             papatus habet potestatem a christo datam quod 
-            <lb ed="#S"/>est contra <name ref="#MarsiliusOfPadua">marcilium de padua</name>, qui tenet quod potestas 
+            <lb ed="#S"/>est contra <name ref="#MarsiliusOfPadua">marcilium de padua</name> qui tenet quod potestas 
             <lb ed="#S"/>omnium <name ref="#Apostles">apostolorum</name> est aequalis quantum ad constitutionem et 
-            <lb ed="#S"/>ordinationem divinam et aequaliter fuit eis data. 
-            <lb ed="#S"/><g ref="#slash"/>unde <name ref="#Paul">paulus</name> videtur se esse parem <name ref="#Peter">petro</name> dicere, 
-            <lb ed="#S"/>ideo depraehendit eum in materia legalium, ut scribitur 
-            <lb ed="#S"/><title ref="#GalatiansEpistle">ad galatas</title> <choice><orig>3o</orig><reg>IIIo</reg></choice>. <g ref="#slash"/>et ideo secundum ipsum dignitas papalis 
-            <lb ed="#S"/>fuit ex humana et poletica[?] <choice><orig>convencione</orig><reg>conventione</reg></choice> inter <name ref="#Apostles">apostolos</name> 
+            <lb ed="#S"/>ordinationem divinam et aequaliter fuit eis data 
+            <lb ed="#S"/><g ref="#slash"/>unde <name ref="#Paul">paulus</name> videtur se esse parem <name ref="#Peter">petro</name> dicere 
+            <lb ed="#S"/>ideo depraehendit eum in materia legalium ut scribitur 
+            <lb ed="#S"/><title ref="#gal">ad galatas</title> 3o <g ref="#slash"/>et ideo secundum ipsum dignitas papalis 
+            <lb ed="#S"/>fuit ex humana et <choice><orig>poletica</orig><reg>politica</reg></choice> <choice><orig>convencione</orig><reg>conventione</reg></choice> inter <name ref="#Apostles">apostolos</name> 
             <lb ed="#S"/>ut ipsi existentes aequales haberent recursum 
-            <lb ed="#S"/>ad unum voluntarie institutum. <g ref="#slash"/>et sic <name ref="#Peter">petrus</name> fuit 
+            <lb ed="#S"/>ad unum voluntarie institutum <g ref="#slash"/>et sic <name ref="#Peter">petrus</name> fuit 
             <lb ed="#S"/>institutus et ceteri <name ref="#Apostles">apostoli</name> ad ipsum tamquam ad 
-            <lb ed="#S"/>principalem recurrerent. <g ref="#slash"/>et ordinaverunt iterum 
+            <lb ed="#S"/>principalem recurrerent <g ref="#slash"/>et ordinaverunt iterum 
             <lb ed="#S"/>quod omnis episcopus romanus in hac dignitate sibi 
-            <lb ed="#S"/>succederet. <g ref="#slash"/>sed oppositum apparet, satis per plura dicta <choice><orig>eu<lb ed="#S"/>vangelii</orig><reg>e<lb ed="#S"/>vangelii</reg></choice> 
+            <lb ed="#S"/>succederet <g ref="#slash"/>sed oppositum apparet satis per plura dicta <choice><orig>eu<lb ed="#S"/>vangelii</orig><reg>e<lb ed="#S"/>vangelii</reg></choice> 
             quod ex institutione christi <name ref="#Peter">petrus</name> fuit 
-            <lb ed="#S"/>ordinatus.</p>
+            <lb ed="#S"/>ordinatus</p>
         </div>
         
         <div>
           <head xml:id="l78-Htpqted">Tertia propositio: quod non denegatur summi pontificis tale esse divinum[?]</head>
           
           <p xml:id="l78-tdqesd"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur quod non denegatur summi 
-            <lb ed="#S"/>pontificis tale esse divinum, scilicet, universalem in spiritualibus 
-            <lb ed="#S"/>et temporalibus, et utrumque concurrere in ipsum primaria 
-            <lb ed="#S"/>institutione, licet executio sit divisa.</p> 
+            <lb ed="#S"/>pontificis tale esse dominium scilicet universalem in spiritualibus 
+            <lb ed="#S"/>et temporalibus et utrumque concurrere in ipsum primaria 
+            <lb ed="#S"/>institutione licet executio sit divisa</p> 
           
           <p xml:id="l78-ppachn"><g ref="#slash"/>prima pars 
-            <lb ed="#S"/>apparet ex successive et <sic>vicariatu</sic> quia christus habuit utrumque 
-            <lb ed="#S"/>divinum, <g ref="#slash"/>et papa verus est vicarius quantum ad verum 
-            <lb ed="#S"/>et primarium divinum <g ref="#slash"/>quantum ad executionem, <g ref="#slash"/>tamen est divino 
-            <lb ed="#S"/>inter spirituale et temporale, non tamen ita erat in 
-            <lb ed="#S"/>antiqua lege, quia temporale et spirituale in veteri 
-            <lb ed="#S"/>testamento concurrebant <choice><orig>ydemptice</orig><reg>identice</reg></choice>. <g ref="#slash"/>et causa divisionis inter 
+            <lb ed="#S"/>apparet ex successione et <sic>vicariatu</sic> quia christus habuit utrumque 
+            <lb ed="#S"/>dominium <g ref="#slash"/>et papa verus est vicarius quantum ad verum 
+            <lb ed="#S"/>et primarium dominium <g ref="#slash"/>quantum ad executionem <g ref="#slash"/>tamen est diviso 
+            <lb ed="#S"/>inter spirituale et temporale non tamen ita erat in 
+            <lb ed="#S"/>antiqua lege quia temporale et spirituale in veteri 
+            <lb ed="#S"/>testamento concurrebant <choice><orig>ydemptice</orig><reg>identice</reg></choice> <g ref="#slash"/>et causa divisionis inter 
             <lb ed="#S"/>spirituale et temporale secundum legem <choice><orig>euvangelicam</orig><reg>evangelicam</reg></choice> est quia 
-            <lb ed="#S"/>executio divini temporalis Impediret spiritualem 
-            <lb ed="#S"/>gratiam et non Impedisset in veteri testamento, 
+            <lb ed="#S"/>executio dominii temporalis Impediret spiritualem 
+            <lb ed="#S"/>gratiam et non Impedisset in veteri testamento 
             <lb ed="#S"/><g ref="#slash"/>Et inde est quod lex <choice><orig>euvangelica</orig><reg>evangelica</reg></choice> est nobilior quam lex 
-            <lb ed="#S"/>mosaica. <g ref="#slash"/>ideo executiones sunt divisae quamvis 
-            <lb ed="#S"/>remaneat divinum et hoc ratione capacitatis 
-            <lb ed="#S"/>humanae naturae.</p>
+            <lb ed="#S"/>mosaica <g ref="#slash"/>ideo executiones sunt divisae quamvis 
+            <lb ed="#S"/>remaneat dominium et hoc ratione capacitatis 
+            <lb ed="#S"/>humanae naturae</p>
       
         </div>
         <div>
@@ -119,13 +118,12 @@
         
           <p xml:id="l78-qdnstc"><g ref="#pilcrow"/><choice><orig>4o</orig><reg>quarto</reg></choice> dicitur non negatur quin ad 
             <lb ed="#S"/>summum pontificem pertineat consilium generale 
-            <lb ed="#S"/>convocare et ibi praesidere et concludere determinatione. 
-            <lb ed="#S"/><choice><orig>ymo</orig><reg>immo</reg></choice> non negatur quin ipse possit facere fidei articulum. 
+            <lb ed="#S"/>convocare et ibi praesidere et concludere determinatione 
+            <lb ed="#S"/><choice><orig>ymo</orig><reg>immo</reg></choice> non negatur quin ipse possit facere fidei articulum 
             <lb ed="#S"/>utrum hoc sit in materia qualibet <g ref="#slash"/>non conceditur in aliqua 
-            <lb ed="#S"/>tamen ubi veritas esset satis patens in scriptura, 
+            <lb ed="#S"/>tamen ubi veritas esset satis patens in scriptura 
             <lb ed="#S"/>Tunc ex evidentia sufficientis deductionis posset 
-            <lb ed="#S"/>facere articulum, <g ref="#slash"/>et hoc <name ref="#Aquinas">sanctus thomas</name> concessit in <choice><orig>2a<lb ed="#S"/>2ae</orig><reg>IIa-<lb ed="#S"/>IIae</reg></choice>.</p>
-        
+            <lb ed="#S"/>facere articulum <g ref="#slash"/>et hoc <name ref="#Aquinas">sanctus thomas</name> concessit in 2a<lb ed="#S"/>2ae</p>
         </div>
         <div>
           <head xml:id="l78-Hqpqfer">Quinta propositio: quod sibi in suis praeceptis et eius institutis parendum est in omnibus licitis et honestis quae non sunt contra fidem et rationem</head>  
@@ -133,28 +131,29 @@
           <p xml:id="l78-qdqpsf"><g ref="#pilcrow"/><choice><orig>5o</orig><reg>quinto</reg></choice> dicitur quod sibi in suis praeceptis et 
             <lb ed="#S"/>eius institutis parendum est in omnibus 
             <cb ed="#S" n="140vb"/><lb ed="#S"/>licitis et honestis quae non sunt contra fidem et 
-            <lb ed="#S"/>rationem. <g ref="#slash"/>patet ex sua dominativa[?] potestate supra fideles.</p> 
+            <lb ed="#S"/>rationem patet ex sua dominativa potestate supra 
+            <lb ed="#S"/>fideles</p> 
         </div>
         
         <div>
           <head xml:id="l78-Hspqeaf">Sexta propositio: quod esse unicum papam, non tamen est articulus fidei</head>
           
-          <p xml:id="l78-sdqsef"><g ref="#pilcrow"/><choice><orig>6o</orig><reg>sexto</reg></choice> dicitur quod esse verum papam, licet 
-            <lb ed="#S"/>sit verum et sequitur ex sacra scriptura, non tamen est 
+          <p xml:id="l78-sdqsef"><g ref="#pilcrow"/><choice><orig>6o</orig><reg>sexto</reg></choice> dicitur quod esse <sic>verum</sic> papam licet 
+            <lb ed="#S"/>sit verum et sequitur ex sacra scriptura non tamen est 
             <lb ed="#S"/>articulus fidei ad quem teneantur singuli 
-            <lb ed="#S"/>fideles. <g ref="#slash"/>nec forte sequitur <c>a</c><g ref="#dot"/> veritas est fides 
-            <lb ed="#S"/><name ref="#Sortes">sorti</name>, id est, <c>a</c> est articulus fidei. <g ref="#slash"/>nam elevato 
-            <lb ed="#S"/>theologo quidquid evidenter sequitur ex fide est 
-            <lb ed="#S"/>ei fides, <g ref="#slash"/>et tamen multa possent sequi 
-            <lb ed="#S"/>ex fide quae latent fidelibus. <g ref="#slash"/>et ideo non 
-            <lb ed="#S"/>sunt ab ipsis credenda ex fide, licet sint 
+            <lb ed="#S"/>fideles <g ref="#slash"/>nec forte sequitur <c>a</c><g ref="#dot"/> veritas est fides 
+            <lb ed="#S"/><name ref="#Sortes">sorti</name> id est <c>a</c> est articulus fidei <g ref="#slash"/>nam elevato 
+            <lb ed="#S"/>theologo <choice><orig>quicquid</orig><reg>quidquid</reg></choice> evidenter sequitur ex fide est 
+            <lb ed="#S"/>ei fides <g ref="#slash"/>et tamen multa possent sequi 
+            <lb ed="#S"/>ex fide quae latent fidelibus <g ref="#slash"/>et ideo non 
+            <lb ed="#S"/>sunt ab ipsis credenda ex fide licet sint 
             <lb ed="#S"/>evidentia ex scripturis sequi apud <name ref="#Theologians">theologos</name> 
-            <lb ed="#S"/>et maxime elevatos, <g ref="#slash"/>et per consequens theologus elevatus 
+            <lb ed="#S"/>et maxime elevatos <g ref="#slash"/>et per consequens theologus elevatus 
             <lb ed="#S"/>sciens <c>b</c><g ref="#dot"/> veritatem sequi ex articulo tenetur 
-            <lb ed="#S"/>credere <c>b</c><g ref="#dot"/> et si distendat[?] haereticus est 
-            <lb ed="#S"/>censendus. <g ref="#pilcrow"/>Ex quo posset inferri quod lata 
+            <lb ed="#S"/>credere <c>b</c><g ref="#dot"/> et si discedat haereticus est 
+            <lb ed="#S"/>censendus <g ref="#pilcrow"/>Ex quo posset inferri quod lata 
             <lb ed="#S"/>est differentia dicere haec propositio est fidei et haec propositio 
-            <lb ed="#S"/>sequitur ex fide.</p> 
+            <lb ed="#S"/>sequitur ex fide</p> 
       
         </div>
       </div>
@@ -164,53 +163,54 @@
           
           <p xml:id="l78-cipsdh"><g ref="#pilcrow"/>Consequenter iuxta promissum videndum 
             <lb ed="#S"/>est generaliter qualiter universitas circa veritatem 
-            <lb ed="#S"/>fidei se debeat habere.</p>
+            <lb ed="#S"/>fidei se debeat habere</p>
       
       <div>
         <head xml:id="l78-Hnotlia">Notabilia</head>  
       
         <p xml:id="l78-pqniod"><g ref="#pilcrow"/>pro quo notandum est 
           <lb ed="#S"/>quod iuxta <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> <name ref="#Philosophers">philosophorum</name> et <choice><orig>eciam</orig><reg>etiam</reg></choice> secundum veritatem 
-          <lb ed="#S"/>considerari debet duplex nulla et forte est eadem 
-          <lb ed="#S"/>diversimode se habens <g ref="#slash"/>natura scilicet universalis et particularis. 
-          <lb ed="#S"/><g ref="#slash"/>universalis quae vocatur vix regitiva, et forte 
-          <lb ed="#S"/>non est nisi prima intelligentia omnium directiva.</p>
+          <lb ed="#S"/>considerari debet duplex natura et forte est eadem 
+          <lb ed="#S"/>diversimode se habens <g ref="#slash"/>natura scilicet universalis et particularis 
+          <lb ed="#S"/><g ref="#slash"/>universalis quae vocatur vis regitiva et forte 
+          <lb ed="#S"/>non est nisi prima intelligentia omnium directiva</p>
       
         <p xml:id="l78-snelhp"><g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
           <lb ed="#S"/>notandum est quod natura particularis obedit naturaliter 
-          <lb ed="#S"/>naturae universali, quia magis naturale est naturae particulari 
+          <lb ed="#S"/>naturae universali quia magis naturale est naturae particulari 
           <lb ed="#S"/>insequi naturam universalem quam sequi impetum 
-          <lb ed="#S"/>proprium et particularem naturam sibi propriam. patet, 
+          <lb ed="#S"/>proprium et particularem naturam sibi propriam patet 
           <lb ed="#S"/>quia illud quod fit a dirigente superiori 
-          <lb ed="#S"/>maxime est conveniens. <g ref="#pilcrow"/>Et circa hoc <name ref="#Albert">albertus</name> in 
-          <lb ed="#S"/>fine <choice><orig>primi</orig><reg>Ii</reg></choice> <title ref="#deGenerationeAlbert">de generatione</title> ponit quod gravia 
+          <lb ed="#S"/>maxime est conveniens <g ref="#pilcrow"/>Et circa hoc <ref><name ref="#Albert">albertus</name> in 
+          <lb ed="#S"/>fine primi <title ref="#deGenerationeAlbert">de generatione</title></ref> ponit quod gravia 
           <lb ed="#S"/>naturaliter ascendunt et levia naturaliter descen<lb ed="#S"/>dunt 
-          immixto, <g ref="#slash"/>et hoc est ex obedientia naturae 
-          <lb ed="#S"/>particularis ad naturam universalem concurrendo ad <sic>misti</sic> compositionem. <g ref="#slash"/>et relinquit natura particularis 
+          <choice><orig>immisto</orig><reg>immixto</reg></choice> <g ref="#slash"/>et hoc est ex obedientia naturae 
+          <lb ed="#S"/>particularis ad naturam universalem concurrendo ad 
+          <lb ed="#S"/><choice><orig>misti</orig><reg>mixti</reg></choice> compositionem <g ref="#slash"/>et relinquit natura particularis 
           <lb ed="#S"/>instinctum proprium et naturalem et sequitur impulsum 
           <lb ed="#S"/>naturae universalis et hoc allegat ibidem <name ref="#Aristotle">philosophum</name> 
-          <lb ed="#S"/>in multis locis hanc praecedentem.</p>
-      
-        <p xml:id="l78-iapaoi"><g ref="#pilcrow"/>Item 
+          <lb ed="#S"/>in multis locis hanc praetendentem <g ref="#pilcrow"/>Item 
           <lb ed="#S"/>allegat pro se <name>mesala</name> in libro <title>de spera 
-            <lb ed="#S"/>mota</title>. <g ref="#slash"/>et hic fundatur duplex instinctus 
-          <lb ed="#S"/>principaliter in specie humana, scilicet naturae universalis et naturae particularis. 
-          <lb ed="#S"/><g ref="#pilcrow"/>pro cuius declaratione notandum est quod pro bono speciei 
+          <lb ed="#S"/>mota</title></p>
+      
+        <p xml:id="l78-iapaoi"><g ref="#slash"/>et hic fundatur duplex instinctus 
+          <lb ed="#S"/>principaliter in specie humana scilicet naturae universalis et naturae particularis 
+          <lb ed="#S"/><g ref="#pilcrow"/>pro cuius declaratione notandum quod pro bono speciei 
           <lb ed="#S"/>naturae universalis est providere in speciebus et maxime 
-          <lb ed="#S"/>speciei humanae, quia in ea sunt plures instinctus 
-          <lb ed="#S"/>provenientes ex natura universali. <g ref="#slash"/>post est apud[?] 
-          <cb ed="#S" n="141ra"/><lb ed="#S"/>civiliter congregandum quia homo non sufficit se solo vivere. 
+          <lb ed="#S"/>speciei humanae quia in ea sunt plures instinctus 
+          <lb ed="#S"/>provenientes ex natura universali <g ref="#slash"/>primus est appetitus 
+          <cb ed="#S" n="141ra"/><lb ed="#S"/>civiliter congregandum quia homo non sufficit se solo vivere 
           <lb ed="#S"/>ideo natura universalis indidit sibi praeter dictamen rationis 
-          <lb ed="#S"/>recte ad civiliter et conversabiliter[?] inclinari. <g ref="#slash"/>ideo ait 
-          <lb ed="#S"/><name ref="#Aristotle">aristoteles</name> in <choice><orig>primo</orig><reg>Io</reg></choice> <title ref="#Politics">politicae</title> quod civilitas est simpliciter naturalis. 
-          <lb ed="#S"/>nec provenit hoc ex <sic>dictamine</sic> rectae rationis et 
+          <lb ed="#S"/>rectae ad civiliter et conversabiliter inclinari <g ref="#slash"/>ideo ait 
+          <lb ed="#S"/><ref><name ref="#Aristotle">aristoteles</name> in primo <title ref="#Politics">politicae</title></ref> quod civilitas est simpliciter naturalis 
+          <lb ed="#S"/>nec provenit hoc ex dictamine rectae rationis et 
           <lb ed="#S"/>ex hoc instinctu homo est animal civile <sic>gregabile</sic> et 
-          <lb ed="#S"/>animal Iugabile et coniugabile propter procreationem filiorum, 
+          <lb ed="#S"/>animal Iugabile et coniugabile propter <choice><orig>procreacionem</orig><reg>procreationem</reg></choice> filiorum 
           <lb ed="#S"/>et ex universali provisione naturae universalis consurgit ordo 
-          <lb ed="#S"/>politiciandi[?] <g ref="#slash"/>ut habere aliquem regem et superio<lb ed="#S"/>rem. 
+          <lb ed="#S"/><unclear cert="medium">politicandi</unclear> <g ref="#slash"/>ut habere aliquem regem et superio<lb ed="#S"/>rem 
           <g ref="#slash"/>et ex hoc consurgit <choice><orig>eciam</orig><reg>etiam</reg></choice> instinctus amandi 
-          <lb ed="#S"/>regem et obediendi sibi, nisi per pravos mores ad 
-          <lb ed="#S"/>oppositum Induceretur.</p>
+          <lb ed="#S"/>regem et obediendi sibi nisi per pravos mores ad 
+          <lb ed="#S"/>oppositum Induceretur</p>
     
       </div>
           <div>
@@ -221,29 +221,29 @@
             
             <p xml:id="l78-usqpce"><g ref="#pilcrow"/>ulterius sequitur quod ad perfectionem humanae 
               <lb ed="#S"/>speciei quantum natura potest se extendere requiritur doctrina 
-              <lb ed="#S"/>docens regulas Iustitiae et potentia conservandi eas.</p>
+              <lb ed="#S"/>docens regulas Iustitiae et potentia conservandi eas</p>
           
           </div>
             <div>
               <head xml:id="l78-Hseqseq">Secunda: quod </head>  
             
               <p xml:id="l78-eehhcb"><lb ed="#S"/><g ref="#slash"/>et ex hoc <choice><orig>2o</orig><reg>secundo</reg></choice> sequitur quod ex participatione vel provisi<lb ed="#S"/>one 
-                naturae universalis, aliqua est politica scientium quos 
+                naturae universalis aliqua est politia scientium quos 
                 <lb ed="#S"/>natura universalis congregat et elevat ut vires in<lb ed="#S"/>feriores 
                 quae conferunt ad intellectum pro dis<lb ed="#S"/>currendo 
                 et operando circa humanae conversationis 
-                <lb ed="#S"/>bonum.</p>
+                <lb ed="#S"/>bonum</p>
       
               <p xml:id="l78-eqpqnc"><g ref="#slash"/>ex quo patet quod universitas parisiensis est 
-                <lb ed="#S"/>ordinata ad promulgandum publicandum que 
-                <lb ed="#S"/>doctrinam per universum orbem, ut inferiores bene 
-                <lb ed="#S"/>obediant in <choice><orig>policiis</orig><reg>politiis</reg></choice>. et a talibus emana<lb ed="#S"/>verunt 
-                omnes leges <choice><orig>poleticae</orig><reg>politicae</reg></choice>. et ista est provi<lb ed="#S"/>sio 
-                naturae universalis quae numquam cessabit.</p>
+                <lb ed="#S"/>ordinata ad promulgandum <choice><orig>publicandum que</orig><reg>publicandumque</reg></choice> 
+                <lb ed="#S"/>doctrinam per universum orbem ut inferiores bene 
+                <lb ed="#S"/>obediant in <choice><orig>policiis</orig><reg>politiis</reg></choice> et a talibus emana<lb ed="#S"/>verunt 
+                omnes leges <choice><orig>poleticae</orig><reg>politicae</reg></choice> et ista est provi<lb ed="#S"/>sio 
+                naturae universalis quae numquam cessabit</p>
             </div>
             
             <div>
-              <head xml:id="l78-Htquadi">Tertia: quod universitas ex duplici providentia est ad docendum instituta.</head>
+              <head xml:id="l78-Htquadi"><supplied>Tertia: quod universitas ex duplici providentia est ad docendum instituta</supplied></head>
               
               <p xml:id="l78-tsqnas"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur 
                 <lb ed="#S"/>quod universitas ex duplici providentia est ad docendum 

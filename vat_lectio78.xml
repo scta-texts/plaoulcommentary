@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,6 +31,12 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio78">
         
@@ -251,11 +259,11 @@
               <head xml:id="l78-Hseqseq">Secunda: quod </head>  
             
               <p xml:id="l78-eehhcb">Ex quo ulterius 
-                <lb ed="#V"/>sequitur quod instinctualiter[?] et naturaliter est aliqua potentia 
+                <lb ed="#V"/>sequitur quod instinctualiter et naturaliter est aliqua politia 
                 <lb ed="#V"/>scientium quos etiam natura universalis congregat 
                 <lb ed="#V"/>et elevat ultra vires communes et ut vires inferi<lb ed="#V"/>ores 
                 sicut <choice><orig>ymaginativa</orig><reg>imaginativa</reg></choice> et aliae vires inferiores obediant 
-                <lb ed="#V"/>superioribus perscrudendo[?] et ea quae conferunt ad intellectum 
+                <lb ed="#V"/>superioribus perscrutando et ea quae conferunt ad intellectum 
                 <lb ed="#V"/>pro distruendo et veritatis inquirendo pro humanae speciei.</p>
       
               <p xml:id="l78-eqpqnc"><lb ed="#V"/>ex quo patet quod studium veritatis ex institutione 
