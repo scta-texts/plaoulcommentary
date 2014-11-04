@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:space="preserve">
  <teiHeader>
   <fileDesc>
    <titleStmt>
-    <title>Lectio 10, Prologus</title>
+    <title>Lectio 10, De fide</title>
     <author xml:id="PP">Petrus Plaoul</author>
     <editor xml:id="JW">Jeffrey C. Witt</editor>
    </titleStmt>
    <editionStmt>
     <edition n="2011.10-dev-master">
-     <title>Lectio 10, Prologus</title>
+     <title>Lectio 10, De fide</title>
      <date when="2011-10-04">October 04, 2011</date>
     </edition>
    </editionStmt>
    <publicationStmt>
-    <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+    <publisher>Lombard Press</publisher>
     <pubPlace>Sacramento, CA</pubPlace>
     <availability status="free">
      <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -33,58 +33,628 @@
    </sourceDesc>
   </fileDesc>
   <encodingDesc>
-   <variantEncoding method="double-end-point" location="internal"/>
-  </encodingDesc>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    </encodingDesc>
  </teiHeader>
  <text xml:lang="la">
-  <front>
-   <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-    <xi:fallback>
-     <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-    </xi:fallback>
-   </xi:include>
+  <front xml:lang="la">
+   <div xml:id="includeList">
+    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+   </div>
   </front>
   <body>
    <div xml:id="lectio10">
-    <head xml:id="l10-Hlpslps" subtype="title">Lectio 10, Prologus</head>
+    <head xml:id="l10-Hlpslps" subtype="title">Lectio 10, De fide</head>
     <div>
      
-     <head xml:id="l10-Hpedddi">[Plus evidentia de debilitate intellectus]</head>
-     <p xml:id="l10-cmdetm"><lb ed="#V"/>Continuando<app><lem>continuando</lem><rdg wit="R" type="add."><add place="margin">nota</add></rdg></app> materiam de intellectus debi<lb ed="#R"/>litate: <lb ed="#V"/>circa res notissimas, sicut sunt quantitas <lb ed="#V"/>continua, <lb ed="#R"/>motus,<app><lem>motus</lem><rdg wit="V" type="add.">motus <add place="inline">et</add></rdg></app> magnitudines et <lb ed="#V"/>huiusmodi, inducitur[?] vera ratio <lb ed="#R"/>et istam rationem <lb ed="#V"/>tangit <name ref="#Zeno">Zeno</name> in VIo <title ref="#Physics">Physicorum</title> <cb ed="#R" n="15ra"/><lb ed="#R"/>quae, licet prima <lb ed="#V"/>facie appareat modice dif<lb ed="#R"/>ficultatis, tamen si bene <lb ed="#V"/>resolvatur et ad sensum ipsius <lb ed="#R"/><name ref="#Zeno">Zenonis</name>, ipsa <lb ed="#V"/>est magnae difficultatis. Vole<lb ed="#R"/>bat enim <name ref="#Zeno">Zeno</name> <lb ed="#V"/>probare quod nihil moveretur <lb ed="#R"/>localiter <lb ed="#V"/>et ad hoc inducebat<app><lem>ad hoc inducebat</lem><rdg wit="R">adducebat </rdg></app> inconveniens quia, sicut <lb ed="#V"/>dicit <lb ed="#R"/>ipse, sequeretur quod equus velocissime <lb ed="#V"/>motus <lb ed="#R"/>non posset attingere formicam<app><lem>formicam</lem><rdg wit="V">muscam</rdg></app> tar<lb ed="#V"/>dissime <lb ed="#R"/>motam. Et istud<app><lem>et istud</lem><rdg wit="V">illud</rdg></app> argumentum ponam in cla<lb ed="#V"/>rioribus <lb ed="#R"/>terminis ex quibus postea sequitur propositum pro <lb ed="#V"/>cuius <lb ed="#R"/>evidentia supponatur quod aliquod sphaericum <lb ed="#V"/>moveatur <lb ed="#R"/>supra planum et quod tangat pla<lb ed="#V"/>num in puncto. <lb ed="#R"/>Unde licet non sint ponenda <lb ed="#V"/>puncta<app><lem>puncta</lem><rdg wit="V" type="add.">puncta <add place="inline">etiam</add></rdg></app> realiter <lb ed="#R"/>in linea, nec momenta <lb ed="#V"/>in motu, nec instantia <lb ed="#R"/>in tempore, tamen<app><lem>tamen</lem><rdg wit="V" type="add.">tamen <add place="inline">ad imaginationem</add></rdg></app> <lb ed="#V"/>licet ea admittere ad inquisitionem <lb ed="#R"/><lb ed="#V"/>veritatis; unde licet ea <name ref="#Aristotle">Aristoteles</name> improbavit VIo[?] <title ref="#Physics">Physicorum</title> <lb ed="#R"/>nihilominus ea contendebat ad imaginationem <lb ed="#R"/>pro inquisitionem veritatis.<app><lem>unde licet ea Aristoteles improbavit VIo Physicorum nihilominus ea contendebat ad imaginationem pro inquisitionem veritatis</lem><rdg wit="V" type="om." cause="homoteleuton"/></app> Supponatur, igitur, quod aliquod <lb ed="#R"/>sphaericum moveatur <lb ed="#V"/>supra planum et quod<app><lem>quod</lem><rdg wit="R" type="om."/></app> faciat unam <lb ed="#R"/>revolu<lb ed="#V"/>tionem, probat quod illud sphaericum per nullam potentiam <lb ed="#R"/><lb ed="#V"/>potest velocius moveri vel tardius. Et <lb ed="#R"/><lb ed="#V"/>sicut probabitur<app><lem>probabitur</lem><rdg wit="R">probabiliter</rdg></app> in casu nostro<app><lem>nostro</lem><rdg wit="V">quomodo</rdg></app> de isto motu, <lb ed="#V"/>ita probaretur <lb ed="#R"/>de quocumque alio motu. <lb ed="#V"/>Probatur igitur quod non posset <lb ed="#R"/>tardius moveri, <lb ed="#V"/>quia quodlibet punctum sphaerici cor<lb ed="#R"/>respondens alicui instanti <lb ed="#V"/>temporis modo quodlibet <lb ed="#R"/>punctum sphaerici <app><lem>sphaerici</lem><rdg wit="V" type="add.">sphaerici <add place="inline">praecise</add></rdg></app> per instans <lb ed="#V"/>tetigit aliquod punc<lb ed="#R"/>tum plani, quia<app><lem>quia</lem><rdg wit="V">et</rdg></app> non potuisset <cb ed="#V" n="22ra"/><lb ed="#V"/>per maius[?] tempus <lb ed="#R"/>sine quiete <lb ed="#V"/>media<app><lem>media</lem><rdg wit="V">intermedia</rdg></app> vel interruptione motus, <lb ed="#R"/>igitur non potest tardius moveri,<app><lem>igitur non potest tardius moveri</lem><rdg wit="V" type="om."/></app> sed quod <lb ed="#V"/>velocissime <lb ed="#R"/>moveatur patet quia quodlibet <lb ed="#V"/>punctum sphaerici praecise in<lb ed="#R"/>stans est super aliquod <lb ed="#V"/>punctum plani et non <lb ed="#R"/>potest citius vel velo<lb ed="#V"/>cius recedere ab illo quam <lb ed="#R"/>per instans,<app><lem>per instans</lem><rdg wit="V">in instanti</rdg></app> ergo tardissime movetur.<app><lem>tardissime movetur</lem><rdg wit="V">etc.</rdg></app></p>
+     <head xml:id="l10-Hpedddi">
+      <supplied>Plus evidentia de debilitate intellectus</supplied>
+     </head>
+     
+     <p xml:id="l10-cmdetm">Continuandum materiam de intellectus debilitate: circa res notissimas, sicut sunt quantitas continua, motus, magnitudines, et huiusmodi, inducitur una ratio et istam rationem tangit <name ref="#Zeno">Zeno</name> in 
+      <ref>VIo <title ref="#Physics">Physicorum</title>
+      </ref> 
+      <cb ed="#R" n="15ra"/> 
+      quae, licet prima facie appareat modicae difficultatis, tamen si bene resolvatur et ad sensum ipsius <name ref="#Zeno">Zenonis</name>, ipsa est magnae difficultatis. Volebat enim <name ref="#Zeno">Zeno</name> probare quod nihil moveretur localiter et 
+      <app>
+       <lem>adducebat</lem>
+       <rdg wit="#V">ad hoc inducebat</rdg>
+      </app> 
+      inconveniens quia, sicut dicit ipse, sequeretur quod equus velocissime motus non 
+      <app>
+       <lem>posset</lem>
+       <rdg wit="#S">potest</rdg>
+      </app> 
+      attingere 
+      <app>
+       <lem>formicam</lem>
+       <rdg wit="#V">muscam</rdg>
+      </app> 
+      tardissime motam. Et istud argumentum ponam in clarioribus terminis ex quibus postea sequitur propositum pro cuius evidentia supponatur quod aliquod sphaericum moveatur supra planum et quod tangat planum in puncto. Unde licet non sint ponenda 
+      <app>
+       <lem>puncta</lem>
+       <rdg wit="#V" type="intextu">etiam</rdg>
+      </app> 
+      realiter in linea, nec momenta in motu, nec instantia in tempore, tamen 
+      <app>
+       <lem>ad imaginationem</lem>
+       <rdg wit="#R #SV #S" type="om."/>
+      </app> 
+      licet ea admittere ad inquisitionem veritatis; 
+      <app>
+       <lem>unde licet ea 
+        <ref>
+         <seg><name ref="#Aristotle">Aristoteles</name> 
+         improbavit VI <title ref="#Physics">Physicorum</title></seg>
+         <bibl><name>Aristotles</name>, <title>Physics</title>, VI, ?</bibl>
+        </ref> 
+      nihilominus ea contendebat ad imaginationem pro inquisitionem veritatis.</lem>
+       <rdg wit="#V" type="om." cause="homoteleuton"/>
+      </app> 
+      Supponatur, igitur, quod aliquod sphaericum moveatur supra planum et 
+      <app>
+       <lem>quod</lem>
+       <rdg wit="#R #SV" type="om."/>
+      </app> 
+      faciat unam revolutionem, probatur quod illud sphaericum per nullam potentiam potest velocius moveri vel tardius. Et sicut 
+      <app>
+       <lem>probabitur</lem>
+       <rdg wit="#R">probabiliter</rdg>
+      </app> 
+      in casu 
+      <app>
+       <lem>nostro</lem>
+       <rdg wit="#V">quomodo</rdg>
+      </app> 
+      de isto motu, ita probaretur de quocumque alio motu. Probatur igitur quod non posset tardius moveri, quia quodlibet punctum sphaerici correspondens alicui instanti temporis modo quodlibet punctum sphaerici 
+      <app>
+       <lem>sphaerici</lem>
+       <rdg wit="#V" type="intextu">
+       <add place="inline">praecise</add>
+       </rdg>
+      </app> 
+      per instans tetigit aliquod punctum plani, 
+      <app>
+       <lem>quia</lem>
+       <rdg wit="#V">et</rdg>
+      </app> 
+      non potuisset 
+      <cb ed="#V" n="22ra"/> 
+      per maius tempus sine quiete 
+      <app>
+       <lem>media</lem>
+       <rdg wit="#V">intermedia</rdg>
+      </app> 
+      vel interruptione motus, 
+      <app>
+       <lem>igitur non potest tardius moveri,</lem>
+       <rdg wit="#V" type="om."/>
+      </app> 
+      sed quod velocissime moveatur patet quia quodlibet punctum sphaerici praecise instans est super aliquod punctum plani et non potest citius vel velocius recedere ab illo quam per 
+      <app>
+       <lem>per instans</lem>
+       <rdg wit="#V">in instanti</rdg>
+      </app> 
+      ergo 
+      <app>
+       <lem>tardissime movetur.</lem>
+       <rdg wit="#V">etc.</rdg>
+      </app>
+     </p>
       
-     <p xml:id="l10-spqacm">Similiter <lb ed="#R"/>ponatur quod sint duae res sphaericae concentricae <lb ed="#R"/>quarum, scilicet, sit idem centrum et moveatur supra <lb ed="#R"/>planum, tunc probatur quod, unam revolutionem faciendo <lb ed="#R"/>supra planum, minor circulus aeque velociter mo<lb ed="#R"/>veatur sicut maior, quia aeque cito complet suam <lb ed="#R"/>revolutionem et in aequali tempore et spatium <lb ed="#R"/>idem describit, igitur aeque cito movetur.<app><lem>similiter . . . movetur</lem><rdg wit="V" type="om."><space extent="paragraphlength" rend="empty"/></rdg></app></p>
+     <p xml:id="l10-spqacm">
+      <app>
+       <lem>Similiter ponatur quod sint duae res sphaericae concentricae quarum, scilicet, sit idem centrum et moveatur supra planum, tunc probatur quod, unam revolutionem faciendo supra planum, minor circulus aeque velociter moveatur sicut maior, quia aeque cito complet suam revolutionem et in aequali tempore et spatium idem describit, igitur aeque cito movetur.</lem>
+       <rdg wit="#V" type="om.">
+        <space extent="paragraphlength" rend="empty"/>
+       </rdg>
+      </app>
+     </p>
       
-     <p xml:id="l10-esieco"><lb ed="#V"/>Et sicut <lb ed="#R"/>introductum est <lb ed="#V"/>de motu et quantitate ita posset intro<lb ed="#R"/>duci de substantia, quia non <lb ed="#V"/>est nobis evidens aliquam <lb ed="#R"/>substantiam generari <lb ed="#V"/>vel corrumpi. Unde circa hoc<app><lem>hoc</lem><rdg wit="V">hanc</rdg></app> <lb ed="#R"/><name>Magister <lb ed="#V"/>Nicolaus de Altipudia</name><app><lem>Altipudia</lem><rdg wit="V">Alterpudia</rdg></app> ponit quod non <lb ed="#R"/>est <lb ed="#V"/>nobis evidens aliquam generari vel corrumpi <lb ed="#R"/>simpliciter, <lb ed="#V"/>ita quod sine fide aeque probabiliter <lb ed="#R"/>possemus<app><lem>possemus</lem><rdg wit="V">potest</rdg></app> tenere aeter<lb ed="#V"/>nitate rerum, sicut successionem. <lb ed="#R"/>Et recitat <lb ed="#V"/>opinionem antiquorum de aeternitate <lb ed="#R"/>rerum et sustinet <lb ed="#V"/>eas et dicit quod aeque probabiliter <lb ed="#R"/>sine fide <lb ed="#V"/>possunt teneri<app><lem>teneri</lem><rdg wit="V">sustineri</rdg></app> sicut oppositae. Sed hoc <lb ed="#R"/>dimitto, <lb ed="#V"/>quia in hoc non fuit approbatus nec <lb ed="#V"/>ista <lb ed="#R"/>est communis opinio.</p>
+     <p xml:id="l10-esieco">Et sicut introductum est de motu et quantitate ita posset introduci de substantia, quia non est nobis evidens aliquam substantiam generari vel corrumpi. Unde circa hoc 
+      <name>Magister Nicolaus de Altipudia</name> ponit quod 
+      <cit>
+       <quote>non est nobis evidens aliquid generari vel corrumpi simpliciter, ita quod sine fide aeque probabiliter 
+        <app>
+         <lem>possemus</lem>
+         <rdg wit="#V">potest</rdg>
+        </app> 
+        tenere aeternitate rerum, sicut successionem.</quote>
+       <bibl>Nicholaus de Altipudia, ??</bibl>
+      </cit> 
+      Et recitat opinionem antiquorum de aeternitate rerum et sustinet eas et dicit quod 
+      <cit>
+       <quote>aeque probabiliter sine fide possunt 
+        <app>
+         <lem>teneri</lem>
+         <rdg wit="#V">sustineri</rdg>
+        </app> 
+        sicut oppositae.</quote>
+       <bibl>Nicholaus de Altipudia, ??</bibl>
+      </cit> 
+      Sed hoc dimitto, quia in hoc non fuit approbatus nec ista est communis opinio.</p>
       
-     <p xml:id="l10-aedasb">Alia est difficul<lb ed="#V"/>tas quam possumus<app><lem>possumus</lem><rdg wit="V">habemus</rdg></app> <cb ed="#R" n="15rb"/><lb ed="#R"/>habere ex parte reflexionis <lb ed="#V"/>actuum nostrorum supra <lb ed="#R"/>propositiones mentales. Unde <lb ed="#V"/>quia anima nostra est finitae <lb ed="#R"/>capacitatis <lb ed="#V"/>stat quod reflexus sit tantus propositionum <lb ed="#R"/>men<lb ed="#V"/>talium supra<app><lem>supra</lem><rdg wit="V" type="add.">supra <add place="inline">se</add></rdg></app> invicem quod non erit capax <lb ed="#V"/>reflex<lb ed="#R"/>ionis A super B.<app><lem>A super B</lem><rdg wit="V" type="om."><space extent="wordlength"/></rdg></app></p> 
+     <p xml:id="l10-aedasb">Alia est difficultas quam 
+      <app>
+       <lem>possumus</lem>
+       <rdg wit="#V">habemus</rdg>
+      </app> 
+      <cb ed="#R" n="15rb"/> 
+      habere ex parte reflexionis actuum nostrorum supra propositiones mentales. Unde quia anima nostra est finitae capacitatis stat quod reflexus sit tantus propositionum mentalium supra invicem quod non erit capax reflexionis 
+      <app>
+       <lem>A super B.</lem>
+       <rdg wit="V" type="om."><space extent="wordlength"/></rdg>
+      </app>
+     </p> 
     
-     <p xml:id="l10-ciassc">Confirmatur <lb ed="#V"/>in aliis, quia <lb ed="#R"/>ratio numerandi ipsius animae <lb ed="#V"/>non procedit in infinitum, <lb ed="#R"/>ergo est dabilis <lb ed="#V"/>maximus numerus cuius anima est capax,<app><lem>numerus cuius anima est capax</lem><rdg wit="R" type="om."/></app> tunc <lb ed="#V"/>capiatur supremus <lb ed="#R"/>numerus et formetur propositio <lb ed="#V"/>numeri maioris, intellectus <lb ed="#R"/>non erit capax illius <lb ed="#V"/>propositionis, quia non erit capax <lb ed="#R"/>subiecti. Con<lb ed="#V"/>firmatur hoc etiam in propositionibus geome<lb ed="#R"/>tricis, <lb ed="#V"/>quia sicut species numerorum procedunt in infinitum, <lb ed="#R"/><lb ed="#V"/>ita species figurarum sicut<app><lem>sicut</lem><rdg wit="V">secundum</rdg></app> species numerorum et sic <lb ed="#V"/>tandem <lb ed="#R"/>poterimus devenire ad aliquas <lb ed="#V"/>propositiones <lb ed="#R"/>geometricas cuius intellectus non erit <lb ed="#V"/>capax <lb ed="#R"/>propter simplicitatem<app><lem>simplicitatem</lem><rdg wit="V">finitatem</rdg></app> suae capacitatis.</p>
+     <p xml:id="l10-ciassc">Confirmatur in aliis, quia ratio numerandi ipsius animae non procedit in infinitum, ergo est dabilis maximus 
+      <app>
+       <lem>numerus cuius anima est capax,</lem>
+       <rdg wit="#R" type="om."/>
+      </app> 
+      tunc capiatur supremus numerus et formetur propositio numeri maioris, intellectus non erit capax illius propositionis, quia non erit capax subiecti. Confirmatur hoc etiam in propositionibus geometricis, quia sicut species numerorum procedunt in infinitum, ita species figurarum 
+      <app>
+       <lem>sicut</lem>
+       <rdg wit="#V">secundum</rdg>
+      </app> 
+      species numerorum et sic tandem poterimus devenire ad aliquas propositiones geometricas cuius intellectus non erit capax propter 
+      <app>
+       <lem>simplicitatem</lem>
+       <rdg wit="#V">finitatem</rdg>
+      </app> 
+      suae capacitatis.</p>
     </div>
     
-    <div><head xml:id="l10-Hapsaps">[Aliquae propositiones sequentes]</head>
+    <div>
+     <head xml:id="l10-Hapsaps">
+      <supplied>Aliquae propositiones sequentes</supplied>
+     </head>
      
-     <p xml:id="l10-seasgd">Sunt etiam aliquae <cb ed="#V" n="22rb"/><lb ed="#R"/>propositiones tantum distantes a principiis quod <lb ed="#V"/>numerus <lb ed="#R"/>processus<app><lem>processus</lem><rdg>processuum V</rdg></app> a principiis ad illas est <lb ed="#V"/>incaptibilis<app><lem>incaptibilis</lem><rdg wit="R">conceptibilis</rdg></app> <lb ed="#R"/>ab intellectu, ergo possumus per<app><lem>per</lem><rdg wit="V">secundum</rdg></app> praedicta <lb ed="#V"/>devenire <lb ed="#R"/>ad aliquas propositiones formabiles<app><lem>formabiles</lem><rdg wit="R" type="corr.">formales <add place="aboveLine">b</add><add place="aboveLine">i</add></rdg></app> de <lb ed="#V"/>creaturis, <lb ed="#R"/>cuius<app><lem>cuius</lem><rdg wit="V">quarum</rdg></app> intellectus humanus non erit <lb ed="#V"/>capax sine <lb ed="#R"/>speciali gratia Dei.<app><lem>Dei</lem><rdg wit="V" type="om."/></app></p>
+     <p xml:id="l10-seasgd">Sunt etiam aliquae 
+      <cb ed="#V" n="22rb"/> 
+      propositiones tantum distantes a principiis quod numerus 
+      <app>
+       <lem>processus</lem>
+       <rdg wit="#V">processuum</rdg>
+      </app> 
+      a principiis ad illas est 
+      <app>
+       <lem>inconceptibilis</lem>
+       <rdg wit="#R">conceptibilis</rdg>
+       <rdg wit="#V">incaptibilis</rdg>
+      </app> 
+      ab intellectu, ergo possumus 
+      <app>
+       <lem>per</lem>
+       <rdg wit="#V">secundum</rdg>
+      </app> 
+      praedicta devenire ad aliquas propositiones 
+      <app>
+       <lem>formabiles</lem>
+       <rdg wit="#R" type="corrReplace">
+        <del>formales</del> 
+        <add place="aboveLine">formabiles</add>
+       </rdg>
+      </app> 
+      de creaturis, 
+      <app>
+       <lem>cuius</lem>
+       <rdg wit="#V">quarum</rdg>
+      </app> 
+      intellectus humanus non erit capax sine speciali gratia 
+      <app>
+       <lem>Dei.</lem>
+       <rdg wit="#V" type="om."/>
+      </app>
+     </p>
      
-     <p xml:id="l10-ehsssg">Ex hoc sequitur<app><lem>sequitur</lem><rdg wit="V">habetur</rdg></app> <lb ed="#V"/>quod aliquae <lb ed="#R"/>sunt propositiones scibiles et demonstrabiles <lb ed="#V"/>ab angelo <lb ed="#R"/>quae non sunt captibiles ab intellectu <lb ed="#V"/>humano. Et ista <lb ed="#R"/>introductio ut non sit mirabile <lb ed="#V"/>si habeamus <lb ed="#R"/>aliquas propositiones de Deo creditas <lb ed="#V"/>ex fide <lb ed="#R"/>ad quarum notitiam perfectam sive rationem<app><lem>sive rationem</lem><rdg wit="V" type="om."/></app> non <lb ed="#R"/>pos<lb ed="#V"/>sumus devenire sine speciali gratia.</p> 
+     <p xml:id="l10-ehsssg">Ex hoc 
+      <app>
+       <lem>sequitur</lem>
+       <rdg wit="#V">habetur</rdg>
+      </app> 
+      quod aliquae sunt propositiones scibiles et demonstrabiles ab angelo quae non sunt captibiles ab intellectu humano. Et ista 
+      <app>
+       <lem>introduco</lem>
+       <rdg wit="#V">introductio</rdg>
+      </app> 
+      ut non sit mirabile si habeamus aliquas propositiones de Deo creditas ex fide ad quarum notitiam perfectam
+      <app>
+       <lem>sive rationem</lem>
+       <rdg wit="#V" type="om."/>
+      </app> 
+      non possumus devenire sine speciali gratia.</p> 
      
-     <p xml:id="l10-eqstre">Ex quo <lb ed="#V"/>sequitur quod si creatura poneretur esse <lb ed="#R"/>Deus <lb ed="#V"/>noster oportet de ipsa habere fidem et articulos <lb ed="#R"/><lb ed="#V"/>credibiles ex fide, unde si sol poneretur <lb ed="#R"/><lb ed="#V"/>supremum omnium et Deus adhuc haberet multas <lb ed="#R"/><lb ed="#V"/>influentias latentes nos de quibus, <lb ed="#V"/>si <lb ed="#R"/>eas cognosceramus[?], teneremur regranti[?] ei.<app><lem>ei</lem><rdg wit="V" type="add.">ei <add place="inline">ergo etc.</add></rdg></app></p> 
+     <p xml:id="l10-eqstre">Ex quo sequitur quod si creatura poneretur esse Deus noster, oportet de ipsa habere fidem et articulos credibiles ex fide. Unde si sol poneretur supremum omnium et Deus adhuc haberet multas influentias latentes nos de quibus, si eas cognosceremus, teneremur regratiari ei.</p> 
       
-     <p xml:id="l10-eqshna"><lb ed="#R"/><lb ed="#V"/>Ex quibus sequitur quod philosophi ex rationibus pro<lb ed="#V"/>priis <lb ed="#R"/>naturalibus non poterunt <lb ed="#V"/>habere notitiam articulorum.<app><lem>articulorum</lem><rdg wit="V" type="add.">articulorum <add place="inline">etc.</add></rdg></app></p>
+     <p xml:id="l10-eqshna">Ex quibus sequitur quod 
+      <app>
+       <lem>philosophi</lem>
+       <rdg wit="#S">philosophus</rdg>
+      </app> 
+      ex rationibus 
+      <app>
+       <lem>propriis</lem>
+       <rdg wit="#SV" type="corrReplace">
+        <del>principiis</del>
+        <add>propriis</add>
+       </rdg>
+      </app> 
+      naturalibus non poterunt habere notitiam articulorum.</p>
      
-     <p xml:id="l10-suqsda"><lb ed="#R"/>Sequitur ulterius quod po<lb ed="#V"/>nere quod viator ex <lb ed="#R"/>propriis<app><lem>propriis</lem><rdg wit="V">puris</rdg></app> viribus naturalibus <lb ed="#V"/>posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> attingere ad notitiam articulorum fidei<app><lem>fidei</lem><rdg wit="R" type="add.sed.del">fide <add place="inline"><del rend="strikethrough">et</del></add></rdg></app> <lb ed="#V"/>est ponere<app><lem>ponere</lem><rdg wit="V">favere</rdg></app> sive in<lb ed="#R"/>cidere in errorem Pelagii, <lb ed="#V"/>quia est attri<lb ed="#R"/>buere viribus naturalibus propriis ea quae <lb ed="#V"/>debemus<app><lem>debemus</lem><rdg wit="V">demus</rdg></app> <lb ed="#R"/>attribuere speciali Dei adiutorio.<app><lem>adiutorio</lem><rdg wit="V">auxilio</rdg></app></p>
+     <p xml:id="l10-suqsda">Sequitur ulterius quod ponere quod viator ex 
+      <app>
+       <lem>propriis</lem>
+       <rdg wit="#V">puris</rdg>
+      </app> 
+      viribus naturalibus 
+      <app>
+       <lem>posset</lem>
+       <rdg wit="#V">possit</rdg>
+      </app> 
+      attingere ad notitiam articulorum 
+      <app>
+       <lem>fidei</lem>
+       <rdg wit="#R" type="corrDeletion">
+        <corr>
+         <del rend="strikethrough">et</del>
+        </corr>
+       </rdg>
+      </app> 
+      est 
+      <app>
+       <lem>ponere</lem>
+       <rdg wit="#V">favere</rdg>
+      </app> 
+      sive incidere in errorem Pelagii, quia est attribuere viribus naturalibus propriis ea quae 
+      <app>
+       <lem>debemus</lem>
+       <rdg wit="#V">demus</rdg>
+      </app> 
+      attribuere speciali Dei 
+      <app>
+       <lem>adiutorio.</lem>
+       <rdg wit="#V">auxilio.</rdg>
+      </app>
+     </p>
     </div>
     
-    <div><head xml:id="l10-Hupcdaf">[Utrum philosophi cognoverint de articulis fide]</head>
+    <div>
+     <head xml:id="l10-Hupcdaf">
+     <supplied>Utrum philosophi cognoverint de articulis fide</supplied>
+    </head>
      
-     <p xml:id="l10-suqsic"><lb ed="#V"/>Sequitur ulterius <lb ed="#R"/>quod philosophi loquentes de fide, <lb ed="#V"/>sicut <name ref="Trismegistus">Hermes Philosophus</name>, qui <lb ed="#R"/>dicit monas <lb ed="#V"/>gignit monadem et in se reflec<lb ed="#R"/>tit <lb ed="#V"/>ardorem,<app><lem>ardorem</lem><rdg wit="V" type="add.">ardorem <add place="inline">etc.</add></rdg></app> per hoc apparens <lb ed="#V"/>aliquid sentire <lb ed="#R"/>de articulo Trinitatis.<app><lem/><rdg wit="V" type="add.">Trinitas <add place="inline">ergo etc.</add></rdg></app> <lb ed="#V"/>Respondetur quod naturali cogni<lb ed="#R"/>tione<app><lem>cognitione</lem><rdg wit="V">instinctu</rdg></app> non cognovit<app><lem>cognovit</lem><rdg wit="V">cogit</rdg></app> Tri<lb ed="#V"/>nitatem, et ideo posset<app><lem>posset</lem><rdg wit="V">solet</rdg></app> glo<lb ed="#R"/>sari quod per mo<lb ed="#V"/>nadem intelligit Deum in primo <lb ed="#R"/>loco <lb ed="#V"/>et per secundum monadem intelligit mundum <lb ed="#V"/>et post <lb ed="#R"/>per ardorem<app><lem>ardorem</lem><rdg wit="V" type="add">ardorem <add place="inline">etc.</add></rdg></app> reflectit mundum <lb ed="#V"/>in Deum, ita quod <lb ed="#R"/>ibi tangit tres habitudines. <lb ed="#V"/>Prima est causa efficiens<app><lem>efficiens</lem><rdg wit="R">efficientis</rdg></app> <cb ed="#R" n="15va"/>[R 15va], <lb ed="#R"/>secunda est effectus, tertia est <lb ed="#V"/>effectus in suum <lb ed="#R"/>finem, ita quod voluit dicere mo<lb ed="#V"/>nas, id est, Deus gignit<app><lem>gignit</lem><rdg wit="V">genuit</rdg></app> <lb ed="#R"/>monadem, id est, u<lb ed="#V"/>num mundum, et in se reflectit <lb ed="#R"/>ardorem, <lb ed="#V"/>id est, mundus ille ordinatur in Deum <lb ed="#R"/>tamquam in <lb ed="#V"/>suum finem. Et consequenter diceretur quod, aliquando philosophi <lb ed="#R"/><lb ed="#V"/>locuti sunt<app><lem>sunt</lem><rdg wit="V">fuerunt</rdg></app> de Trinitate, hoc ponebant <cb ed="#V" n="22va"/><lb ed="#V"/>attri<lb ed="#R"/>buta ipsi Deo et non secundum distinctionem <lb ed="#V"/>personarum <lb ed="#R"/>in Trinitate<app><lem>personarum in Trinitate</lem><rdg wit="V">Trinitatis</rdg></app> ad intra, ita quod considerabant Deum <lb ed="#R"/><lb ed="#V"/>esse Patrem inquantum potentem, et Filium inquantum geni<lb ed="#V"/>tum, <lb ed="#R"/>et Spiritum Sanctum inquantum clementem.<app><lem>et Spiritum Sanctum inquantum clementem</lem><rdg wit="V">etc.</rdg></app></p>
+     <p xml:id="l10-suqsic">Sequitur ulterius quod philosophi loquentes de fide, sicut <name ref="#Trismegistus">Hermes Philosophus</name>, qui dicit 
+      <cit>
+       <quote>monas gignit monadem et in se reflectit ardorem,</quote>
+       <bibl>Hermes Trismegistus,</bibl>
+      </cit> 
+      per hoc apparens aliquid sentire de articulo Trinitatis. Respondetur quod naturali 
+      <app>
+       <lem>cognitione</lem>
+       <rdg wit="#V">instinctu</rdg>
+      </app> non 
+      <app>
+       <lem>cognovit</lem>
+       <rdg wit="#V">cogit</rdg>
+      </app> 
+      Trinitatem, et ideo 
+      <app>
+       <lem>posset</lem>
+       <rdg wit="#V">solet</rdg>
+      </app> 
+      glosari quod per monadem intelligit Deum in primo loco et per secundum monadem intelligit mundum et post per ardorem reflectit mundum in Deum, ita quod ibi tangit tres habitudines. Prima est causa 
+      <app>
+       <lem>efficiens,</lem>
+       <rdg wit="#R">efficientis,</rdg>
+      </app> 
+      <cb ed="#R" n="15va"/> 
+      secunda est effectus, tertia est effectus in suum finem, ita quod voluit dicere monas, id est, Deus 
+      <app>
+       <lem>gignit</lem>
+       <rdg wit="#V">genuit</rdg>
+      </app> 
+      monadem, id est, unum mundum, et in se reflectit ardorem, id est, et mundus ille ordinatur in Deum tamquam in suum finem. Et consequenter diceretur quod, 
+      <app>
+       <lem>aliquando</lem>
+       <rdg wit="#SV" type="om."/>
+      </app> 
+      philosophi locuti 
+      <app>
+       <lem>sunt</lem>
+       <rdg wit="#S" type="om."/>
+       <rdg wit="V">fuerunt</rdg>
+      </app> 
+      de Trinitate, hoc ponebant 
+      <cb ed="#V" n="22va"/> 
+      <app>
+       <lem>propter</lem>
+       <rdg wit="#R #SV #V" type="om."/>
+      </app> 
+      attributa ipsi Deo et non secundum distinctionem 
+      <app>
+       <lem>personarum in Trinitate</lem>
+       <rdg wit="#V">Trinitatis</rdg>
+      </app> 
+      ad intra, ita quod considerabant Deum esse Patrem inquantum potentem, et Filium inquantum genitum, 
+      <app>
+       <lem>et Spiritum Sanctum inquantum clementem.</lem>
+       <rdg wit="V">etc.</rdg>
+      </app>
+     </p>
       
-     <p xml:id="l10-sdadfd">Sed dicit aliquis <lb ed="#R"/>quod <name ref="#Augustine">Augustinus</name> in libro <title ref="#Confessions">Con<lb ed="#V"/>fessionum</title> capitulo IX, dicit <lb ed="#R"/>se legisse <title ref="#io">Evan<lb ed="#V"/>gelium Iohannis</title> a <name ref="#Plato">Platone</name> usque <lb ed="#R"/>ibi et "Verbum caro <lb ed="#V"/>factum est."<app><lem>est</lem><rdg wit="V">ergo etc.</rdg></app> Respondetur dupliciter<app><lem>dupliciter</lem><rdg wit="R" type="add."><add place="aboveLine">dupliciter</add></rdg></app> quod<app><lem>quod</lem><rdg wit="R" type="add.sed.del">quod <add place="inline"><del rend="strikethrough">multi</del></add></rdg></app> <lb ed="#R"/>antiqui <lb ed="#V"/>philosophi et poetae multi tractaverunt i<lb ed="#V"/>ronice, <lb ed="#R"/>et ideo dicta eorum<app><lem>eorum</lem><rdg wit="V">sua</rdg></app> non sunt recipienda <lb ed="#V"/>ad sensum litterale. <lb ed="#R"/>Ideo licet dicta sua videntur <lb ed="#V"/>articulis consonare, <lb ed="#R"/>tamen ea numquam intel<lb ed="#V"/>lexerunt de articulis. Secundus <lb ed="#R"/>modus solvendi, <lb ed="#V"/>quod reputo satis probabilem, <lb ed="#R"/>quod philosophi fidem <lb ed="#V"/>et prophetae[?] descripserunt prophetice, <lb ed="#R"/>et <lb ed="#V"/>tamen non intellexerunt. Ad aliquid enim <lb ed="#V"/>prophetice <lb ed="#R"/>describendum, non requiritur vitae sanctitas, <lb ed="#R"/><lb ed="#V"/>nam <title ref="#num">Numeri</title> <num><supplied>XXIV</supplied></num> capitulo<app><lem>capitulo</lem><rdg wit="V" type="add">capitulo <add place="inline">he[?]</add></rdg></app> <name ref="Balaam">Balaam</name>, qui <lb ed="#V"/>erat val<lb ed="#R"/>de malus homo et plenus <lb ed="#V"/>daemonio et <lb ed="#R"/>adversarius legis<app><lem>legis</lem><rdg wit="V">fida</rdg></app> prophetavit <lb ed="#V"/>de Verbi incarnatione,<note type="editorNote" subtype="citation" corresp="#l10-Qsdrdri"><title>Numberi</title> 24:17</note> <lb ed="#R"/><quote xml:id="l10-Qsdrdri" ana="#num24_17">"Orietur," inquit, "stella <lb ed="#V"/>de radice Iessae"</quote> etc. <lb ed="#R"/>Etiam<app><lem>etiam</lem><rdg wit="V">et</rdg></app> <name ref="#Augustine">Augustinus</name><app><lem>Augustinus</lem><rdg wit="R" type="add.sed.del">Augustinus <add place="inline"><del rend="strikethrough">in</del></add></rdg></app> dicit<app><lem>dicit</lem><rdg wit="V" type="om."/></app> in <lb ed="#V"/><title>Sermone de adventu Christi</title>,<note type="editorNote" subtype="citation" corresp="#l10-QPcvicvi">Ps.-August., <title>Sermo contra iudaeos, paganos et arianos</title> c. 11 (PL 42, 1123)</note> <lb ed="#R"/>qui incipit <lb ed="#V"/><quote xml:id="l10-QPcvicvi" type="Patristic">convenio vos <name ref="#Jews">iudaei</name>"</quote> etc.<app><lem>etc.</lem><rdg wit="V" type="om."/></app> quod <unclear>Nabu<lb ed="#R"/>canezar[?]</unclear> perhibuit<app><lem>perhibuit</lem><rdg wit="V">prohibuit</rdg></app> fidem de Filio Dei, <lb ed="#R"/>nam videns tres pueros informare testatur <lb ed="#R"/>se vidisse quatuor et quartus erat similis Filio <lb ed="#R"/>Dei,<app><lem>nam videns tres pueros informare testatur se vidisse quatuor et quartus erat similis Filio Dei</lem><rdg wit="V" type="om." cause="homoteleuton"/></app> non quod illud <lb ed="#V"/>intellexisset de<app><lem>de</lem><rdg wit="R" type="add."><add place="aboveLine">de</add></rdg></app> Filio Dei.<app><lem>Dei</lem><rdg wit="V" type="add.">Dei <add place="inline">etc.</add></rdg></app></p>
+     <p xml:id="l10-sdadfd">Sed dicit aliquis quod 
+      <ref>
+       <name ref="#Augustine">Augustinus</name> 
+       in libro 
+       <title ref="#Confessions">Confessionum</title> 
+       capitulo IX,
+      </ref> 
+      dicit 
+      <cit>
+        <quote>se legisse <title ref="#io">Evangelium Iohannis</title> a <name ref="#Plato">Platone</name> usque ibi et 
+         <cit>
+          <quote ana="#io1_14">Verbum caro factum est.</quote>
+          <bibl>Iohannes 1:14</bibl>
+         </cit>
+       </quote>
+       <bibl><name>Augustine</name>, <title>Confessionum</title>, 9:??</bibl>
+      </cit>
+      Respondetur 
+      <app>
+       <lem>dupliciter</lem>
+       <rdg wit="#R" type="corrAddition">
+        <corr>
+         <add place="aboveLine">dupliciter</add>
+        </corr>
+       </rdg>
+       </app>
+      <app>
+       <lem>quod</lem>
+       <rdg wit="#R" type="corrDeletion">
+        <corr>
+         <del rend="strikethrough">multi</del>
+        </corr>
+       </rdg>
+      </app> antiqui philosophi et poetae multi tractaverunt ironice, et ideo dicta 
+      <app>
+       <lem>eorum</lem>
+       <rdg wit="V">sua</rdg>
+      </app> 
+      non sunt recipienda ad sensum litteralem. Ideo licet dicta sua videntur articulis consonare, tamen ea numquam intellexerunt de articulis. Secundus modus solvendi, quod reputo satis probabilem, quod philosophi fidem et 
+      <app>
+       <lem>poetae</lem>
+       <rdg wit="#R">prophetae</rdg>
+      </app> 
+      descripserunt prophetice, et tamen non intellexerunt. Ad aliquid enim prophetice describendum, non requiritur vitae sanctitas, nam 
+      <ref>
+       <title ref="#num">Numeri</title> 
+       <num><supplied>XXIV</supplied></num> 
+       <app>
+        <lem>capitulo</lem>
+        <rdg wit="#V" type="intextu">
+         <add place="inline">habetur</add>
+        </rdg>
+       </app>
+      </ref> 
+      <name ref="Balaam">Balaam</name>, qui erat valde malus homo et plenus daemonio et adversarius 
+      <app>
+       <lem>legis</lem>
+       <rdg wit="#V">fida</rdg>
+      </app> 
+      prophetavit de Verbi incarnatione, 
+      <cit>
+       <quote xml:id="l10-Qsdrdri" ana="#num24_17">Orietur, inquit, stella de radice Iessae</quote> <!-- example of inquit here that will be included within quotes -->
+       <bibl>Numerus 24:17</bibl>
+      </cit> 
+      etc.
+      Etiam 
+      <ref>
+       <app>
+       <lem>
+        <name ref="#Augustine">Augustinus</name>
+       </lem>
+       <rdg wit="#R" type="corrDeletion">
+        <corr>
+         <del rend="strikethrough">in</del></corr>
+       </rdg>
+      </app> 
+      <app>
+       <lem>dicit</lem>
+       <rdg wit="#V" type="om."/>
+      </app> 
+      in <title>Sermone de adventu Christi</title>,
+      </ref> 
+      qui incipit 
+      <cit>
+       <quote xml:id="l10-QPcvicvi" type="Patristic">convenio vos <name ref="#Jews">iudaei</name></quote>
+       <bibl>Ps.-August., <title>Sermo contra iudaeos, paganos et arianos</title> c. 11 (PL 42, 1123)</bibl>
+      </cit>
+      etc. quod <name ref="#Nebuchadnezzar">Nabugodonosor</name> 
+      <app>
+       <lem>perhibuit</lem>
+       <rdg wit="#V">prohibuit</rdg>
+      </app> 
+      fidem de Filio Dei, 
+      <app>
+       <lem>nam videns tres pueros informare testatur se vidisse quatuor et quartus erat similis Filio Dei,</lem>
+       <rdg wit="#V" type="om." cause="homoteleuton"/>
+      </app> 
+      non quod illud intellexisset 
+      <app>
+       <lem>de</lem>
+       <rdg wit="#R" type="corrAddition">
+        <add place="aboveLine">de</add>
+       </rdg>
+      </app> 
+      Filio Dei.</p>
     
-     <p xml:id="l10-scpimc">Si<lb ed="#R"/>militer <name ref="#Cayaphas">Ca<lb ed="#V"/>iphas</name> prophetavit de redemptione <lb ed="#R"/><lb ed="#V"/>generis humani, expedit enim, dicit ipse,<app><lem>ipse</lem><rdg wit="V">enim</rdg></app> <lb ed="#V"/>unum <lb ed="#R"/>hominem mori pro populo ne tota gens pereat, <app><lem>ne tota gens pereat</lem><rdg wit="V" type="om."/></app> et <lb ed="#R"/>illud <lb ed="#V"/>non intelligebat secundum sensum verum, immo <lb ed="#R"/>hoc <lb ed="#V"/>intelligit ut inferretur mors Christo.<app><lem>intelligit ut inferretur mors Christo</lem><rdg wit="V">ad decisionem[?] Christi dicebatur etc.</rdg></app></p>
+     <p xml:id="l10-scpimc">Similiter <name ref="#Caiaphas">Caiaphas</name> prophetavit de redemptione generis humani, 
+      <cit> <!-- another problems example where "dicit ipse" will be included within the quotation -->
+       <quote ana="io11_50">expedit enim, dicit 
+        <app>
+         <lem>ipse,</lem>
+         <rdg wit="#V" type="om."/>
+        </app> 
+      unum hominem mori pro populo <app>
+         <lem>ne tota gens pereat,</lem>
+       <rdg wit="#V" type="om."/>
+      </app>
+       </quote>
+       <bibl>Ioannes 11:50</bibl>
+      </cit> et illud non intelligebat secundum sensum verum, immo hoc 
+      <app>
+       <lem>intelligit ut inferretur mors Christo.</lem>
+       <rdg wit="#V">ad derisionem Christi dicebatur etc.</rdg>
+      </app>
+     </p>
       
-     <p xml:id="l10-cdqavi">Consequenter <lb ed="#V"/>dicitur quod illud <name ref="#Virgil">Virgilii</name> quod ipse poterat <lb ed="#R"/>in <lb ed="#V"/><title ref="Bucolics">Bucolicis</title> "iam redditur et virgo, iam <lb ed="#V"/>nova progenies" etc.<app><lem>etc.</lem><rdg wit="V" type="om."/></app> <lb ed="#R"/>prophetavit mysterium incarna<lb ed="#V"/>tionis, licet non intelli<lb ed="#R"/>gat<app><lem>intelligat</lem><rdg wit="V">intelligeret</rdg></app> et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> potuit<app><lem>potuit</lem><rdg wit="V">ponit</rdg></app> <lb ed="#V"/>esse ut ipsi essent in<lb ed="#R"/>excusabiles a fide <lb ed="#V"/>Christi et ut rebelliores <lb ed="#R"/>magis punirentur, <lb ed="#V"/>et si aliqui de philosophis <lb ed="#R"/>vel poetis aliquid <lb ed="#V"/>scripserunt<app><lem>scripserunt</lem><rdg wit="V" type="add.">scripserunt <add place="inline">vel dixerunt</add></rdg></app> de articulis vel <lb ed="#V"/>mys<lb ed="#R"/>terio Trinitatis, potest salvari, quibus hoc<app><lem>quibus hoc</lem><rdg wit="V">quod haec</rdg></app> des<lb ed="#V"/>crip<lb ed="#R"/>serunt Spiritu prophetico, licet eis non adhaererent <lb ed="#R"/>vel intelligerent.<app><lem>adhaererent vel intelligerent</lem><rdg wit="V">adhaeserunt ideo hoc intelligerent</rdg></app></p>
+     <p xml:id="l10-cdqavi">Consequenter dicitur quod illud 
+      <ref>
+       <name ref="#Virgil">Virgilii</name> quod ipse poterat in 
+       <title ref="Bucolics">Bucolicis</title>
+      </ref> 
+      <cit>
+       <quote>iam redditur et virgo, iam nova progenies</quote>
+       <bibl>Virgilius, Bucolics, ??</bibl>
+      </cit> 
+      etc. prophetavit 
+      <app>
+       <lem>mysterium</lem>
+       <rdg wit="#S">ministerium</rdg>
+      </app> 
+      incarnationis, licet non 
+      <app>
+       <lem>intelligat</lem>
+       <rdg wit="#V">intelligeret</rdg>
+      </app> 
+      et istud 
+      <app>
+       <lem>potuit</lem>
+       <rdg wit="#V">ponit</rdg>
+      </app> 
+      esse ut ipsi essent inexcusabiles a fide Christi et ut rebelliores magis punirentur, et si aliqui de philosophis vel poetis aliquid 
+      <app>
+       <lem>scripserunt</lem>
+       <rdg wit="#V" type="intextu">
+        <add place="inline">vel dixerunt</add>
+       </rdg>
+      </app> 
+      de articulis vel mysterio Trinitatis, potest salvari, 
+      <app>
+       <lem>quibus hoc</lem>
+       <rdg wit="#V">quod haec</rdg>
+       <rdg wit="#S">hoc</rdg>
+      </app> 
+      descripserunt Spiritu prophetico, licet eis non 
+      <app>
+       <lem>adhaererent vel intelligerent.</lem>
+       <rdg wit="#V">adhaeserunt ideo hoc intelligerent</rdg>
+      </app>
+     </p>
       
-     <p xml:id="l10-amsvpe">Alius modus <lb ed="#V"/>salvandi <lb ed="#R"/>quod ex puris viribus naturalibus <cb ed="#V" n="22vb"/><lb ed="#V"/>non possumus <lb ed="#R"/>devenire in notitiam <lb ed="#V"/>articulorum est iste: potest<app><lem>potest</lem><rdg wit="V">posset</rdg></app> <lb ed="#R"/>enim probabiliter <lb ed="#V"/>dici quod philosophi viventes secundum <lb ed="#R"/>dictamen ra<lb ed="#V"/>tionis rectae in puris<app><lem>puris</lem><rdg wit="V" type="add.sed.del">puris <add place="inline"><del rend="strikethrough">viribus</del></add></rdg></app> <lb ed="#R"/>naturalibus <cb ed="#R" n="15vb"/><lb ed="#R"/>eo <lb ed="#V"/>ipso disponebant se ad divinam dispositionem <lb ed="#R"/><lb ed="#V"/>suscipiendam, ideo verisimile est quod Deus eis dederit<app><lem>dederit</lem><rdg wit="V">dedit</rdg></app> <lb ed="#R"/><lb ed="#V"/>fidem et notitiam specialem articulorum. Unde <lb ed="#V"/><name ref="#Augustine">Augustinus</name> <lb ed="#R"/>expresse dicit quod, ante adventum Christi, mul<lb ed="#V"/>ti de <lb ed="#R"/>populo gentili fuerunt salvati, immo <lb ed="#V"/>generaliter omnes <lb ed="#R"/>sive in <lb ed="#V"/>Novo Testamento sive in Veteri, qui fe<lb ed="#R"/>cerant<app><lem>fecerant</lem><rdg wit="V">fecerunt</rdg></app> quod in se erat<app><lem>erat</lem><rdg wit="R">est</rdg></app> et <lb ed="#V"/>vixerunt secundum dictamen <lb ed="#R"/> rationis secundum quod multi <lb ed="#V"/>praebebant vivere et<app><lem>et</lem><rdg wit="V" type="om."/></app> quia <lb ed="#R"/>secundum <name ref="#Augustine">Augustinum</name> VIIIo<app><lem>VIIIo</lem><rdg wit="V" type="om."/></app> <title ref="#CityOfGod">De civitate <lb ed="#V"/>Dei</title> non salvabitur <lb ed="#R"/>quis nisi in fide <lb ed="#V"/>salvatoris. Ideo verisimile <lb ed="#R"/>est quod Deus contu<lb ed="#V"/>lerit<app><lem>contulerit</lem><rdg wit="R">contulit</rdg></app> sic viventibus fidem et spe<lb ed="#R"/>cialem notitiam <lb ed="#V"/>de articulis<app><lem>de articulis</lem><rdg wit="V">articulorum</rdg></app> fidei, et isto modo <lb ed="#R"/>potuerunt <lb ed="#V"/>attingere ad notitiam articulorum fidei, <lb ed="#R"/>sed <lb ed="#V"/>quare non praedicaverunt, quia Deus <lb ed="#V"/>nondum<app><lem>nondum</lem><rdg wit="V">adhuc non</rdg></app> ordina<lb ed="#R"/>verat quod praedicaren<lb ed="#V"/>tur articuli fidei. Alios modos <lb ed="#R"/>tangit <lb ed="#V"/><name ref="#Bacon">Bacon</name> in quadam epistola, et hos<app><lem>hos</lem><rdg wit="V">eos</rdg></app> modos<app><lem>modos</lem><rdg wit="V" type="om."/></app> re<lb ed="#R"/>citat<app><lem>recitat</lem><rdg wit="R">recita</rdg></app> <lb ed="#V"/><name ref="#Langenstein">De Hassia</name><app><lem>Hassia</lem><rdg wit="V">Hacia</rdg></app> in quod tractatu et ibidem <lb ed="#V"/>poteritis <lb ed="#R"/>eos videre planius<app><lem>planius</lem><rdg wit="V">plenius</rdg></app> etc.<app><lem>etc.</lem><rdg wit="V" type="om."/></app></p>
+     <p xml:id="l10-amsvpe">Alius modus salvandi quod ex puris viribus naturalibus 
+      <cb ed="#V" n="22vb"/> 
+      non possumus devenire in notitiam articulorum est iste: 
+      <app>
+       <lem>potest</lem>
+       <rdg wit="#V">posset</rdg>
+      </app> 
+      enim probabiliter dici quod philosophi viventes secundum dictamen rationis rectae in 
+      <app>
+       <lem>puris</lem>
+       <rdg wit="#V" type="corrDeletion">
+        <corr>
+         <del rend="strikethrough">viribus</del>
+        </corr>
+       </rdg>
+      </app> 
+      naturalibus 
+      <cb ed="#R" n="15vb"/> 
+      eo ipso disponebant se ad divinam dispositionem suscipiendam, ideo verisimile est quod Deus eis 
+      <app>
+       <lem>dederit</lem>
+       <rdg wit="#V">dedit</rdg>
+      </app> 
+      fidem et notitiam specialem articulorum. Unde <name ref="#Augustine">Augustinus</name> expresse dicit quod 
+      <cit>
+       <quote>ante adventum 
+        <app>
+         <lem>Christi,</lem>
+         <rdg wit="#S" type="om."/>
+        </app> 
+        multi de populo gentili fuerunt salvati, immo generaliter omnes sive in Novo Testamento sive in Veteri, qui 
+        <app>
+         <lem>fecerant</lem>
+         <rdg wit="#V">fecerunt</rdg>
+        </app> 
+        quod in se 
+        <app>
+         <lem>erat</lem>
+         <rdg wit="#R">est</rdg>
+        </app> 
+        et vixerunt secundum dictamen rationis secundum quod multi praebebant vivere</quote>
+       <bibl>Augustinus, ??</bibl>
+      </cit> 
+      <app>
+       <lem>et</lem>
+       <rdg wit="#V" type="om."/>
+      </app> 
+      quia secundum 
+      <ref>
+       <name ref="#Augustine">Augustinum</name> 
+        <app>
+         <lem>VIIIo</lem>
+         <rdg wit="#V" type="om."/>
+        </app> 
+       <title ref="#CityOfGod">De civitate Dei</title>
+      </ref> 
+      <cit>
+       <quote>non salvabitur quis nisi in fide salvatoris.</quote>
+       <bibl>Augustine, City of God, VIII, ??</bibl>
+      </cit> 
+      Ideo verisimile est quod Deus 
+      <app>
+       <lem>contulerit</lem>
+       <rdg wit="#R">contulit</rdg>
+      </app> 
+      sic viventibus fidem et specialem notitiam 
+      <app>
+       <lem>de articulis</lem>
+       <rdg wit="#V">articulorum</rdg>
+      </app> 
+      fidei, et 
+      <app>
+       <lem>isto modo</lem>
+       <rdg wit="S">istos</rdg>
+      </app> 
+      potuerunt attingere ad notitiam articulorum fidei, sed quare non praedicaverunt, quia Deus 
+      <app>
+       <lem>nondum</lem>
+       <rdg wit="#V">adhuc non</rdg>
+      </app> 
+      ordinaverat quod praedicarentur articuli fidei. Alios modos tangit 
+      <ref>
+       <name ref="#Bacon">Bacon</name> 
+       in quadam epistola,
+      </ref> et hos
+      <app>
+       <lem>modos</lem>
+       <rdg wit="#V" type="om."/>
+      </app> 
+      <app>
+       <lem>recitat</lem>
+       <rdg wit="#R">recita</rdg>
+      </app> 
+      <ref>
+       <name ref="#Langenstein">De Hassia</name> 
+       in quod tractatu</ref> 
+      et ibidem poteritis eos videre 
+      <app>
+       <lem>planius</lem>
+       <rdg wit="V">plenius</rdg>
+      </app> etc.</p>
      
     </div>
         
