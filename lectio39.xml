@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -34,12 +34,11 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
-    <front>
-    <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-      <xi:fallback>
-        <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-      </xi:fallback>
-    </xi:include>
+    <front xml:lang="la">
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
       <div xml:id="lectio39">
@@ -374,49 +373,7 @@
             praelati et doctores ut supra dictum est, etc.</p> 
       
       </div>
-          <div>
-            <!-- why isn't this a new lectio ?????but maybe "yesterday" refers to something said in the previous lectio??? -->
-            <head xml:id="l39-Hqeqdnp">Quod ea quae tacta fuerunt quantum ad materiam nobilitatis non sunt intelligenda de nobilitate politica</head>
-        
-<p xml:id="l39-aecldn">Advertendum est circa prius dicta quod ea quae tacta fuerunt 
-  <lb ed="#SV"/>quantum ad materiam nobilitatis <seg ana="#politica">non sunt intelligenda de 
-  <lb ed="#SV"/>nobilitate politica secundum communem usum loquendi, quia ad dei subie<lb ed="#SV"/>ctionem 
-  non sufficit talis nobilitas politica</seg>, quae quid 
-  <lb ed="#SV"/>subiectio creaturae ad deum non est nisi amor dei et 
-  <lb ed="#SV"/>voluntas obediendi sibi offerendo se totum deo, et 
-  <lb ed="#SV"/>non Reflectendo aliquid in se, ideo dicit <name ref="#Augustine">augustinus</name> in libro 
-  <lb ed="#SV"/><title ref="#CityOfGod">de civitate dei</title> duas civitates fecerunt duo amo<lb ed="#SV"/>res, 
-  amor dei usque ad contemptum sui, amor sui usque 
-  <lb ed="#SV"/>ad contemptum dei <seg ana="#politica">et huiusmodi subiectio non sufficit 
-  <lb ed="#SV"/>ad nobilitatem politicam secundum quod utuntur leges de nobilitate</seg>.</p>      
-
-            <p xml:id="l39-dsqecl"><seg ana="#politica">Dico secundo quod ab huiusmodi subiectione et eius umbra 
-              <lb ed="#SV"/>nobilitas politica <unclear>sumpser[?]</unclear> <name ref="#Origen">originem</name></seg>, quia ab ea antiqui 
-              <lb ed="#SV"/>sumpserunt et condiderunt leges.</p>
-      
-            <p xml:id="l39-tdqpfn"><seg ana="#politica">tertio dico quod ad no<lb ed="#SV"/>bilitatem 
-              politicam ultra virtutem apparentem vel existentem 
-              <lb ed="#SV"/>Requiritur applicatio ad conferentia politicae</seg>. 
-              
-              <seg ana="#politica">unde quantumcumque 
-              <lb ed="#SV"/>quis esset virtuosus non propter hoc diceretur no<lb ed="#SV"/>bilis 
-              <unclear>politicae[?]</unclear>, nisi eius virtus diffunderetur in politia</seg>. 
-              
-              <seg ana="#politica">Requiritur 
-              <lb ed="#SV"/>etiam longa continuatio quia propter unum solum factum in politia 
-              <lb ed="#SV"/>non dicitur unus nobilis, sed Requiritur quod continuet et faciat 
-              <lb ed="#SV"/>plura facta nobilitatis</seg>.</p>
-      
-            <p xml:id="l39-idccnd" ana="#politica">Ideo dicitur consequentur quod servitus peccati 
-              <lb ed="#SV"/>non tollit nobilitatem politicam, saltem cum diu non 
-              <lb ed="#SV"/>duret.</p>
-            
-            <p xml:id="l39-idqpni">Item dicitur quod servitus peccati non etiam tollit 
-              <lb ed="#SV"/>dominium, nam sacra scriptura praecipit quod servi obediant 
-              <lb ed="#SV"/>dominis suis supposito adhuc quod sint in peccato. qui nec 
-              <lb ed="#SV"/>sunt de intrinsecam ratione nobilitatis non pertinet ad 
-              <lb ed="#SV"/>propositum nec pro nunc investigabitur et cetera et cetera.</p>
-      </div>
+          
         </div>
         </div>
     </body>
