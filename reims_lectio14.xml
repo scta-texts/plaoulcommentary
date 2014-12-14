@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -16,7 +16,7 @@
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <publisher>LombardPress</publisher>
         <pubPlace>Sacramento, CA</pubPlace>
         <availability status="free">
           <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -32,11 +32,10 @@
   </teiHeader>
   <text>
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
     </front>
     <body>
       <div xml:id="lectio14">
@@ -50,9 +49,9 @@
 et illuminatus fide potest in lumine 
 <lb ed="#R"/>naturali devenire in cognitionem articulorum 
 <lb ed="#R"/>fidei et hoc secundum duplicem modum scilicet per media 
-<lb ed="#R"/>intrinseca et extrinseca</p> 
-        <!-- add pragraph break in edited file; ppossible need for section division-->
-        <p>per media intrinseca 
+<lb ed="#R"/>intrinseca et extrinseca  
+        <!-- possible place for paragraph breakpragraph break in edited file; ppossible need for section division-->
+        per media intrinseca 
 <lb ed="#R"/>possunt deduci articuli fidei habentes 
 <cb ed="#R" n="19rb"/><lb ed="#R"/><choice><orig>neccessariam</orig><reg>neccessariam</reg></choice> habitudinem ad creaturas sicut deum 
 <lb ed="#R"/>esse <g ref="#slash"/>et sicut articulus trinitatis unde non 
