@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -29,6 +30,12 @@
     </fileDesc>
   </teiHeader>
   <text xml:lang="la">
+    <front>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio16">
         <head subtype="title">Lectio 16, De fide [Vatican Transcription]</head>
@@ -51,7 +58,7 @@ sit cognitio aenigmatica vigore tamen sui
 nam secundum <name ref="#Paul">apostolum</name> <quote>fides est non apparen<lb ed="#V"/>tium</quote> 
 ideo de ratione fidei est quod sit cognitio 
 <lb ed="#V"/><sic>cognita</sic> et hoc est ex ordinatione et pro<lb ed="#V"/>videntia 
-divina ut scilicet per ipsam mereatur credendo 
+divina ut scilicet per ipsam mereamur credendo 
 <lb ed="#V"/>scilicet non apparentibus quia fides non haberet 
 <lb ed="#V"/>meritum si esset notitia evidens et clara 
 <lb ed="#V"/>de se secundum auctoritatem <name ref="#GregoryGreat">gregorii</name></p>
@@ -66,12 +73,12 @@ fide potest nedum in veritates contentas infra
 <lb ed="#V"/>latitudinem humanae investigationis sed est alia 
 <lb ed="#V"/>latitudo extra latitudinem humanae investigationis 
 <lb ed="#V"/>sed est alia latitudo extra latitudinem humanae 
-<lb ed="#V"/>investigationis veritatum in quarum qualibet 
+<lb ed="#V"/>investigationis veritatum in quarum <sic>qualibet</sic> 
 <lb ed="#V"/>potest intellectus humanus adiutus fide <choice><orig>ymagi<lb ed="#V"/>nemur</orig><reg>imagi<lb ed="#V"/>nemur</reg></choice> 
 enim duas latitudines veritatum 
 <lb ed="#V"/>una est quae est infra latitudinem naturalis inves<lb ed="#V"/>tigationis 
 humanae et ista est infinitarum 
-<lb ed="#V"/>veritatum in quarum quamlibet potest lumen naturale ad<lb ed="#V"/>iutu 
+<lb ed="#V"/>veritatum in quarum quamlibet potest lumen naturale ad<lb ed="#V"/>iutum 
 cum fide et huiusmodi processus ad veritates 
 <lb ed="#V"/>extra latitudinem investigationis humanae purae est theologicus 
 <lb ed="#V"/>ex lumine tamen naturali procedens</p>
@@ -107,8 +114,8 @@ patebit quod per theologiam  veritas nobilius
 <lb ed="#V"/><choice><orig>deffectu</orig><reg>defectu</reg></choice> luminis quia quantum est de se quaelibet veri<lb ed="#V"/>tas 
 relucet in principiis et si sic ad pro<lb ed="#V"/>positum 
 dicitur quod si augeatur virtus intellectus 
-<lb ed="#V"/>et lumen ipsius intantum poterit per fidem poterit augeri 
-<lb ed="#V"/>quod propositio <!--dbcheck in other files-->quae prius in lumine naturali requirebat 
+<lb ed="#V"/>et lumen ipsius intantum poterit per fidem augeri 
+<lb ed="#V"/>quod propositio quae prius in lumine naturali requirebat 
 <lb ed="#V"/>cognitionem decem veritatum antequam cognosceretur 
 <lb ed="#V"/>poterit cognosci ab intellectu sic <unclear>vigorante</unclear> et 
 <lb ed="#V"/>illuminato fide per duo vel per tria media et illa 
@@ -135,7 +142,7 @@ a nominis interpretatione <g ref="#dot"/>unde theologia dicitur
 <lb ed="#V"/>met ipsa divina scientia de qua <space extent="oneWordLength"/> ex<lb ed="#V"/>clamando 
 dicit <g ref="#dot"/><quote ana="#rom11_33">O altitudo divitiarum</quote> etc. etc. 
 <lb ed="#V"/><g ref="#dbslash"/><choice><orig>2us</orig><reg>secundus</reg></choice> gradus theologiae est theologia animae christi 
-<lb ed="#V"/>ipse enim post supremam et <unclear cert="medium">primam</unclear> theologiam 
+<lb ed="#V"/>ipsa enim post supremam et <unclear cert="medium">primam</unclear> theologiam 
 <lb ed="#V"/>est doctorum et theologorum <g ref="#dot"/> primus id est supre<lb ed="#V"/>mus 
 et hic loquitur de theologia christi communicata 
 <lb ed="#V"/>animae christi et creata et iste gradus theologiae 
@@ -151,7 +158,7 @@ cognoscit et per consequens est aequalis in
 <lb ed="#V"/>multitudine cognoscibilium cum prima quia est 
 <lb ed="#V"/>omnium veritatum notitia est tamen impar in 
 <lb ed="#V"/>perfectione nam huiusmodi habitus vel actus in anima 
-<lb ed="#V"/>fixus vel fictus fuit creatus et cum etiam est de<lb ed="#V"/>pendens 
+<lb ed="#V"/>fixus vel fictus <!-- fixus vel ficuts is likely an indiciation by the scribe to choose one of the two options --> fuit creatus et cum etiam est de<lb ed="#V"/>pendens 
 et est quoddam accidens et ideo licet sit 
 <lb ed="#V"/>omnium veritatum notitia tamen cum hoc <choice><orig>defficit</orig><reg>deficit</reg></choice> 
 <lb ed="#V"/>a comprehendente divinae veritatis</p>
@@ -167,13 +174,13 @@ et est quoddam accidens et ideo licet sit
 <lb ed="#V"/>deum secundum omnia praedicata dicibilia de deo ergo comprehen<lb ed="#V"/>dit 
 deum et causa est quia ad comprehendendum 
 <lb ed="#V"/>rem non solum requiritur ipsam cognoscere 
-<lb ed="#V"/>secundum omnem praedicatum <!-- dbecheck praedicatum --> dicibile de ipsa sed cum hoc requiritur
+<lb ed="#V"/>secundum omne praedicatum dicibile de ipsa sed cum hoc requiritur
 <lb ed="#V"/><corr><del rend="strikethrough">ipsam cognoscere</del></corr> quod cognitio sit aeque perfecta 
 <lb ed="#V"/>in esse cognitionis sicut obiectum est in esse rei 
 <lb ed="#V"/>et quia obiectum est immensum intensive in se 
 <lb ed="#V"/>oportet quod notitia ipsius comprehensiva sit infinita 
 <lb ed="#V"/>intensive in esse notitiae et ideo nulla est 
-<lb ed="#V"/>talis notitia quae possit esse ipsius dei com<lb ed="#V"/>prehensiva 
+<lb ed="#V"/>creabilis notitia quae possit esse ipsius dei com<lb ed="#V"/>prehensiva 
 quia illa solum est infinite 
 <lb ed="#V"/>immensa et in esse cognitionis infinite in<lb ed="#V"/>tensa 
 ita quod non sequitur anima christi omnia co<lb ed="#V"/>gnovit 
@@ -223,10 +230,10 @@ beatitudinis</quote><!-- I STILL CAN'T FIND THIS QUOTE --> etc</p>
           <p xml:id="l16-agpmif">alii gradus possunt <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> qui 
 <lb ed="#V"/>ex lumine pure naturali acquirerentur ut si re<lb ed="#V"/>linqueretur 
 angelus vel aliqua intelligentia multum ex<lb ed="#V"/>cedens 
-speciem humanam rationem in suis naturalibus <!-- something wrong here; it should probably be "speciem humanam ratione suae perfectionis" see reims transcription --> 
+speciem humanam in suis naturalibus  
 <lb ed="#V"/>ratione suae perfectionis posset in altiorem modum 
 <lb ed="#V"/>cognoscendi pertingere ex suis puris 
-<lb ed="#V"/>naturalibus qua faciat homo in suis puris 
+<lb ed="#V"/>naturalibus quam faciat homo in suis puris 
 <lb ed="#V"/>naturalibus derelictus ex quo talis intelligentia 
 <lb ed="#V"/>non esset depressa per culpam haberet ratione suae 
 <lb ed="#V"/>perfectionis statum nobiliorem quam fuerit status 
@@ -235,7 +242,7 @@ speciem humanam rationem in suis naturalibus <!-- something wrong here; it shoul
 <lb ed="#V"/>multo plus quam nunc post lapsum etc Item 
 <lb ed="#V"/>in statu praesenti possent esse multi gradus secundum 
 <lb ed="#V"/>intensionem fidei quia quantum fides intenditur 
-<lb ed="#V"/>tantum lumine naturale intenditur quantum ad effectum capio 
+<lb ed="#V"/>tantum lumen naturale intenditur quantum ad effectum capio 
 <lb ed="#V"/>tamen <mentioned>theologiam</mentioned> secundum communem cursum in homine 
 <lb ed="#V"/>bene disposito et hoc mediante iuvamine fidei</p> 
           
@@ -282,7 +289,7 @@ de inesse de praesenti etc erant falsae ad
 <name>huguelinus</name> quantum ad intentionem 
 <lb ed="#V"/>quam principaliter intendebat quod aliqui 
 <lb ed="#V"/>habuerunt falsam cognitionem de deo etc</p>
-          <!-- where i left of 9/8 -->
+          
           <p xml:id="l16-uaesid">utrum 
 <lb ed="#V"/>autem exemplum bene fuerit applicatum de <name ref="#Aristotle">aristotele</name> 
 <lb ed="#V"/>credo probabiliter quod non quia credo quod <name ref="#Aristotle">aristoteles</name> 
@@ -324,20 +331,20 @@ vel est causa immediate iudicandi quod deus est
 <lb ed="#V"/>affirmativus de deo non potest haberi naturaliter ita quod naturaliter 
 <lb ed="#V"/>de deo non potest haberi nisi conceptus negativus 
 <lb ed="#V"/>removendo imperfectiones creaturarum <choice><orig>sicud</orig><reg>sicut</reg></choice> deus 
-<lb ed="#V"/>est ens, non alterabile non corporale</quote> etc. <quote>et 
+<lb ed="#V"/>est ens non alterabile non corruptibile</quote> etc <quote>et 
 <lb ed="#V"/>quanto plures removerentur imperfectiones 
-<lb ed="#V"/>tanto inquit, "cognoscitur perfectius."</quote> et istius <choice><orig>oppi<lb ed="#V"/>nionis</orig><reg>opi<lb ed="#V"/>nionis</reg></choice> 
+<lb ed="#V"/>tanto inquit cognoscitur perfectius</quote> et istius <choice><orig>oppi<lb ed="#V"/>nionis</orig><reg>opi<lb ed="#V"/>nionis</reg></choice> 
 fuit <name ref="#Aquinas">sanctus thomas</name> in sua <title ref="#SummaContraGentiles">summa contra 
 <lb ed="#V"/>gentiles</title> in prima parte dicit ulterius <name ref="#Maimonides">ra<lb ed="#V"/>bi 
   moises</name> quod unicum fuit nomen tetra<lb ed="#V"/>gramaton 
 affirmativum de deo scilicet tetragrammaton 
-<lb ed="#V"/>et illud erat sanctum et paucis natum non 
+<lb ed="#V"/>et illud erat sanctum et paucis notum non 
 <lb ed="#V"/>quod illud esset nomen suum sed nomen <choice><orig>4or</orig><reg>quattuor</reg></choice> 
 <lb ed="#V"/>litterarum</p> 
             
           <p xml:id="l16-ueiasc"><g ref="#dot"/>unde ex istis posset inferri quod habere 
 <lb ed="#V"/>conceptum theologicum de deo non est possibile 
-<lb ed="#V"/>sine fide vel sine speciali gratia ipsius dei et quia 
+<lb ed="#V"/>sine fide vel sine speciali gratia ipsius et quia 
 <lb ed="#V"/><choice><orig>sicud</orig><reg>sicut</reg></choice> alias tactum est <mentioned>deum esse</mentioned> est in ordine 
 <lb ed="#V"/>veritatis primum ideo potest inferri quod omnes veritates 
 <lb ed="#V"/>cuiuscumque scientiae essent theologicae considerationis ubi 
@@ -389,16 +396,16 @@ ipsum in summum bonum et optimum
 ad ipsum.</p>
             
             <p xml:id="l16-suqdgs"><g ref="#dbslash"/>Sequitur ulterius quod plures 
-<lb ed="#V"/><unclear>inveniabiles</unclear> sunt scientiae non subalternatae nec 
-<lb ed="#V"/>subalternantes quam sint de facto adinventae <!-- dbcheck "adinventae" versus "adinvente" --> 
+<lb ed="#V"/><sic>invenibiles</sic> sunt scientiae non subalternatae nec 
+<lb ed="#V"/>subalternantes quam sint de facto adinventae  
 <lb ed="#V"/>quia solus modus considerandi diversificat 
 <lb ed="#V"/>genus scientiae</p>
             
             <p xml:id="l16-suqcsn"><g ref="#dot"/>Sequitur ulterius quod licet omne verum 
 <lb ed="#V"/>sit theologicum non tamen omne verum est fidei patet 
 <lb ed="#V"/>quia iuxta <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> <name ref="#WilliamOfAuxerre">altissiodorensis</name> et bene videre 
-<lb ed="#V"/>meum fides est praecise circa veritates <unclear>concurrentes<!-- its pretty clearly concurrentes in vat--></unclear> 
-<lb ed="#V"/>spiritualiter <unclear>regimine</unclear> generis humani in suum 
+<lb ed="#V"/>meum fides est praecise circa veritates <sic>concurrentes</sic> 
+<lb ed="#V"/>spiritualiter <unclear>regnum</unclear> generis humani in suum 
 <lb ed="#V"/>finem et dicitur dirigentes intellectum humanum 
 <lb ed="#V"/>in suum finem etc theologia autem licet in lumine 
 <lb ed="#V"/>naturali de omnibus veritatibus in genera<lb ed="#V"/>li 
