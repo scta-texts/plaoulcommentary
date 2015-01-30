@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:space="preserve">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Lectio 18, Prologus</title>
+        <title>Lectio 18, De fide</title>
         <author xml:id="PP">Petrus Plaoul</author>
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
         <edition n="2011.10-dev-master">
-          <title>Lectio 18, Prologus</title>
+          <title>Lectio 18, De fide</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
@@ -33,7 +33,7 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="internal"/>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
     </encodingDesc>
   </teiHeader>
   <text xml:lang="la">
@@ -45,70 +45,962 @@
     </front>
     <body>
       <div xml:id="lectio18">
-        <head subtype="title">Lectio 18, Prologus</head>
-        <div><head xml:id="l18-Hreiphl">[Recapitulatio et intentio pro hoc lectione]</head>
-          
-          <p xml:id="l18-seqtfp">Sciendum est quod in praecedentibus tactum est quod ipsa fides iuvat lumen naturale ut attingere posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> veritates theologicas, quia sine fide lumen naturale non sufficit ut pertingere posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> ad huiusmodi veritates theologicas, iuvamine tamen fidei potest.</p> 
+        <head subtype="title">Lectio 18, De fide</head>
+        <div>
+          <head xml:id="l18-Hreiphl">
+            <supplied>Recapitulatio et intentio pro hoc lectione</supplied>
+          </head>
+          <p xml:id="l18-seqtfp">Sciendum est quod in praecedentibus tactum est quod ipsa fides iuvat lumen naturale ut attingere 
+            <app>
+              <lem>possit</lem> 
+              <rdg wit="#R #SV">posset</rdg>
+            </app> 
+            veritates theologicas, quia sine fide lumen naturale non sufficit ut pertingere 
+            <app>
+              <lem>possit</lem>
+              <rdg wit="#R">posset</rdg> 
+            </app> 
+            ad huiusmodi veritates theologicas, iuvamine tamen fidei potest.</p> 
         
-          <p xml:id="l18-rinamd">Restat igitur<app><lem>igitur</lem><rdg wit="V" type="add.">igitur <add place="inline">pro</add></rdg></app> nunc consequenter inquirere<app><lem>inquirere</lem><rdg wit="V">querere</rdg></app> modum per quem fides confert ad theologicas veritates<app><lem>theologicas veritates</lem><rdg wit="V">theologicam veritatem</rdg></app> inquirendum, et in ista lectione faciam finem de materia fidei et processus theologici in lumine naturali et veniam ad materiam<app><lem>materiam</lem><rdg wit="V">materias</rdg></app> distinctionum.</p>
+          <p xml:id="l18-rinamd">Restat igitur 
+            <app>
+              <lem>pro</lem>
+              <rdg wit="#R #SV" type="om."/>
+            </app> 
+            nunc consequenter 
+            <app>
+              <lem>inquirere</lem>
+              <rdg wit="#V">querere</rdg>
+            </app> 
+            modum per quem fides confert ad 
+            <app>
+              <lem>theologicas veritates</lem>
+              <rdg wit="#V">theologicam veritatem</rdg>
+            </app> 
+            <app>
+              <lem>inquirendum,</lem>
+              <rdg wit="#S">inquirendas,</rdg> <!--db check, is this grammatically more correct -->
+            </app> 
+            et in ista lectione faciam finem de materia fidei et processus theologici in lumine naturali et veniam ad 
+            <app>
+              <lem>materiam</lem>
+              <rdg wit="#V">materias</rdg>
+            </app> 
+            distinctionum.</p>
         </div>
-        
-        <div><head xml:id="l18-Hpcfasa">[Prima conclusio: fides non est pars antecedentis in processu theologico, tamen requiritur ad scientifice assentiendum]</head>
+        <div>
+          <head xml:id="l18-Hpcfasa">
+            <supplied>Prima conclusio: fides non est pars antecedentis in processu theologico, tamen requiritur ad scientifice assentiendum</supplied>
+          </head>
           
-          <p xml:id="l18-pctssa">Pro cuius tamen materiae determinatione, ponam istam conclusionem, 'quamvis fides non intret<app><lem>intret</lem><rdg wit="R" type="add.sed.del.">intret <del rend="strikethrough"><add place="inline">tamquam</add></del></rdg></app> processum theologicum tamquam pars antecedentis theologicam conclusionem probantis, ipsam tamen requiritur ad sic scientifice assentiendum.</p>
+          <p xml:id="l18-pctssa">Pro cuius tamen materiae 
+            <app>
+              <lem>declaratione</lem>
+              <rdg wit="#R #SV">determinationem</rdg>
+            </app> 
+            ponam istam conclusionem, quamvis fides non 
+            <app>
+              <lem>intret</lem>
+              <rdg wit="R" type="corrDeletion">
+                <corr>
+                  <del rend="strikethrough">tamquam</del>
+                </corr>
+              </rdg>
+            </app> 
+            processum theologicum tamquam pars antecedentis theologicam conclusionem probantis, ipsam tamen requiritur ad sic scientifice assentiendum.</p>
           
-          <p xml:id="l18-pphens">Prima pars huius conclusionis probatur, quia antecedens creditum vel dubium numquam probative infert conclusionem scitam. Nam ex credito vel dubio vel credito pure<app><lem>credito vel dubio vel credito pure</lem><rdg wit="V">dubio vel pure credito</rdg></app> non sequitur probative saltem conclusio scita, licet bene illative, quia ex falso vel impossibili sequitur bene scitum non tamen probative modo sic est quod ea quae sub sunt fidei non sunt scita,<app><lem>licet bene illative . . . scita</lem><rdg wit="R" type="om."/></app> sed solum credita saltem per fidem, ergo [etc]. Igitur<app><lem>igitur</lem><rdg wit="V" type="add.">igitur <add place="inline">illa</add></rdg></app> pars vera, et hoc est quod communiter solet dici quod conclusio, semper sequitur debiliorem partem antecedentis, scilicet, quo ad scientiam et in processu demonstrativo. Nam si assumatur aliqua<app><lem>aliqua</lem><rdg wit="V">una</rdg></app> copulativa cuius una pars sit scita et alia credita <cb ed="#R" n="25vb"/>vel dubia illa copulativa erit dubia. Et sic conclusio quae sequitur<app><lem>sequitur</lem><rdg wit="V">sequetur</rdg></app> ex illa copulativa erit solum credita vel dubia et non scita.</p>
+          <p xml:id="l18-pphens">Prima pars huius conclusionis probatur, quia antecedens creditum vel dubium numquam probative infert conclusionem scitam. Nam ex 
+            <app>
+              <lem>credito vel dubio vel credito 
+                <app>
+                  <lem>pure</lem>
+                  <rdg wit="#S" type="corrDeletion">
+                    <corr>
+                      <del rend="strikethrough">l</del>
+                    </corr>
+                  </rdg>
+                </app>
+              </lem>
+              <rdg wit="#V">dubio vel pure credito</rdg>
+            </app> 
+            non sequitur probative saltem conclusio scita, 
+            <cb ed="#S" n="31ra"/>
+            <app>
+              <lem>licet bene illative, quia ex falso vel 
+                <app>
+                  <lem>ex</lem>
+                  <rdg wit="#R #SV" type="om."/>
+                  <note xml:lang="en">Another example of choosing the more explicit reading</note>
+                </app> 
+                impossibili sequitur bene scitum non tamen probative. Modo sic est quod ea quae subsunt fidei non sunt scita,</lem>
+              <rdg wit="#V" type="om." cause="homeoteleuton"/>
+            </app> 
+            sed solum credita saltem per fidem. Igitur 
+            <app>
+              <lem>illa</lem>
+              <rdg wit="#R" type="om."/>
+            </app> 
+            pars vera, et hoc est quod communiter solet dici quod conclusio, semper sequitur debiliorem partem antecedentis, scilicet, quo ad scientiam et in processu demonstrativo. Nam si assumatur 
+            <app>
+              <lem>aliqua</lem>
+              <rdg wit="#V">una</rdg>
+            </app> 
+            copulativa cuius una pars sit scita et alia credita 
+            <cb ed="#R" n="25vb"/> 
+            vel dubia illa copulativa erit dubia. 
+            <app>
+              <lem>Et sic</lem>
+              <rdg wit="#S">Secunda</rdg>
+            </app> 
+            conclusio quae 
+            <app>
+              <lem>sequitur</lem>
+              <rdg wit="#V">sequetur</rdg>
+            </app> 
+            ex illa copulativa erit solum credita vel dubia et non scita.</p>
           
-          <p xml:id="l18-spcsee">Secunda pars conclusionis satis radicata fuit in praecedentibus, nam lumen naturale sibi derelictum non posset attingere<app><lem>attingere</lem><rdg wit="V">pertingere</rdg></app> ad speciales articulos fidei,<app><lem>fidei</lem><rdg wit="V">dei</rdg></app> nec ad veritates <cb ed="#V" n="34vb"/>theologiae<app><lem>theologiae</lem><rdg wit="V">theologicas</rdg></app> speciales, ergo etc.</p>
-          
-          
-      <div><head xml:id="l18-Hqfcaln">[Qualiter fides conferat ad lumen naturale]</head>
-        
-        <p xml:id="l18-uspcvt">Unde sicut prius tangebatur, ita<app><lem>ita</lem><rdg wit="V" type="om."/></app> debet et nunc ad propositum applicari qualiter, scilicet, fides conferat ad hoc quod lumen naturale suo<app><lem>suo</lem><rdg wit="R">sine</rdg></app> processu possit devenire ad notitiam articulorum fidei. Primo enim, ut tactum est, fides fortificat intellectum. Secundo illuminat intellectum. Et<app><lem>et</lem><rdg wit="V" type="om."/></app> tertio liberat ipsum ab assensu erroris et apparentiarum<app><lem>apparentiarum</lem><rdg wit="R">apparentiae</rdg></app> sophisticarum contra veritates theologicas.<app><lem>veritates theologicas</lem><rdg wit="V">veritatem theologicam</rdg></app></p>  
-      
-<div><head xml:id="l18-Hdtvsao">[De tertia via: Utrum intellectus assentiat immediate sine apparentiis opponentis]</head>
-         
-  <p xml:id="l18-eipaie">Et ista pars adiutorii quam fides confert lumini naturali est multum notanda, scilicet, quod fides tollit et liberat intellectum ab erroribus et apparentiis sophisticis contra veritates theologicas,<app><lem>et ista pars…theologicas</lem><rdg wit="V" type="om." cause="homoteleuton"/></app> nam secundum quod dicit <name ref="#Kilvington">Climeton</name> in<app><lem>in</lem><rdg wit="R" type="om."/></app> prima parte <title>Summae</title> suae, ubi tractat de primis principiis et de eorum habitudine ad intellectum nostrum, ubi<app><lem>ubi</lem><rdg wit="V" type="om."/></app> dicit quod, data aliqua conlusione<app><lem>conclusione</lem><rdg wit="V">quaestione</rdg></app> quae habeat aliquam apparentiam ad unam partem, si nullam apparentiam habeat ad contrarium, intellectus ei immediate assentit. Et ad hoc reducit notitiam primorum principiorum, quia dicit ipse prima principia proponuntur per modum apparentis<app><lem>apparentis</lem><rdg wit="V">apparentem</rdg></app> et non est<app><lem>est</lem><rdg wit="V" type="om."/></app> ad oppositum apparentia. Ideo intellectus immediate eis assentit, ita quod imaginandum est quod si aliqua propositio proponatur intellectui<app><lem>intellectui</lem><rdg wit="V">alicui</rdg></app> sub quantocumque gradu remissae apparentiae, si tollantur omnes apparentiae ad oppositum, intellectus naturaliter ei assentit, ita quod totum reducitur ad non-apparentiam contrariorum. Et cum hoc ipse plus dicit, videlicet, quod in<app><lem>in</lem><rdg wit="R" type="om."/></app> intellectu componente respectu cuiuscumque enuntiabilis, et non appareat de contrario, statim ipse assentit<app><lem>assentit</lem><rdg wit="V">assentiet</rdg></app> ipsi enuntiabili.</p>
-
-  <p xml:id="l18-smvaab">Sed mihi videtur quod in hoc minus bene dicat, nec in hoc teneo ipsum, quia istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> instantiam habet in propositione dubia, verbi gratia, si intellectus componat istam propositionem<app><lem>propositionem</lem><rdg wit="R" type="om."/></app> 'astra sunt paria', quae est sibi<app><lem>sibi</lem><rdg wit="V" type="corr.">sibi[?]<del rend="strikethrough">a</del></rdg></app> dubia, non statim assentiet sibi, et tamen non habet apparentiam de opposito, nec ei dissentiet, quia etiam non habet apparentiam aliquam quod 'astra sint imparia'.<app><lem>imparia</lem><rdg wit="V">paria</rdg></app> Ideo debet addi quod sit<app><lem>sit</lem><rdg wit="V">fuit</rdg></app> aliqua apparentia et quod non sit motivum sine apparentia ad bonum.<app><lem>bonum</lem><rdg wit="R">obiectum</rdg></app></p>
-</div>
-<div>
-  
-  <head xml:id="l18-Hdtvtaf">[De tertia via: quomodo fides tollit apparentia falsa]</head>  
-  
-  <p xml:id="l18-naanvt">Nunc autem<app><lem>autem</lem><rdg wit="V">ante</rdg></app> ad propositum veniendo, fides in intellectu existens tollit assensum et apparentiam errorum et apparentiam<app><lem>apparentiam</lem><rdg wit="V">apparentiarum</rdg></app> sophisticarum ad contrarietates veritatum theologicarum. Et quia duo assensus contrarii de eodem articulo non possunt simul esse in eodem intellectu, et quia fides, licet causet assensum aenigmaticum, tamen assensus oppositi non potest stare cum illo assensu. Ideo per fidem sive assensum <cb ed="#R" n="26ra"/>fidei, intellectus ei assentit sine formidine. Ideo secundum istam<app><lem>istam</lem><rdg wit="V">illam</rdg></app> viam <cb ed="#V" n="35ra"/>lumen naturale cum modica apparentia sufficit ad veritates theologicas<app><lem>theologicas</lem><rdg wit="V" type="om."/></app> credendum. Et iste<app><lem>iste</lem><rdg wit="R" type="add.sed.del." cause="repetitio">iste <del rend="strikethrough"><add place="inline">iste</add></del></rdg></app> est unus modorum secundum quem fides iuvat intellectum ad assentiendum in lumine naturali veritatibus theologicis.</p>
+          <p xml:id="l18-spcsee">Secunda pars conclusionis satis radicata fuit in praecedentibus, nam lumen naturale sibi derelictum non posset 
+            <app>
+              <lem>attingere</lem>
+              <rdg wit="#V">pertingere</rdg>
+            </app> 
+            ad speciales articulos 
+            <app>
+              <lem>fidei,</lem>
+              <rdg wit="#V">dei,</rdg>
+            </app> 
+            nec ad veritates 
+            <cb ed="#V" n="34vb"/> 
+            <app>
+              <lem>theologiae</lem>
+              <rdg wit="#V">theologicas</rdg>
+            </app> 
+            speciales, ergo etc.</p>
+          <div>
+            <head xml:id="l18-Hqfcaln">
+              <supplied>Qualiter fides conferat ad lumen naturale</supplied>
+            </head>
             
-  <p xml:id="l18-pqedhc">Pro quo est notandum quod assensus extrinsecus variat efficaciam processus probabilis sive demonstrabilis. Nam<app><lem>nam</lem><rdg wit="R">non</rdg></app> sit, ita quod Socrates habeat firmum assensum quod <name ref="#Plato">Plato</name> est falsigraphus in geometria sive in naturali philosophia, in hoc quod credit ipsum habere artem insolubilem faciendi syllogismos sophisticos etc.<app><lem>etc.</lem><rdg wit="V">et</rdg></app> Ponatur quod <name ref="#Plato">Plato</name> faciat <name ref="#Sortes">Sorti</name> demonstrationem quam<app><lem>demonstrationem quam</lem><rdg wit="V">processum demonstrativum quem</rdg></app> concedat <name ref="#Sortes">Sortis</name>. Et concedendo<app><lem>concedendo</lem><rdg wit="V">concedat</rdg></app> etiam maiorem et minorem, et tamen negabit conclusionem, ita quod bene stat quod <name ref="#Sortes">Sortis</name> credat in illo casu se<app><lem>se</lem><rdg wit="V" type="om."/></app> decipi, et tamen per nullam propositionem determinate credit se decipi. Ita quod bene stat quod assentiat maiori et minori et consequentiae, et tamen negabit conclusionem, quia credat se decipi in illo processu propter firmum assensum quem habet de deceptione huius conclusionis.<app><lem>quem habet de deceptione huius conclusionis</lem><rdg wit="R">de deceptione huius conclusionis quam habet</rdg></app></p>
-  
-  <p xml:id="l18-esdisc">Et si dicatur quod hoc esset<app><lem>esset</lem><rdg wit="V">est</rdg></app> contra <name ref="#Aristotle">Philosophum</name> Io <title ref="#PosteriorAnalytics">Posteriorum</title>, ubi dicit quod "cognita maiore et minore et scita<app><lem>scita</lem><rdg wit="R">scito</rdg></app> quod<app><lem>quod</lem><rdg wit="V" type="om."/></app> consequentia est bona, statim scitur conclusio." Respondetur quod illud intelligitur: ubi non esset aliquis actus generaliter,<app><lem>generaliter</lem><rdg wit="V">generalis</rdg></app> assentimus quod in aliquo esset huiusmodi ars sophisticandi. Et istud<app><lem>istud</lem><rdg wit="V">id</rdg></app> apparet in alio exemplo, nam staret quod <name ref="#Sortes">Sortis</name> esset pluries expertus se credidisse<app><lem>credidisse</lem><rdg wit="V" type="om."/></app> scire A, B, C conclusiones in sic credendo,<app><lem>in sic credendo</lem><rdg wit="R" type="om."/></app> et quod postea <unclear>reppererit[?]</unclear> se esse<app><lem>esse</lem><rdg wit="R" type="om."/></app> deceptum<app><lem/><rdg wit="R" type="add.">deceptum <add place="inline">fuisse</add></rdg></app> in sic credendo.</p>
-  
-  <p xml:id="l18-eeilva">Et<app><lem>et</lem><rdg wit="V" type="om."/></app> ex isto sequitur quod<app><lem>sequitur quod</lem><rdg wit="R" type="om."/></app> posset in ipso generari habitus suspensivus conclusionis apparentis demonstrative, et in tanto gradu sicut est apparentia demonstrativa quo dato concederet maiorem et minorem et conclusionem<app><lem>et conclusionem</lem><rdg wit="V" type="om."/></app> et consequentiam, et tamen negaret consequens,<app><lem>et tamen negaret consequens</lem><rdg wit="V">et non concederet consequens immo negaret</rdg></app> vel aliter dicitur quod non sufficit habere assensum maioris et minoris et bonitatis consequentiae ad hoc, quod assentiatur conclusioni, sed cum hoc oportet habere firmum assensum quod totus processus est verus sine deceptione latente vel apparente.</p>
-  </div>
-  
-        <div><head xml:id="l18-Hcccccc">[Corollaria]</head>
-    
-          <p xml:id="l18-eqpaac">Ex quo, per modum corollarii, potest inferri quod circumstantia personae loquentis immutat de evidentia<app><lem>evidentia</lem><rdg wit="R" type="corr."><del rend="strikethrough">obedia</del><add place="inline">evidentia</add></rdg></app><app><lem>quod circumstantia personae loquentis immutat de evidentia</lem><rdg wit="V">per se loqueretur de evidentia</rdg></app> sive de probatione assentiendi conclusioni propositae. Et hoc tangit <name ref="#Aristotle">Aristoteles</name> Io <title ref="#Rhetoric">Rhetoricae</title> 8,<app><lem>8</lem><rdg wit="V" type="om."/></app> dicens<app><lem>dicens</lem><rdg wit="R" type="om."/></app> quod sola auctoritas dicentis, absque hoc quod <unclear>assuatur[?]</unclear> per modum antecedentis,<app><lem>absque hoc quod <unclear>assuatur[?]</unclear> per modum antecedentis</lem><rdg wit="V" type="om."/></app> iuvat intellectum ad assentiendum conclusioni.</p>   
-       
-          <p xml:id="l18-auqseb">Advertendum ulterius <cb ed="#V" n="35rb"/>quod fides proprie<app><lem>proprie</lem><rdg wit="R"><add place="margin">proprie</add></rdg></app> est respectu illorum quae concurrunt divinam<app><lem>divinam</lem><rdg wit="R" type="add.sed.del.">divinam <del rend="strikethrough"><add place="inline">qr</add></del></rdg></app> essentiam et illorum quae sunt necessaria ad salutem et hoc sub ratione <unclear>timentis[?]</unclear> Deum et diligentis, quia in quolibet articulo, si bene resolvatur, includitur Deus, ita quod in quolibet <cb ed="#R" n="26rb"/>articulo Deus debet esse pars obiecti amantis, scilicet, propter bonitatem et <unclear>timentis[?]</unclear> propter notitiam. Et<app><lem>et</lem><rdg wit="V" type="om."/></app> ex consequenti<app><lem>consequenti</lem><rdg wit="R">habenti</rdg></app> fides nedum habet verum pro obiecto, sed etiam bonum.</p>
-    
-          <p xml:id="l18-eifeaq">Et ideo fides est quid amor, et ex consequenti incitat et movet animam ad inquirendum veritates theologicas, et ratione huiusmodi inquisitionis animae iuvat fides animam nedum ad veritates theologicas,<app><lem>veritates theologicas</lem><rdg wit="V">veritatem theologicam</rdg></app> sed etiam ad omnes alias veritates inquirendas ex quadam affectione et amore. Facillime enim<app><lem>enim</lem><rdg wit="V" type="add.">est</rdg></app> et minimo motivo assentimus quibus afficiuntur, et per oppositum<app><lem>per oppositum</lem><rdg wit="R" type="om."/></app> dissentimus quibus non afficiuntur. Et iste est<app><lem>est</lem><rdg wit="V" type="om."/></app> quartus<app><lem>quartus</lem><rdg wit="V">secundus</rdg></app> modus secundum quem fides iuvat intellectum ad<app><lem/><rdg wit="R" type="om."/></app> assentiendum veritatibus theologicis, quia ratione amoris causati<app><lem>causati</lem><rdg wit="V">creati</rdg></app> in intellectu per fidem facilior est assensus. Ideo ratione huiusmodi amoris lumen naturale facilitatur in assensum veritatum theologicarum et etiam <unclear>apparentiarum[?]</unclear> quarumcumque.</p> 
-         
-          <p xml:id="l18-eqspaf">Et quia, sicut alias dicebatur, omnes mundi veritates possunt considerari ut sunt quaedam exemplata a divino exemplari et <unclear>directa[?]</unclear> in suum finem, ideo secundum istam rationem omnis veritas est<app><lem>omnis veritas est</lem><rdg wit="V">omnes veritates sunt</rdg></app> theologicae considerationis, et secundum hoc infertur quod in mathematicis est principium atque finis.</p>
-    
-          <p xml:id="l18-esdnae">Et si dicatur quod <name ref="#Aristotle">Philosophus</name> dicit expresse oppositum, scilicet, quod in mathematicis non est<app><lem>est</lem><rdg wit="V" type="om."/></app> principium nec<app><lem>nec</lem><rdg wit="R" type="corr."><del rend="strikethrough">atque</del><add place="aboveLine">nec</add></rdg><rdg wit="V">neque</rdg></app> finis, hoc est dicere quod mathematicus non considerat res sub ratione boni sive sub ratione finis, istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> est verum de mathematica<app><lem>mathematica</lem><rdg wit="V" type="add.sed.del.">mathematica <del rend="strikethrough"><add place="inline">de</add></del></rdg></app> consideratione secundum communem modum considerandi, et non secundum modum considerandi theologicum. Nam sicut dicit <name ref="#Augustine">Beatus Augustinus</name>, et hoc etiam deducit <name ref="#Bacon">Bacon</name>, 'scientiae mathematicae et omnes aliae scientiae sunt theologicae, immo neccessariae<app><lem>sunt theologicae, immo necessariae</lem><rdg wit="V">theologicae sunt necessariae</rdg></app> ad theologiam.' Nam <name ref="#Maimonides">Rabi Moyses</name> in illo quod ponit de 'rota infra<app><lem>infra</lem><rdg wit="V">infimam</rdg></app> rotam' etc.,<app><lem>etc,</lem><rdg wit="R" type="om."/></app> describit et tradidit<app><lem>tradidit</lem><rdg wit="V">tradit</rdg></app><app><lem>tradidit</lem><rdg wit="V" type="add.sed.del." cause="repetitio">tradit <del rend="strikethrough"><add place="inline">de rota infimam rotam</add></del></rdg></app> geometriam et philosophiam de motibus corporum caelestium et de intelligentiis eorum<app><lem>eorum</lem><rdg wit="R">eorumdem</rdg></app> et generaliter omnes scientiae sunt reperibiles in Sacra Scriptura, licet non appareant expresse.</p> 
-         
-          <p xml:id="l18-eeciva">Et ex <cb ed="#V" n="35va"/>consequenti sequitur quod omnes veritates perfectiori modo et nobiliori cognoscitur per theologiam quam per quamcumque aliam scientiam, quia per theologiam cognoscuntur et quantum ad sua<app><lem>quantum ad sua</lem><rdg wit="V">per sua</rdg></app> principia effectiva et exemplativa, quia in Deo relucent et quantum etiam ad finem, et consequenter etiam<app><lem>etiam</lem><rdg wit="V" type="om."/></app> infert <name ref="#Bacon">Bacon</name> quod philosophi non habuerunt plenam notitiam sive<app><lem>sive</lem><rdg wit="V">et</rdg></app> perfectam de iride, quia ignoraverunt eius causam finalem. Sed de isto<app><lem>isto</lem><rdg wit="V">illo</rdg></app> videbitur alias.<note>[cross reference]</note></p>
-  </div>
-      </div>
-        </div>
+            <p xml:id="l18-uspcvt">Unde sicut prius 
+              <app>
+                <lem>tangebatur,</lem>
+                <rdg wit="#R" type="corrDeletion">
+                  <corr>
+                    <del>ita</del>
+                  </corr>
+                </rdg>
+              </app> 
+              et nunc debet ad propositum applicari 
+              <app>
+                <lem>qualiter,</lem>
+                <rdg wit="#S">qualiter,</rdg>
+              </app> 
+              scilicet, fides conferat ad hoc quod lumen naturale 
+              <app>
+                <lem>sine</lem>
+                <rdg wit="#V">suo</rdg>
+              </app> 
+              processu possit devenire ad notitiam articulorum fidei. Primo enim, ut tactum est, fides fortificat intellectum. Secundo illuminat intellectum. 
+              <app>
+                <lem>Et</lem>
+                <rdg wit="#V" type="om."/>
+              </app> 
+              tertio liberat ipsum ab assensu 
+              <app>
+                <lem>errorum 
+                  <app>
+                    <lem>et</lem>
+                    <rdg wit="#S" type="om."/>
+                  </app> 
+                  apparentiarum</lem>
+                <rdg wit="#R #SV">erroris et apparentiae</rdg>
+              </app> 
+              sophisticarum contra 
+              <app>
+                <lem>veritates theologicas.</lem>
+                <rdg wit="#V">veritatem theologicam.</rdg>
+              </app>
+            </p>  
+          
+            <div>
+              <head xml:id="l18-Hdtvsao">
+                <supplied>De tertia via: Utrum intellectus assentiat immediate sine apparentiis opponentis</supplied>
+              </head>
+                     
+              <p xml:id="l18-eipaie">
+                <app>
+                  <lem>Et ista pars adiutorii quam fides confert lumini 
+                    <app>
+                      <lem>naturali</lem>
+                      <rdg wit="#S">naturale</rdg>
+                      <note xml:lang="en">"Naturali" seems the best reading as it the dative form of the adjective, and here "lumini" is the dative noun it modifies. <!-- db check this --></note>
+                    </app> 
+                    est multum notanda, scilicet, quod fides tollit et liberat intellectum ab erroribus et apparentiis sophisticis contra veritates 
+                    <app>
+                      <lem>theologicas,</lem>
+                      <rdg wit="#S" type="om."/>
+                    </app>
+                  </lem>
+                </app> 
+                nam secundum quod dicit 
+                <ref>
+                  <seg>
+                    <name ref="#RichardKilvington">Climeton</name> 
+                    <app>
+                      <lem>in</lem>
+                      <rdg wit="#R" type="om."/>
+                    </app> 
+                  prima parte 
+                  <title>Summae</title> suae,
+                  </seg>
+                  <bibl>Richardus Kilvington, ??</bibl>
+                </ref> 
+                ubi tractat de primis principiis et 
+                <app>
+                  <lem>de</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> eorum habitudine ad intellectum nostrum, 
+                <app>
+                  <lem>ubi</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                dicit quod, data aliqua 
+                <app>
+                  <lem>conclusione</lem>
+                  <rdg wit="#V">quaestione</rdg>
+                </app> 
+                <app>
+                  <lem>quae</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                habeat aliquam apparentiam ad unam partem, si nullam apparentiam habeat ad contrarium, intellectus ei immediate assentit. Et ad hoc reducit notitiam primorum principiorum, 
+                <app>
+                  <lem>quia</lem>
+                  <rdg wit="#S" type="om."/>
+                </app> 
+                dicit ipse prima principia 
+                <app>
+                  <lem>proponuntur</lem>
+                  <rdg wit="#R #SV">propositionum</rdg>
+                </app> 
+                per modum 
+                <app>
+                  <lem>apparentis</lem>
+                  <rdg wit="#V">apparentem</rdg>
+                </app> 
+                et non 
+                <app>
+                  <lem>
+                    <app>
+                      <lem>est</lem>
+                      <rdg wit="#SV" type="corrDeletion">
+                        <corr>
+                          <del>experientia</del>
+                        </corr>
+                      </rdg>
+                    </app>
+                  </lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                ad oppositum apparentia. Ideo intellectus immediate eis assentit, ita quod imaginandum est quod si aliqua propositio proponatur 
+                <app>
+                  <lem>intellectui</lem>
+                  <rdg wit="#V">alicui</rdg>
+                </app> 
+                sub quantocumque gradu 
+                <app>
+                  <lem>remissae</lem>
+                  <rdg wit="#V">remisso</rdg>
+                </app> 
+                apparentiae, si tollantur omnes apparentiae ad oppositum, intellectus naturaliter ei assentit, ita quod totum 
+                <app>
+                  <lem>reducitur</lem>
+                  <rdg wit="#S #V">reducit</rdg>
+                </app> 
+                ad non apparentiam contrariorum. Et cum hoc ipse plus dicit, videlicet, quod 
+                <app>
+                  <lem>in</lem>
+                  <rdg wit="#R #SV #S" type="om."/>
+                </app> intellectu componente respectu cuiuscumque enuntiabilis, et non appareat de contrario, statim ipse 
+                <app>
+                  <lem>assentit</lem>
+                  <rdg wit="#V">assentiet</rdg>
+                </app> 
+                ipsi enuntiabili.</p>
+            
+              <p xml:id="l18-smvaab">Sed mihi videtur quod in hoc minus bene 
+                <app>
+                  <lem>dicit,</lem> <!-- not positive this is the right choice -->
+                  <rdg wit="#S">dixit,</rdg>
+                  <rdg wit="#V">dicat,</rdg>
+                </app> 
+                nec in hoc teneo ipsum, quia istud instantiam habet in propositione dubia, verbi gratia, si intellectus componat istam 
+                <app>
+                  <lem>propositionem</lem>
+                  <rdg wit="#R #SV #S" type="om."/>
+                </app> <mentioned>astra sunt paria,</mentioned> quae est 
+                <app>
+                  <lem>sibi</lem>
+                  <rdg wit="#V" type="corrReplace">
+                    <del rend="strikethrough">sibia</del>
+                    <add place="inLine">sibi</add>
+                  </rdg>
+                </app> 
+                dubia, non statim assentiet sibi, et tamen non habet apparentiam de opposito, nec ei dissentiet, quia etiam non habet apparentiam 
+                <app>
+                  <lem>aliquam quod <mentioned>astra sint 
+                    <app>
+                      <lem>imparia</lem>
+                      <rdg wit="#V">paria</rdg>
+                      <note xml:lang="en">This is a clear mistake by V since Plaoul is discussing opposite proposition to the earlier proposal, i.e. "astra sunt paria"</note>
+                    </app>
+                  </mentioned> 
+                    Ideo debet addi quod 
+                    <app>
+                      <lem>sit</lem>
+                      <rdg wit="#V">fuit</rdg>
+                    </app> 
+                    aliqua apparentia et quod non sit motivum sine apparentia</lem>
+                  <rdg wit="#S" type="om."/>
+                </app> 
+                ad 
+                <app>
+                  <lem>oppositum.</lem>
+                  <rdg wit="#V">bonum.</rdg>
+                </app>
+              </p>
+            </div>
+            <div>
+              <head xml:id="l18-Hdtvtaf">
+                <supplied>De tertia via: quomodo fides tollit apparentia falsa</supplied>
+              </head>
+              <p xml:id="l18-naanvt">Nunc autem ad propositum veniendo, fides in intellectu existens tollit assensum et apparentiam errorum et 
+                <app>
+                  <lem>apparentiam</lem>
+                  <rdg wit="#V">apparentiarum</rdg>
+                </app> 
+                sophisticarum ad 
+                <app>
+                  <lem>contrarietates</lem>
+                  <rdg wit="#S">commentarum</rdg>
+                </app> 
+                veritatum theologicarum. Et quia duo assensus contrarii de eodem articulo non possunt simul esse in eodem intellectu, et quia fides, licet causet assensum aenigmaticum, tamen assensus oppositi non 
+                <app>
+                  <lem>potest</lem>
+                  <rdg wit="#V">possunt</rdg>
+                </app> 
+                <app>
+                  <lem>simul</lem>
+                  <rdg wit="#R #SV #V" type="om."/>
+                  <note xml:lang="en">An example of choosing the more explicit reading</note>
+                </app> 
+                stare cum illo assensu. Ideo per fidem sive assensum 
+                <cb ed="#R" n="26ra"/> 
+                fidei, intellectus ei assentit sine formidine. Ideo secundum illam viam 
+                <cb ed="#V" n="35ra"/> 
+                <app>
+                  <lem>lumen naturale</lem>
+                  <rdg wit="#S">intellectus in lumine naturali</rdg>
+                </app> 
+                cum modica apparentia sufficit ad veritates 
+                <app>
+                  <lem>theologicas</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                <app>
+                  <lem>credendum.</lem>
+                  <rdg wit="#S">credendas.</rdg>
+                  <note xml:lang="en">The S reading may be more grammatically correct but the "ad" + accusative singular construction is so common it seems best to continue this trend.</note>
+                </app> 
+                Et 
+                <app>
+                  <lem>iste</lem>
+                  <rdg wit="#R" type="corrDeletion" cause="repetitio">
+                    <corr>
+                      <del rend="strikethrough">iste</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                est unus modorum secundum quem fides iuvat intellectum ad assentiendum in lumine naturali veritatibus theologicis.</p>
+                
+              <p xml:id="l18-pqedhc">Pro quo est notandum quod assensus extrinsecus variat efficaciam processus probabilis sive demonstrabilis. 
+                <app>
+                  <lem>Nam</lem>
+                  <rdg wit="#V">non</rdg>
+                </app> 
+                sit ita quod <name ref="#Sortes">Sortes</name> habeat firmum assensum quod <name ref="#Plato">Plato</name> est falsigraphus in geometria sive in naturali philosophia, in hoc quod credit ipsum habere artem insolubilem faciendi syllogismos sophisticos. 
+                <app>
+                  <lem>Tunc</lem>
+                  <rdg wit="#R">etc</rdg>
+                  <rdg wit="#V">et</rdg>
+                </app> 
+                <app>
+                  <lem>ponatur</lem>
+                  <rdg wit="#S">ponamus</rdg>
+                </app> 
+                quod <name ref="#Plato">Plato</name> faciat <name ref="#Sortes">Sorti</name> 
+                <app>
+                  <lem>demonstrationem quam</lem>
+                  <rdg wit="#V">processum demonstrativum quem</rdg>
+                </app> 
+                concedat <name ref="#Sortes">Sortes</name>. Et 
+                <app>
+                  <lem>concedendo</lem>
+                  <rdg wit="#S #V">concedat</rdg>
+                </app> etiam maiorem et minorem et tamen negabit conclusionem ita quod bene stat quod <name ref="#Sortes">Sortes</name> credat in illo casu se decipi, et tamen per nullam propositionem determinate credit se decipi. Ita quod bene stat quod assentiat maiori et minori et 
+                <app>
+                  <lem>consequentiae,</lem>
+                  <rdg wit="#SV" type="corrReplace">
+                    <corr>
+                      <del>conclusionem</del>
+                      <add>consequentiae</add>
+                    </corr>
+                  </rdg>
+                  <rdg wit="#S">conclusionem esse bonae</rdg>
+                </app> 
+                et tamen negabit conclusionem, quia 
+                <app>
+                  <lem>credet</lem>
+                  <rdg wit="#V">credit</rdg>
+                </app> 
+                se decipi in illo processu propter firmum assensum de deceptione 
+                <app>
+                  <lem>huiusmodi</lem>
+                  <rdg wit="#V">huius</rdg> <!-- R could also be considered to be just "huius" but it is a little more ambiguous whether the "us" is raised or not -->
+                </app> 
+                conclusionis 
+                <app>
+                  <lem>quem</lem>
+                  <rdg wit="#R #SV">quam</rdg>
+                  <note xml:lang="en">I see the antecedent here as "assensum" therefore the reading from S and V is chosen</note>
+                </app> 
+                habet.</p>
+              
+              <p xml:id="l18-esdisc">Et si dicatur quod hoc 
+                <app>
+                  <lem>esset</lem>
+                  <rdg wit="#V">est</rdg>
+                </app> 
+                contra
+                <ref>
+                  <name ref="#Aristotle">Philosophum</name> 
+                  <app>
+                    <lem>in</lem>
+                    <rdg wit="#R #SV #V" type="om."/>
+                  </app>
+                  I 
+                  <title ref="#PosteriorAnalytics">Posteriorum</title>,
+                </ref> 
+                ubi dicit quod 
+                <cit>
+                  <quote>cognita maiore et minore et 
+                    <app>
+                      <lem>scita</lem>
+                      <rdg wit="#R">scito</rdg>
+                    </app> 
+                    <app>
+                      <lem>quod</lem>
+                      <rdg wit="#V" type="om."/>
+                    </app> 
+                    consequentia est bona, statim scitur conclusio.</quote>
+                  <bibl>Aristotle, Posterior Analytics, ?? <!-- defn a paraphrase quote --></bibl>
+                </cit> 
+                Respondetur quod illud intelligitur ubi non esset aliquis actus 
+                <app>
+                  <lem>generalis</lem>
+                  <rdg wit="#R #SV">generaliter</rdg>
+                </app> 
+                assentivus quod in aliquo esset huiusmodi ars sophisticandi. Et 
+                <app>
+                  <lem>istud</lem>
+                  <rdg wit="#V">idem</rdg>
+                </app> 
+                apparet in alio exemplo, nam staret quod <name ref="#Sortes">Sortes</name> esset pluries expertus se 
+                <app>
+                  <lem>credidisse</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                scire <c>a</c>, <c>b</c>, <c>c</c> conclusiones et 
+                <app>
+                  <lem>quod</lem>
+                  <rdg wit="#S" type="om."/>
+                </app> 
+                postea 
+                <app>
+                  <lem>reppererit</lem>
+                  <rdg wit="#S">reppererat</rdg>
+                  <note xml:lang="en">Not all witnesses include write this word with a single "p" followed by an "i", like so, "reperierit" (or in the case of S "reperierat") It seems best to normalize this to reppererit.</note>
+                </app> 
+                se 
+                <app>
+                  <lem>fuisse</lem>
+                  <rdg wit="#V">esse</rdg>
+                </app> 
+                deceptum in sic credendo.</p>
+              
+              <p xml:id="l18-eeilva">
+                <app>
+                  <lem>Et</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                ex isto 
+                <app>
+                  <lem>sequitur quod</lem>
+                  <rdg wit="#R #SV #S" type="om."/>
+                </app> 
+                posset in ipso generari habitus suspensivus conclusionis 
+                <app>
+                  <lem>apparentis</lem>
+                  <rdg wit="#R">apparenter</rdg>
+                </app> 
+                demonstrativae, et in tanto gradu sicut est apparentia demonstrativa quo dato concederet maiorem 
+                <app>
+                  <lem>et</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                <app>
+                  <lem>minorem</lem>
+                  <rdg wit="#R #SV" type="intextu">et conclusionem</rdg>
+                  <note xml:lang="en">It actually seems a bit clear to exclude the "et conclusionem" since this cannot really mean anything other than to affirm the consequence. Nor should it be taken to mean the affirmation of the consequent, since this is precisely what is going to be denied. While leaving it out it here is not exactly the more verbose reading, it is the clearer reading and therefore, I think, the more explicit reading.</note>
+                </app> 
+                et consequentiam, 
+                <app>
+                  <lem>et tamen negaret consequens,</lem>
+                  <rdg wit="#V">et non concederet consequens immo negaret,</rdg>
+                </app> 
+                vel aliter dicitur quod non sufficit habere 
+                <app>
+                  <lem>assensum</lem>
+                  <rdg wit="#S">notitiam</rdg>
+                </app> 
+                maioris et minoris et 
+                <app>
+                  <lem>bonitatis</lem>
+                  <rdg wit="#R #SV #S" type="om."/>
+                </app> 
+                <app>
+                  <lem>consequentiae</lem>
+                  <rdg wit="#S">conclusionem</rdg>
+                </app> 
+                ad hoc, quod assentiatur conclusioni, sed cum hoc oportet habere firmum assensum quod totus processus est verus sine deceptione latente vel apparente.</p>
+              </div>
+      
+            <div>
+              <head xml:id="l18-Hcccccc">
+                <supplied>Corollaria</supplied>
+              </head>
         
-  <div><head xml:id="l18-Hptptpt">[Principia theologiae]</head>
-    
-    <div><head xml:id="l18-Hpptsct">[Primum principium theologiae et secunda conclusio lectionis: Quamvis 'Deum esse' est primum principium theologia, tamen simul conclusio theologiae]</head>
-       
-      <p xml:id="l18-viasct">Veniendo iterum ad propositum, pono istam conclusionem secundam: quamvis 'Deum esse' sit simpliciter et absolute primum principium, complexum<app><lem>complexum</lem><rdg wit="V">incomplexum</rdg></app> est tamen simul conclusio theologica.</p>
-    
-      <p xml:id="l18-uaesgh">Ubi advertendum<app><lem>advertendum</lem><rdg wit="V">notandum</rdg></app> est <cb ed="#R" n="26va"/>quod varii possunt esse processus in theologia et quod<app><lem>et quod</lem><rdg wit="V">quando quia</rdg></app> eadem veritas aliquando accipitur ut antecedens, aliquando videtur consequens, nam per Sacram Scripturam deducitur quod 'Deus est' et iterum per hoc quod 'Deus est' deducitur<app><lem>deducitur</lem><rdg wit="V" type="add.">per</rdg></app> 'Sacram Scripturam esse' et quaedam alia,<app><lem>et quaedam alia</lem><rdg wit="V">cum alicuius aliis</rdg></app> unde <ref><title ref="#Deuteronomy">Deuteronomi</title> Vo</ref> habetur <quote ana="deut6_4">"audi dominum<app><lem>dominum</lem><rdg wit="V" type="om."/></app> Deum tuum Israel, quia unus est"</quote> et in symbolis etiam reperitur 'Deum esse', et deducitur ex Sacra Scriptura 'Deum esse',<app><lem>et deducitur ex Sacra Scriptura 'Deum esse'</lem><rdg wit="R" type="om." cause="homoteleuton"/></app> et tamen, ut dictum est, Sacra Scriptura<app><lem>Sacra Scriptura</lem><rdg wit="V">satis</rdg></app> deducitur ex eo quod Deus est, quia eo ipso quod Deus est, docet hominem<app><lem>hominem</lem><rdg wit="V" type="om."/></app> et sibi docet et instruit scientiam mentalem, et consequenter scriptam et vocalem requisitam pro salute generis humani.</p>   
+              <p xml:id="l18-eqpaac">Ex quo, per modum corollarii, potest inferri 
+                <app>
+                  <lem>quod circumstantia 
+                    <app>
+                      <lem>personae</lem>
+                      <rdg wit="#SV" type="corrDeletion">
+                        <corr>
+                          <del rend="strikethrough">scilicet</del>
+                        </corr>
+                      </rdg>
+                    </app>
+                    loquentis immutat</lem>
+                  <rdg wit="#V">per se loqueretur de evidentia</rdg>
+                </app> 
+                de 
+                <app>
+                  <lem>evidentia</lem>
+                  <rdg wit="#R" type="corrReplace">
+                    <corr>
+                      <del rend="strikethrough">obedia</del>
+                      <add place="inline">evidentia</add>
+                    </corr>
+                  </rdg>
+                </app> 
+                sive de probatione assentiendi conclusioni propositae. Et hoc tangit 
+                <ref>
+                  <name ref="#Aristotle">Aristoteles</name> I 
+                  <title ref="#Rhetoric">Rhetoricae</title>
+                </ref> 
+                dicens quod sola auctoritas dicentis, 
+                <app>
+                  <lem>absque hoc quod assumatur per modum antecedentis</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                iuvat intellectum ad assentiendum conclusioni.</p>   
+           
+              <p xml:id="l18-auqseb">Advertendum ulterius 
+                <cb ed="#V" n="35rb"/> 
+                quod fides 
+                <app>
+                  <lem>proprie</lem>
+                  <rdg wit="#R" type="corrAddition">
+                    <corr>
+                      <add place="margin">proprie</add>
+                    </corr>
+                  </rdg>
+                </app> 
+                est respectu illorum quae concernunt 
+                <app>
+                  <lem>divinam</lem>
+                  <rdg wit="#R" type="corrDeletion">
+                    <corr>
+                      <del rend="strikethrough">qr</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                essentiam et illorum quae sunt necessaria ad salutem et hoc sub ratione <unclear>timentis[?]</unclear> Deum et diligentis, quia in quolibet articulo, si 
+                <app>
+                  <lem>bene</lem>
+                  <rdg wit="#S" type="corrDeletion">
+                    <corr>
+                      <del rend="strikethrough">l</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                resolvatur, includitur Deus, ita quod in quolibet 
+                <cb ed="#R" n="26rb"/> 
+                articulo Deus debet esse pars obiecti amantis, scilicet, propter bonitatem et <unclear cert="high">timentis</unclear> propter notitiam. 
+                <app>
+                  <lem>Et</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> ex consequenti fides nedum habet verum pro obiecto, sed etiam bonum.</p>
+        
+              <p xml:id="l18-eifeaq">Et ideo fides est quidam amor, et ex consequenti incitat et movet animam ad inquirendum veritates theologicas, et ratione huiusmodi inquisitionis animae iuvat fides animam nedum ad 
+                <app>
+                  <lem>veritates theologicas</lem>
+                  <rdg wit="#V">veritatem theologicam</rdg>
+                </app> 
+                sed etiam ad omnes alias veritates inquirendas ex quadam affectione et amore. 
+                <app>
+                  <lem>Facillime enim</lem>
+                  <rdg wit="#V">Facillimum enim est</rdg>
+                </app> 
+                et 
+                <app>
+                  <lem>cum</lem>
+                  <rdg wit="#R" type="om."/>
+                  <rdg wit="#SV" type="corrDeletion">
+                    <corr>
+                      <del>cum</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                minimo motivo 
+                <app>
+                  <lem>assentimus</lem>
+                  <rdg wit="#SV">assentiamus</rdg>
+                </app> 
+                quibus afficimur, et 
+                <app>
+                  <lem>per oppositum</lem>
+                  <rdg wit="#R" type="om."/>
+                </app> 
+                dissentimus quibus non afficiuntur. Et iste 
+                <app>
+                  <lem>est</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                <app>
+                  <lem>quartus</lem>
+                  <rdg wit="#V">secundus</rdg>
+                </app> 
+                modus secundum quem fides iuvat intellectum 
+                <app>
+                  <lem>ad</lem>
+                  <rdg wit="#R #SV #S" type="om."/>
+                </app> 
+                assentiendum veritatibus theologicis, quia ratione amoris 
+                <app>
+                  <lem>causati</lem>
+                  <rdg wit="#V">creati</rdg>
+                  <rdg wit="#SV" type="corrReplace">
+                    <corr>
+                      <del>cauti</del>
+                      <add>causati</add>
+                    </corr>
+                  </rdg> 
+                </app> 
+                in intellectu per fidem facilior est assensus. Ideo ratione huiusmodi amoris lumen naturale facilitatur in assensum veritatum theologicarum et etiam 
+                <app>
+                  <lem>aliarum</lem>
+                  <rdg wit="#V">apparentiarum</rdg>
+                </app> 
+                quarumcumque.</p> 
+             
+              <p xml:id="l18-eqspaf">Et quia, sicut alias dicebatur, omnes mundi veritates possunt considerari ut sunt quaedam exemplata a divino exemplari et 
+                <app>
+                  <lem>directa</lem>
+                  <rdg wit="#V">distincta</rdg>
+                </app> 
+                in suum finem, ideo secundum istam rationem 
+                <app>
+                  <lem>omnis veritas est</lem>
+                  <rdg wit="#V">omnes veritates sunt</rdg>
+                </app> 
+                theologicae considerationis, et secundum hoc infertur quod in mathematicis est principium 
+                <app>
+                  <lem>atque</lem>
+                  <rdg wit="#S">et</rdg>
+                </app> 
+                finis.</p>
+        
+              <p xml:id="l18-esdnae">Et si dicatur quod <name ref="#Aristotle">Philosophus</name> dicit expresse oppositum, scilicet, quod 
+                <cit>
+                  <quote>in mathematicis non 
+                    <app>
+                      <lem>est</lem>
+                      <rdg wit="#V" type="om."/>
+                    </app> 
+                    principium 
+                    <app>
+                      <lem>nec</lem>
+                      <rdg wit="#R" type="corrReplace">
+                        <del rend="strikethrough">atque</del>
+                        <add place="aboveLine">nec</add>
+                      </rdg>
+                      <rdg wit="V">neque</rdg>
+                    </app> 
+                    finis,</quote>
+                  <bibl>Aristotle, ??</bibl>
+                </cit> 
+                hoc est 
+                <app>
+                  <lem>dicere</lem>
+                  <rdg wit="#S">dictum</rdg>
+                </app> 
+                quod mathematicus non considerat res sub ratione boni sive sub ratione finis. Istud est verum de 
+                <app>
+                  <lem>mathematica</lem>
+                  <rdg wit="#V" type="corrDeletion">
+                    <corr>
+                      <del rend="strikethrough">de</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                consideratione secundum communem modum considerandi, et non secundum modum considerandi theologicum. Nam 
+                <app>
+                  <lem>sicut</lem>
+                  <rdg wit="#S">secundum quod</rdg>
+                </app> 
+                <ref>dicit 
+                  <name ref="#Augustine">Beatus Augustinus</name>,
+                </ref> 
+                et 
+                <ref>
+                  <seg>hoc etiam deducit <name ref="#RogerBacon">Bacon</name>,</seg>
+                  <bibl>Roger Bacon, ??</bibl>
+                </ref> 
+                <cit>
+                  <quote>scientiae mathematicae et omnes aliae scientiae 
+                    <app>
+                      <lem>sunt theologicae, immo necessariae</lem>
+                      <rdg wit="#V">theologicae sunt necessariae</rdg>
+                    </app> 
+                    ad theologiam.</quote>
+                  <bibl>Augustinus, ??</bibl>
+                </cit> 
+                Nam 
+                <ref>
+                  <name ref="#Maimonides">Rabi Moyses</name> in illo
+                </ref> 
+                quod ponit de 
+                <cit>
+                  <quote>rota 
+                    <app>
+                      <lem>infra</lem>
+                      <rdg wit="#V">infimam</rdg>
+                    </app> 
+                    rotam,</quote>
+                </cit> 
+                describit et 
+                <app>
+                  <lem>tradidit</lem>
+                  <rdg wit="#V #S">tradit</rdg>
+                  <rdg wit="#V" type="corrDeletion" cause="repetitio">
+                    <corr>
+                      <del rend="strikethrough">de rota infimam rotam</del>
+                    </corr>
+                  </rdg>
+                </app> 
+                geometriam et philosophiam de motibus corporum caelestium et de intelligentiis 
+                <app>
+                  <lem>eorumdem</lem>
+                  <rdg wit="#V">eorum</rdg>
+                </app> 
+                et generaliter omnes scientiae sunt reperibiles in Sacra Scriptura, licet non appareant expresse.</p> 
+             
+              <p xml:id="l18-eeciva">
+                <app>
+                  <lem>Et</lem>
+                  <rdg wit="#S" type="om."/>
+                </app> 
+                ex 
+                <cb ed="#V" n="35va"/> 
+                consequenti sequitur quod 
+                <app>
+                  <lem>omnes veritates</lem>
+                  <rdg wit="#S">omnis veritas</rdg>
+                </app> 
+                perfectiori modo et nobiliori 
+                <app>
+                  <lem>cognoscuntur</lem>
+                  <rdg wit="#S">cognoscitur</rdg>
+                </app> 
+                per theologiam quam per quamcumque aliam scientiam quia per theologiam 
+                <app>
+                  <lem>cognoscuntur</lem>
+                  <rdg wit="#S">veritates</rdg>
+                </app> 
+                et 
+                <app>
+                  <lem>quantum ad</lem>
+                  <rdg wit="#V">per</rdg>
+                </app>
+                sua principia effectiva et exemplativa, quia in Deo relucent et quantum etiam ad finem, et consequenter 
+                <app>
+                  <lem>etiam</lem>
+                  <rdg wit="#V" type="om."/>
+                </app> 
+                infert 
+                <ref>
+                  <seg>
+                    <app>
+                      <lem><name ref="#RogerBacon">Bacon</name></lem>
+                      <rdg wit="#S"><name ref="#Chatton">Chaton</name></rdg>
+                    </app>
+                  </seg>
+                  <bibl>Bacon, ??</bibl>
+                </ref> 
+                quod philosophi non habuerunt plenam notitiam 
+                <app>
+                  <lem>sive</lem>
+                  <rdg wit="#V">et</rdg>
+                </app> 
+                perfectam de iride, quia ignoraverunt eius causam finalem. Sed de isto 
+                <ref>
+                  <seg>videbitur alias.</seg>
+                  <bibl>[Cross reference]</bibl>
+                </ref>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <head xml:id="l18-Hptptpt">
+            <supplied>Principia theologiae</supplied>
+          </head>
+          <div>
+            <head xml:id="l18-Hpptsct">
+              <supplied>Primum principium theologiae et secunda conclusio lectionis: Quamvis Deum esse est primum principium theologia, tamen simul conclusio theologiae</supplied>
+            </head>
+            
+            <p xml:id="l18-viasct">Veniendo 
+              <app>
+                <lem>iterum</lem>
+                <rdg wit="#V">ergo</rdg>
+              </app> 
+              ad propositum, pono istam conclusionem secundam: quamvis <mentioned>Deum esse</mentioned> sit simpliciter et absolute primum principium, 
+              <app>
+                <lem>complexum</lem>
+                <rdg wit="#V">incomplexum</rdg>
+              </app> 
+              est tamen simul conclusio theologica.</p>
+            
+            <p xml:id="l18-uaesgh">Ubi 
+              <app>
+                <lem>advertendum</lem>
+                <rdg wit="#V">notandum</rdg>
+              </app> 
+              est 
+              <cb ed="#R" n="26va"/> 
+              quod varii possunt esse processus in theologia 
+              <app>
+                <lem>et quod</lem>
+                <rdg wit="#V">quando quia</rdg>
+              </app> 
+              eadem veritas aliquando accipitur ut antecedens, aliquando 
+              <app>
+                <lem>videtur</lem>
+                <rdg wit="#V">ut</rdg>
+              </app> 
+              consequens, nam per Sacram Scripturam deducitur quod <mentioned>Deus est</mentioned> et iterum per hoc quod <mentioned>Deus est</mentioned> 
+              <app>
+                <lem>deducitur</lem>
+                <rdg wit="#V" type="intextu">per</rdg>
+              </app> <mentioned>Sacram Scripturam esse</mentioned> 
+              <app>
+                <lem>et quaedam alia</lem>
+                <rdg wit="#V">cum alicuius aliis</rdg>
+              </app> 
+              unde 
+              <ref>
+                <title ref="#deut">Deuteronomii</title> 
+                <app>
+                  <lem><supplied>VI</supplied></lem>
+                  <rdg wit="#R #SV #S #V">V</rdg>
+                </app>
+              </ref> 
+              habetur 
+              <cit>
+                <quote ana="deut6_4">audi 
+                  <app>
+                    <lem>dominum</lem>
+                    <rdg wit="#V" type="om."/>
+                  </app> 
+                  <app>
+                    <lem>Deum tuum</lem>
+                    <rdg wit="#S" type="om."/>
+                  </app> 
+                  <app>
+                    <lem>Israel,</lem>
+                    <rdg wit="#V" type="om."/>
+                  </app> 
+                  quia unus est</quote>
+                <bibl>Deuteronomi 6:4</bibl>
+              </cit> 
+              et in 
+              <ref>
+                <title>symbolis</title>
+                <seg>The Apostles Creed, ??</seg>
+              </ref> 
+              etiam reperitur 
+              <mentioned>Deum esse</mentioned> 
+              <app>
+                <lem>et deducitur ex Sacra Scriptura 
+                  <mentioned>Deum esse,</mentioned>
+                </lem>
+                <rdg wit="#R" type="om." cause="homoteleuton"/>
+              </app> 
+              et tamen, ut dictum est, 
+              <app>
+                <lem>Sacra Scriptura</lem>
+                <rdg wit="#V">satis</rdg>
+              </app> 
+              <app>
+                <lem>deducitur</lem>
+                <rdg wit="#SV" type="corrDeletion">
+                  <corr>
+                    <del>ut de</del>
+                  </corr>
+                </rdg>
+              </app> 
+              ex eo quod Deus est, quia eo ipso quod Deus est, docet 
+              <app>
+                <lem>hominem</lem>
+                <rdg wit="#V" type="om."/>
+              </app> 
+              et sibi docet 
+              <app>
+                <lem>et</lem>
+                <rdg wit="#SV" type="corrAddition">
+                  <corr>
+                    <add>et</add>
+                  </corr>
+                </rdg>
+              </app> instruit scientiam mentalem, et consequenter scriptam et 
+              <app> <!-- sense is not clear here dbcheck -->
+                <lem>vocalem</lem>
+                <rdg wit="#S">vitalem</rdg>
+              </app> 
+              requisitam pro salute generis humani.</p>   
       
     </div>
     
