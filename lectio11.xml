@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"  xml:space="preserve">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,6 +37,12 @@
     </encodingDesc>
   </teiHeader>
   <text>
+    <front>
+      <div xml:id="includeList">
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
+        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio11">
         <head subtype="title">Lectio 11, De fide</head>
@@ -341,7 +347,7 @@
               <rdg wit="#V">rationi</rdg>
             </app> 
             consonant, immo sunt contra leges. Habeo enim testem idoneum de primo, scilicet, <name ref="#Seneca">Senecam</name>, qui dicitur fuisse de secta 
-            <unclear cert="low">mathematici</unclear> et de progenie sua. Unde dicit quod leges corporis sive voluptatis bene tradidit propheta noster <name ref="#Muhummad"><unclear>machometi</unclear></name>, sed 
+            <unclear cert="low">mathematici</unclear> et de progenie sua. Unde dicit quod leges corporis sive voluptatis bene tradidit propheta noster <name ref="#Muhammad"><unclear>machometi</unclear></name>, sed 
             <app> <!-- db check -->
               <lem>leges</lem>
               <rdg wit="#SV">legem</rdg>
