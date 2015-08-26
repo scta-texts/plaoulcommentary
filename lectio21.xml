@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -38,17 +38,22 @@
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include
+          href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml"
+          xpointer="worksCited"/>
+        <xi:include
+          href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml"
+          xpointer="prosopography"/>
+      </div>
     </front>
     <body>
      <div xml:id="lectio21"> 
        <head subtype="title">Lectio 21, de Notitia</head>
       
-       <p xml:id="l21-sqtppt">Secundum quod tactum est in lectione praecedenti ex divina providentia factum est quod res se ipsas diffundunt multiplicando species quasdam quia non possunt immediate se ipsis<app><lem>ipsis</lem><rdg wit="#R">ipsas</rdg></app> communicari sive cognosci, et sicut dictum est, omnia ista facta sunt ad utilitatem hominis, nam res istae inferiores ad usum hominis multipliciter<app><lem>multipliciter</lem><rdg wit="#R" type="add.">et</rdg></app> se offerunt ut eis utatur homo ad indigentias eius varias, ut<app><lem>ut</lem><rdg wit="#R">nec</rdg></app> aliquas consumendo<app><lem>consumendo</lem><rdg wit="#R" type="add.">nec</rdg></app> aliquas conservando<app><lem>conservando</lem><rdg wit="#R">observando</rdg></app> et ordinando ad alios usus secundum quod homini congruit, et nedum praesentant se huiusmodi res sive<app><lem>sive</lem><rdg wit="#R">se</rdg></app> offerunt pro indigentiis hominum succurrendo, sed etiam pro perfectione ipsius vel <cb ed="#V n=40vb"/> sicut<app><lem/><rdg wit="#R" type="add.sed.del">ab intellectu</rdg></app> ab ipso intellectu cognoscantur tam physice quantum ad eius proprietates naturales quam metaphysice sive mathematice et generaliter secundum omnes modos secundum quos intellectus perficitur eas cognoscendo et finaliter<app><lem/><rdg wit="#V" type="rep.">et finaliter</rdg></app> se praesentant sive offerunt ostendendo suum creatorem in quo consistit humana felicitas, et hoc testatur Augustinus in pluribus locis. Unde in libro <title>Confessionum</title> et in libro <title>De Civitate <supplied>[Dei]</supplied></title> sic inquit: <quote>“Totus enim iste mundus clamat se esse<app><lem>esse</lem><rdg wit="#R" type="om."/></app> factum a suo creatore. Tamen a turpe audientibus non auditur clamor iste”</quote>, ita quod generaliter omnes res mundi sunt sui ipsius diffusivae cognitive, id est, quod omnis res mundi, sive sit inmensa, sive intelligentia spiritualis, sive sit res corporalis, causat vel causare potest obiective sui ipsius cognitionem<app><lem>cognitionem</lem><rdg wit="#V">cognitive</rdg></app> in potentia cognitiva,<app><lem>cognitiva</lem><rdg wit="#R">cognoscente</rdg></app> et hoc ex divina providentia specialiter omnia bene disponente quod posui pro<app><lem>pro</lem><rdg wit="#R" type="add.">uno</rdg></app> principio theologico.</p>
+       <p xml:id="l21-sqtppt">Secundum quod tactum est in lectione praecedenti ex divina providentia factum est quod res se ipsas diffundunt multiplicando species quasdam quia non possunt immediate se ipsis<app><lem>ipsis</lem><rdg wit="#R">ipsas</rdg></app> communicari sive cognosci, et sicut dictum est, omnia ista facta sunt ad utilitatem hominis, nam res istae inferiores ad usum hominis multipliciter<app><lem>multipliciter</lem><rdg wit="#R" type="add.">et</rdg></app> se offerunt ut eis utatur homo ad indigentias eius varias, ut<app><lem>ut</lem><rdg wit="#R">nec</rdg></app> aliquas consumendo<app><lem>consumendo</lem><rdg wit="#R" type="add.">nec</rdg></app> aliquas conservando<app><lem>conservando</lem><rdg wit="#R">observando</rdg></app> et ordinando ad alios usus secundum quod homini congruit, et nedum praesentant se huiusmodi res sive<app><lem>sive</lem><rdg wit="#R">se</rdg></app> offerunt pro indigentiis hominum succurrendo, sed etiam pro perfectione ipsius vel 
+         <cb ed="#V" n="40vb"/> 
+         sicut<app><lem/><rdg wit="#R" type="add.sed.del">ab intellectu</rdg></app> ab ipso intellectu cognoscantur tam physice quantum ad eius proprietates naturales quam metaphysice sive mathematice et generaliter secundum omnes modos secundum quos intellectus perficitur eas cognoscendo et finaliter<app><lem/><rdg wit="#V" type="rep.">et finaliter</rdg></app> se praesentant sive offerunt ostendendo suum creatorem in quo consistit humana felicitas, et hoc testatur Augustinus in pluribus locis. Unde in libro <title>Confessionum</title> et in libro <title>De Civitate <supplied>[Dei]</supplied></title> sic inquit: <quote>“Totus enim iste mundus clamat se esse<app><lem>esse</lem><rdg wit="#R" type="om."/></app> factum a suo creatore. Tamen a turpe audientibus non auditur clamor iste”</quote>, ita quod generaliter omnes res mundi sunt sui ipsius diffusivae cognitive, id est, quod omnis res mundi, sive sit inmensa, sive intelligentia spiritualis, sive sit res corporalis, causat vel causare potest obiective sui ipsius cognitionem<app><lem>cognitionem</lem><rdg wit="#V">cognitive</rdg></app> in potentia cognitiva,<app><lem>cognitiva</lem><rdg wit="#R">cognoscente</rdg></app> et hoc ex divina providentia specialiter omnia bene disponente quod posui pro<app><lem>pro</lem><rdg wit="#R" type="add.">uno</rdg></app> principio theologico.</p>
       
        <div><head xml:id="l21-Hdeodeo">[Duae extremae opiniones]</head>
       
