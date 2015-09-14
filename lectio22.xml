@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -16,7 +16,7 @@
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <publisher>LombardPress</publisher>
         <pubPlace>Sacramento, CA</pubPlace>
         <availability status="free">
           <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
@@ -38,60 +38,774 @@
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="includeList">
+        <xi:include
+          href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml"
+          xpointer="worksCited"/>
+        <xi:include
+          href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml"
+          xpointer="prosopography"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio22">
       <head subtype="title">Lectio 22, de Notitia</head>
-           <div>
-       
-       <head xml:id="l22-Hcpdcpd">[Circa primam difficultatem ]</head>
+        <div>
+          <head xml:id="l22-Hcpdcpd">
+            <supplied>Circa primam difficultatem</supplied>
+          </head>
+          <p xml:id="l22-seqqlp">Sciendum est quod in praecedenti lectione dictum 
+            est quod quaelibet creatura potest concurrere 
+            obiective, 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#R #SV #S" type="om."/>
+              <note xml:lang="en">"et" is included because in our view it helps make the 
+              the antecedent of "hoc" more explicit.</note>
+            </app> 
+            hoc est potest efficere 
+            notitiam sui in potentia perceptiva. 
+            Nunc autem restat videndum ex quo notitia 
+            dicitur 
+            <app>
+              <lem>alterius</lem>
+              <rdg wit="#V">alicuius</rdg>
+            </app> 
+            obiecti notitia. Et circa hoc aliqua 
+            repetam quae dicta fuerunt in quadam lectione 
+            praecedenti.</p>
       
-             <p xml:id="l22-seqqlp">Sciendum est quod in lectione praecedenti dictum est quod quaelibet creatura potest concurrere obiective, et hoc est potest efficere notitiam sui in potentia perceptiva. Nunc autem restat videndum ex quo notitia dicitur alicuius<app><lem>alicuius</lem><rdg wit="#R">alterius</rdg></app> obiecti notitia. Et circa hoc aliqua repetam quae dicta fuerunt in quadam lectione praecedenti.</p>
+             <p xml:id="l22-ptqsss">Primo enim tangebatur quod notitia 
+               <cb ed="#V" n="43rb"/> 
+               sive cognitio non 
+               <app> 
+                 <lem wit="#V">dicitur</lem>
+                 <rdg wit="#R #SV #S">est</rdg>
+                 <note xml:lang="en">The reason for choosing "dicitur" and 
+                 the reading from V is partially related to the related 
+                 reading in the next two paragraphs where "dicitur" is 
+                 used in parallel contexts.</note>
+               </app> 
+               intrinsece 
+               <app>
+                 <lem>et</lem>
+                 <rdg wit="#R" type="corrDeletion">
+                   <corr>
+                     <del rend="strikethrough">q</del>
+                   </corr>
+                 </rdg>
+               </app> 
+               <app>
+                 <lem>essentialiter</lem>
+                 <rdg wit="#S" type="corrDeletion">
+                   <corr>
+                     <del rend="blackout">eo</del>
+                   </corr>
+                 </rdg>
+               </app> 
+               notitia sive cognitio. 
+               <app>
+                 <lem>Quod</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               patet quia staret 
+               per Dei potentiam quod esset sine 
+               <app>
+                 <lem wit="#S #V">subiecto,</lem>
+                 <rdg wit="#R #SV">obiecto</rdg>
+               </app> 
+               et 
+               <app>
+                 <lem>sic</lem><rdg wit="#V">tamen</rdg>
+               </app> 
+               non esset 
+               <cb ed="#R" n="33va"/> 
+               cognitio, quia nec sibi 
+               <app>
+                 <lem>nec alteri. Non sibi</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               quia non est potentia vitaliter perceptiva 
+               cum sit quoddam accidens; nec alteri per suppositum 
+               quia stat sine subiecto.</p>
       
-             <p xml:id="l22-ptqsss">Primo tangebatur quod notitia <cb ed="#V" n="43rb"/> sive cognitio non intrinsece et essentialiter dicitur<app><lem>dicitur</lem><rdg wit="#R">est</rdg></app> notitia sive cognitio.<app><lem>cognitio</lem><rdg wit="#R" type="add."><add>quod</add></rdg></app> Patet, quia staret per Dei potentiam quod esset sine subiecto,<app><lem>subiecto</lem><rdg wit="#R">obiecto</rdg></app> et tamen<app><lem>tamen</lem><rdg wit="#R">sic</rdg></app> non esset cognitio, quia nec sibi nec alteri non sibi,<app><lem>nec alteri non sibi</lem><rdg wit="#V" type="om."/></app> quia non est potentia vitaliter perceptiva cum sit quoddam accidens, nec alteri, per suppositum, quia stat sine subiecto.</p>
+             <p xml:id="l22-sdqdls">Secundo dicebatur quod notitia 
+               sive cognitio non 
+               <app>
+                 <lem>dicitur</lem>
+                 <rdg wit="#V" type="intextu">esse</rdg>
+               </app> 
+               notitia sive cognitio 
+               in habitudine ad suam potentiam 
+               <app>
+                 <lem>ut</lem>
+                 <rdg wit="#R #SV">nec</rdg>
+                 <note xml:lang="en">The reading of "ut" is supported 
+                 by the later use of "habitudine subiectiva" later 
+                 in this paragraph, so that the phrase is basically saying, 
+                 "as a subjective (disposition)."</note>
+               </app> 
+               <app>
+                 <lem wit="#SV #S #V">subiectiva,</lem>
+                 <rdg wit="#R">subiectivam</rdg>
+               </app> 
+               nam Deus de potentia 
+               <app>
+                 <lem>sua</lem>
+                 <rdg wit="#V" type="om."/> 
+               </app>
+               absoluta posset notitia 
+               ponere  
+               <app>
+                 <lem>in</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               lapide 
+               <app>
+                 <lem>et tunc</lem>
+                 <rdg wit="#V">vel</rdg>
+               </app> 
+               haberet huiusmodi 
+               habitudinem ad lapidem et 
+               <app>
+                 <lem>tamen</lem>
+                 <rdg wit="#V">cum</rdg>
+               </app> 
+               non esset notitia 
+               ex illa habitudine subiectiva ad lapidem 
+               nec denominaret lapidem 
+               <app>
+                 <lem>cognoscentem.</lem>
+                 <rdg wit="#V">scientem</rdg>
+               </app>
+             </p>
       
-             <p xml:id="l22-sdqdls">Secundo dicebatur quod notitia sive cognitio non dicitur esse notitia sive cognitio in habitudine ad suam potentiam ut<app><lem>ut</lem><rdg wit="#R">nec</rdg></app> subiectivam, nam Deus de potentia<app><lem>potentia</lem><rdg wit="#R" type="add."><add>sua</add></rdg></app> absoluta posset ponere notitiam in<app><lem>in</lem><rdg wit="#V" type="om."/></app> lapide vel<app><lem>vel</lem><rdg wit="#R">et tunc</rdg></app> haberet huiusmodi habitudinem ad lapidem et cum<app><lem>cum</lem><rdg wit="#R">tamen</rdg></app> non esset notitia ex illa habitudine subiectiva ad lapidem nec denominaret lapidem scientem.<app><lem>scientem</lem><rdg wit="#R">cognoscentem</rdg></app></p>
+             <p xml:id="l22-tdqatp">Tertio 
+               dicebatur quod notitia non dicitur notitia ex habitudine 
+               ad potentiam perceptivam ut eius activa, quia prius 
+               natura, saltem 
+               <cb ed="#SV" n="217ra"/> 
+               anima, producit notitiam quam vitaliter immutetur 
+               <app>
+                 <lem wit="#R #SV #V">ab ea,</lem>
+                 <rdg wit="#S">per eam</rdg>
+               </app> 
+               ergo Deus potest 
+               <app>
+                 <lem wit="#R #SV #S">separare primum a posteriori quia 
+                   quaecumque distincta Deus potest etc.</lem>
+                 <rdg wit="#V">etc.</rdg>
+               </app> 
+               Ergo de potentia Dei absoluta 
+               <app>
+                 <lem>primum</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               <app>
+                 <lem>posset</lem>
+                 <rdg wit="#R">possent</rdg>
+               </app> 
+               poni sine 
+               secundo, et per consequens staret quod esset productio huiusmodi 
+               notitiae 
+               <app>
+                 <lem>ab anima</lem>
+                 <rdg wit="#S">a potentia</rdg>
+               </app> 
+               <app>
+                 <lem>cognitiva,</lem>
+                 <rdg wit="#R" type="corrReplace">
+                   <corr>
+                     <del rend="strikethrough">intellectiva</del>
+                     <add place="inLine">cognitiva</add>
+                   </corr>
+                 </rdg>
+               </app> 
+               et tamen 
+               qualitas non esset animae cognitio. Ideo dicebatur 
+               consequenter quod cognitio dicitur cognitio ex habitudine 
+               <app>
+                 <lem>
+                   <app>
+                    <lem>illa</lem>
+                    <rdg wit="#R #SV">secunda</rdg>
+                  </app>
+                   ut potentia vitaliter immutabilis, id est, ex 
+                   habitudine</lem>
+                 <rdg wit="#V" type="om." cause="homeotelueton"/>
+               </app> 
+               illa qua talis potentia est obiecti per illam 
+               qualitatem 
+               <app>
+                 <lem>cognitiva</lem>
+                 <rdg wit="#R #SV" cert="medium">cognoscitiva</rdg>
+               </app> 
+               et non ut subiectiva vel ut 
+               productiva, sed ut 
+               <app>
+                 <lem>obiecti</lem>
+                 <rdg wit="#V">subiecti</rdg>
+               </app> 
+               perceptiva, ita quod notitia 
+               sive cognitio ex habitudine illa 
+               <app>
+                 <lem>dicitur</lem>
+                 <rdg wit="#V" type="intextu">esse</rdg>
+               </app> 
+               <app>
+                 <lem>notitia ex qua sive</lem>
+                 <rdg wit="#S #V" type="om."/>
+               </app> 
+               cognitio ex qua 
+               <app>
+                 <lem>unit</lem>
+                 <rdg wit="#S" type="om."><space extent="oneWordLength"/></rdg>
+               </app> 
+               potentiam cognitivam 
+               intentionaliter cum obiecto per eam cognito 
+               <app>
+                 <lem>et</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               a tali potentia.</p>
       
-             <p xml:id="l22-tdqatp">Tertio dicebatur quod notitia non dicitur notitia ex habitudine ad potentiam perceptivam ut eius activa, quia prius natura saltem anima producit notitiam quam vitaliter immutetur ab ea, ergo Deus potest separare <anchor xml:id="l22-APP-pap"/>primum a posteriori quia quidquid distincta Deus potest etc.<app><lem>separare primum . . potest etc</lem><rdg wit="#V">etc.</rdg></app> Ergo de potentia Dei absoluta primum<app><lem>primum</lem><rdg wit="#R" type="om."/></app> posset<app><lem>posset</lem><rdg wit="#R">possent</rdg></app> poni sine secundo, et per consequens staret quod esset productio huiusmodi notitiae ab anima cognitiva,<app><lem>cognitiva</lem><rdg wit="#?" type="corr."><del>intellectiva</del><add>cognitiva</add></rdg></app> et tamen huiusmodi animae <app><lem>animae</lem><rdg wit="#R" type="om."/></app>qualitas non esset animae<app><lem>animae</lem><rdg wit="#V" type="om."/></app> cognitio. Ideo dicebatur consequenter quod cognitio dicitur cognitio ex habitudine <anchor xml:id="l22-APP-upv"/>ut potentia vitaliter immutabilis, id est, ex habitudine<app><lem>ut potentia. . . ex habitudine</lem><rdg wit="#V" type="om."/></app> illa qua talis potentia est obiecti per illam qualitatem cognitiva et non ut subiectiva vel ut productiva, sed ut subiecti<app><lem>subiecti</lem><rdg wit="#R">obiecti</rdg></app> perceptiva, ita quod notitia sive cognitio ex habitudine illa dicitur esse cognitio ex qua<app><lem>esse cognitio ex qua</lem><rdg wit="#R">notitia ex qua sive cognitio ex qua</rdg></app> unit potentiam cognitivam intentionaliter cum obiecto per eam cognito<app><lem>cognito</lem><rdg wit="#R" type="add."><add>et</add></rdg></app> a tali potentia.</p>
+             <p xml:id="l22-eavenu">Et antequam veniam ad principalem difficultatem 
+               materiae tactae, scilicet, ex quo notitia dicitur 
+               esse obiecti repraesentativa. Advertendum est quod 
+               notitia potest dici alicuius obiecti 
+               <app>
+                 <lem>repraesentativa</lem>
+                 <rdg wit="#V" type="corrReplace">
+                   <corr>
+                     <del rend="strikethrough">rnp</del>
+                     <add place="inLine">repraesentativa</add>
+                   </corr>
+                 </rdg>
+                 <rdg wit="#R #SV #S">notitia</rdg>
+               </app> 
+               multipliciter. 
+               Uno modo potest dici notitia universalis, 
+               et sic conceptus entis esset Dei notitia, quia cuiuslibet rei est 
+               notitia universalis tamen.</p> <!-- the sense of tamen here is unclear, but clearly present in each witness -->
       
-             <p xml:id="l22-eavenu">Et antequam veniam ad principalem difficultatem materiae tactae, scilicet, ex quo notitia dicitur esse obiecti repraesentativa etc.,<app><lem>etc.</lem><rdg wit="#R" type="om."/></app> advertendum est quod notitia potest dici alicuius obiecti repraesentativa<app><lem>repraesentativa</lem><rdg wit="#V" type="corr."><corr><del>rnp</del><add>repraesentativa</add></corr></rdg><rdg wit="#R">notitia</rdg></app> multipliciter. Uno modo potest dici notitia universalis, et sic conceptus entis esset Dei notitia, quia cuiuslibet rei est notitia universalis [tantum].<app><lem>tantum</lem><rdg wit="#V">tamen</rdg></app></p>
+             <p xml:id="l22-sancid">Secundo, aliqua notitia potest esse 
+               alicuius obiecti notitia, propter aliquam determinationem, 
+               ita 
+               <cb ed="#S" n="39va"/> 
+               quod propter illam determinationem conceptus ille vel 
+               notitia esset proprius conceptus vel notitia Dei. Verbi gratia, 
+               dato 
+               <app>
+                 <lem wit="#R #SV #S">quod</lem>
+                 <rdg wit="#V" type="om."/>
+                 <rdg wit="#SV" type="corrDeletiong">
+                   <corr>
+                     <del rend="expunctuated">alicui</del>
+                   </corr>
+                 </rdg>
+               </app>
+               <app>
+                 <lem>conceptui</lem>
+                 <rdg wit="#V">conceptu</rdg>
+               </app>
+               entis 
+               <app>
+                 <lem>superaddatur</lem>
+                 <rdg wit="#V">si addatur</rdg>
+               </app> 
+               <app>
+                 <lem>sibi</lem>
+                 <rdg wit="#S" type="om."/>
+                 <rdg wit="#V" type="intextu">etiam immediate</rdg> <!-- meaning and contribution unlear -->
+               </app>
+               ista determinatio 
+               <mentioned>a se</mentioned> vel 
+               <mentioned>independens</mentioned> 
+               vel 
+               <mentioned>primum</mentioned>, 
+               ille conceptus <mentioned>ens a se,</mentioned> 
+               vel <mentioned>
+                 <app>
+                   <lem>ens</lem>
+                   <rdg wit="#V" type="om."/>
+                 </app> 
+                 independens,</mentioned> 
+               vel <mentioned>
+                 <app>
+                   <lem>ens</lem>
+                   <rdg wit="#R" type="om."/>
+                 </app> 
+                 primum,</mentioned> 
+               <app>
+                 <lem>et sic de aliis</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               erit proprie conceptus Dei adaequate supponens 
+               pro ipso, 
+               <app>
+                 <lem>licet nulla</lem>
+                 <rdg wit="#V">nulla tamen</rdg>
+               </app> 
+               pars esset proprie conceptus 
+               <app> <!-- ipsius is more explicit, but maybe overkill; conisder revising -->
+                 <lem wit="#V">ipsius</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               <cb ed="#V" n="43va"/> 
+               Dei.</p>
       
-             <p xml:id="l22-sancid">Secundo, aliqua notitia potest esse alicuius obiecti notitia, propter aliquam determinationem, ita quod propter illam determinationem conceptus ille vel notitia esset proprius conceptus vel notitia Dei. Verbi gratia, dato<app><lem>dato</lem><rdg wit="#R" type="add."><add>quod</add></rdg></app> conceptu<app><lem>conceptu</lem><rdg wit="#R">conceptus</rdg></app> entis, si addatur<app><lem>si addatur</lem><rdg wit="#R">superaddatur</rdg></app> sibi etiam immediate<app><lem>etiam immediate</lem><rdg wit="#R" type="om."/></app> ista determinatio <mentioned>"a se"</mentioned> vel <mentioned>"independens"</mentioned> vel <mentioned>"primum"</mentioned> etc.,<app><lem>etc.</lem><rdg wit="#R" type="om."/></app> ille conceptus <mentioned>"ens a se,"</mentioned> vel <mentioned>"ens<app><lem>ens</lem><rdg wit="#V" type="om."/></app> independens,"</mentioned> vel <mentioned>"ens<app><lem>ens</lem><rdg wit="#R" type="om."/></app> primum,"</mentioned> et sic de aliis<app><lem>et sic de aliis</lem><rdg wit="#R" type="om."/></app> erit proprie conceptus Dei adaequate supponens pro ipso. Nulla tamen<app><lem>tamen</lem><rdg wit="#R" type="om."/></app> pars esset proprie conceptus ipsius<app><lem>ipsius</lem><rdg wit="#R" type="om."/></app> <cb ed="#V" n="43va"/> Dei.</p>
+             <p xml:id="l22-tcdeds">Tertio 
+               contingit de re causari notitia in particulari 
+               ut 
+               <app>
+                 <lem>apparet</lem>
+                 <rdg wit="#S">patet</rdg>
+               </app> 
+               de conceptu singulari simplici adaequate 
+               <app>
+                 <lem>supponente</lem>
+                 <rdg wit="#R #SV #S">supponens</rdg>
+               </app> 
+               pro illo obiecto, et sic de Deo mediante 
+               conceptu creaturae imaginandum est quod posset elici aliquis 
+               conceptus singularis et proprius. Sed de hoc erit postea 
+               difficultas specialis.</p>
       
-             <p xml:id="l22-tcdeds">Tertio contingit de re causari notitia in particulari ut apparet de conceptu singulari simplici<app><lem>simplici</lem><rdg wit="#R">simpliciter</rdg></app> adaequate supponente<app><lem>supponente</lem><rdg wit="#R">supponens</rdg></app> pro illo obiecto, et sic de Deo mediante conceptu creaturae imaginandum est quod posset elici aliquis conceptus singularis et proprius. Sed de hoc postea erit difficultas specialis.<app><lem>specialis</lem><rdg wit="#R" type="add."><add>et</add></rdg></app></p>
+             <p xml:id="l22-qmpbip">
+               <app>
+                 <lem>Et</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               quarto modo potest haberi 
+               notitia de aliquo non terminata ad aliud 
+               <app>
+                 <lem>nec</lem>
+                 <rdg wit="#S">ut</rdg>
+               </app> 
+               immediate causata ab alio, sed immediate 
+               <app>
+                 <lem>causata</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+                 <note xml:lang="en">An example of choosing the more explicit reading.</note>
+               </app> 
+               ab obiecto, sicut 
+               <app>
+                 <lem>esset</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+                 <note xml:lang="en">An example of choosing the more explicit reading.</note>
+               </app> 
+               notitia intuitiva Dei hic in via, sicut potuit esse in 
+               <name ref="#Paul">Paulo</name>, et sicut est 
+               <app>
+                 <lem>in</lem>
+                 <rdg wit="#R">de</rdg>
+               </app> 
+               beatis 
+               in patria 
+               <app>
+                 <lem wit="#SV #S #V">de notitia beatifica intuitiva ipsius Dei quam habent beati 
+               in patria.</lem>
+                 <rdg wit="#R" type="om." cause="homeoteleuton"/>
+               </app>
+             </p> 
       
-             <p xml:id="l22-qmpbip">Quarto modo potest haberi notitia de aliquo non terminata ad aliud nec immediate causata ab alio, sed immediate causata<app><lem>causata</lem><rdg wit="#R" type="om."/></app> ab obiecto, sicut est<app><lem>est</lem><rdg wit="#R" type="om."/></app> notitia intuitiva Dei hic in via, sicut potuit esse in Paulo, et sicut est in<app><lem>in</lem><rdg wit="#R">de</rdg></app> beatis in patria de notitia beatifica intuitiva ipsius Dei quam habent beati in patria.<app><lem>de notitia . . . in patria</lem><rdg wit="#R" type="om."/></app></p> 
+             <p xml:id="l22-uaeeed">Ulterius advertendum 
+               <app>
+                 <lem>est</lem>
+                 <rdg wit="#S" type="om."/>
+               </app> 
+               quod differentia est inter notitiam universalem et confusam, nam notitia 
+               confusa potest esse sive sit singularis sive universalis. Unde notitia confusa et notitia 
+               <app>
+                 <lem>distincta</lem>
+                 <rdg wit="#V">discreta</rdg>
+               </app> 
+               <app>
+                 <lem>per hoc distinguuntur, quia notitia distincta</lem>
+                 <rdg wit="#V" type="om." cause="homeoteleuton"/>
+               </app> 
+               est causa eliciendi 
+               immediate propositiones affirmativas et negativas plures de obiecto 
+               cognito 
+               <app>
+                 <lem>per eam vel est notitia ex qua intellectus 
+                   potest immediate elicere plura praedicata essentialia 
+                   de obiecto cognito</lem>
+                 <rdg wit="#V" type="om." cause="homeotelueton"/>
+               </app> 
+               sive affirmativa sive negativa. Notitia vero confusa et 
+               <app>
+                 <lem>indistincta</lem>
+                 <rdg wit="#R" type="corrReplace">
+                   <corr>
+                     <del rend="strikethrough">distributiva</del>
+                     <add place="inLine">indistincta</add>
+                   </corr>
+                 </rdg>
+               </app> 
+               est illa ex qua non possunt sic elici plura 
+               praedicata affirmativa et negativa obiecti cogniti. Exemplum ponatur 
+               quod <name ref="#Sortes">Sortes</name> videat <name ref="#Plato">Platonem</name> a tanta distantia 
+               quod virtute 
+               <cb ed="#SV" n="217rb"/> 
+               suae cognitionis non possit elicere 
+               magis particulare iudicium de <name ref="#Plato">Platone</name> nisi quod 
+               est corpus, deinde videat <name ref="#Cicero">Ciceronem</name> prope 
+               <app>
+                 <lem>se</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               vel 
+               <name ref="#Plato">Platonem</name> 
+               <app>
+                 <lem>multiplicatum</lem>
+                 <rdg wit="#V">multum</rdg>
+               </app> 
+               prope se. Tunc eandem rem 
+               <app>
+                 <lem><name ref="#Sortes">Sortes</name></lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+                 <note xml:lang="en">Here we prefer the reading that explicitly state the subject of the sentence.</note>
+               </app> 
+               cognoscet confuse et 
+               <app>
+                 <lem>
+                   <app>
+                     <lem>indistincte</lem>
+                     <rdg wit="#SV" type="corrReplace">
+                       <corr>
+                         <del>distincte</del>
+                         <add>indistincte</add>
+                       </corr>
+                     </rdg>
+                   </app> 
+                   et etiam distincte.</lem>
+                 <rdg wit="#R" type="om." cause="homeoteleuton"/>
+               </app>
+             </p>  
       
-             <p xml:id="l22-uaeeed">Ulterius advertendum est quod differentia est inter notitiam universalem et confusam, nam notitia confusa potest esse sive sit universalis sive singularis. Unde notitia confusa et notitia distincta<app><lem>per hoc . . . distincta</lem><rdg wit="#V" type="om."/></app> per hoc distinguuntur, quia notitia distincta<app><lem>distincta</lem><rdg wit="#V">discreta</rdg></app> est causa eliciendi immediate propositiones affirmativas et negativas plures de obiecto cognito per eam vel est notitia ex qua intellectus potest immediate elicere plura praedicata essentialia de obiecto cognito<app><lem>per eam . . . obiecto cognito</lem><rdg wit="#V" type="om."/></app> sive affirmativa sive negativa. Notitia vero confusa et indistincta<app><lem>indistincta</lem><rdg wit="#?" type="corr."><corr><del>atribunam</del><add>indistincta</add></corr></rdg></app> est illa ex qua non sic possunt elici plura praedicata affirmativa et negativa obiecti cogniti. Exemplum ponatur quod Sortes videat Platonem a tanta distantia quod virtute suae cognitionis non possit elicere magis particulare iudicium de Platone nisi quod est corpus, deinde videat Ciceronem prope se<app><lem>se</lem><rdg wit="#V" type="om."/></app> vel Plationem multum<app><lem>multum</lem><rdg wit="#R">multiplicatum</rdg></app> prope se. Tunc eandem rem Sortes<app><lem>Sortes</lem><rdg wit="#R" type="om."/></app> cognoscet confuse et indistincte et etiam distincte.<app><lem>indistincte et etiam distincte</lem><rdg wit="#R" type="om."/></app></p>  
+             <p xml:id="l22-iecude">Indistincte 
+               et confuse cognoscet <name ref="#Plato">Platonem</name> distantem 
+               ab eo, quia virtute illius cognitio causata 
+               ab eo sic 
+               <app>
+                 <lem wit="#S #V">distante</lem>
+                 <rdg wit="#R #SV">distantem</rdg>
+                 <note xml:lang="en">Here R and SV mistakenly make "distante" accusative instead of agreeing with the 
+                 ablative antecedent "eo".</note>
+               </app> 
+               quam habet <name ref="#Sortes">Sortes</name>, non potest 
+               <name ref="#Sortes">Sortes</name> elicere iudicium 
+               <app>
+                 <lem>aliquod</lem>
+                 <rdg wit="#S" type="om."/>
+               </app> 
+               particulare nisi quod 
+               <app>
+                 <lem>sit</lem>
+                 <rdg wit="#V">est</rdg>
+               </app> 
+               corpus. 
+               Nec potest elicere virtute illius cognitionis 
+               utrum sit animatum vel 
+               <app>
+                 <lem wit="#R #SV">non animatum,</lem>
+                 <rdg wit="#S V">inanimatum</rdg>
+               </app> 
+               utrum sit animal 
+               vel planta, utrum sit animal rationale vel irrationale, 
+               utrum sit homo 
+               <cb ed="#S" n="39vb"/> 
+               vel asinus, utrum sit <name ref="#Sortes">Sortes</name> vel 
+               <name ref="#Plato">Plato</name>, nam si 
+               <app>
+                 <lem wit="#SV #V #S">interrogetur,</lem>
+                 <rdg wit="#R">interrogaretur</rdg>
+               </app> 
+               utrum sit animal vel non, 
+               <app>
+                 <lem>utrum sit</lem>
+                 <rdg wit="#R SV #S" type="om."/>
+                 <note xml:lang="en">A good example of our preference for the more explicit reading.</note>
+               </app> 
+               vivens vel non, semper dubitabit, et hoc ratione confusionis 
+               notitiae ignorabit de ipso tam praedicata 
+               affirmativa quam negativa, ut dictum est.</p> 
       
-             <p xml:id="l22-iecude">Indistincte et confuse cognoscet Plationem ab eo distantem, quia virtute illius cognitio causata ab eo sic distante<app><lem>distante</lem><rdg wit="#R">distantem</rdg></app> quam habet Sortes, non potest Sortes elicere iudicium aliquod partiuclare nisi quod est corpus. Nec potest elicere virtute illius congnitionis utrum sit animatum vel inanimatum,<app><lem>inanimatum</lem><rdg wit="#R">non animatum</rdg></app> utrum sit animal vel planta, utrum sit animal rationale vel irrationale, utrum sit homo vel asinus, utrum sit Sortes vel Plato etc.,<app><lem>etc.</lem><rdg wit="#R" type="om."/></app> nam si interrogetur,<app><lem>interrogetur</lem><rdg wit="#R">interrogaretur</rdg></app> utrum sit animal vel non, utrum<app><lem>utrum</lem><rdg wit="#R" type="om."/></app> sit vivens vel non, semper dubitabit et hoc ratione confusionis notitiae ignorabit de ipso tam praedicata affirmativa quam negativa, ut dictum est.</p> 
+             <p xml:id="l22-cesnsp">Cognoscet etiam 
+               <app>
+                 <lem><name ref="#Sortes">Sortes</name></lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               <name ref="#Plato">Platonem</name> 
+               <app>
+                 <lem>distincte</lem>
+                 <rdg wit="#V">distante</rdg>
+               </app> 
+               <app>
+                 <lem>et</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               notitia distincta 
+               causata a <name ref="#Plato">Platone</name> prope se existente, quia virtute illius 
+               notitiae poterit elicere praedicata affirmativa 
+               <app>
+                 <lem>et</lem>
+                 <rdg wit="#V">vel</rdg>
+               </app> 
+               negativa essentialia 
+               <app>
+                 <lem>et accidentalia</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               de ipso 
+               <name ref="#Plato">Platone</name>, nam 
+               primo sciet, mediante illa notitia, quod est corpus 
+               <app>
+                 <lem>sed</lem>
+                 <rdg wit="#V">et</rdg>
+               </app> 
+               non est incorporeum, quod est vivens et 
+               <app>
+                 <lem>quod</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               non est non vivens, 
+               <cb ed="#V" n="43vb"/> 
+               quod est animal et non 
+               <app>
+                 <lem>est</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               planta, 
+               <app>
+                 <lem>quod animal rationale et non brutum,</lem>
+                 <rdg wit="#V" type="om." cause="homeoteleuton"/>
+               </app>
+               quod est homo 
+               et non 
+               <app>
+                 <lem>est</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               asinus, 
+               <app>
+                 <lem>quod</lem>
+                 <rdg wit="#R #SV">igitur</rdg>
+                 <note xml:lang="en">Here R and SV, showing their close 
+                 relationship seem to have mistaken "quod" for "igitur"</note>
+               </app>  
+               est 
+               <name ref="#Plato">Plato</name> 
+               et non 
+               <app>
+                 <lem>est</lem>
+                 <rdg wit="#R #SV #S" type="om."/>
+               </app> 
+               <name ref="#Sortes">Sortes</name>, 
+               et sic continue 
+               descendendo per praedicata affirmativa, removendo differentias 
+               negativas. Et per conceptum confusum non posset 
+               sic, ideo 
+               <app>
+                 <lem>vocatur</lem>
+                 <rdg wit="#R #SV">bona</rdg>
+               </app> 
+               notitia 
+               <app>
+                 <lem>distincta</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               quia est causa sufficiens 
+               <app>
+                 <lem wit="#S #V">eliciendo</lem>
+                 <rdg wit="#R #SV">eligendi</rdg>
+               </app> 
+               notitiam de distinctione obiecti a rebus 
+               <app>
+                 <lem>a quibus</lem>
+                 <rdg wit="#S">aliquibus</rdg>
+                 <rdg wit="#V">quibus</rdg>
+               </app> 
+               <app>
+                 <lem>differt,</lem>
+                 <rdg wit="#S" type="om."/>
+               </app> 
+               et notitia 
+               <app>
+                 <lem wit="#S">vocatur</lem>
+                 <rdg wit="#R #SV">bona</rdg>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               confusa quae non sic potest.</p> 
       
-             <p xml:id="l22-cesnsp">Cognoscet etiam Sortes<app><lem>Sortes</lem><rdg wit="#V" type="om."/></app> Platonem distincte<app><lem>distincte</lem><rdg wit="#V">distante</rdg></app> notitia distincta causata a Platone prope se existente, quia virtute illius notitiae poterit elicere praedicata affirmativa vel<app><lem>vel</lem><rdg wit="#R">et</rdg></app> negativa essentialia de ipso Platone, nam primo sciet, mediante illa notitia, quod est corpus et<app><lem>et</lem><rdg wit="#R">sed</rdg></app> non est incorporeum, quod est vivens et quod<app><lem>quod</lem><rdg wit="#V" type="om."/></app> non est non vivens, [43vb] quod est animal et non est<app><lem>est</lem><rdg wit="#R" type="om."/></app> planta, quod animal rationale et non brutum,<app><lem>quod animal . . . brutum</lem><rdg wit="#V" type="om."/></app> quod est homo et non est<app><lem>est</lem><rdg wit="#R" type="om."/></app> asinus,<app><lem>asinus</lem><rdg wit="#R" type="add."><add>igitur</add></rdg></app> quod est<app><lem>est</lem><rdg wit="#R" type="om."/></app> Plato et non est<app><lem>est</lem><rdg wit="#R" type="om."/></app> Sortes, etc.,<app><lem>etc.</lem><rdg wit="#R" type="om."/></app> et sic continue descendendo per praedicata affirmativa, removendo differentias negativas, etc.<app><lem>etc.</lem><rdg wit="#R" type="om."/></app> Et per conceptum confusum non posset sic, ideo vocatur<app><lem>vocatur</lem><rdg wit="#R" type="om."/></app> bona notitia distincta<app><lem>bona notitia distincta</lem><rdg wit="#V">notitia</rdg></app> quia est causa sufficiens eliciendo<app><lem>eliciendo</lem><rdg wit="#R">eligendi</rdg></app> notitiam de distinctione obiecti a rebus<app><lem>rebus</lem><rdg wit="#R" type="add."><add>a</add></rdg></app> quibus differt, et notitia bona<app><lem>bona</lem><rdg wit="#V" type="om."/></app> confusa, quae non sic potest.</p> 
-      
-             <p xml:id="l22-qaedvi">Quantum autem est de notitia unversali sibi non repugnat quod sit distincta, unde circa hoc posset imaginari quod notitia universalis secundum unitatem intellectus in quo existeret continue ascendendo secundum perfectionem intellectus quod quanto esset in intellectu perfectiori et vivaciori<app><lem>perfectiori et vivaciori</lem><rdg wit="#V">vivacior</rdg></app> tanto esset distinctior, ita quod absolute non repugnat quod eadem notitia sit distincta et universalis, ita quod imaginandum est quod universalitas non includit confusionem sive indistinctionem notitiae, sed solum pluralitatem obiectorum, ita quod de ratione cognitionis universalis est quod semper plurium cognitio; utrum autem distincte vel indistincte de ratione<app><lem>ratione</lem><rdg wit="#R" type="add."><add>sua</add></rdg></app> non est quod distincte vel indistincte.</p> 
+             <p xml:id="l22-qaedvi">Quantum autem est de notitia 
+               universali sibi non repugnat quod sit distincta, 
+               unde circa hoc posset imaginari quod notitia 
+               <cb ed="#R" n="34ra"/>
+               universalis secundum unitatem intellectus in quo existeret 
+               continue ascendendo secundum perfectionem intellectus 
+               quod quanto esset in intellectu 
+               <app>
+                 <lem>perfectiori et vivaciori</lem>
+                 <rdg wit="#V">vivacior</rdg>
+               </app> 
+               tanto esset distinctior, ita quod absolute non repugnat quod eadem notitia sit distincta et universalis, ita quod imaginandum est quod universalitas non includit confusionem sive indistinctionem notitiae, sed solum pluralitatem obiectorum, ita quod de ratione cognitionis universalis 
+               est 
+               <app>
+                 <lem>quod</lem>
+                 <rdg wit="#S" type="intextu">sit</rdg>
+               </app> 
+               semper sit plurium cognitio; utrum 
+               autem distincte vel indistincte de ratione 
+               <app>
+                 <lem>sua</lem>
+                 <rdg wit="#V" type="om."/>
+               </app> 
+               non est quod distincte vel indistincte.</p> 
      </div>
       <div> 
         <head xml:id="l22-Hqcqcqc">[Quattuor conclusiones]</head>
       
-        <p xml:id="l22-vtaeqr">Veniendo tamen ad propositum principale ponam tres conclusiones negativas<app><lem>negativas</lem><rdg wit="#R" type="om."/></app> contra tres modos imaginandi quod aliqua<app><lem>aliqua</lem><rdg wit="#R" type="om."/></app> notitia sit<app><lem>sit</lem><rdg wit="#V" type="om."/></app> sui obiecti repraesentativa<app><lem>repraesentativa</lem><rdg wit="#V" type="add.sed.del"><del>vel repraesentativus sui obiecti ratione convenientiae specificae ex qua radice</del></rdg></app> ex quadam<app><lem>quadam</lem><rdg wit="#V">qua</rdg></app> radice.</p>  
+        <p xml:id="l22-vtaeqr">Veniendo tamen ad propositum principale ponam tres 
+          conclusiones 
+          <app>
+            <lem>negativas</lem>
+            <rdg wit="#R #SV #S" type="om."/>
+            <note xml:lang="en">An good example of why the more explicit 
+            can be informative and helpful.</note>
+          </app> 
+          contra tres modos <!-- the vat order of tres modos is preferred here --> 
+          imaginandi quod 
+          <app>
+            <lem>aliqua</lem>
+            <rdg wit="#R #SV #S" type="om."/>
+          </app> 
+          notitia 
+          <app>
+            <lem>sit</lem>
+            <rdg wit="#V" type="om."/>
+          </app> 
+          sui obiecti 
+          <app>
+            <lem>repraesentativa</lem>
+            <rdg wit="#V" type="corrDeletion">
+              <corr>
+                <del>vel repraesentativus sui 
+                obiecti ratione convenientiae 
+                specificae</del>
+              </corr>
+            </rdg>
+          </app> 
+          <app>
+            <lem wit="#R #SV #V">ex 
+              <app>
+                <lem wit="#R #SV">quadam</lem>
+                <rdg wit="#V">qua</rdg>
+              </app>
+              radice.</lem>
+            <rdg wit="#S" type="om."/>
+          </app>
+        </p>  
       
-        <p xml:id="l22-pcnaso">Prima conclusio: notitia sive conceptus non dicitur repraesentativa vel repraesentativus sui<app><lem>sui</lem><rdg wit="#R" type="om."/></app> obiecti ratione similitudinis ipsius ad suum obiectum.</p>
+        <p xml:id="l22-pcnaso">Prima conclusio: 
+          notitia sive conceptus non dicitur repraesentativa vel repraesentativus 
+          <app>
+            <lem>sui</lem>
+            <rdg wit="#R #SV #S" type="om."/>
+          </app> 
+          obiecti ratione similitudinis ipsius ad suum obiectum.</p>
       
-        <p xml:id="l22-sccocc">Secunda conclusio: conceptus non dicitur esse<app><lem>esse</lem><rdg wit="#R" type="om."/></app> repraesentativus<app><lem>repraesentativus</lem><rdg wit="#R">reprehensivus</rdg></app> sui obiecti ratione convenientiae specificae repertae inter ipsum et obiectum essentialis in praedicatis essentialibus et<app><lem>et</lem><rdg wit="#R">vel</rdg></app> denominationibus essentialibus sibi et obiecto communibus convenientibus.<app><lem>convenientibus</lem><rdg wit="#V" type="om."/></app></p>
+        <p xml:id="l22-sccocc">Secunda conclusio: conceptus non dicitur 
+          <app>
+            <lem>esse</lem>
+            <rdg wit="#R" type="om."/>
+          </app> 
+          <app>
+            <lem>repraesentativus</lem>
+            <rdg wit="#R">repraehensivus</rdg>
+          </app> 
+          sui obiecti ratione convenientiae specificae repertae inter 
+          ipsum et obiectum essentialis in praedicatis 
+          <app>
+            <lem>essentialibus</lem>
+            <rdg wit="#R #SV #S" type="om."/>
+          </app> 
+          <app>
+            <lem>vel</lem>
+            <rdg wit="#V">et</rdg>
+          </app> 
+          denominationibus essentialibus sibi et obiecto 
+          <app>
+            <lem>convenientibus.</lem>
+            <rdg wit="#V">communibus</rdg>
+          </app>
+        </p>
       
-        <p xml:id="l22-tcchdh">Tertia conclusio: conceptus non dicitur esse sui obiecti repraesentativus ex conditione sua specifica vel ex conditione<app><lem>sua specifica vel ex conditione</lem><rdg wit="#V" type="om."/></app> suae naturae specificae, quod idem est; et ista conclusio <app><lem/><rdg wit="#R" type="add."><add>tertio</add></rdg></app> est contra <name ref="#Oyta">Magistrum Henricum de Heuta</name>.<note>Henricus Totting de Oyta; textus istius auctoris hic positus non invenimus</note></p> 
+        <p xml:id="l22-tcchdh">Tertia conclusio: conceptus non dicitur esse sui obiecti repraesentativus 
+          ex conditione 
+          <app>
+            <lem>sua specifica vel ex conditione</lem>
+            <rdg wit="#V" type="om." cause="hometeleuton"/>
+          </app> 
+          suae naturae specificae, quod idem est; et 
+          <ref>
+            <seg>ista conclusio tertio 
+              est contra <name ref="#Oyta">Magistrum Henricum de Oyta</name>.</seg>
+            <bibl>Henricus Totting de Oyta; non invenimus</bibl>
+          </ref>
+        </p> 
       
-        <p xml:id="l22-qcaeio">Quarta conclusio affirmativa cui<app><lem>cui</lem><rdg wit="#R">et</rdg></app> forte postea addam aliqua quae non dicam pro nunc. Ideo recitatur<app><lem>recitatur</lem><rdg wit="#R">recipiatur</rdg></app> conclusio pro nunc cum protestatione aliquali quali<app><lem>quali</lem><rdg wit="#R">aliqualiter</rdg></app> postea declaranda,<app><lem>declaranda</lem><rdg wit="#V">dirigenda</rdg></app> etc.<app><lem>etc</lem><rdg wit="#R" type="om."/></app> Conclusio ergo sit<app><lem>sit</lem><rdg wit="#R">est</rdg></app> ista affirmativa quod conceptui convenit repraesentare suum obiectum ex modo habitudinum causarum proximarum ad ipsius productionem concurrentium et ex modo motivitatis potentiae ab obiecto et in obiectum.</p> 
+        <p xml:id="l22-qcaeio">Quarta conclusio affirmativa 
+          <app>
+            <lem>cui</lem>
+            <rdg wit="#R">et</rdg>
+          </app> addam forte postea aliqua quae non 
+          dicam pro nunc. Ideo 
+          <app>
+            <lem>recipiatur</lem>
+            <rdg wit="#V">recitatur</rdg>
+          </app> 
+          conclusio pro nunc cum 
+          protestatione aliquali 
+          <app>
+            <lem>aliqualiter</lem>
+            <rdg wit="#V">quali</rdg>
+          </app> 
+          postea 
+          <app>
+            <lem>declaranda.</lem>
+            <rdg wit="#V">dirigenda</rdg>
+          </app> 
+          Conclusio ergo affirmativa  
+          <app>
+            <lem>est</lem>
+            <rdg wit="#V">sit</rdg>
+          </app> 
+          ista quod conceptui convenit 
+          repraesentare suum obiectum ex modo 
+          <app>
+            <lem>habitudinum</lem>
+            <rdg wit="#R" type="corrReplace">
+              <corr>
+                <del>habitudinium</del>
+                <add>habitudinum</add>
+              </corr>
+            </rdg>
+          </app> 
+          causarum proximarum ad ipsius productionem concurrentium 
+          et ex modo motivitatis potentiae ab obiecto et 
+          in obiectum.</p> 
      </div>
       <div>
         <head xml:id="l22-Hptcptc">[Probatur tertia conclusio]</head>
       
-        <p xml:id="l22-eicepa">Et ista conclusio quarta<app><lem>quarta</lem><rdg wit="#V" type="om."/></app> declarabitur posterius quia primo volo insistere in probando tres primas conclusiones negativas et postea respondebo ad quartam <cb ed="#V" n="44ra"/> probandum. Et quia tertia conclusio videtur esse apparentior, scilicet, cuius oppositum ponit <name ref="#Oyta">Magister Henricus de Heuta</name>, ideo primo incipiam probando eam<app><lem>eam</lem><rdg wit="#R">conclusionem</rdg></app> et improbando opinionem <name ref="#Oyta">Magistri Henricus de Heuta</name>. Unde ipse ponit quod conceptus seu<app><lem>seu</lem><rdg wit="#R">vel</rdg></app> notitia dicitur esse sui obiecti notitia ex conditione suae natura specificae;<app><lem>notitia ex conditione suae natura specificae</lem><rdg wit="#V">repraesentativa</rdg></app> et contra illud pono conclusionem negativam tertiam,<app><lem/><rdg wit="#R" type="add."><add>scilicet quod conceptus non dicitur esse repraesentativus sui obiecti ex conditione suae naturae specificae quam probando sic</add></rdg></app> quia stat esse duos conceptus eiusdem speciei habentes diversa obiecta, nec unus potest idem quod alter<app><lem>quod alter</lem><rdg wit="#R">cum alio</rdg></app> repraesentare stantibus eiisdem causis a quibus sunt causati; ergo etc. Consequentia<app><lem>consequentia</lem><rdg wit="#R">consequentiam</rdg></app> tenet<app><lem>tenet</lem><rdg wit="#R">est</rdg></app>. Antecedens patet<app><lem>patet</lem><rdg wit="#R">est</rdg></app> capiendo duos conceptus quorum unus sit causatus a <name ref="#Sortes">Sorte</name> et alter a <name ref="#Plato">Platone</name> in potentia cognitiva mere<app><lem>mere</lem><rdg wit="#V" type="om."/></app> singularis quo dato isti duo conceptus sunt eiusdem speciei quod patet, quia sunt eiusdem perfectionis adaequatae.</p>
+        <p xml:id="l22-eicepa">Et ista conclusio 
+          <app>
+            <lem>quarta</lem>
+            <rdg wit="#V" type="om."/>
+          </app> 
+          declarabitur posterius quia primo volo insistere in probando tres primas conclusiones negativas et postea respondebo ad quartam <cb ed="#V" n="44ra"/> probandum. Et quia tertia conclusio videtur esse apparentior, scilicet, cuius oppositum ponit <name ref="#Oyta">Magister Henricus de Heuta</name>, ideo primo incipiam probando eam<app><lem>eam</lem><rdg wit="#R">conclusionem</rdg></app> et improbando opinionem <name ref="#Oyta">Magistri Henricus de Heuta</name>. Unde ipse ponit quod conceptus seu<app><lem>seu</lem><rdg wit="#R">vel</rdg></app> notitia dicitur esse sui obiecti notitia ex conditione suae natura specificae;<app><lem>notitia ex conditione suae natura specificae</lem><rdg wit="#V">repraesentativa</rdg></app> et contra illud pono conclusionem negativam tertiam,<app><lem/><rdg wit="#R" type="add."><add>scilicet quod conceptus non dicitur esse repraesentativus sui obiecti ex conditione suae naturae specificae quam probando sic</add></rdg></app> quia stat esse duos conceptus eiusdem speciei habentes diversa obiecta, nec unus potest idem quod alter<app><lem>quod alter</lem><rdg wit="#R">cum alio</rdg></app> repraesentare stantibus eiisdem causis a quibus sunt causati; ergo etc. Consequentia<app><lem>consequentia</lem><rdg wit="#R">consequentiam</rdg></app> tenet<app><lem>tenet</lem><rdg wit="#R">est</rdg></app>. Antecedens patet<app><lem>patet</lem><rdg wit="#R">est</rdg></app> capiendo duos conceptus quorum unus sit causatus a <name ref="#Sortes">Sorte</name> et alter a <name ref="#Plato">Platone</name> in potentia cognitiva mere<app><lem>mere</lem><rdg wit="#V" type="om."/></app> singularis quo dato isti duo conceptus sunt eiusdem speciei quod patet, quia sunt eiusdem perfectionis adaequatae.</p>
       
         <p xml:id="l22-iqcned">Item, quia causantur a causis eiusdem speciei omnino eodem modo se habentibus in potentia eodem modo se habente, quia ponitur quod Sortes et Plato sint inaequali distantia a potentia eadem perceptiva,<app><lem>eadem perceptiva</lem><rdg wit="#R">cognitiva</rdg></app> etc. Omnia sunt paria et tamen habent diversa obiecta et unus repraesentat illud quod alter non posset<app><lem>posset</lem><rdg wit="#R">potest</rdg></app> repraesentare stantibus eisdem causis, nam conceptus Sortis non repraesentat nisi Sortem simpliciter et determinate, quia est conceptus<app><lem>conceptus</lem><rdg wit="#R" type="om."/></app> mere singularis et determinatus et sibi repugnat repraesentare <name ref="#Plato">Platonem</name>, causis omnibus eodem modo se habentibus quia alias quilibet conceptus singularis repraesentaret omnia<app><lem/><rdg wit="#R" type="add."><add>alia</add></rdg></app> individua alicuius<app><lem>alicuius</lem><rdg wit="#R">eiusdem</rdg></app> speciei quod non est dicendum. Et ita argueretur de conceptu Platonis et sic.<app><lem>et sic</lem><rdg wit="#R" type="om."/></app> Habeo ergo quod sunt duo conceptus eiusdem speciei habentes diversa obiecta<app><lem>obiecta</lem><rdg wit="#V" type="om."/></app> nec unus<app><lem>unus</lem><rdg wit="#R">unum</rdg></app> potest repraesentare idem cum alio<app><lem>alio</lem><rdg wit="#V" type="om."/></app> causis eisdem stantibus. Ergo sequitur quod ex conditione specifica non contingit eis reprasentare obiecta sua, quia si sic<app><lem>sic</lem><rdg wit="#R" type="om."/></app> competeret eis idem repraesentare non enim esset alia responsio nisi diceretur quod non esset eiusdem speciei licet essent eiusdem perfectionis quia non potest salvari, quin sint eiusdem perfectionis quia causantur ab obiectis eiusdem perfectionis in eadem potentia omnino etc. sunt paria, quia excludendo omnem aliam diversitatem, ideo forte restaret alia via quod huiusmodi conceptus licet sint eiusdem perfectionis sunt tamen diversarum specierum et quod ex natura specifica convenit uni Sortem reprasentare et<app><lem>et</lem><rdg wit="#R" type="om."/></app> alteri <name ref="#Plato">Platonem</name> <cb ed="#V" n="44rb"/> et ideo consequenter oportet dicere quod essent duae species diversae eiusdem perfectionis adaequatae, et sic cuilibet conveniret ex sua natura specifica repraesentare suum obiectum. Sed non potest stare quia species habent ordinem inter se, ergo semper oportet quod una sit perfectior alia, quia si essent sic collaterales quod essent duae aeque perfectae, tunc inter species esset confusio et non debitus ordo; quod non est dicendum.</p> 
       
