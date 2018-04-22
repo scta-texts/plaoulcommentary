@@ -1,0 +1,1703 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+          <title>Lectio 29, de Notitia</title>
+        <author xml:id="PP">Petrus Plaoul</author>
+        <editor xml:id="JW">Jeffrey C. Witt</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2011.10-dev-master">
+          <title>Lectio 29, de Notitia</title>
+          <date when="2011-10-04">October 04, 2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
+        <pubPlace>Sacramento, CA</pubPlace>
+        <availability status="free">
+          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+        </availability>
+        <date when="2011-08-01">August 1st, 2011</date>  
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="R" n="reims">Reims</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <variantEncoding method="double-end-point" location="internal"/>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <front>
+      <div xml:id="includeList">
+        <listBibl xml:id="worksCited" type="list" xml:base="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xml:lang="">
+        <listBibl type="Arabic">
+            <bibl xml:id="PhysicsCommentary">
+                <title>Commentary on the Physics</title>
+                <author ref="#Averroes">Averroes</author>
+            </bibl>
+            <bibl xml:id="MetaphysicsCommentary">
+                <title>Commentary on the Metaphyscis</title>
+                <author ref="#Averroes">Averroes</author>
+            </bibl>
+            <bibl xml:id="AvicennaMetaphysics">
+                <title>Metaphysics (Avicenna)</title>
+                <author ref="#Avicenna">Avicenna</author>
+            </bibl>
+            <bibl xml:id="deRadiisStellicis">
+                <title>De Radiis Stellicis</title>
+                <author ref="#Alkindi">Alikindi</author>
+            </bibl>
+        </listBibl>
+        <listBibl type="Biblical">
+            <bibl xml:id="gen">
+                <title n="1">Genesis</title>
+                <author ref="#Moses">Moses</author>
+            </bibl>
+            <bibl xml:id="ex">
+                <title n="2">Exodus</title>
+                <author ref="#Moses">Moses</author>
+            </bibl>
+            <bibl xml:id="lev">
+                <title n="3">Leviticus</title>
+                <author ref="#Moses">Moses</author>
+            </bibl>
+            <bibl xml:id="num">
+                <title n="4">Numeri</title>
+                <author ref="#Moses">Moses</author>
+            </bibl>
+            <bibl xml:id="deut">
+                <title n="5">Deuteronomium</title>
+                <author ref="#Moses">Moses</author>
+            </bibl>
+            <bibl xml:id="ios">
+                <title n="6">Iosue</title>
+            </bibl>
+            <bibl xml:id="iudic">
+                <title n="7">Iudicum</title>
+            </bibl>
+            <bibl xml:id="rut">
+                <title n="8">Ruth</title>
+            </bibl>
+            <bibl xml:id="Isam">
+                <title n="9">Samuelis I</title>
+            </bibl>
+            <bibl xml:id="IIsam">
+                <title n="10">Samuelis II</title>
+            </bibl>
+            <bibl xml:id="Ireg">
+                <title n="11">Regum I</title>
+            </bibl>
+            <bibl xml:id="IIreg">
+                <title n="12">Regum II</title>
+            </bibl>
+            <bibl xml:id="Ipara">
+                <title n="13">Paralipomenon I</title>
+            </bibl>
+            <bibl xml:id="IIpara">
+                <title n="14">Paralipomenon II</title>
+            </bibl>
+            <bibl xml:id="esd">
+                <title n="15">Esdrae</title>
+            </bibl>
+            <bibl xml:id="neh">
+                <title n="16">Nehemiae</title>
+            </bibl>
+            <bibl xml:id="tob">
+                <title n="69">Tobiae</title>
+            </bibl>
+            <bibl xml:id="iudt">
+                <title>Iudith</title>
+            </bibl>
+            <bibl xml:id="est">
+                <title n="17">Esther</title>
+            </bibl>
+            <bibl xml:id="iob">
+                <title>Iob</title>
+            </bibl>
+            <bibl xml:id="ps">
+                <title>Psalmi</title>
+            </bibl>
+            <bibl xml:id="prov">
+                <title>Proverbia</title>
+            </bibl>
+            <bibl xml:id="quoh">
+                <title>Ecclesiastes</title>
+            </bibl>
+            <bibl xml:id="cant">
+                <title>Canticum Canticorum</title>
+            </bibl>
+            <bibl xml:id="sap">
+                <title>Sapientia</title>
+            </bibl>
+            <bibl xml:id="sir">
+                <title>Ecclesiasticus</title>
+            </bibl>
+            <bibl xml:id="is">
+                <title>Isaias</title>
+            </bibl>
+            <bibl xml:id="ier">
+                <title>Ieremias</title>
+            </bibl>
+            <bibl xml:id="lam">
+                <title>Lamentationes</title>
+            </bibl>
+            <bibl xml:id="bar">
+                <title>Baruch</title>
+            </bibl>
+            <bibl xml:id="ez">
+                <title>Ezechiel</title>
+            </bibl>
+            <bibl xml:id="dan">
+                <title>Daniel</title>
+            </bibl>
+            <bibl xml:id="os">
+                <title>Osee</title>
+            </bibl>
+            <bibl xml:id="ioel">
+                <title>Ioel</title>
+            </bibl>
+            <bibl xml:id="am">
+                <title>Amos</title>
+            </bibl>
+            <bibl xml:id="abd">
+                <title>Abdias</title>
+            </bibl>
+            <bibl xml:id="ion">
+                <title>Ionas</title>
+            </bibl>
+            <bibl xml:id="mic">
+                <title>Michaeas</title>
+            </bibl>
+            <bibl xml:id="nah">
+                <title>Nahum</title>
+            </bibl>
+            <bibl xml:id="hab">
+                <title>Habacuc</title>
+            </bibl>
+            <bibl xml:id="ag">
+                <title>Aggaeus</title>
+            </bibl>
+            <bibl xml:id="soph">
+                <title>Sophonias</title>
+            </bibl>
+            <bibl xml:id="zac">
+                <title>Zacharias</title>
+            </bibl>
+            <bibl xml:id="mal">
+                <title>Malachias</title>
+            </bibl>
+            <bibl xml:id="Imac">
+                <title>Machabaeorum I</title>
+            </bibl>
+            <bibl xml:id="IImac">
+                <title>Machabaeorum II</title>
+            </bibl>
+            <bibl xml:id="mt">
+                <title>Matthaeus</title>
+            </bibl>
+            <bibl xml:id="mc">
+                <title>Marcus</title>
+            </bibl>
+            <bibl xml:id="lc">
+                <title>Lucas</title>
+            </bibl>
+            <bibl xml:id="io">
+                <title>Ioannes</title>
+            </bibl>
+            <bibl xml:id="act">
+                <title>Actus Apostolorum</title>
+            </bibl>
+            <bibl xml:id="rom">
+                <title>ad Romanos</title>
+            </bibl>
+            <bibl xml:id="Icor">
+                <title>ad Corinthios I</title>
+            </bibl>
+            <bibl xml:id="IIcor">
+                <title>ad Corinthios II</title>
+            </bibl>
+            <bibl xml:id="gal">
+                <title>ad Galatas</title>
+            </bibl>
+            <bibl xml:id="eph">
+                <title>ad Ephesios</title>
+            </bibl>
+            <bibl xml:id="phil">
+                <title>ad Philippenses</title>
+            </bibl>
+            <bibl xml:id="col">
+                <title>ad Colossenses</title>
+            </bibl>
+            <bibl xml:id="Ith">
+                <title>ad Thessalonicenses I</title>
+            </bibl>
+            <bibl xml:id="IIth">
+                <title>ad Thessalonicenses II</title>
+            </bibl>
+            <bibl xml:id="Itim">
+                <title>ad Timotheum I</title>
+            </bibl>
+            <bibl xml:id="IItim">
+                <title>ad Timotheum II</title>
+            </bibl>
+            <bibl xml:id="tit">
+                <title>ad Titum</title>
+            </bibl>
+            <bibl xml:id="phm">
+                <title>ad Philemonem</title>
+            </bibl>
+            <bibl xml:id="hebr">
+                <title>ad Hebraeos</title>
+            </bibl>
+            <bibl xml:id="iac">
+                <title>Iacobi</title>
+            </bibl>
+            <bibl xml:id="Ipetr">
+                <title>Petri I</title>
+            </bibl>
+            <bibl xml:id="IIpetr">
+                <title>Petri II</title>
+            </bibl>
+            <bibl xml:id="Iio">
+                <title>Ioannis I</title>
+            </bibl>
+            <bibl xml:id="IIio">
+                <title>Ioannis II</title>
+            </bibl>
+            <bibl xml:id="IIIio">
+                <title>Ioannis III</title>
+            </bibl>
+            <bibl xml:id="iud">
+                <title>Iudae</title>
+            </bibl>
+            <bibl xml:id="ap">
+                <title>Apocalypsis</title>
+            </bibl>
+            
+            
+        </listBibl>
+        <listBibl type="Classical">
+                <bibl xml:id="Metaphysics">
+                    <title>Metaphysics</title>
+                    <author ref="#Aristotle">Aristotle</author>
+                </bibl>
+            <bibl xml:id="Physics">
+                    <title>Physics</title>
+                    <author ref="#Aristotle">Aristotle</author>
+                </bibl>
+            <bibl xml:id="Ethics">
+                <title>Ethics</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="deAnima">
+                <title>de Anima</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Politics">
+                <title>Politics</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Topics">
+                <title>Topics</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Rhetoric">
+                <title>Rhetoric</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="SophisticalRefutations">
+                <title>Sophistical Refutations</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Categories">
+                <title>Categories</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="deCaelo">
+                <title>On the Heavens</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Perihermenias">
+                <title>On Interpretation</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="OnGeneration">
+                <title>On Generation and Corruption</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="deBonaFortuna">
+                <title>de Bona Fortuna</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="PosteriorAnalytics">
+                <title>Posterior Analytics</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="PriorAnalytics">
+                <title>Prior Analytics</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="Meteorology">
+                <title>Meteorology</title>
+                <author ref="#Aristotle">Aristotle</author>
+            </bibl>
+            <bibl xml:id="DreamScipio">
+                <title>Commentary on the Dream of Scipio</title>
+                <author ref="#Macrobius">Macrobius</author>
+            </bibl>
+            <bibl xml:id="Bucolics">
+                <title>Bucolics</title>
+                <author ref="#Virgil">Virgil</author>
+            </bibl>
+            <bibl xml:id="Eneads">
+                <title>Eneads</title>
+                <author ref="#Virgil">Virgil</author>
+            </bibl>
+            <bibl xml:id="Almagest">
+                <title>Almagest</title>
+                <author ref="#Ptolemy">Ptolemy</author>
+            </bibl>
+            <bibl xml:id="SimpliciusCommentaryOnCategories">
+                <title>Commentary on the Categories (Simplicius)</title>
+                <author ref="#Simplicius">Simplicius</author>
+            </bibl>
+            <bibl xml:id="TuscanDisputations">
+                <title>Tuscan Disputations</title>
+                <author ref="#Cicero">Cicero</author>
+            </bibl>
+            <bibl xml:id="Antiquities">
+                <title>Antiquities of the Jews</title>
+                <author ref="#Josephus">Josephus Flavius</author>
+            </bibl>
+            <bibl xml:id="deNaturaDeorum">
+                <title>de natura deorum</title>
+                <author ref="#Cicero">Cicero</author>
+            </bibl>
+            <bibl xml:id="AstrologyFirmicus">
+                <title>Astrology (Firmicus)</title>
+                <author ref="#JuliusFirmicus">Julius Firmicus Maternus</author>
+                <note>Wikipedia: "Julius Firmicus Maternus was a Latin writer and notable astrologer, who received a pagan classical education that made him conversant with Greek; he lived in the reign of Constantine I and his successors. His triple career made him a public advocate, an astrologer and finally a Christian polemicist."</note>
+            </bibl>
+            <bibl xml:id="Centiloquium">
+                <title>Centiloquium</title>
+                <author ref="#Ptolemy">Ptolemy</author>
+                <note>Wikipedia: "A collection of one hundred aphorisms about astrology called the Centiloquium, ascribed to Ptolemy, was widely reproduced and commented on by Arabic, Latin and Hebrew scholars, and often bound together in medieval manuscripts after the Tetrabiblos as a kind of summation. It is now believed to be a much later pseudepigraphical composition. The identity and date of the actual author of the work, referred to now as Pseudo-Ptolemy, remains the subject of conjecture."</note>
+            </bibl>
+            <bibl xml:id="deVerboAeterno">
+                <title>de Verbo Aeterno</title>
+                <author ref="#Trismegistus">Hermes Trismegistus</author>
+            </bibl>
+            <bibl xml:id="deCausis">
+                <title>Book of Causes</title>
+                <author ref="#Proclus">Proclus</author>
+            </bibl>
+            <bibl xml:id="EthicsCommentaryEustratius">
+                <title>Commentary on the Ethics (Eustratius)</title>
+                <author ref="#Eustratius">Eustratius</author>
+            </bibl>
+            <bibl xml:id="Timaeus">
+                <title>Timaeus</title>
+                <author ref="#Plato">Plato</author>
+            </bibl>
+            
+        </listBibl>
+        <listBibl type="Patristic">
+            <bibl xml:id="deTrinitate">
+                <title>De Trinitate</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="onNatureAndGrace">
+                <title>On Nature and Grace</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Retractationum">
+                <title>Retractationum libri duo</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="deDoctrinaChristiana">
+                <title>De doctrina christiana</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="deVeraInnocentiae">
+                <title>de Vera Innocentiae</title>
+                <author ref="#Augustine">Augustine</author>
+                <note>I think this is Pseudo Augustinian</note>
+            </bibl>
+            <bibl xml:id="ContraEpistolamManichaei">
+                <title>Contra epistolam manichaei quam vocant fundamenti</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="ContraFaustum">
+                <title>Contra Faustum Manichaeum libri triginta tres</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="ContraDuasEpistolasPelagianorum">
+                <title>Contra Duas Epistolas Pelagianorum libri ad Bonifacium quatuor</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="ContraMaximinum">
+                <title>Contra Maximinum Haereticum Episcopum Arianorum libri duo</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeConsensuEvangelistarum">
+                <title>De Consensu Evangelistarum libri quatuor</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Enchiridion">
+                <title>Enchiridion de fide, spe et charitate <!-- alt title Enchiridio ad Laurentium --></title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeVeraReligione">
+                <title>De vera religione</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeGratiaEtLiberoArbitrio">
+                <title>De gratia et libero arbitrio liber unus</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            
+            <bibl xml:id="DeLiberoArbitrio">
+                <title>De libero arbitrio</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DePraedestinationeSanctorum">
+                <title>De Praedestinatione Sanctorum ad Prosperum et Hilarium liber unus</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeHaeresibus">
+                <title>De Haeresibus ad Quodvultdeum liber unus</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="ContraIulianum">
+                <title>Contra Iulianum opus imperfectum libri sex</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Consolation">
+                <title>Consolation of Philosophy</title>
+                <author ref="#Boethius">Boethius</author>
+            </bibl>
+            <bibl xml:id="deProblematibusBoethius">
+                <title>de Problematibus</title>
+                <author ref="#Boethius">Boethius</author>
+            </bibl>
+            <bibl xml:id="deTrinitateBoethius">
+                <title>de Trinitate (Boethius)</title>
+                <author ref="#Boethius">Boethius</author>
+            </bibl>
+            <bibl xml:id="MoralsOfCatholicChurch">
+                <title>On the Morals of the Catholic Church</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeCorreptioneEtGratia">
+                <title>De correptione et gratia liber unus</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="HomiliesOnJohn">
+                <title>Homilies on John</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeQuantitateAnimae">
+                <title>De quantitate animae liber unus</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="CityOfGod">
+                <title>City of God</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Soliloquiorum">
+                <title>Soliloquiorum</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            
+            <bibl xml:id="deHebdomadibus">
+                <title>On the Hebdomads</title>
+                <author ref="#Boethius">Boethius</author>
+            </bibl>
+            <bibl xml:id="OnFaithToPeter">
+                <title>To Peter on the Faith</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="CommentOnLukeAmbrose">
+                <title>Commentary on Luke (Ambrose)</title>
+                <author ref="#Ambrose">Ambrose</author>
+            </bibl>
+            <bibl xml:id="deIraDei">
+                <title>On the Wrath of God</title>
+                <author ref="#Lactantius">Lactantius</author>
+            </bibl>
+            <bibl xml:id="deCoelestiHierarchia">
+                <title>De Coelesti Hierarchia</title>
+                <author ref="#Dionysius">Ps-Dionysius</author>
+            </bibl>
+            <bibl xml:id="deDivinisNominibus">
+                <title>de Divinis Nominibus</title>
+                <author ref="#Dionysius">Ps-Dionysius</author>
+            </bibl>
+            <bibl xml:id="deDiversisQuaestionibus">
+                <title xml:lang="la">De diversis quaestionibus octaginta tribus</title>
+                <title>On eighty-three various questions</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="HexameronAmbrose">
+                <title>Hexameron (Ambrose)</title>
+                <author ref="#Ambrose">Ambrose</author>
+            </bibl>
+            <bibl xml:id="Confessions">
+                <title>Confessions</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <!-- changed to below 
+              <bibl xml:id="supraGenesim">
+                <title>Supra Genesim</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="onGenesis">
+                <title>Literal Commentary on Genesis</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            -->
+            <bibl xml:id="DeGenesiAdLitteram">
+              <title>De Genesi ad Litteram libri duodecim</title>
+              <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeGenesiAdLitteramImperfectus">
+              <title>De Genesi ad Litteram imperfetus liber</title>
+              <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="DeGenesiContraManichaeosLibriDuo">
+              <title>De Genesi contra Manichaeos libri duo</title>
+              <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Decretals">
+                <title>Decretals</title>
+                <author ref="#Gratian">Gratian</author>
+            </bibl>
+            <bibl xml:id="HilaryOfPoitiers_DeTrinitate">
+                <title>De Trinitate (Hilary of Poitiers)</title>
+                <author ref="#Augustine">Augustine</author>
+            </bibl>
+            <bibl xml:id="Moralium">
+                <title>Moralium Libri Sive Expositio in Librum B. Iob</title>
+                <author ref="#GregoryGreat">Gregorius the Great</author>
+            </bibl>
+        </listBibl>
+        <listBibl type="Scholastic">
+            <bibl xml:id="SummaTheologica">
+                <title>Summa Theologica</title>
+                <author ref="#Aquinas">Thomas Aquinas</author>
+            </bibl>
+            <bibl xml:id="SummaContraGentiles">
+                <title>Summa Contra Gentiles</title>
+                <author ref="#Aquinas">Thomas Aquinas</author>
+            </bibl>
+            <bibl xml:id="Aquinas_deSeparatisSubstantiis">
+                <title>De separatis substantiis</title>
+                <author ref="#Aquinas">Thomas Aquinas</author>
+            </bibl>
+            <bibl xml:id="Aquinas_deVeritate">
+                <title>De veritate</title>
+                <author ref="#Aquinas">Thomas Aquinas</author>
+            </bibl>
+            <bibl xml:id="DeMaximisTheologiae">
+                <title>De maximis theologiae</title>
+                <author ref="#AlanusDeInsulis">Alan of Lille</author>
+            </bibl>
+            <bibl xml:id="CausaDei">
+                <title>De Causa Dei</title>
+                <author ref="#Bradwardine">Thomas Bradwardine</author>
+            </bibl>
+            <bibl xml:id="Proslogion">
+                <title>Proslogion</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="Monologion">
+                <title>Monologion</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="Anselm_CurDeusHomo">
+                <title>Cur Deus homo</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="Anselm_DeLiberoArbitrio">
+                <title>De libero Arbitrio</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="DeCasuDiaboli">
+                <title>De casu diaboli</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="DeSimilitudinibus">
+                <title>De similitudinibus</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="DeProcessioneSpiritusSancti">
+                <title>De processione Spiritus Sancti</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="SummaAurea">
+                <title>Summa Aurea</title>
+                <author ref="#WilliamOfAuxerre">William of Auxerre</author>
+            </bibl>
+            <bibl xml:id="OnFaithAndLaws">
+                <title>On Faith and the Laws</title>
+                <author ref="#WilliamOfParis">William of Auvergne</author>
+            </bibl>
+            <bibl xml:id="deTrinitateAuvergne">
+                <title>On the Trinity (Auvergne)</title>
+                <author ref="#WilliamOfParis">William of Auvergne</author>
+            </bibl>
+            <bibl xml:id="RichardOfStVictor_deTrinitate">
+                <title>On the Trinity (Richard Of St. Victor)</title>
+                <author ref="#RichardOfStVictor">Richard Of St. Victor</author>
+            </bibl>
+            <bibl xml:id="deUniverso">
+                <title>de Universo</title>
+                <author ref="#WilliamOfParis">William of Auvergne</author>
+            </bibl>
+            <bibl xml:id="deSacramentis">
+                <title>On the Sacraments</title>
+                <author ref="#HughOfStVictor">Hugh of St. Victor</author>
+            </bibl>
+            <bibl xml:id="SummaeQuaestionumOrdinariarum">
+                <title>Summae Quaestionum Ordinariarum</title>
+                <author ref="#HenryOfGhent">Henry of Ghent</author>
+            </bibl>
+            <bibl xml:id="Sentences">
+                <title>Sentences</title>
+                <author ref="#Lombard">Peter Lombard</author>
+            </bibl>
+            <bibl xml:id="AlbertCommentOnCauses">
+                <title>Commentary on the Book of Causes (Albert Magnus)</title>
+                <author ref="#Albert">Albert the Great</author>
+            </bibl>
+            <bibl xml:id="OnTheLoveOfGod">
+                <title>On the Love of God</title>
+                <author ref="#Bernard">Bernard of Clairveaux</author>
+            </bibl>
+            <bibl xml:id="DeDispensationeEtPraecepto">
+                <title>De dispensatione et praecepto</title>
+                <author ref="#Bernard">Bernard of Clairveaux</author>
+            </bibl>
+            <bibl xml:id="DeProprietatibusRerum">
+                <title>On the Order of Things</title>
+                <author ref="#BartholomeusAnglicus">Bartholomeus Anglicus</author>
+            </bibl>
+            <bibl xml:id="Policraticus">
+                <title>Policraticus</title>
+                <author ref="#JohnOfSalisbury">John of Salisbury</author>
+            </bibl>
+            <bibl xml:id="deQuaestionibusArmenorum">
+                <title>Summa de quaestionibus Armenorum</title>
+                <author ref="#RichardFitzRalph">Richard FitzRalph</author>
+            </bibl>
+            <bibl xml:id="deCommunicationeIdiomatum">
+                <title>de communicatione idiomatum</title>
+                <author ref="#NicholasOresme">Nicholas Oresme</author>
+            </bibl>
+            <bibl xml:id="SpeculumHistoriale">
+                <title>Speculum historiale</title>
+                <author ref="#VincentOfBeauvais&gt;Vincent of Beauvais">Vincent of Beauvais</author>
+                <note>Wikipedia: "The vast tome of the Speculum Naturale (Mirror of Nature), divided into thirty-two books and 3,718 chapters, is a summary of all of the science and natural history known to Western Europe towards the middle of the 13th century, a mosaic of quotations from Latin, Greek, Arabic, and even Hebrew authors, with the sources given. Vincent distinguishes, however, his own remarks."</note>
+            </bibl>
+            <bibl xml:id="deConceptuVirginali">
+                <title>De Conceptu Virginali Et Originali Peccato</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="deSomnoEtVigilia">
+                <title>Liber de Somno et Vigilia</title>
+                <author ref="#Albert">Albert the Great</author>
+            </bibl>
+            <bibl xml:id="deConcordia">
+                <title>de Concordia</title>
+                <author ref="#Anselm">Anselm</author>
+            </bibl>
+            <bibl xml:id="GuideForThePerplexed">
+                <title>Guide for the Perplexed</title>
+                <author ref="#Maimonides">Maimonides</author>
+            </bibl>
+            <bibl xml:id="deSapientiaAnimaeChristi">
+                <title>De Sapientia Animae Christi</title>
+                <author ref="HughOfStVictor">Hugh of St. Victor</author>
+            </bibl>
+            <!-- change these Senteces ideas to the actual commentary ids -->
+            <bibl xml:id="SentencesRipa">
+                <title>Commentary on the Sentences (Ripa)</title>
+                <author ref="#Ripa">John de Ripa</author>
+            </bibl>
+            <bibl xml:id="SentencesOckham">
+                <title>Commentary on the Sentences (Ockham)</title>
+                <author ref="#Ockham">William of Ockham</author>
+            </bibl>
+            <bibl xml:id="SentencesAlbert">
+                <title>Commentary on the Sentences (Albert the Great)</title>
+                <author ref="#Albert">Albert the Great</author>
+            </bibl>
+            <bibl xml:id="deGenerationeAlbert">
+                <title>Commentary on Generation and Corruption (Albert)</title>
+                <author ref="#Albert">Albert the Great</author>
+            </bibl>
+            <bibl xml:id="QuodlibetsGilesOfRome">
+                <title>Quodlibetal Questions of Giles of Rome</title>
+                <author ref="#GilesOfRome">Giles of Rome</author>
+            </bibl>
+            <bibl xml:id="MagisteriumDivinale">
+                <title>Magisterium divinale et sapientiale</title>
+                <author ref="#WilliamOfParis">William of Paris</author>
+            </bibl>
+            <bibl xml:id="deSacramentisWilliamOfParis">
+                <title>de Sacramentis</title>
+                <author ref="#WilliamOfParis">William of Paris</author>
+            </bibl>
+            <bibl xml:id="PhysicsCommentaryAquinas">
+                <title>Commentary on the Physics (Aquinas)</title>
+                <author ref="#Aquinas">Thomas Aquinas</author>
+            </bibl>
+        </listBibl> 
+    </listBibl>
+        <listPerson xml:id="prosopography" xml:base="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xml:lang="en">
+        <listPerson type="Arabic">
+            <person xml:id="Avicenna">
+                <persName xml:lang="la">Avicenna</persName>
+            </person>
+            <person xml:id="Averroes">
+                <persName xml:lang="en">Averroes</persName>    
+            </person>
+            <person xml:id="Alkindi">
+                <persName xml:lang="en">Alkindi</persName>
+            </person>
+            <person xml:id="Muhammad">
+                <persName xml:lang="en">Muhammad</persName>
+            </person>
+            <person xml:id="Albumasar">
+                <persName xml:lang="en">Albumasar</persName>
+            </person>
+            <person xml:id="Algasar">
+                <persName xml:lang="en">Algasar</persName>
+            </person>
+            <person xml:id="Algazali">
+                <persName xml:lang="en">Algazali</persName>
+            </person>
+            <person xml:id="Avicebron">
+              <!-- arabic is probably not the most precise category for this andalusian Jewish philosopher -->
+              <persName xml:lang="en">Avicebron</persName>
+              <note type="dbpedia-url">http://dbpedia.org/resource/Solomon_ibn_Gabirol</note>
+            </person>
+        </listPerson>
+        <listPerson type="Biblical">
+            <person xml:id="Seraphim">
+                <persName xml:lang="en">Seraphim</persName>
+                <persName xml:lang="la">Seraphus</persName>
+            </person>
+            <person xml:id="Satan">
+                <persName xml:lang="en">Satan</persName>
+                <persName xml:lang="la">Satanas</persName><!-- Latin name? -->
+            </person>
+            <person xml:id="PontiusPilatus">
+                <persName xml:lang="en">Pontius Pilate</persName>
+                <persName xml:lang="la">Pontius Pilatus</persName>
+            </person>   
+            <person xml:id="Pharaoh">
+                <persName xml:lang="en">Pharaoh</persName> <!-- not sure which Pharaoh this means -->
+            </person>
+            <person xml:id="MaryMagdelene">
+                <persName xml:lang="en">Mary Magdelene</persName>
+                <persName xml:lang="la">Maria Magdelene</persName>
+            </person>
+            <person xml:id="Joshua">
+                <persName xml:lang="en">Joshua</persName>
+                <persName xml:lang="la">Josue</persName>
+            </person>
+            <person xml:id="Joseph">
+                <persName xml:lang="en">Joseph</persName>
+                <persName xml:lang="la">Joseph</persName><!-- Joseph or Joshephus? -->
+            </person>
+            <person xml:id="Jezabel">
+                <persName xml:lang="en">Jezebel</persName>
+                <persName xml:lang="la">Hiezabel</persName>
+            </person>
+            <person xml:id="Jeremiah">
+                <persName xml:lang="en">Jeremiah</persName>
+                <persName xml:lang="la">Hieremia</persName>
+            </person>
+            <person xml:id="Isaias">
+                <persName xml:lang="en">Isaiah</persName>
+                <persName xml:lang="la">Isaias</persName>
+            </person>
+            <person xml:id="Gabriel">
+                <persName xml:lang="en">Gabriel</persName>
+                <persName xml:lang="la">Gabrihel</persName>
+            </person>
+            <person xml:id="Daniel">
+                <persName xml:lang="en">Daniel</persName>
+                <persName xml:lang="la">Daniel</persName>
+            </person>
+            <person xml:id="Caiaphas">
+                <persName xml:lang="en">Joseph Caiaphas</persName>
+                <persName xml:lang="la">Joseph Caiaphas</persName>
+            </person>
+            <person xml:id="Paul">
+                <persName xml:lang="en">Paul, the Apostle</persName>
+                <persName xml:lang="la">Paulus</persName>
+            </person>
+            <person xml:id="James">
+                <persName xml:lang="en">James, the Apostle</persName>
+                <persName xml:lang="la">Jacobus</persName><!-- Is this person different from Jacob? Is there a way to differentiate the Latin names? -->
+            </person>
+            <person xml:id="John">
+                <persName xml:lang="en">John, the Apostle</persName>
+                <persName xml:lang="la">Ioannes</persName>
+            </person>
+            <person xml:id="David">
+                <persName xml:lang="en">David, King</persName>
+                <persName xml:lang="la">David</persName><!-- Rex? -->
+            </person>
+            <person xml:id="Saul">
+                <persName xml:lang="en">Saul, King</persName>
+                <persName xml:lang="la">Saul</persName>
+            </person>
+            <person xml:id="Nebuchadnezzar">
+                <persName xml:lang="en">Nabuchadnezzar, King</persName><!-- couldn't find Latin name -->
+            </person>
+            <person xml:id="Esau">
+                <persName xml:lang="en">Esau</persName>
+                <persName xml:lang="la">Esau</persName>
+            </person>
+            <person xml:id="Jacob">
+                <persName xml:lang="en">Jacob</persName>
+                <persName xml:lang="la">Jacobus</persName>
+            </person>
+            <person xml:id="Lea">
+                <persName xml:lang="en">Lea</persName> 
+            </person>
+            <person xml:id="Jonah">
+                <persName xml:lang="en">Jonah</persName>
+                <persName xml:lang="la">Jona</persName>
+            </person>
+            <person xml:id="Job">
+                <persName xml:lang="en">Job</persName>
+                <persName xml:lang="la">Job</persName>
+            </person>
+            <person xml:id="Noah">
+                <persName xml:lang="en">Noah</persName>
+            </person>
+            <person xml:id="Peter">
+                <persName xml:lang="en">Peter, the Apostle</persName>
+                <persName xml:lang="la">Petrus</persName>
+            </person>
+            <person xml:id="Lucifer">
+                <persName xml:lang="en">Lucifer</persName>
+                <persName xml:lang="la">Lucifer</persName>
+            </person>
+            <person xml:id="Israel">
+                <persName xml:lang="en">Israel</persName>
+                <persName xml:lang="la">Israhel </persName><!-- This is a place, not a name ?? -->
+            </person>
+            <person xml:id="Mary">
+                <persName xml:lang="en">Mary, Virgin</persName>
+                <persName xml:lang="la">Maria</persName>
+            </person>
+            <person xml:id="Lot">
+                <persName xml:lang="en">Lot</persName>
+                <persName xml:lang="la">Loth</persName>
+            </person>
+            <person xml:id="Abraham">
+                <persName xml:lang="en">Abraham</persName>
+                <persName xml:lang="la">Abraham</persName>
+            </person>
+            <person xml:id="Balaam">
+                <persName xml:lang="en">Balaam</persName>
+                <persName xml:lang="la">Balaam</persName>
+            </person>
+            <person xml:id="Balak">
+                <persName xml:lang="en">Balak</persName>
+                <note>So Balak son of Zippor, who was king of Moab at that time Cf. Numbers 22:4</note>
+            </person>
+            <person xml:id="Moses">
+                <persName xml:lang="en">Moses</persName>
+                <persName xml:lang="la">Moses</persName>
+            </person>
+            <person xml:id="Matthias"> <!-- Should this have two "t"s? Is it the same in Latin? -->
+                <persName xml:lang="la">Mathias</persName>
+                <note>Mathias is mentioned in Acts Chapter 1</note>
+            </person>
+            <person xml:id="JosephBarsabbas">
+                <persName xml:lang="en">Joseph Barsabbas</persName> 
+                <persName xml:lang="la">Barsabbas</persName><!-- I also found Iustus for this? -->
+                <note>Joseph Barsabbas is mentioned in Acts Chapter 1</note>
+            </person>
+            
+            <person xml:id="SimonMagician">
+                <persName xml:lang="en">Simon the Magician</persName>
+                <persName xml:lang="la">Simon Magus</persName>
+            </person>
+            
+            <person xml:id="Ezra">
+                <persName xml:lang="en">Ezra</persName>
+                <persName xml:lang="la">Ezra</persName>
+            </person>
+            <person xml:id="Nehemiah">
+                <persName xml:lang="en">Nehemiah</persName>
+                <persName xml:lang="la">Neemia</persName>
+            </person>
+            <person xml:id="MichaelArchangel">
+                <persName xml:lang="en">Michael the Archangel</persName>
+                <persName xml:lang="la">Michahel Archangelus</persName>
+            </person>
+            <person xml:id="Gamaliel">
+                <persName xml:lang="en">Gamaliel</persName>
+                <persName xml:lang="la">Gamalihel</persName>
+                <note>Acts 5:34 "But a Pharisee named Gamaliel, a teacher of the law, who was honored by all the people, stood up in the Sanhedrin and ordered that the men be put outside for a little while."</note>
+            </person>
+            <person xml:id="Abel">
+                <persName xml:lang="en">Abel</persName>
+                <persName xml:lang="la">Abel</persName>
+            </person>
+            <person xml:id="Solomon">
+                <persName xml:lang="en">Solomon</persName>
+                <persName xml:lang="la">Salomon</persName>
+            </person>
+            <person xml:id="JudasIscariot">
+                <persName xml:lang="en">Judas Iscariot</persName>
+                <persName xml:lang="la">Juda Scarioth</persName>
+            </person>
+            <person xml:id="Adam">
+                <persName xml:lang="en">Adam</persName>
+                <persName xml:lang="la">Adam</persName>
+            </person>
+            <person xml:id="Eva">
+              <persName xml:lang="en">Eve</persName>
+              <persName xml:lang="la">Eva</persName>
+            </person>
+            <person xml:id="JohnTheBaptist">
+                <persName xml:lang="en">John The Baptist</persName>
+                <persName xml:lang="la">Johannes Baptista</persName>
+            </person>
+            <person xml:id="Achas">
+                <persName xml:lang="en">Achas</persName>
+                <note>This is the latin name for Ahaz, the father of Hezekiah. See Matthew 1:9</note>
+            </person>
+            <person xml:id="Hezekiah">
+                <persName xml:lang="en">Hezekiah</persName>
+            </person>
+            <person xml:id="Ezekiel">
+                <persName xml:lang="en">Ezekiel</persName>
+            </person>
+            <person xml:id="Herod">
+                <persName xml:lang="en">Herod</persName>
+            </person>
+            <person xml:id="Jesus">
+                <persName xml:lang="en">Jesus</persName>
+            </person>
+            <person xml:id="Lia">
+                <persName xml:lang="en">Lia</persName>
+            </person>
+          <person xml:id="Philemon">
+            <persName xml:lang="en">Philemon</persName>
+          </person>
+        </listPerson>
+        <listPerson type="Classical">
+            <person xml:id="Zeno">
+                <persName xml:lang="en">Zeno of Elea</persName>
+            </person>
+            <person xml:id="Varro">
+                <persName xml:lang="la">Marcus Terentius Varro</persName>
+            </person>
+            <person xml:id="Venus">
+                <persName xml:lang="en">Venus</persName>
+            </person>
+            <person xml:id="Tiresias">
+                <persName xml:lang="en">Tiresias</persName>
+            </person>
+            <person xml:id="Tiberius">
+                <persName xml:lang="en">Tiberius</persName>
+            </person>
+            <person xml:id="Pythagoras">
+                <persName xml:lang="en">Pythagoras</persName>
+            </person>
+            <person xml:id="Priam">
+                <persName xml:lang="en">Priam</persName>
+                <persName xml:lang="la">Priamus</persName>
+            </person>
+            <person xml:id="Ovid">
+                <persName xml:lang="en">Ovid</persName>
+                <persName xml:lang="la">Ovidius</persName>
+            </person>
+            <person xml:id="Oedipus">
+                <persName xml:lang="en">Oedipus</persName>
+            </person>
+            <person xml:id="Octavius">
+                <persName xml:lang="en">Octavius</persName><!-- Not sure how you want to do this one Octavius/Augustus? -->
+            </person>
+            <person xml:id="Mercury">
+                <persName xml:lang="en">Mercury</persName>
+                <persName xml:lang="la">Mercurius</persName>
+            </person>
+            <person xml:id="Mars">
+                <persName xml:lang="en">Mars</persName>
+            </person>
+            <person xml:id="Hector">
+                <persName xml:lang="en">Hector</persName>
+            </person>
+            <person xml:id="Darius">
+                <persName xml:lang="en">Darius</persName>
+            </person>
+            <person xml:id="Cleopatra">
+                <persName xml:lang="en">Cleopatra</persName>
+            </person>
+            <person xml:id="Apuleius">
+                <persName xml:lang="en">Lucius Apuleius Madaurensis</persName>
+            </person>
+            <person xml:id="Aeneas">
+                <persName xml:lang="en">Aeneas</persName>
+            </person>
+            <person xml:id="Aristotle">
+                <persName xml:lang="en">Aristotle</persName>
+                <persName xml:lang="la">Aristotoles</persName>
+            </person>
+            <person xml:id="AlexanderAphrodisias">
+                <persName xml:lang="en">Alexander Aphrodisias</persName>
+            </person>
+            <person xml:id="Cicero">
+                <persName xml:lang="en">Marcus Tulius Cicero</persName>
+            </person>
+            <person xml:id="Plato">
+                <persName xml:lang="en">Plato</persName>
+            </person>
+            <person xml:id="Anaxagoras">
+                <persName xml:lang="en">Anaxagoras</persName>
+            </person>
+            <person xml:id="JuliusCaesar">
+                <persName xml:lang="en">Julius Caesar</persName>
+            </person>
+            <person xml:id="Pompey">
+                <persName xml:lang="en">Pompey the Great</persName>
+                <persName xml:lang="la">Pompeius Magnus</persName>
+            </person>
+            <person xml:id="Demosthenes">
+                <persName xml:lang="en">Demosthenes</persName>
+            </person>
+            <person xml:id="Macrobius">
+                <persName xml:lang="en">Macrobius</persName>
+                <persName xml:lang="la">Macrobius Ambrosius Theodosius</persName>
+            </person>
+            <person xml:id="Virgil">
+                <persName xml:lang="en">Virgil</persName>
+                <persName xml:lang="la">Publius Vergilius Maro</persName>
+            </person>
+            <person xml:id="Seneca">
+                <persName xml:lang="en">Seneca</persName><!-- the elder or younger? -->
+            </person>
+            <person xml:id="Epicurus">
+                <persName xml:lang="en">Epicurus</persName>
+            </person>
+            <person xml:id="Trismegistus">
+                <persName xml:lang="en">Hermes Trismegistus</persName><!-- Same as Mercury -->
+            </person>
+            <person xml:id="Sortes">
+                <persName xml:lang="en">Sortes</persName>
+            </person>
+            <person xml:id="Socrates">
+                <persName xml:lang="en">Socrates</persName>
+            </person>
+            <person xml:id="Porphyry">
+                <persName xml:lang="en">Porphyry of Tyre</persName><!-- couldn't find latin name -->
+            </person>
+            <person xml:id="Ptolemy">
+                <persName xml:lang="en">Claudius Ptolemy</persName>
+                <persName xml:lang="la">Claudius Ptolemaeus</persName>
+            </person>
+            <person xml:id="Achilles">
+                <persName xml:lang="en">Achilles</persName>
+                <persName xml:lang="la">Achilleus</persName>
+            </person>
+            <person xml:id="Plotinus">
+                <persName xml:lang="en">Plotinus</persName>
+            </person>
+            <person xml:id="Simplicius">
+                <persName xml:lang="en">Simplicius</persName><!-- Pope Simplicius -->
+            </person>
+            <person xml:id="Apollo">
+                <persName xml:lang="en">Apollo</persName>
+            </person>
+            <person xml:id="ApollinarisOfLaodicea">
+                <persName xml:lang="en">Apollinaris of Laodicea</persName>
+                <!-- check all Apollo; they should probably be changed to Apollinaris Of Laodicea" -->
+            </person>
+            <person xml:id="Melissus">
+                <persName xml:lang="en">Melissus of Samos</persName>
+                <persName xml:lang="la">Melissus</persName>
+            </person>
+            <person xml:id="Diogenes">
+                <persName xml:lang="en">Diogenes of Sinope</persName><!-- should we condense this with the entry below? -->
+            </person>
+            <person xml:id="Empedocles">
+                <persName xml:lang="en">Diogenes of Sinope</persName>
+            </person>
+            <person xml:id="Josephus">
+                <persName xml:lang="en">Josephus Flavius</persName>
+                <persName xml:lang="la">Titus Flavius Josephus</persName>
+            </person>
+            <person xml:id="Solon">
+                <persName xml:lang="en">Solon</persName>
+            </person>
+            <person xml:id="AlexanderTheGreat">
+                <persName xml:lang="en">Alexander the Great</persName>
+            </person>
+            
+            <person xml:id="Parmenides">
+                <persName xml:lang="en">Parmenides of Elea</persName>
+                <persName xml:lang="la">Parmenides</persName>
+            </person>
+            <person xml:id="Jupiter">
+                <persName xml:lang="en">Jupiter, Jove</persName>
+                <persName xml:lang="la">Juppiter</persName>
+            </person>
+            <person xml:id="Saturn">
+                <persName xml:lang="en">Saturn</persName>
+            </person>
+            <person xml:id="Euclid">
+                <persName xml:lang="en">Euclid</persName>
+            </person>
+            <person xml:id="Autolycus">
+                <persName xml:lang="en">Autolycus of Pitane</persName>
+                <persName xml:lang="la">Autolycus</persName>
+                <note>Spell MESSEELLACH by William of Auvergne edited Griet Galle, 2003 - GL http://books.google.com/books?id=A8PpoJAyJ3wC</note>
+            </person>
+            <person xml:id="Eustratius">
+                <persName xml:lang="en">Eustratius</persName>
+                <note>Not really classical, but wrote commentary on Aristotle: Wikipedia: "Eustratius of Nicaea (Greek: Εὐστράτιος; c. 1050/1060-c. 1120)[1] was Metropolitan bishop of Nicaea in the early 12th century. He wrote commentaries to Aristotle's second book of Analytica and the Ethica Nicomachea."</note>
+            </person>
+            <person xml:id="JuliusFirmicus">
+                <persName xml:lang="la">Julius Firmicus Maternus</persName>
+            </person>
+            <person xml:id="Clotho">
+                <persName xml:lang="en">Clotho</persName>
+                <note>Wikipedia: "n Greek mythology, the Moirai (Ancient Greek: Μοῖραι, "apportioners", Latinized as Moerae)—often known in English as the Fates—were the white-robed incarnations of destiny (Roman equivalent: Parcae, euphemistically the "sparing ones", or Fata; also analogous to the Germanic Norns). Their number became fixed at three: Clotho (spinner), Lachesis (allotter) and Atropos (unturnable)."</note>
+            </person>
+            <person xml:id="Lachesis">
+                <persName xml:lang="en">Lachesis</persName>
+                <note>Wikipedia: "n Greek mythology, the Moirai (Ancient Greek: Μοῖραι, "apportioners", Latinized as Moerae)—often known in English as the Fates—were the white-robed incarnations of destiny (Roman equivalent: Parcae, euphemistically the "sparing ones", or Fata; also analogous to the Germanic Norns). Their number became fixed at three: Clotho (spinner), Lachesis (allotter) and Atropos (unturnable)."</note>
+            </person>
+            <person xml:id="Atropos">
+                <persName xml:lang="en">Atropos</persName>
+                <note>Wikipedia: "n Greek mythology, the Moirai (Ancient Greek: Μοῖραι, "apportioners", Latinized as Moerae)—often known in English as the Fates—were the white-robed incarnations of destiny (Roman equivalent: Parcae, euphemistically the "sparing ones", or Fata; also analogous to the Germanic Norns). Their number became fixed at three: Clotho (spinner), Lachesis (allotter) and Atropos (unturnable)."</note>
+            </person>
+            <person xml:id="Proclus">
+                <persName xml:lang="en">Proclus</persName>
+            </person>
+            <person xml:id="Homer">
+                <persName xml:lang="en">Homer</persName>
+            </person>
+            <person xml:id="Hercules">
+              <persName xml:lang="en">Hercules</persName>
+            </person>
+        </listPerson>
+        <listPerson type="Divine">
+            <person xml:id="God">
+                <persName xml:lang="en">God</persName>
+                <persName xml:lang="la">Deus</persName>
+            </person>
+            <person xml:id="Christ">
+                <persName xml:lang="en">Jesus Christ</persName>
+                <persName xml:lang="la">Jesus Christus</persName>
+            </person>
+            <person xml:id="Trinity">
+                <persName xml:lang="en">Trinity</persName>
+            </person>
+            <person xml:id="Father">
+                <persName xml:lang="en">Father</persName>
+                <persName xml:lang="la">Pater</persName>
+            </person>
+            <person xml:id="Son">
+                <persName xml:lang="en">Son</persName>
+                <persName xml:lang="la">Filius</persName>
+            </person>
+            <person xml:id="HolySpirit">
+                <persName xml:lang="en">Holy Spirit</persName>
+                <persName xml:lang="la">Spiritus Sancti</persName>
+            </person>
+        </listPerson>
+        <listPerson type="Patristic">
+            <person xml:id="PeterDamian">
+                <persName xml:lang="en">Peter Damian</persName>
+                <persName xml:lang="la">Petrus Damiani</persName>
+            </person>
+            <person xml:id="PaulSamosata">
+                <persName xml:lang="en">Paul of Samosata</persName>
+            </person>
+            <person xml:id="Eusebius">
+                <persName xml:lang="en">Eusebius of Caesarea</persName>
+                <persName xml:lang="la">Eusebius Pamphili</persName>
+            </person>
+            <person xml:id="Bede">
+                <persName xml:lang="en">Bede</persName>
+                <persName xml:lang="la">Beda Venerabilis</persName>
+            </person>
+            <person xml:id="Athanasius">
+                <persName xml:lang="en">Athanasius of Alexandria</persName>
+            </person>
+            <person xml:id="SaintAnthony"><!-- Not sure about this one -->
+                <persName xml:lang="en">Saint Anthony of Padua</persName>
+            </person>
+            <person xml:id="Boethius">
+                <persName xml:lang="en">Boethius</persName>
+                <persName xml:lang="la">Anicius Manlius Severinus Boethius</persName>
+            </person>
+            <person xml:id="Augustine">
+                <persName xml:lang="la">Augustinus</persName>
+                <persName xml:lang="en">Augustine</persName>
+            </person>
+            <person xml:id="Dionysius">
+                <persName xml:lang="en">Pseudo-Dionysius</persName>
+            </person>
+            <person xml:id="Gratian">
+                <persName xml:lang="en">Gratian</persName>
+                <persName xml:lang="la">Flavius Gratianus Augustus</persName>
+            </person>
+            <person xml:id="GregoryGreat">
+                <persName xml:lang="en">Gregory the Great</persName>
+                <persName xml:lang="la">Gregorius</persName>
+            </person>
+            <person xml:id="Jerome">
+                <persName xml:lang="en">Jerome</persName>
+                <persName xml:lang="la">Eusebius Sophronius Hieronymus</persName>
+            </person>
+            <person xml:id="Lactantius">
+                <persName xml:lang="en">Lactantius</persName>
+                <persName xml:lang="la">Lucius Caecilius Firmianus Lactantius</persName>
+            </person>
+            <person xml:id="Pelagius">
+                <persName xml:lang="en">Pelagius</persName>
+            </person>
+            <person xml:id="Origen">
+                <persName xml:lang="la">Origen Admantius</persName>
+            </person>
+            <person xml:id="JohnDamascenus">
+                <persName xml:lang="en">John the Damascene</persName>
+                <persName xml:lang="la">Johannes Damascenus</persName>
+            </person>
+            <person xml:id="Arius">
+                <persName xml:lang="en">Arius</persName>
+            </person>
+            <person xml:id="Ambrose">
+                <persName xml:lang="en">Ambrose of Milan</persName>
+                <persName xml:lang="la">Aurelius Ambrosius</persName>
+            </person>
+            <person xml:id="Cyprian">
+                <persName xml:lang="en">Cyprian</persName>
+                <persName xml:lang="la">Thascius Caecilius Cyprianus</persName>
+            </person>
+            <person xml:id="Claudianus">
+                <persName xml:lang="en">Claudianus Mamertus</persName>
+            </person>
+            <person xml:id="Julian">
+                <persName xml:lang="en">Julian</persName><!-- Not sure exactly who this is -->
+                <note>The person Augustine argued with along with Pelagius (see lectio 98 for example)</note>
+            </person>
+            <person xml:id="Sabellius">
+                <persName xml:lang="en">Sabellius</persName>
+            </person>
+            <person xml:id="CyrilOfAlexandria">
+                <persName xml:lang="en">Cyril of Alexandria</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Cyril_of_Alexandria</note>
+            </person>
+            <person xml:id="Nestorius">
+                <persName xml:lang="en">Nestorius</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Nestorius</note>
+            </person>
+            <person xml:id="Phontinus">
+                <persName xml:lang="en">Photinus</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Photinus</note>
+            </person>
+            
+            <person xml:id="Victorinus">
+                <persName xml:lang="en">Victorinus</persName>
+                <persName xml:lang="la">Marcus Piavonius Victorinus</persName><!-- Not completely sure this is right person -->
+            </person>
+            <person xml:id="IsidoreOfSeville">
+                <persName xml:lang="en">Isidore of Seville</persName>
+                <persName xml:lang="la">Isidorus Hispalensis</persName>
+            </person>
+            <person xml:id="PopeSylvesterI">
+                <persName xml:lang="en">Pope Sylvester I</persName>
+            </person>
+            <person xml:id="PopeDamasusI">
+                <persName xml:lang="en">Pope Damasus I</persName>
+            </person>
+            <person xml:id="Macedonius">
+                <persName xml:lang="en">Macedonius I of Constantinople</persName>
+            </person>
+            <person xml:id="PopeLeoI">
+                <persName xml:lang="en">Pope Leo I</persName>
+            </person>
+            <person xml:id="PopeInnocentIII">
+                <persName xml:lang="en">Pope Innocent III</persName>
+            </person>
+            <person xml:id="PopeGregoryIV">
+                <persName xml:lang="en">Pope Gregory IV</persName>
+            </person>
+            <person xml:id="HilaryOfPoitiers">
+                <persName xml:lang="en">Hilary of Poitiers</persName>
+                <persName xml:lang="la">Hilarius</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Hilary_of_Poitiers</note>
+            </person>
+            <person xml:id="Didymus"><!-- Could refer to multiple people -->
+                <persName xml:lang="en">Didymus</persName>
+            </person>
+            <person xml:id="JohnChrysostom">
+                <persName xml:lang="en">John Chrysostom</persName>
+                <persName xml:lang="la">Johannes Chrysostomos</persName>
+            </person>
+            <person xml:id="EunomiusOfCyzicus">
+                <persName xml:lang="en">Eunomius of Cyzicus</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Eunomius_of_Cyzicus</note>
+            </person>
+            <person xml:id="GregoryOfNazianzus">
+                <persName xml:lang="en">Gregory of Nazianzus</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Gregory_of_Nazianzus</note>
+            </person>
+            <person xml:id="BasilOfCasarea">
+                <persName xml:lang="en">Gregory of Nazianzus</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Basil_of_Casarea</note>
+            </person>
+            <person xml:id="Cassiodorus">
+                <persName xml:lang="en">Cassiodorus</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Cassiodorus</note>
+            </person>
+            
+        </listPerson>
+        <listPerson type="Scholastic">
+          <person xml:id="HermanusDeSchildesche">
+            <persName xml:lang="en">Hermann of Schildesche</persName>
+          </person>
+            <person xml:id="JeanGerson">
+                <persName xml:lang="en">Jean Gerson</persName>
+            </person>
+            <person xml:id="Aquinas">
+                <persName xml:lang="en">Thomas Aquinas</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Thomas_Aquinas</note>
+            </person>
+            <person xml:id="Holcot">
+                <persName xml:lang="en">Robert Holcot</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Robert_Holcot</note>
+            </person>
+            <person xml:id="Albert">
+                <persName xml:lang="en">Albert the Great</persName>
+            </person>
+            <person xml:id="GilesOfRome">
+                <persName xml:lang="en">Giles of Rome</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Giles_of_Rome</note>
+            </person>
+            <person xml:id="Wodeham">
+                <persName xml:lang="en">Adam Wodeham</persName>
+            </person>
+            <person xml:id="Ockham">
+                <persName xml:lang="en">William of Ockham</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/William_of_Ockham</note>
+            </person>
+            <person xml:id="Scotus">
+                <persName xml:lang="en">John Duns Scotus</persName>
+            </person>
+            <person xml:id="Ripa">
+                <persName xml:lang="en">John of Ripa</persName>
+                <!-- alias: John of Marchia -->
+            </person>
+            <person xml:id="Anselm">
+                <persName xml:lang="en">Anselm</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Anselm_of_Canterbury</note>
+            </person>
+            <person xml:id="Aureoli">
+                <persName xml:lang="en">Peter Aureoli</persName>
+            </person>
+            <person xml:id="RogerBacon">
+                <persName xml:lang="en">Roger Bacon</persName>
+            </person>
+            <person xml:id="WalterBurley">
+                <persName xml:lang="en">Walter Burley</persName>
+            </person>
+            <person xml:id="Campsall">
+                <persName xml:lang="en">Richard Campsall</persName>
+            </person>
+            <person xml:id="Bradwardine">
+                <persName xml:lang="en">Thomas Bradwardine</persName>
+            </person>
+            <person xml:id="Durandus">
+                <persName xml:lang="en">Durandus of St. Pourcain</persName>
+            </person>
+            <person xml:id="Rimini">
+                <persName xml:lang="en">Gregory of Rimini</persName>
+            </person>
+            <person xml:id="HenryOfGhent">
+                <persName xml:lang="en">Henry of Ghent</persName>
+            </person>
+            <person xml:id="WilliamOfAuxerre">
+                <persName xml:lang="en">William of Auxerre</persName>
+            </person>
+            <person xml:id="WilliamOfParis">
+                <persName xml:lang="en">William of Paris</persName>
+            </person>
+            <person xml:id="NicholasOfLyra">
+                <persName xml:lang="en">Nicholas of Lyra</persName>
+            </person>
+            <person xml:id="Heytesbury">
+                <persName xml:lang="en">William Hetesbury</persName>
+            </person>
+            <person xml:id="RichardKilvington">
+                <persName xml:lang="en">Richard of Kilvington</persName>
+            </person>
+            <person xml:id="RichardOfStVictor">
+                <persName xml:lang="en">Richard of St. Victor</persName>
+            </person>
+            <person xml:id="Maimonides">
+                <persName xml:lang="en">Moses Maimonides</persName>
+            </person>
+            <person xml:id="Chatton">
+                <persName xml:lang="en">Walter Chatton</persName>
+            </person>
+            <person xml:id="Bonaventure">
+                <persName xml:lang="en">Bonaventure</persName>
+            </person>
+            <person xml:id="Lombard">
+                <persName xml:lang="en">Peter Lombard</persName>
+            </person>
+            <person xml:id="Oyta">
+                <persName xml:lang="en">Henry Totting de Oyta</persName>
+            </person>
+            <person xml:id="Wyclif">
+                <persName xml:lang="en">John Wyclif</persName>
+            </person>
+            <person xml:id="Candia">
+                <persName xml:lang="en">Peter Candia</persName>
+            </person>
+            <person xml:id="HughOfStVictor">
+                <persName xml:lang="en">Hugh of St. Victor</persName>
+            </person>
+            <person xml:id="Grosseteste">
+                <persName xml:lang="en">Robert Grossetest</persName>
+            </person>
+            <person xml:id="Moderni">
+                <persName xml:lang="en">Moderni</persName>
+            </person>
+            <person xml:id="Bernard">
+                <persName xml:lang="en">Bernard of Clairvaux</persName>
+            </person>
+            <person xml:id="Langenstein">
+                <persName xml:lang="en">Henry of Langenstein</persName>
+            </person>
+            <person xml:id="JohnOfSalisbury">
+                <persName xml:lang="en">John of Salisbury</persName>
+            </person>
+            <person xml:id="JohnOfRodington">
+                <persName xml:lang="en">John of Rodington</persName>
+            </person>
+            <person xml:id="JohnKlenkok">
+              <persName xml:lang="en">John Klenkok</persName>
+            </person>
+            <person xml:id="HugolinoOfOrvieto">
+                <persName xml:lang="en">Hugolino of Orvieto</persName>
+            </person>
+            <person xml:id="RichardFitzRalph">
+                <persName xml:lang="en">Richard FitzRalph</persName>
+            </person>
+            <person xml:id="MarsiliusOfPadua">
+                <persName xml:lang="en">Marsilius Of Padua</persName>
+            </person>
+            <person xml:id="RobertHalifax">
+                <persName xml:lang="en">Robert Halifax</persName>
+            </person>
+            <person xml:id="Lucidarius">
+                <persName xml:lang="en">Lucidarius</persName>
+                <note>Wikipedia: "The Lucidarius, an anonymous medieval book, was the first German language summa,[1] written circa 1190-1195.[2] It was based on different sources, the chief one being the Elucidarium and other texts by Honorius Augustodunensis."</note>
+            </person>
+            <person xml:id="NicholasOresme">
+                <persName xml:lang="en">Nicholas Oresme</persName>
+            </person>
+            <person xml:id="VincentOfBeauvais">
+                <persName xml:lang="en">Vincent of Beauvais </persName>
+                <note>Wikipedia: The Dominican friar Vincent of Beauvais (Vincentius Bellovacensis or Vincentius Burgundus) (c. 1190 – 1264?) wrote the Speculum Maius, the main encyclopedia that was used in the Middle Ages.</note>
+            </person>
+            <person xml:id="BernardusSilvestris">
+                <persName xml:lang="en">Bernardus Silvestris</persName>
+                <note>Wikipedia: "Bernard Silvestris, also known as Bernardus Silvestris and Bernard Silvester, was a Medieval Platonist philosopher and poet of the 12th century."</note>
+            </person>
+            <person xml:id="PeterOfSalliente">
+                <persName xml:lang="en">Peter Of Salliente</persName>
+                <note>Socius -- see principium II for named reference -- probably refers to all references to bachaelor reading from Navarre. See Sullivan - list of people receiving degree in 1397</note>
+            </person>
+            <person xml:id="PeterLeMaistre">
+                <persName xml:lang="en">Peter Le Maister</persName>
+                <note>See principium II for the following phrase: fratrem petrum dominum meum carissimum <choice><orig>bachalarium</orig><reg>bacalarium</reg></choice> 
+                    <lb ed="#V"/>actu legentem in domo beati augusti. See Sullivan - list of people receiving degree in 1397</note>
+            </person>
+            <person xml:id="AlexanderOfHales">
+                <persName xml:lang="en">Alexander of Hales</persName>
+            </person>
+            <person xml:id="peter-plaoul">
+                <persName xml:lang="en">Peter Plaoul</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Peter_Plaoul</note>
+            </person>
+            <person xml:id="JamesViterbo">
+                <persName xml:lang="en">James of Viterbo</persName>
+            </person>
+            <person xml:id="JohannesBrakel">
+                <persName xml:lang="en">Johannes de Brake</persName>
+                <note>Lecture on the Sentences probably in 1370-1371 (See Zumkeller p. 51)</note>
+            </person>
+            <person xml:id="ThomasStrasbourg">
+                <persName xml:lang="en">Thomas of Strasbourg</persName>
+            </person>
+            <person xml:id="AlphonsusVargas">
+                <persName xml:lang="en">Alonso Vargas of Toledo</persName>
+            </person>
+            <person xml:id="GerardusDeSiena">
+                <persName xml:lang="en">Gerard of Siena</persName>
+            </person>
+            <person xml:id="GerardusDeCalcar">
+              <persName xml:lang="en">Gerard of Calcar</persName>
+            </person>
+          
+            <person xml:id="BonsemblantesBaduarius">
+                <persName xml:lang="en">Bonsemblantes Baduarius</persName>
+                <note>See Zumkeller (translation) p. 48</note>
+            </person>
+            <person xml:id="MonachusNiger">
+                <persName xml:lang="en">MonachusNiger</persName>
+                <note>See Courtenay, Adam Wodeham, p. 93-94</note> <!-- Monachus Niger may refere to more than one person, this entry was created for a use in Gracilis Book 1, question 14 -->
+            </person>
+            <person xml:id="RadulphusDeCastello">
+                <persName xml:lang="en">Randalphus of Castello</persName>
+            </person>
+            <person xml:id="FascinusOfAsti">
+                <persName xml:lang="en">Fascinus of Asti</persName>
+            </person>
+            <person xml:id="LandulphusCaracciolo">
+                <persName xml:lang="en">Landulphus Caracciolo</persName>
+            </person>
+            <person xml:id="AlanusDeInsulis">
+                <persName xml:lang="en">Alain of Lille</persName>
+                <note type="dbpedia-url">http://dbpedia.org/resource/Alain_de_Lille</note>
+            </person>
+          <person xml:id="PetrusDePalude">
+            <persName xml:lang="en">Peter of Palude</persName>
+            <note type="dbpedia-url">http://en.wikipedia.org/wiki/Peter_Paludanus</note>
+          </person>
+          <person xml:id="OsbertPickingham">
+            <persName xml:lang="en">Osbert Pickingham</persName>
+          </person>
+          
+        </listPerson>
+        
+        </listPerson>
+      </div>
+    </front>
+    <body>
+      <div xml:id="lectio29">
+        
+        <head xml:id="l29-Hldnldn" subtype="title">Lectio 29, de Notitia</head>
+          
+<div xml:id="l29-l29-Dd1e3491">
+<head xml:id="l29-Hudesdp">Utrum 'Deus esse' sit demonstrabile: praefatio</head>
+<p xml:id="l29-pesice">Postquam ex<lb ed="#V"/>pediti sunt quatuor primi articuli <lb ed="#R"/>in <lb ed="#V"/>lectionibus praecedentibus, restat <lb ed="#R"/>nunc consequenter <lb ed="#V"/>expedire de quinto, <lb ed="#R"/>in quo videndum est: <lb ed="#V"/>utrum 'Deum esse' <lb ed="#R"/>sit demonstrabile? Et hoc excludendo <lb ed="#V"/>sta<lb ed="#R"/>tum beatorum, de quibus non est dubium <lb ed="#V"/>quin, ex <lb ed="#R"/>praemissis evidentibus et prioribus, <lb ed="#V"/>causa doctrinae <lb ed="#R"/>quoad nos statim posset<app><lem>posset</lem><rdg wit="V">possint</rdg></app> <lb ed="#V"/>inferri<app><lem>inferri</lem><rdg wit="V">inferre</rdg></app> in consequentia <lb ed="#R"/>evidenti quod 'Deus est', licet sit <lb ed="#V"/>eis primum principium <lb ed="#R"/>evidentissimum. Ideo talis <lb ed="#V"/>demonstratio non facit <lb ed="#R"/>eis <unclear>scientem[?]</unclear><app><lem>scientem[?]</lem><rdg wit="V">scire</rdg></app> 'quod Deus <lb ed="#V"/>est', et vi illius processus acquirere scientiam <lb ed="#V"/>'quod Deus est',<app><lem>et vi illius processus acquirere scientiam 'quod Deus est'</lem><rdg wit="R" type="om."/></app> sed stante eorum beatitudine <lb ed="#R"/>utrum <lb ed="#V"/>possent demonstrative concludere 'quod Deus <lb ed="#R"/>est',<app><lem>est</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>et utrum<app><lem>utrum</lem><rdg wit="V">vi illius</rdg></app> processus acquirere scientiam 'quod Deus <lb ed="#R"/><lb ed="#V"/>est', hic est una dubio,<app><lem>dubio</lem><rdg wit="R">distinctio</rdg></app> quia<app><lem>quia</lem><rdg wit="V">vel</rdg></app> processus <lb ed="#R"/>ille esset ex <lb ed="#V"/>notitiis pure beatificis, scilicet, ex <lb ed="#R"/>notitiis in Ver<lb ed="#V"/>bo vel esset ex notitiis in proprio<app><lem>proprio</lem><rdg wit="R">propositio</rdg></app> <lb ed="#R"/>genere ad<lb ed="#V"/>iuta, tamen potentia per luminem gloriae. <lb ed="#R"/>Et utroque <lb ed="#V"/>modo potest probabiliter dici quod sic, <lb ed="#R"/>quia, licet beatitudo <lb ed="#V"/>eorum essentialis sit inva<lb ed="#R"/>riabilis vel notitia eorum <lb ed="#V"/>beatifica de lege or<cb ed="#R" n="48rb"/><lb ed="#R"/>dinata, ita quod nec aug<lb ed="#V"/>mentatur, nec diminuatur, <lb ed="#R"/>nihilominus tamen de <lb ed="#V"/>hiis quae spectant <lb ed="#R"/>ad beatitudinem accidentalem potest <lb ed="#V"/>esse variatio <lb ed="#R"/>aliqualis. Licet enim non sit ita de <lb ed="#V"/>facto, tamen <lb ed="#R"/>sufficit mihi quod ita possit esse, ita<app><lem>ita</lem><rdg wit="V">illa</rdg></app> <lb ed="#V"/>quod <lb ed="#R"/>beati ex notitia beatifica in verbo evidenter <lb ed="#R"/>inferre possunt 'quod Deus est' in consequentia evidenti.</p>
+
+<p xml:id="l29-spenad">Secundo possunt ex notitiis in proprio genere evidenter <lb ed="#R"/>et in consequentia evidenti <cb ed="#V" n="60va"/><lb ed="#V"/>inferre 'quod Deus est'<app><lem>est</lem><rdg wit="V" type="om."/></app> <lb ed="#R"/>cum speciali iuvamine luminis <lb ed="#V"/>gloriae, nec <lb ed="#R"/>huiusmodi scientia in proprio genere est<app><lem>est</lem><rdg wit="R">et</rdg></app> beatifica, <lb ed="#V"/>sicut <lb ed="#R"/>alias dicebatur, sunt incompossibiles, quia nec <lb ed="#V"/>absolute <lb ed="#R"/>actus fidei aenigmaticus est incompossibilis cum <lb ed="#V"/>visione <lb ed="#R"/>Dei, ideo etc. Immo, causando demonstrationem <lb ed="#V"/>pro eviden<lb ed="#R"/>ti notitia aliquarum praemissarum <lb ed="#V"/>et evidenti <lb ed="#R"/>notitia de consequentia et evidenti notitia quod huiusmodi <lb ed="#R"/>praemissae respectu alicuius potentiae <lb ed="#V"/>sunt inferentes<app><lem>inferentes</lem><rdg wit="V">evidenter ad inferendum</rdg></app> <lb ed="#R"/>'quod Deus est', <lb ed="#V"/>concedendum est<app><lem>concedendum est</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>quod Deus cognoscit <lb ed="#R"/>se esse demonstrabile, immo in<lb ed="#V"/>tuitive se videt <lb ed="#R"/>'sic esse demonstrabile'. Non co<lb ed="#V"/>gnoscit tamen <lb ed="#R"/>hoc demonstrative vel discursive. <lb ed="#V"/>Similiter <lb ed="#R"/>potest concedi quod Deus est formaliter notitia <lb ed="#R"/><lb ed="#V"/>demonstrativa 'quod Deus est', quia concedimus quod Deus <lb ed="#R"/>cognoscit <lb ed="#V"/>aequivalenter complexe abstractive vel <lb ed="#R"/><lb ed="#V"/>negative,<app><lem>negative</lem><rdg wit="V" type="add.">negative <add place="inline">etc.</add></rdg></app> et sic non <unclear>evitatur[?]</unclear><app><lem>evitatur[?]</lem><rdg wit="V">evidenter</rdg></app> isto modo<app><lem>isto modo</lem><rdg wit="V" type="om."/></app> quin sit<app><lem>sit</lem><rdg wit="R">si</rdg></app> notitia <lb ed="#R"/><lb ed="#V"/>aequivalenter demonstrativa.</p> 
+
+<p xml:id="l29-niitlg">Non igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> intelligo <lb ed="#R"/>quaestione <lb ed="#V"/>de statu beatorum, quia non est dubium quin <lb ed="#R"/>cog<lb ed="#V"/>noscant 'Deum esse' tam beatifice, id est, <lb ed="#V"/>in Verbo <lb ed="#R"/>realiter, quam in proprio genere, <unclear>iuvate[?]</unclear> tamen <lb ed="#R"/>lumen <lb ed="#V"/>gloriae.</p> 
+
+<p xml:id="l29-ndeais">Nec debet etiam quomodo intelligi <lb ed="#R"/>de sta<lb ed="#V"/>tu innocentiae quod non est dubium quin <lb ed="#R"/>in <lb ed="#V"/>statu innocentiae esset evidenter demonstrabile <lb ed="#R"/>'quod Deus est', et nedum theologice, sed etiam in <lb ed="#R"/>puro lumine <lb ed="#V"/>naturali. Ita quod <name ref="#Adam">Adam</name> in statu<app><lem>in statu</lem><rdg wit="R" type="om."/></app> innocentiae <lb ed="#R"/><lb ed="#V"/>potuit utroque modo evidenter<app><lem>evidenter</lem><rdg wit="V" type="om."/></app> cognoscere <lb ed="#R"/>Deum esse, scilicet, the<lb ed="#V"/>ologice,<app><lem>theologice</lem><rdg wit="R" type="om."/></app> ubi lumen naturale iu<lb ed="#R"/>vatur fide, <lb ed="#V"/>et etiam lumine proprio naturali non adiuto<app><lem>adiuto</lem><rdg wit="R">iuto</rdg></app> <lb ed="#R"/>fide sive <lb ed="#V"/>alio iuvamine speciali.</p>
+
+  <p xml:id="l29-nvhqde">Nam <name ref="#HughOfStVictor">Venerabilis <lb ed="#R"/><lb ed="#V"/>Hugo</name> in libro <title ref="#deSacramentis">De sacramentis</title> ponit<app><lem>ponit</lem><rdg wit="V">dicit</rdg></app> quod nedum <lb ed="#R"/><lb ed="#V"/><name ref="#Adam">Adam</name> de hoc complexo 'quod Deus est' potuit <lb ed="#R"/>habere scientiam in lumine naturali in statu innocentiae, <lb ed="#R"/>sed<app><lem>de hoc complexo 'quod Deus est' potuit habere scientiam in lumine naturali in statu innocentiae, sed</lem><rdg wit="V" type="om." cause="homeoarchy"/></app> de hoc complexo 'Deus est trinus et <lb ed="#V"/>unus' <lb ed="#R"/>potuit habere scientiam et notitiam <lb ed="#V"/>evidentem, <lb ed="#R"/>nam ex habitudine imaginis<app><lem>imaginis</lem><rdg wit="R">imaginationis[?]</rdg></app> <lb ed="#V"/>trinitatis creatae <lb ed="#R"/>ad imaginem Trinitatis <lb ed="#V"/>benedictae<app><lem/><rdg wit="R" type="om."/></app> increatae evidenter <lb ed="#R"/>potuit conlu<lb ed="#V"/>dere 'Deum esse trinum et unum'. <lb ed="#R"/>Unde inquit <lb ed="#V"/><name ref="#HughOfStVictor">Venerabilis Hugo</name> quod clare <lb ed="#R"/>et immediate vide<lb ed="#V"/>bat<app><lem>videbat</lem><rdg wit="V">videlicet[?]</rdg></app> se anima et se esse <lb ed="#R"/>factum ad imaginem Dei, et per consequens, si cla<lb ed="#R"/>re videbat se esse factum ad imaginem <cb ed="#R" n="48va"/><lb ed="#R"/>Dei et<app><lem>Dei, et per consequens, si clare videbat se esse factum ad imaginem Dei et</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>trinitatis, cognoscebat animam ut <unclear>revela<lb ed="#R"/><lb ed="#V"/>tam[?]</unclear>ad illam Trinitatem increatam, quod non <lb ed="#R"/><lb ed="#V"/>potuisset cognovisse, nisi cognovisset <lb ed="#R"/><lb ed="#V"/>extrema, ergo etc. Et per consequens quantum ad statum <lb ed="#R"/><lb ed="#V"/>innocentiae non esset<app><lem>esset</lem><rdg wit="V">est</rdg></app> difficultas quaerere, <lb ed="#R"/><lb ed="#V"/>utrum in illo statu 'Deum esse' esset demonstra<lb ed="#R"/>bile, <cb ed="#V" n="60vb"/><lb ed="#V"/>quia certum est quod sic; immo forte ex qualibet <lb ed="#R"/>n<lb ed="#V"/>otitia creaturae immediate poterat elici <lb ed="#R"/>evi<lb ed="#V"/>dens iudicium 'quod Deus est'.</p>
+
+<p xml:id="l29-inrsid">Iterum<app><lem>iterum</lem><rdg wit="V">item</rdg></app> <lb ed="#R"/>non <lb ed="#V"/>revocatur in dubium, utrum 'Deum esse' <lb ed="#R"/>sit demonstrabile <lb ed="#V"/>in puro lumine naturali <lb ed="#R"/>in substantiis intel<lb ed="#V"/>lectualibus perfectioribus<app><lem>perfectioribus</lem><rdg wit="R" type="corr."><subst><del>perfectiora</del><add>perfectioribus</add></subst></rdg><rdg wit="V">perfectionibus</rdg></app> <lb ed="#R"/>quam homo sive quam <lb ed="#V"/>species humana. <lb ed="#R"/>Stat enim quod ratione vivaciter <lb ed="#V"/>intellectus et <lb ed="#R"/>perfectionis speciei quod angelo aliquid sit de<lb ed="#R"/>monstrabile <lb ed="#V"/>in suo puro lumine naturali <lb ed="#R"/>quod excedit <lb ed="#V"/>capacitatem humanae investiga<lb ed="#R"/>tionis sine <lb ed="#V"/>iuvamine speciali ipsius Dei.</p>
+
+<p xml:id="l29-idnvie">Item<app><lem>item</lem><rdg wit="V">ideo</rdg></app> doctores <lb ed="#V"/>non revocaverunt in dubium <lb ed="#R"/>quin angelus <lb ed="#V"/>posset<app><lem/><rdg wit="V">possit</rdg></app> clare demonstrare aliquid <lb ed="#R"/>quod cadit <lb ed="#V"/>sub fide, quia sicut essentia et <lb ed="#R"/>quidditas angeli <lb ed="#V"/>sit perfectior quam humana, <lb ed="#R"/>ita vivacitas inge<lb ed="#V"/>nii angeli est perfec<lb ed="#R"/>tior et clarior<app><lem>perfectior et clarior</lem><rdg wit="V">vivacior et perfectior</rdg></app> humana viva<lb ed="#V"/>citate, ideo etc.<app><lem>ideo etc.</lem><rdg wit="V">ergo</rdg></app></p> 
+</div>
+<div xml:id="l29-l29-Dd1e4131">
+
+<head xml:id="l29-Hudesnl">Utrum Deum esse sit demonstrabile in lumine naturali in statu naturae lapsae?</head>
+
+<p xml:id="l29-eissnl"><lb ed="#R"/>Et ideo solum restat <lb ed="#V"/>difficultas, utrum <lb ed="#R"/>'Deum esse' sit demonstrabile in <lb ed="#V"/>lumine naturali in <lb ed="#R"/>statu naturae lapsae.</p>
+
+<div xml:id="l29-l29-Dd1e4148">
+<head xml:id="l29-Hpcpcpc">Conclusio prima</head>
+
+<p xml:id="l29-cqmame">Circa <lb ed="#V"/>quam materiam <lb ed="#R"/>est<app><lem>est</lem><rdg wit="V">sit</rdg></app> haec conclusio: Naturalis in<lb ed="#V"/>vestigatio humana <lb ed="#R"/>ex luminem naturali praecise <lb ed="#V"/>non concluderet<app><lem>concluderet</lem><rdg wit="R" type="add."><add place="inline">pcise[?]</add></rdg></app> <unclear>pcise[?]</unclear> <lb ed="#R"/>evidenter 'Deum esse'. Ista <lb ed="#V"/>conclusio fuit in radi<lb ed="#R"/>ce satis tacta in toto <lb ed="#V"/>processus, in quo osten<lb ed="#R"/>sum fuit qualiter debilis et <lb ed="#V"/>fragilis est <lb ed="#R"/>humana investigatio <lb ed="#V"/>sibi derelicta.<note>Cf. Prol, lect. 7 et alia loca</note> Et <lb ed="#R"/>patuit per effectum de primis <lb ed="#V"/>philosophantibus, qui <lb ed="#R"/>ultra corpora sensibilia <lb ed="#V"/>et materialia non posuerunt <lb ed="#R"/>aliquam <lb ed="#V"/>rem spiritualem, sicut allegatum <lb ed="#R"/>fuit de pluribus philosophis. Et<app><lem>sicut allegatum fuit de pluribus philosophis. Et</lem><rdg wit="V" type="om." cause="homeoarchy"/></app> sicut alle<lb ed="#R"/>gabat <name ref="#Aquinas">Sanctus Thomas</name> <lb ed="#V"/>in libro quem <lb ed="#R"/>fecit de angelis recte in principio. <lb ed="#V"/>Alle<lb ed="#R"/>gatum etiam fuit de Chaldeis, qui pro <lb ed="#V"/>Deo <lb ed="#R"/>non colebant, nisi astra vel<app><lem>vel</lem><rdg wit="V">et</rdg></app> caelum. <lb ed="#V"/>Et sic suo <lb ed="#R"/>modo concipiebant ut<app><lem>ut</lem><rdg wit="R" type="om."/></app> philosophantes, <lb ed="#V"/>nec umquam <lb ed="#R"/>philosophantes in<app><lem>in</lem><rdg wit="R" type="om."/></app> lumine naturali <lb ed="#V"/>non iuto fide vel <lb ed="#R"/>speciali gratia posue<lb ed="#V"/>runt aliquid immateriale. <lb ed="#R"/>Et si posteriores <lb ed="#V"/>aliquid posuerunt immateria<lb ed="#R"/>le, si pro quia hoc <lb ed="#V"/>per doctrinam venientem <lb ed="#R"/>a prophetis,<app><lem>venientem a prophetis</lem><rdg wit="V">a philosophis venientis</rdg></app> vel ab <name ref="#Adam">A<lb ed="#V"/>dam</name>, vel quia aliqui fuerunt <lb ed="#R"/>supernaturaliter <lb ed="#V"/>illustrati. Et radix fuit<app><lem>fuit</lem><rdg wit="R" type="om."/></app> saepe tacta, <lb ed="#R"/><lb ed="#V"/>scilicet, propter penam originalis culpae, quia <cb ed="#V" n="61ra"/><lb ed="#V"/>realiter <lb ed="#R"/>et gustum spiritualem variant et<app><lem>et</lem><rdg wit="V">ut</rdg></app> <lb ed="#V"/>oculum <cb ed="#R" n="48vb"/><lb ed="#R"/>mentalem caecavit intantum quod ve<lb ed="#V"/>ritates,<app><lem>veritates</lem><rdg wit="V">varietas</rdg></app> et maxime <lb ed="#R"/>pertinentes ad salutem, appara<lb ed="#V"/>verunt sibi falsae <lb ed="#R"/>vel latuerunt eum,<app><lem>latuerunt</lem><rdg wit="R" type="om."/></app> ad <lb ed="#V"/>modum gustus corporalis male dis <lb ed="#R"/>positi, <lb ed="#V"/>qui iudicat dulce amarum et e converso<app><lem>e converso</lem><rdg wit="V">e contra</rdg></app> <lb ed="#R"/>iudicat amarum dulce,<app><lem>iudicat amarum dulce</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>et tunc<app><lem>tunc</lem><rdg wit="V">circa</rdg></app> veritates maxime <lb ed="#R"/>de fine ultimo <lb ed="#V"/>et de felicitate humana <lb ed="#R"/>ad quas <lb ed="#V"/>natura<app><lem>natura</lem><rdg wit="V">nam[?]</rdg></app> est magis ex natura sua,<app><lem>sua</lem><rdg wit="R" type="add."><add place="inline">mihi[?] nata</add></rdg></app> <lb ed="#R"/>antiqui ma<lb ed="#V"/>gis erraverunt.</p>
+
+<p xml:id="l29-upcdsi">Unde <lb ed="#R"/>potest consequenter dici quod, de <lb ed="#V"/>Deo nullum conceptum <lb ed="#R"/>verum habuerunt antiqui <lb ed="#V"/>philosophi ex suis pu <lb ed="#R"/>ris naturalibus. Et hoc satis <unclear>immuunt[?]</unclear> expri <lb ed="#R"/>mentes conceptus eo<lb ed="#V"/>rum, quia in quolibet includitur<app><lem>includitur</lem><rdg wit="R">includit</rdg></app> <lb ed="#R"/>aliquod <lb ed="#V"/>imperfectum sive aliquid repugnans <lb ed="#R"/>Deo. <lb ed="#V"/>Et sic omnes propositiones affirmativae de Deo quas<app><lem>quas</lem><rdg wit="R">quos</rdg></app> <lb ed="#R"/>habuerunt erant falsae, quia subiecta earum <lb ed="#V"/>pro <lb ed="#R"/>nullo supponebant, quia semper include<lb ed="#R"/><lb ed="#V"/>bant aliquid imperfectionis repugnans <lb ed="#V"/>Deo, <lb ed="#R"/>ideo<app><lem>ideo</lem><rdg wit="V" type="om."/></app> etc. Ab istis, tamen excludendo <name ref="#Aristotle">Aristotelem</name>, <lb ed="#R"/>et<app><lem>et</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/><name ref="#Plato">Platonem</name>,<app><lem>Platonem</lem><rdg wit="V" type="add.sed.del"><del rend="strikethrough"><add>ei</add></del></rdg></app> et <name ref="#Socrates">Socratem</name>, et alios plu<lb ed="#V"/>res philosophos, <lb ed="#R"/>quia verisimile est quod fuerunt a <lb ed="#V"/>Deo specialiter <lb ed="#R"/>illustrati.<app><lem>illustrati</lem><rdg wit="V" type="add."><add place="inline">etc.</add></rdg></app></p>      
+</div>   
+<div xml:id="l29-l29-Dd1e4503">
+
+<head xml:id="l29-Hcscscs">Conclusio Secunda</head>
+
+  <p xml:id="l29-scdnaf">Secunda conclusio: 'Deum esse' <lb ed="#V"/>est theologice <lb ed="#R"/>demonstrabile in lumine naturali, id est, <lb ed="#V"/>'Deum esse' in <lb ed="#R"/>lumine naturali potest demonstrari <lb ed="#V"/>adiuto tamen <lb ed="#R"/>fide. Et hoc est proprie demonstrari the<lb ed="#V"/>ologice, sicut <lb ed="#R"/>patet ex praecedentibus<note>cf. Prol, lect. 13 or 14??</note>, quia sicut <lb ed="#V"/>alias dictum est <lb ed="#R"/>theologia procedit ex lumine <lb ed="#V"/>naturali adiuto fide <lb ed="#R"/>et quod ita sit primo <lb ed="#V"/>ad hoc sunt testes authentici<app><lem>authentici</lem><rdg wit="R">iutetici[?]</rdg></app> <lb ed="#R"/>sicut quasi omnes <lb ed="#V"/>doctores moderni, qui omnes <lb ed="#R"/>in hoc con<lb ed="#V"/>cordant, quod rationes <name ref="#Aristotle">Aristoteles</name> ad probandum <lb ed="#R"/>'primam <lb ed="#V"/>causam esse' in isto processu sunt demon<lb ed="#R"/>strativae, sicut <lb ed="#V"/>dicit<app><lem>dicit</lem><rdg wit="R" type="om."/></app> <name ref="#Albert">Albertus Magnus</name>, <name ref="#Aquinas">Sanctus Thomas</name>, <lb ed="#R"/><name ref="#GilesOfRome">Aegidius <lb ed="#V"/>de Roma</name> et generaliter omnes exposi<lb ed="#R"/>tores <lb ed="#V"/><name ref="#Aristotle">Aristotelis</name>. Et ista probatio forte videtur re<lb ed="#R"/>pugnare <lb ed="#V"/>primae conclusioni, scilicet, quod in lumine naturali <lb ed="#R"/>non posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> <lb ed="#V"/>demonstrari 'Deum esse'; sive <name ref="#Aristotle">Aristoteles</name> de<lb ed="#R"/>monstravit <lb ed="#V"/>in lumine naturali puro sive non, <lb ed="#R"/>non curo, sed <lb ed="#V"/>sufficit mihi probare conclusionem meam, <lb ed="#R"/>quia, si in puro <lb ed="#V"/>lumine naturali, sine fide, de <lb ed="#R"/>monstraverit,<app><lem>demonstraverit</lem><rdg wit="V">demonstravit</rdg></app> a fortiori <lb ed="#V"/>potest demonstrari <lb ed="#R"/>in lumine naturali adiuto fide.</p>
+
+<p xml:id="l29-uaefhd">Ubi ad<lb ed="#V"/>vertendum <lb ed="#R"/>est quod aliquid dicitur demonstrabile esse <lb ed="#V"/>in ordine <lb ed="#R"/>ad aliquam potentiam, cui apta <cb ed="#V" n="61ra"/><lb ed="#V"/>nata sit fieri <lb ed="#R"/>huiusmodi demonstratio.</p> 
+
+  <p xml:id="l29-snepsi">Secundo no<lb ed="#V"/>tandum est quod de<lb ed="#R"/>monstratio non debet censeri <lb ed="#V"/>demonstratio, nisi <lb ed="#R"/>respectu potentiae debito modo dispositae. <lb ed="#R"/><lb ed="#V"/>Unde ad assentiendum, utrum A sit processus <lb ed="#R"/>de<lb ed="#V"/>monstrationis respectu potentiae intellectivae <lb ed="#R"/>humanae, <lb ed="#V"/>non est considerandum, utrum pure<app><lem>pure</lem><rdg wit="R">puro</rdg></app> <lb ed="#R"/>sit demonstratio <lb ed="#V"/>vel infanti vel dementi <lb ed="#R"/>carenti usu rationis <lb ed="#V"/>vel rudimento ingenio <cb ed="#R" n="49ra"/><lb ed="#R"/>vel notabiliter laeso <lb ed="#V"/>in suis naturalibus. Et <lb ed="#R"/>causa subest nam de<lb ed="#V"/>monstrationes mathematicae, <lb ed="#R"/>quae sunt certissimae <lb ed="#V"/>demonstrationes, non possunt <lb ed="#R"/>eis esse demonstrationes.<app><lem>non possunt eis esse demonstrationes</lem><rdg wit="V" type="om."/></app> Et ideo non in comparatione <lb ed="#R"/>ad eos debet <lb ed="#V"/>iudicare, utrum aliqua ratio <lb ed="#R"/>sit demonstrativa vel non, <lb ed="#V"/>ita quod breviter, <lb ed="#R"/>pones intellectum male disposi<lb ed="#V"/>tum, non debet <lb ed="#R"/>attendi, utrum aliqua ratio sit demonstrativa <lb ed="#R"/>vel non, sed penes intellectum bene dispositum<app><lem>non debet attendi, utrum aliqua ratio sit demonstrativa vel non, sed penes intellectum bene dispositum</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> <lb ed="#R"/>sit demonstratio<app><lem>sit demonstratio</lem><rdg wit="R">sicut de medio[?]</rdg></app> virtutis tangit <name ref="#Aristotle">Philosophus</name>, <lb ed="#V"/>quia non <lb ed="#R"/>dedit nobis aliam regulam, <lb ed="#V"/>nisi considerando <lb ed="#R"/>iudicium sapientis in <lb ed="#V"/>quo consistit virtus <lb ed="#R"/>et medium virtutis, ubi,<app><lem>ubi</lem><rdg wit="V">nisi</rdg></app> scilicet, et<app><lem>et</lem><rdg wit="V" type="om."/></app> prout sapiens <lb ed="#R"/>iudicabit.</p>
+
+<p xml:id="l29-ahqsee">Advertendum <lb ed="#V"/>hic quod <name ref="#Boethius">Boethius</name> in <lb ed="#R"/>libro <title ref="#deHebdomadibus">de Ebdomandibus</title> ponit <lb ed="#V"/>unam distinctionem, <lb ed="#R"/>scilicet, quod duplex est <unclear>omni[?]</unclear> conceptio. Una <lb ed="#V"/>talis quod quicumque<app><lem>quicumque</lem><rdg wit="R">quicque</rdg></app> <lb ed="#R"/>probat eam auditam, id est, <lb ed="#V"/>approbat illam ut quod totum <lb ed="#R"/>est maius sua <lb ed="#V"/>parte.<app><lem>parte</lem><rdg wit="V" type="add."><add place="inline">etc.</add></rdg></app> Alia est quae est communis apud <lb ed="#R"/>omnes <lb ed="#V"/>sapientes, ut spiritualia non esse in loco <lb ed="#R"/><lb ed="#V"/>est unum principium apud intellectum bene disposi<lb ed="#R"/>tum <lb ed="#V"/>et elevatum, ita proportionaliter in materia praesenti <lb ed="#R"/>quod,<app><lem>quod</lem><rdg wit="R" type="add."><add place="inline">ad</add></rdg></app> aliquid esse demonstrativum, vel ad iudicandum <lb ed="#V"/>aliquid esse demonstrativum,<app><lem>vel ad iudicandum aliquid esse demonstrativum</lem><rdg wit="R" type="om." cause="homeoarchy"/></app> vel utrum <lb ed="#R"/><lb ed="#V"/>aliquis processus sit demonstratvius<app><lem>demonstrativus</lem><rdg wit="R">demonstratus</rdg></app> debet atten<lb ed="#R"/>di po<lb ed="#V"/>nes iudicum sapientis et elevatorum.</p>
+
+  <p xml:id="l29-eqalnd"><lb ed="#R"/>Et quia antiqui sapientes reputave<lb ed="#V"/>runt illud <lb ed="#R"/>esse demonstrabile et quod rationes communiter<app><lem>communiter</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>factae ad probandum <lb ed="#R"/>quod non sit processus in infinitum <lb ed="#V"/>in causis <lb ed="#R"/>essentialiter subordinatis sunt<app><lem>sunt</lem><rdg wit="V">sicut</rdg></app> <lb ed="#V"/>demonstrativae, <lb ed="#R"/>ideo etc. Verum est quod theologice per easdem <lb ed="#V"/>rationes <lb ed="#R"/>quas habuerunt philosophi et per eosdem terminos <lb ed="#R"/><lb ed="#V"/>processus essent sibi perfectiores et alterius <lb ed="#R"/>ratio<lb ed="#V"/>nis et conceptus entis<app><lem>entis</lem><rdg wit="R">etiam</rdg></app> quam philosopho in puro lumine <lb ed="#R"/>natura<lb ed="#V"/>li. Patet ergo quod lumine fidei in lumine <lb ed="#R"/>naturali<app><lem>patet ergo quod lumine fidei in lumine naturali</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> acquiritur nobilior scientia et perfectior <lb ed="#R"/>quam <lb ed="#V"/>sine fide. Ita quod licet<app><lem>quod licet</lem><rdg wit="V">quodlibet</rdg></app> <name ref="#Aristotle">Aristoteles</name> habuerit de<lb ed="#R"/>monstrationes <lb ed="#V"/>'quod Deus est', non<app><lem>non</lem><rdg wit="V" type="om."/></app> tamen aeque perfecte<app><lem>perfecte</lem><rdg wit="V">perfectas</rdg></app>, <lb ed="#R"/>sicut theologus habet,<app><lem>habet</lem><rdg wit="V" type="om."/></app> <lb ed="#V"/>qui<app><lem>qui</lem><rdg wit="V">quia</rdg></app> lumen naturale per <lb ed="#R"/>fidem elevatur <lb ed="#V"/>nedum ad habendum demonstratio<lb ed="#R"/>nes perfectio<lb ed="#V"/>res, sed ad formandum conceptus nobili<lb ed="#R"/>ores <cb ed="#V" n="61va"/><lb ed="#V"/>et perfectiores de eisdem propositionibus <lb ed="#R"/>et ad concipiendum <lb ed="#V"/>habitudines perfectiores et per<lb ed="#R"/>fectiori modo; et <lb ed="#V"/>ideo generaliter conclusiones theologicae <lb ed="#R"/><lb ed="#V"/>cum eodem processu cum philosopho sunt perfectioris <lb ed="#R"/>speciei quam conclusiones philosophice <lb ed="#V"/>in puro lumine natura<lb ed="#R"/>li deductae.</p>          
+</div>
+<div xml:id="l29-l29-Dd1e5003">
+<head xml:id="l29-Hpadpad">Probationes aliquorum doctorum</head>
+
+<p xml:id="l29-qecfed">Quantum <lb ed="#V"/>est circa istam<app><lem>istam</lem><rdg wit="R" type="om."/></app> materiam <lb ed="#R"/>valde diffuse et <lb ed="#V"/>expresse et bene loquuntur <lb ed="#R"/>doctores, ideo breviter <lb ed="#V"/>transeam, quia nihil potest <lb ed="#R"/>addi. Ideo videantur <lb ed="#V"/>doctores in ista materia, <lb ed="#R"/>faciam tamen aliquas <lb ed="#V"/>rationes<app><lem>rationes</lem><rdg wit="V">propositiones</rdg></app> ad probandum <lb ed="#R"/>'quod Deus est' quas faciunt <lb ed="#V"/>etiam doctores.</p> 
+
+<div xml:id="l29-l29-Dd1e5046">
+<head xml:id="l29-Hpspsps">Probatio Scoti</head>
+
+<p xml:id="l29-eiafam"><cb ed="#R" n="49rb"/><lb ed="#R"/>Et inter alias rationes <name ref="#Scotus">Doctor <lb ed="#V"/>Subtilis</name> <lb ed="#R"/>facit ad hoc unam rationem val<lb ed="#V"/>de appa<lb ed="#R"/>rentem.<note>cf. Scotus, Ordinatio I,d. 2 par 1, q. 1-2 (ed. Vaticana, II, 125-243); cf. Wodeham, Lectura Secunda, I, d. 3, q. 1 sect. 2 (Wood II:116)</note> Unde arguit sic: aliquid est <lb ed="#R"/><lb ed="#V"/>effectum, et non a se, vel<app><lem>vel</lem><rdg wit="V">nec</rdg></app> a nullo, ergo ab<app><lem>ab</lem><rdg wit="R" type="add."><add place="inline">ali</add></rdg></app> <lb ed="#R"/>alio. <lb ed="#V"/>Ista deductio conceditur ab omnibus. Quod <lb ed="#V"/>autem <lb ed="#R"/>aliquid sit effectum evidens est omnibus ad ex<lb ed="#R"/>peri<lb ed="#V"/>entiam. Experientia<app><lem>experientia</lem><rdg wit="R">experiuntur</rdg></app> enim est aliqua fieri, ali<lb ed="#V"/>qua <lb ed="#R"/>moveri.<app><lem>moveri</lem><rdg wit="V" type="add."><add place="inline">etc.</add></rdg></app></p> 
+
+  <p xml:id="l29-qannae">Quod autem non a se, istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> est evidens <lb ed="#R"/><lb ed="#V"/>intellectui bene disposito, quia nulla res potest <lb ed="#R"/><lb ed="#V"/>de non-esse ad esse produci a seipsa, quia sic <lb ed="#R"/><lb ed="#V"/>prius esset quam<app><lem>quam</lem><rdg wit="V">quod non</rdg></app> esset, quod implicat, <lb ed="#V"/>quia <lb ed="#R"/>sequitur, id est,<app><lem>id est</lem><rdg wit="V">A</rdg></app> facit se, igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> est prius se <lb ed="#V"/>natura <lb ed="#R"/>vel tempore. Et hoc reputat <lb ed="#V"/>principium<app><lem>reputat principium</lem><rdg wit="V">repugnat principio</rdg></app> <name ref="#Augustine">Augustinus</name> <lb ed="#R"/>Io <title ref="#CityOfGod">De Civitate Dei</title>, scilicet,<app><lem>scilicet</lem><rdg wit="V" type="om."/></app> quod: <quote xml:id="l29-l29-Qd1e5184" source="http://scta.info/resource/adt-l1">nihil gi<lb ed="#V"/>gnat se</quote>, sic<app><lem>sic</lem><rdg wit="V">ut sic</rdg></app> <lb ed="#R"/>nec potest dici quod a nullo, <lb ed="#V"/>quia non potest <lb ed="#R"/>salvari quomodo res, quae a nullo <lb ed="#V"/>fieret,<app><lem>fieret</lem><rdg wit="V">fit</rdg></app> pro<lb ed="#R"/>duceretur de non-esse ad esse.</p> 
+
+<p xml:id="l29-iieied">Item istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> <lb ed="#R"/><lb ed="#V"/>est contra experientiam, quia experiuntur<app><lem>experiuntur</lem><rdg wit="V">experitur</rdg></app> quod quicquid <lb ed="#V"/>fit, <lb ed="#R"/>fit ab aliquo, quidquid movetur, ab aliquo <lb ed="#R"/><lb ed="#V"/>movetur, igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> fit illud, fit<app><lem>fit</lem><rdg wit="V" type="om."/></app> ab alio. Sit igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> <lb ed="#R"/>gratia exempli <lb ed="#V"/>quod B sit ad A effectum,<app><lem>B sit ad A effectum</lem><rdg wit="V">A <space extent="wordlength"/> ab A effectivum</rdg></app> <lb ed="#R"/>tunc arguitur <lb ed="#V"/>de A, vel A<app><lem>A</lem><rdg wit="R" type="om."/></app> est effectibile vel <lb ed="#R"/>ineffectibile.<app><lem>ineffectibile</lem><rdg wit="V">investigibile</rdg></app> Si est<app><lem>est</lem><rdg wit="V" type="om."/></app> in<lb ed="#V"/>effectibile et facit <lb ed="#R"/>B, tunc<app><lem>tunc</lem><rdg wit="V">ergo</rdg></app> est Deus, quia omnis causa, <lb ed="#V"/>quae pro<lb ed="#R"/>ducit aliquid, et est improductibilis,<app><lem>improductibilis</lem><rdg wit="V">improducibilis</rdg></app> illa<app><lem>illa</lem><rdg wit="V" type="om."/></app> est prima <lb ed="#R"/><lb ed="#V"/>causa. Si igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> A sit effectibile, sit igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> ef<lb ed="#R"/>fectibile<app><lem>effectibile</lem><rdg wit="V" type="om."/></app> A <supplied>ab</supplied> C. Tunc iterum <lb ed="#V"/>arguetur<app><lem>arguetur</lem><rdg wit="V">argueretur</rdg></app> de C <lb ed="#R"/>et tandem, quia non est <lb ed="#V"/>processus in infinitum, <lb ed="#R"/>deveniemus ad aliquod inefficti<lb ed="#V"/>bile. Igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> <lb ed="#R"/>evidenter deducitur quod est aliqua <lb ed="#V"/>causa efficiens,<app><lem>efficiens</lem><rdg wit="R" type="om."/></app> et illa<app><lem>illa</lem><rdg wit="V" type="om."/></app> non <lb ed="#R"/>est<app><lem>est</lem><rdg wit="V" type="om."/></app> effecta, et illa est Deus.</p> 
+
+  <p xml:id="l29-sfdvev"><lb ed="#V"/>Sed forte diceretur <lb ed="#R"/>quod est processus in infinitum <lb ed="#V"/>in talibus cau<lb ed="#R"/>sis. Sed sine dubio apud <lb ed="#V"/>intellectum bene dis<lb ed="#R"/>positum hoc negaretur, scilicet, quod esset processus <lb ed="#R"/>in infinitum in causis.<app><lem>scilicet, quod esset processus in infinitum in causis</lem><rdg wit="V" type="om."/></app> Ideo <lb ed="#V"/><name ref="#Aristotle">Aristoteles</name>, qui habuit in <lb ed="#R"/>genium clarum et bene dis<lb ed="#V"/>positum reputavit <lb ed="#R"/>hoc impossibile, scilicet, quod sit processus in infinitum <lb ed="#R"/>in causis essentialiter subor<lb ed="#V"/>dinatis; ideo <lb ed="#R"/>oppositum, scilicet, quod non sit<app><lem>sit</lem><rdg wit="V">est</rdg></app> processus in infinitum <lb ed="#V"/>in <lb ed="#R"/>causis essentialiter subordinatis<app><lem>in causis essentialiter subordinatis</lem><rdg wit="V">etc.</rdg></app> pro principio <lb ed="#R"/>reputavit. Ideo hoc negans <lb ed="#V"/>proterviat ex <lb ed="#R"/>defectu ingenii vel ex voluntate.</p> 
+
+  <p xml:id="l29-stdepc"><lb ed="#V"/>Secundo<app><lem>secundo</lem><rdg wit="V">illo</rdg></app> tamen <lb ed="#R"/>dato, scilicet, quod non sit processus in infinitum <lb ed="#R"/>etc., <lb ed="#V"/>arguit <name ref="#Scotus">Scotus</name> sic: et signat totam <lb ed="#R"/>multitudinem<app><lem>multitudinem</lem><rdg wit="V">latitudinem</rdg></app> effectibilium, et sit A. Tunc ar<lb ed="#R"/>guit sic: ista mul<lb ed="#V"/>titudo tota<app><lem>tota</lem><rdg wit="V" type="om."/></app> est effecta,<app><lem>effecta</lem><rdg wit="V">effectiva</rdg></app> et non <lb ed="#R"/>ab aliquo<app><lem/><rdg wit="R" type="add" cause="repetitio"><add place="inline">et non ab aliquo</add></rdg></app> huius <lb ed="#V"/>multitudinis. <lb ed="#R"/>Ergo ab alio<app><lem>alio</lem><rdg wit="V">aliquo</rdg></app> quod est extra totam illam<app><lem>illam</lem><rdg wit="V">istam</rdg></app> <lb ed="#V"/>multitudinem<app><lem>multitudinem</lem><rdg wit="V">latitudinem</rdg></app> <lb ed="#R"/>effectibilium; ergo est ineffectibile illud extra <lb ed="#R"/>multitudinem effectibilium<app><lem>illud extra multitudinem effectibilium</lem><rdg wit="V" type="om."/></app> et efficit <lb ed="#V"/>totam illam<app><lem>illam</lem><rdg wit="V">istam</rdg></app> multitudinem<app><lem>multitudinem</lem><rdg wit="V">latitudinem</rdg></app> <cb ed="#R" n="49va"/><lb ed="#R"/>effectibilium, ergo est prima <lb ed="#V"/>causa.</p>
+
+<p xml:id="l29-veqqde">Verum est quod doc<lb ed="#R"/>tores faciunt ca<lb ed="#V"/>lumnias, et forte in lec<lb ed="#R"/>tione sequenti<app><lem>sequenti</lem><rdg wit="V" type="add."><add place="inline">eas</add></rdg></app> <lb ed="#V"/>inducam quomodo possunt huiusmodi <lb ed="#R"/>rationes calumniari. <lb ed="#V"/>Sed solum pro praesenti po<lb ed="#R"/>nam rationes ad probandum 'quod <lb ed="#V"/>Deus est'.</p>
+</div>
+<div xml:id="l29-l29-Dd1e5586">      
+
+  <head xml:id="l29-Hpdrpdr">Probatio de Ripa</head>
+
+<p xml:id="l29-dripds"><name ref="#Ripa">De <lb ed="#R"/>Ripa</name> in ista materia <lb ed="#V"/>procedit, probando inten<lb ed="#R"/>tum, dato quod sit<app><lem>sit</lem><rdg wit="V">esset</rdg></app> processus <lb ed="#V"/>in infinitum in huiusmodi <lb ed="#R"/>causis.<app><lem>causis</lem><rdg wit="V" type="add."><add place="inline">etc.</add></rdg></app> Circa <lb ed="#V"/>quam materiam ponit duas sup<lb ed="#R"/>positiones.</p> 
+
+<p xml:id="l29-pseqen"><lb ed="#V"/>Prima suppositio est quod in tali <lb ed="#R"/>ordine, illud quod est superius <lb ed="#V"/>semper est perfectius, <lb ed="#R"/>ita quod, imaginando primum effectible <lb ed="#V"/>illius ordinis <lb ed="#R"/>et continue in infinitum as<lb ed="#V"/>cendendo, esset ordo perfec<lb ed="#R"/>tionis talis, quia <lb ed="#V"/>semper superius esset perfectius; <lb ed="#R"/>et illud videtur quasi <lb ed="#V"/>evidenter notum.</p> 
+
+<p xml:id="l29-ssqcmp"><lb ed="#V"/>Secundo supponit <lb ed="#R"/>quod creatura quantum <lb ed="#V"/>est perfectior tantum est depen<lb ed="#R"/>dentior. Ista sup<lb ed="#V"/>positio non esset<app><lem>esset</lem><rdg wit="V">est</rdg></app> evidens, nisi <lb ed="#R"/>in lumine fidei, <lb ed="#V"/>quia in puro lumine naturali totaliter <lb ed="#R"/>contrarium vi<lb ed="#V"/>deretur, quia angeli minus viderentur<app><lem>viderentur</lem><rdg wit="R">videntur[?]</rdg></app> <lb ed="#R"/>dependere quam homines; et in hoc, quod secundum <lb ed="#R"/>aliquos habebunt <lb ed="#V"/>necesse esse<app><lem>esse</lem><rdg wit="V" type="om."/></app> quem errorem, se<lb ed="#R"/>cutus est ille <name ref="#Demosthenes">Daemon<lb ed="#V"/>tesono</name>.<app><lem/><rdg wit="V" type="marginalNote">nota contra illum Demontesono</rdg></app> Sed sine dubio, <lb ed="#R"/>in lumine naturali, cum lumine <lb ed="#V"/>fidei, istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> est <lb ed="#R"/>evidens, nam considerata habi<lb ed="#V"/>tudine creaturae <lb ed="#R"/>ad Deum, generaliter creatura <lb ed="#V"/>perfectior quantum<app><lem>quantum</lem><rdg wit="V">quam</rdg></app> <lb ed="#R"/>ad sui productionem requirit causam perfectio<lb ed="#V"/>rem. <lb ed="#R"/>Igitur<app><lem>igitur</lem><rdg wit="V">Ergo</rdg></app> quantum est ex parte suae productionis requirit <lb ed="#R"/><lb ed="#V"/>influxum magis perfectum et magis produc<lb ed="#R"/><lb ed="#V"/>tivum quam creatura minus perfectam, modo proportionaliter, <lb ed="#R"/><lb ed="#V"/>sicut requirit creatura perfectior causam ma<lb ed="#R"/>gis <lb ed="#V"/>productivam et perfectiorem ad sui pro<lb ed="#R"/>ductionem. <lb ed="#V"/>Ergo<app><lem>ergo</lem><rdg wit="V" type="add."><add place="inline">quanto</add></rdg></app> ipsa producta in esse magis <lb ed="#R"/>est <lb ed="#V"/>fluxibilis et variabilis<app><lem>variabilis</lem><rdg wit="V">labilis</rdg></app> et indiget <lb ed="#R"/>maiori <lb ed="#V"/>et perfectiori conservatione quam creatura <lb ed="#R"/>minus perfecta.</p>
+
+<p xml:id="l29-uchphd">Unde circa hoc breviter <lb ed="#R"/>sicut res perfectior ad hoc ut producatur requi<lb ed="#R"/>rit influxum perfectiorem et magis produc<lb ed="#R"/>tivum quam minus perfecta,<app><lem>Unde circa hoc breviter . . .productivum quam minus perfecta</lem><rdg wit="V" type="om."/></app> <cb ed="#V" n="62ra"/><lb ed="#V"/>sic quando est in pro<lb ed="#R"/>ducto esse indiget proportionaliter <lb ed="#V"/>influxu con<lb ed="#R"/>servativo perfectiori. Unde sicut<app><lem>sicut</lem><rdg wit="V">secundum</rdg></app> dicit <name ref="#Augustine">Augustinus</name><app><lem/><rdg wit="V" type="marginalNote">Augustinus</rdg></app> <lb ed="#R"/>et plures alii: quaelibet res continue producitur, <lb ed="#R"/><lb ed="#V"/>ita quod, conservare rem est quodammodo ipsam manu <lb ed="#R"/>te<lb ed="#V"/>nere continue, quia creatura nullum penitus <lb ed="#V"/>habet <lb ed="#R"/>gradum essendi sufficiente ad subsistere. <lb ed="#R"/>Ergo quanto plu<lb ed="#V"/>res habet<app><lem>habet</lem><rdg wit="V" type="om."/></app> gradus, tanto plures <lb ed="#R"/>habet dependenti<lb ed="#V"/>as.</p> 
+
+  <p xml:id="l29-ichilf">Item considerata habitudine <lb ed="#R"/>creaturae ad <lb ed="#V"/>Deum, creatura quasi accidens a <lb ed="#R"/>substantia sustentatur<app><lem>sustentatur</lem><rdg wit="V">substantur</rdg></app> a Deo. <lb ed="#V"/>Et ideo suum totum <lb ed="#R"/>esse est purum dependens <lb ed="#V"/>ita quod<app><lem>ita quod</lem><rdg wit="R" type="om."/></app> intantum quod ali<lb ed="#R"/>qui philosophi voluerunt dicere <lb ed="#V"/>quod Deus respectu <lb ed="#R"/>creaturae se habet in genere causae, <lb ed="#V"/>formalis, ita quod creatura habet taliter quod nisi continue <lb ed="#V"/>manu teneretur, quasi formatur a Deo fluere. <lb ed="#V"/>Ideo <name ref="#Maimonides">Rabi Moses</name> ponit quod Deus respectu creaturae<app><lem>se habet in genere causa . . . quod Deus respectu creaturae</lem><rdg wit="R" type="om." cause="homeoarchy"/></app> <lb ed="#V"/>se habet triplici genere causae, scilicet, efficientis, <cb ed="#R" n="49vb"/><lb ed="#R"/>formalis, et finalis. Et quantum est de hoc <name ref="#Dionysius">Dio<lb ed="#R"/>nisius</name> <lb ed="#V"/>et <name ref="#Grosseteste">Linconiensis</name> dicunt quod Deus est <lb ed="#R"/>forma et se <lb ed="#V"/>habet respectu creaturae, sicut figura <lb ed="#R"/>sigilli ad <unclear>liquorem[?]</unclear> <lb ed="#V"/>quae solum manet per praesentiam sigilli,<app><lem/><rdg wit="R" type="om." cause="homeoteleuton"/></app> et <name ref="#Augustine">Au<lb ed="#V"/>gustinus</name> <title ref="#DeGenesiAdLitteram">Super Genesim</title> comparat <lb ed="#R"/>creaturam ad Deum, <lb ed="#V"/>sicut lumen solis ad so<lb ed="#R"/>lem. Et sic patet quod ista suppositio <lb ed="#V"/>est satis nota<app><lem>nota</lem><rdg wit="V">clara</rdg></app> in lumine <lb ed="#R"/>fidei.</p>
+
+<p xml:id="l29-tisnaf">Tunc istis suppositio<lb ed="#V"/>nibus habitis <name ref="#Ripa">de Ripa</name> sic <lb ed="#R"/>procedit circa <lb ed="#V"/>materiam istam, nam dicit ipse, da<lb ed="#R"/>to quod esset<app><lem>esset</lem><rdg wit="V">sit</rdg></app> <lb ed="#V"/>processus in infinitum in causis, sig<lb ed="#R"/>nemus infimam crea<lb ed="#V"/>turam illius processus assumpti. <lb ed="#R"/>Illa est depen<lb ed="#V"/>dens et non sufficit se sus<lb ed="#R"/>tentari, et quanto est <lb ed="#V"/>perfectior, tanto magis <lb ed="#R"/>dependens<app><lem>dependens</lem><rdg wit="V">dependet</rdg></app> et magis <lb ed="#V"/>fluxibilis. Ergo, data <lb ed="#R"/>tota illa latitudine, illa magis est <lb ed="#V"/>fluxibilis <lb ed="#R"/>et maiorem habet dependentiam quam habet<app><lem>habet</lem><rdg wit="R">huiusmodi</rdg></app> <lb ed="#R"/><lb ed="#V"/>creatura. Data ergo indiget magis sustentari <lb ed="#R"/>quam huiusmodi<app><lem>huiusmodi</lem><rdg wit="V">haec</rdg></app> <lb ed="#V"/>creatura, posset poni exemplum de <lb ed="#R"/>liquore. Si<app><lem>si</lem><rdg wit="R">sed si</rdg></app> esset aliquis <lb ed="#V"/>liquor flux<lb ed="#R"/>ibilis indigeret aliquo <lb ed="#V"/>fixo et firmo <lb ed="#R"/>ipsam sustentante,<app><lem>et firmo ipsam sustentante</lem><rdg wit="V">ipsum subsistente</rdg></app> et si apponeretur <lb ed="#V"/>alius liquor <lb ed="#R"/>magis fluxibilis indigeret maiori <lb ed="#V"/>fixo, <lb ed="#R"/>et sic consequenter ascendendo. Ita, in proposito, <lb ed="#V"/>non potest <lb ed="#R"/>imaginari quin tota illa latitudo fluat <lb ed="#V"/>et <lb ed="#R"/>pro consequens indiget<app><lem>indiget</lem><rdg wit="V">indigeat</rdg></app> aliquo fixo non fluente <lb ed="#R"/><lb ed="#V"/>illam sustentante,<app><lem/><rdg wit="V">subsistente</rdg></app> ergo etc. Ista<app><lem>ista</lem><rdg wit="V">et ista</rdg></app> ratio est satis <lb ed="#V"/>appa<lb ed="#R"/>rens theologo in lumine naturali adiuto fide.</p> 
+
+</div>
+<div xml:id="l29-l29-Dd1e6098">
+<head xml:id="l29-Hapapap">Aliae probationes</head>
+
+<p xml:id="l29-arpibd"><lb ed="#R"/><lb ed="#V"/>Alia ratio potest esse ex infinitate artificii. Nam <lb ed="#R"/>considerata subtilitate artificii,<app><lem>Nam considerata subtilitate artificii</lem><rdg wit="V" type="om."/></app> et dis<lb ed="#V"/>positione corporum <lb ed="#R"/>caelestium, et motuum et habitu<lb ed="#V"/>dinum ipsorum, <lb ed="#R"/>et elementorum et mixtorum, et considerata <cb ed="#V" n="62rb"/><lb ed="#V"/>orga<lb ed="#R"/>nizatione unius parvi animalis, ibi<app><lem>ibi</lem><rdg wit="V">ubi</rdg></app> enim sunt valde <lb ed="#R"/><lb ed="#V"/>subtiles operationes et habitudines. Non enim videtur <lb ed="#R"/><lb ed="#V"/>quod tantum artificium posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> provenire nisi a <lb ed="#V"/>summo <lb ed="#R"/>artifice. Et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> indicaret<app><lem>indicaret</lem><rdg wit="V">iudicaret</rdg></app> esse<app><lem>esse</lem><rdg wit="V">omne</rdg></app> iu<lb ed="#V"/>dicium bene <lb ed="#R"/>dispositum</p>
+
+<p xml:id="l29-ipaahc">Item potest argui ex <lb ed="#V"/>scibilitate<app><lem/><rdg wit="V">subtilitate</rdg></app> rerum <lb ed="#R"/>obiectiva. Nam illa est infinita, <lb ed="#V"/>ergo sibi debet correspon<lb ed="#R"/>dere potentia infinita cognoscens, scilicet, huiusmodi <lb ed="#R"/>habitudinem infinitam et infinitarum rerum. Quod <lb ed="#R"/>autem illa sit infinita<app><lem>cognoscens, scilicet, huiusmodi . . . illa sit infinita</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> patet de <lb ed="#V"/>unico obiecto <lb ed="#R"/>per se sumpto infinitae conclusiones <lb ed="#V"/>geometricae <lb ed="#R"/>et mathematicae sunt scibiles de eo, ut <lb ed="#V"/>alias tactum <lb ed="#R"/>est. Praeterea<app><lem>Praeterea</lem><rdg wit="V">Postea</rdg></app> infinitae sunt huiusmodi habitudines <lb ed="#V"/><unclear>correspondentes[?]</unclear><app><lem>correspondentes[?]</lem><rdg wit="V">corporis</rdg></app> ad <lb ed="#R"/>res alias et habitudines et in<lb ed="#V"/>finitas propor<lb ed="#R"/>tiones adinvicem<app><lem>adinvicem</lem><rdg wit="R">ad <unclear>in[?]</unclear></rdg></app> consonantes faci<lb ed="#V"/>entes inter se <lb ed="#R"/>unam pulchram <lb ed="#V"/>armoniam et debitam. Et hoc <lb ed="#R"/>non est a casu, ergo oportet <lb ed="#V"/>quod sit ab aliquo hoc <lb ed="#R"/>cognoscente.<app><lem>cognoscente</lem><rdg wit="V" type="add."><add place="inline">etc.</add></rdg></app></p> 
+
+<p xml:id="l29-ipasis">Item <lb ed="#V"/>potest<app><lem>potest</lem><rdg wit="V">posset</rdg></app> argui ex determina<lb ed="#R"/>tione causarum indifferentiam <lb ed="#V"/>ad productionem suorum <lb ed="#R"/>effectum. Verbi gratia, ignis<app><lem/><rdg wit="R" type="om."/></app> <lb ed="#V"/>infinitorum graduum calorum <cb ed="#R" n="50ra"/><lb ed="#R"/>quaelibet potest pro<lb ed="#V"/>ducere, ita quod<app><lem>quod</lem><rdg wit="V" type="add."><add place="inline">quando</add></rdg></app> ignis vel calor <lb ed="#R"/>agit <lb ed="#V"/>producendo gradus calliditatis quando producit; <lb ed="#R"/>primum <lb ed="#V"/>indifferens est ad producendum, secundum, et<app><lem>et</lem><rdg wit="V">vel</rdg></app> tertium, etc.<app><lem>etc.</lem><rdg wit="R" type="om."/></app> <lb ed="#R"/>et sic in infinitum. Ergo ad hoc quod determinetur, <lb ed="#V"/>oportet quod sit <lb ed="#R"/>ab aliqua causa suprema ipsum <lb ed="#V"/>determinante ad <lb ed="#R"/>hoc quod<app><lem>quod</lem><rdg wit="V">ut</rdg></app> producat istum gra<lb ed="#V"/>dum, sic quod non alium <lb ed="#R"/>vel<app><lem>vel</lem><rdg wit="V" type="om."/></app> istum effectum istius<app><lem>istius</lem><rdg wit="V">illius</rdg></app> <lb ed="#V"/>speciei, et non sibi similem <lb ed="#R"/>in specie.</p> 
+
+  <p xml:id="l29-ipauep">Item potest<app><lem/><rdg wit="V">posset</rdg></app> <lb ed="#V"/>argui ex ordine<app><lem>ordine</lem><rdg wit="V">ordinatione</rdg></app> rerum, <lb ed="#R"/>quod<app><lem>quod</lem><rdg wit="V">quia</rdg></app> res de<lb ed="#V"/>bite ordinantur, ergo oportet quod sit aliquis <lb ed="#R"/>finis <lb ed="#V"/>ultimatus gratia<app><lem>gratia</lem><rdg wit="V">respectu</rdg></app> cuius res taliter<app><lem>taliter</lem><rdg wit="V">aliter</rdg></app> ordinantur <lb ed="#R"/><lb ed="#V"/>inter se. Et hoc sensit<app><lem>sensit</lem><rdg wit="V">sensivit</rdg></app> <name ref="#Aristotle">Philosophus</name> XIIo <title ref="#Metaphysics">Metaphysicae</title> <lb ed="#V"/>dicens: <lb ed="#R"/><quote xml:id="l29-l29-Qd1e6418" ana="#Aristotle_Metaphysics_12_f">"entia nolunt male regi plura<lb ed="#V"/>litas princi<lb ed="#R"/>pum mala, unus ergo princeps."</quote></p>      
+
+<p xml:id="l29-asrdre"><lb ed="#V"/>Aliae sunt <lb ed="#R"/>rationes plures quas faci<lb ed="#V"/>unt doctores ad <lb ed="#R"/>probandum 'quod Deus est', ideo recurratis ad eas <lb ed="#R"/>et ibidem reperietis eas.<app><lem>ideo recurratis ad eas et ibidem reperietis eas</lem><rdg wit="V">videatis eos et reperietis</rdg></app> Et sic patet <unclear>distinctis[?]</unclear> rationibus etc.<app><lem>Et sic patet distinctis[?] rationibus etc.</lem><rdg wit="V" type="om."/></app></p>
+</div>
+          </div>
+        </div>
+        </div>
+    </body>
+  </text>
+    </TEI>
