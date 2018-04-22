@@ -1,0 +1,270 @@
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Critical Apparatus for Lectio 76, de Trinitate</title>
+                <editor xml:id="JW">Jeffrey C. Witt</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition n="2012.09-dev-master">
+                    <title>Critical Apparatus for Lectio 76, de Trinitate</title>
+                    <date when="2012-09-22">September 22, 2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>LombardPress</publisher>
+                <pubPlace>Sacramento, CA</pubPlace>
+                <availability status="free">
+                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+                </availability>
+                <date when="2012-09-22">September 22, 2012</date>  
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                    <witness xml:id="R">Reims</witness>
+                    <witness xml:id="SV">St. Victor</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div xml:id="includeList">
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
+                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+            </div>
+        </front>
+        <body>
+            <div xml:id="lectio76">
+                <listApp corresp="#l76-dedcgd">
+                    <app to="#l76-Aspsaet">
+                        <lem>et</lem>
+                        <rdg wit="#R" type="om."/>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-pppspv">
+                    <app to="#l76-Aquaude">
+                        <lem/>
+                        <rdg wit="#R" type="corrReplace">
+                            <corr xml:id="l76-Cquaude">
+                                <del>quanta auctoritas</del>
+                                <add>quantam auctoritatem</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-eqstcv">
+                    <app to="#l76-Asifiho">
+                        <lem/>
+                        <rdg wit="#SV" type="intextu" cause="repetition">hominis</rdg>
+                    </app>
+                    <app to="#l76-eqstcv">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Citqupr">
+                                <add place="aboveLine">quod</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Aprutre">
+                        <lem>principes ut</lem>
+                        <rdg wit="#SV">principares nec</rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-ispgdp">
+                    <app to="#l76-Asesadi">
+                        <lem/>
+                        <rdg wit="#R" type="corrDelition">
+                            <corr corresp="#l76-Csadidi">
+                                <del rend="strikethrough">dilectio</del>
+                            </corr>
+                        </rdg>
+                    </app>
+                    
+                </listApp>
+                <listApp corresp="#l76-uaeccg">
+                    <app to="#l76-Ainscho">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-schoco">
+                                <add place="aboveLine">hoc</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Aconota">
+                        <lem>tamen</lem>
+                        <rdg wit="#R" type="om."/>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-spaphg">
+                    <app to="#l76-Ainalsa">
+                        <lem>sacramentorum</lem>
+                        <rdg wit="#R">sacramentis</rdg>
+                    </app>
+                    <app to="#l76-Afotrut">
+                        <lem>ut</lem>
+                        <rdg wit="#SV">nec</rdg>
+                        <note xml:lang="en">We choose "ut" here because we read the sense as "and this has been noted by the holy fathers…that the malice of the priest does not impede the true consecration of Christ. "Ut" also could possibly seen as corrected, correcting an earlier instance of "nec".</note>
+                    </app>
+                    <app to="#l6-Asanoim">
+                        <lem/>
+                        <rdg wit="#SV" type="corrDeletion">
+                        <corr corresp="#l76-Cimvech">
+                            <del rend="strikethrough">veri</del>
+                        </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Acuauba">
+                        <lem/>
+                        <rdg wit="#R" type="corrReplace">
+                            <corr corresp="#l76-Caubabe">
+                                <del>balaam</del>
+                                <add>balaac</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Achquco">
+                        <lem/>
+                        <rdg wit="#SV" type="corrDeletion">
+                            <corr corresp="#l76-Cqubaco">
+                                <del rend="strikethrough">ba</del>
+                            </corr>
+                        </rdg>
+                            
+                    </app>
+                    
+                </listApp>
+                <listApp corresp="#l76-sevega">
+                    <app to="#l76-Aconmal">
+                        <lem wit="#S #V">consimiliter mali</lem>
+                        <rdg wit="#R #SV" type="om."/>
+                        <note xml:lang="en">The textual tradition seems quite corrupt here. While R and SV suggest a break at "Secundo" in the paragraph above. This does not coalesce very well with the rest paragraph nor with the reading in the other witnesses. Likewise, the V and S strongly support the inclusion of "Consimiliter mali" where mali functions as the subject of "prophetarent". Because the sense is difficult to discern with out this inclusion, we add it here.</note>
+                    </app>
+                    <app to="l76-Ahomopr">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Qhomopr">
+                                <add place="aboveLine">pro</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app>
+                        <lem wit="#R">consimiliter</lem>
+                        <rdg wit="#SV">similiter</rdg>
+                    </app>
+                    <app>
+                        <lem wit="#R">asserunt</lem>
+                        <rdg wit="#SV">asseruntur</rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-iipfst">
+                    <app to="#l76-Aresaec">
+                        <lem/>
+                        <rdg wit="#SV" type="corrDeletion">
+                            <corr corresp="#l76-Cecqicu">
+                                <del rend="strikethrough">qi</del>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Adeesta">
+                        <lem/>
+                        <rdg wit="#SV" type="corrDeletion">
+                            <corr corresp="#l76-Ctamami">
+                                <del rend="strikethrough">magister</del>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="l76-Aexofin">
+                        <lem/>
+                        <rdg wit="#R" type="corrDeletion">
+                            <corr corresp="#l76-Cininno">
+                                <del rend="strikethrough">incombit</del>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="l76-Aiddiqu">
+                        <lem/>
+                        <rdg wit="#SV" type="intextu">nunc</rdg>
+                    </app>
+                    <app to="#l76-Aquipes">
+                        <lem>ipse est</lem>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Cquipes">
+                                <add place="margin">ipse est</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    
+                </listApp>
+                <listApp corresp="#l76-spceea">
+                    <app to="l76-Anotoma">
+                        <lem/>
+                        <rdg wit="#SV" type="corrDeletion">
+                            <corr corresp="#l76-Ctomlma">
+                                <del rend="strikethrough">mlicia</del>
+                            </corr>
+                        </rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-npqhgp">
+                    <app to="#l76-Anotagr">
+                        <lem wit="#R #SV">gratificatione</lem>
+                        <rdg wit="#V #S">per gratiam gratum facientem</rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-tpssab">
+                    <app to="#l76-Apainet">
+                        <lem wit="#V #S">incorporata et</lem>
+                        <rdg wit="#R #SV">incomparatur</rdg>
+                        <note xml:lang="en">Help for V and S seems required here inasmuch as R and SV fairly clealry write "incomparatur" which makes little sense, while "incorporata et" makes the sense very clear.</note>
+                    </app>
+                    <app to="#l76-Aincoub">
+                        <lem wit="#R">ubi</lem>
+                        <rdg wit="#SV">nisi</rdg>
+                    </app>
+                </listApp>
+                <listApp>
+                    <app to="#l76-Aofquin">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Cquineo">
+                                <add place="aboveLine">in</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app to="#l76-Aserees">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Cserees">
+                                <add place="aboveLine">est</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                </listApp>
+                <listApp corresp="#l76-spsesc">
+                    <app to="#l76-Afueter">
+                        <lem/>
+                        <rdg wit="#R" type="corrAddition">
+                            <corr corresp="#l76-Aqufuet">
+                                <add place="margin">qui fuerunt et erunt</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                    <app>
+                        <lem/>
+                        <rdg wit="#R" type="corrReplacement">
+                            <corr corresp="#l76-Cutecut">
+                                <del rend="strikethrough">ut</del>
+                                <add place="aboveLine">nec</add>
+                            </corr>
+                        </rdg>
+                    </app>
+                </listApp>
+                
+
+            </div>
+        </body>
+    </text>
+</TEI>
