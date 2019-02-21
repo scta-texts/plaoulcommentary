@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader>
     <fileDesc>
@@ -10,26 +10,41 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 1, de Fide [Reims Transcription]</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Boston, MA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>  
+        <date when="2011-03-25">March 23, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="R">Reims</witness>
+          <witness xml:id="R" n="reims">Reims</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 
+          guidelines for a diplomatic edition.
+        </p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2014-04-29" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+    <facsimile>
 <surface n="R1v">
 <graphic url="R1v.jpg"/>
 <zone start="#l1-eqsqre" ulx="220" uly="660" lrx="870" lry="921" n="1"/>
@@ -91,28 +106,30 @@
   </facsimile> 
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"/>
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"/>
+      <div xml:id="starts-on">
+        <pb ed="#R" n="1-r"/>
+        <cb ed="#R" n="a"/>
       </div>
     </front>
     <body>
       <div xml:id="lectio1">
-        <head subtype="title">Lectio 1, de Fide [Reims Transcription]</head>
+        <head>Lectio 1, de Fide [Reims Transcription]</head>
         <div>
-<head xml:id="l1-Hquipfs">[Quaestio: utrum in causa iudicali fidei contra traditionem pure humanitus adinventam iudex idoneus feret pro fide sententiam]</head>
-          
-          <p xml:id="l1-cpspfs"><cb ed="#R" n="1ra"/><lb ed="#R"/><hi rend="fourLineDropCap"><space extent="spaceForFourLineDropCap"/></hi><hi rend="largeFont">irca prologum</hi> 
-<lb ed="#R"/><title ref="#Sentences">Sententiarum</title> <name ref="#Plaoul">magistri petri 
-  <lb ed="#R"/>plaoul</name> in quo <ref corresp="#l1-Qmdtmoc"><name ref="#Lombard">magister</name> dicit</ref> 
-<lb ed="#R"/>quod intentionis suae est <quote xml:id="l1-Qmdtmoc">muni<lb ed="#R"/>re 
-davidicam turrim vel <choice><orig>pocius</orig><reg>potius</reg></choice> muni<lb ed="#R"/>tam 
-ostendere clipeis</quote> etc. Quaero istam 
-<lb ed="#R"/>quaestionem Utrum causa Iudiciali fidei contradictionem 
-<lb ed="#R"/>pure humanitus adinventam Iudex <choice><orig>ydo<lb ed="#R"/>neus</orig><reg>ido<lb ed="#R"/>neus</reg></choice> 
-ferret pro fide sententiam</p>
+          <head xml:id="l1-Hquipfs">[Quaestio: utrum in causa iudicali fidei contra traditionem pure humanitus adinventam iudex idoneus feret pro fide sententiam]</head>
+          <p xml:id="l1-cpspfs">
+            <pb ed="#R" n="1-r"/>
+            <cb ed="#R" n="a"/>
+            <lb ed="#R" n="1"/><hi rend="fourLineDropCap"><space extent="spaceForFourLineDropCap"/></hi><hi rend="largeFont">irca prologum</hi> 
+            <lb ed="#R"/><title ref="#Sentences">Sententiarum</title> <name ref="#Plaoul">magistri petri 
+            <lb ed="#R"/>plaoul</name> in quo <ref corresp="#l1-Qmdtmoc"><name ref="#Lombard">magister</name> dicit</ref> 
+            <lb ed="#R"/>quod intentionis suae est <quote xml:id="l1-Qmdtmoc">muni<lb ed="#R"/>re 
+            davidicam turrim vel <choice><orig>pocius</orig><reg>potius</reg></choice> muni<lb ed="#R"/>tam 
+            ostendere clipeis</quote> etc. Quaero istam 
+            <lb ed="#R"/>quaestionem Utrum causa Iudiciali fidei contradictionem 
+            <lb ed="#R"/>pure humanitus adinventam Iudex <choice><orig>ydo<lb ed="#R"/>neus</orig><reg>ido<lb ed="#R"/>neus</reg></choice> 
+            ferret pro fide sententiam
+          </p>
         </div>
-        
         <div><head xml:id="l1-Hcccccc"><supplied>Conclusio</supplied></head>
           
           <p xml:id="l1-eipdlt">Et inprimis 
@@ -156,39 +173,41 @@ est argumentum et non est consequens nec conclusio
 <lb ed="#R"/>ex aliis deductae ad quas processus theo<lb ed="#R"/>logicus 
 et processus theologici principaliter nituntur 
 <lb ed="#R"/>concludendas et non sunt tamquam principia ex quibus 
-<lb ed="#R"/>alia theologice deducuntur</p>
-          
-          <p xml:id="l1-usaafe">Unde secundum <ref corresp="#l1-Qsfiedp"><name ref="#Paul">apostolum</name></ref> 
-<lb ed="#R"/><quote xml:id="l1-Qsfiedp">sine fide impossibile est deo placere</quote> <g ref="#slash"/>ideo in diffinitione 
-<lb ed="#R"/>bene dicitur <quote xml:id="l1-Qssrana">substantia sperandarum rerum, argumentum non 
-<lb ed="#R"/>apparentium</quote> <g ref="#slash"/>ideo fides dicitur substantia quia est totius 
-<cb ed="#R" n="1rb"/><lb ed="#R"/>meriti fundamentum <g ref="#slash"/>nam sicut substantia dicitur 
-<lb ed="#R"/>subiectum accidentium ita fides dicitur fundamentum 
-<lb ed="#R"/>omnium aliarum veritatum Ideo dicit <ref><name ref="#Paul">apostolus</name></ref> <quote xml:id="l1-Qsfiepd">si<lb ed="#R"/>ne 
-fide impossibile est placere deo</quote> <g ref="#slash"/>ideo dicitur 
-<lb ed="#R"/><mentioned>substantia rerum</mentioned> non quod sit realiter substantia immo est 
-<lb ed="#R"/>quod accidens animae inhaerens sed sicut 
-<lb ed="#R"/>substantia dicitur perfectior et nobilior accidente 
-<lb ed="#R"/>ita fides dicitur et est nobilior habitus animae 
-<lb ed="#R"/>infusus ut tamquam fundamentum cui aliae 
-<lb ed="#R"/>virtutes theologicae et cardinales innituntur 
-<lb ed="#R"/>ut fundamento quia <corr xml:id="l1-Cderred">dirigit<add place="aboveLine">a</add> et regulat<add place="aboveLine">b</add></corr> intellectum 
-<lb ed="#R"/>humanum respectu credendorum ad salutem nec<lb ed="#R"/>essariorum 
-nisi enim quis crediderit salvus 
-<lb ed="#R"/>esse non poterit <g ref="#dot"/> elevat etiam humanum iudicium 
-<lb ed="#R"/>ad veritates theologicas concipiendum et intelligendum 
-<lb ed="#R"/>nisi enim credideritis non intelligetis sicut dicit 
-<lb ed="#R"/>christus et <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod sicut caritas dirigit 
-<lb ed="#R"/>hominem ad diligendum deum propter se finaliter 
-<lb ed="#R"/>ita fides similiter inclinat intellectum nostrum 
-<lb ed="#R"/>ad credendum articulis immediate propter deum <g ref="#slash"/>dicitur 
-<lb ed="#R"/>etiam <mentioned>fides non apparentium</mentioned> intelligendum quantum 
-<lb ed="#R"/>est ex parte sui quia non quod obiectum fidei sit de 
-<lb ed="#R"/>per se apparens et evidenter cognitum <g ref="#slash"/>Fi<lb ed="#R"/>des 
-enim respectu sui obiecti est quaedam cognitio 
-<lb ed="#R"/>aenigmatica <g ref="#slash"/>ideo dicit <ref corresp="#l1-Qnavfaf"><name ref="#Paul">apostolus</name></ref> <quote xml:id="l1-Qnavfaf">nunc autem videmus 
-<lb ed="#R"/>per speculum et in aenigmate tunc autem faciem ad 
-<lb ed="#R"/>faciem</quote> etc</p>
+<lb ed="#R"/>alia theologice deducuntur
+          </p>
+          <p xml:id="l1-usaafe">
+            Unde secundum <ref corresp="#l1-Qsfiedp"><name ref="#Paul">apostolum</name></ref> 
+            <lb ed="#R"/><quote xml:id="l1-Qsfiedp">sine fide impossibile est deo placere</quote> <g ref="#slash"/>ideo in diffinitione 
+            <lb ed="#R"/>bene dicitur <quote xml:id="l1-Qssrana">substantia sperandarum rerum, argumentum non 
+            <lb ed="#R"/>apparentium</quote> <g ref="#slash"/>ideo fides dicitur substantia quia est totius 
+            <cb ed="#R" n="b"/> <!-- 1rb -->
+            <lb ed="#R"/>meriti fundamentum <g ref="#slash"/>nam sicut substantia dicitur 
+            <lb ed="#R"/>subiectum accidentium ita fides dicitur fundamentum 
+            <lb ed="#R"/>omnium aliarum veritatum Ideo dicit <ref><name ref="#Paul">apostolus</name></ref> <quote xml:id="l1-Qsfiepd">si<lb ed="#R"/>ne 
+            fide impossibile est placere deo</quote> <g ref="#slash"/>ideo dicitur 
+            <lb ed="#R"/><mentioned>substantia rerum</mentioned> non quod sit realiter substantia immo est 
+            <lb ed="#R"/>quod accidens animae inhaerens sed sicut 
+            <lb ed="#R"/>substantia dicitur perfectior et nobilior accidente 
+            <lb ed="#R"/>ita fides dicitur et est nobilior habitus animae 
+            <lb ed="#R"/>infusus ut tamquam fundamentum cui aliae 
+            <lb ed="#R"/>virtutes theologicae et cardinales innituntur 
+            <lb ed="#R"/>ut fundamento quia <corr xml:id="l1-Cderred">dirigit<add place="aboveLine">a</add> et regulat<add place="aboveLine">b</add></corr> intellectum 
+            <lb ed="#R"/>humanum respectu credendorum ad salutem nec<lb ed="#R"/>essariorum 
+            nisi enim quis crediderit salvus 
+            <lb ed="#R"/>esse non poterit <g ref="#dot"/> elevat etiam humanum iudicium 
+            <lb ed="#R"/>ad veritates theologicas concipiendum et intelligendum 
+            <lb ed="#R"/>nisi enim credideritis non intelligetis sicut dicit 
+            <lb ed="#R"/>christus et <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod sicut caritas dirigit 
+            <lb ed="#R"/>hominem ad diligendum deum propter se finaliter 
+            <lb ed="#R"/>ita fides similiter inclinat intellectum nostrum 
+            <lb ed="#R"/>ad credendum articulis immediate propter deum <g ref="#slash"/>dicitur 
+            <lb ed="#R"/>etiam <mentioned>fides non apparentium</mentioned> intelligendum quantum 
+            <lb ed="#R"/>est ex parte sui quia non quod obiectum fidei sit de 
+            <lb ed="#R"/>per se apparens et evidenter cognitum <g ref="#slash"/>Fi<lb ed="#R"/>des 
+            enim respectu sui obiecti est quaedam cognitio 
+            <lb ed="#R"/>aenigmatica <g ref="#slash"/>ideo dicit <ref corresp="#l1-Qnavfaf"><name ref="#Paul">apostolus</name></ref> <quote xml:id="l1-Qnavfaf">nunc autem videmus 
+            <lb ed="#R"/>per speculum et in aenigmate tunc autem faciem ad 
+            <lb ed="#R"/>faciem</quote> etc</p>
           
           <p xml:id="l1-uaqriv">Ubi advertendum quod de hac materia 
 <lb ed="#R"/>sunt tres diversae viae ad <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> quomodo 
@@ -221,7 +240,9 @@ enim respectu sui obiecti est quaedam cognitio
 <lb ed="#R"/>ista via <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> conformiter ad argumentum <ref>12 <title ref="#CityOfGod">de 
 <lb ed="#R"/>civitate dei</title></ref> qui ponit duarum civitatum dei  
 <lb ed="#R"/>scilicet et diaboli ex parte voluntatis ponit <ref>ibi <name ref="#Augustine">augustinus</name></ref> 
-<cb ed="#R" n="1va"/><lb ed="#R"/>quod duo amores faciunt duas civitates civitatem 
+              <pb ed="#R" n="1-v"/>
+              <cb ed="#R" n="a"/>
+              <lb ed="#R"/>quod duo amores faciunt duas civitates civitatem 
 <lb ed="#R"/>dei facit amor dei usque ad contemptum 
 <lb ed="#R"/>sui civitatem <choice><orig>dyaboli</orig><reg>diaboli</reg></choice> amor sui usque ad con<lb ed="#R"/>temptum 
 dei Huiusmodi ergo homines qui talem 
@@ -283,7 +304,8 @@ lucem ipsa est <choice><orig>cercior</orig><reg>certior</reg></choice> et <choic
             <p xml:id="l1-scoesi"><g ref="#dbslash"/>Sed contra obicitur quia prima 
 <lb ed="#R"/>principia sunt nobis innata et sunt evidentissima 
 <lb ed="#R"/>et fides non sic ergo in esse claritatis fides videtur 
-<cb ed="#R" n="1vb"/><lb ed="#R"/>esse speciei inferioris</p>
+              <cb ed="#R" n="b"/> <!-- R 1vb -->
+              <lb ed="#R"/>esse speciei inferioris</p>
             
             <p xml:id="l1-chpnpn">Contra hoc ponitur quartum 
 <lb ed="#R"/><choice><orig>corrollarium</orig><reg>corollarium</reg></choice> iuxta immediate dicta quod quantum ad hoc fides 
@@ -362,7 +384,10 @@ et removendo eorum fallacias et ad eos
 <lb ed="#R"/>est quod deus suppleat residuum ex quo homo 
 <lb ed="#R"/>facit diligentiam in acquirendo fidem</p>
             
-<p xml:id="l1-ssqfes"><cb ed="#R" n="2ra"/><lb ed="#R"/>Septimo staret quod quis crederet primo propter 
+<p xml:id="l1-ssqfes">
+  <cb ed="#R" n="2-r"/>
+  <cb ed="#R" n="a"/>
+  <lb ed="#R"/>Septimo staret quod quis crederet primo propter 
 <lb ed="#R"/>rationem postea propter fidem sicut stat quod ali<lb ed="#R"/>quis 
 incipiat aliquid habendo respectum ad 
 <lb ed="#R"/>malum finem et tandem continuando haberet 
@@ -425,7 +450,8 @@ sunt manuductivae ad credendum alicui
 <lb ed="#R"/>eam usque ad contemptum sui <g ref="#slash"/>unde <ref corresp="#l1-Qveeoga"><name ref="#Paul">apostolus</name></ref> 
 <lb ed="#R"/><quote xml:id="l1-Qveeoga">vivus et efficax est sermo dei et penetra<g ref="#dbdash"/><lb ed="#R"/>bilior 
 omni gladio ancipiter</quote> <g ref="#slash"/>unde sicut 
-<cb ed="#R" n="2rb"/><lb ed="#R"/><choice><orig>pocio</orig><reg>potio</reg></choice> amara videtur dura et amara in principio 
+  <cb ed="#R" n="b"/> <!-- 2rb -->
+  <lb ed="#R"/><choice><orig>pocio</orig><reg>potio</reg></choice> amara videtur dura et amara in principio 
 <lb ed="#R"/>aegrotanti in fine tamen est sana sic fides nam 
 <lb ed="#R"/>in principio durum videtur credere articulis eam in<lb ed="#R"/>tuentibus 
 in fine tamen fides fortificat et 
@@ -489,8 +515,10 @@ sic <corr><del rend="expunctuated">et</del></corr> reliquum nec videtur plus rep
 pronum adhuc ad diligendum deum et ista 
 <lb ed="#R"/>pronitas non provenit ex caritate infusa quia 
 <lb ed="#R"/>non stat cum peccato sed ex caritate acquisita 
-<lb ed="#R"/>et talis fides bene est in daemonibus et de ista 
-<cb ed="#R" n="2va"/><lb ed="#R"/>possunt intelligi auctoritates praedictae Alia vero 
+<lb ed="#R"/>et talis fides bene est in daemonibus et de ista
+                  <pb ed="#R" n="2-v"/>
+                  <cb ed="#R" n="a"/>
+                  <lb ed="#R"/>possunt intelligi auctoritates praedictae Alia vero 
 <lb ed="#R"/>est fides infusa de qua intelligebantur 
 <lb ed="#R"/>praedicta <g ref="#dot"/></p>
                 
@@ -532,7 +560,7 @@ quod omnibus extrinsecis omnino se habentibus
               <p xml:id="l1-apaeis"><lb ed="#R"/><g ref="#dbslash"/>Ad primum autem argumentum quod tangit de 
 <lb ed="#R"/><choice><orig>apparencia</orig><reg>apparentia</reg></choice> obiecti respectu intellectus in quo est dif<lb ed="#R"/>ficultas 
 dicendum est quod habitus fidei nedum 
-<lb ed="#R"/>elevat potentiam intellectivam <cb ed="#V" n="7ra"/> ad credendum sed 
+<lb ed="#R"/>elevat potentiam intellectivam ad credendum sed 
 <lb ed="#R"/>multipliciter fortificat ipsam respectu quarumcumque veritatum 
 <lb ed="#R"/>quia cum potentia habet dispositionem convenientem red<g ref="#dbdash"/><lb ed="#R"/>ditur 
 <choice><orig>forcior</orig><reg>fortior</reg></choice> ad suas operationes exercendas 
@@ -559,8 +587,10 @@ praebent impedimentum doctrinae et hoc
 <lb ed="#R"/>erroneum est quoad legem christianam <g ref="#slash"/>unus 
 <lb ed="#R"/>et de hoc est <ref corresp="#l1-Qdqliae">articulus parisiensis</ref> dicens <quote xml:id="l1-Qdqliae">dicere 
 <lb ed="#R"/>quod lex christi impediat addiscere error</quote> <g ref="#dbslash"/>
-<lb ed="#R"/>de lege autem <name ref="#Muhummad">machometi</name> quam aliquando 
-<cb ed="#R" n="2vb"/><lb ed="#R"/>tenuit <name ref="#Averroes">averroiis</name> verum est propter corruptiones in <corr xml:id="l1-Cmuumuu"><del rend="strikethrough">muu</del></corr>
+<lb ed="#R"/>de lege autem <name ref="#Muhummad">machometi</name> quam aliquando
+  
+  <cb ed="#R" n="b"/> <!-- 2vb -->
+  <lb ed="#R"/>tenuit <name ref="#Averroes">averroiis</name> verum est propter corruptiones in <corr xml:id="l1-Cmuumuu"><del rend="strikethrough">muu</del></corr>
 <lb ed="#R"/>moribus quae docentur in illa lege <g ref="#slash"/>de lege <corr xml:id="l1-Aubiubi"><del rend="strikethrough">ubi</del></corr> 
 <lb ed="#R"/>autem <name ref="#Jews">Iudaeorum</name> similiter quia tunc deserti <corr xml:id="l1-Cquadam"><del rend="strikethrough">quaedam</del></corr> 
 <lb ed="#R"/>erant a deo sicut nunc <g ref="#slash"/>Et licet <name ref="#Averroes">averroys</name> pro<g ref="#dbdash"/><lb ed="#R"/>testatus 

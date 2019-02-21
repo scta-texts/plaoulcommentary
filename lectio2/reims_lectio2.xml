@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
@@ -10,26 +10,41 @@
                 <editor xml:id="JW">Jeffrey C. Witt</editor>
             </titleStmt>
             <editionStmt>
-                <edition n="2011.10-dev-master">
+                <edition n="0.0.0-dev">
                     <title>Lectio 2, de Fide [Reims Transcription]</title>
                     <date when="2011-10-04">October 04, 2011</date>
                 </edition>
             </editionStmt>
-            <publicationStmt>
-                <publisher>LombardPress</publisher>
-                <pubPlace>Boston, MA</pubPlace>
-                <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
-                </availability>
-                <date when="2011-03-25">March 23rd, 2011</date>  
-            </publicationStmt>
-            <sourceDesc>
-                <listWit>
-                    <witness xml:id="R">Reims</witness>
-                </listWit>
-            </sourceDesc>
+          <publicationStmt>
+            <authority>SCTA</authority>
+            <availability status="free">
+              <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
+            </availability>
+            <date when="2011-03-25">March 23, 2011</date>
+          </publicationStmt>
+          <sourceDesc>
+            <listWit>
+              <witness xml:id="R" n="reims">Reims</witness>
+            </listWit>
+          </sourceDesc>
         </fileDesc>
-    </teiHeader>  <facsimile>
+      <encodingDesc>
+        <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/master/src/out/diplomatic.rng"/>
+        <editorialDecl>
+          <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 
+            guidelines for a diplomatic edition.
+          </p>
+        </editorialDecl>
+      </encodingDesc>
+      <revisionDesc status="draft">
+        <listChange>
+          <change when="2011-10-04" status="draft" n="0.0.0">
+            <p>Created file for the first time.</p>  
+          </change>
+        </listChange>
+      </revisionDesc>
+    </teiHeader>  
+  <facsimile>
 <surface n="R2v">
 <graphic url="R2v.jpg"/>
 <zone start="#l2-idsadf" ulx="866" uly="1057" lrx="1516" lry="1520" n="1"/>
@@ -74,24 +89,21 @@
 </surface>
   </facsimile>
     <text xml:lang="la">
-        <front>
-            <div xml:id="includeList">
-                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"/>
-                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"/>
-            </div>
-        </front>
+      <front>
+        <div xml:id="starts-on">
+          <pb ed="#R" n="2-v"/>
+          <cb ed="#R" n="b"/>
+        </div>
+      </front>
         <body>
             <div xml:id="lectio2">
-                <head xml:id="l2-Hlprlpr" subtype="title">Lectio 2, de Fide [Reims Transcription]</head>
-                
-<div>
-    <head xml:id="l2-Hdgadga"><supplied>Duo genera assensus</supplied></head>
-
-<div>
-    <head xml:id="l2-Hpgapga"><supplied>Primum genus assensus</supplied></head>
-
-<p xml:id="l2-idsadf"><g ref="#dbslash"/>Iuxta 
-<lb ed="#R"/>dicta sciendum quod de articulis credendis duplices 
+                <head xml:id="l2-Hlprlpr">Lectio 2, de Fide [Reims Transcription]</head>
+              <div>
+                <head xml:id="l2-Hdgadga"><supplied>Duo genera assensus</supplied></head>
+                <div>
+                  <head xml:id="l2-Hpgapga"><supplied>Primum genus assensus</supplied></head>
+                  <p xml:id="l2-idsadf"><g ref="#dbslash"/>Iuxta 
+<lb ed="#R" n="28"/>dicta sciendum quod de articulis credendis duplices 
 <lb ed="#R"/>possumus habere <g ref="#dot"/> assensus quidam scilicet inductos per 
 <lb ed="#R"/>rationes probabiles sive per <choice><orig>apparencias</orig><reg>apparentias</reg></choice> naturales 
 <lb ed="#R"/>et huiusmodi assensus sunt posteriores ipsis <choice><orig>enunciacionibus</orig><reg>enuntiationibus</reg></choice> 
@@ -118,8 +130,10 @@ adhuc non esset fidelis quia adhuc
 <lb ed="#R"/>potest subesse falsum verbi gratia ut si <name ref="#Sortes">sortes</name> per 
 <lb ed="#R"/>rationem acquisitam <choice><orig>assenciat</orig><reg>assentiat</reg></choice> isti articulo Iudicium 
 <lb ed="#R"/>futurum erit isti assensui potest subesse falsum 
-<lb ed="#R"/>quia deus de potentia sua absoluta potest 
-<cb ed="#R" n="3ra"/><lb ed="#R"/>ordinare quod Iudicium futurum non erit</p>
+<lb ed="#R"/>quia deus de potentia sua absoluta potest
+      <cb ed="#R" n="3-r"/>
+      <cb ed="#R" n="a"/>
+      <lb ed="#R"/>ordinare quod Iudicium futurum non erit</p>
     
     <p xml:id="l2-tdqeha"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur 
 <lb ed="#R"/>quod huiusmodi assensus multiplicantur secundum multipli<g ref="#dbdash"/><lb ed="#R"/>catione 
@@ -197,7 +211,8 @@ quod taliter se habeat</p>
 
 <p xml:id="l2-eqstgv"><g ref="#dbslash"/>Ex quo sequitur quod 
 <lb ed="#R"/>veritas a parte rei est quodammodo prior <corr xml:id="l2-Cqpaaii"><del rend="strikethrough">a</del></corr> veritate 
-<cb ed="#R" n="3rb"/><lb ed="#R"/>in intellectu nostro <g ref="#slash"/>quia veritas in intellectu nostro est 
+  <cb ed="#R" n="b"/> <!-- 3rb -->
+  <lb ed="#R"/>in intellectu nostro <g ref="#slash"/>quia veritas in intellectu nostro est 
 <lb ed="#R"/>quoddam Iudicium conforme veritati ad extra 
 <lb ed="#R"/>et contrarium est in divino Iudicio Et istud dixi ad 
 <lb ed="#R"/>denotandum quod fides infusa non reponitur sub 
@@ -277,8 +292,10 @@ quod est causa omnium quae postea reperiuntur sive in
 
 <p xml:id="l2-qcniec"><lb ed="#R"/><choice><orig>4m</orig><reg>quartum</reg></choice> <choice><orig>corrollarium</orig><reg>corollarium</reg></choice> <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> est prius possibili id est contingenti</p>
 
-<p xml:id="l2-qcevpe"><lb ed="#R"/><choice><orig>5m</orig><reg>quintum</reg></choice> corollarium est <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> est prius impossibili et ut 
-<cb ed="#R" n="3va"/><lb ed="#R"/>facilius intelligatur ipse <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod nullo 
+<p xml:id="l2-qcevpe"><lb ed="#R"/><choice><orig>5m</orig><reg>quintum</reg></choice> corollarium est <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> est prius impossibili et ut
+  <pb ed="#R" n="3-v"/>
+  <cb ed="#R" n="a"/>
+  <lb ed="#R"/>facilius intelligatur ipse <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod nullo 
 <lb ed="#R"/>modo potest esse verum vel falsum possibile vel 
 <lb ed="#R"/><choice><orig>inpossibile</orig><reg>impossibile</reg></choice> quin prius resolvatur in primam veritatem 
 <lb ed="#R"/>causaliter ita quod deus est realiter causa quare aliqua 
@@ -343,7 +360,8 @@ sortitur sibi et sic si iudicium futurum non
 <lb ed="#R"/>competit superiori patet de illa denominatione 
 <lb ed="#R"/>praedicta quae competit fidei quae nullo modo potest 
 <lb ed="#R"/>competere alteri creaturae <g ref="#slash"/>ita quod si esset aliqua 
-<cb ed="#R" n="3vb"/><lb ed="#R"/><choice><orig>intelligencia</orig><reg>intelligentia</reg></choice> data quae esset sua intellectio 
+<cb ed="#R" n="b"/> <!-- 3vb -->
+  <lb ed="#R"/><choice><orig>intelligencia</orig><reg>intelligentia</reg></choice> data quae esset sua intellectio 
 <lb ed="#R"/>illa adhuc esset fallibilis <g ref="#dot"/></p>  
                     
                 </div>
