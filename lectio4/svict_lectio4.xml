@@ -1,386 +1,437 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Lectio 4, de Fide [St. Victor Transcription]</title>
-                <author xml:id="PP">Petrus Plaoul</author>
-                <editor xml:id="JW">Jeffrey C. Witt</editor>
-            </titleStmt>
-            <editionStmt>
-                <edition n="2011.10-dev-master">
-                    <title>Lectio 4, de Fide [St. Victor Transcription]</title>
-                    <date when="2011-10-04">October 04, 2011</date>
-                </edition>
-            </editionStmt>
-            <publicationStmt>
-                <publisher>Lombard Press</publisher>
-                <pubPlace>Boston, MA</pubPlace>
-                <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
-                </availability>
-                <date when="2011-03-25">March 23rd, 2011</date>
-            </publicationStmt>
-            <sourceDesc>
-                <listWit>
-                    <witness xml:id="SV">St. Victor</witness>
-                </listWit>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>    <facsimile>
-<surface n="SV190v">
-<graphic url="SV190v.jpg"/>
-<zone start="#l4-seqtoa" ulx="298" uly="553" lrx="948" lry="736" n="1"/>
-<zone start="#l4-upaneu" ulx="298" uly="659" lrx="948" lry="946" n="1"/>
-<zone start="#l4-beiqnv" ulx="309" uly="875" lrx="959" lry="1288" n="1"/>
-<zone start="#l4-dtqsni" ulx="310" uly="1209" lrx="960" lry="1428" n="1"/>
-<zone start="#l4-udqapv" ulx="317" uly="1386" lrx="967" lry="1967" n="1"/>
-<zone start="#l4-udqapv" ulx="940" uly="289" lrx="1590" lry="815" n="2"/>
-<zone start="#l4-ptqsef" ulx="943" uly="750" lrx="1593" lry="857" n="1"/>
-<zone start="#l4-pqdpem" ulx="943" uly="784" lrx="1593" lry="1147" n="1"/>
-<zone start="#l4-cqpcrc" ulx="946" uly="1081" lrx="1596" lry="1335" n="1"/>
-<zone start="#l4-tcaiaf" ulx="949" uly="1263" lrx="1599" lry="1574" n="1"/>
-<zone start="#l4-qdaeam" ulx="955" uly="1501" lrx="1605" lry="1708" n="1"/>
-<zone start="#l4-qaacep" ulx="955" uly="1648" lrx="1605" lry="1888" n="1"/>
-<zone start="#l4-ssffee" ulx="955" uly="1842" lrx="1605" lry="1951" n="1"/>
-</surface>
-<surface n="SV191r">
-<graphic url="SV191r.jpg"/>
-<zone start="#l4-ssffee" ulx="170" uly="281" lrx="820" lry="505" n="2"/>
-<zone start="#l4-ariqth" ulx="170" uly="432" lrx="820" lry="577" n="1"/>
-<zone start="#l4-ucdnmh" ulx="168" uly="512" lrx="818" lry="921" n="1"/>
-<zone start="#l4-nchqhi" ulx="171" uly="856" lrx="821" lry="1601" n="1"/>
-<zone start="#l4-idfeip" ulx="171" uly="1522" lrx="821" lry="1762" n="1"/>
-<zone start="#l4-iupvat" ulx="171" uly="1697" lrx="821" lry="1944" n="1"/>
-<zone start="#l4-iupvat" ulx="798" uly="294" lrx="1448" lry="734" n="2"/>
-<zone start="#l4-otrree" ulx="798" uly="690" lrx="1448" lry="1084" n="1"/>
-<zone start="#l4-iqtvvf" ulx="798" uly="1013" lrx="1448" lry="1489" n="1"/>
-<zone start="#l4-aehrma" ulx="807" uly="1411" lrx="1457" lry="1969" n="1"/>
-</surface>
-<surface n="SV191v">
-<graphic url="SV191v.jpg"/>
-<zone start="#l4-aehrma" ulx="309" uly="308" lrx="959" lry="874" n="2"/>
-<zone start="#l4-iiasei" ulx="309" uly="804" lrx="959" lry="1855" n="1"/>
-<zone start="#l4-epheda" ulx="309" uly="1777" lrx="959" lry="1967" n="1"/>
-<zone start="#l4-epheda" ulx="939" uly="294" lrx="1589" lry="588" n="2"/>
-<zone start="#l4-eaease" ulx="939" uly="520" lrx="1589" lry="944" n="1"/>
-</surface>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lectio 4, de Fide [St. Victor Transcription]</title>
+        <author xml:id="PP">Petrus Plaoul</author>
+        <editor xml:id="JW">Jeffrey C. Witt</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.0.0-dev">
+          <title>Lectio 3, de Fide [St. Victor Transcription]</title>
+          <date when="2011-10-04">October 04, 2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <authority>SCTA</authority>
+        <availability status="free">
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
+        </availability>
+        <date when="2011-03-25">March 23, 2011</date>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="SV190v">
+      <graphic url="SV190v.jpg"/>
+      <zone start="#l4-seqtoa" ulx="298" uly="553" lrx="948" lry="736" n="1"/>
+      <zone start="#l4-upaneu" ulx="298" uly="659" lrx="948" lry="946" n="1"/>
+      <zone start="#l4-beiqnv" ulx="309" uly="875" lrx="959" lry="1288" n="1"/>
+      <zone start="#l4-dtqsni" ulx="310" uly="1209" lrx="960" lry="1428" n="1"/>
+      <zone start="#l4-udqapv" ulx="317" uly="1386" lrx="967" lry="1967" n="1"/>
+      <zone start="#l4-udqapv" ulx="940" uly="289" lrx="1590" lry="815" n="2"/>
+      <zone start="#l4-ptqsef" ulx="943" uly="750" lrx="1593" lry="857" n="1"/>
+      <zone start="#l4-pqdpem" ulx="943" uly="784" lrx="1593" lry="1147" n="1"/>
+      <zone start="#l4-cqpcrc" ulx="946" uly="1081" lrx="1596" lry="1335" n="1"/>
+      <zone start="#l4-tcaiaf" ulx="949" uly="1263" lrx="1599" lry="1574" n="1"/>
+      <zone start="#l4-qdaeam" ulx="955" uly="1501" lrx="1605" lry="1708" n="1"/>
+      <zone start="#l4-qaacep" ulx="955" uly="1648" lrx="1605" lry="1888" n="1"/>
+      <zone start="#l4-ssffee" ulx="955" uly="1842" lrx="1605" lry="1951" n="1"/>
+    </surface>
+    <surface n="SV191r">
+      <graphic url="SV191r.jpg"/>
+      <zone start="#l4-ssffee" ulx="170" uly="281" lrx="820" lry="505" n="2"/>
+      <zone start="#l4-ariqth" ulx="170" uly="432" lrx="820" lry="577" n="1"/>
+      <zone start="#l4-ucdnmh" ulx="168" uly="512" lrx="818" lry="921" n="1"/>
+      <zone start="#l4-nchqhi" ulx="171" uly="856" lrx="821" lry="1601" n="1"/>
+      <zone start="#l4-idfeip" ulx="171" uly="1522" lrx="821" lry="1762" n="1"/>
+      <zone start="#l4-iupvat" ulx="171" uly="1697" lrx="821" lry="1944" n="1"/>
+      <zone start="#l4-iupvat" ulx="798" uly="294" lrx="1448" lry="734" n="2"/>
+      <zone start="#l4-otrree" ulx="798" uly="690" lrx="1448" lry="1084" n="1"/>
+      <zone start="#l4-iqtvvf" ulx="798" uly="1013" lrx="1448" lry="1489" n="1"/>
+      <zone start="#l4-aehrma" ulx="807" uly="1411" lrx="1457" lry="1969" n="1"/>
+    </surface>
+    <surface n="SV191v">
+      <graphic url="SV191v.jpg"/>
+      <zone start="#l4-aehrma" ulx="309" uly="308" lrx="959" lry="874" n="2"/>
+      <zone start="#l4-iiasei" ulx="309" uly="804" lrx="959" lry="1855" n="1"/>
+      <zone start="#l4-epheda" ulx="309" uly="1777" lrx="959" lry="1967" n="1"/>
+      <zone start="#l4-epheda" ulx="939" uly="294" lrx="1589" lry="588" n="2"/>
+      <zone start="#l4-eaease" ulx="939" uly="520" lrx="1589" lry="944" n="1"/>
+    </surface>
   </facsimile>
-    <text xml:lang="la">
-        <front>
-            <div xml:id="includeList">
-                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"/>
-                <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"/>
-            </div>
-        </front>
-        <body>
-            <div xml:id="lectio4">
-                <head subtype="title">Lectio 4, de Fide [St. Victor Transcription]</head>
-                <div>
-                    <head xml:id="l4-Hfecami"><supplied>Fides est conformis divino iudicio: solutiones ad multas instantias</supplied></head>
-                    
-                    <p xml:id="l4-seqtoa"><g ref="#pilcrow"/>Sciendum est quod ex <choice><orig>yma<lb ed="#SV"/>ginatione</orig><reg>ima<lb ed="#SV"/>ginatione</reg></choice> 
-                        de fide quod fides est conformis divino Iudicio 
-                        <lb ed="#SV"/>multae instantiae possunt solvi et multae rationes quibus 
-                        <lb ed="#SV"/>tenentes oppositum arguunt</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hpipipi"><supplied>Prima instantia</supplied></head>
-                    
-                    <p xml:id="l4-upaneu"><g ref="#slash"/>Unde primo arguunt quod non 
-                        <lb ed="#SV"/>aequali certitudine credatur ex fide futuris contingentibus et 
-                        <lb ed="#SV"/>articulis <choice><orig>neccessariis</orig><reg>necessariis</reg></choice> <g ref="#slash"/>verbi <g ref="#slash"/> gratia <g ref="#slash"/> quod non aeque certitudinaliter creditur huic 
-                        <lb ed="#SV"/>ex fide <g ref="#slash"/>iudicium erit sicut huic deus est trinus et unus 
-                        <lb ed="#SV"/>quia unum est <choice><orig>neccessariam</orig><reg>necessarium</reg></choice> et <choice><orig>neccesse</orig><reg>necesse</reg></choice> est sic esse sicut per eum si<lb ed="#SV"/>gnificatur 
-                        <g ref="#slash"/>et alius est contingens et contingenter est sic esse sicut 
-                        <lb ed="#SV"/>ipsum significat <g ref="#slash"/>et sic potest non esse verum</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrapapi"><supplied>Responsio ad prima instantia</supplied></head>
-                    
-      <p xml:id="l4-beiqnv"><g ref="#slash"/>breviter ex iam dictis 
-          <lb ed="#SV"/>facillimum est huic argumento Respondere <g ref="#slash"/>quia licet iudicium futurum 
-          <lb ed="#SV"/>possit non fore <g ref="#slash"/>tamen assensus fidei respectu huius est ita 
-          <lb ed="#SV"/>firmus quod non potest <sic>falcificari</sic> Ita quod tanta certitudine creditur 
-          <lb ed="#SV"/>quod Iudicium futurum erit <g ref="#slash"/>sicut quod deus est <g ref="#slash"/>nec plus potest 
-          <lb ed="#SV"/>esse error respectu unius sicut respectu alterius sic credendo 
-          <lb ed="#SV"/>ex fide <g ref="#slash"/>et sic aequaliter secundum fidem id est habitum fidei vel quia 
-          <lb ed="#SV"/>est ipsamet fides est aequaliter assentiendum cuilibet articulo 
-          <lb ed="#SV"/>et aeque certitudinaliter <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> ille assensus qui est fides est quodammodo 
-          <lb ed="#SV"/><choice><orig>neccessario</orig><reg>necessario</reg></choice> verus</p>              
-      
-                    <p xml:id="l4-dtqsni"><g ref="#slash"/>Dico tamen quod ille habitus potest non esse simpliciter 
-                        <lb ed="#SV"/><g ref="#slash"/>sed non stat talem habitum in animam et voluntatem et 
-                        <lb ed="#SV"/>quis per eum assentiat falso <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> dico quod habitui tali 
-                        <lb ed="#SV"/>vel fidei non potest subesse falsum <g ref="#slash"/>nec per quamcumque potentiam 
-                        <lb ed="#SV"/>ipso habitu Remanente secundum suam naturalem inclinationem</p>
-                    
-                    <p xml:id="l4-udqapv"><g ref="#pilcrow"/>Ulterius dico quod fidei nulla Requiritur apparentia exterior 
-                        <lb ed="#SV"/>de sic esse sicut per propositionem significatur esse <g ref="#pilcrow"/>Etiam dico 
-                        <lb ed="#SV"/>quod si sit fides respectu articuli de futuro puta Iudicium erit 
-                        <lb ed="#SV"/>aeque certitudinaliter inclinat intellectum ad assentiendum illi 
-                        <lb ed="#SV"/>sicut propositioni <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> <g ref="#slash"/>Et dico quod si Iudicium sit vel non 
-                        <lb ed="#SV"/><g ref="#slash"/>non est cura <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> est impertinens quia <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> non ca<lb ed="#SV"/>pit 
-                        ab obiecto exteriori <g ref="#slash"/>sed naturaliter quodammodo primam veri<lb ed="#SV"/>tatem 
-                        et divinum assensum et divinum velle imitatur se 
-                        <lb ed="#SV"/>semper ei conformando <g ref="#slash"/>unde proportionaliter est <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> 
-                        <lb ed="#SV"/>de fide respectu futuri <g ref="#slash"/>sicut de divino Iudicio <g ref="#slash"/>nam si divinum 
-                        <lb ed="#SV"/>Iudicium Iudicavit antichristum fore <g ref="#slash"/>deum sic iudi<lb ed="#SV"/>casse 
-                        est causa quare antichristus erit <g ref="#slash"/>et non quia antichristus 
-                        <lb ed="#SV"/>erit ideo deus sic Iudicavit <g ref="#slash"/>ideo est ordo in veritatibus 
-                        <lb ed="#SV"/><g ref="#slash"/>nam deus vel Iudicium divinum est causa quare <name ref="#Sortes">sortes</name> 
-                        <lb ed="#SV"/><g ref="#dot"/>currit si <name ref="#Sortes">sortes</name> currat et non econverso <g ref="#slash"/>sed in nobis 
-                        <cb ed="#SV" n="190vb"/><lb ed="#SV"/>veritas huius <name ref="#Sortes">sortes</name> currit dependet ex sic esse veri<lb ed="#SV"/>tas 
-                        talis in nobis est causa apparentiae seu Iudicii 
-                        <lb ed="#SV"/>quod <name ref="#Sortes">sortes</name> currit <g ref="#slash"/>et totaliter contrario modo est de divino iudicio 
-                        <lb ed="#SV"/>et de fide <g ref="#slash"/>unde deus sui Iudicii nullam a rebus 
-                        <lb ed="#SV"/>capit <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> <g ref="#slash"/>Ideo sicut divinum Iudicium respectu 
-                        <lb ed="#SV"/>propositionis de futuro potest non fuisse Iudicium respectu eiusdem 
-                        <lb ed="#SV"/>ita est dicendum de fide <g ref="#slash"/>unde per <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> si deus 
-                        <lb ed="#SV"/>non esset <g ref="#slash"/>nulla esset veritas <g ref="#slash"/>et si creatura rationalis 
-                        <lb ed="#SV"/>esset <g ref="#slash"/>et sic maneret <g ref="#slash"/>tamen deo ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> non 
-                        <lb ed="#SV"/>existente talis creatura non esset bona <g ref="#slash"/>nec vera <g ref="#slash"/>nec 
-                        <lb ed="#SV"/>aliquid esset verum <g ref="#slash"/>nam non <corr xml:id="l4-Anodddi"><del rend="blackout">d</del></corr> dicitur aliquid verum nisi quia conforme 
-                        <lb ed="#SV"/>est primae veritati <g ref="#slash"/>et sicut unaquaeque Res in suo esse 
-                        <lb ed="#SV"/>est a prima causa <g ref="#slash"/>ita in esse verum dependet a prima 
-                        <lb ed="#SV"/>veritate</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hsieier"><supplied>Secunda instantia et rationes</supplied></head>
-        
-                    <p xml:id="l4-ptqsef"><g ref="#slash"/>probatur tamen quod fides non est tantae certitudinis sicut 
-                        <lb ed="#SV"/>dictum est <choice><orig>ymo</orig><reg>immo</reg></choice> quod fidei potest subesse falsum</p>
-                    
-                    <p xml:id="l4-pqdpem"><g ref="#slash"/>primo quia 
-                        <lb ed="#SV"/>de facto spei subest falsum igitur et fidei consequentia tenet 
-                        <lb ed="#SV"/>quia spes videtur esse tantae excellentiae et certitudinis 
-                        <lb ed="#SV"/>sicut fides <g ref="#pilcrow"/>Item confirmatur consequentia quia quantum ad hoc 
-                        <lb ed="#SV"/>quod est credere spes includit assensum <g ref="#slash"/>ideo quantum ad hoc 
-                        <lb ed="#SV"/>habet conditionem fidei <g ref="#slash"/>antecedens probatur de praescito existente in gratia 
-                        <lb ed="#SV"/>qui Realiter credit se habiturum <corr xml:id="l4-Chagrvi"><del rend="expunctuated">gratiam</del></corr> vitam sempi<lb ed="#SV"/>ternam 
-                        <g ref="#slash"/>et tamen hoc est falsum <g ref="#slash"/>licet illa credulitas sit 
-                        licita et per eam mereatur</p>
-                    
-        <p xml:id="l4-cqpcrc"><g ref="#pilcrow"/>Confirmatur quia potest accidere 
+  <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="190-v"/>
+        <cb ed="#SV" n="a"/>
+      </div>
+    </front>
+    <body>
+      <div xml:id="lectio4">
+        <head>Lectio 4, de Fide [St. Victor Transcription]</head>
+        <div>
+          <head xml:id="l4-Hfecami">
+            <supplied>Fides est conformis divino iudicio: solutiones ad multas instantias</supplied>
+          </head>
+          <p xml:id="l4-seqtoa">
+            <g ref="#pilcrow"/>Sciendum est quod ex <choice><orig>yma<lb ed="#SV" n="9"/>ginatione</orig><reg>ima<lb ed="#SV" n="9"/>ginatione</reg></choice> 
+            de fide quod fides est conformis divino Iudicio 
+            <lb ed="#SV"/>multae instantiae possunt solvi et multae rationes quibus 
+            <lb ed="#SV"/>tenentes oppositum arguunt
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hpipipi">
+            <supplied>Prima instantia</supplied>
+          </head>
+          <p xml:id="l4-upaneu">
+            <g ref="#slash"/>Unde primo arguunt quod non 
+            <lb ed="#SV"/>aequali certitudine credatur ex fide futuris contingentibus et 
+            <lb ed="#SV"/>articulis <choice><orig>neccessariis</orig><reg>necessariis</reg></choice> <g ref="#slash"/>verbi <g ref="#slash"/> gratia <g ref="#slash"/> quod non aeque certitudinaliter creditur huic 
+            <lb ed="#SV"/>ex fide <g ref="#slash"/>iudicium erit sicut huic deus est trinus et unus 
+            <lb ed="#SV"/>quia unum est <choice><orig>neccessariam</orig><reg>necessarium</reg></choice> et <choice><orig>neccesse</orig><reg>necesse</reg></choice> est sic esse sicut per eum si<lb ed="#SV"/>gnificatur 
+            <g ref="#slash"/>et alius est contingens et contingenter est sic esse sicut 
+            <lb ed="#SV"/>ipsum significat <g ref="#slash"/>et sic potest non esse verum
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hrapapi">
+            <supplied>Responsio ad prima instantia</supplied>
+          </head>
+          <p xml:id="l4-beiqnv">
+            <g ref="#slash"/>breviter ex iam dictis 
+            <lb ed="#SV"/>facillimum est huic argumento Respondere <g ref="#slash"/>quia licet iudicium futurum 
+            <lb ed="#SV"/>possit non fore <g ref="#slash"/>tamen assensus fidei respectu huius est ita 
+            <lb ed="#SV"/>firmus quod non potest <sic>falcificari</sic> Ita quod tanta certitudine creditur 
+            <lb ed="#SV"/>quod Iudicium futurum erit <g ref="#slash"/>sicut quod deus est <g ref="#slash"/>nec plus potest 
+            <lb ed="#SV"/>esse error respectu unius sicut respectu alterius sic credendo 
+            <lb ed="#SV"/>ex fide <g ref="#slash"/>et sic aequaliter secundum fidem id est habitum fidei vel quia 
+            <lb ed="#SV"/>est ipsamet fides est aequaliter assentiendum cuilibet articulo 
+            <lb ed="#SV"/>et aeque certitudinaliter <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> ille assensus qui est fides est quodammodo 
+            <lb ed="#SV"/><choice><orig>neccessario</orig><reg>necessario</reg></choice> verus
+          </p>
+          <p xml:id="l4-dtqsni">
+            <g ref="#slash"/>Dico tamen quod ille habitus potest non esse simpliciter 
+            <lb ed="#SV"/><g ref="#slash"/>sed non stat talem habitum in animam et voluntatem et 
+            <lb ed="#SV"/>quis per eum assentiat falso <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> dico quod habitui tali 
+            <lb ed="#SV"/>vel fidei non potest subesse falsum <g ref="#slash"/>nec per quamcumque potentiam 
+            <lb ed="#SV"/>ipso habitu Remanente secundum suam naturalem inclinationem
+          </p>
+          <p xml:id="l4-udqapv">
+            <g ref="#pilcrow"/>Ulterius dico quod fidei nulla Requiritur apparentia exterior 
+            <lb ed="#SV"/>de sic esse sicut per propositionem significatur esse <g ref="#pilcrow"/>Etiam dico 
+            <lb ed="#SV"/>quod si sit fides respectu articuli de futuro puta Iudicium erit 
+            <lb ed="#SV"/>aeque certitudinaliter inclinat intellectum ad assentiendum illi 
+            <lb ed="#SV"/>sicut propositioni <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> <g ref="#slash"/>Et dico quod si Iudicium sit vel non 
+            <lb ed="#SV"/><g ref="#slash"/>non est cura <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> est impertinens quia <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> non ca<lb ed="#SV"/>pit 
+            ab obiecto exteriori <g ref="#slash"/>sed naturaliter quodammodo primam veri<lb ed="#SV"/>tatem 
+            et divinum assensum et divinum velle imitatur se 
+            <lb ed="#SV"/>semper ei conformando <g ref="#slash"/>unde proportionaliter est <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> 
+            <lb ed="#SV"/>de fide respectu futuri <g ref="#slash"/>sicut de divino Iudicio <g ref="#slash"/>nam si divinum 
+            <lb ed="#SV"/>Iudicium Iudicavit antichristum fore <g ref="#slash"/>deum sic iudi<lb ed="#SV"/>casse 
+            est causa quare antichristus erit <g ref="#slash"/>et non quia antichristus 
+            <lb ed="#SV"/>erit ideo deus sic Iudicavit <g ref="#slash"/>ideo est ordo in veritatibus 
+            <lb ed="#SV"/><g ref="#slash"/>nam deus vel Iudicium divinum est causa quare <name ref="#Sortes">sortes</name> 
+            <lb ed="#SV"/><g ref="#dot"/>currit si <name ref="#Sortes">sortes</name> currat et non econverso <g ref="#slash"/>sed in nobis 
+            <cb ed="#SV" n="b"/> <!-- 190vb -->
+            
+            <lb ed="#SV"/>veritas huius <name ref="#Sortes">sortes</name> currit dependet ex sic esse veri<lb ed="#SV"/>tas 
+            talis in nobis est causa apparentiae seu Iudicii 
+            <lb ed="#SV"/>quod <name ref="#Sortes">sortes</name> currit <g ref="#slash"/>et totaliter contrario modo est de divino iudicio 
+            <lb ed="#SV"/>et de fide <g ref="#slash"/>unde deus sui Iudicii nullam a rebus 
+            <lb ed="#SV"/>capit <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> <g ref="#slash"/>Ideo sicut divinum Iudicium respectu 
+            <lb ed="#SV"/>propositionis de futuro potest non fuisse Iudicium respectu eiusdem 
+            <lb ed="#SV"/>ita est dicendum de fide <g ref="#slash"/>unde per <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> si deus 
+            <lb ed="#SV"/>non esset <g ref="#slash"/>nulla esset veritas <g ref="#slash"/>et si creatura rationalis 
+            <lb ed="#SV"/>esset <g ref="#slash"/>et sic maneret <g ref="#slash"/>tamen deo ad <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> non 
+            <lb ed="#SV"/>existente talis creatura non esset bona <g ref="#slash"/>nec vera <g ref="#slash"/>nec 
+            <lb ed="#SV"/>aliquid esset verum <g ref="#slash"/>nam non <corr xml:id="l4-Anodddi"><del rend="blackout">d</del></corr> dicitur aliquid verum nisi quia conforme 
+            <lb ed="#SV"/>est primae veritati <g ref="#slash"/>et sicut unaquaeque Res in suo esse 
+            <lb ed="#SV"/>est a prima causa <g ref="#slash"/>ita in esse verum dependet a prima 
+            <lb ed="#SV"/>veritate
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hsieier">
+            <supplied>Secunda instantia et rationes</supplied>
+          </head>
+          <p xml:id="l4-ptqsef">
+            <g ref="#slash"/>probatur tamen quod fides non est tantae certitudinis sicut
+            <lb ed="#SV"/>dictum est <choice><orig>ymo</orig><reg>immo</reg></choice> quod fidei potest subesse falsum
+          </p>
+          <p xml:id="l4-pqdpem">
+            <g ref="#slash"/>primo quia 
+            <lb ed="#SV"/>de facto spei subest falsum igitur et fidei consequentia tenet 
+            <lb ed="#SV"/>quia spes videtur esse tantae excellentiae et certitudinis 
+            <lb ed="#SV"/>sicut fides <g ref="#pilcrow"/>Item confirmatur consequentia quia quantum ad hoc 
+            <lb ed="#SV"/>quod est credere spes includit assensum <g ref="#slash"/>ideo quantum ad hoc 
+            <lb ed="#SV"/>habet conditionem fidei <g ref="#slash"/>antecedens probatur de praescito existente in gratia 
+            <lb ed="#SV"/>qui Realiter credit se habiturum <corr xml:id="l4-Chagrvi"><del rend="expunctuated">gratiam</del></corr> vitam sempi<lb ed="#SV"/>ternam 
+            <g ref="#slash"/>et tamen hoc est falsum <g ref="#slash"/>licet illa credulitas sit 
+            licita et per eam mereatur
+          </p>
+          <p xml:id="l4-cqpcrc">
+            <g ref="#pilcrow"/>Confirmatur quia potest accidere 
             <lb ed="#SV"/>quod quis ex caritate credat et ex fide falso <g ref="#slash"/>ut 
             <lb ed="#SV"/>si quis in extremo mortis petat corpus christi et presbyter 
             <lb ed="#SV"/>afferat hostiam non consecratam credet ex fide quod 
             <lb ed="#SV"/>ibi sit Realiter corpus christi quia si presbyter interroget 
-            <lb ed="#SV"/>eum <g ref="#dot"/>credis <g ref="#dot"/> respondebit <g ref="#dot"/> credo</p>
-                    
-        <p xml:id="l4-tcaiaf"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> capiamus aliquem 
+            <lb ed="#SV"/>eum <g ref="#dot"/>credis <g ref="#dot"/> respondebit <g ref="#dot"/> credo
+          </p>
+          <p xml:id="l4-tcaiaf">
+            <g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> capiamus aliquem 
             <lb ed="#SV"/>qui ante incarnationem crederet christum incarnandum <g ref="#slash"/>ita 
             <lb ed="#SV"/>quod mediante habitu fidei exeat in assensum huius christus 
             <lb ed="#SV"/>incarnabitur <g ref="#slash"/>et ponatur ultra quod in illo assensu ille 
             <lb ed="#SV"/>continetur per dei potentiam usque post incarnationem christi 
             <lb ed="#SV"/><g ref="#slash"/>tunc assensus ille erit falsus in instanti incarnationis 
             <lb ed="#SV"/>igitur <g ref="#pilrow"/>Item de facto ille <choice><orig>assentivit</orig><reg>assensit</reg></choice> huic christus incarnabitur 
-            <lb ed="#SV"/>et hoc est falsum igitur <choice><orig>assentivit</orig><reg>assensit</reg></choice> falso</p>
-                    
-                    <p xml:id="l4-qdaeam"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> de facto <name ref="#Abraham">abra<lb ed="#SV"/>ham</name> 
-                        meruit ex fide credendo falsum igitur solum creden<lb ed="#SV"/>do 
-                        filium suum esse immolandum quod tamen erat falsum et 
-                        <lb ed="#SV"/>tamen dicit <name ref="#Paul">apostolus</name> <quote>credidit <name ref="#Abraham">abraham</name> <g ref="#slash"/>et Reputatum est 
-                        <lb ed="#SV"/>ei ad meritum</quote></p>
-          
-                    <p xml:id="l4-qaacep"><g ref="#pilcrow"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur apparenter sic spiritus 
-                        <lb ed="#SV"/>sanctus potest concurrere active ad assensum falsum igitur et fides 
-                        <lb ed="#SV"/>consequentia tenet quia aeque perfecte <choice><orig>ymo</orig><reg>immo</reg></choice> <choice><orig>perfeccius</orig><reg>perfectius</reg></choice> spiritus sanctus 
-                        <lb ed="#SV"/>concurrit ad assensum aequalis certitudinis sicut fides 
-                        <lb ed="#SV"/><g ref="#slash"/>antecedens probatur quia spiritus sanctus principaliter concurrit <g ref="#slash"/>et tamquam 
-                        <lb ed="#SV"/>principale agens ad cuiuslibet effectus productionem</p>
-           
-                    <p xml:id="l4-ssffee"><lb ed="#SV"/><g ref="#pilcrow"/><choice><orig>6o</orig><reg>sexto</reg></choice> sic fides est in potentia obedientali ad cuiuscumque effe<lb ed="#SV"/>ctus 
-                        productionem secundum quod placuit deo <g ref="#slash"/>Unde 
-                        <cb ed="#SV" n="191ra"/><lb ed="#SV"/><choice><orig>ymaginantur</orig><reg>imaginantur</reg></choice> aliqui quod quaelibet creatura est in potentia obedientali 
-                        <lb ed="#SV"/>ipsi deo <g ref="#slash"/>ita quod quamlibet creaturam potest assumere ad concurrendum 
-                        <lb ed="#SV"/>secum ad cuiuscumque effectus productionem secundum quod sibi pla<lb ed="#SV"/>cuerit 
-                        igitur deus potest assumere fidem ad productionem assensus 
-                        <lb ed="#SV"/>erronei sive falsi igitur</p>
-                
-                </div>
-                <div>
-                    <head xml:id="l4-Hohohoh"><supplied>Opinio Holcot</supplied></head>
-                    
-                    <p xml:id="l4-ariqth"><g ref="#pilcrow"/>Alias rationes inducam 
-                        <lb ed="#SV"/>post ea et solvam. <g ref="#pilcrow"/>Sed ante hoc notanda sunt aliqua 
-                        <lb ed="#SV"/>quae tangit <name ref="#Holcot">holcot</name></p>
-                    
-                    <p xml:id="l4-ucdnmh"><g ref="#slash"/>unde cum dicitur quod actus fidei li<lb ed="#SV"/>bere 
-                        producitur ab anima <g ref="#slash"/><name ref="#Holcot">holcot</name> tenet oppositum <g ref="#slash"/>et dicit 
-                        quod intellectus numquam credit articulis nisi <choice><orig>neccessitetur</orig><reg>necessitetur</reg></choice> 
-                        <lb ed="#SV"/>per rationem seu <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> <g ref="#slash"/>et ad hoc facit 
-                        <lb ed="#SV"/>aliquas rationes <g ref="#slash"/>tamen ipse excludit habitum <g ref="#slash"/>quia 
-                        non est <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> quin anima mediante habitu posset libere 
-                        <lb ed="#SV"/>exire in actu <g ref="#slash"/>Sed mihi videtur quod male Initiat 
-                        <lb ed="#SV"/>quia nullus ponit quod actus fidei sit in potestate animae 
-                        <lb ed="#SV"/>nisi mediante habitu <g ref="#slash"/>et causa est quia actus fidei est 
-                        <lb ed="#SV"/>supernaturalis sicut eius habitus <g ref="#slash"/>ideo non potest produci ab 
-                        <lb ed="#SV"/>anima nisi mediate habitu</p>
-                    
-                    <p xml:id="l4-nchqhi"><g ref="#slash"/>nihilominus tamen anima habet aliquam 
-                        <lb ed="#SV"/>dispositionem primam in sua libera potestate, qua 
-                        <lb ed="#SV"/>posita ex ordinatione et institutione divina, ponitur 
-                        <lb ed="#SV"/>actus fidei <g ref="#slash"/>et ita diceretur de aliis qualitatibus 
-                        <lb ed="#SV"/>supernaturalibus <g ref="#slash"/>et ideo iste non vadit ad radicem quia stan<lb ed="#SV"/>te 
-                        habitu fidei solo qualis infunditur in baptismo non 
-                        <lb ed="#SV"/>est credendum quin valde Remissus sit <g ref="#slash"/>et quod se 
-                        <lb ed="#SV"/>solo non sufficit exire in actu respectu credibilium 
-                        <lb ed="#SV"/><g ref="#slash"/>Exemplum est de puero baptizato qui nutritur inter <name ref="#Sarracens">sar<lb ed="#SV"/>racenos</name> 
-                        <g ref="#slash"/>tunc quando erit adultus si sibi proponatur 
-                        <lb ed="#SV"/>articulus fidei non credet <g ref="#slash"/>Et si quaeratur tunc non 
-                        <lb ed="#SV"/>erit differentia inter habituatum et non habituatum tali 
-                        <lb ed="#SV"/>habitu fidei <g ref="#slash"/>differentia enim erit in hoc <g ref="#slash"/>quia iste qui habet 
-                        <lb ed="#SV"/>habitum fidei ceteris paribus facilius se disponet 
-                        <lb ed="#SV"/>ad actum fidei quam alter <g ref="#pilcrow"/>Unde ad habendum actum 
-                        <lb ed="#SV"/>primum Requiritur certa latitudo diligentiae <g ref="#slash"/>modo 
-                        <lb ed="#SV"/>illa non erit tanta in habente habitum <g ref="#slash"/>vel saltem 
-                        <lb ed="#SV"/>non Requiritur <g ref="#slash"/>sicut in non habente <g ref="#slash"/>ita quod et minor 
-                        <lb ed="#SV"/>diligentia <g ref="#slash"/>et minor labor requiruntur in illo qui 
-                        <lb ed="#SV"/>habet habitum <g ref="#slash"/>quia habitus Iuvat</p>
-                    
-                    <p xml:id="l4-idfeip"><g ref="#pilcrow"/>Item diligentia facta 
-                        <lb ed="#SV"/>de vita sua in habente habitum <g ref="#slash"/>et qui est <choice><orig>eciam</orig><reg>etiam</reg></choice> in ca<lb ed="#SV"/>ritate, 
-                        <choice><orig>operacio</orig><reg>operatio</reg></choice> sua est viva <g ref="#slash"/>et augmentat 
-                        caritatem <g ref="#slash"/>In illo autem qui non habet habitum operatio 
-                        <lb ed="#SV"/>sua est mortua <g ref="#slash"/>ideo in habente habitum actus citius 
-                        <lb ed="#SV"/>et intensior producitur</p>
-                 
-                    <p xml:id="l4-iupvat"><g ref="#pilcrow"/>Item utrum posito quan<lb ed="#SV"/>tocumque 
-                        habitu fidei intenso posset anima exire 
-                        <lb ed="#SV"/>in actum credendi forte si bene consideretur <choice><orig>yma<lb ed="#SV"/>ginando</orig><reg>ima<lb ed="#SV"/>ginando</reg></choice> 
-                        illius actus nobilitates et <choice><orig>condicionem</orig><reg>conditionem</reg></choice> 
-                        <lb ed="#SV"/>erit bene difficile utrum anima mediante illo solo 
-                        <lb ed="#SV"/>habitu possit exire in actum <g ref="#slash"/>et forte quantum 
-                        <cb ed="#SV" n="191rb"/><lb ed="#SV"/>multi homines decipiuntur quia quandoque inducunt actum 
-                        <lb ed="#SV"/>illum ex rationibus probabilibus sive ex aliqua <choice><orig>apparencia</orig><reg>apparentia</reg></choice> 
-                        <lb ed="#SV"/>et ille actus non sufficit ad salutem <g ref="#slash"/>et tamen illum credunt 
-                        <lb ed="#SV"/>esse verum actum fidei <g ref="#slash"/>unde actus ille est tantae virtutis 
-                        <lb ed="#SV"/>et nobilitatis quod fert animam in bona spiritualia et 
-                        <lb ed="#SV"/>contempnit temporalia <g ref="#slash"/>modo illud est maxime difficile <g ref="#slash"/>ideo 
-                        <lb ed="#SV"/>dicit <name ref="#Paul">apostolus</name> quod propter <choice><orig>avariciam</orig><reg>avaritiam</reg></choice> multi apostataverunt 
-                        <lb ed="#SV"/>a fide <g ref="#slash"/>ita possibile est dicere quod avaritia in certo gradu 
-                        <lb ed="#SV"/>non est compossibilis actui fidei <g ref="#slash"/>et ideo mihi videtur quod 
-                        <lb ed="#SV"/>rationes <name ref="#Holcot">holcot</name> solum procedunt ex actu fidei pro<lb ed="#SV"/>ducto 
-                        mediantibus rationibus probabilibus vel <choice><orig>apparenciis</orig><reg>apparentiis</reg></choice> tantum</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrdhrdh"><supplied>Rationes de Holcot</supplied></head>
-                    
-                   <p xml:id="l4-otrree"><g ref="#pilcrow"/>Oportet tamen Respondere ad rationes suas quia dicit 
-                       <lb ed="#SV"/>ipse non est in potestate nostra assentire vel <choice><orig>oppinari</orig><reg>opinari</reg></choice> 
-                       <lb ed="#SV"/>sine motivo <g ref="#slash"/>nec est in potestate nostra credere sine 
-                       <lb ed="#SV"/>motivo propositioni dubiae <g ref="#slash"/>datis enim duabus propositionibus 
-                       <lb ed="#SV"/>inevidentibus ego non possum minus inevidenti assentire 
-                       <lb ed="#SV"/>sine ratione igitur nec magis inevidenti <g ref="#slash"/>sed propositio 
-                       <lb ed="#SV"/>mere contingens sicut ista <name ref="#Sortes">sortes</name> currit <g ref="#slash"/> vel rex sedet 
-                       <lb ed="#SV"/>est magis inevidens quam ista deus est <g ref="#slash"/>et tamen non pos<lb ed="#SV"/>sum 
-                       isti <name ref="#Sortes">sortes</name> currit <g ref="#slash"/>vel Rex sedet assentire sine 
-                       <lb ed="#SV"/>ratione igitur etc.</p>
-                    
-                    <p xml:id="l4-iqtvvf"><g ref="#pilcrow"/>Item quia tunc in potestate mea esset 
-                        <lb ed="#SV"/>tristari vel gaudere tantum sicut vellem <g ref="#slash"/>et sic in pote<lb ed="#SV"/>state 
-                        mea esset habere tantum gaudium <g ref="#slash"/>vel dolorem 
-                        sicut habent beatus et dampnatus <g ref="#slash"/>quia per imperium 
-                        <lb ed="#SV"/>voluntatis possum causare assensum talis propositionis <g ref="#slash"/>cras 
-                        <lb ed="#SV"/>habebo tantum gaudium sicut <name ref="#Peter">petrus</name> et <name ref="#Paul">paulus</name> <g ref="#slash"/>quia 
-                        <lb ed="#SV"/>ad apprehensionem talis propositionis sequitur quod gaudium 
-                        <lb ed="#SV"/>ex quo assentit <g ref="#slash"/>et sic videtur quod intellectus omnino non posset 
-                        <lb ed="#SV"/>ferri assentive in aliquam propositionem nisi per rationes sit 
-                        <lb ed="#SV"/>probata <g ref="#slash"/>vel appareat esse probata <g ref="#slash"/>nec est in po<lb ed="#SV"/>testate 
-                        voluntatis nostrae propositionem facere esse veram 
-                        <lb ed="#SV"/>vel falsam</p>
-                </div>
-                <div>
-                    <head xml:id="l4-Hrarrdh"><supplied>Responsio ad rationes de Holcot</supplied></head>
-             
-                    <p xml:id="l4-aehrma"><g ref="#pilcrow"/>Advertendum est hic quod lata est differentia in<lb ed="#SV"/>ter 
-                        propositiones indifferentes ad finem hominis consequendum <g ref="#slash"/>et 
-                        <lb ed="#SV"/>inter propositiones quae habent ordinem <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> ad sui finem 
-                        <lb ed="#SV"/>consequendum <g ref="#slash"/>verbi gratia <g ref="#slash"/>utrum Rex sedeat <g ref="#slash"/>vel non <g ref="#slash"/>non est 
-                        <lb ed="#SV"/><choice><orig>neccessarium</orig><reg>necessarium</reg></choice> saluti hominis <g ref="#slash"/>utrum autem deus sit est de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> 
-                        <lb ed="#SV"/>hominis salutis <g ref="#slash"/>Ideo homo ex naturali instinctu inclinatur 
-                        <lb ed="#SV"/>ad assentiendum huiusmodi propositionibus <choice><orig>neccessariis</orig><reg>necessariis</reg></choice> ad suum finem 
-                        <lb ed="#SV"/>consequendum et sic de aliis <g ref="#slash"/>et sic verum est quod natura <choice><orig>indididit</orig><reg>indidit</reg></choice> cuilibet 
-                        <lb ed="#SV"/>creaturae rationali quamdam inclinationem naturalem ad consequendum 
-                        <lb ed="#SV"/>suum finem <g ref="#slash"/>pro tanto dicit <ref><name ref="#Aristotle">philosophus</name> <choice><orig>primo</orig><reg>Io</reg></choice> <title>politicae</title></ref> quod 
-                        <lb ed="#SV"/><quote>homo a natura est animal civile</quote> <g ref="#slash"/>unde quia homo non potest <corr xml:id="l4-Apoomex"><del rend="expunctuated">omnia</del></corr> 
-                        <lb ed="#SV"/>ex natura sua omnia <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> ad salutem, <g ref="#slash"/>ideo a natura sua 
-                        est animal communicabile et indiget ut Relevetur per potentiam 
-                        <lb ed="#SV"/><corr xml:id="l4-Cpoteet"><del rend="expunctuated">tentiam</del></corr> et bonum Regimen <g ref="#slash"/>unde <choice><orig>ymmaginandum</orig><reg>imaginandum</reg></choice> 
-                        <cb ed="#SV" n="191va"/><lb ed="#SV"/>est quod sunt instinctus tales et inclinationes quibus 
-                        <lb ed="#SV"/>homo tendit in deum naturaliter et ad bene operandum 
-                        <lb ed="#SV"/>et ad deum <choice><orig>collendum</orig><reg>colendum</reg></choice> et deo serviendum <g ref="#slash"/>ideo dicitur quod deum 
-                        <lb ed="#SV"/>esse est naturaliter inditum homini et a natura <g ref="#slash"/>et ad hoc 
-                        <lb ed="#SV"/>fides inclinat <g ref="#slash"/>nam dico quod homo inclinatur naturaliter 
-                        <lb ed="#SV"/>ad honorandum et orandum deum licet propter peccatum originale 
-                        <lb ed="#SV"/>non percipiat se homo talem instinctum habere <g ref="#slash"/>Et ex 
-                        <lb ed="#SV"/>hoc forte fuit <g ref="#slash"/>et in hac Radice fundatur <choice><orig>ydola<lb ed="#SV"/>tria</orig><reg>idola<lb ed="#SV"/>tria</reg></choice>, 
-                        <g ref="#slash"/>unde omnis creatura naturaliter tendit in deum ex 
-                        <lb ed="#SV"/>quodam naturali instinctu <g ref="#slash"/>ideo homo secundum partem affectivam 
-                        <lb ed="#SV"/>et intellectivam naturaliter tendit in deum <g ref="#slash"/>et ex hoc 
-                        <lb ed="#SV"/>male aliqui sumpserunt sub quia in simplicibus ratio 
-                        <lb ed="#SV"/>est debilis <g ref="#slash"/>ideo sub illa ratione sumpserunt creaturas 
-                        <lb ed="#SV"/>credentes illas esse deum <g ref="#slash"/>et hac optima radice 
-                        <lb ed="#SV"/>male applicata</p>
-
-                    <p xml:id="l4-iiasei"><g ref="#slash"/>ideo <choice><orig>ydolatraverunt</orig><reg>idolatraverunt</reg></choice> aliqui <g ref="#slash"/>et 
-                        <lb ed="#SV"/>adoraverunt false creaturas nescientes talem instinctum 
-                        <lb ed="#SV"/>insequi <g ref="#slash"/>et creatori talia attribuere <g ref="#slash"/>Sed magis 
-                        <lb ed="#SV"/>terrena intendentes <g ref="#slash"/>propter quod dictum fuit <g ref="#slash"/>propter ava<lb ed="#SV"/>ritiam, 
-                        ceperunt homines <choice><orig>apostare</orig><reg>apostatare</reg></choice> a fide honorem 
-                        <lb ed="#SV"/>soli deo tribuendum creaturae impendentes <g ref="#slash"/>Et ad 
-                        <lb ed="#SV"/>illud propositum dicebat <name ref="#Macrobius">macrobius</name> in libro <title>de sompno 
-                            <lb ed="#SV"/>cipionis</title> quod <choice><orig>sompnia</orig><reg>somnia</reg></choice> principum et magnatum et 
-                        <lb ed="#SV"/>potentum sunt futurorum quaedam Iudicia et praesagia 
-                        <lb ed="#SV"/>subiungens quod naturaliter prima causa <choice><orig>indididit</orig><reg>indidit</reg></choice> ex ordine 
-                        <lb ed="#SV"/>universi quod maxime talibus quam simplicibus qui sunt personae communes 
-                        <lb ed="#SV"/>per quasdam motiones et influentias speciales innote<lb ed="#SV"/>scent 
-                        quiddam circa potentiam totam novi effectus vel mi<lb ed="#SV"/>rabilis 
-                        accidere deberet sicut verisimilem est fuisse de 
-                        <lb ed="#SV"/><name ref="#Saul">saul</name> de <name ref="#David">david</name> de <name>achas</name>, de <name>caypha</name>, de <name>pharaone</name>, <g ref="#slash"/>de 
-                        <lb ed="#SV"/><name>nabugodonosor</name> <g ref="#slash"/>et <g ref="#dot"/> de pluribus aliis <g ref="#slash"/> Unde dico quod ex 
-                        <lb ed="#SV"/>eo quod natura humana fuit infecta et corrupta propter peccatum 
-                        <lb ed="#SV"/>nescivit talem motivitatem specialem ad consecutionem 
-                        <lb ed="#SV"/>sui finis ultimi <g ref="#slash"/>Ideo quidam sensualem appetitum insequentes 
-                        <lb ed="#SV"/><choice><orig>Reverenciam</orig><reg>Reverentiam</reg></choice> deo debitam creaturae impenderunt ut soli 
-                        <lb ed="#SV"/>vel lumine et sic de aliis <g ref="#slash"/>Sed gratia et fides intellectum ma<lb ed="#SV"/>xime 
-                        Regulatis immediate tendendo in ipsum deum et 
-                        <lb ed="#SV"/>finem ultimum consequendum <g ref="#slash"/>Et instinctus talis quem 
-                        <lb ed="#SV"/>habemus naturaliter est inclinans ad deum diligendum 
-                        <lb ed="#SV"/>licet corrupte propter originale <g ref="#slash"/>nec de se sufficienter <g ref="#slash"/>sed 
-                        <lb ed="#SV"/>adiuvatur ab ipsa fide tamquam Regulante appetitus sensi<lb ed="#SV"/>tivos 
-                        <g ref="#slash"/>et intellectuales</p>       
-                    
-                    <p xml:id="l4-epheda"><g ref="#slash"/>et per hoc apparet solutio eorum 
-                        <lb ed="#SV"/>quae tangit <name ref="#Holcot">holcot</name> de propositionibus quae nullo modo <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> 
-                        <lb ed="#SV"/>sunt ad salutem <g ref="#slash"/>secus autem est de propositionibus quarum veri<lb ed="#SV"/>tas 
-                        <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> est homini ad salutem <g ref="#slash"/>Ideo talis assensus 
-                        <cb ed="#SV" n="191vb"/><lb ed="#SV"/>respectu propositionum <choice><orig>neccessariarum</orig><reg>necessariarum</reg></choice> ad salutem est specialis instinctus naturae 
-                        <lb ed="#SV"/>et gratiae <corr xml:id="l4-Cgretsp"><g ref="carrot"/><add place="aboveLine">et</add></corr> specialis assistentia angeli boni <g ref="#slash"/>Ita quod sua consequentia 
-                        <lb ed="#SV"/>est semper neganda quia arguit propositionibus minus inevidentibus sine 
-                        <lb ed="#SV"/>ratione vel apparentia non possumus assentire igitur nec magis 
-                        <lb ed="#SV"/>in evidentibus quia fides naturaliter inclinat ad assentiendum veritatibus 
-                        <lb ed="#SV"/>catholicis Requisitis <choice><orig>neccessario</orig><reg>necessario</reg></choice> ad consequendum salutem <g ref="#slash"/>non autem 
-                        <lb ed="#SV"/>sic est de aliis</p>
-                    
-<p xml:id="l4-eaease"><g ref="#slash"/>Ex alia etiam Radice possunt solvi praedictae 
-    <lb ed="#SV"/>rationes <g ref="#slash"/>quia fides habet alium modum quam aliae qualitates quia non 
-    <lb ed="#SV"/>movetur ab apparentia obiecti <g ref="#slash"/>nec habet veritatem ex obiecto <g ref="#slash"/>
-    <lb ed="#SV"/><g ref="#slash"/>nec Requirit aliquam apparenciam ex parte obiecti <g ref="#slash"/>sed sic non 
-    <lb ed="#SV"/>est de aliis assensibus <g ref="#slash"/>ita quod assensus fidei non Requirit aliquam 
-    <lb ed="#SV"/><choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> in obiecto <choice><orig>ymmo</orig><reg>immo</reg></choice> est met apparentia <g ref="#slash"/>Et si dicatur 
-    <lb ed="#SV"/>quod obiectum intellectus est verum vel apparens verum <g ref="#slash"/>verum est quod oportet 
-    <lb ed="#SV"/>quod notitia per quam intellectus asserit sit vera vel apparens 
-    <lb ed="#SV"/>vera <g ref="#slash"/>sic est de fide quia fides habitualis est quaedam apparentia 
-    <lb ed="#SV"/>et <choice><orig>eciam</orig><reg>etiam</reg></choice> eius actus <g ref="#slash"/>sed istam <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> non habet ab obiecto 
-    <lb ed="#SV"/><choice><orig>ymo</orig><reg>immo</reg></choice> est <g ref="#slash"/>met apparentia sua etc</p>
-
-                </div>
-                
-            </div>
-        </body>
-    </text>
+            <lb ed="#SV"/>et hoc est falsum igitur <choice><orig>assentivit</orig><reg>assensit</reg></choice> falso
+          </p>
+          <p xml:id="l4-qdaeam">
+            <g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> de facto <name ref="#Abraham">abra<lb ed="#SV"/>ham</name> 
+            meruit ex fide credendo falsum igitur solum creden<lb ed="#SV"/>do 
+            filium suum esse immolandum quod tamen erat falsum et 
+            <lb ed="#SV"/>tamen dicit <name ref="#Paul">apostolus</name> <quote>credidit <name ref="#Abraham">abraham</name> <g ref="#slash"/>et Reputatum est 
+            <lb ed="#SV"/>ei ad meritum</quote>
+          </p>
+          <p xml:id="l4-qaacep">
+            <g ref="#pilcrow"/><choice><orig>5o</orig><reg>quinto</reg></choice> arguitur apparenter sic spiritus 
+            <lb ed="#SV"/>sanctus potest concurrere active ad assensum falsum igitur et fides 
+            <lb ed="#SV"/>consequentia tenet quia aeque perfecte <choice><orig>ymo</orig><reg>immo</reg></choice> <choice><orig>perfeccius</orig><reg>perfectius</reg></choice> spiritus sanctus 
+            <lb ed="#SV"/>concurrit ad assensum aequalis certitudinis sicut fides 
+            <lb ed="#SV"/><g ref="#slash"/>antecedens probatur quia spiritus sanctus principaliter concurrit <g ref="#slash"/>et tamquam 
+            <lb ed="#SV"/>principale agens ad cuiuslibet effectus productionem
+          </p>
+          <p xml:id="l4-ssffee">
+            <lb ed="#SV"/><g ref="#pilcrow"/><choice><orig>6o</orig><reg>sexto</reg></choice> sic fides est in potentia obedientali ad cuiuscumque effe<lb ed="#SV"/>ctus 
+            productionem secundum quod placuit deo <g ref="#slash"/>Unde 
+            <pb ed="#SV" n="191-r"/>
+            <cb ed="#SV" n="a"/>
+            <lb ed="#SV"/><choice><orig>ymaginantur</orig><reg>imaginantur</reg></choice> aliqui quod quaelibet creatura est in potentia obedientali 
+            <lb ed="#SV"/>ipsi deo <g ref="#slash"/>ita quod quamlibet creaturam potest assumere ad concurrendum 
+            <lb ed="#SV"/>secum ad cuiuscumque effectus productionem secundum quod sibi pla<lb ed="#SV"/>cuerit 
+            igitur deus potest assumere fidem ad productionem assensus 
+            <lb ed="#SV"/>erronei sive falsi igitur
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hohohoh"><supplied>Opinio Holcot</supplied></head>
+          <p xml:id="l4-ariqth">
+            <g ref="#pilcrow"/>Alias rationes inducam 
+            <lb ed="#SV"/>post ea et solvam. <g ref="#pilcrow"/>Sed ante hoc notanda sunt aliqua 
+            <lb ed="#SV"/>quae tangit <name ref="#Holcot">holcot</name>
+          </p>
+          <p xml:id="l4-ucdnmh">
+            <g ref="#slash"/>unde cum dicitur quod actus fidei li<lb ed="#SV"/>bere 
+            producitur ab anima <g ref="#slash"/><name ref="#Holcot">holcot</name> tenet oppositum <g ref="#slash"/>et dicit 
+            quod intellectus numquam credit articulis nisi <choice><orig>neccessitetur</orig><reg>necessitetur</reg></choice> 
+            <lb ed="#SV"/>per rationem seu <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> <g ref="#slash"/>et ad hoc facit 
+            <lb ed="#SV"/>aliquas rationes <g ref="#slash"/>tamen ipse excludit habitum <g ref="#slash"/>quia 
+            non est <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> quin anima mediante habitu posset libere 
+            <lb ed="#SV"/>exire in actu <g ref="#slash"/>Sed mihi videtur quod male Initiat 
+            <lb ed="#SV"/>quia nullus ponit quod actus fidei sit in potestate animae 
+            <lb ed="#SV"/>nisi mediante habitu <g ref="#slash"/>et causa est quia actus fidei est 
+            <lb ed="#SV"/>supernaturalis sicut eius habitus <g ref="#slash"/>ideo non potest produci ab 
+            <lb ed="#SV"/>anima nisi mediate habitu
+          </p>
+          <p xml:id="l4-nchqhi">
+            <g ref="#slash"/>nihilominus tamen anima habet aliquam 
+            <lb ed="#SV"/>dispositionem primam in sua libera potestate, qua 
+            <lb ed="#SV"/>posita ex ordinatione et institutione divina, ponitur 
+            <lb ed="#SV"/>actus fidei <g ref="#slash"/>et ita diceretur de aliis qualitatibus 
+            <lb ed="#SV"/>supernaturalibus <g ref="#slash"/>et ideo iste non vadit ad radicem quia stan<lb ed="#SV"/>te 
+            habitu fidei solo qualis infunditur in baptismo non 
+            <lb ed="#SV"/>est credendum quin valde Remissus sit <g ref="#slash"/>et quod se 
+            <lb ed="#SV"/>solo non sufficit exire in actu respectu credibilium 
+            <lb ed="#SV"/><g ref="#slash"/>Exemplum est de puero baptizato qui nutritur inter <name ref="#Sarracens">sar<lb ed="#SV"/>racenos</name> 
+            <g ref="#slash"/>tunc quando erit adultus si sibi proponatur 
+            <lb ed="#SV"/>articulus fidei non credet <g ref="#slash"/>Et si quaeratur tunc non 
+            <lb ed="#SV"/>erit differentia inter habituatum et non habituatum tali 
+            <lb ed="#SV"/>habitu fidei <g ref="#slash"/>differentia enim erit in hoc <g ref="#slash"/>quia iste qui habet 
+            <lb ed="#SV"/>habitum fidei ceteris paribus facilius se disponet 
+            <lb ed="#SV"/>ad actum fidei quam alter <g ref="#pilcrow"/>Unde ad habendum actum 
+            <lb ed="#SV"/>primum Requiritur certa latitudo diligentiae <g ref="#slash"/>modo 
+            <lb ed="#SV"/>illa non erit tanta in habente habitum <g ref="#slash"/>vel saltem 
+            <lb ed="#SV"/>non Requiritur <g ref="#slash"/>sicut in non habente <g ref="#slash"/>ita quod et minor 
+            <lb ed="#SV"/>diligentia <g ref="#slash"/>et minor labor requiruntur in illo qui 
+            <lb ed="#SV"/>habet habitum <g ref="#slash"/>quia habitus Iuvat
+          </p>
+          <p xml:id="l4-idfeip">
+            <g ref="#pilcrow"/>Item diligentia facta 
+            <lb ed="#SV"/>de vita sua in habente habitum <g ref="#slash"/>et qui est <choice><orig>eciam</orig><reg>etiam</reg></choice> in ca<lb ed="#SV"/>ritate, 
+            <choice><orig>operacio</orig><reg>operatio</reg></choice> sua est viva <g ref="#slash"/>et augmentat 
+            caritatem <g ref="#slash"/>In illo autem qui non habet habitum operatio 
+            <lb ed="#SV"/>sua est mortua <g ref="#slash"/>ideo in habente habitum actus citius 
+            <lb ed="#SV"/>et intensior producitur
+          </p>
+          <p xml:id="l4-iupvat">
+            <g ref="#pilcrow"/>Item utrum posito quan<lb ed="#SV"/>tocumque 
+            habitu fidei intenso posset anima exire 
+            <lb ed="#SV"/>in actum credendi forte si bene consideretur <choice><orig>yma<lb ed="#SV"/>ginando</orig><reg>ima<lb ed="#SV"/>ginando</reg></choice> 
+            illius actus nobilitates et <choice><orig>condicionem</orig><reg>conditionem</reg></choice> 
+            <lb ed="#SV"/>erit bene difficile utrum anima mediante illo solo 
+            <lb ed="#SV"/>habitu possit exire in actum <g ref="#slash"/>et forte quantum 
+            <cb ed="#SV" n="b"/> <!-- 191rb -->
+            <lb ed="#SV"/>multi homines decipiuntur quia quandoque inducunt actum 
+            <lb ed="#SV"/>illum ex rationibus probabilibus sive ex aliqua <choice><orig>apparencia</orig><reg>apparentia</reg></choice> 
+            <lb ed="#SV"/>et ille actus non sufficit ad salutem <g ref="#slash"/>et tamen illum credunt 
+            <lb ed="#SV"/>esse verum actum fidei <g ref="#slash"/>unde actus ille est tantae virtutis 
+            <lb ed="#SV"/>et nobilitatis quod fert animam in bona spiritualia et 
+            <lb ed="#SV"/>contempnit temporalia <g ref="#slash"/>modo illud est maxime difficile <g ref="#slash"/>ideo 
+            <lb ed="#SV"/>dicit <name ref="#Paul">apostolus</name> quod propter <choice><orig>avariciam</orig><reg>avaritiam</reg></choice> multi apostataverunt 
+            <lb ed="#SV"/>a fide <g ref="#slash"/>ita possibile est dicere quod avaritia in certo gradu 
+            <lb ed="#SV"/>non est compossibilis actui fidei <g ref="#slash"/>et ideo mihi videtur quod 
+            <lb ed="#SV"/>rationes <name ref="#Holcot">holcot</name> solum procedunt ex actu fidei pro<lb ed="#SV"/>ducto 
+            mediantibus rationibus probabilibus vel <choice><orig>apparenciis</orig><reg>apparentiis</reg></choice> tantum
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hrdhrdh"><supplied>Rationes de Holcot</supplied></head>
+          <p xml:id="l4-otrree">
+            <g ref="#pilcrow"/>Oportet tamen Respondere ad rationes suas quia dicit 
+            <lb ed="#SV"/>ipse non est in potestate nostra assentire vel <choice><orig>oppinari</orig><reg>opinari</reg></choice> 
+            <lb ed="#SV"/>sine motivo <g ref="#slash"/>nec est in potestate nostra credere sine 
+            <lb ed="#SV"/>motivo propositioni dubiae <g ref="#slash"/>datis enim duabus propositionibus 
+            <lb ed="#SV"/>inevidentibus ego non possum minus inevidenti assentire 
+            <lb ed="#SV"/>sine ratione igitur nec magis inevidenti <g ref="#slash"/>sed propositio 
+            <lb ed="#SV"/>mere contingens sicut ista <name ref="#Sortes">sortes</name> currit <g ref="#slash"/> vel rex sedet 
+            <lb ed="#SV"/>est magis inevidens quam ista deus est <g ref="#slash"/>et tamen non pos<lb ed="#SV"/>sum 
+            isti <name ref="#Sortes">sortes</name> currit <g ref="#slash"/>vel Rex sedet assentire sine 
+            <lb ed="#SV"/>ratione igitur etc.
+          </p>
+          <p xml:id="l4-iqtvvf">
+            <g ref="#pilcrow"/>Item quia tunc in potestate mea esset 
+            <lb ed="#SV"/>tristari vel gaudere tantum sicut vellem <g ref="#slash"/>et sic in pote<lb ed="#SV"/>state 
+            mea esset habere tantum gaudium <g ref="#slash"/>vel dolorem 
+            sicut habent beatus et dampnatus <g ref="#slash"/>quia per imperium 
+            <lb ed="#SV"/>voluntatis possum causare assensum talis propositionis <g ref="#slash"/>cras 
+            <lb ed="#SV"/>habebo tantum gaudium sicut <name ref="#Peter">petrus</name> et <name ref="#Paul">paulus</name> <g ref="#slash"/>quia 
+            <lb ed="#SV"/>ad apprehensionem talis propositionis sequitur quod gaudium 
+            <lb ed="#SV"/>ex quo assentit <g ref="#slash"/>et sic videtur quod intellectus omnino non posset 
+            <lb ed="#SV"/>ferri assentive in aliquam propositionem nisi per rationes sit 
+            <lb ed="#SV"/>probata <g ref="#slash"/>vel appareat esse probata <g ref="#slash"/>nec est in po<lb ed="#SV"/>testate 
+            voluntatis nostrae propositionem facere esse veram 
+            <lb ed="#SV"/>vel falsam
+          </p>
+        </div>
+        <div>
+          <head xml:id="l4-Hrarrdh">
+            <supplied>Responsio ad rationes de Holcot</supplied>
+          </head>
+          <p xml:id="l4-aehrma">
+            <g ref="#pilcrow"/>Advertendum est hic quod lata est differentia in<lb ed="#SV"/>ter 
+            propositiones indifferentes ad finem hominis consequendum <g ref="#slash"/>et 
+            <lb ed="#SV"/>inter propositiones quae habent ordinem <choice><orig>neccessarium</orig><reg>necessarium</reg></choice> ad sui finem 
+            <lb ed="#SV"/>consequendum <g ref="#slash"/>verbi gratia <g ref="#slash"/>utrum Rex sedeat <g ref="#slash"/>vel non <g ref="#slash"/>non est 
+            <lb ed="#SV"/><choice><orig>neccessarium</orig><reg>necessarium</reg></choice> saluti hominis <g ref="#slash"/>utrum autem deus sit est de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> 
+            <lb ed="#SV"/>hominis salutis <g ref="#slash"/>Ideo homo ex naturali instinctu inclinatur 
+            <lb ed="#SV"/>ad assentiendum huiusmodi propositionibus <choice><orig>neccessariis</orig><reg>necessariis</reg></choice> ad suum finem 
+            <lb ed="#SV"/>consequendum et sic de aliis <g ref="#slash"/>et sic verum est quod natura <choice><orig>indididit</orig><reg>indidit</reg></choice> cuilibet 
+            <lb ed="#SV"/>creaturae rationali quamdam inclinationem naturalem ad consequendum 
+            <lb ed="#SV"/>suum finem <g ref="#slash"/>pro tanto dicit <ref><name ref="#Aristotle">philosophus</name> <choice><orig>primo</orig><reg>Io</reg></choice> <title>politicae</title></ref> quod 
+            <lb ed="#SV"/><quote>homo a natura est animal civile</quote> <g ref="#slash"/>unde quia homo non potest <corr xml:id="l4-Apoomex"><del rend="expunctuated">omnia</del></corr> 
+            <lb ed="#SV"/>ex natura sua omnia <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> ad salutem, <g ref="#slash"/>ideo a natura sua 
+            est animal communicabile et indiget ut Relevetur per potentiam 
+            <lb ed="#SV"/><corr xml:id="l4-Cpoteet"><del rend="expunctuated">tentiam</del></corr> et bonum Regimen <g ref="#slash"/>unde <choice><orig>ymmaginandum</orig><reg>imaginandum</reg></choice> 
+            <pb ed="#SV" n="191-v"/>
+            <cb ed="#SV" n="a"/>
+            <lb ed="#SV"/>est quod sunt instinctus tales et inclinationes quibus 
+            <lb ed="#SV"/>homo tendit in deum naturaliter et ad bene operandum 
+            <lb ed="#SV"/>et ad deum <choice><orig>collendum</orig><reg>colendum</reg></choice> et deo serviendum <g ref="#slash"/>ideo dicitur quod deum 
+            <lb ed="#SV"/>esse est naturaliter inditum homini et a natura <g ref="#slash"/>et ad hoc 
+            <lb ed="#SV"/>fides inclinat <g ref="#slash"/>nam dico quod homo inclinatur naturaliter 
+            <lb ed="#SV"/>ad honorandum et orandum deum licet propter peccatum originale 
+            <lb ed="#SV"/>non percipiat se homo talem instinctum habere <g ref="#slash"/>Et ex 
+            <lb ed="#SV"/>hoc forte fuit <g ref="#slash"/>et in hac Radice fundatur <choice><orig>ydola<lb ed="#SV"/>tria</orig><reg>idola<lb ed="#SV"/>tria</reg></choice>, 
+            <g ref="#slash"/>unde omnis creatura naturaliter tendit in deum ex 
+            <lb ed="#SV"/>quodam naturali instinctu <g ref="#slash"/>ideo homo secundum partem affectivam 
+            <lb ed="#SV"/>et intellectivam naturaliter tendit in deum <g ref="#slash"/>et ex hoc 
+            <lb ed="#SV"/>male aliqui sumpserunt sub quia in simplicibus ratio 
+            <lb ed="#SV"/>est debilis <g ref="#slash"/>ideo sub illa ratione sumpserunt creaturas 
+            <lb ed="#SV"/>credentes illas esse deum <g ref="#slash"/>et hac optima radice 
+            <lb ed="#SV"/>male applicata
+          </p>
+          <p xml:id="l4-iiasei">
+            <g ref="#slash"/>ideo <choice><orig>ydolatraverunt</orig><reg>idolatraverunt</reg></choice> aliqui <g ref="#slash"/>et 
+            <lb ed="#SV"/>adoraverunt false creaturas nescientes talem instinctum 
+            <lb ed="#SV"/>insequi <g ref="#slash"/>et creatori talia attribuere <g ref="#slash"/>Sed magis 
+            <lb ed="#SV"/>terrena intendentes <g ref="#slash"/>propter quod dictum fuit <g ref="#slash"/>propter ava<lb ed="#SV"/>ritiam, 
+            ceperunt homines <choice><orig>apostare</orig><reg>apostatare</reg></choice> a fide honorem 
+            <lb ed="#SV"/>soli deo tribuendum creaturae impendentes <g ref="#slash"/>Et ad 
+            <lb ed="#SV"/>illud propositum dicebat <name ref="#Macrobius">macrobius</name> in libro <title>de sompno 
+            <lb ed="#SV"/>cipionis</title> quod <choice><orig>sompnia</orig><reg>somnia</reg></choice> principum et magnatum et 
+            <lb ed="#SV"/>potentum sunt futurorum quaedam Iudicia et praesagia 
+            <lb ed="#SV"/>subiungens quod naturaliter prima causa <choice><orig>indididit</orig><reg>indidit</reg></choice> ex ordine 
+            <lb ed="#SV"/>universi quod maxime talibus quam simplicibus qui sunt personae communes 
+            <lb ed="#SV"/>per quasdam motiones et influentias speciales innote<lb ed="#SV"/>scent 
+            quiddam circa potentiam totam novi effectus vel mi<lb ed="#SV"/>rabilis 
+            accidere deberet sicut verisimilem est fuisse de 
+            <lb ed="#SV"/><name ref="#Saul">saul</name> de <name ref="#David">david</name> de <name>achas</name>, de <name>caypha</name>, de <name>pharaone</name>, <g ref="#slash"/>de 
+            <lb ed="#SV"/><name>nabugodonosor</name> <g ref="#slash"/>et <g ref="#dot"/> de pluribus aliis <g ref="#slash"/> Unde dico quod ex 
+            <lb ed="#SV"/>eo quod natura humana fuit infecta et corrupta propter peccatum 
+            <lb ed="#SV"/>nescivit talem motivitatem specialem ad consecutionem 
+            <lb ed="#SV"/>sui finis ultimi <g ref="#slash"/>Ideo quidam sensualem appetitum insequentes 
+            <lb ed="#SV"/><choice><orig>Reverenciam</orig><reg>Reverentiam</reg></choice> deo debitam creaturae impenderunt ut soli 
+            <lb ed="#SV"/>vel lumine et sic de aliis <g ref="#slash"/>Sed gratia et fides intellectum ma<lb ed="#SV"/>xime 
+            Regulatis immediate tendendo in ipsum deum et 
+            <lb ed="#SV"/>finem ultimum consequendum <g ref="#slash"/>Et instinctus talis quem 
+            <lb ed="#SV"/>habemus naturaliter est inclinans ad deum diligendum 
+            <lb ed="#SV"/>licet corrupte propter originale <g ref="#slash"/>nec de se sufficienter <g ref="#slash"/>sed 
+            <lb ed="#SV"/>adiuvatur ab ipsa fide tamquam Regulante appetitus sensi<lb ed="#SV"/>tivos 
+            <g ref="#slash"/>et intellectuales
+          </p>
+          <p xml:id="l4-epheda">
+            <g ref="#slash"/>et per hoc apparet solutio eorum 
+            <lb ed="#SV"/>quae tangit <name ref="#Holcot">holcot</name> de propositionibus quae nullo modo <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> 
+            <lb ed="#SV"/>sunt ad salutem <g ref="#slash"/>secus autem est de propositionibus quarum veri<lb ed="#SV"/>tas 
+            <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> est homini ad salutem <g ref="#slash"/>Ideo talis assensus 
+            <cb ed="#SV" n="b"/> <!-- 191vb -->
+            <lb ed="#SV"/>respectu propositionum <choice><orig>neccessariarum</orig><reg>necessariarum</reg></choice> ad salutem est specialis instinctus naturae 
+            <lb ed="#SV"/>et gratiae <corr xml:id="l4-Cgretsp"><g ref="carrot"/><add place="aboveLine">et</add></corr> specialis assistentia angeli boni <g ref="#slash"/>Ita quod sua consequentia 
+            <lb ed="#SV"/>est semper neganda quia arguit propositionibus minus inevidentibus sine 
+            <lb ed="#SV"/>ratione vel apparentia non possumus assentire igitur nec magis 
+            <lb ed="#SV"/>in evidentibus quia fides naturaliter inclinat ad assentiendum veritatibus 
+            <lb ed="#SV"/>catholicis Requisitis <choice><orig>neccessario</orig><reg>necessario</reg></choice> ad consequendum salutem <g ref="#slash"/>non autem 
+            <lb ed="#SV"/>sic est de aliis
+          </p>
+          <p xml:id="l4-eaease">
+            <g ref="#slash"/>Ex alia etiam Radice possunt solvi praedictae 
+            <lb ed="#SV"/>rationes <g ref="#slash"/>quia fides habet alium modum quam aliae qualitates quia non 
+            <lb ed="#SV"/>movetur ab apparentia obiecti <g ref="#slash"/>nec habet veritatem ex obiecto <g ref="#slash"/>
+            <lb ed="#SV"/><g ref="#slash"/>nec Requirit aliquam apparenciam ex parte obiecti <g ref="#slash"/>sed sic non 
+            <lb ed="#SV"/>est de aliis assensibus <g ref="#slash"/>ita quod assensus fidei non Requirit aliquam 
+            <lb ed="#SV"/><choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> in obiecto <choice><orig>ymmo</orig><reg>immo</reg></choice> est met apparentia <g ref="#slash"/>Et si dicatur 
+            <lb ed="#SV"/>quod obiectum intellectus est verum vel apparens verum <g ref="#slash"/>verum est quod oportet 
+            <lb ed="#SV"/>quod notitia per quam intellectus asserit sit vera vel apparens 
+            <lb ed="#SV"/>vera <g ref="#slash"/>sic est de fide quia fides habitualis est quaedam apparentia 
+            <lb ed="#SV"/>et <choice><orig>eciam</orig><reg>etiam</reg></choice> eius actus <g ref="#slash"/>sed istam <choice><orig>apparenciam</orig><reg>apparentiam</reg></choice> non habet ab obiecto 
+            <lb ed="#SV"/><choice><orig>ymo</orig><reg>immo</reg></choice> est <g ref="#slash"/>met apparentia sua etc
+          </p>
+        </div>
+      </div>
+    </body>
+  </text>
 </TEI>
