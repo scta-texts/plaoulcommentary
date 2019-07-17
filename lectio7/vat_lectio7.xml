@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,372 +10,415 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 7, de Fide [Vatican Transcription]</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Lombard Press</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>
+        <date when="2011-03-25">March 25, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="V">Vatican</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
-    <facsimile>
-<surface n="V14v">
-<graphic url="V14v.jpg"/>
-<zone start="#l7-seqgpe" ulx="145" uly="1392" lrx="795" lry="1854" n="1"/>
-<zone start="#l7-seqgpe" ulx="797" uly="149" lrx="1447" lry="611" n="2"/>
-<zone start="#l7-cmisir" ulx="797" uly="547" lrx="1447" lry="1322" n="1"/>
-<zone start="#l7-sdiqpr" ulx="790" uly="1255" lrx="1440" lry="1499" n="1"/>
-<zone start="#l7-urefie" ulx="786" uly="1417" lrx="1436" lry="1618" n="1"/>
-<zone start="#l7-gaapap" ulx="784" uly="1536" lrx="1434" lry="1855" n="1"/>
-</surface>
-<surface n="V15r">
-<graphic url="V15r.jpg"/>
-<zone start="#l7-gaapap" ulx="121" uly="142" lrx="771" lry="300" n="2"/>
-<zone start="#l7-peqces" ulx="121" uly="216" lrx="771" lry="748" n="1"/>
-<zone start="#l7-sppadd" ulx="121" uly="666" lrx="771" lry="1137" n="1"/>
-<zone start="#l7-tpqpci" ulx="121" uly="1062" lrx="771" lry="1477" n="1"/>
-<zone start="#l7-apevie" ulx="121" uly="1401" lrx="771" lry="1637" n="1"/>
-<zone start="#l7-ehhppi" ulx="121" uly="1562" lrx="771" lry="1721" n="1"/>
-<zone start="#l7-suqedp" ulx="121" uly="1639" lrx="771" lry="1801" n="1"/>
-<zone start="#l7-apipci" ulx="121" uly="1725" lrx="771" lry="1843" n="1"/>
-<zone start="#l7-apipci" ulx="760" uly="153" lrx="1410" lry="303" n="2"/>
-<zone start="#l7-apeiii" ulx="762" uly="230" lrx="1412" lry="1302" n="1"/>
-<zone start="#l7-suqivi" ulx="762" uly="1225" lrx="1412" lry="1808" n="1"/>
-<zone start="#l7-suqead" ulx="762" uly="1727" lrx="1412" lry="1851" n="1"/>
-</surface>
-<surface n="V15v">
-<graphic url="V15v.jpg"/>
-<zone start="#l7-suqead" ulx="210" uly="179" lrx="860" lry="611" n="2"/>
-<zone start="#l7-usqoga" ulx="210" uly="528" lrx="860" lry="827" n="1"/>
-<zone start="#l7-atppce" ulx="207" uly="753" lrx="857" lry="1670" n="1"/>
-<zone start="#l7-aveiie" ulx="203" uly="1598" lrx="853" lry="1878" n="1"/>
-<zone start="#l7-aveiie" ulx="858" uly="174" lrx="1508" lry="691" n="2"/>
-<zone start="#l7-eqpfee" ulx="858" uly="652" lrx="1508" lry="955" n="1"/>
-<zone start="#l7-ddqdam" ulx="858" uly="886" lrx="1508" lry="1243" n="1"/>
-<zone start="#l7-depnif" ulx="853" uly="1168" lrx="1503" lry="1760" n="1"/>
-<zone start="#l7-unepig" ulx="853" uly="1686" lrx="1503" lry="1881" n="1"/>
-</surface>
-<surface n="V16r">
-<graphic url="V16r.jpg"/>
-<zone start="#l7-unepig" ulx="30" uly="167" lrx="680" lry="405" n="2"/>
-<zone start="#l7-esdadc" ulx="37" uly="382" lrx="687" lry="1339" n="1"/>
-<zone start="#l7-apdafe" ulx="56" uly="1299" lrx="706" lry="1843" n="1"/>
-<zone start="#l7-apdafe" ulx="669" uly="165" lrx="1319" lry="318" n="2"/>
-<zone start="#l7-aunfci" ulx="685" uly="241" lrx="1335" lry="1012" n="1"/>
-<zone start="#l7-qtacsd" ulx="688" uly="930" lrx="1338" lry="1312" n="1"/>
-<zone start="#l7-aceeud" ulx="698" uly="1288" lrx="1348" lry="1812" n="1"/>
-<zone start="#l7-vqncee" ulx="701" uly="1747" lrx="1351" lry="1857" n="1"/>
-</surface>
-<surface n="V16v">
-<graphic url="V16v.jpg"/>
-<zone start="#l7-vqncee" ulx="163" uly="150" lrx="813" lry="235" n="2"/>
-<zone start="#l7-epresi" ulx="163" uly="150" lrx="813" lry="1139" n="1"/>
-<zone start="#l7-veqdgb" ulx="144" uly="1111" lrx="794" lry="1809" n="1"/>
-<zone start="#l7-idtoac" ulx="144" uly="1735" lrx="794" lry="1853" n="1"/>
-<zone start="#l7-idtoac" ulx="813" uly="164" lrx="1463" lry="729" n="2"/>
-<zone start="#l7-tdqihs" ulx="808" uly="650" lrx="1458" lry="811" n="1"/>
-<zone start="#l7-sapaoa" ulx="805" uly="778" lrx="1455" lry="1017" n="1"/>
-<zone start="#l7-eqseih" ulx="805" uly="942" lrx="1455" lry="1344" n="1"/>
-<zone start="#l7-suqmpc" ulx="805" uly="1271" lrx="1455" lry="1613" n="1"/>
-<zone start="#l7-suqnsa" ulx="805" uly="1530" lrx="1455" lry="1818" n="1"/>
-<zone start="#l7-arfdmf" ulx="799" uly="1745" lrx="1449" lry="1858" n="1"/>
-</surface>
-<surface n="V17r">
-<graphic url="V17r.jpg"/>
-<zone start="#l7-arfdmf" ulx="123" uly="147" lrx="773" lry="660" n="2"/>
-<zone start="#l7-iphfcf" ulx="116" uly="581" lrx="766" lry="1435" n="1"/>
-<zone start="#l7-duqsfm" ulx="116" uly="1346" lrx="766" lry="1672" n="1"/>
-<zone start="#l7-esdntf" ulx="108" uly="1594" lrx="758" lry="1815" n="1"/>
-<zone start="#l7-esdntf" ulx="759" uly="158" lrx="1409" lry="405" n="2"/>
-<zone start="#l7-veqins" ulx="759" uly="319" lrx="1409" lry="746" n="1"/>
-<zone start="#l7-aafnaf" ulx="759" uly="674" lrx="1409" lry="1804" n="1"/>
-</surface>
-<surface n="V17v">
-<graphic url="V17v.jpg"/>
-<zone start="#l7-aafnaf" ulx="204" uly="156" lrx="854" lry="304" n="2"/>
-<zone start="#l7-acqlec" ulx="204" uly="237" lrx="854" lry="596" n="1"/>
-<zone start="#l7-aacapf" ulx="183" uly="568" lrx="833" lry="1638" n="1"/>
-</surface>
+  <facsimile>
+    <surface n="V14v">
+      <graphic url="V14v.jpg"/>
+      <zone start="#l7-seqgpe" ulx="145" uly="1392" lrx="795" lry="1854" n="1"/>
+      <zone start="#l7-seqgpe" ulx="797" uly="149" lrx="1447" lry="611" n="2"/>
+      <zone start="#l7-cmisir" ulx="797" uly="547" lrx="1447" lry="1322" n="1"/>
+      <zone start="#l7-sdiqpr" ulx="790" uly="1255" lrx="1440" lry="1499" n="1"/>
+      <zone start="#l7-urefie" ulx="786" uly="1417" lrx="1436" lry="1618" n="1"/>
+      <zone start="#l7-gaapap" ulx="784" uly="1536" lrx="1434" lry="1855" n="1"/>
+    </surface>
+    <surface n="V15r">
+      <graphic url="V15r.jpg"/>
+      <zone start="#l7-gaapap" ulx="121" uly="142" lrx="771" lry="300" n="2"/>
+      <zone start="#l7-peqces" ulx="121" uly="216" lrx="771" lry="748" n="1"/>
+      <zone start="#l7-sppadd" ulx="121" uly="666" lrx="771" lry="1137" n="1"/>
+      <zone start="#l7-tpqpci" ulx="121" uly="1062" lrx="771" lry="1477" n="1"/>
+      <zone start="#l7-apevie" ulx="121" uly="1401" lrx="771" lry="1637" n="1"/>
+      <zone start="#l7-ehhppi" ulx="121" uly="1562" lrx="771" lry="1721" n="1"/>
+      <zone start="#l7-suqedp" ulx="121" uly="1639" lrx="771" lry="1801" n="1"/>
+      <zone start="#l7-apipci" ulx="121" uly="1725" lrx="771" lry="1843" n="1"/>
+      <zone start="#l7-apipci" ulx="760" uly="153" lrx="1410" lry="303" n="2"/>
+      <zone start="#l7-apeiii" ulx="762" uly="230" lrx="1412" lry="1302" n="1"/>
+      <zone start="#l7-suqivi" ulx="762" uly="1225" lrx="1412" lry="1808" n="1"/>
+      <zone start="#l7-suqead" ulx="762" uly="1727" lrx="1412" lry="1851" n="1"/>
+    </surface>
+    <surface n="V15v">
+      <graphic url="V15v.jpg"/>
+      <zone start="#l7-suqead" ulx="210" uly="179" lrx="860" lry="611" n="2"/>
+      <zone start="#l7-usqoga" ulx="210" uly="528" lrx="860" lry="827" n="1"/>
+      <zone start="#l7-atppce" ulx="207" uly="753" lrx="857" lry="1670" n="1"/>
+      <zone start="#l7-aveiie" ulx="203" uly="1598" lrx="853" lry="1878" n="1"/>
+      <zone start="#l7-aveiie" ulx="858" uly="174" lrx="1508" lry="691" n="2"/>
+      <zone start="#l7-eqpfee" ulx="858" uly="652" lrx="1508" lry="955" n="1"/>
+      <zone start="#l7-ddqdam" ulx="858" uly="886" lrx="1508" lry="1243" n="1"/>
+      <zone start="#l7-depnif" ulx="853" uly="1168" lrx="1503" lry="1760" n="1"/>
+      <zone start="#l7-unepig" ulx="853" uly="1686" lrx="1503" lry="1881" n="1"/>
+    </surface>
+    <surface n="V16r">
+      <graphic url="V16r.jpg"/>
+      <zone start="#l7-unepig" ulx="30" uly="167" lrx="680" lry="405" n="2"/>
+      <zone start="#l7-esdadc" ulx="37" uly="382" lrx="687" lry="1339" n="1"/>
+      <zone start="#l7-apdafe" ulx="56" uly="1299" lrx="706" lry="1843" n="1"/>
+      <zone start="#l7-apdafe" ulx="669" uly="165" lrx="1319" lry="318" n="2"/>
+      <zone start="#l7-aunfci" ulx="685" uly="241" lrx="1335" lry="1012" n="1"/>
+      <zone start="#l7-qtacsd" ulx="688" uly="930" lrx="1338" lry="1312" n="1"/>
+      <zone start="#l7-aceeud" ulx="698" uly="1288" lrx="1348" lry="1812" n="1"/>
+      <zone start="#l7-vqncee" ulx="701" uly="1747" lrx="1351" lry="1857" n="1"/>
+    </surface>
+    <surface n="V16v">
+      <graphic url="V16v.jpg"/>
+      <zone start="#l7-vqncee" ulx="163" uly="150" lrx="813" lry="235" n="2"/>
+      <zone start="#l7-epresi" ulx="163" uly="150" lrx="813" lry="1139" n="1"/>
+      <zone start="#l7-veqdgb" ulx="144" uly="1111" lrx="794" lry="1809" n="1"/>
+      <zone start="#l7-idtoac" ulx="144" uly="1735" lrx="794" lry="1853" n="1"/>
+      <zone start="#l7-idtoac" ulx="813" uly="164" lrx="1463" lry="729" n="2"/>
+      <zone start="#l7-tdqihs" ulx="808" uly="650" lrx="1458" lry="811" n="1"/>
+      <zone start="#l7-sapaoa" ulx="805" uly="778" lrx="1455" lry="1017" n="1"/>
+      <zone start="#l7-eqseih" ulx="805" uly="942" lrx="1455" lry="1344" n="1"/>
+      <zone start="#l7-suqmpc" ulx="805" uly="1271" lrx="1455" lry="1613" n="1"/>
+      <zone start="#l7-suqnsa" ulx="805" uly="1530" lrx="1455" lry="1818" n="1"/>
+      <zone start="#l7-arfdmf" ulx="799" uly="1745" lrx="1449" lry="1858" n="1"/>
+    </surface>
+    <surface n="V17r">
+      <graphic url="V17r.jpg"/>
+      <zone start="#l7-arfdmf" ulx="123" uly="147" lrx="773" lry="660" n="2"/>
+      <zone start="#l7-iphfcf" ulx="116" uly="581" lrx="766" lry="1435" n="1"/>
+      <zone start="#l7-duqsfm" ulx="116" uly="1346" lrx="766" lry="1672" n="1"/>
+      <zone start="#l7-esdntf" ulx="108" uly="1594" lrx="758" lry="1815" n="1"/>
+      <zone start="#l7-esdntf" ulx="759" uly="158" lrx="1409" lry="405" n="2"/>
+      <zone start="#l7-veqins" ulx="759" uly="319" lrx="1409" lry="746" n="1"/>
+      <zone start="#l7-aafnaf" ulx="759" uly="674" lrx="1409" lry="1804" n="1"/>
+    </surface>
+    <surface n="V17v">
+      <graphic url="V17v.jpg"/>
+      <zone start="#l7-aafnaf" ulx="204" uly="156" lrx="854" lry="304" n="2"/>
+      <zone start="#l7-acqlec" ulx="204" uly="237" lrx="854" lry="596" n="1"/>
+      <zone start="#l7-aacapf" ulx="183" uly="568" lrx="833" lry="1638" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/workscited.xml" xpointer="worksCited"/>
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/citationlists/Prosopography.xml" xpointer="prosopography"/>
+      <div xml:id="starts-on">
+        <pb ed="#V" n="14-v"/>
+        <cb ed="#V" n="a"/>
       </div>
     </front>
     <body>
       <div xml:id="lectio7">
-        <head subtype="title">Lectio 7, de Fide [Vatican Transcription]</head>
+        <head>Lectio 7, de Fide [Vatican Transcription]</head>
         <div>
           <head xml:id="l7-Hraccpc">Recapitulatio argumenti circa periculum credulitatis</head>
-
-          <p xml:id="l7-seqgpe">Sciendum est quod 
-          <lb ed="#V"/>in solutione ultimi argumenti in qua dicetur 
-          <lb ed="#V"/>de illo qui assentiret esse corpus christi in hostia 
-          <lb ed="#V"/>non consecrata sibi data a presbytero in 
-          <lb ed="#V"/>extremo mortis dictum est quod ille assensus 
-          <lb ed="#V"/>non est multum periculosus et non faceret 
-          <lb ed="#V"/>illum assentientem de per se <choice><orig>ydolatrare</orig><reg>idolatrare</reg></choice> <g ref="#dot"/> verum 
-          <lb ed="#V"/>est quod modus communis loquendi est quod in illo casu sacer<lb ed="#V"/>dos 
-          facit simplicem <choice><orig>ydolatrare</orig><reg>idolatrare</reg></choice> Sciendum 
-          <lb ed="#V"/>est quod communiter simplices habent pro obiecto adorationis 
-          <cb ed="#V" n="14vb"/><lb ed="#V"/>aliquid contentum sub speciebus et sic si corpus christi 
-          <lb ed="#V"/>non sit ibidem quando hostia non est consecrata 
-          <lb ed="#V"/>habent illud quod continetur pro obiecto adorationis 
-          <lb ed="#V"/>et illud permittitur eis quia si indu<lb ed="#V"/>cerentur 
-          ad conditionaliter credendum hae<lb ed="#V"/>sitarentur 
-          et remitteretur eorum devo<lb ed="#V"/>tio 
-          et ad istum intellectum prohibitum est sacer<lb ed="#V"/>dotibus 
-          ne illis dent hostias non conse<lb ed="#V"/>cratas 
-          et si hoc faciant scilicet dando 
-          <lb ed="#V"/>eis hostias non consecratas gravissime 
-          <lb ed="#V"/>peccant</p>
+          <p xml:id="l7-seqgpe">
+            Sciendum est quod 
+            <lb ed="#V"/>in solutione ultimi argumenti in qua dicetur <!-- image problem. linenumber unknown --> 
+            <lb ed="#V"/>de illo qui assentiret esse corpus christi in hostia 
+            <lb ed="#V"/>non consecrata sibi data a presbytero in 
+            <lb ed="#V"/>extremo mortis dictum est quod ille assensus 
+            <lb ed="#V"/>non est multum periculosus et non faceret 
+            <lb ed="#V"/>illum assentientem de per se <choice><orig>ydolatrare</orig><reg>idolatrare</reg></choice> <g ref="#dot"/> verum 
+            <lb ed="#V"/>est quod modus communis loquendi est quod in illo casu sacer<lb ed="#V"/>dos 
+            facit simplicem <choice><orig>ydolatrare</orig><reg>idolatrare</reg></choice> Sciendum 
+            <lb ed="#V"/>est quod communiter simplices habent pro obiecto adorationis 
+            <cb ed="#V" n="14vb"/><lb ed="#V"/>aliquid contentum sub speciebus et sic si corpus christi 
+            <lb ed="#V"/>non sit ibidem quando hostia non est consecrata 
+            <lb ed="#V"/>habent illud quod continetur pro obiecto adorationis 
+            <lb ed="#V"/>et illud permittitur eis quia si indu<lb ed="#V"/>cerentur 
+            ad conditionaliter credendum hae<lb ed="#V"/>sitarentur 
+            et remitteretur eorum devo<lb ed="#V"/>tio 
+            et ad istum intellectum prohibitum est sacer<lb ed="#V"/>dotibus 
+            ne illis dent hostias non conse<lb ed="#V"/>cratas 
+            et si hoc faciant scilicet dando 
+            <lb ed="#V"/>eis hostias non consecratas gravissime 
+            <lb ed="#V"/>peccant
+          </p>
         </div>
         <div>
-          <head xml:id="l7-Hramdcf"><supplied>Redeundo ad materiam de certitudinem fidei</supplied></head>
-          
-          <p xml:id="l7-cmisir"><g ref="#dot"/>continuando autem materiam inceptam 
-          <lb ed="#V"/>de certitudine fidei quomodo enim non potest sub 
-          <lb ed="#V"/>esse falsum quia hoc est aliqualiter difficile 
-          <lb ed="#V"/>ad capiendum ita communiter accidit quod veritas 
-          <lb ed="#V"/>est aliqualiter difficilis ad capiendum ex 
-          <lb ed="#V"/>corruptione peccati ita quod falsitates sunt quo<lb ed="#V"/>dammodo 
-          proportionatae quam sint aliquae veritates unde 
-          <lb ed="#V"/>qui vellet sequi <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> anglicorum 
-          <lb ed="#V"/>non esset difficultas quia ipsi concedunt quod 
-          <lb ed="#V"/>fidei potest subesse falsum et quod deus potest decipere 
-          <lb ed="#V"/>aliquem et quod anima christi ipsa existente u<lb ed="#V"/>nita 
-          verbo potest peccare <g ref="#dot"/> dicunt <choice><orig>eciam</orig><reg>etiam</reg></choice> quod praeteri<lb ed="#V"/>tum 
-          potest non fuisse praeteritum <g ref="#dot"/> dicunt <choice><orig>eciam</orig><reg>etiam</reg></choice> alii 
-          <lb ed="#V"/>quod licet fides causaverit aliquem assensum 
-          <lb ed="#V"/>potest tamen ipsum numquam <choice><orig>causasse</orig><reg>causavisse</reg></choice> <g ref="#dot"/> unde concedunt quod 
-          <lb ed="#V"/>licet quaelibet res positiva si fuerit necesse est 
-          <lb ed="#V"/>ipsam fuisse tamen non est sic in respecti<lb ed="#V"/>bus</p>
-          
-          <p xml:id="l7-sdiqpr"><g ref="dot"/>Sed dimittendo ista et eundo ad 
-          <lb ed="#V"/>propositum prius inchoatum de certitudine fi<lb ed="#V"/>dei 
-          tenendo quod ei non potest subesse falsum 
-          <lb ed="#V"/>contra quam <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> inductae sunt rationes 
-          <lb ed="#V"/>difficiliores quas potui reperire</p>
+          <head xml:id="l7-Hramdcf">
+            <supplied>Redeundo ad materiam de certitudinem fidei</supplied>
+          </head>
+          <p xml:id="l7-cmisir">
+            <g ref="#dot"/>continuando autem materiam inceptam 
+            <lb ed="#V"/>de certitudine fidei quomodo enim non potest sub 
+            <lb ed="#V"/>esse falsum quia hoc est aliqualiter difficile 
+            <lb ed="#V"/>ad capiendum ita communiter accidit quod veritas 
+            <lb ed="#V"/>est aliqualiter difficilis ad capiendum ex 
+            <lb ed="#V"/>corruptione peccati ita quod falsitates sunt quo<lb ed="#V"/>dammodo 
+            proportionatae quam sint aliquae veritates unde 
+            <lb ed="#V"/>qui vellet sequi <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> anglicorum 
+            <lb ed="#V"/>non esset difficultas quia ipsi concedunt quod 
+            <lb ed="#V"/>fidei potest subesse falsum et quod deus potest decipere 
+            <lb ed="#V"/>aliquem et quod anima christi ipsa existente u<lb ed="#V"/>nita 
+            verbo potest peccare <g ref="#dot"/> dicunt <choice><orig>eciam</orig><reg>etiam</reg></choice> quod praeteri<lb ed="#V"/>tum 
+            potest non fuisse praeteritum <g ref="#dot"/> dicunt <choice><orig>eciam</orig><reg>etiam</reg></choice> alii 
+            <lb ed="#V"/>quod licet fides causaverit aliquem assensum 
+            <lb ed="#V"/>potest tamen ipsum numquam <choice><orig>causasse</orig><reg>causavisse</reg></choice> <g ref="#dot"/> unde concedunt quod 
+            <lb ed="#V"/>licet quaelibet res positiva si fuerit necesse est 
+            <lb ed="#V"/>ipsam fuisse tamen non est sic in respecti<lb ed="#V"/>bus
+          </p>
+          <p xml:id="l7-sdiqpr">
+            <g ref="dot"/>Sed dimittendo ista et eundo ad 
+            <lb ed="#V"/>propositum prius inchoatum de certitudine fi<lb ed="#V"/>dei 
+            tenendo quod ei non potest subesse falsum 
+            <lb ed="#V"/>contra quam <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> inductae sunt rationes 
+            <lb ed="#V"/>difficiliores quas potui reperire
+          </p>
         </div>
         <div>
-          <head xml:id="l7-Hratpii"><supplied>Responsio ad tertiam rationem secundae instantiae: circa continuationem fidei post
-      instans incarnationis</supplied></head>
-          
-          <p xml:id="l7-urefie"><g ref="#slash"/>Unde 
-          <lb ed="#V"/>respondendum est consequenter <g ref="#dot"/> ad illam rationem quae erat 
-          <lb ed="#V"/>de continuatione fidei post instans incarnationis tunc in 
-          <lb ed="#V"/>illo instanti ille assensus erit falsus ideo etc</p>
-          
+          <head xml:id="l7-Hratpii">
+            <supplied>Responsio ad tertiam rationem secundae instantiae: 
+              circa continuationem fidei post instans incarnationis</supplied>
+          </head>
+          <p xml:id="l7-urefie">
+            <g ref="#slash"/>Unde 
+            <lb ed="#V"/>respondendum est consequenter <g ref="#dot"/> ad illam rationem quae erat 
+            <lb ed="#V"/>de continuatione fidei post instans incarnationis tunc in 
+            <lb ed="#V"/>illo instanti ille assensus erit falsus ideo etc
+          </p>
           <div>
-            <head><supplied>Prima responsio possibilis: responsio Guillelmi Altissiodorensis</supplied></head>
-            
-            <p xml:id="l7-gaapap"><name>Guillelmus<note place="margin" type="marginalNote">G. P.</note> 
-            <lb ed="#V"/>parisiensis</name> ad hoc dat unam <corr xml:id="l7-Cuncore"><del rend="strikethrough">conclusionem</del></corr> 
-            <lb ed="#V"/>responsionem quam recitabo et postea dicam 
-            <lb ed="#V"/>alias responsiones <g ref="#dot"/>unde dicit sic quod ante ad<lb ed="#V"/>ventum 
-            christi iudaei et praecipue praelati per 
-            <lb ed="#V"/>scripturas et prophetes poterant scire adven<lb ed="#V"/>tum 
-            salvatoris saltem satis proprie et ista 
-            <cb ed="#V" n="15ra"/><lb ed="#V"/>Responsio fuit alias declarata in praecedentibus et 
-            <lb ed="#V"/>credo quod illa sit satis probabilis pro intellectu 
-            <lb ed="#V"/>eius solutionis <g ref="#dot"/> ponit aliquas propositiones</p>
-            
-            <p xml:id="l7-peqces"><g ref="#dbslash"/>prima<note place="margin" type="marginalNote">prima conclusio</note> 
-            <lb ed="#V"/>est quod quanto iudaei ante christi adventum 
-            <lb ed="#V"/>erant simplices tanto <choice><orig>cicius</orig><reg>citius</reg></choice> desinit 
-            <lb ed="#V"/>esse in eis assensus fidei huius christus incar<lb ed="#V"/>nabitur 
-            quia quanto erant simpliciores 
-            <lb ed="#V"/>tanto minus poterant discutere et scire 
-            <lb ed="#V"/>de adventu christi <unclear cert="medium">temporaliter</unclear> et <choice><orig>eciam</orig><reg>etiam</reg></choice> ad pau<lb ed="#V"/>ciora 
-            credere tenebantur <g ref="#slash"/><choice><orig>2o</orig><reg>Secundo</reg></choice><note place="margin" type="marginalNote">secunda conclusio</note> sequitur 
-            <lb ed="#V"/>quod <choice><orig>cicius</orig><reg>citius</reg></choice> obligabantur simpliciores  
-            <lb ed="#V"/>ad credendum illud disiunctum in toto tempore 
-            <lb ed="#V"/>in quo poterant sufficienter distinguere 
-            <lb ed="#V"/>de adventu christi ex scriptura</p>
-            
-            <p xml:id="l7-sppadd"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio 
-            <lb ed="#V"/>probabilis teneo quod in sola <name>virgine maria</name> fuit 
-            <lb ed="#V"/>iste assensus continuatus christus incarnabitur causatus 
-            <lb ed="#V"/>ex fide usque ad instans incarnationis 
-            <lb ed="#V"/>exclusive quia ipsa ante quodlibet instans incar<lb ed="#V"/>nationis 
-            scivit quod christus incarnaretur 
-            <lb ed="#V"/><choice><orig>ymo</orig><reg>immo</reg></choice> dicendum est quod ipsa sciebat instans 
-            <lb ed="#V"/>incarnationis modo nullus alius hoc 
-            <lb ed="#V"/>poterat scire nisi ex revelatione speciali a 
-            <lb ed="#V"/>deo data igitur etc</p>
-            
-            <p xml:id="l7-tpqpci"><g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio quod in instan<lb ed="#V"/>ti 
-            incarnationis assensus fidei respectu huius 
-            <lb ed="#V"/>de futuro christus incarnabitur <choice><orig>desiit</orig><reg>desivit</reg></choice> esse 
-            <lb ed="#V"/>primo quia in illo instanti non fuit 
-            <lb ed="#V"/>et ante quodlibet instans ante illud fuit quia 
-            <lb ed="#V"/>si in illo fuisset iam fuisset falsus 
-            <lb ed="#V"/>et sic non fuisset assensus illius assensus de futuro 
-            <lb ed="#V"/>christus incarnabitur et primum esse illius 
-            <lb ed="#V"/>assensus de praesenti christus incarnatur</p>
-            
-            <p xml:id="l7-apevie"><g ref="#dbslash"/>alia<note place="margin" type="marginalNote">alia conclusio</note> propositio 
-            <lb ed="#V"/>quod assensus ille fidei respectu huius de praesenti christus 
-            <lb ed="#V"/>incarnatur in <name>virgine gloriosa</name> solum reman<lb ed="#V"/>sit 
-            per instans quia in illo instanti fuit 
-            <lb ed="#V"/>verus et numquam ante vel post etc</p>
-            
-            <p xml:id="l7-ehhppi"><g ref="#dot"/>ex<note place="margin" type="marginalNote">corollarium</note> 
-            <lb ed="#V"/>quo sequitur corollariae quod possibile est quod aliqua 
-            <lb ed="#V"/>res solum duret per instans</p>
-            
-            <p xml:id="l7-suqedp"><g ref="#dot"/>sequitur ulterius 
-            <lb ed="#V"/>quod est dabile ultimum instans rei per<lb ed="#V"/>manentis 
-            in esse</p>
-            
-            <p xml:id="l7-apipci"><g ref="#dbslash"/>alia<note place="margin" type="marginalNote">alia conclusio</note> propositio in eodem 
-            <lb ed="#V"/>instanti in quo incepit esse assensus fidei respectu 
-            <cb ed="V" n="15rb"/><lb ed="#V"/>huius de praesenti christus incarnatur in 
-            <lb ed="#V"/>eodem instanti incepit esse assensus fidei respectu huius 
-            <lb ed="#V"/>de praeterito christus incarnabatur</p>
-            
-            <p xml:id="l7-apeiii">alia<note place="margin" type="marginalNote">alia conclusio</note> propositio 
-            <lb ed="#V"/>est quod in eodem instanti inceperunt esse duo 
-            <lb ed="#V"/>assensus fidei in <corr><del rend="strikethrough">ea</del></corr> <name>virgine gloriosa</name> et 
-            <lb ed="#V"/>desierunt esse duo <sic>duo</sic> assensus fidei in 
-            <lb ed="#V"/>ea et tamen non fuerunt ibidem nisi duo 
-            <lb ed="#V"/>assensus fidei scilicet in instanti incarnationis quia ibi 
-            <lb ed="#V"/>duo assensus desierunt esse patet quia assensus 
-            <lb ed="#V"/>ille qui erat respectu huius futuri christus incar<lb ed="#V"/>nabitur 
-            in illo instanti <choice><orig>desiit</orig><reg>desivit</reg></choice> esse quia in illo 
-            <lb ed="#V"/>instanti fuit et in nullo post sed quod in eodem instanti 
-            <lb ed="#V"/>inceperunt esse duo assensus patet supponendo quod in 
-            <lb ed="#V"/>toto tempore post instans incarnationis <choice><orig>assentiit</orig><reg>assensit</reg></choice> 
-            <lb ed="#V"/>isti christus incarnabatur quia supponitur pro nunc 
-            <lb ed="#V"/>et alias probabitur quod possibile est quod aliqua res 
-            <lb ed="#V"/>quae tota simul producitur sic producatur 
-            <lb ed="#V"/>quod detur eius ultimum non esse et non 
-            <lb ed="#V"/>primum sicut si deus immediate post hoc crearet 
-            <lb ed="#V"/>unum angelum tunc quod in illo instanti incepit 
-            <lb ed="#V"/>esse assensus huius de praeterito christus incarna<lb ed="#V"/>batur 
-            quia in illo non fuit et immediate 
-            <lb ed="#V"/>post hoc fuit ergo in illo incepit esse 
-            <lb ed="#V"/>assensus etc proportionaliter probatur quod incepit 
-            <lb ed="#V"/>esse assensus de praesenti respectu huius christus in<lb ed="#V"/>carnatur</p>
-            
-            <p xml:id="l7-suqivi">similis quantum ad obiectum si fuisset 
-            <lb ed="#V"/>in alio quam in <name>virgine gloriosa</name> fuisset 
-            <lb ed="#V"/>non meritorius quia in illo tempore fuis<lb ed="#V"/>set 
-            praesumptiose in quocumque tempore sive 
-            <lb ed="#V"/>in tempore incarnationis sive ante sive 
-            <lb ed="#V"/>post quia semper habebat dubitare utrum christus 
-            <lb ed="#V"/>incarnabatur vel non quia non poterat 
-            <lb ed="#V"/>sciri ex scripturis tempus adaequatum in<lb ed="#V"/>carnationis 
-            christi ideo non debet <choice><orig>cathegorice</orig><reg>categorice</reg></choice> 
-            <lb ed="#V"/>huic assentire christus incarnatur sed disiunctive 
-            <lb ed="#V"/>sic christus incarnatur vel est incarnatus vel 
-            <lb ed="#V"/>incarnabitur</p>
-
-            <p xml:id="l7-suqead">Sequitur ulterius quanto fuerunt 
-            <lb ed="#V"/>magis docti iudaei ante adventum christi 
-            <cb ed="#V" n="15va"/><lb ed="#V"/>diutius duravit in eis assensus huius de fu<lb ed="#V"/>turo 
-            christus incarnabitur modo quanto plus 
-            <lb ed="#V"/>erant elevantiores tanto plus poterant dis<lb ed="#V"/>tinguere 
-            de tempore adventus christi ergo etc et 
-            <lb ed="#V"/>ideo in aliquibus aliquid fuisset meritorium 
-            <lb ed="#V"/>quod christus incarnabitur et in aliis non <g ref="#dot"/>ex 
-            <lb ed="#V"/>quo sequitur aliquid incepit esse articulus 
-            <lb ed="#V"/>uni quod non incepit esse articulus alteri 
-            <lb ed="#V"/>et sic incepit esse articulus simplicibus quod non 
-            <lb ed="#V"/>incepit esse articulus doctoribus</p>
-            
-            <p xml:id="l7-usqoga"><g ref="#dot"/>Ulterius sequitur 
-            <lb ed="#V"/>quod ex solo lapsu temporis aliqua propositio 
-            <lb ed="#V"/>desivit esse articulus fidei et aliqua incepit 
-            <lb ed="#V"/>esse articulus fidei etc <g ref="#dot"/>et ex dictis patet 
-            <lb ed="#V"/>quomodo respondendum est ad rationem secundum opinionem <name>guillelmi 
-            <lb ed="#V"/>altissiodorensis</name>.</p>
-            
+            <head>
+              <supplied>Prima responsio possibilis: 
+                responsio Guillelmi Altissiodorensis</supplied>
+            </head>
+            <p xml:id="l7-gaapap">
+              <name>Guillelmus<note place="margin" type="marginalNote">G. P.</note> 
+              <lb ed="#V"/>parisiensis</name> ad hoc dat unam <corr xml:id="l7-Cuncore"><del rend="strikethrough">conclusionem</del></corr> 
+              <lb ed="#V"/>responsionem quam recitabo et postea dicam 
+              <lb ed="#V"/>alias responsiones <g ref="#dot"/>unde dicit sic quod ante ad<lb ed="#V"/>ventum 
+              christi iudaei et praecipue praelati per 
+              <lb ed="#V"/>scripturas et prophetes poterant scire adven<lb ed="#V"/>tum 
+              salvatoris saltem satis proprie et ista 
+              <cb ed="#V" n="15ra"/><lb ed="#V"/>Responsio fuit alias declarata in praecedentibus et 
+              <lb ed="#V"/>credo quod illa sit satis probabilis pro intellectu 
+              <lb ed="#V"/>eius solutionis <g ref="#dot"/> ponit aliquas propositiones
+            </p>
+            <p xml:id="l7-peqces">
+              <g ref="#dbslash"/>prima<note place="margin" type="marginalNote">prima conclusio</note> 
+              <lb ed="#V"/>est quod quanto iudaei ante christi adventum 
+              <lb ed="#V"/>erant simplices tanto <choice><orig>cicius</orig><reg>citius</reg></choice> desinit 
+              <lb ed="#V"/>esse in eis assensus fidei huius christus incar<lb ed="#V"/>nabitur 
+              quia quanto erant simpliciores 
+              <lb ed="#V"/>tanto minus poterant discutere et scire 
+              <lb ed="#V"/>de adventu christi <unclear cert="medium">temporaliter</unclear> et <choice><orig>eciam</orig><reg>etiam</reg></choice> ad pau<lb ed="#V"/>ciora 
+              credere tenebantur <g ref="#slash"/><choice><orig>2o</orig><reg>Secundo</reg></choice><note place="margin" type="marginalNote">secunda conclusio</note> sequitur 
+              <lb ed="#V"/>quod <choice><orig>cicius</orig><reg>citius</reg></choice> obligabantur simpliciores  
+              <lb ed="#V"/>ad credendum illud disiunctum in toto tempore 
+              <lb ed="#V"/>in quo poterant sufficienter distinguere 
+              <lb ed="#V"/>de adventu christi ex scriptura
+            </p>
+            <p xml:id="l7-sppadd">
+              <g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio 
+              <lb ed="#V"/>probabilis teneo quod in sola <name>virgine maria</name> fuit 
+              <lb ed="#V"/>iste assensus continuatus christus incarnabitur causatus 
+              <lb ed="#V"/>ex fide usque ad instans incarnationis 
+              <lb ed="#V"/>exclusive quia ipsa ante quodlibet instans incar<lb ed="#V"/>nationis 
+              scivit quod christus incarnaretur 
+              <lb ed="#V"/><choice><orig>ymo</orig><reg>immo</reg></choice> dicendum est quod ipsa sciebat instans 
+              <lb ed="#V"/>incarnationis modo nullus alius hoc 
+              <lb ed="#V"/>poterat scire nisi ex revelatione speciali a 
+              <lb ed="#V"/>deo data igitur etc
+            </p>
+            <p xml:id="l7-tpqpci">
+              <g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio quod in instan<lb ed="#V"/>ti 
+              incarnationis assensus fidei respectu huius 
+              <lb ed="#V"/>de futuro christus incarnabitur <choice><orig>desiit</orig><reg>desivit</reg></choice> esse 
+              <lb ed="#V"/>primo quia in illo instanti non fuit 
+              <lb ed="#V"/>et ante quodlibet instans ante illud fuit quia 
+              <lb ed="#V"/>si in illo fuisset iam fuisset falsus 
+              <lb ed="#V"/>et sic non fuisset assensus illius assensus de futuro 
+              <lb ed="#V"/>christus incarnabitur et primum esse illius 
+              <lb ed="#V"/>assensus de praesenti christus incarnatur
+            </p>
+            <p xml:id="l7-apevie">
+              <g ref="#dbslash"/>alia<note place="margin" type="marginalNote">alia conclusio</note> propositio 
+              <lb ed="#V"/>quod assensus ille fidei respectu huius de praesenti christus 
+              <lb ed="#V"/>incarnatur in <name>virgine gloriosa</name> solum reman<lb ed="#V"/>sit 
+              per instans quia in illo instanti fuit 
+              <lb ed="#V"/>verus et numquam ante vel post etc
+            </p>
+            <p xml:id="l7-ehhppi">
+              <g ref="#dot"/>ex<note place="margin" type="marginalNote">corollarium</note> 
+              <lb ed="#V"/>quo sequitur corollariae quod possibile est quod aliqua 
+              <lb ed="#V"/>res solum duret per instans
+            </p>
+            <p xml:id="l7-suqedp">
+              <g ref="#dot"/>sequitur ulterius 
+              <lb ed="#V"/>quod est dabile ultimum instans rei per<lb ed="#V"/>manentis 
+              in esse
+            </p>
+            <p xml:id="l7-apipci">
+              <g ref="#dbslash"/>alia<note place="margin" type="marginalNote">alia conclusio</note> propositio in eodem 
+              <lb ed="#V"/>instanti in quo incepit esse assensus fidei respectu 
+              <cb ed="V" n="15rb"/><lb ed="#V"/>huius de praesenti christus incarnatur in 
+              <lb ed="#V"/>eodem instanti incepit esse assensus fidei respectu huius 
+              <lb ed="#V"/>de praeterito christus incarnabatur
+            </p>
+            <p xml:id="l7-apeiii">
+              alia
+              <note place="margin" type="marginal-note">alia conclusio</note> 
+              propositio 
+              <lb ed="#V"/>est quod in eodem instanti inceperunt esse duo 
+              <lb ed="#V"/>assensus fidei in <corr><del rend="strikethrough">ea</del></corr> <name>virgine gloriosa</name> et 
+              <lb ed="#V"/>desierunt esse duo <sic>duo</sic> assensus fidei in 
+              <lb ed="#V"/>ea et tamen non fuerunt ibidem nisi duo 
+              <lb ed="#V"/>assensus fidei scilicet in instanti incarnationis quia ibi 
+              <lb ed="#V"/>duo assensus desierunt esse patet quia assensus 
+              <lb ed="#V"/>ille qui erat respectu huius futuri christus incar<lb ed="#V"/>nabitur 
+              in illo instanti <choice><orig>desiit</orig><reg>desivit</reg></choice> esse quia in illo 
+              <lb ed="#V"/>instanti fuit et in nullo post sed quod in eodem instanti 
+              <lb ed="#V"/>inceperunt esse duo assensus patet supponendo quod in 
+              <lb ed="#V"/>toto tempore post instans incarnationis <choice><orig>assentiit</orig><reg>assensit</reg></choice> 
+              <lb ed="#V"/>isti christus incarnabatur quia supponitur pro nunc 
+              <lb ed="#V"/>et alias probabitur quod possibile est quod aliqua res 
+              <lb ed="#V"/>quae tota simul producitur sic producatur 
+              <lb ed="#V"/>quod detur eius ultimum non esse et non 
+              <lb ed="#V"/>primum sicut si deus immediate post hoc crearet 
+              <lb ed="#V"/>unum angelum tunc quod in illo instanti incepit 
+              <lb ed="#V"/>esse assensus huius de praeterito christus incarna<lb ed="#V"/>batur 
+              quia in illo non fuit et immediate 
+              <lb ed="#V"/>post hoc fuit ergo in illo incepit esse 
+              <lb ed="#V"/>assensus etc proportionaliter probatur quod incepit 
+              <lb ed="#V"/>esse assensus de praesenti respectu huius christus in<lb ed="#V"/>carnatur
+            </p>
+            <p xml:id="l7-suqivi">
+              similis quantum ad obiectum si fuisset 
+              <lb ed="#V"/>in alio quam in <name>virgine gloriosa</name> fuisset 
+              <lb ed="#V"/>non meritorius quia in illo tempore fuis<lb ed="#V"/>set 
+              praesumptiose in quocumque tempore sive 
+              <lb ed="#V"/>in tempore incarnationis sive ante sive 
+              <lb ed="#V"/>post quia semper habebat dubitare utrum christus 
+              <lb ed="#V"/>incarnabatur vel non quia non poterat 
+              <lb ed="#V"/>sciri ex scripturis tempus adaequatum in<lb ed="#V"/>carnationis 
+              christi ideo non debet <choice><orig>cathegorice</orig><reg>categorice</reg></choice> 
+              <lb ed="#V"/>huic assentire christus incarnatur sed disiunctive 
+              <lb ed="#V"/>sic christus incarnatur vel est incarnatus vel 
+              <lb ed="#V"/>incarnabitur
+            </p>
+            <p xml:id="l7-suqead">
+              Sequitur ulterius quanto fuerunt 
+              <lb ed="#V"/>magis docti iudaei ante adventum christi 
+              <cb ed="#V" n="15va"/><lb ed="#V"/>diutius duravit in eis assensus huius de fu<lb ed="#V"/>turo 
+              christus incarnabitur modo quanto plus 
+              <lb ed="#V"/>erant elevantiores tanto plus poterant dis<lb ed="#V"/>tinguere 
+              de tempore adventus christi ergo etc et 
+              <lb ed="#V"/>ideo in aliquibus aliquid fuisset meritorium 
+              <lb ed="#V"/>quod christus incarnabitur et in aliis non <g ref="#dot"/>ex 
+              <lb ed="#V"/>quo sequitur aliquid incepit esse articulus 
+              <lb ed="#V"/>uni quod non incepit esse articulus alteri 
+              <lb ed="#V"/>et sic incepit esse articulus simplicibus quod non 
+              <lb ed="#V"/>incepit esse articulus doctoribus
+            </p>
+            <p xml:id="l7-usqoga">
+              <g ref="#dot"/>Ulterius sequitur 
+              <lb ed="#V"/>quod ex solo lapsu temporis aliqua propositio 
+              <lb ed="#V"/>desivit esse articulus fidei et aliqua incepit 
+              <lb ed="#V"/>esse articulus fidei etc <g ref="#dot"/>et ex dictis patet 
+              <lb ed="#V"/>quomodo respondendum est ad rationem secundum opinionem <name>guillelmi 
+              <lb ed="#V"/>altissiodorensis</name>
+            </p>
           </div>
           <div>
-            <head xml:id="l7-Hsrpsrp"><supplied>Secunda responsio possibilis</supplied></head>
-            
-            <p xml:id="l7-atppce"><g ref="#slash"/>aliter tamen potest responderi imaginando quod fi<lb ed="#V"/>des 
-            sit instrumentum spiritus sancti et quod sit in<lb ed="#V"/>strumentum 
-            causae liberae agentis in sua potesta<lb ed="#V"/>te 
-            omnimoda quo posito probabiliter potest dici 
-            <lb ed="#V"/>quod absque quacumque nova quacumque inquisitione habitus 
-            <lb ed="#V"/>fidei sufficiebat ita quod sine nova in<lb ed="#V"/>quisitione 
-            in toto tempore ante adventum 
-            <lb ed="#V"/>christi in simplicibus fides inclinabat ad 
-            <lb ed="#V"/>credendum quod christus incarnatur et post 
-            <lb ed="#V"/>instans incarnationis inclinabat ad creden<lb ed="#V"/>dum 
-            quod christus est incarnatus quia licet 
-            <lb ed="#V"/>simplices nescivissent posuisse istam 
-            <lb ed="#V"/>distinctionem et modo erat distincta quia sicut tactum est 
-            <lb ed="#V"/>hoc est multum difficile in simplicibus 
-            <lb ed="#V"/>habere suorum actuum cognitionem <choice><orig>ymo</orig><reg>immo</reg></choice> et 
-            <lb ed="#V"/>in prophetiis quia aliquando prophetae credebant 
-            <lb ed="#V"/>revelationes a spiritu sancto quas formabant 
-            <lb ed="#V"/>ex proprio capite quia non poterant ponere 
-            <lb ed="#V"/>differentiam inter revelationes sibi factas a spiritu 
-            <lb ed="#V"/>sancto et actus suos quos formabant ex proprio 
-            <lb ed="#V"/>capite ideo etc</p> 
+            <head xml:id="l7-Hsrpsrp">
+              <supplied>Secunda responsio possibilis</supplied>
+            </head>
+            <p xml:id="l7-atppce">
+              <g ref="#slash"/>aliter tamen potest responderi imaginando quod fi<lb ed="#V"/>des 
+              sit instrumentum spiritus sancti et quod sit in<lb ed="#V"/>strumentum 
+              causae liberae agentis in sua potesta<lb ed="#V"/>te 
+              omnimoda quo posito probabiliter potest dici 
+              <lb ed="#V"/>quod absque quacumque nova quacumque inquisitione habitus 
+              <lb ed="#V"/>fidei sufficiebat ita quod sine nova in<lb ed="#V"/>quisitione 
+              in toto tempore ante adventum 
+              <lb ed="#V"/>christi in simplicibus fides inclinabat ad 
+              <lb ed="#V"/>credendum quod christus incarnatur et post 
+              <lb ed="#V"/>instans incarnationis inclinabat ad creden<lb ed="#V"/>dum 
+              quod christus est incarnatus quia licet 
+              <lb ed="#V"/>simplices nescivissent posuisse istam 
+              <lb ed="#V"/>distinctionem et modo erat distincta quia sicut tactum est 
+              <lb ed="#V"/>hoc est multum difficile in simplicibus 
+              <lb ed="#V"/>habere suorum actuum cognitionem <choice><orig>ymo</orig><reg>immo</reg></choice> et 
+              <lb ed="#V"/>in prophetiis quia aliquando prophetae credebant 
+              <lb ed="#V"/>revelationes a spiritu sancto quas formabant 
+              <lb ed="#V"/>ex proprio capite quia non poterant ponere 
+              <lb ed="#V"/>differentiam inter revelationes sibi factas a spiritu 
+              <lb ed="#V"/>sancto et actus suos quos formabant ex proprio 
+              <lb ed="#V"/>capite ideo etc
+            </p> 
           </div>
           <div>
             <head xml:id="l7-Htrptrp"><supplied>Tertia responsio possibilis</supplied></head>
-            
-            <p xml:id="l7-aveiie">alia via et <choice><orig>3a</orig><reg>tertia</reg></choice> esset secundum 
-            <lb ed="#V"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> prius tactam <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> quod fidei non 
-            <lb ed="#V"/>possit subesse falsum etc ista responsio est bona 
-            <lb ed="#V"/>et sto in ea <choice><orig>ymaginando</orig><reg>imaginandum</reg></choice> est ergo quod fides sit 
-            <lb ed="#V"/>talis naturae et eius actus et habitus 
-            <lb ed="#V"/>quod subordinetur essentialiter divino iudicio ita 
-            <cb ed="#V" n="15vb"/><lb ed="#V"/>quod <choice><orig>sicud</orig><reg>sicut</reg></choice> impossibile esset ignem agere producendo 
-            <lb ed="#V"/>ignem quin in tali actione deus principaliter 
-            <lb ed="#V"/>concurreret ita <choice><orig>ymaginanda</orig><reg>imaginanda</reg></choice> est una essentialis habi<lb ed="#V"/>tudo 
-            causalitatis respectu iudicii divini et 
-            <lb ed="#V"/>ipsius fidei assensus quia fides nullo modo 
-            <lb ed="#V"/>posset esse assensus respectu alicuius quin deus respectu eiusdem 
-            <lb ed="#V"/>esset assensus ita quod <choice><orig>neccessario</orig><reg>necessario</reg></choice> sequitur conformitatem 
-            <lb ed="#V"/>divini iudicii et ideo <choice><orig>sicud</orig><reg>sicut</reg></choice> deus ante quodlibet 
-            <lb ed="#V"/>instans incarnationis christi assentiebat isti christus in<lb ed="#V"/>carnabitur 
-            nec poterat exire in actum 
-            <lb ed="#V"/>huiusmodi christus est incarnatus vel incarnatur 
-            <lb ed="#V"/>quia pro tunc deus non assentiebat illi ideo etc</p>
+            <p xml:id="l7-aveiie">
+              alia via et <choice><orig>3a</orig><reg>tertia</reg></choice> esset secundum 
+              <lb ed="#V"/><choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> prius tactam <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> quod fidei non 
+              <lb ed="#V"/>possit subesse falsum etc ista responsio est bona 
+              <lb ed="#V"/>et sto in ea <choice><orig>ymaginando</orig><reg>imaginandum</reg></choice> est ergo quod fides sit 
+              <lb ed="#V"/>talis naturae et eius actus et habitus 
+              <lb ed="#V"/>quod subordinetur essentialiter divino iudicio ita 
+              <cb ed="#V" n="15vb"/><lb ed="#V"/>quod <choice><orig>sicud</orig><reg>sicut</reg></choice> impossibile esset ignem agere producendo 
+              <lb ed="#V"/>ignem quin in tali actione deus principaliter 
+              <lb ed="#V"/>concurreret ita <choice><orig>ymaginanda</orig><reg>imaginanda</reg></choice> est una essentialis habi<lb ed="#V"/>tudo 
+              causalitatis respectu iudicii divini et 
+              <lb ed="#V"/>ipsius fidei assensus quia fides nullo modo 
+              <lb ed="#V"/>posset esse assensus respectu alicuius quin deus respectu eiusdem 
+              <lb ed="#V"/>esset assensus ita quod <choice><orig>neccessario</orig><reg>necessario</reg></choice> sequitur conformitatem 
+              <lb ed="#V"/>divini iudicii et ideo <choice><orig>sicud</orig><reg>sicut</reg></choice> deus ante quodlibet 
+              <lb ed="#V"/>instans incarnationis christi assentiebat isti christus in<lb ed="#V"/>carnabitur 
+              nec poterat exire in actum 
+              <lb ed="#V"/>huiusmodi christus est incarnatus vel incarnatur 
+              <lb ed="#V"/>quia pro tunc deus non assentiebat illi ideo etc
+            </p>
             <div>
-              <head xml:id="l7-Hoatatr"><supplied>Obiectio ad tertiam responsionem</supplied></head>
-              
-            <p xml:id="l7-eqpfee"><lb ed="#V"/>Ex quo patet quod si aliquis fuisset assensus 
-            <lb ed="#V"/>humanus causatus a proprio capite Sed tunc diceretur 
-            <lb ed="#V"/><unclear>continetur</unclear> ille assensus fidei qui ante incarnationem 
-            <lb ed="#V"/>erat respectu huius de futuro christus incarna<lb ed="#V"/>bitur 
-            usque ad instans incarnationis inclusive 
-            <lb ed="#V"/>tunc in illo instanti erit falsus ergo etc</p>
+              <head xml:id="l7-Hoatatr">
+                <supplied>Obiectio ad tertiam responsionem</supplied>
+              </head>
+              <p xml:id="l7-eqpfee">
+                <lb ed="#V"/>Ex quo patet quod si aliquis fuisset assensus 
+                <lb ed="#V"/>humanus causatus a proprio capite Sed tunc diceretur 
+                <lb ed="#V"/><unclear>continetur</unclear> ille assensus fidei qui ante incarnationem 
+                <lb ed="#V"/>erat respectu huius de futuro christus incarna<lb ed="#V"/>bitur 
+                usque ad instans incarnationis inclusive 
+                <lb ed="#V"/>tunc in illo instanti erit falsus ergo etc
+              </p>
             </div>
             <div>
-              <div>
-                <head xml:id="l7-Hraorao"><supplied>Responsio ad obiectionem</supplied></head>
-                
-                <p xml:id="l7-ddqdam">dicendum 
+              <head xml:id="l7-Hraorao">
+                <supplied>Responsio ad obiectionem</supplied>
+              </head>
+              <p xml:id="l7-ddqdam">dicendum 
                 <lb ed="#V"/>est duplico vel quia casus impossibilis vel quia 
                 <lb ed="#V"/>idem assensus qui prius erat assensus respectu huius 
                 <lb ed="#V"/>de futuro christus incarnabitur ante christi 
                 <lb ed="#V"/>incarnationem in instanti incarnationis ille 
                 <lb ed="#V"/>idem erit assensus huius christus incarnatur in instanti incarnationis 
                 <lb ed="#V"/>et cum utraque responsio sit sufficiens oportet earum 
-                <lb ed="#V"/>dare aliqua motiva</p>
-                
-                <p xml:id="l7-depnif"><g ref="#dot"/>dico ergo primo quod 
+                <lb ed="#V"/>dare aliqua motiva
+              </p>
+              <p xml:id="l7-depnif">
+                <g ref="#dot"/>dico ergo primo quod 
                 <lb ed="#V"/>huiusmodi assensus non potest conservari in esse assensus 
                 <lb ed="#V"/>quia motivitas fidei est una motivi<lb ed="#V"/>tas 
                 supernaturalis dirigens hominem in suum 
@@ -387,338 +430,376 @@
                 <lb ed="#V"/>non posset speciali modo concurrere ad decipiendum 
                 <lb ed="#V"/>aliquem tunc continuatio illius actus usque 
                 <lb ed="#V"/>ad instans incarnationis repugnat tam ipsi 
-                <lb ed="#V"/>deo quam ipsius fidei naturae</p>
-
-                <p xml:id="l7-unepig"><g ref="#dot"/>Unde<note place="margin" type="marginalNote">nota</note> notandum 
+                <lb ed="#V"/>deo quam ipsius fidei naturae
+              </p>
+              <p xml:id="l7-unepig">
+                <g ref="#dot"/>Unde<note place="margin" type="marginalNote">nota</note> notandum 
                 <lb ed="#V"/>est circa illud quod deus aliter concurrit respectu 
                 <lb ed="#V"/>bonorum et malorum quia respectu malorum 
                 <lb ed="#V"/>solum concurrit permissive excepta substantia actus 
-                <cb ed="#V" n="16rb"/><lb ed="#V"/>ad quam concurrit active <choice><orig>neccessario</orig><reg>necessario</reg></choice> quod nullus 
+                <cb ed="#V" n="16rb"/>
+                <lb ed="#V"/>ad quam concurrit active <choice><orig>neccessario</orig><reg>necessario</reg></choice> quod nullus 
                 <lb ed="#V"/>effectus potest produci nisi ipse principaliter 
                 <lb ed="#V"/>concurrat ad talis effectus productionem Sed 
                 <lb ed="#V"/>respectu bonorum concurrit effective et speciali modo 
-                <lb ed="#V"/>et non solum per influentiam generalem</p>
-                <div>
-                  <head xml:id="l7-Hoarrer"><supplied>Obiectio ad responsionem et responsio</supplied></head>
-
-                  <p xml:id="l7-esdadc"><lb ed="#V"/>et sic dicatur quod deus illam substantiam potest con<lb ed="#V"/>servare 
-                <g ref="#dot"/>respondeo dupliciter iterum primo quod 
-                <lb ed="#V"/>deus secundum influentiam conservativam fidei 
-                <lb ed="#V"/>quae sufficiebat ad incarnationem non 
-                <lb ed="#V"/>sufficit conservare huiusmodi assensum sive in 
-                <lb ed="#V"/>aere sive in quocumque alio loco sed si deus 
-                <lb ed="#V"/>conservaret illum assensum sicut concedit quod potest 
-                <lb ed="#V"/>conservare de sua potentia absoluta oporteret 
-                <lb ed="#V"/>quod esset per unam aliam specialem influentiam 
-                <lb ed="#V"/>et causa est nam ita reperitur in naturalibus 
-                <lb ed="#V"/>quod inter omnia natura maxime abhorret 
-                <lb ed="#V"/><choice><orig>occium</orig><reg>otium</reg></choice> sive non posse exire in actum 
-                <lb ed="#V"/>suum fidei debitum et ista est causa proprie 
-                <lb ed="#V"/>propter quam forma substantialis desinit esse in materia 
-                <lb ed="#V"/>quia quando qualitativae dispositiones sunt ita im<lb ed="#V"/>proportionatae 
-                quod non potest anima mediantibus 
-                <lb ed="#V"/>illis exire in operationes sibi debitas ne 
-                <lb ed="#V"/>sit <choice><orig>occium</orig><reg>otium</reg></choice> natura desinit informare 
-                <lb ed="#V"/>materiam modo si huiusmodi assensus remanet in 
-                <lb ed="#V"/>natura et non in esse assensus esset <choice><orig>octiosus</orig><reg>otiosus</reg></choice> 
-                <lb ed="#V"/>et sic a natura corrumperetur nisi per specia<lb ed="#V"/>lem 
-                <choice><orig>influenciam</orig><reg>influentiam</reg></choice> a deo conservaretur</p>
-
-                <p xml:id="l7-apdafe"><lb ed="#V"/><g ref="#slash"/>aliter potest dici quod sicut idem assensus qui est 
-                <lb ed="#V"/>respectu huius iudicium futurum erit potest esse 
-                <lb ed="#V"/>non assensus huius sed <sic>sed</sic> oppositi sicut dictum 
-                <lb ed="#V"/>est prius in alio casu ideo diceretur quod assensus 
-                <lb ed="#V"/>ille qui prius erat assensus respectu huius fu<lb ed="#V"/>turi 
-                christus incarnabitur in instanti incarna<lb ed="#V"/>tionis 
-                esset assensus respectu huius christus incarnatur 
-                <lb ed="#V"/>unde quia talis assensus fidei est supernaturalis 
-                <lb ed="#V"/>si sit mirabilis conditionis non est mirandum 
-                <lb ed="#V"/>si ei attribuamus aliqua quae non reperimus 
-                <lb ed="#V"/>in natura ideo non est inconveniens eodem modo 
-                <lb ed="#V"/>diceretur de omnibus revelationibus a spiritu sancto 
-                <cb ed="#V" n="16rb"/><lb ed="#V"/>et de omnibus prophetiis et de cognitionibus in 
-                <lb ed="#V"/>verbo et haec sufficiant pro solutione illius 
-                <lb ed="#V"/>argumenti de actus fidei continuatione etc</p>
-                </div>
-              </div>
+                <lb ed="#V"/>et non solum per influentiam generalem
+              </p>
               <div>
-                <head><supplied>Alia responsio ad obiectionem</supplied></head>
-
-              <p xml:id="l7-aunfci"><g ref="#dot"/>Ulterius 
-              <lb ed="#V"/>arguebatur nam ponamus quod <name ref="#Abraham">habraham</name> 
-              <lb ed="#V"/>crediderit quod christus incarnabitur <choice><orig>sicud</orig><reg>sicut</reg></choice> 
-              <lb ed="#V"/>ipsemet testatur etc <name ref="#WilliamOfAuxerre">Guillelmus altissiodorensis</name> dat 
-              <lb ed="#V"/>unam responsionem quam tetigi ab principio 
-              <lb ed="#V"/>aliqui enim dicunt quod si <name ref="#Adam">adam</name> assensit quod <choice><orig>neccessem</orig><reg>necessem</reg></choice> 
-              <lb ed="#V"/>est ipsum assensisse tamen concursus fidei respectu huiusmodi 
-              <lb ed="#V"/>assensus semper est contingens ita quod si non eveniat 
-              <lb ed="#V"/>numquam concurrit ad huiusmodi assensus productionem 
-              <lb ed="#V"/>Sed huiusmodi responsio non est sufficiens ut videtur 
-              <lb ed="#V"/>quia sicut res posita fuit esse sic fides con<lb ed="#V"/>currit 
-              ad eius positionem in esse ideo respondet a<lb ed="#V"/>liter 
-              et dicit quod habitus fidei habet <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> habi<lb ed="#V"/>tudinem 
-              a sua causa ideo si actus fidei quo 
-              <lb ed="#V"/>ad suum esse <choice><orig>neccesse</orig><reg>necesse</reg></choice> sic fuisse si <name ref="#Abraham">abraham</name> 
-              <lb ed="#V"/>crediderit mediante actu fidei christum incarnan<lb ed="#V"/>dum</p>
-                
-              <p xml:id="l7-qtacsd">quantum tamen ad illud quod significat non 
-              <lb ed="#V"/>dependet ab obiecto in sic significando subdit 
-              <lb ed="#V"/>fides tam quo ad actum quam quo ad habi<lb ed="#V"/>tum 
-              quod emanat a luce prima ideo sequitur 
-              <lb ed="#V"/>primam lucem quia illa lux potest numquam fuis<lb ed="#V"/>se 
-              assensus huius christus incarnabitur si 
-              <lb ed="#V"/>non incarnetur ita erit de fide et sic 
-              <lb ed="#V"/>patet quid de illo casu sit dicendum</p>
-                
+                <head xml:id="l7-Hoarrer">
+                  <supplied>Obiectio ad responsionem et responsio</supplied>
+                </head>
+                <p xml:id="l7-esdadc">
+                  <lb ed="#V"/>et sic dicatur quod deus illam substantiam potest con<lb ed="#V"/>servare 
+                  <g ref="#dot"/>respondeo dupliciter iterum primo quod 
+                  <lb ed="#V"/>deus secundum influentiam conservativam fidei 
+                  <lb ed="#V"/>quae sufficiebat ad incarnationem non 
+                  <lb ed="#V"/>sufficit conservare huiusmodi assensum sive in 
+                  <lb ed="#V"/>aere sive in quocumque alio loco sed si deus 
+                  <lb ed="#V"/>conservaret illum assensum sicut concedit quod potest 
+                  <lb ed="#V"/>conservare de sua potentia absoluta oporteret 
+                  <lb ed="#V"/>quod esset per unam aliam specialem influentiam 
+                  <lb ed="#V"/>et causa est nam ita reperitur in naturalibus 
+                  <lb ed="#V"/>quod inter omnia natura maxime abhorret 
+                  <lb ed="#V"/><choice><orig>occium</orig><reg>otium</reg></choice> sive non posse exire in actum 
+                  <lb ed="#V"/>suum fidei debitum et ista est causa proprie 
+                  <lb ed="#V"/>propter quam forma substantialis desinit esse in materia 
+                  <lb ed="#V"/>quia quando qualitativae dispositiones sunt ita im<lb ed="#V"/>proportionatae 
+                  quod non potest anima mediantibus 
+                  <lb ed="#V"/>illis exire in operationes sibi debitas ne 
+                  <lb ed="#V"/>sit <choice><orig>occium</orig><reg>otium</reg></choice> natura desinit informare 
+                  <lb ed="#V"/>materiam modo si huiusmodi assensus remanet in 
+                  <lb ed="#V"/>natura et non in esse assensus esset <choice><orig>octiosus</orig><reg>otiosus</reg></choice> 
+                  <lb ed="#V"/>et sic a natura corrumperetur nisi per specia<lb ed="#V"/>lem 
+                  <choice><orig>influenciam</orig><reg>influentiam</reg></choice> a deo conservaretur
+                </p>
+                <p xml:id="l7-apdafe">
+                  <lb ed="#V"/><g ref="#slash"/>aliter potest dici quod sicut idem assensus qui est 
+                  <lb ed="#V"/>respectu huius iudicium futurum erit potest esse 
+                  <lb ed="#V"/>non assensus huius sed <sic>sed</sic> oppositi sicut dictum 
+                  <lb ed="#V"/>est prius in alio casu ideo diceretur quod assensus 
+                  <lb ed="#V"/>ille qui prius erat assensus respectu huius fu<lb ed="#V"/>turi 
+                  christus incarnabitur in instanti incarna<lb ed="#V"/>tionis 
+                  esset assensus respectu huius christus incarnatur 
+                  <lb ed="#V"/>unde quia talis assensus fidei est supernaturalis 
+                  <lb ed="#V"/>si sit mirabilis conditionis non est mirandum 
+                  <lb ed="#V"/>si ei attribuamus aliqua quae non reperimus 
+                  <lb ed="#V"/>in natura ideo non est inconveniens eodem modo 
+                  <lb ed="#V"/>diceretur de omnibus revelationibus a spiritu sancto 
+                  <cb ed="#V" n="16rb"/><lb ed="#V"/>et de omnibus prophetiis et de cognitionibus in 
+                  <lb ed="#V"/>verbo et haec sufficiant pro solutione illius 
+                  <lb ed="#V"/>argumenti de actus fidei continuatione etc
+                </p>
               </div>
             </div>
             <div>
-              <head xml:id="l7-Hsoainc"><supplied>Secunda obiectio ad tertiam responsionem: utrum aliqui damnabitur qui, ante incarnationem,
-        non credidit?</supplied></head>
-
-              <p xml:id="l7-aceeud"><lb ed="#V"/>alius casus ponebatur quod tempore illo 
-              <lb ed="#V"/>quo <name ref="#Abraham">habraham</name> credidit christum incarnan<lb ed="#V"/>dum 
-              esse ex fide fuisset unus alius qui 
-              <lb ed="#V"/>credidisset oppositum et decesserit cum <name ref="#Abraham">abra<lb ed="#V"/>ham</name> 
-              et in nullo alio defecisset utrum 
-              <lb ed="#V"/>ille qui assentiebat oppositum fidei damp<lb ed="#V"/>nabitur 
-              <g ref="#slash"/>ponitur ulterius sicut positum est 
-              <lb ed="#V"/>prius quod christus non incarnetur quia aliter 
-              <lb ed="#V"/>poterat redimere genus humanum etc 
-              <lb ed="#V"/>quia illud est contingens quaeritur tunc utrum<note place="margin" type="marginalNote">dubium</note> damp<lb ed="#V"/>nabitur</p>
-     
-              <p xml:id="l7-vqncee"><g ref="#dot"/>videtur quod non, quia cre<lb ed="#V"/>didit 
+              <head>
+                <supplied>Alia responsio ad obiectionem</supplied>
+              </head>
+              <p xml:id="l7-aunfci">
+                <g ref="#dot"/>Ulterius 
+                <lb ed="#V"/>arguebatur nam ponamus quod <name ref="#Abraham">habraham</name> 
+                <lb ed="#V"/>crediderit quod christus incarnabitur <choice><orig>sicud</orig><reg>sicut</reg></choice> 
+                <lb ed="#V"/>ipsemet testatur etc <name ref="#WilliamOfAuxerre">Guillelmus altissiodorensis</name> dat 
+                <lb ed="#V"/>unam responsionem quam tetigi ab principio 
+                <lb ed="#V"/>aliqui enim dicunt quod si <name ref="#Adam">adam</name> assensit quod <choice><orig>neccessem</orig><reg>necessem</reg></choice> 
+                <lb ed="#V"/>est ipsum assensisse tamen concursus fidei respectu huiusmodi 
+                <lb ed="#V"/>assensus semper est contingens ita quod si non eveniat 
+                <lb ed="#V"/>numquam concurrit ad huiusmodi assensus productionem 
+                <lb ed="#V"/>Sed huiusmodi responsio non est sufficiens ut videtur 
+                <lb ed="#V"/>quia sicut res posita fuit esse sic fides con<lb ed="#V"/>currit 
+                ad eius positionem in esse ideo respondet a<lb ed="#V"/>liter 
+                et dicit quod habitus fidei habet <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> habi<lb ed="#V"/>tudinem 
+                a sua causa ideo si actus fidei quo 
+                <lb ed="#V"/>ad suum esse <choice><orig>neccesse</orig><reg>necesse</reg></choice> sic fuisse si <name ref="#Abraham">abraham</name> 
+                <lb ed="#V"/>crediderit mediante actu fidei christum incarnan<lb ed="#V"/>dum
+              </p>
+              <p xml:id="l7-qtacsd">
+                quantum tamen ad illud quod significat non 
+                <lb ed="#V"/>dependet ab obiecto in sic significando subdit 
+                <lb ed="#V"/>fides tam quo ad actum quam quo ad habi<lb ed="#V"/>tum 
+                quod emanat a luce prima ideo sequitur 
+                <lb ed="#V"/>primam lucem quia illa lux potest numquam fuis<lb ed="#V"/>se 
+                assensus huius christus incarnabitur si 
+                <lb ed="#V"/>non incarnetur ita erit de fide et sic 
+                <lb ed="#V"/>patet quid de illo casu sit dicendum
+              </p>
+            </div>
+            <div>
+              <head xml:id="l7-Hsoainc">
+                <supplied>Secunda obiectio ad tertiam responsionem: 
+                  utrum aliqui damnabitur qui, ante incarnationem, non credidit?
+                </supplied>
+              </head>
+              <p xml:id="l7-aceeud">
+                <lb ed="#V"/>alius casus ponebatur quod tempore illo 
+                <lb ed="#V"/>quo <name ref="#Abraham">habraham</name> credidit christum incarnan<lb ed="#V"/>dum 
+                esse ex fide fuisset unus alius qui 
+                <lb ed="#V"/>credidisset oppositum et decesserit cum <name ref="#Abraham">abra<lb ed="#V"/>ham</name> 
+                et in nullo alio defecisset utrum 
+                <lb ed="#V"/>ille qui assentiebat oppositum fidei damp<lb ed="#V"/>nabitur 
+                <g ref="#slash"/>ponitur ulterius sicut positum est 
+                <lb ed="#V"/>prius quod christus non incarnetur quia aliter 
+                <lb ed="#V"/>poterat redimere genus humanum etc 
+                <lb ed="#V"/>quia illud est contingens quaeritur tunc utrum<note place="margin" type="marginalNote">dubium</note> damp<lb ed="#V"/>nabitur
+              </p>
+              <p xml:id="l7-vqncee">
+                <g ref="#dot"/>videtur quod non, quia cre<lb ed="#V"/>didit 
                 veritati et in nullo alio defecit 
-                <cb ed="#V" n="16va"/><lb ed="#V"/>per casum ergo etc</p>
-              
+                <cb ed="#V" n="16va"/>
+                <lb ed="#V"/>per casum ergo etc
+              </p>
               <div>
-              
-                <head xml:id="l7-Hrasaso"><supplied>Responsio ad secundam obiectionem</supplied></head>
-                
-                <p xml:id="l7-epresi">ego primo recitabo verba 
-                <lb ed="#V"/><name>guillelmi altissiodorensis</name> et postea dicam illud quod 
-                <lb ed="#V"/>mihi occurrit ipse enim respondet quod in illo casu 
-                <lb ed="#V"/>iste qui credit quod christus non incarnabitur 
-                <lb ed="#V"/>licet crediderit veritati <choice><orig>nichilominus</orig><reg>nihilominus</reg></choice> damp<lb ed="#V"/>nabitur 
-                <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> fundatur in hoc iu<lb ed="#V"/>dicio 
-                meo quia de hiis quae non sunt 
-                <lb ed="#V"/>clare determinata per ecclesiam aliquid sit simpliciter 
-                <lb ed="#V"/>asserere dato quod esset verum est peccatum prae<lb ed="#V"/>sumptionis 
-                unde inducit ad hoc <ref><name ref="#Paul">apostolum</name> 
-                <lb ed="#V"/><title ref="#IIcor">2o ad Corinthios</title> capitulo primo</ref> et ponit quemdam or<lb ed="#V"/>dinem 
-                et dicit quod spiritualis homo omnia iu<lb ed="#V"/>dicat 
-                carnalis autem iudicatur ab 
-                <lb ed="#V"/>homine <g ref="#dot"/>unde <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod homo spiritualis qui 
-                <lb ed="#V"/>per caritatem et fidem est elevatus semper 
-                <lb ed="#V"/>iudicat sed carnalis homo quia non <unclear>ini<lb ed="#V"/>tatur</unclear> 
-                deum et caritatem ipsum elevantem 
-                <lb ed="#V"/>non semper bene iudicat modo quia iudicium 
-                <lb ed="#V"/>illud quo quis credebat oppositum illius 
-                <lb ed="#V"/>quod <name>habraham</name> credidit ex fide non erat 
-                <lb ed="#V"/>ex fide sed fuit praesumptiosum ideo propter illum 
-                <lb ed="#V"/>fuit dampnatus, nec illud iudicium erat 
-                <lb ed="#V"/>ex fide nec contra fidem <choice><orig>ymo</orig><reg>immo</reg></choice> erat sibi impertinens</p>
-
-                <p xml:id="l7-veqdgb"><lb ed="#V"/>verum est quod ego ibi notavi aliqua ad 
-                <lb ed="#V"/>declarationem istius materiae et breviter ut 
-                <lb ed="#V"/>casus habeatur clarius ponatur respectu futuri 
-                <lb ed="#V"/>iudicii et quod deus latanter ordinet quod 
-                <lb ed="#V"/>iudicium futurum non erit in isto casu 
-                <lb ed="#V"/>ipse verum credit et tamen ipse peccat quia 
-                <lb ed="#V"/>licet futurum iudicium non erit tamen ex communiter 
-                <lb ed="#V"/>apparentibus quibus <unclear>catholicus</unclear> iudicaret quod <choice><orig>ymmo</orig><reg>immo</reg></choice> 
-                <lb ed="#V"/>iudicium futurum erit et sic licet iudicet veri<lb ed="#V"/>tatem 
-                tamen ipse contempnit scripturam et 
-                <lb ed="#V"/>fidem licet ergo deus revelaverit nobis 
-                <lb ed="#V"/>expresse quod iudicium futurum non erit sed 
-                <lb ed="#V"/>iste bene se resolvat iudicabit se credere 
-                <lb ed="#V"/>contra fidem et est sicut ille qui facit contra 
-                <lb ed="#V"/>conscientiam et peccat licet bene agat et a<lb ed="#V"/>gat 
-                opera de genere bonum</p>
-
-                <p xml:id="l7-idtoac"><g ref="#dot"/>Item de tam 
-                <lb ed="#V"/>arduis immediate ad salutem hominis tangentibus 
-                <cb ed="#V" n="16vb"/><lb ed="#V"/>quorum veritas non potest haberi sine revela<lb ed="#V"/>tione 
-                spiritus sancti simpliciter credere est peccatum 
-                <lb ed="#V"/>praesumptionis ex quibus patet quod si in talibus 
-                <lb ed="#V"/>liceat habere aliquod iudicium magis liceret 
-                <lb ed="#V"/>habere falsum quam bonum unde in casu praedicto ille 
-                <lb ed="#V"/>qui crederet iudicium futurum fore crederet falsum 
-                <lb ed="#V"/>non tamen peccaret tantum quantum ille qui creden<lb ed="#V"/>do 
-                oppositum crederet veritatem quia ille qui 
-                <lb ed="#V"/>crederet falsum haberet coniecturationem probabilem 
-                <lb ed="#V"/>ex sacra scriptura quam alter non haberet 
-                <lb ed="#V"/>ita quod credulitas falsitatis in illo casu 
-                <lb ed="#V"/>non esset multum periculosa nisi dicatur 
-                <lb ed="#V"/>quod talis obligaretur ad contrarium</p>
-
-                <p xml:id="l7-tdqihs"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur 
-                <lb ed="#V"/>quod in illo casu utraque pars contradictionis in materia 
-                <lb ed="#V"/>fidei esset illicita iudicio humano simpliciter</p>
-
-                <p xml:id="l7-sapaoa"><lb ed="#V"/>Sequitur alia propositio quod respectu propositionis credibilis 
-                <lb ed="#V"/>viator obligaretur habere assensum fidei 
-                <lb ed="#V"/>et tamen non liceret eidem peccato praesumptionis 
-                <lb ed="#V"/>et si assentiret falso peccaret etiam quia 
-                <lb ed="#V"/>obligaretur ad oppositum assentire</p>
-                
-                <p xml:id="l7-eqseih">ex quo sequitur 
-                <lb ed="#V"/>periculosum esse formales assensus per rationes proba<lb ed="#V"/>biles 
-                vel <choice><orig>apparencias</orig><reg>apparentias</reg></choice> naturales circa 
-                <lb ed="#V"/>huiusmodi articulum <choice><orig>ymo</orig><reg>immo</reg></choice> esset peccatum ubi 
-                <lb ed="#V"/>obligaretur ad alteram partem contradictionis 
-                <lb ed="#V"/>quia si veritati assentiat assentit contra fidem 
-                <lb ed="#V"/>ideo circa materiam fidei et praecipue 
-                <lb ed="#V"/>de futuris contingentibus cum magna sollicitudine ex<lb ed="#V"/>aminanda 
-                est intelligentia humana</p>
-                
-                <p xml:id="l7-suqmpc">Sequitur ulterius 
-                <lb ed="#V"/>quod in materia fidei debet esse mirabilis 
-                <lb ed="#V"/><choice><orig>solicitudo</orig><reg>sollicitudo</reg></choice> quia timor domini debet esse <choice><orig>inicium</orig><reg>initium</reg></choice> sapientiae 
-                <lb ed="#V"/><g ref="#dot"/>Unde notandum est propter positiones casus in 
-                <lb ed="#V"/>materia fidei non diversificant ma<lb ed="#V"/>teriam 
-                <lb ed="#V"/>fidei nec <choice><orig>agravant</orig><reg>aggravant</reg></choice> nec 
-                <lb ed="#V"/>minuunt peccatum credentis</p>
-                
-              <p xml:id="l7-suqnsa">sequitur 
-              <lb ed="#V"/>ulterius quod bene staret assensus fidei esse 
-              <lb ed="#V"/>respectu alicuius qualem assensum non posset 
-              <lb ed="#V"/>homo iudicare se habere ita quod talis assenti<lb ed="#V"/>ret 
-              aliqualiter ex fide qualiter nes<lb ed="#V"/>ciet 
-              se assentire</p>
+                <head xml:id="l7-Hrasaso">
+                  <supplied>Responsio ad secundam obiectionem</supplied>
+                </head>
+                <p xml:id="l7-epresi">
+                  ego primo recitabo verba 
+                  <lb ed="#V"/><name>guillelmi altissiodorensis</name> et postea dicam illud quod 
+                  <lb ed="#V"/>mihi occurrit ipse enim respondet quod in illo casu 
+                  <lb ed="#V"/>iste qui credit quod christus non incarnabitur 
+                  <lb ed="#V"/>licet crediderit veritati <choice><orig>nichilominus</orig><reg>nihilominus</reg></choice> damp<lb ed="#V"/>nabitur 
+                  <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> fundatur in hoc iu<lb ed="#V"/>dicio 
+                  meo quia de hiis quae non sunt 
+                  <lb ed="#V"/>clare determinata per ecclesiam aliquid sit simpliciter 
+                  <lb ed="#V"/>asserere dato quod esset verum est peccatum prae<lb ed="#V"/>sumptionis 
+                  unde inducit ad hoc <ref><name ref="#Paul">apostolum</name> 
+                  <lb ed="#V"/><title ref="#IIcor">2o ad Corinthios</title> capitulo primo</ref> et ponit quemdam or<lb ed="#V"/>dinem 
+                  et dicit quod spiritualis homo omnia iu<lb ed="#V"/>dicat 
+                  carnalis autem iudicatur ab 
+                  <lb ed="#V"/>homine <g ref="#dot"/>unde <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod homo spiritualis qui 
+                  <lb ed="#V"/>per caritatem et fidem est elevatus semper 
+                  <lb ed="#V"/>iudicat sed carnalis homo quia non <unclear>ini<lb ed="#V"/>tatur</unclear> 
+                  deum et caritatem ipsum elevantem 
+                  <lb ed="#V"/>non semper bene iudicat modo quia iudicium 
+                  <lb ed="#V"/>illud quo quis credebat oppositum illius 
+                  <lb ed="#V"/>quod <name>habraham</name> credidit ex fide non erat 
+                  <lb ed="#V"/>ex fide sed fuit praesumptiosum ideo propter illum 
+                  <lb ed="#V"/>fuit dampnatus, nec illud iudicium erat 
+                  <lb ed="#V"/>ex fide nec contra fidem <choice><orig>ymo</orig><reg>immo</reg></choice> erat sibi impertinens
+                </p>
+                <p xml:id="l7-veqdgb">
+                  <lb ed="#V"/>verum est quod ego ibi notavi aliqua ad 
+                  <lb ed="#V"/>declarationem istius materiae et breviter ut 
+                  <lb ed="#V"/>casus habeatur clarius ponatur respectu futuri 
+                  <lb ed="#V"/>iudicii et quod deus latanter ordinet quod 
+                  <lb ed="#V"/>iudicium futurum non erit in isto casu 
+                  <lb ed="#V"/>ipse verum credit et tamen ipse peccat quia 
+                  <lb ed="#V"/>licet futurum iudicium non erit tamen ex communiter 
+                  <lb ed="#V"/>apparentibus quibus <unclear>catholicus</unclear> iudicaret quod <choice><orig>ymmo</orig><reg>immo</reg></choice> 
+                  <lb ed="#V"/>iudicium futurum erit et sic licet iudicet veri<lb ed="#V"/>tatem 
+                  tamen ipse contempnit scripturam et 
+                  <lb ed="#V"/>fidem licet ergo deus revelaverit nobis 
+                  <lb ed="#V"/>expresse quod iudicium futurum non erit sed 
+                  <lb ed="#V"/>iste bene se resolvat iudicabit se credere 
+                  <lb ed="#V"/>contra fidem et est sicut ille qui facit contra 
+                  <lb ed="#V"/>conscientiam et peccat licet bene agat et a<lb ed="#V"/>gat 
+                  opera de genere bonum
+                </p>
+                <p xml:id="l7-idtoac">
+                  <g ref="#dot"/>Item de tam 
+                  <lb ed="#V"/>arduis immediate ad salutem hominis tangentibus 
+                  <cb ed="#V" n="16vb"/><lb ed="#V"/>quorum veritas non potest haberi sine revela<lb ed="#V"/>tione 
+                  spiritus sancti simpliciter credere est peccatum 
+                  <lb ed="#V"/>praesumptionis ex quibus patet quod si in talibus 
+                  <lb ed="#V"/>liceat habere aliquod iudicium magis liceret 
+                  <lb ed="#V"/>habere falsum quam bonum unde in casu praedicto ille 
+                  <lb ed="#V"/>qui crederet iudicium futurum fore crederet falsum 
+                  <lb ed="#V"/>non tamen peccaret tantum quantum ille qui creden<lb ed="#V"/>do 
+                  oppositum crederet veritatem quia ille qui 
+                  <lb ed="#V"/>crederet falsum haberet coniecturationem probabilem 
+                  <lb ed="#V"/>ex sacra scriptura quam alter non haberet 
+                  <lb ed="#V"/>ita quod credulitas falsitatis in illo casu 
+                  <lb ed="#V"/>non esset multum periculosa nisi dicatur 
+                  <lb ed="#V"/>quod talis obligaretur ad contrarium
+                </p>
+                <p xml:id="l7-tdqihs">
+                  <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur 
+                  <lb ed="#V"/>quod in illo casu utraque pars contradictionis in materia 
+                  <lb ed="#V"/>fidei esset illicita iudicio humano simpliciter
+                </p>
+                <p xml:id="l7-sapaoa">
+                  <lb ed="#V"/>Sequitur alia propositio quod respectu propositionis credibilis 
+                  <lb ed="#V"/>viator obligaretur habere assensum fidei 
+                  <lb ed="#V"/>et tamen non liceret eidem peccato praesumptionis 
+                  <lb ed="#V"/>et si assentiret falso peccaret etiam quia 
+                  <lb ed="#V"/>obligaretur ad oppositum assentire
+                </p>
+                <p xml:id="l7-eqseih">
+                  ex quo sequitur 
+                  <lb ed="#V"/>periculosum esse formales assensus per rationes proba<lb ed="#V"/>biles 
+                  vel <choice><orig>apparencias</orig><reg>apparentias</reg></choice> naturales circa 
+                  <lb ed="#V"/>huiusmodi articulum <choice><orig>ymo</orig><reg>immo</reg></choice> esset peccatum ubi 
+                  <lb ed="#V"/>obligaretur ad alteram partem contradictionis 
+                  <lb ed="#V"/>quia si veritati assentiat assentit contra fidem 
+                  <lb ed="#V"/>ideo circa materiam fidei et praecipue 
+                  <lb ed="#V"/>de futuris contingentibus cum magna sollicitudine ex<lb ed="#V"/>aminanda 
+                  est intelligentia humana
+                </p>
+                <p xml:id="l7-suqmpc">
+                  Sequitur ulterius 
+                  <lb ed="#V"/>quod in materia fidei debet esse mirabilis 
+                  <lb ed="#V"/><choice><orig>solicitudo</orig><reg>sollicitudo</reg></choice> quia timor domini debet esse <choice><orig>inicium</orig><reg>initium</reg></choice> sapientiae 
+                  <lb ed="#V"/><g ref="#dot"/>Unde notandum est propter positiones casus in 
+                  <lb ed="#V"/>materia fidei non diversificant ma<lb ed="#V"/>teriam 
+                  <lb ed="#V"/>fidei nec <choice><orig>agravant</orig><reg>aggravant</reg></choice> nec 
+                  <lb ed="#V"/>minuunt peccatum credentis
+                </p>
+                <p xml:id="l7-suqnsa">
+                  sequitur 
+                  <lb ed="#V"/>ulterius quod bene staret assensus fidei esse 
+                  <lb ed="#V"/>respectu alicuius qualem assensum non posset 
+                  <lb ed="#V"/>homo iudicare se habere ita quod talis assenti<lb ed="#V"/>ret 
+                  aliqualiter ex fide qualiter nes<lb ed="#V"/>ciet 
+                  se assentire
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <head xml:id="l7-Hraqcaf"><supplied>Responsio ad quartam rationem secundae instantiae: utrum Abraham credidit aliquid
-          falsum?</supplied></head>
-          
-          <p xml:id="l7-arfdmf">alia ratio fuit de <name>habra<lb ed="#V"/>ham</name> 
-          qui ex fide credidit filium suum 
-          <cb ed="#V" n="17ra"/><lb ed="#V"/>immolandum et tamen non immolavit ergo credi<lb ed="#V"/>dit 
-          falsum ex fide ergo etc <g ref="#slash"/>Respondetur quod <name>habraham</name> 
-          <lb ed="#V"/>habuit praeceptum quod vellet filium immolare ad 
-          <lb ed="#V"/>videndum obedientiam suam sed quantum ad credulitatem 
-          <lb ed="#V"/>potuit credulitatem quod semen suum mul<lb ed="#V"/>tiplicaretur 
-          sicut dictum et revelatum 
-          <lb ed="#V"/>sibi fuit et ita fuit <g ref="#dot"/>Si autem credidit 
-          <lb ed="#V"/>filium suum immolari credidit hoc ex 
-          <lb ed="#V"/>credulitate humana quae non erat 
-          <lb ed="#V"/>sibi periculosa quia non erat de materia 
-          <lb ed="#V"/>fidei</p>
-          
-          <p xml:id="l7-iphfcf"><g ref="#dot"/>Item potuit habere credulitatem
-          <lb ed="#V"/>quod solum deus petebat obedientiam ut vel<lb ed="#V"/>let 
+          <head xml:id="l7-Hraqcaf">
+            <supplied>Responsio ad quartam rationem secundae instantiae: 
+              utrum Abraham credidit aliquid falsum?</supplied>
+          </head>
+          <p xml:id="l7-arfdmf">
+            alia ratio fuit de <name>habra<lb ed="#V"/>ham</name> 
+            qui ex fide credidit filium suum 
+            <cb ed="#V" n="17ra"/><lb ed="#V"/>immolandum et tamen non immolavit ergo credi<lb ed="#V"/>dit 
+            falsum ex fide ergo etc <g ref="#slash"/>Respondetur quod <name>habraham</name> 
+            <lb ed="#V"/>habuit praeceptum quod vellet filium immolare ad 
+            <lb ed="#V"/>videndum obedientiam suam sed quantum ad credulitatem 
+            <lb ed="#V"/>potuit credulitatem quod semen suum mul<lb ed="#V"/>tiplicaretur 
+            sicut dictum et revelatum 
+            <lb ed="#V"/>sibi fuit et ita fuit <g ref="#dot"/>Si autem credidit 
+            <lb ed="#V"/>filium suum immolari credidit hoc ex 
+            <lb ed="#V"/>credulitate humana quae non erat 
+            <lb ed="#V"/>sibi periculosa quia non erat de materia 
+            <lb ed="#V"/>fidei
+          </p>
+          <p xml:id="l7-iphfcf">
+            <g ref="#dot"/>Item potuit habere credulitatem
+            <lb ed="#V"/>quod solum deus petebat obedientiam ut vel<lb ed="#V"/>let 
             filium suum immolare <g ref="#dot"/>unde sicut habetur 
-          <lb ed="#V"/>in una decretali aliqua sunt praecepta 
-          <lb ed="#V"/>credenda in forma praecepti sed non 
-          <lb ed="#V"/>secundum intentionem praecepti sicut est praeceptum 
+            <lb ed="#V"/>in una decretali aliqua sunt praecepta 
+            <lb ed="#V"/>credenda in forma praecepti sed non 
+            <lb ed="#V"/>secundum intentionem praecepti sicut est praeceptum 
             <lb ed="#V"/>illud non <choice><orig>methaberis</orig><reg>moechaberis</reg></choice> non furtum 
-          <lb ed="#V"/>faciens etc. sic fuit in proposito quia non 
-          <lb ed="#V"/>erat intentio praecepti quod <name ref="#Abraham">habraham</name> immo<lb ed="#V"/>laret 
-          filium suum sed solum erat forma 
-          <lb ed="#V"/>praecepti Alia sunt praecepta quae sicut 
-          <lb ed="#V"/>sunt secundum intentionem et sicut formam prae<lb ed="#V"/>cepti 
-          sicut est istud praeceptum honora 
-          <lb ed="#V"/>patrem et matrem etc et sic in dicto 
-          <lb ed="#V"/>casu credere filium suum immolare non 
-          <lb ed="#V"/>fuit <name ref="#Abraham">habrahae</name> meritorium quia non fuit 
-          <lb ed="#V"/>ex fide <choice><orig>ymo</orig><reg>immo</reg></choice> ex proprio capite nec fuit 
-          <lb ed="#V"/>peccatum quia non fuit contra fidem</p>
-  
-          <p xml:id="l7-duqsfm"><g ref="#dot"/>dicitur 
-          <lb ed="#V"/>ulterius quod si ex caritate determinavisset se 
-          <lb ed="#V"/>ad credendum quod filius suus immola<lb ed="#V"/>retur 
-          illa determinatio non fecisset 
-          <lb ed="#V"/>quod illa credulitas fuisset fides 
-          <lb ed="#V"/>sed quod actus suus fuisset meritorius</p>
-          
-          <p xml:id="l7-esdntf">et si 
-          <lb ed="#V"/>dicatur quod procedebat ex caritate ergo ex 
-          <lb ed="#V"/>fide <g ref="#dbslash"/>respondendum est quod caritas in re<lb ed="#V"/>gno 
-          animae tenet principatum in respectu aliarum 
-          <cb ed="#V" n="17rb"/><lb ed="#V"/>virtutum ita quod concurrit ad omnem effectum vir<lb ed="#V"/>tutum 
-          sed fides non quia ipsa est limitata 
-          <lb ed="#V"/>respectu credibilium <choice><orig>neccessariorum</orig><reg>necessariorum</reg></choice> ad salutem et ideo 
-          <lb ed="#V"/>bene concederet quod caritas concurret ad huiusmodi 
-          <lb ed="#V"/>assensum et non fides</p>
-          
-          <p xml:id="l7-veqins"><g ref="#dot"/>Verum est quod ibi notatur 
-          <lb ed="#V"/>unum aliud quod bene requireret magnam 
-          <lb ed="#V"/>investigationem scilicet quod aliquis actus esset meri<lb ed="#V"/>torius 
-          qui non esset proprie actus caritatis 
-          <lb ed="#V"/>sicut aliquis bonus homo ex caritate ve<lb ed="#V"/>lit 
-          alteri bona temporalia illa volitio 
-          <lb ed="#V"/>est meritoria et tamen non est proprie motus 
-          <lb ed="#V"/>caritatis quia motus illae semper habet rem 
-          <lb ed="#V"/>spiritualem pro obiecto</p>
+            <lb ed="#V"/>faciens etc. sic fuit in proposito quia non 
+            <lb ed="#V"/>erat intentio praecepti quod <name ref="#Abraham">habraham</name> immo<lb ed="#V"/>laret 
+            filium suum sed solum erat forma 
+            <lb ed="#V"/>praecepti Alia sunt praecepta quae sicut 
+            <lb ed="#V"/>sunt secundum intentionem et sicut formam prae<lb ed="#V"/>cepti 
+            sicut est istud praeceptum honora 
+            <lb ed="#V"/>patrem et matrem etc et sic in dicto 
+            <lb ed="#V"/>casu credere filium suum immolare non 
+            <lb ed="#V"/>fuit <name ref="#Abraham">habrahae</name> meritorium quia non fuit 
+            <lb ed="#V"/>ex fide <choice><orig>ymo</orig><reg>immo</reg></choice> ex proprio capite nec fuit 
+            <lb ed="#V"/>peccatum quia non fuit contra fidem
+          </p>
+          <p xml:id="l7-duqsfm">
+            <g ref="#dot"/>dicitur 
+            <lb ed="#V"/>ulterius quod si ex caritate determinavisset se 
+            <lb ed="#V"/>ad credendum quod filius suus immola<lb ed="#V"/>retur 
+            illa determinatio non fecisset 
+            <lb ed="#V"/>quod illa credulitas fuisset fides 
+            <lb ed="#V"/>sed quod actus suus fuisset meritorius
+          </p>
+          <p xml:id="l7-esdntf">
+            et si 
+            <lb ed="#V"/>dicatur quod procedebat ex caritate ergo ex 
+            <lb ed="#V"/>fide <g ref="#dbslash"/>respondendum est quod caritas in re<lb ed="#V"/>gno 
+            animae tenet principatum in respectu aliarum 
+            <cb ed="#V" n="17rb"/>
+            <lb ed="#V"/>virtutum ita quod concurrit ad omnem effectum vir<lb ed="#V"/>tutum 
+            sed fides non quia ipsa est limitata 
+            <lb ed="#V"/>respectu credibilium <choice><orig>neccessariorum</orig><reg>necessariorum</reg></choice> ad salutem et ideo 
+            <lb ed="#V"/>bene concederet quod caritas concurret ad huiusmodi 
+            <lb ed="#V"/>assensum et non fides
+          </p>
+          <p xml:id="l7-veqins">
+            <g ref="#dot"/>Verum est quod ibi notatur 
+            <lb ed="#V"/>unum aliud quod bene requireret magnam 
+            <lb ed="#V"/>investigationem scilicet quod aliquis actus esset meri<lb ed="#V"/>torius 
+            qui non esset proprie actus caritatis 
+            <lb ed="#V"/>sicut aliquis bonus homo ex caritate ve<lb ed="#V"/>lit 
+            alteri bona temporalia illa volitio 
+            <lb ed="#V"/>est meritoria et tamen non est proprie motus 
+            <lb ed="#V"/>caritatis quia motus illae semper habet rem 
+            <lb ed="#V"/>spiritualem pro obiecto
+          </p>
         </div>
         <div>
-          <head><supplied>Responsio ad quintam rationem secundae instantia: utrum Spiritus Sanctus potest concurrere ad
-          causandum assensum falsum?</supplied></head>
-          
-          <p xml:id="l7-aafnaf"><g ref="#dbslash"/>Aliud argumentum fuit de 
-          <lb ed="#V"/>spiritu sancto scilicet quod potuit concurrere ad causandum 
-          <lb ed="#V"/>assensum falsum ergo et fides <g ref="#slash"/>responsio est facilis  
-          <lb ed="#V"/>dicendo quod fides speciali modo et supernatura<lb ed="#V"/>li 
-          concurrit ad assentiendum articulis credendis et 
-          <lb ed="#V"/>ita etiam spiritus sanctus secum concurrit specia<lb ed="#V"/>li 
-          motione dirigendo hominem in suum 
-          <lb ed="#V"/>finem modo dicitur quod spiritus sanctus non posset 
-          <lb ed="#V"/>ad assentiendum falso ista motione speciali 
-          <lb ed="#V"/>qua concurrit cum fide ad assentiendum vero sed 
-          <lb ed="#V"/>spiritus sanctus concurrit ad productionem assensus 
-          <lb ed="#V"/>falsi <choice><orig>sicud</orig><reg>sicut</reg></choice> causa <choice><orig>neccessario</orig><reg>necessario</reg></choice> requisita ita quod concurrit 
-          <lb ed="#V"/>in numero et generalissimo modo concurrendi sed 
-          <lb ed="#V"/>de concursu speciali spiritus sancti non posset sic specialiter 
-          <lb ed="#V"/>concurrere ad decipiendum creaturam et per 
-          <lb ed="#V"/>consequens nec ad assentiendum falso <choice><orig>sicud</orig><reg>sicut</reg></choice> 
-          <lb ed="#V"/>nec fides et per consequens non attribuitur fi<lb ed="#V"/>dei 
-          aliqua praerogativa quae non attri<lb ed="#V"/>buitur 
-          spiritu sancto sed quia fides non potest 
-          <lb ed="#V"/>habere concursum generalem ad concurrendum 
-          <lb ed="#V"/>ad cuiuslibet effectus productionem sicut spiritus 
-          <lb ed="#V"/>sanctus sed solum habet concursum specialem ad 
-          <lb ed="#V"/>assentiendum vero ideo non concurrit ad assent<lb ed="#V"/>iendum 
-          falso <choice><orig>sicud</orig><reg>sicut</reg></choice> spiritus sanctus et ideo 
-          <cb ed="#V" n="17va"/><lb ed="#V"/>si argumentum bene resolvatur arguet praerogati<lb ed="#V"/>vam 
-          in deo quam non attribuimus fidei ideo 
-          <lb ed="#V"/>etc</p>
-
-          <p xml:id="l7-acqlec"><g ref="#slash"/>arguitur confirmando quia fides potest 
-          <lb ed="#V"/>in actum perfectum puta in illum actum su<lb ed="#V"/>pernaturalem 
-          etc breviter consequentia non valet 
-          <lb ed="#V"/>quia causalitates rerum sunt limitatae ita quod non 
-          <lb ed="#V"/>possunt in quemlibet effectum sed solum in aliquos 
-          <lb ed="#V"/>effectus sibi debitos ex natura sua 
-          <lb ed="#V"/>unde non sequitur homo potest producere hominem 
-          <lb ed="#V"/>ergo potest producere lapidem et sic de aliis</p>
-
-          <p xml:id="l7-aacapf"><lb ed="#V"/><g ref="#slash"/>ad aliam confirmationem quia fides est 
-          <lb ed="#V"/>in potentia obedientiali et sic potest assumi a spiritu sancto 
-          <lb ed="#V"/>ad concurrendum seu ad productionem falsi as<lb ed="#V"/>sensus 
-          etc <g ref="#slash"/>Quantum est de materia ista 
-          <lb ed="#V"/>quae tangit potentiam obedientialem ipsa requireret 
-          <lb ed="#V"/>longum processum ad eius declarationem ideo pro 
-          <lb ed="#V"/>praesenti non intrabo eam Sed quantum ad pro 
-          <lb ed="#V"/>positum spectat dupliciter potest responderi uno modo 
-          <lb ed="#V"/>quia fides aliquas proprietates habet quae 
-          <lb ed="#V"/>sibi non competunt ut fides est ut in<lb ed="#V"/>haesio 
-          etc <g ref="#dot"/>utrum autem deus possit fidem 
-          <lb ed="#V"/>assumere secundum denominationem sibi competentem 
-          <lb ed="#V"/>non inquantum est fides ad producendum assensum falsum 
-          <lb ed="#V"/>non est ad propositum quia tunc non concur<lb ed="#V"/>reret 
-          ut fides sed ut qualitas quaedam et 
-          ideo potest dixi quod omnino repugnat fidei 
-          <lb ed="#V"/>ut fides est concurrere ad assensum falsum ideo 
-          <lb ed="#V"/>quantum ad hoc non est in potentia obedientali respectu spiritus sancti 
-          <lb ed="#V"/>posset ultimo dici quod illud non est contra positionem quin deus 
-          <lb ed="#V"/>variando naturam fidei posset ipsam as<lb ed="#V"/>summere 
-          ad concurrendum ad assensum falsum sic 
-          <lb ed="#V"/>teneatis quam viam volueritis in ista 
-          <lb ed="#V"/>materia et sic patet quomodo sit respondendum 
-          <lb ed="#V"/>ad omnia argumenta prius facta</p>
+          <head>
+            <supplied>
+              Responsio ad quintam rationem secundae instantia: utrum Spiritus Sanctus potest concurrere ad
+              causandum assensum falsum?
+            </supplied>
+          </head>
+          <p xml:id="l7-aafnaf">
+            <g ref="#dbslash"/>Aliud argumentum fuit de 
+            <lb ed="#V"/>spiritu sancto scilicet quod potuit concurrere ad causandum 
+            <lb ed="#V"/>assensum falsum ergo et fides <g ref="#slash"/>responsio est facilis  
+            <lb ed="#V"/>dicendo quod fides speciali modo et supernatura<lb ed="#V"/>li 
+            concurrit ad assentiendum articulis credendis et 
+            <lb ed="#V"/>ita etiam spiritus sanctus secum concurrit specia<lb ed="#V"/>li 
+            motione dirigendo hominem in suum 
+            <lb ed="#V"/>finem modo dicitur quod spiritus sanctus non posset 
+            <lb ed="#V"/>ad assentiendum falso ista motione speciali 
+            <lb ed="#V"/>qua concurrit cum fide ad assentiendum vero sed 
+            <lb ed="#V"/>spiritus sanctus concurrit ad productionem assensus 
+            <lb ed="#V"/>falsi <choice><orig>sicud</orig><reg>sicut</reg></choice> causa <choice><orig>neccessario</orig><reg>necessario</reg></choice> requisita ita quod concurrit 
+            <lb ed="#V"/>in numero et generalissimo modo concurrendi sed 
+            <lb ed="#V"/>de concursu speciali spiritus sancti non posset sic specialiter 
+            <lb ed="#V"/>concurrere ad decipiendum creaturam et per 
+            <lb ed="#V"/>consequens nec ad assentiendum falso <choice><orig>sicud</orig><reg>sicut</reg></choice> 
+            <lb ed="#V"/>nec fides et per consequens non attribuitur fi<lb ed="#V"/>dei 
+            aliqua praerogativa quae non attri<lb ed="#V"/>buitur 
+            spiritu sancto sed quia fides non potest 
+            <lb ed="#V"/>habere concursum generalem ad concurrendum 
+            <lb ed="#V"/>ad cuiuslibet effectus productionem sicut spiritus 
+            <lb ed="#V"/>sanctus sed solum habet concursum specialem ad 
+            <lb ed="#V"/>assentiendum vero ideo non concurrit ad assent<lb ed="#V"/>iendum 
+            falso <choice><orig>sicud</orig><reg>sicut</reg></choice> spiritus sanctus et ideo 
+            <cb ed="#V" n="17va"/><lb ed="#V"/>si argumentum bene resolvatur arguet praerogati<lb ed="#V"/>vam 
+            in deo quam non attribuimus fidei ideo 
+            <lb ed="#V"/>etc
+          </p>
+          <p xml:id="l7-acqlec">
+            <g ref="#slash"/>arguitur confirmando quia fides potest 
+            <lb ed="#V"/>in actum perfectum puta in illum actum su<lb ed="#V"/>pernaturalem 
+            etc breviter consequentia non valet 
+            <lb ed="#V"/>quia causalitates rerum sunt limitatae ita quod non 
+            <lb ed="#V"/>possunt in quemlibet effectum sed solum in aliquos 
+            <lb ed="#V"/>effectus sibi debitos ex natura sua 
+            <lb ed="#V"/>unde non sequitur homo potest producere hominem 
+            <lb ed="#V"/>ergo potest producere lapidem et sic de aliis
+          </p>
+          <p xml:id="l7-aacapf">
+            <lb ed="#V"/><g ref="#slash"/>ad aliam confirmationem quia fides est 
+            <lb ed="#V"/>in potentia obedientiali et sic potest assumi a spiritu sancto 
+            <lb ed="#V"/>ad concurrendum seu ad productionem falsi as<lb ed="#V"/>sensus 
+            etc <g ref="#slash"/>Quantum est de materia ista 
+            <lb ed="#V"/>quae tangit potentiam obedientialem ipsa requireret 
+            <lb ed="#V"/>longum processum ad eius declarationem ideo pro 
+            <lb ed="#V"/>praesenti non intrabo eam Sed quantum ad pro 
+            <lb ed="#V"/>positum spectat dupliciter potest responderi uno modo 
+            <lb ed="#V"/>quia fides aliquas proprietates habet quae 
+            <lb ed="#V"/>sibi non competunt ut fides est ut in<lb ed="#V"/>haesio 
+            etc <g ref="#dot"/>utrum autem deus possit fidem 
+            <lb ed="#V"/>assumere secundum denominationem sibi competentem 
+            <lb ed="#V"/>non inquantum est fides ad producendum assensum falsum 
+            <lb ed="#V"/>non est ad propositum quia tunc non concur<lb ed="#V"/>reret 
+            ut fides sed ut qualitas quaedam et 
+            ideo potest dixi quod omnino repugnat fidei 
+            <lb ed="#V"/>ut fides est concurrere ad assensum falsum ideo 
+            <lb ed="#V"/>quantum ad hoc non est in potentia obedientali respectu spiritus sancti 
+            <lb ed="#V"/>posset ultimo dici quod illud non est contra positionem quin deus 
+            <lb ed="#V"/>variando naturam fidei posset ipsam as<lb ed="#V"/>summere 
+            ad concurrendum ad assensum falsum sic 
+            <lb ed="#V"/>teneatis quam viam volueritis in ista 
+            <lb ed="#V"/>materia et sic patet quomodo sit respondendum 
+            <lb ed="#V"/>ad omnia argumenta prius facta
+          </p>
         </div>
       </div>
     </body>
