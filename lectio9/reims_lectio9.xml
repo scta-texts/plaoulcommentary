@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,399 +10,439 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
-          <title>Lectio 9, Prologus [Reims Transcription]</title>
+        <edition n="0.0.0-dev">
+          <title>Lectio 9, de Fide [Reims Transcription]</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>  
+        <date when="2011-03-23">March 23, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="R">Reims</witness>
+          <witness xml:id="R" n="reims">Reims</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
-    <facsimile>
-<surface n="R13v">
-<graphic url="R13v.jpg"/>
-<zone start="#l9-seqcpt" ulx="285" uly="839" lrx="935" lry="1779" n="1"/>
-<zone start="#l9-seqcpt" ulx="926" uly="188" lrx="1576" lry="836" n="2"/>
-<zone start="#l9-eiefhs" ulx="926" uly="776" lrx="1576" lry="1216" n="1"/>
-<zone start="#l9-pisiid" ulx="919" uly="1152" lrx="1569" lry="1474" n="1"/>
-<zone start="#l9-eetsiv" ulx="916" uly="1412" lrx="1566" lry="1776" n="1"/>
-</surface>
-<surface n="R14r">
-<graphic url="R14r.jpg"/>
-<zone start="#l9-eetsiv" ulx="138" uly="225" lrx="788" lry="626" n="2"/>
-<zone start="#l9-epiaca" ulx="145" uly="595" lrx="795" lry="1378" n="1"/>
-<zone start="#l9-cimnei" ulx="154" uly="1343" lrx="804" lry="1813" n="1"/>
-<zone start="#l9-cimnei" ulx="783" uly="213" lrx="1433" lry="749" n="2"/>
-<zone start="#l9-edeaap" ulx="783" uly="723" lrx="1433" lry="813" n="1"/>
-<zone start="#l9-peqsdd" ulx="785" uly="748" lrx="1435" lry="1307" n="1"/>
-<zone start="#l9-suqads" ulx="793" uly="1250" lrx="1443" lry="1621" n="1"/>
-<zone start="#l9-suqetc" ulx="792" uly="1553" lrx="1442" lry="1808" n="1"/>
-</surface>
-<surface n="R14v">
-<graphic url="R14v.jpg"/>
-<zone start="#l9-suqetc" ulx="267" uly="212" lrx="917" lry="281" n="2"/>
-<zone start="#l9-stqfad" ulx="261" uly="215" lrx="911" lry="647" n="1"/>
-<zone start="#l9-suqeoc" ulx="261" uly="581" lrx="911" lry="706" n="1"/>
-<zone start="#l9-suqnhl" ulx="261" uly="642" lrx="911" lry="890" n="1"/>
-<zone start="#l9-seqnff" ulx="256" uly="827" lrx="906" lry="1014" n="1"/>
-<zone start="#l9-suqhne" ulx="256" uly="949" lrx="906" lry="1460" n="1"/>
-<zone start="#l9-stdcsd" ulx="245" uly="1422" lrx="895" lry="1514" n="1"/>
-<zone start="#l9-rncesi" ulx="245" uly="1454" lrx="895" lry="1807" n="1"/>
-<zone start="#l9-rncesi" ulx="904" uly="228" lrx="1554" lry="720" n="2"/>
-<zone start="#l9-scseec" ulx="894" uly="664" lrx="1544" lry="881" n="1"/>
-<zone start="#l9-ruedss" ulx="885" uly="820" lrx="1535" lry="1504" n="1"/>
-<zone start="#l9-srpivi" ulx="884" uly="1441" lrx="1534" lry="1694" n="1"/>
-</surface>
+  <facsimile>
+    <surface n="R13v">
+      <graphic url="R13v.jpg"/>
+      <zone start="#l9-seqcpt" ulx="285" uly="839" lrx="935" lry="1779" n="1"/>
+      <zone start="#l9-seqcpt" ulx="926" uly="188" lrx="1576" lry="836" n="2"/>
+      <zone start="#l9-eiefhs" ulx="926" uly="776" lrx="1576" lry="1216" n="1"/>
+      <zone start="#l9-pisiid" ulx="919" uly="1152" lrx="1569" lry="1474" n="1"/>
+      <zone start="#l9-eetsiv" ulx="916" uly="1412" lrx="1566" lry="1776" n="1"/>
+    </surface>
+    <surface n="R14r">
+      <graphic url="R14r.jpg"/>
+      <zone start="#l9-eetsiv" ulx="138" uly="225" lrx="788" lry="626" n="2"/>
+      <zone start="#l9-epiaca" ulx="145" uly="595" lrx="795" lry="1378" n="1"/>
+      <zone start="#l9-cimnei" ulx="154" uly="1343" lrx="804" lry="1813" n="1"/>
+      <zone start="#l9-cimnei" ulx="783" uly="213" lrx="1433" lry="749" n="2"/>
+      <zone start="#l9-edeaap" ulx="783" uly="723" lrx="1433" lry="813" n="1"/>
+      <zone start="#l9-peqsdd" ulx="785" uly="748" lrx="1435" lry="1307" n="1"/>
+      <zone start="#l9-suqads" ulx="793" uly="1250" lrx="1443" lry="1621" n="1"/>
+      <zone start="#l9-suqetc" ulx="792" uly="1553" lrx="1442" lry="1808" n="1"/>
+    </surface>
+    <surface n="R14v">
+      <graphic url="R14v.jpg"/>
+      <zone start="#l9-suqetc" ulx="267" uly="212" lrx="917" lry="281" n="2"/>
+      <zone start="#l9-stqfad" ulx="261" uly="215" lrx="911" lry="647" n="1"/>
+      <zone start="#l9-suqeoc" ulx="261" uly="581" lrx="911" lry="706" n="1"/>
+      <zone start="#l9-suqnhl" ulx="261" uly="642" lrx="911" lry="890" n="1"/>
+      <zone start="#l9-seqnff" ulx="256" uly="827" lrx="906" lry="1014" n="1"/>
+      <zone start="#l9-suqhne" ulx="256" uly="949" lrx="906" lry="1460" n="1"/>
+      <zone start="#l9-stdcsd" ulx="245" uly="1422" lrx="895" lry="1514" n="1"/>
+      <zone start="#l9-rncesi" ulx="245" uly="1454" lrx="895" lry="1807" n="1"/>
+      <zone start="#l9-rncesi" ulx="904" uly="228" lrx="1554" lry="720" n="2"/>
+      <zone start="#l9-scseec" ulx="894" uly="664" lrx="1544" lry="881" n="1"/>
+      <zone start="#l9-ruedss" ulx="885" uly="820" lrx="1535" lry="1504" n="1"/>
+      <zone start="#l9-srpivi" ulx="884" uly="1441" lrx="1534" lry="1694" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#R" n="13-v"/>
+        <cb ed="#R" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio9">
-        <head subtype="title" xml:id="l9-Hlprlpr">Lectio 9, Prologus [Reims Transcription]</head>
+        <head xml:id="l9-Hlprlpr">Lectio 9, Prologus [Reims Transcription]</head>
         <div>
-          
-          <head xml:id="l9-Hrlprlp">[Recapitulatio lectionis praecedentis]</head>
-          
-          <p xml:id="l9-seqcpt">Sciendum quod in lectione <del rend="strikethrough">pnu</del><add type="inline">praecedenti</add> fuit 
-<lb ed="#R"/><del rend="strikethrough">tractum</del><add place="inline">tactum</add> de infirmitate ingenii huma<lb ed="#R"/>ni, 
+          <head xml:id="l9-Hrlprlp">
+            [Recapitulatio lectionis praecedentis]
+          </head>
+          <p xml:id="l9-seqcpt">
+            <lb ed="#R" n="22"/>Sciendum quod in lectione <subst><del rend="strikethrough">pnu</del><add type="inline">praecedenti</add></subst> fuit 
+            <lb ed="#R"/><del rend="strikethrough">tractum</del><add place="inline">tactum</add> de infirmitate ingenii huma<lb ed="#R" break="no"/>ni, 
             et eius vulneratione ex pluribus causis 
-<lb ed="#R"/>ibidem tactis. Et quia aliqua exempla po<lb ed="#R"/>sui, 
+            <lb ed="#R"/>ibidem tactis. Et quia aliqua exempla po<lb ed="#R" break="no"/>sui, 
             quae non videntur aliquibus bene declarata, 
-<lb ed="#R"/>ideo aliqua repetam ad ostendendum 
-<lb ed="#R"/>debilitatem ingenii humani. Ego enim in ul<lb ed="#R"/>timo 
-            exemplo descendi ad obiectum infi<lb ed="#R"/>mum, 
+            <lb ed="#R"/>ideo aliqua repetam ad ostendendum 
+            <lb ed="#R"/>debilitatem ingenii humani. Ego enim in ul<lb ed="#R" break="no"/>timo 
+            exemplo descendi ad obiectum infi<lb ed="#R" break="no"/>mum, 
             scilicet, ad quantitatem continuam, et ibidem dictum fuit 
-<lb ed="#R"/>quod non habemus aliquod certum medium ad concluden<lb ed="#R"/>dum 
+            <lb ed="#R"/>quod non habemus aliquod certum medium ad concluden<lb ed="#R" break="no"/>dum 
             de aliqua re quanta sit proprie. Nam qua
-<lb ed="#R"/>cumque quantitate data ipsa est nota per aliam, 
-<lb ed="#R"/>ita quod solum cognoscimus quantitates relative com<lb ed="#R"/>parando 
+            <lb ed="#R"/>cumque quantitate data ipsa est nota per aliam, 
+            <lb ed="#R"/>ita quod solum cognoscimus quantitates relative com<lb ed="#R" break="no"/>parando 
             unam ad aliam, ita quod non possumus 
-<lb ed="#R"/>realiter de aequalitate iudicare proprie, nec aliqua 
-<lb ed="#R"/>quantitas potest nobis simpliciter esse nota ut pa<lb ed="#R"/>tuit 
+            <lb ed="#R"/>realiter de aequalitate iudicare proprie, nec aliqua 
+            <lb ed="#R"/>quantitas potest nobis simpliciter esse nota ut pa<lb ed="#R" break="no"/>tuit 
             in tribus casibus ibidem positis. Ideo 
-<lb ed="#R"/>nescimus proprie quanta res est nisi sciamus 
-<lb ed="#R"/>in Verbo vel per revelationem specialem a 
-<lb ed="#R"/>Spiritu Sancto. Ideo non est mirum si, respectu credendorum, 
-<lb ed="#R"/>ponatur requirere fides, quando ad cognoscendum 
-<lb ed="#R"/>de aliqua re quanta sit oportet ponere fidem. 
-<lb ed="#R"/>Ponebatur communiter quod nedum est ita de quantitate 
-<lb ed="#R"/>continua, sed etiam de velocitate et tarditate 
-<lb ed="#R"/>motuum et de generatione et corruptione rerum. 
-<lb ed="#R"/>Unde quia natura est subiecta Deo sicut met 
-<lb ed="#R"/>testatur <name ref="#Aristotle">philosopho</name> quod quaelibet natura particularis est subiec<lb ed="#R"/>ta 
+            <lb ed="#R"/>nescimus proprie quanta res est nisi sciamus 
+            <lb ed="#R"/>in Verbo vel per revelationem specialem a 
+            <lb ed="#R"/>Spiritu Sancto. Ideo non est mirum si, respectu credendorum, 
+            <lb ed="#R"/>ponatur requirere fides, quando ad cognoscendum 
+            <lb ed="#R"/>de aliqua re quanta sit oportet ponere fidem. 
+            <lb ed="#R"/>Ponebatur communiter quod nedum est ita de quantitate 
+            <lb ed="#R"/>continua, sed etiam de velocitate et tarditate 
+            <lb ed="#R"/>motuum et de generatione et corruptione rerum. 
+            <lb ed="#R"/>Unde quia natura est subiecta Deo sicut met 
+            <lb ed="#R"/>testatur <name ref="#Aristotle">philosopho</name> quod quaelibet natura particularis est subiec<lb ed="#R" break="no"/>ta 
             naturae universali; quaelibet res magis insequitur 
-<lb ed="#R"/>finem suum ultimate intentum et ordinarium 
-            <cb ed="#R" n="13vb"/><lb ed="#R"/>illius finis quam quodcumque aliud. Ideo dicitur quod 
-<lb ed="#R"/>possibile fuit ex congruentia regnis rerum, 
-<lb ed="#R"/>caelum aliquando velocius, aliquando tardius moveri; 
-<lb ed="#R"/>ita quod secundum quod caelum velocius movetur secundum 
-<lb ed="#R"/>hoc: proveniunt influentiae nobiliores et 
-<lb ed="#R"/>perfectiores. Ideo bene potest salvari quod antiqui
-<lb ed="#R"/>tus caelum velocius movebatur quam nunc movetur. 
-<lb ed="#R"/>Et hoc propter nequitiam vel malitiam hominum, et hoc ex ordinatione divina, et hoc testatur 
-<lb ed="#R"/>Scriptura Sacra dicens "dabo eis caelum ferreum," 
-<lb ed="#R"/>id est, influentiam malam. Ex hoc bene salvaretur 
-<lb ed="#R"/>quod a principio motus caeli erant velociores, et consequenter 
-<lb ed="#R"/>quod influentiae erant perfectiores et meliores, 
-<lb ed="#R"/>et consequenter, complexio homini et aliarum rerum quam 
-<lb ed="#R"/>nunc sit. Et consequenter salvaretur quod antiqui
-<lb ed="#R"/>tus homines vixissent per tot annos sicut 
-<lb ed="#R"/>legitur in Scripturis, sed non tanto tempore vocando 
-<lb ed="#R"/>annum completam revolutionem solis non 
-<lb ed="#R"/>quod annus habuisset tot dies et horas sicut 
-<lb ed="#R"/>nunc propter velocitatem motus caeli pro tunc.</p> 
-          
-          <div><head xml:id="l9-Hcercer">[conclusio ex recapitulatione]</head>
-     
-            <p xml:id="l9-eiefhs">Ex ista 
-<lb ed="#R"/>enim debilitate ingenii humani ad fidem 
-<lb ed="#R"/>persuadetur quod fides est assumenda quod fides 
-<lb ed="#R"/>est summe necessaria tam in agibilibus quam 
-<lb ed="#R"/>in scabilibus quam in quibuscumque aliis, ita 
-<lb ed="#R"/>quod, ratione huiusmodi defectus et debilitatis 
-<lb ed="#R"/>ingenii humani, antiqui philosophi discorda<lb ed="#R"/>verunt 
+            <lb ed="#R"/>finem suum ultimate intentum et ordinarium 
+            <cb ed="#R" n="b"/> <!-- 13vb -->
+            <lb ed="#R"/>illius finis quam quodcumque aliud. Ideo dicitur quod 
+            <lb ed="#R"/>possibile fuit ex congruentia regnis rerum, 
+            <lb ed="#R"/>caelum aliquando velocius, aliquando tardius moveri; 
+            <lb ed="#R"/>ita quod secundum quod caelum velocius movetur secundum 
+            <lb ed="#R"/>hoc: proveniunt influentiae nobiliores et 
+            <lb ed="#R"/>perfectiores. Ideo bene potest salvari quod antiqui
+            <lb ed="#R"/>tus caelum velocius movebatur quam nunc movetur. 
+            <lb ed="#R"/>Et hoc propter nequitiam vel malitiam hominum, et hoc ex ordinatione divina, et hoc testatur 
+            <lb ed="#R"/>Scriptura Sacra dicens "dabo eis caelum ferreum," 
+            <lb ed="#R"/>id est, influentiam malam. Ex hoc bene salvaretur 
+            <lb ed="#R"/>quod a principio motus caeli erant velociores, et consequenter 
+            <lb ed="#R"/>quod influentiae erant perfectiores et meliores, 
+            <lb ed="#R"/>et consequenter, complexio homini et aliarum rerum quam 
+            <lb ed="#R"/>nunc sit. Et consequenter salvaretur quod antiqui
+            <lb ed="#R"/>tus homines vixissent per tot annos sicut 
+            <lb ed="#R"/>legitur in Scripturis, sed non tanto tempore vocando 
+            <lb ed="#R"/>annum completam revolutionem solis non 
+            <lb ed="#R"/>quod annus habuisset tot dies et horas sicut 
+            <lb ed="#R"/>nunc propter velocitatem motus caeli pro tunc.
+          </p> 
+          <div>
+            <head xml:id="l9-Hcercer">[conclusio ex recapitulatione]</head>
+            <p xml:id="l9-eiefhs">
+              Ex ista 
+              <lb ed="#R"/>enim debilitate ingenii humani ad fidem 
+              <lb ed="#R"/>persuadetur quod fides est assumenda quod fides 
+              <lb ed="#R"/>est summe necessaria tam in agibilibus quam 
+              <lb ed="#R"/>in scabilibus quam in quibuscumque aliis, ita 
+              <lb ed="#R"/>quod, ratione huiusmodi defectus et debilitatis 
+              <lb ed="#R"/>ingenii humani, antiqui philosophi discorda<lb ed="#R" break="no"/>verunt 
               inter se de felicitate et obiecto felicitatis, 
-<lb ed="#R"/>quare mihi videtur quod iuvenibus studentibus 
-<lb ed="#R"/>in theologia primitus debent eis materia fidei 
-<lb ed="#R"/>tractari, quia est fundamentum omnium aliarum veritatum. 
-<lb ed="#R"/>modo habito fundamento, facilius habentur sequen<lb ed="#R"/>tia.</p>
-            </div>
+              <lb ed="#R"/>quare mihi videtur quod iuvenibus studentibus 
+              <lb ed="#R"/>in theologia primitus debent eis materia fidei 
+              <lb ed="#R"/>tractari, quia est fundamentum omnium aliarum veritatum. 
+              <lb ed="#R"/>modo habito fundamento, facilius habentur sequen<lb ed="#R" break="no"/>tia
+            </p>
+          </div>
         </div>
-        <div><head xml:id="l9-Hpipipi">[Plures infirmitates]</head>
-          
-          <p xml:id="l9-pisiid">Praeter infirmitates superius tactas, est 
-<lb ed="#R"/>una, quae forte habebit locum, licet origina<lb ed="#R"/>liter 
+        <div>
+          <head xml:id="l9-Hpipipi">[Plures infirmitates]</head>
+          <p xml:id="l9-pisiid">
+            Praeter infirmitates superius tactas, est 
+            <lb ed="#R"/>una, quae forte habebit locum, licet origina<lb ed="#R" break="no"/>liter 
             veniat ex prima, scilicet, ex pena originalis 
-<lb ed="#R"/>culpae, scilicet, daemonis temptatio, nam ex origi<lb ed="#R"/>nali 
+            <lb ed="#R"/>culpae, scilicet, daemonis temptatio, nam ex origi<lb ed="#R" break="no"/>nali 
             culpa et pena  caro nedum rebellat 
-<lb ed="#R"/>rationi ratio subicit sibi rationem immo etiam dae<lb ed="#R"/>mones. 
+            <lb ed="#R"/>rationi ratio subicit sibi rationem immo etiam dae<lb ed="#R" break="no"/>mones. 
             Ita quod homo non potest vexationes 
-<lb ed="#R"/>et temptationes daemonium repellere sine 
-<lb ed="#R"/>speciali gratia et iuvamine ipsius Dei.</p> 
-        
-          <p xml:id="l9-eetsiv">Est 
-<lb ed="#R"/>etiam torpor et desidia, est etiam curiositas, 
-<lb ed="#R"/>quae vocatur quaedam adhaesio sive investi<lb ed="#R"/>gatio 
-            veritatum impertinentium saluti. 
-<lb ed="#R"/>Pro quo est notandum quod secundum opinionem <name>Guillelmi 
-<lb ed="#R"/>Parisiensis</name> in libro suo <title>De fide et legibus</title> 
-<lb ed="#R"/>et in hoc concordat se <name>Guillelmus Altissiodorensis</name> quod 
-<lb ed="#R"/>intellectus habet primam veritatem pro sua sponsa 
-<lb ed="#R"/>vera cui debet ultimate coniungi et quae 
-<lb ed="#R"/>est perfectio ultimata et summa ipsius intellectus. 
-<lb ed="#R"/>Dicit consequenter quod omnes aliae veritates solum sunt 
-            <cb n="14ra" ed="#R"/><lb ed="#R"/>ab intellectu complendae in relatione ad primam 
-<lb ed="#R"/>veritatem, ita quod imaginatio sua est quod, sicut 
-<lb ed="#R"/>dilectio non est bene regulata, quae non est in di<lb ed="#R"/>lectione 
-            dei relata, ita assensus sive veritas 
-<lb ed="#R"/>non est consideranda, nisi in ordine ad 
-<lb ed="#R"/>primam veritatem, referendo eam ad primam 
-<lb ed="#R"/>veritatem. Si autem contingat quod intellectus as<lb ed="#R"/>sentiat 
-            alicui veritati non referendo ipsam 
-<lb ed="#R"/>in primam veritatem, tunc dicit <name>Guillelmus</name> quod est 
-<lb ed="#R"/>fornicatio spiritualis et talis veritas non per<lb ed="#R"/>ficit 
-            intellectum; immo est dispositio distrahens 
-<lb ed="#R"/>consecutive sive investigatione veritatis.</p>
-          
-        </div>
-        <div><head xml:id="l9-Hdpdpdp">[Duae propositiones]</head>
-          
-          <p xml:id="l9-epiaca">
-<lb ed="#R"/>Ex praedictis inferuntur duae propositiones. Prima 
-<lb ed="#R"/>est quod respectu temporalium et naturalium et respectu 
-<lb ed="#R"/>veritatum politicae necessariarum oportet uti fide quadam. 
-<lb ed="#R"/>Unde in regimine politico, ratione debilitatis 
-<lb ed="#R"/>ingenii oportet quod servus regatur a domino et quod cre<lb ed="#R"/>dat 
-            domino suo. Item infirmi adhibent 
-<lb ed="#R"/>fidem et credunt medico suo, quia infirmus, 
-<lb ed="#R"/>dum est infirmus, non potest investigare 
-<lb ed="#R"/>medicinam curativam sui morbi. Item in 
-<lb ed="#R"/>consiliis sunt aliqui qui non possunt compre<lb ed="#R"/>hendere 
-            aliquas veritates, ideo oportet quod credant 
-<lb ed="#R"/>aliis qui sunt elevantiores Et generaliter in omnibus, 
-<lb ed="#R"/>oportet quod credatur magis elevantibus et superientibus. 
-<lb ed="#R"/>Item caecus credit videnti, ideo submittit 
-<lb ed="#R"/>se bruto ut docet communis experientia; ergo 
-<lb ed="#R"/>naturalis ordo etiam politicus in hiis in quibus 
-<lb ed="#R"/>est defectus potentiae oportet se submittere alteri, 
-<lb ed="#R"/>et nedum aequali, sed minori, quia caecus communiter du<lb ed="#R"/>citur 
-            a bruto. Et per consequens cum intellectus humanus 
-<lb ed="#R"/>propter impedimenta prius dicta sit quasi secutiens, 
-<lb ed="#R"/>et hoc testatur <name>Aristoteles</name> et <name>Commentator</name> IIo <title>Metaphysicae</title> dicens 
-<lb ed="#R"/>quod "sicut se habet oculus noctuae ad lumen 
-<lb ed="#R"/>solis" etc. Videtur quod fides sit accipienda tamquam 
-<lb ed="#R"/>summe necessaria ad cognoscendum arduissima.</p>
-          
-          <p xml:id="l9-cimnei">
-<lb ed="#R"/>Circa istam materiam proposueram adducere 
-<lb ed="#R"/>multas apparentias falsas, sed ne nimis 
-<lb ed="#R"/>vos attediam[?], dico pro praesenti quod debilitatem 
-<lb ed="#R"/>ingenii alibi exprimemus[?] quam in materia 
-<lb ed="#R"/>fidei aequae vehementis patet clare in certis 
-<lb ed="#R"/>sophisticibus et in aliquibus propositionibus geomet<lb ed="#R"/>riae 
-            et astrologiae et in materia proportionum. 
-<lb ed="#R"/>Ita quod multae reperiuntur propositiones ita difficiles 
-<lb ed="#R"/>ad sustinendum, sicut sunt articuli fidei, unde, 
-<lb ed="#R"/>licet in materia insolubilium multi multa dixerint, 
-<lb ed="#R"/>tamen numquam materia illa fuit bene soluta. Et gratia 
-<lb ed="#R"/>exempli, capio minimum insolubilium, scilicet, istud 
-<lb ed="#R"/><name>Socrates</name> dicit falsum supposito quod non dicat aliam propositionem 
-<lb ed="#R"/>et quod remaneant significationes terminorum, et tunc 
-            <cb ed="#R" n="14rb"/><lb ed="#R"/>introduceretur sicut fit communiter. Difficultas est 
-<lb ed="#R"/>hic maxima ex parte circulationis intellectus, 
-<lb ed="#R"/>nam intellectus iudicando de veritate alicuius 
-<lb ed="#R"/>propositionis habet istum modum quod primo considerat 
-<lb ed="#R"/>rem per propositionem significatam et consequenter considerat 
-<lb ed="#R"/>qualiter se habeat, et tunc, si sic, conformi<lb ed="#R"/>tas 
-            rei significatae ad extra per propositionem et modi 
-<lb ed="#R"/>significandi propositionis, tunc illa propositio est vera, quia ab 
-<lb ed="#R"/>eo quod res est vel non est, dicitur oratio vera vel falsa 
-<lb ed="#R"/>modo in propositionibus insolubilibus. Est circulatio plenissi<lb ed="#R"/>ma, 
-            quia si ego velim scire utrum sit ita 
-<lb ed="#R"/>a parte rei sicut propositio significat, oportebit prius scire 
-<lb ed="#R"/>utrum propositio sit vera, et antequam possumus scire quod 
-<lb ed="#R"/>propositio sit vera, oportet scire utrum ita sit a parte rei, nec 
-<lb ed="#R"/>patet ibidem introitus ratione debilitatis nostri ingenii, 
-<lb ed="#R"/>quia non dubito quod angelo illud non esset insolubile.
+            <lb ed="#R"/>et temptationes daemonium repellere sine 
+            <lb ed="#R"/>speciali gratia et iuvamine ipsius Dei
           </p>
-        </div>     
-
-          <div><head xml:id="l9-Hapapap">[Aliquae propositiones]</head>
-        
-            <p xml:id="l9-edeaap">
-<lb ed="#R"/>Ex dictis et imaginatione praedicta adiunguntur 
-<lb ed="#R"/>aliquae propositiones.</p> 
-       
-            <p xml:id="l9-peqsdd">Prima est quod stat quod <name>Socrates</name> non posset 
-<lb ed="#R"/>habere ex puris naturalibus suis nisi fide de 
-<lb ed="#R"/>propositione quae sit scita a <name>Platone</name>. Probatur conclusio, nam capia<lb ed="#R"/>mus 
-              aliquam propositionem quae sit extra totam latitudinem 
-<lb ed="#R"/>propositionum scibilium a Sorte secundum investigationem huma
-<lb ed="#R"/>nam, tunc ponatur quod <name>Plato</name> sit melioris complexionis, 
-<lb ed="#R"/>et consequenter melioris ingenii quam <name>Socrates</name>, tunc propositio 
-<lb ed="#R"/>illa poterit esse scita a <name>Platone</name>, ergo si <name>Socrates</name> as<lb ed="#R"/>sentiat 
-              illi oportebit quod sit per fidem supponendo 
-<lb ed="#R"/>eam esse veram. Et sic consequenter inferretur quod in geo<lb ed="#R"/>metria 
-              sunt multae propositiones ab angelo vel ab 
-<lb ed="#R"/>homine bene complexionato sive disposito 
-<lb ed="#R"/>scitae quibus homines, ut in pluribus, non possent 
-<lb ed="#R"/>assentire nisi ex fide ratione debilitatis complex<lb ed="#R"/>ionum 
-              eorum. Et ex hoc sequitur quod non est mi<lb ed="#R"/>rabile, 
-              si habeamus fidem de secundo obiecto, scilicet, de 
-<lb ed="#R"/>Deo.</p>  
-           
-            <p xml:id="l9-suqads">Sequitur ulterius quod in regiminibus poli<lb ed="#R"/>ticis 
-              periculosum est inniti iudicio humano. 
-<lb ed="#R"/>Ex hoc sequitur quod maxime apud regentes 
-<lb ed="#R"/>politiam consulenda est Sacra Scriptura, quia nititur 
-<lb ed="#R"/>medio infallibili. Et cum hoc quia ipsa sufficit, 
-<lb ed="#R"/>quia si sacram scripturam bene resolverent de omnibus, 
-<lb ed="#R"/>in ea invenirent consilium. Unde ponit 
-<lb ed="#R"/>expresse <name>Anselmus</name> quod "omnis veritas est 
-<lb ed="#R"/>realiter contenta in Sacra Scriptura," et ita 
-<lb ed="#R"/>ponit Beatus <name>Augustinus</name> et multi alii doctores 
-<lb ed="#R"/>sancti.</p>
-          
-            <p xml:id="l9-suqetc">Sequitur ulterius quod non est semper 
-<lb ed="#R"/>sine periculo uti legibus <cb ed="#V" n="21vb"/>rationes ad omnem 
-<lb ed="#R"/>politiam regendam. Non dico tamen quin bene 
-<lb ed="#R"/>iuvant, sed dico quod non est ultimate sistendum 
-<lb ed="#R"/>in eis, quia innituntur aliquando debili fundamento, 
-<lb ed="#R"/>immo aliquando innituntur forte fundamento falso, 
-<lb ed="#R"/>quia verisimile est quod Romani aliquas leges <cb n="14va" ed="#R"/>
-<lb ed="#R"/>malae et tyrannicae condiderit.</p> 
-         
-            <p xml:id="l9-stqfad">Sequitur 
-<lb ed="#R"/>tandem quod in omnibus agibilibus, sive tangentibus 
-<lb ed="#R"/>fidem sive non, semper debet invocari di<lb ed="#R"/>vinum 
-              auxilium, quia semper est verum nec potest 
-<lb ed="#R"/>falli, et hoc testatur <name>Plato</name> in Tymeo, ubi 
-<lb ed="#R"/>acturus erat de Deo et dicit quod auxilium 
-<lb ed="#R"/>divinitatis in omnibus debet implorari, et ista 
-<lb ed="#R"/>imploratio non permittit aliquae errare im<lb ed="#R"/>mittendo 
-              isti implorationi, isti enim defectus, 
-<lb ed="#R"/>sicut praedicti, proveniunt ex defectu originalis 
-<lb ed="#R"/>culpae. Ex quo sequitur quod omnis deceptio 
-<lb ed="#R"/>provenit ex originali culpa, quia in statu inno<lb ed="#R"/>centiae 
-              non fuissent aliquae deceptiones.</p> 
-             
-            <p xml:id="l9-suqeoc">Sequitur 
-<lb ed="#R"/>ulterius quod formido veritatis opinione[?] est effectus 
-<lb ed="#R"/>originalis culpae.</p>
-
-            <p xml:id="l9-suqnhl">Sequitur ulterius 
-<lb ed="#R"/>quod omnis error et omnis sophisticatio provenit 
-<lb ed="#R"/>ex originali culpa. Ex quo sequitur quod si 
-<lb ed="#R"/>status innocentiae mansisset, nulli fuissent 
-<lb ed="#R"/>errores nec sophisticationes. Ex quo ulterius 
-<lb ed="#R"/>sequitur quod in statu innocentiae ars sophis<lb ed="#R"/>tica 
-              non habuisset locum.</p> 
-         
-            <p xml:id="l9-seqnff">Sequitur etiam quod in statu 
-<lb ed="#R"/>innocentiae nulla opinionum contrarietas, immo 
-<lb ed="#R"/>nulla fuisset opinio, et causa est, quia opinio est 
-<lb ed="#R"/>cum formidine; semper modo in statu illo non 
-<lb ed="#R"/>fuisset formido.</p> 
-         
-            <p xml:id="l9-suqhne">Sequitur ulterius quod nulla 
-<lb ed="#R"/>etiam fuisset ibi ratio probabilis prout ratio probabilis 
-<lb ed="#R"/>dicit formidinem. Verum est quod de modo cognoscendi 
-<lb ed="#R"/>veritatem in statu <g ref="#carrot"/><add place="aboveLine">illo</add> innocentiae possunt poni 
-<lb ed="#R"/>aliquae propositiones, posset enim imaginari de statu 
-<lb ed="#R"/>innocentiae dupliciter; dicitur enim quod in primis 
-<lb ed="#R"/>prius parens de quibusdam veritatibus habebat 
-<lb ed="#R"/>notitiam et evidentiam certam, ita quod circa quamlibet 
-<lb ed="#R"/>veritatem circa quam volebat considerare per 
-<lb ed="#R"/>habitum nobiliorem sibi a Deo infusum stanti habebat 
-<lb ed="#R"/>notitiam certam et evidentem sicut fuit de Christo, 
-<lb ed="#R"/>non quia habuerit lumen aequae perfectum sicut Christus, 
-<lb ed="#R"/>sed quia habuerit lumen mediante quo poterat immediate 
-<lb ed="#R"/>circa quamlibet veritatem requisitam ad decorem sui 
-<lb ed="#R"/>status et circa quam docebat habere notitiam evidentem.</p>    
-       
-       <div><head xml:id="l9-Hoauper">[Obiecto ad ultimam propositionem et responsiones]</head>
-         
-         <p xml:id="l9-stdcsd">
-<lb ed="#R"/>Sed tunc diceretur, tunc aeque erat cognoscens sicut 
-<lb ed="#R"/>Deus.</p> 
-      
-         <p xml:id="l9-rncesi">Respondetur negando consequentiam et modus respondendi esset 
-<lb ed="#R"/>multiplex. Unus modus esset quod realiter quaelibet veri<lb ed="#R"/>tas 
-           quantum est de se est immediate cognoscibilis 
-<lb ed="#R"/>quia iam de facto quaelibet veritas immediate cognoscitur 
-<lb ed="#R"/>a Deo, ita quod non essentialis ordo ex parte cognoscibilium, 
-<lb ed="#R"/>quod principia prius cognoscantur quam conclusiones, 
-<lb ed="#R"/>sed solum quoad nos est talis ordo ex defectu 
-<lb ed="#R"/>potentiae, scilicet, quod per prius cognoscimus principia 
-<lb ed="#R"/>quam conclusiones. Immo imaginandum est quod <name>Adam</name> ex habitu 
-<lb ed="#R"/>illo nobili sibi a Deo infuso poterat exire 
-           <cb n="14vb" ed="#R"/><lb ed="#R"/>in quamlibet veritatem et istud bene potest sustineri 
-<lb ed="#R"/>sine contradictione nec istud est contra immensi<lb ed="#R"/>tatem 
-           divinam, immo potius in laudem ipsius nec hoc est contra fidem, sed quia hoc non communiter 
-<lb ed="#R"/>ponitur a doctoribus, ideo nolo hoc multum assentire, 
-<lb ed="#R"/>sed solum <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> quod ita potest dici; posset 
-<lb ed="#R"/>etiam dici quod non omnia poterat cognoscere mediante 
-<lb ed="#R"/>illo habitu nobili bene imaginatur quod erant 
-<lb ed="#R"/>quaedam veritates quae habebant ordinem ad de<lb ed="#R"/>corem 
-           sui status. Aliae autem non immo erant 
-<lb ed="#R"/>totaliter impertinentes, ideo secunda solutio esset quod mediante 
-<lb ed="#R"/>illo habitu poterat immediate exire in omnem 
-<lb ed="#R"/>veritatem facientem ad decorem sui status, 
-<lb ed="#R"/>sed non in cognitionem aliarum veritatum, immo 
-<lb ed="#R"/>erant sibi ignotae.</p>
-         
-         <p xml:id="l9-scseec">Sed contra, si iste 
-<lb ed="#R"/>considerasset de huiusmodi veritatibus, non potu
-<lb ed="#R"/>isset habere notitiam de eis quod est contra dictum 
-<lb ed="#R"/>prius quia dictum est quod in primis circa quamlibet veritatem 
-<lb ed="#R"/>circa quam considerare volebant immediate 
-<lb ed="#R"/>habebant notitiam evidentem et certam.</p>
-      
-         <p xml:id="l9-ruedss">Responsio 
-<lb ed="#R"/>una est quod in isto casu ex ordinatione divina 
-<lb ed="#R"/>habebat unum habitum mediante quo, sicut dictum 
-<lb ed="#R"/>est, poterat exire in notitiam veritatum ad decorem 
-<lb ed="#R"/>sui status pertinentium; respectu autem aliarum veritatum 
-<lb ed="#R"/>habebant unum assensum quod infinite latebat eum 
-<lb ed="#R"/>necessarias ad decorem sui status. Et istud faciebat 
-<lb ed="#R"/>ad gaudium suum, quia ipse sciebat quod erant 
-<lb ed="#R"/>infinitae veritates quae non requirebantur ad 
-<lb ed="#R"/>decorem sui status, sicut est de beatis, beatus 
-<lb ed="#R"/>enim vident in Verbo, quod infinita Deus cognoscit, 
-<lb ed="#R"/>quae beatus ille non cognoscit et quae non sunt necessaria 
-<lb ed="#R"/>ad beatitudinem eius formalem. Et ex hoc 
-<lb ed="#R"/>iudicat Deum esse nobilissimae perfectionis 
-<lb ed="#R"/>et cognitionis et in hoc gaudet, quia habet talem Deum 
-<lb ed="#R"/>ita nobilem et ita perfectum. Dico consequenter quod sta<lb ed="#R"/>bat 
-           quod <name>Adam</name> considerasset circa huiusmodi veritates 
-<lb ed="#R"/>quae non pertinebant ad decorem sui status, quia 
-<lb ed="#R"/>non appetebat eas, sed tota perfectio eius erat con<lb ed="#R"/>siderare 
-           circa veritates necessarias ad decorem 
-<lb ed="#R"/>sui status.</p>
-         
-         <p xml:id="l9-srpivi">Secunda responsio posset esse quod respectu 
-<lb ed="#R"/>cuiuscumque veritatis habebat habitum et non actum, 
-<lb ed="#R"/>ideo licet omnem veritatem potuisset cognovisse, 
-<lb ed="#R"/>non tamen potuisset cognovisse omnes veritates. 
-<lb ed="#R"/>Et istam viam reputo satis probabilem, licet non sit 
-<lb ed="#R"/>multum consueta, quomodo autem fides remaneat 
-<lb ed="#R"/>ad praedictas infirmitates, videbitur insequentibus.</p>
-
-       </div>
-      </div>       
+          <p xml:id="l9-eetsiv">
+            Est 
+            <lb ed="#R"/>etiam torpor et desidia, est etiam curiositas, 
+            <lb ed="#R"/>quae vocatur quaedam adhaesio sive investi<lb ed="#R" break="no"/>gatio 
+            veritatum impertinentium saluti. 
+            <lb ed="#R"/>Pro quo est notandum quod secundum opinionem <name>Guillelmi 
+            <lb ed="#R"/>Parisiensis</name> in libro suo <title>De fide et legibus</title> 
+            <lb ed="#R"/>et in hoc concordat se <name>Guillelmus Altissiodorensis</name> quod 
+            <lb ed="#R"/>intellectus habet primam veritatem pro sua sponsa 
+            <lb ed="#R"/>vera cui debet ultimate coniungi et quae 
+            <lb ed="#R"/>est perfectio ultimata et summa ipsius intellectus. 
+            <lb ed="#R"/>Dicit consequenter quod omnes aliae veritates solum sunt 
+            <pb n="14-r" ed="#R"/>
+            <cb n="a" ed="#R"/>
+            <lb ed="#R"/>ab intellectu complendae in relatione ad primam 
+            <lb ed="#R"/>veritatem, ita quod imaginatio sua est quod, sicut 
+            <lb ed="#R"/>dilectio non est bene regulata, quae non est in di<lb ed="#R" break="no"/>lectione 
+            dei relata, ita assensus sive veritas 
+            <lb ed="#R"/>non est consideranda, nisi in ordine ad 
+            <lb ed="#R"/>primam veritatem, referendo eam ad primam 
+            <lb ed="#R"/>veritatem. Si autem contingat quod intellectus as<lb ed="#R" break="no"/>sentiat 
+            alicui veritati non referendo ipsam 
+            <lb ed="#R"/>in primam veritatem, tunc dicit <name>Guillelmus</name> quod est 
+            <lb ed="#R"/>fornicatio spiritualis et talis veritas non per<lb ed="#R" break="no"/>ficit 
+            intellectum; immo est dispositio distrahens 
+            <lb ed="#R"/>consecutive sive investigatione veritatis
+          </p>
+        </div>
+        <div>
+          <head xml:id="l9-Hdpdpdp">[Duae propositiones]</head>
+          <p xml:id="l9-epiaca">
+            <lb ed="#R"/>Ex praedictis inferuntur duae propositiones. Prima 
+            <lb ed="#R"/>est quod respectu temporalium et naturalium et respectu 
+            <lb ed="#R"/>veritatum politicae necessariarum oportet uti fide quadam. 
+            <lb ed="#R"/>Unde in regimine politico, ratione debilitatis 
+            <lb ed="#R"/>ingenii oportet quod servus regatur a domino et quod cre<lb ed="#R" break="no"/>dat 
+            domino suo. Item infirmi adhibent 
+            <lb ed="#R"/>fidem et credunt medico suo, quia infirmus, 
+            <lb ed="#R"/>dum est infirmus, non potest investigare 
+            <lb ed="#R"/>medicinam curativam sui morbi. Item in 
+            <lb ed="#R"/>consiliis sunt aliqui qui non possunt compre<lb ed="#R" break="no"/>hendere 
+            aliquas veritates, ideo oportet quod credant 
+            <lb ed="#R"/>aliis qui sunt elevantiores Et generaliter in omnibus, 
+            <lb ed="#R"/>oportet quod credatur magis elevantibus et superientibus. 
+            <lb ed="#R"/>Item caecus credit videnti, ideo submittit 
+            <lb ed="#R"/>se bruto ut docet communis experientia; ergo 
+            <lb ed="#R"/>naturalis ordo etiam politicus in hiis in quibus 
+            <lb ed="#R"/>est defectus potentiae oportet se submittere alteri, 
+            <lb ed="#R"/>et nedum aequali, sed minori, quia caecus communiter du<lb ed="#R" break="no"/>citur 
+            a bruto. Et per consequens cum intellectus humanus 
+            <lb ed="#R"/>propter impedimenta prius dicta sit quasi secutiens, 
+            <lb ed="#R"/>et hoc testatur <name>Aristoteles</name> et <name>Commentator</name> IIo <title>Metaphysicae</title> dicens 
+            <lb ed="#R"/>quod "sicut se habet oculus noctuae ad lumen 
+            <lb ed="#R"/>solis" etc. Videtur quod fides sit accipienda tamquam 
+            <lb ed="#R"/>summe necessaria ad cognoscendum arduissima
+          </p>
+          <p xml:id="l9-cimnei">
+            <lb ed="#R"/>Circa istam materiam proposueram adducere 
+            <lb ed="#R"/>multas apparentias falsas, sed ne nimis 
+            <lb ed="#R"/>vos attediam[?], dico pro praesenti quod debilitatem 
+            <lb ed="#R"/>ingenii alibi exprimemus[?] quam in materia 
+            <lb ed="#R"/>fidei aequae vehementis patet clare in certis 
+            <lb ed="#R"/>sophisticibus et in aliquibus propositionibus geomet<lb ed="#R" break="no"/>riae 
+            et astrologiae et in materia proportionum. 
+            <lb ed="#R"/>Ita quod multae reperiuntur propositiones ita difficiles 
+            <lb ed="#R"/>ad sustinendum, sicut sunt articuli fidei, unde, 
+            <lb ed="#R"/>licet in materia insolubilium multi multa dixerint, 
+            <lb ed="#R"/>tamen numquam materia illa fuit bene soluta. Et gratia 
+            <lb ed="#R"/>exempli, capio minimum insolubilium, scilicet, istud 
+            <lb ed="#R"/><name>Socrates</name> dicit falsum supposito quod non dicat aliam propositionem 
+            <lb ed="#R"/>et quod remaneant significationes terminorum, et tunc 
+            <cb ed="#R" n="b"/> <!-- 14rb -->
+            <lb ed="#R"/>introduceretur sicut fit communiter. Difficultas est 
+            <lb ed="#R"/>hic maxima ex parte circulationis intellectus, 
+            <lb ed="#R"/>nam intellectus iudicando de veritate alicuius 
+            <lb ed="#R"/>propositionis habet istum modum quod primo considerat 
+            <lb ed="#R"/>rem per propositionem significatam et consequenter considerat 
+            <lb ed="#R"/>qualiter se habeat, et tunc, si sic, conformi<lb ed="#R" break="no"/>tas 
+            rei significatae ad extra per propositionem et modi 
+            <lb ed="#R"/>significandi propositionis, tunc illa propositio est vera, quia ab 
+            <lb ed="#R"/>eo quod res est vel non est, dicitur oratio vera vel falsa 
+            <lb ed="#R"/>modo in propositionibus insolubilibus. Est circulatio plenissi<lb ed="#R" break="no"/>ma, 
+            quia si ego velim scire utrum sit ita 
+            <lb ed="#R"/>a parte rei sicut propositio significat, oportebit prius scire 
+            <lb ed="#R"/>utrum propositio sit vera, et antequam possumus scire quod 
+            <lb ed="#R"/>propositio sit vera, oportet scire utrum ita sit a parte rei, nec 
+            <lb ed="#R"/>patet ibidem introitus ratione debilitatis nostri ingenii, 
+            <lb ed="#R"/>quia non dubito quod angelo illud non esset insolubile
+          </p>
+        </div>
+        <div>
+          <head xml:id="l9-Hapapap">[Aliquae propositiones]</head>
+          <p xml:id="l9-edeaap">
+            <lb ed="#R"/>Ex dictis et imaginatione praedicta adiunguntur 
+            <lb ed="#R"/>aliquae propositiones
+          </p>
+          <p xml:id="l9-peqsdd">
+            Prima est quod stat quod <name>Socrates</name> non posset 
+            <lb ed="#R"/>habere ex puris naturalibus suis nisi fide de 
+            <lb ed="#R"/>propositione quae sit scita a <name>Platone</name>. Probatur conclusio, nam capia<lb ed="#R" break="no"/>mus 
+            aliquam propositionem quae sit extra totam latitudinem 
+            <lb ed="#R"/>propositionum scibilium a Sorte secundum investigationem huma
+            <lb ed="#R"/>nam, tunc ponatur quod <name>Plato</name> sit melioris complexionis, 
+            <lb ed="#R"/>et consequenter melioris ingenii quam <name>Socrates</name>, tunc propositio 
+            <lb ed="#R"/>illa poterit esse scita a <name>Platone</name>, ergo si <name>Socrates</name> as<lb ed="#R" break="no"/>sentiat 
+            illi oportebit quod sit per fidem supponendo 
+            <lb ed="#R"/>eam esse veram. Et sic consequenter inferretur quod in geo<lb ed="#R" break="no"/>metria 
+            sunt multae propositiones ab angelo vel ab 
+            <lb ed="#R"/>homine bene complexionato sive disposito 
+            <lb ed="#R"/>scitae quibus homines, ut in pluribus, non possent 
+            <lb ed="#R"/>assentire nisi ex fide ratione debilitatis complex<lb ed="#R" break="no"/>ionum 
+            eorum. Et ex hoc sequitur quod non est mi<lb ed="#R" break="no"/>rabile, 
+            si habeamus fidem de secundo obiecto, scilicet, de 
+            <lb ed="#R"/>Deo
+          </p>
+          <p xml:id="l9-suqads">
+            Sequitur ulterius quod in regiminibus poli<lb ed="#R" break="no"/>ticis 
+            periculosum est inniti iudicio humano. 
+            <lb ed="#R"/>Ex hoc sequitur quod maxime apud regentes 
+            <lb ed="#R"/>politiam consulenda est Sacra Scriptura, quia nititur 
+            <lb ed="#R"/>medio infallibili. Et cum hoc quia ipsa sufficit, 
+            <lb ed="#R"/>quia si sacram scripturam bene resolverent de omnibus, 
+            <lb ed="#R"/>in ea invenirent consilium. Unde ponit 
+            <lb ed="#R"/>expresse <name>Anselmus</name> quod "omnis veritas est 
+            <lb ed="#R"/>realiter contenta in Sacra Scriptura," et ita 
+            <lb ed="#R"/>ponit Beatus <name>Augustinus</name> et multi alii doctores 
+            <lb ed="#R"/>sancti
+          </p>
+          <p xml:id="l9-suqetc">
+            Sequitur ulterius quod non est semper 
+            <lb ed="#R"/>sine periculo uti legibus rationes ad omnem 
+            <lb ed="#R"/>politiam regendam. Non dico tamen quin bene 
+            <lb ed="#R"/>iuvant, sed dico quod non est ultimate sistendum 
+            <lb ed="#R"/>in eis, quia innituntur aliquando debili fundamento, 
+            <lb ed="#R"/>immo aliquando innituntur forte fundamento falso, 
+            <lb ed="#R"/>quia verisimile est quod Romani aliquas leges 
+            <pb n="14-v" ed="#R"/>
+            <cb n="a" ed="#R"/>
+            <lb ed="#R"/>malae et tyrannicae condiderit
+          </p>
+          <p xml:id="l9-stqfad">
+            Sequitur 
+            <lb ed="#R"/>tandem quod in omnibus agibilibus, sive tangentibus 
+            <lb ed="#R"/>fidem sive non, semper debet invocari di<lb ed="#R" break="no"/>vinum 
+            auxilium, quia semper est verum nec potest 
+            <lb ed="#R"/>falli, et hoc testatur <name>Plato</name> in Tymeo, ubi 
+            <lb ed="#R"/>acturus erat de Deo et dicit quod auxilium 
+            <lb ed="#R"/>divinitatis in omnibus debet implorari, et ista 
+            <lb ed="#R"/>imploratio non permittit aliquae errare im<lb ed="#R" break="no"/>mittendo 
+            isti implorationi, isti enim defectus, 
+            <lb ed="#R"/>sicut praedicti, proveniunt ex defectu originalis 
+            <lb ed="#R"/>culpae. Ex quo sequitur quod omnis deceptio 
+            <lb ed="#R"/>provenit ex originali culpa, quia in statu inno<lb ed="#R" break="no"/>centiae 
+            non fuissent aliquae deceptiones
+          </p>
+          <p xml:id="l9-suqeoc">
+            Sequitur 
+            <lb ed="#R"/>ulterius quod formido veritatis opinione[?] est effectus 
+            <lb ed="#R"/>originalis culpae
+          </p>
+          <p xml:id="l9-suqnhl">
+            Sequitur ulterius 
+            <lb ed="#R"/>quod omnis error et omnis sophisticatio provenit 
+            <lb ed="#R"/>ex originali culpa. Ex quo sequitur quod si 
+            <lb ed="#R"/>status innocentiae mansisset, nulli fuissent 
+            <lb ed="#R"/>errores nec sophisticationes. Ex quo ulterius 
+            <lb ed="#R"/>sequitur quod in statu innocentiae ars sophis<lb ed="#R" break="no"/>tica 
+            non habuisset locum
+          </p>
+          <p xml:id="l9-seqnff">
+            Sequitur etiam quod in statu 
+            <lb ed="#R"/>innocentiae nulla opinionum contrarietas, immo 
+            <lb ed="#R"/>nulla fuisset opinio, et causa est, quia opinio est 
+            <lb ed="#R"/>cum formidine; semper modo in statu illo non 
+            <lb ed="#R"/>fuisset formido
+          </p>
+          <p xml:id="l9-suqhne">
+            Sequitur ulterius quod nulla 
+            <lb ed="#R"/>etiam fuisset ibi ratio probabilis prout ratio probabilis 
+            <lb ed="#R"/>dicit formidinem. Verum est quod de modo cognoscendi 
+            <lb ed="#R"/>veritatem in statu <g ref="#carrot"/><add place="aboveLine">illo</add> innocentiae possunt poni 
+            <lb ed="#R"/>aliquae propositiones, posset enim imaginari de statu 
+            <lb ed="#R"/>innocentiae dupliciter; dicitur enim quod in primis 
+            <lb ed="#R"/>prius parens de quibusdam veritatibus habebat 
+            <lb ed="#R"/>notitiam et evidentiam certam, ita quod circa quamlibet 
+            <lb ed="#R"/>veritatem circa quam volebat considerare per 
+            <lb ed="#R"/>habitum nobiliorem sibi a Deo infusum stanti habebat 
+            <lb ed="#R"/>notitiam certam et evidentem sicut fuit de Christo, 
+            <lb ed="#R"/>non quia habuerit lumen aequae perfectum sicut Christus, 
+            <lb ed="#R"/>sed quia habuerit lumen mediante quo poterat immediate 
+            <lb ed="#R"/>circa quamlibet veritatem requisitam ad decorem sui 
+            <lb ed="#R"/>status et circa quam docebat habere notitiam evidentem
+          </p>
+          <div>
+            <head xml:id="l9-Hoauper">[Obiecto ad ultimam propositionem et responsiones]</head>
+            <p xml:id="l9-stdcsd">
+              <lb ed="#R"/>Sed tunc diceretur, tunc aeque erat cognoscens sicut 
+              <lb ed="#R"/>Deus
+            </p>
+            <p xml:id="l9-rncesi">
+              Respondetur negando consequentiam et modus respondendi esset 
+              <lb ed="#R"/>multiplex. Unus modus esset quod realiter quaelibet veri<lb ed="#R" break="no"/>tas 
+              quantum est de se est immediate cognoscibilis 
+              <lb ed="#R"/>quia iam de facto quaelibet veritas immediate cognoscitur 
+              <lb ed="#R"/>a Deo, ita quod non essentialis ordo ex parte cognoscibilium, 
+              <lb ed="#R"/>quod principia prius cognoscantur quam conclusiones, 
+              <lb ed="#R"/>sed solum quoad nos est talis ordo ex defectu 
+              <lb ed="#R"/>potentiae, scilicet, quod per prius cognoscimus principia 
+              <lb ed="#R"/>quam conclusiones. Immo imaginandum est quod <name>Adam</name> ex habitu 
+              <lb ed="#R"/>illo nobili sibi a Deo infuso poterat exire 
+              <cb n="b" ed="#R"/> <!-- 14vb -->
+              <lb ed="#R"/>in quamlibet veritatem et istud bene potest sustineri 
+              <lb ed="#R"/>sine contradictione nec istud est contra immensi<lb ed="#R" break="no"/>tatem 
+              divinam, immo potius in laudem ipsius nec hoc est contra fidem, sed quia hoc non communiter 
+              <lb ed="#R"/>ponitur a doctoribus, ideo nolo hoc multum assentire, 
+              <lb ed="#R"/>sed solum <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> quod ita potest dici; posset 
+              <lb ed="#R"/>etiam dici quod non omnia poterat cognoscere mediante 
+              <lb ed="#R"/>illo habitu nobili bene imaginatur quod erant 
+              <lb ed="#R"/>quaedam veritates quae habebant ordinem ad de<lb ed="#R" break="no"/>corem 
+              sui status. Aliae autem non immo erant 
+              <lb ed="#R"/>totaliter impertinentes, ideo secunda solutio esset quod mediante 
+              <lb ed="#R"/>illo habitu poterat immediate exire in omnem 
+              <lb ed="#R"/>veritatem facientem ad decorem sui status, 
+              <lb ed="#R"/>sed non in cognitionem aliarum veritatum, immo 
+              <lb ed="#R"/>erant sibi ignotae
+            </p>
+            <p xml:id="l9-scseec">
+              Sed contra, si iste 
+              <lb ed="#R"/>considerasset de huiusmodi veritatibus, non potu
+              <lb ed="#R"/>isset habere notitiam de eis quod est contra dictum 
+              <lb ed="#R"/>prius quia dictum est quod in primis circa quamlibet veritatem 
+              <lb ed="#R"/>circa quam considerare volebant immediate 
+              <lb ed="#R"/>habebant notitiam evidentem et certam
+            </p>
+            <p xml:id="l9-ruedss">
+              Responsio 
+              <lb ed="#R"/>una est quod in isto casu ex ordinatione divina 
+              <lb ed="#R"/>habebat unum habitum mediante quo, sicut dictum 
+              <lb ed="#R"/>est, poterat exire in notitiam veritatum ad decorem 
+              <lb ed="#R"/>sui status pertinentium; respectu autem aliarum veritatum 
+              <lb ed="#R"/>habebant unum assensum quod infinite latebat eum 
+              <lb ed="#R"/>necessarias ad decorem sui status. Et istud faciebat 
+              <lb ed="#R"/>ad gaudium suum, quia ipse sciebat quod erant 
+              <lb ed="#R"/>infinitae veritates quae non requirebantur ad 
+              <lb ed="#R"/>decorem sui status, sicut est de beatis, beatus 
+              <lb ed="#R"/>enim vident in Verbo, quod infinita Deus cognoscit, 
+              <lb ed="#R"/>quae beatus ille non cognoscit et quae non sunt necessaria 
+              <lb ed="#R"/>ad beatitudinem eius formalem. Et ex hoc 
+              <lb ed="#R"/>iudicat Deum esse nobilissimae perfectionis 
+              <lb ed="#R"/>et cognitionis et in hoc gaudet, quia habet talem Deum 
+              <lb ed="#R"/>ita nobilem et ita perfectum. Dico consequenter quod sta<lb ed="#R" break="no"/>bat 
+              quod <name>Adam</name> considerasset circa huiusmodi veritates 
+              <lb ed="#R"/>quae non pertinebant ad decorem sui status, quia 
+              <lb ed="#R"/>non appetebat eas, sed tota perfectio eius erat con<lb ed="#R" break="no"/>siderare 
+              circa veritates necessarias ad decorem 
+              <lb ed="#R"/>sui status
+            </p>
+            <p xml:id="l9-srpivi">
+              Secunda responsio posset esse quod respectu 
+              <lb ed="#R"/>cuiuscumque veritatis habebat habitum et non actum, 
+              <lb ed="#R"/>ideo licet omnem veritatem potuisset cognovisse, 
+              <lb ed="#R"/>non tamen potuisset cognovisse omnes veritates. 
+              <lb ed="#R"/>Et istam viam reputo satis probabilem, licet non sit 
+              <lb ed="#R"/>multum consueta, quomodo autem fides remaneat 
+              <lb ed="#R"/>ad praedictas infirmitates, videbitur insequentibus
+            </p>
+          </div>
+        </div>
       </div>
-      
     </body>
   </text>
 </TEI>
