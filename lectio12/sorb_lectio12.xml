@@ -1,287 +1,318 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Prologus Lectio 12 [Sorbonne Transcription]</title>
-                <author xml:id="PP">Petrus Plaoul</author>
-                <editor xml:id="JW">Jeffrey C. Witt</editor>
-            </titleStmt>
-            <editionStmt>
-                <edition n="2011.10-dev-master">
-                    <title>Lectio 12, Prologus [Sorbonne Transcription]</title>
-                    <date when="2011-10-04">October 04, 2011</date>
-                </edition> 
-            </editionStmt>
-            <publicationStmt>
-                <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-                <pubPlace>Sacramento, CA</pubPlace>
-                <availability status="free">
-                    <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
-                </availability>
-                <date when="2011-03-25">March 23rd, 2011</date>
-            </publicationStmt>
-            <sourceDesc>
-                <listWit>
-                    <witness xml:id="S">Sorbonne</witness>
-                </listWit>
-            </sourceDesc>
-        </fileDesc>
-        
-    </teiHeader>  <facsimile>
-<surface n="S21r">
-<graphic url="S21r.jpg"/>
-<zone start="#l12-sfqpqs" ulx="200" uly="1851" lrx="850" lry="1992" n="1"/>
-<zone start="#l12-sfqpqs" ulx="849" uly="283" lrx="1499" lry="473" n="2"/>
-<zone start="#l12-dipvas" ulx="849" uly="396" lrx="1499" lry="769" n="1"/>
-<zone start="#l12-qaepdd" ulx="837" uly="729" lrx="1487" lry="1455" n="1"/>
-<zone start="#l12-echseh" ulx="833" uly="1382" lrx="1483" lry="1756" n="1"/>
-<zone start="#l12-sciuip" ulx="828" uly="1683" lrx="1478" lry="1985" n="1"/>
-</surface>
-<surface n="S21v">
-<graphic url="S21v.jpg"/>
-<zone start="#l12-sciuip" ulx="383" uly="276" lrx="1033" lry="472" n="2"/>
-<zone start="#l12-retuds" ulx="383" uly="398" lrx="1033" lry="1603" n="1"/>
-<zone start="#l12-snqabc" ulx="386" uly="1519" lrx="1036" lry="1803" n="1"/>
-<zone start="#l12-tpqidg" ulx="386" uly="1730" lrx="1036" lry="1998" n="1"/>
-<zone start="#l12-tpqidg" ulx="1031" uly="280" lrx="1681" lry="434" n="2"/>
-<zone start="#l12-efnefs" ulx="1031" uly="366" lrx="1681" lry="1983" n="1"/>
-</surface>
-<surface n="S22r">
-<graphic url="S22r.jpg"/>
-<zone start="#l12-efnefs" ulx="237" uly="277" lrx="887" lry="740" n="2"/>
-<zone start="#l12-amirpf" ulx="226" uly="668" lrx="876" lry="1618" n="1"/>
-<zone start="#l12-sepear" ulx="223" uly="1583" lrx="873" lry="1772" n="1"/>
-<zone start="#l12-equami" ulx="219" uly="1739" lrx="869" lry="1972" n="1"/>
-<zone start="#l12-equami" ulx="865" uly="282" lrx="1515" lry="678" n="2"/>
-</surface>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Prologus Lectio 12 [Sorbonne Transcription]</title>
+        <author xml:id="PP">Petrus Plaoul</author>
+        <editor xml:id="JW">Jeffrey C. Witt</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.0.0-dev">
+          <title>Lectio 12, de Fide [Sorbonne Transcription]</title>
+          <date when="2011-10-04">October 04, 2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <authority>SCTA</authority>
+        <availability status="free">
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
+        </availability>
+        <date when="2011-03-25">March 25, 2011</date>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="S21r">
+      <graphic url="S21r.jpg"/>
+      <zone start="#l12-sfqpqs" ulx="200" uly="1851" lrx="850" lry="1992" n="1"/>
+      <zone start="#l12-sfqpqs" ulx="849" uly="283" lrx="1499" lry="473" n="2"/>
+      <zone start="#l12-dipvas" ulx="849" uly="396" lrx="1499" lry="769" n="1"/>
+      <zone start="#l12-qaepdd" ulx="837" uly="729" lrx="1487" lry="1455" n="1"/>
+      <zone start="#l12-echseh" ulx="833" uly="1382" lrx="1483" lry="1756" n="1"/>
+      <zone start="#l12-sciuip" ulx="828" uly="1683" lrx="1478" lry="1985" n="1"/>
+    </surface>
+    <surface n="S21v">
+      <graphic url="S21v.jpg"/>
+      <zone start="#l12-sciuip" ulx="383" uly="276" lrx="1033" lry="472" n="2"/>
+      <zone start="#l12-retuds" ulx="383" uly="398" lrx="1033" lry="1603" n="1"/>
+      <zone start="#l12-snqabc" ulx="386" uly="1519" lrx="1036" lry="1803" n="1"/>
+      <zone start="#l12-tpqidg" ulx="386" uly="1730" lrx="1036" lry="1998" n="1"/>
+      <zone start="#l12-tpqidg" ulx="1031" uly="280" lrx="1681" lry="434" n="2"/>
+      <zone start="#l12-efnefs" ulx="1031" uly="366" lrx="1681" lry="1983" n="1"/>
+    </surface>
+    <surface n="S22r">
+      <graphic url="S22r.jpg"/>
+      <zone start="#l12-efnefs" ulx="237" uly="277" lrx="887" lry="740" n="2"/>
+      <zone start="#l12-amirpf" ulx="226" uly="668" lrx="876" lry="1618" n="1"/>
+      <zone start="#l12-sepear" ulx="223" uly="1583" lrx="873" lry="1772" n="1"/>
+      <zone start="#l12-equami" ulx="219" uly="1739" lrx="869" lry="1972" n="1"/>
+      <zone start="#l12-equami" ulx="865" uly="282" lrx="1515" lry="678" n="2"/>
+    </surface>
   </facsimile>
-    <text xml:lang="la">
-        <body>
-            <div xml:id="lectio12">
-                <head subtype="title">Lectio 12, Prologus [Sorbonne Transcription]</head>
-                <div>
-                  <head>[Conclusio]</head>
-                    <p xml:id="l12-sfqpqs">
-                      Consequenter con<lb ed="#S"/>tinuando 
-                      materiam inceptam, infertur ex prae<lb ed="#S"/>dictis 
-                      quod humana investigatio nec debite 
-                      <lb ed="#S"/>nec sufficienter dirigit tam intellectum practicum 
-                      <lb ed="#S"/>quam speculativum
-                    </p>
-                    
-                    <p xml:id="l12-dipvas">De intellectu practico, patet nam circa 
-                        <lb ed="#S"/>felicitatem tot fere fuerunt opiniones quot fuerunt 
-                        <lb ed="#S"/>philosophantes. Unde <name>Augustinus</name> <choice><orig>19o</orig><reg>XIXo</reg></choice> <title>De civitate Dei</title> capitulo primo,
-                        <lb ed="#S"/>dicit <quote xml:id="pl2QAsvrdfh" type="ChurchFathers" subtype="paraphrase">"sic <name>Varronem</name> recitasse centum et octoginta 
-                        <lb ed="#S"/>octo sectas varias philosophorum de felicitate 
-                        <lb ed="#S"/>humana.</quote> Et ex hoc apparet quod tanta diversitas 
-                        <lb ed="#S"/><choice><orig>oppinionum</orig><reg>opinionum</reg></choice> in materia felicitatis humanae provenit ex 
-                        <lb ed="#S"/>debilitate et caecitate investigationis humanae, 
-                        <lb ed="#S"/>quia unica est via attingendi signum.</p>
-                    
-                    <p xml:id="l12-qaepdd"><lb ed="#S"/>Quantum autem est de intellectu speculativo, patet conclusio nam sicut 
-                        <lb ed="#S"/>dicit <name>Sanctus <choice><orig>Thomas</orig><reg>Tomas</reg></choice></name> in suo libro quem fecit 
-                        <lb ed="#S"/>de angelo philosophantes[?] vigore naturali in<lb ed="#S"/>vestigatione, 
-                        non elevati per fidem seu per specialem 
-                        <lb ed="#S"/>Dei gratiam, non devenerunt nisi in notitia substantiarum 
-                        <lb ed="#S"/>corporearum, ita quod non poterant concludere 'aliquod 
-                        <lb ed="#S"/>ens esse incorporale', et ibidem nominat philosophos. 
-                        <lb ed="#S"/>Unde aliqui prima principia posuerunt corporalia, et aliquando 
-                        <lb ed="#S"/>vocabant talia principia corporalia Deum, et 
-                        <lb ed="#S"/>ideo poetae proportionaliter secundum vocabula proportionalia finxe<lb ed="#S"/>runt 
-                        deos esse entia corporalia. Unde tales 
-                        <lb ed="#S"/>sicut <del rend="strikethrought">sic</del> <name>Mellisius</name> ponit aliquod primum principium et 
-                        <lb ed="#S"/>poetae vocaverunt proportionaliter Deum suum primum principium 
-                        <lb ed="#S"/><choice><orig>occeanum</orig><reg>oceanum</reg></choice>. Et <name>Diogenes</name> posuit primum principium 
-                        <lb ed="#S"/>esse ignem, et est <space extent="oneWordLength"/> quatuor elementa, litem 
-                        <lb ed="#S"/>et amicitiam, etc. Et sic patet qualiter primaeva 
-                        <lb ed="#S"/>investigatio decidit in errores varios 
-                        <lb ed="#S"/>propter <choice><orig>deffectum</orig><reg>defectum</reg></choice> dirigentis.</p>
-                </div>
-                <div>
-                    
-                    <head>[Alia conclusio]</head>
-                    
-                    <p xml:id="l12-echseh">Et circa hoc 
-                        <lb ed="#S"/>sit haec conclusio: investigatio humana non iuva 
-                        <lb ed="#S"/>fide vel consuetudine vel auctoritate vel gratia 
-                        <lb ed="#S"/>speciali non concluderet ultra sensibilia quicquid in<lb ed="#S"/>sensibile; 
-                        sicut enim est consuetudo in malum, ita 
-                        <lb ed="#S"/>consuetudo est in bonum, et ista consuetudo 
-                        <lb ed="#S"/>in <sic>bonu</sic> multum iuvat philosophos ad bene 
-                        <lb ed="#S"/>philosophandum, scilicet, ad ponendum Deum in causas separatas, 
-                        <lb ed="#S"/>et huiusmodi.</p>
-                    
-                </div>
-                
-                <div>
-                    
-                    <head>[Objectio]</head>
-                    
-                    <p xml:id="l12-sciuip">Sed contra istam conclusionem instatur de <name>So<lb ed="#S"/>crate</name>, 
-                        <name>Platone</name>, et <name>Aristotele</name>, qui philosophando et humanam 
-                        <lb ed="#S"/>investigationem insequendo unum Deum separatum 
-                        <lb ed="#S"/>posuerunt et quasi <choice><orig>tanquam</orig><reg>tamquam</reg></choice> <choice><orig>martir</orig><reg>martyr</reg></choice> <name>Socrates</name> 
-                        <lb ed="#S"/>mortuus est confitendo veritatem et re<lb ed="#S"/>prehendendo 
-                        Athenienses ponentes <choice><orig>ydolatria</orig><reg>idolatria</reg></choice>. Item, 
-                        <lb ed="#S"/><name>Plato</name> naturali modo investigandi posuit unum 
-                        <cb ed="#S" n="21va"/><lb ed="#S"/>Deum supremum et ad idem <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title> po<lb ed="#S"/>suit 
-												unum Deum supremum, dicit enim: <quote xml:id="l12-QAenmuip" type="classical">"entia no<lb ed="#S"/>lunt 
-                        male disponi, pluralitas principium mala, 
-                        <lb ed="#S"/>unus igitur princeps."</quote></p>
-                </div>
-                <div>      
-                    
-                    <head>[Responsio]</head>
-                    
-                    <p xml:id="l12-retuds">Respondendum est tenendo conclusionem 
-                        <lb ed="#S"/>ut prius pro quo notandum est hic quod secundum quod dicit 
-                        <lb ed="#S"/><name>Iosephus</name> in libro <title>Antiquitatum</title>, <quote xml:id="l12-QJcegppd">"Chaldaei et 
-                        <lb ed="#S"/>Gentiles in principio, sicut non cognoscunt 
-                        <lb ed="#S"/>nisi creaturas, ita etiam nec adoraverunt nisi creaturas. Ideo 
-                            <lb ed="#S"/>adoraverunt stellas et huiusmodi, et licet lex divina 
-                            <lb ed="#S"/>non esset adhuc data, tamen semper fuit aliquis populus 
-                            <lb ed="#S"/>peculiaris Dei."</quote> Ideo semper a principio illi, qui fuerunt 
-                        <lb ed="#S"/>derelicti per investigationem humanam, non potue<lb ed="#S"/>runt 
-                        devenire nisi in notitiam creaturarum, nihilominus 
-                        <lb ed="#S"/>filii <name>Adae</name> et instructi a parentibus habuerunt semper 
-                        <lb ed="#S"/>aliquam notitiam de Deo et aliquid vere crediderunt 
-                        <lb ed="#S"/>mediante speciali Dei auxilio. Et istud continua<lb ed="#S"/>tum 
-                        fuit ab initio usque ad filios <name>Noae</name>, 
-                        <lb ed="#S"/>et consequenter ab illis usque ad <name>Abraham</name>, qui 
-                        <lb ed="#S"/>fuit valde perfectus et sanctus homo, qui existens 
-                    <lb ed="#S"/>in <choice><orig>Caldaea</orig><reg>Chaldaea</reg></choice>, reprehendit <choice><orig>Caldaeos</orig><reg>Chaldaeos</reg></choice> ponentes 
-                        <lb ed="#S"/>plures Deos et eis praedicavit unum solum Deum 
-                        <lb ed="#S"/>esse colendum tamquam supremum bonum, a quo omnia 
-                        <lb ed="#S"/>dependent. Et ideo positus fuit in igne 
-                        <lb ed="#S"/>et in hoc ostendit et declarat Deus miraculum 
-                        <lb ed="#S"/>per manifestationem veritatis. Consequenter imaginandum est 
-                        <lb ed="#S"/>quod ex tunc est derivata fama quod esset unus 
-                        <lb ed="#S"/>Deus supremus, et ista promulgatio potuit 
-                        <lb ed="#S"/>devenire usque ad philosophos. Et est varius 
-                        <lb ed="#S"/>modus salvandi quod ex consuetudine tali, una cum 
-                        <lb ed="#S"/>inclinatione naturali philosophantes, posuerunt unum Deum 
-                        <lb ed="#S"/>supremum.</p>
-                    
-                    <p xml:id="l12-snqabc">Secundo notandum quod nedum hoc potuerunt 
-                        <lb ed="#S"/>habere ex consuetudine audiendi, sed ex scriptura, quia 
-                        <lb ed="#S"/>nedum illud praedicatum est secundum scriptum, ita quod 
-                        <lb ed="#S"/>multi erant libri de principio mundi in quibus 
-                        <lb ed="#S"/>continebantur multae veritates de ipso Deo 
-                        <lb ed="#S"/>supremo antequam Biblia componeretur.</p>
-                    
-                    <p xml:id="l12-tpqidg">Tertio propter 
-                        <lb ed="#S"/>quamdam necessitatem, Deus voluit concurrere cum 
-                        <lb ed="#S"/>philosophis ut unum Deum solum praedicarent propter 
-                        <lb ed="#S"/>necessitatem divini cultus. Et hoc fuit mediante 
-                        <lb ed="#S"/>gratia speciali ipsius Dei, et ita tam ex consue<lb ed="#S"/>tudine 
-                        quam auctoritate quam ex gratia speciali philosophi 
-                        <cb ed="#S" n="21vb"/><lb ed="#S"/>potuerunt habere notitiam ipsius Dei, non tamen 
-                        <lb ed="#S"/>ex pura investigatione naturali cum influentia 
-                        <lb ed="#S"/>Dei generali.</p>
-                    
-                    <p xml:id="l12-efnefs">Et forte nedum habuerunt 
-                        <lb ed="#S"/>praedicta tria secundum fidem super quod 
-                        <lb ed="#S"/>notat <name>Nicolaus de Lira</name> ad rationes 
-                        <lb ed="#S"/><choice><orig>7o</orig><reg>septimo</reg></choice> capitulo quod ante adventum Christi sufficiebat 
-                        <lb ed="#S"/>credere duobus articulis, scilicet, credere 'Deum esse' 
-                        <lb ed="#S"/>et 'providere generi humano'. Et quando obicitur 
-                        <lb ed="#S"/>sibi ex dicto <name>Augustini</name> <choice><orig>8o</orig><reg>VIIIo</reg></choice> <title>De civitate Dei</title> 
-                        <lb ed="#S"/><quote>"nullus unquam salvabitur nisi in fide unius 
-                            <lb ed="#S"/>salvatoris,"</quote> ipse respondet et dicit quod <quote>"non 
-                                <lb ed="#S"/><choice><orig>opportebat</orig><reg>oportebat</reg></choice> philosophos et gentiles ex<lb ed="#S"/>presse 
-                                habere notitiam omnium articulorum fidei 
-                                <lb ed="#S"/>et Trinitatis, sed sufficiebat habere notitiam 
-                                <lb ed="#S"/>articuli generalis sub quo continebantur notitiae 
-                                <lb ed="#S"/>articulorum specialium."</quote> Modo, sub isto 'providere 
-                        <lb ed="#S"/>generi humano' continetur modus et notitia in generali 
-                        <lb ed="#S"/>articuli incarnationis. Quo dato facile 
-                        <lb ed="#S"/>esset salvare quod <name>Socrates</name> fuisset salvatus, 
-                        <lb ed="#S"/>quia non est verisimile quod vir tantae per<lb ed="#S"/>fectionis, 
-                        et scientiae, probitatis vitae fuerit 
-                        <lb ed="#S"/><choice><orig>dampnatus</orig><reg>damnatus</reg></choice>. Ideo verisimile est quod ipse et 
-                        <lb ed="#S"/>alii plures philosophi habuerunt fidem et quod 
-                        <lb ed="#S"/>si vixissent secundum modum et doctrinam 
-                        <lb ed="#S"/>quam tradiderunt quod Deus supplevit 
-                        <lb ed="#S"/>residuum. Et si aliquid ab eis de fide 
-                        <lb ed="#S"/>reperiatur scriptum, dicendum est quod hoc fe<lb ed="#S"/>cerunt 
-                        mediante speciali gratia Dei, et si 
-                        <lb ed="#S"/>dicatur quod cum hoc quod posuerunt unum solum 
-                        <lb ed="#S"/>Deum supremum erraverunt contra aliquos 
-                        <lb ed="#S"/>articulos particulares, dicitur etiam quia modernis 
-                        <lb ed="#S"/>temporibus multi sunt <choice><orig>oppinionis</orig><reg>opiniones</reg></choice> contrariae, ita 
-                        <lb ed="#S"/>quod non est malum magnum <choice><orig>oppinative</orig><reg>opinative</reg></choice> solum 
-                        <lb ed="#S"/>aliquid asserere contra aliquos articulos particulares; 
-                        <lb ed="#S"/>nam sicut dicit <name>Rabi <choice><orig>Moyses</orig><reg>Moses</reg></choice></name>, <quote>"<name>Aristoteles</name> non 
-                        <lb ed="#S"/>habuit scientiam nec credidit assentive quod 
-                            <lb ed="#S"/>mundus fuerit ab aeterno et quod non 
-                            <lb ed="#S"/>habuerit principium sed solum <choice><orig>oppinative</orig><reg>opinative</reg></choice>."</quote> Et hoc te<lb ed="#S"/>statur 
-                        <name>Aristoteles</name> in <title><choice><orig>Thopicis</orig><reg>Topicis</reg></choice></title> reputans 
-                        <lb ed="#S"/>illud problema neutrorum. Ideo fuit magnum 
-                        <lb ed="#S"/>inconveniens, si philosophi erraverunt circa aliquos 
-                        <cb ed="#S" n="22ra"/><lb ed="#S"/>particulares articulos <choice><orig>oppinando</orig><reg>opinando</reg></choice> solum. Narratur etiam 
-                        <lb ed="#S"/>quod <name>Socrates</name> habuit unum spiritum privatum, et 
-                        <lb ed="#S"/>istud potest exponi ad malum et ad sor<lb ed="#S"/>tilegum, 
-                        sed istud non debet sic exponi 
-                        <lb ed="#S"/>aut applicari ad malum sed ad bonum, 
-                        <lb ed="#S"/>scilicet, de ipso intellectu agente de quo <name>Aristoteles</name>. 
-                <lb ed="#S"/>Secundum expositionem <name>Commentatoris</name> et <name>Alberti</name> <choice><orig>3o</orig><reg>IIIo</reg></choice> <title>De anima</title>, 
-                        <lb ed="#S"/>et <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title>, narrat duplicem modum cognoscendi. 
-                        <lb ed="#S"/>Unus est a sensibilibus ad insensibilia a fa<lb ed="#S"/>cilioribus 
-                        ad difficiliora. Et iste modus est communis 
-                        <lb ed="#S"/>et facilis satis.</p> 
-                    
-                    <p xml:id="l12-amirpf">Alius modus intelligendi est 
-                        <lb ed="#S"/>per elevationem intellectus et abstractionem sensibilium, 
-                        <lb ed="#S"/>et iste fit per immediatam irradiationem in<lb ed="#S"/>telligentiae 
-                        agentis ad intellectum nostrum, ita 
-                        <lb ed="#S"/>quod intellectus noster isto modo non intelligit discursive 
-                        <lb ed="#S"/>eliciendo conclusiones ex principiis, sed intelligit immediate 
-                        <lb ed="#S"/>per irradiationem intelligentiae agentis, et forte 
-                        <lb ed="#S"/>immediate obiective in Deo, ita quod Deus 
-                        <lb ed="#S"/>supplet vicem cognitionis. Et quod ita 
-                        <lb ed="#S"/>sit, potest apparere videndo <name>Commentatorem</name> et <name>Albertum</name>, 
-                        <lb ed="#S"/><choice><orig>3o</orig><reg>IIIo</reg></choice> <title>De Anima</title> et <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title> sicut allegatum 
-                        <lb ed="#S"/>est; et forte quod istud fuit <choice><orig>oppinio</orig><reg>opinio</reg></choice> <name>Aristoteles</name> 
-                        <lb ed="#S"/><choice><orig>10</orig><reg>X</reg></choice> <title>Ethicorum</title> dicentis quod felicitas humana con<lb ed="#S"/>sistit 
-                        in coniunctione intellectus humani cum divino. 
-                        <lb ed="#S"/>Et ita salvaretur quod <name>Socrates</name> per bonam vi<lb ed="#S"/>tam 
-                        suam et suum bonum regimen, quia 
-                        <lb ed="#S"/>non solum praebuit vivere sicut habetur ex 
-                        <lb ed="#S"/>libris suis, sed etiam sic vixit et coniunctus 
-                        <lb ed="#S"/>fuit cum illo intellectu agente, ita quod se<lb ed="#S"/>questravit 
-                        se a sensibus et mundanis et 
-                        <lb ed="#S"/>coniunxit se cum illo intellectu divino, qui docebat 
-                        <lb ed="#S"/>eum de agendis et etiam speculabilibus, et sic 
-                        <lb ed="#S"/>patet quid sit dicendum ad rationem prius factam.</p> 
-                </div>
-                <div>
-                    <head>[Corollaria]</head>
-                    
-                    <p xml:id="l12-sepear"><lb ed="#S"/>Sequitur ex praedictis quod ab initio, fides fuit 
-                        <lb ed="#S"/>investigationis humanae directiva, et quod sine 
-                        <lb ed="#S"/>ea non fuisset aliquid vere scitum de Dei 
-                        <lb ed="#S"/>cognitione speciali et arduissimarum rerum.</p>
-                    
-                    <p xml:id="l12-equami"><lb ed="#S"/>Ex quo ulterius sequitur quod fidei subiacere 
-                        <lb ed="#S"/>debet investigatio humana per modum servi; 
-                        <lb ed="#S"/>duae enim sunt servi conditiones secundum <name>Philosophum</name>, 
-                        <lb ed="#S"/><choice><orig>primo</orig><reg>Io</reg></choice> <title>Politicae</title>. Una est quod servus non sufficit 
-                        <lb ed="#S"/>sibi, ita quod sibi derelictus non sufficeret 
-                        <cb ed="#S" n="22rb"/><lb ed="#S"/>sibi, <choice><orig>ymo</orig><reg>immo</reg></choice> quod malum esset sibi, si non subi<lb ed="#S"/>ceretur. 
-                        Secunda conditio est quod servus debet obedire 
-                        <lb ed="#S"/>et ista conditio sequitur ex prima, quia, ex quo non 
-                        <lb ed="#S"/>sufficit sibi, debet obedire dirigenti ipsum. 
-                        <lb ed="#S"/>Proportionaliter humana investigatio respectu fidei habet 
-                        <lb ed="#S"/>duas praedictas conditiones, quia sibi derelicta 
-                        <lb ed="#S"/><choice><orig>defficeret</orig><reg>deficeret</reg></choice>, ideo non sufficit sibi; sed di<lb ed="#S"/>recta 
-                        et adiuta fide bene sufficit, nec 
-                        <lb ed="#S"/>potest tunc errare, quia fides non permitteret 
-                        <lb ed="#S"/>aliquem errare investigando aliquid mediante ipsa.</p>
-                    
-                </div>
-            </div>
-        </body>
-    </text>
+  <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#S" n="21-r"/>
+        <cb ed="#S" n="b"/>
+      </div>
+    </front>
+    <body>
+      <div xml:id="lectio12">
+        <head>Lectio 12, Prologus [Sorbonne Transcription]</head>
+        <div>
+          <head>[Conclusio]</head>
+            <p xml:id="l12-sfqpqs">
+              Consequenter con<lb ed="#S" n="44"/>tinuando 
+              materiam inceptam, infertur ex prae<lb ed="#S" break="no"/>dictis 
+              quod humana investigatio nec debite 
+              <lb ed="#S"/>nec sufficienter dirigit tam intellectum practicum 
+              <lb ed="#S"/>quam speculativum
+            </p>
+          <p xml:id="l12-dipvas">
+            De intellectu practico, patet nam circa 
+            <lb ed="#S"/>felicitatem tot fere fuerunt opiniones quot fuerunt 
+            <lb ed="#S"/>philosophantes. Unde <name>Augustinus</name> <choice><orig>19o</orig><reg>XIXo</reg></choice> <title>De civitate Dei</title> capitulo primo,
+            <lb ed="#S"/>dicit <quote xml:id="pl2QAsvrdfh" type="ChurchFathers" subtype="paraphrase">"sic <name>Varronem</name> recitasse centum et octoginta 
+            <lb ed="#S"/>octo sectas varias philosophorum de felicitate 
+            <lb ed="#S"/>humana.</quote> Et ex hoc apparet quod tanta diversitas 
+            <lb ed="#S"/><choice><orig>oppinionum</orig><reg>opinionum</reg></choice> in materia felicitatis humanae provenit ex 
+            <lb ed="#S"/>debilitate et caecitate investigationis humanae, 
+            <lb ed="#S"/>quia unica est via attingendi signum.
+          </p>
+          <p xml:id="l12-qaepdd">
+            <lb ed="#S"/>Quantum autem est de intellectu speculativo, patet conclusio nam sicut 
+            <lb ed="#S"/>dicit <name>Sanctus <choice><orig>Thomas</orig><reg>Tomas</reg></choice></name> in suo libro quem fecit 
+            <lb ed="#S"/>de angelo philosophantes[?] vigore naturali in<lb ed="#S" break="no"/>vestigatione, 
+            non elevati per fidem seu per specialem 
+            <lb ed="#S"/>Dei gratiam, non devenerunt nisi in notitia substantiarum 
+            <lb ed="#S"/>corporearum, ita quod non poterant concludere 'aliquod 
+            <lb ed="#S"/>ens esse incorporale', et ibidem nominat philosophos. 
+            <lb ed="#S"/>Unde aliqui prima principia posuerunt corporalia, et aliquando 
+            <lb ed="#S"/>vocabant talia principia corporalia Deum, et 
+            <lb ed="#S"/>ideo poetae proportionaliter secundum vocabula proportionalia finxe<lb ed="#S" break="no"/>runt 
+            deos esse entia corporalia. Unde tales 
+            <lb ed="#S"/>sicut <del rend="strikethrought">sic</del> <name>Mellisius</name> ponit aliquod primum principium et 
+            <lb ed="#S"/>poetae vocaverunt proportionaliter Deum suum primum principium 
+            <lb ed="#S"/><choice><orig>occeanum</orig><reg>oceanum</reg></choice>. Et <name>Diogenes</name> posuit primum principium 
+            <lb ed="#S"/>esse ignem, et est <space extent="oneWordLength"/> quatuor elementa, litem 
+            <lb ed="#S"/>et amicitiam, etc. Et sic patet qualiter primaeva 
+            <lb ed="#S"/>investigatio decidit in errores varios 
+            <lb ed="#S"/>propter <choice><orig>deffectum</orig><reg>defectum</reg></choice> dirigentis
+          </p>
+        </div>
+        <div>
+          <head>[Alia conclusio]</head>
+          <p xml:id="l12-echseh">
+            Et circa hoc 
+            <lb ed="#S"/>sit haec conclusio: investigatio humana non iuva 
+            <lb ed="#S"/>fide vel consuetudine vel auctoritate vel gratia 
+            <lb ed="#S"/>speciali non concluderet ultra sensibilia quicquid in<lb ed="#S" break="no"/>sensibile; 
+            sicut enim est consuetudo in malum, ita 
+            <lb ed="#S"/>consuetudo est in bonum, et ista consuetudo 
+            <lb ed="#S"/>in <sic>bonu</sic> multum iuvat philosophos ad bene 
+            <lb ed="#S"/>philosophandum, scilicet, ad ponendum Deum in causas separatas, 
+            <lb ed="#S"/>et huiusmodi
+          </p>
+        </div>
+        <div>
+          <head>[Objectio]</head>
+          <p xml:id="l12-sciuip">
+            Sed contra istam conclusionem instatur de <name>So<lb ed="#S" break="no"/>crate</name>, 
+            <name>Platone</name>, et <name>Aristotele</name>, qui philosophando et humanam 
+            <lb ed="#S"/>investigationem insequendo unum Deum separatum 
+            <lb ed="#S"/>posuerunt et quasi <choice><orig>tanquam</orig><reg>tamquam</reg></choice> <choice><orig>martir</orig><reg>martyr</reg></choice> <name>Socrates</name> 
+            <lb ed="#S"/>mortuus est confitendo veritatem et re<lb ed="#S" break="no"/>prehendendo 
+            Athenienses ponentes <choice><orig>ydolatria</orig><reg>idolatria</reg></choice>. Item, 
+            <lb ed="#S"/><name>Plato</name> naturali modo investigandi posuit unum 
+            <pb ed="#S" n="21-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>Deum supremum et ad idem <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title> po<lb ed="#S" break="no"/>suit 
+            unum Deum supremum, dicit enim: <quote xml:id="l12-QAenmuip" type="classical">entia no<lb ed="#S" break="no"/>lunt 
+            male disponi, pluralitas principium mala, 
+            <lb ed="#S"/>unus igitur princeps</quote>
+          </p>
+        </div>
+        <div>
+          <head>[Responsio]</head>
+          <p xml:id="l12-retuds">
+            Respondendum est tenendo conclusionem 
+            <lb ed="#S"/>ut prius pro quo notandum est hic quod secundum quod dicit 
+            <lb ed="#S"/><name>Iosephus</name> in libro <title>Antiquitatum</title>, <quote xml:id="l12-QJcegppd">"Chaldaei et 
+            <lb ed="#S"/>Gentiles in principio, sicut non cognoscunt 
+            <lb ed="#S"/>nisi creaturas, ita etiam nec adoraverunt nisi creaturas. Ideo 
+            <lb ed="#S"/>adoraverunt stellas et huiusmodi, et licet lex divina 
+            <lb ed="#S"/>non esset adhuc data, tamen semper fuit aliquis populus 
+            <lb ed="#S"/>peculiaris Dei."</quote> Ideo semper a principio illi, qui fuerunt 
+            <lb ed="#S"/>derelicti per investigationem humanam, non potue<lb ed="#S" break="no"/>runt 
+            devenire nisi in notitiam creaturarum, nihilominus 
+            <lb ed="#S"/>filii <name>Adae</name> et instructi a parentibus habuerunt semper 
+            <lb ed="#S"/>aliquam notitiam de Deo et aliquid vere crediderunt 
+            <lb ed="#S"/>mediante speciali Dei auxilio. Et istud continua<lb ed="#S" break="no"/>tum 
+            fuit ab initio usque ad filios <name>Noae</name>, 
+            <lb ed="#S"/>et consequenter ab illis usque ad <name>Abraham</name>, qui 
+            <lb ed="#S"/>fuit valde perfectus et sanctus homo, qui existens 
+            <lb ed="#S"/>in <choice><orig>Caldaea</orig><reg>Chaldaea</reg></choice>, reprehendit <choice><orig>Caldaeos</orig><reg>Chaldaeos</reg></choice> ponentes 
+            <lb ed="#S"/>plures Deos et eis praedicavit unum solum Deum 
+            <lb ed="#S"/>esse colendum tamquam supremum bonum, a quo omnia 
+            <lb ed="#S"/>dependent. Et ideo positus fuit in igne 
+            <lb ed="#S"/>et in hoc ostendit et declarat Deus miraculum 
+            <lb ed="#S"/>per manifestationem veritatis. Consequenter imaginandum est 
+            <lb ed="#S"/>quod ex tunc est derivata fama quod esset unus 
+            <lb ed="#S"/>Deus supremus, et ista promulgatio potuit 
+            <lb ed="#S"/>devenire usque ad philosophos. Et est varius 
+            <lb ed="#S"/>modus salvandi quod ex consuetudine tali, una cum 
+            <lb ed="#S"/>inclinatione naturali philosophantes, posuerunt unum Deum 
+            <lb ed="#S"/>supremum.
+          </p>
+          <p xml:id="l12-snqabc">
+            Secundo notandum quod nedum hoc potuerunt 
+            <lb ed="#S"/>habere ex consuetudine audiendi, sed ex scriptura, quia 
+            <lb ed="#S"/>nedum illud praedicatum est secundum scriptum, ita quod 
+            <lb ed="#S"/>multi erant libri de principio mundi in quibus 
+            <lb ed="#S"/>continebantur multae veritates de ipso Deo 
+            <lb ed="#S"/>supremo antequam Biblia componeretur.
+          </p>
+          <p xml:id="l12-tpqidg">
+            Tertio propter 
+            <lb ed="#S"/>quamdam necessitatem, Deus voluit concurrere cum 
+            <lb ed="#S"/>philosophis ut unum Deum solum praedicarent propter 
+            <lb ed="#S"/>necessitatem divini cultus. Et hoc fuit mediante 
+            <lb ed="#S"/>gratia speciali ipsius Dei, et ita tam ex consue<lb ed="#S" break="no"/>tudine 
+            quam auctoritate quam ex gratia speciali philosophi 
+            <cb ed="#S" n="b"/> <!-- 21vb -->
+            <lb ed="#S"/>potuerunt habere notitiam ipsius Dei, non tamen 
+            <lb ed="#S"/>ex pura investigatione naturali cum influentia 
+            <lb ed="#S"/>Dei generali
+          </p>
+          <p xml:id="l12-efnefs">
+            Et forte nedum habuerunt 
+            <lb ed="#S"/>praedicta tria secundum fidem super quod 
+            <lb ed="#S"/>notat <name>Nicolaus de Lira</name> ad rationes 
+            <lb ed="#S"/><choice><orig>7o</orig><reg>septimo</reg></choice> capitulo quod ante adventum Christi sufficiebat 
+            <lb ed="#S"/>credere duobus articulis, scilicet, credere 'Deum esse' 
+            <lb ed="#S"/>et 'providere generi humano'. Et quando obicitur 
+            <lb ed="#S"/>sibi ex dicto <name>Augustini</name> <choice><orig>8o</orig><reg>VIIIo</reg></choice> <title>De civitate Dei</title> 
+            <lb ed="#S"/><quote>"nullus unquam salvabitur nisi in fide unius 
+            <lb ed="#S"/>salvatoris,</quote> ipse respondet et dicit quod <quote>non 
+            <lb ed="#S"/><choice><orig>opportebat</orig><reg>oportebat</reg></choice> philosophos et gentiles ex<lb ed="#S" break="no"/>presse 
+            habere notitiam omnium articulorum fidei 
+            <lb ed="#S"/>et Trinitatis, sed sufficiebat habere notitiam 
+            <lb ed="#S"/>articuli generalis sub quo continebantur notitiae 
+            <lb ed="#S"/>articulorum specialium.</quote> Modo, sub isto 'providere 
+            <lb ed="#S"/>generi humano' continetur modus et notitia in generali 
+            <lb ed="#S"/>articuli incarnationis. Quo dato facile 
+            <lb ed="#S"/>esset salvare quod <name>Socrates</name> fuisset salvatus, 
+            <lb ed="#S"/>quia non est verisimile quod vir tantae per<lb ed="#S" break="no"/>fectionis, 
+            et scientiae, probitatis vitae fuerit 
+            <lb ed="#S"/><choice><orig>dampnatus</orig><reg>damnatus</reg></choice>. Ideo verisimile est quod ipse et 
+            <lb ed="#S"/>alii plures philosophi habuerunt fidem et quod 
+            <lb ed="#S"/>si vixissent secundum modum et doctrinam 
+            <lb ed="#S"/>quam tradiderunt quod Deus supplevit 
+            <lb ed="#S"/>residuum. Et si aliquid ab eis de fide 
+            <lb ed="#S"/>reperiatur scriptum, dicendum est quod hoc fe<lb ed="#S" break="no"/>cerunt 
+            mediante speciali gratia Dei, et si 
+            <lb ed="#S"/>dicatur quod cum hoc quod posuerunt unum solum 
+            <lb ed="#S"/>Deum supremum erraverunt contra aliquos 
+            <lb ed="#S"/>articulos particulares, dicitur etiam quia modernis 
+            <lb ed="#S"/>temporibus multi sunt <choice><orig>oppinionis</orig><reg>opiniones</reg></choice> contrariae, ita 
+            <lb ed="#S"/>quod non est malum magnum <choice><orig>oppinative</orig><reg>opinative</reg></choice> solum 
+            <lb ed="#S"/>aliquid asserere contra aliquos articulos particulares; 
+            <lb ed="#S"/>nam sicut dicit <name>Rabi <choice><orig>Moyses</orig><reg>Moses</reg></choice></name>, <quote>"<name>Aristoteles</name> non 
+            <lb ed="#S"/>habuit scientiam nec credidit assentive quod 
+            <lb ed="#S"/>mundus fuerit ab aeterno et quod non 
+            <lb ed="#S"/>habuerit principium sed solum <choice><orig>oppinative</orig><reg>opinative</reg></choice>."</quote> Et hoc te<lb ed="#S" break="no"/>statur 
+            <name>Aristoteles</name> in <title><choice><orig>Thopicis</orig><reg>Topicis</reg></choice></title> reputans 
+            <lb ed="#S"/>illud problema neutrorum. Ideo fuit magnum 
+            <lb ed="#S"/>inconveniens, si philosophi erraverunt circa aliquos 
+            <pb ed="#S" n="22-r"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>particulares articulos <choice><orig>oppinando</orig><reg>opinando</reg></choice> solum. Narratur etiam 
+            <lb ed="#S"/>quod <name>Socrates</name> habuit unum spiritum privatum, et 
+            <lb ed="#S"/>istud potest exponi ad malum et ad sor<lb ed="#S" break="no"/>tilegum, 
+            sed istud non debet sic exponi 
+            <lb ed="#S"/>aut applicari ad malum sed ad bonum, 
+            <lb ed="#S"/>scilicet, de ipso intellectu agente de quo <name>Aristoteles</name>. 
+            <lb ed="#S"/>Secundum expositionem <name>Commentatoris</name> et <name>Alberti</name> <choice><orig>3o</orig><reg>IIIo</reg></choice> <title>De anima</title>, 
+            <lb ed="#S"/>et <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title>, narrat duplicem modum cognoscendi. 
+            <lb ed="#S"/>Unus est a sensibilibus ad insensibilia a fa<lb ed="#S" break="no"/>cilioribus 
+            ad difficiliora. Et iste modus est communis 
+            <lb ed="#S"/>et facilis satis
+          </p>
+          <p xml:id="l12-amirpf">
+            Alius modus intelligendi est 
+            <lb ed="#S"/>per elevationem intellectus et abstractionem sensibilium, 
+            <lb ed="#S"/>et iste fit per immediatam irradiationem in<lb ed="#S" break="no"/>telligentiae 
+            agentis ad intellectum nostrum, ita 
+            <lb ed="#S"/>quod intellectus noster isto modo non intelligit discursive 
+            <lb ed="#S"/>eliciendo conclusiones ex principiis, sed intelligit immediate 
+            <lb ed="#S"/>per irradiationem intelligentiae agentis, et forte 
+            <lb ed="#S"/>immediate obiective in Deo, ita quod Deus 
+            <lb ed="#S"/>supplet vicem cognitionis. Et quod ita 
+            <lb ed="#S"/>sit, potest apparere videndo <name>Commentatorem</name> et <name>Albertum</name>, 
+            <lb ed="#S"/><choice><orig>3o</orig><reg>IIIo</reg></choice> <title>De Anima</title> et <choice><orig>12o</orig><reg>XIIo</reg></choice> <title>Metaphysicae</title> sicut allegatum 
+            <lb ed="#S"/>est; et forte quod istud fuit <choice><orig>oppinio</orig><reg>opinio</reg></choice> <name>Aristoteles</name> 
+            <lb ed="#S"/><choice><orig>10</orig><reg>X</reg></choice> <title>Ethicorum</title> dicentis quod felicitas humana con<lb ed="#S" break="no"/>sistit 
+            in coniunctione intellectus humani cum divino. 
+            <lb ed="#S"/>Et ita salvaretur quod <name>Socrates</name> per bonam vi<lb ed="#S" break="no"/>tam 
+            suam et suum bonum regimen, quia 
+            <lb ed="#S"/>non solum praebuit vivere sicut habetur ex 
+            <lb ed="#S"/>libris suis, sed etiam sic vixit et coniunctus 
+            <lb ed="#S"/>fuit cum illo intellectu agente, ita quod se<lb ed="#S" break="no"/>questravit 
+            se a sensibus et mundanis et 
+            <lb ed="#S"/>coniunxit se cum illo intellectu divino, qui docebat 
+            <lb ed="#S"/>eum de agendis et etiam speculabilibus, et sic 
+            <lb ed="#S"/>patet quid sit dicendum ad rationem prius factam
+          </p>
+        </div>
+        <div>
+          <head>[Corollaria]</head>
+          <p xml:id="l12-sepear">
+            <lb ed="#S"/>Sequitur ex praedictis quod ab initio, fides fuit 
+            <lb ed="#S"/>investigationis humanae directiva, et quod sine 
+            <lb ed="#S"/>ea non fuisset aliquid vere scitum de Dei 
+            <lb ed="#S"/>cognitione speciali et arduissimarum rerum
+          </p>
+          <p xml:id="l12-equami">
+            <lb ed="#S"/>Ex quo ulterius sequitur quod fidei subiacere 
+            <lb ed="#S"/>debet investigatio humana per modum servi; 
+            <lb ed="#S"/>duae enim sunt servi conditiones secundum <name>Philosophum</name>, 
+            <lb ed="#S"/><choice><orig>primo</orig><reg>Io</reg></choice> <title>Politicae</title>. Una est quod servus non sufficit 
+            <lb ed="#S"/>sibi, ita quod sibi derelictus non sufficeret 
+            <cb ed="#S" n="b"/> <!-- 22rb -->
+            <lb ed="#S"/>sibi, <choice><orig>ymo</orig><reg>immo</reg></choice> quod malum esset sibi, si non subi<lb ed="#S" break="no"/>ceretur. 
+            Secunda conditio est quod servus debet obedire 
+            <lb ed="#S"/>et ista conditio sequitur ex prima, quia, ex quo non 
+            <lb ed="#S"/>sufficit sibi, debet obedire dirigenti ipsum. 
+            <lb ed="#S"/>Proportionaliter humana investigatio respectu fidei habet 
+            <lb ed="#S"/>duas praedictas conditiones, quia sibi derelicta 
+            <lb ed="#S"/><choice><orig>defficeret</orig><reg>deficeret</reg></choice>, ideo non sufficit sibi; sed di<lb ed="#S" break="no"/>recta 
+            et adiuta fide bene sufficit, nec 
+            <lb ed="#S"/>potest tunc errare, quia fides non permitteret 
+            <lb ed="#S"/>aliquem errare investigando aliquid mediante ipsa.
+          </p>
+        </div>
+      </div>
+    </body>
+  </text>
 </TEI>
