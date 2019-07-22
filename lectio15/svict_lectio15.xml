@@ -1,237 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
- <teiHeader>
-  <fileDesc>
-   <titleStmt>
-    <title>Lectio 15, De fide [St. Victor Transcription]</title>
-    <author xml:id="PP">Petrus Plaoul</author>
-    <editor xml:id="JW">Jeffrey C. Witt</editor>
-   </titleStmt>
-   <editionStmt>
-    <edition n="2011.10-dev-master">
-     <title>Lectio 15, De fide [St. Victor Transcription]</title>
-     <date when="2011-10-04">October 04, 2011</date>
-    </edition>
-   </editionStmt>
-   <publicationStmt>
-    <publisher>Lombard Press</publisher>
-    <pubPlace>Sacramento, CA</pubPlace>
-    <availability status="free">
-     <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
-    </availability>
-    <date when="2011-03-25">March 23rd, 2011</date>  
-   </publicationStmt>
-   <sourceDesc>
-    <listWit>
-     <witness xml:id="R">Reims</witness>
-     <witness xml:id="V">Vatican</witness>
-     <witness xml:id="S">Sorbonne</witness>
-     <witness xml:id="SV">St. Victor</witness>
-    </listWit>
-   </sourceDesc>
-  </fileDesc>
-  <encodingDesc>
-   <variantEncoding method="double-end-point" location="internal"/>
-  </encodingDesc>
- </teiHeader>    <facsimile>
-<surface n="SV206r">
-<graphic url="SV206r.jpg"/>
-<zone start="#l15-seqapd" ulx="795" uly="848" lrx="1445" lry="1037" n="1"/>
-<zone start="#l15-ecppss" ulx="795" uly="979" lrx="1445" lry="1113" n="1"/>
-<zone start="#l15-ncmani" ulx="795" uly="1041" lrx="1445" lry="1396" n="1"/>
-<zone start="#l15-cicimc" ulx="794" uly="1340" lrx="1444" lry="1495" n="1"/>
-<zone start="#l15-pdenep" ulx="782" uly="1444" lrx="1432" lry="1784" n="1"/>
-<zone start="#l15-spcsqq" ulx="782" uly="1729" lrx="1432" lry="1924" n="1"/>
-</surface>
-<surface n="SV206v">
-<graphic url="SV206v.jpg"/>
-<zone start="#l15-spcsqq" ulx="282" uly="294" lrx="932" lry="404" n="2"/>
-<zone start="#l15-taippp" ulx="287" uly="333" lrx="937" lry="788" n="1"/>
-<zone start="#l15-scnicv" ulx="296" uly="712" lrx="946" lry="1216" n="1"/>
-<zone start="#l15-sncapc" ulx="296" uly="1146" lrx="946" lry="1328" n="1"/>
-<zone start="#l15-tccsis" ulx="299" uly="1264" lrx="949" lry="1478" n="1"/>
-<zone start="#l15-spccee" ulx="300" uly="1391" lrx="950" lry="1588" n="1"/>
-<zone start="#l15-qccasp" ulx="307" uly="1520" lrx="957" lry="1903" n="1"/>
-<zone start="#l15-eppdah" ulx="307" uly="1836" lrx="957" lry="1945" n="1"/>
-<zone start="#l15-eppdah" ulx="917" uly="292" lrx="1567" lry="596" n="2"/>
-<zone start="#l15-eipncb" ulx="918" uly="532" lrx="1568" lry="972" n="1"/>
-</surface>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lectio  15,  De  fide  [St.  Victor  Transcription]</title>
+        <author  xml:id="PP">Petrus  Plaoul</author>
+        <editor  xml:id="JW">Jeffrey  C.  Witt</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.0.0-dev">
+          <title>Lectio 15, de Fide [St. Victor Transcription]</title>
+          <date when="2011-10-04">October 04, 2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <authority>SCTA</authority>
+        <availability status="free">
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
+        </availability>
+        <date when="2011-03-25">March 25, 2011</date>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="SV206r">
+      <graphic url="SV206r.jpg"/>
+      <zone start="#l15-seqapd" ulx="795" uly="848" lrx="1445" lry="1037" n="1"/>
+      <zone start="#l15-ecppss" ulx="795" uly="979" lrx="1445" lry="1113" n="1"/>
+      <zone start="#l15-ncmani" ulx="795" uly="1041" lrx="1445" lry="1396" n="1"/>
+      <zone start="#l15-cicimc" ulx="794" uly="1340" lrx="1444" lry="1495" n="1"/>
+      <zone start="#l15-pdenep" ulx="782" uly="1444" lrx="1432" lry="1784" n="1"/>
+      <zone start="#l15-spcsqq" ulx="782" uly="1729" lrx="1432" lry="1924" n="1"/>
+    </surface>
+    <surface n="SV206v">
+      <graphic url="SV206v.jpg"/>
+      <zone start="#l15-spcsqq" ulx="282" uly="294" lrx="932" lry="404" n="2"/>
+      <zone start="#l15-taippp" ulx="287" uly="333" lrx="937" lry="788" n="1"/>
+      <zone start="#l15-scnicv" ulx="296" uly="712" lrx="946" lry="1216" n="1"/>
+      <zone start="#l15-sncapc" ulx="296" uly="1146" lrx="946" lry="1328" n="1"/>
+      <zone start="#l15-tccsis" ulx="299" uly="1264" lrx="949" lry="1478" n="1"/>
+      <zone start="#l15-spccee" ulx="300" uly="1391" lrx="950" lry="1588" n="1"/>
+      <zone start="#l15-qccasp" ulx="307" uly="1520" lrx="957" lry="1903" n="1"/>
+      <zone start="#l15-eppdah" ulx="307" uly="1836" lrx="957" lry="1945" n="1"/>
+      <zone start="#l15-eppdah" ulx="917" uly="292" lrx="1567" lry="596" n="2"/>
+      <zone start="#l15-eipncb" ulx="918" uly="532" lrx="1568" lry="972" n="1"/>
+    </surface>
   </facsimile>
- <text xml:lang="la">
-  <front>
-   <div xml:id="includeList">
-    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"/>
-    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"/>
-   </div>
-  </front>
-  <body>
-   <div xml:id="lectio15">
-   <head subtype="title">Lectio 15, De fide [St. Victor Transcription]</head>
-    <div>
-     <head xml:id="l15-Hrdpdpc">[Recapitulatio duarum praedictarum conclusionum]</head>
-   
-     <p xml:id="l15-seqapd"><g ref="#dbslash"/>Sciendum est quod in praecedenti lectione positae 
-      <lb ed="#SV"/>fuerunt duae conclusiones <g ref="#slash"/>una fuit quod actus sciendi et 
-      <lb ed="#SV"/>actus fidei de eodem sunt compossibiles <g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> fuit quod lumen natura<lb ed="#SV"/>le 
-      in infinitum ascendit per latitudinem veritatum a principiis 
-      <lb ed="#SV"/>distantium</p>
-    </div> 
-    
-    <div>
-     <head xml:id="l15-Hcpcnsc">[Circa primam conclusionem: opinio quod actus fidei actus scientificus non sunt compossibiles]</head>
-   
-     <p xml:id="l15-ecppss"><g ref="#slash"/>et circa primam conclusionem fuit tacta <choice><orig>oppinio</orig><reg>opinio</reg></choice> 
-      <lb ed="#SV"/>communis quod actus fidei <g ref="#slash"/>et actus scientificus respectu eiusdem non possunt 
-      <lb ed="#SV"/>simul stare</p>
-    </div>
-    
-   <div>
-    <head xml:id="l15-Hopdpdc">[Opinio Petri de Candia]</head>
-   
-    <p xml:id="l15-ncmani"><g ref="#slash"/>nihilominus considerando materiam sciendum est quod <name ref="#Candia">magister 
-     <lb ed="#SV"/>petrus de candia</name> in ista materia ponit istam conclusionem quod licet 
-     <lb ed="#SV"/>actus fidei <g ref="#slash"/>et actus scientificus sic sunt impossibiles respectu eiusdem 
-     <lb ed="#SV"/>quod impossibile sit quis <choice><orig>apperire</orig><reg>aperire</reg></choice> eidem actu fidei et actu 
-     <lb ed="#SV"/>scientifico <g ref="#slash"/>tamen sunt simul compossibiles subiective <g ref="#slash"/>Ita quod conclusio sua 
-     <lb ed="#SV"/>est ista quod actus fidei et actus sciendi de eodem sunt simul 
-     <lb ed="#SV"/>compossibiles in eadem potentia subiective <g ref="#slash"/>non tamen sic quod quilibet illorum 
-     <lb ed="#SV"/>actuum immutet <sic>veritatis</sic> potentiam <g ref="#slash"/>ita quod nullus <choice><orig>inmutat</orig><reg>immutat</reg></choice><g ref="#slash"/> 
-     <lb ed="#SV"/>vel si unus immutet <g ref="#slash"/>alter non immutat</p>
-   </div>
-    
-    <div><head xml:id="l15-Hrapcrc">[Responsio ad opinionem Petri de Candia: quattuor conclusiones circa rationem cognitionis]</head>
-    
-     <p xml:id="l15-cicimc"><g ref="#slash"/>circa istam 
-      <lb ed="#SV"/>conclusionem possunt poni plura quae pro nunc non discutientur 
-      <lb ed="#SV"/>ad plenum <g ref="#slash"/>sed solum ponentur aliqua in generali et 
-      <lb ed="#SV"/>possunt poni in modum conclusionum</p>
-    
-     
-     <div><head xml:id="l15-Hpccdce">[Prima conclusio: cognitio non dicitur "cognitio" essentialiter]</head>
-  
-      <p xml:id="l15-pdenep"><g ref="#slash"/>primum dictum est <g ref="#slash"/>cognitio 
-       <lb ed="#SV"/>non dicitur intrinsece et essentialiter cognitio <g ref="#slash"/>et ita diceretur 
-       <lb ed="#SV"/>de quocumque actu cognoscendi generaliter <g ref="#slash"/>probatur sic primo 
-       <lb ed="#SV"/>quia circumscriptis potentia et obiecto cognitio non Remaneret 
-       <lb ed="#SV"/>cognitio igitur etc <g ref="#slash"/>consequentia tenet quia illud quod est intrinsece ali<lb ed="#SV"/>quale 
-       semper Remanet tale <g ref="#slash"/>omnibus extrinsecis circumscriptis  
-       <lb ed="#SV"/>antecedens patet quia si non esset potentia praeceptiva talis qualitas quae 
-       <lb ed="#SV"/>est cognitio <g ref="#slash"/>non esset cognitio <g ref="#slash"/>quia nec sibi <g ref="#slash"/>quia non 
-       <lb ed="#SV"/>cognovit <g ref="#slash"/>nec potentiae <g ref="#slash"/>quia per casum nulla est potentia</p> 
-    
-      <p xml:id="l15-spcsqq"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
-       <lb ed="#SV"/>probatur conclusio praedicta quia si cognitio esset essentialiter et intrinsece 
-       <lb ed="#SV"/>cognitio <g ref="#slash"/>tunc cum quilibet gradus Repositus in latitudine 
-       <lb ed="#SV"/>cognitionum dicat perfectionem similiter Repositam 
-       <lb ed="#SV"/>sub latitudine viventium <g ref="#slash"/>sequeretur quod cognitio viveret <g ref="#slash"/>et 
-       <cb ed="#SV" n="206va"/><lb ed="#SV"/>per consequens esset perfectior subiecta non vivente quod est falsum cum 
-       <lb ed="#SV"/>sit quaedam qualitas</p> 
-     
-      <p xml:id="l15-taippp"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> ad idem sic si cognitio poneretur 
-       <lb ed="#SV"/>in lapide si esset essentialiter cognitio tunc lapis per eam de<lb ed="#SV"/>nominaretur 
-       intrinsece et essentialiter cognoscens consequens est 
-       <lb ed="#SV"/>falsum quia non stat intrinsece lapidem intrinsece cognoscere nisi 
-       <lb ed="#SV"/>esset per communicationem <choice><orig>ydiomatum</orig><reg>idiomatum</reg></choice> quod non est ad propositum igitur illa 
-       <lb ed="#SV"/>cognitio non est intrinsece et essentialiter cognitio <g ref="#slash"/>consequentia 
-       <lb ed="#SV"/>probatur quia quandocumque aliqua forma communicatur alicui subiecto illa forma 
-       <lb ed="#SV"/>communicat sibi in <choice><orig>concretto</orig><reg>concreto</reg></choice> omnem denominationem sibi competentem 
-       <lb ed="#SV"/>in abstracto supple essentialem <g ref="#slash"/>et eodem esset dicendum 
-       <lb ed="#SV"/>de omnibus aliis actibus intellectus et voluntatis quod nullus talis est 
-       <lb ed="#SV"/>intrinsece et essentialiter cognitio vel volitio et sic patet propositum 
-       <lb ed="#SV"/>et sic patet propositio probata</p>
-     </div>
-     
-     <div>
-      <head xml:id="l15-Hsccpua">[Secunda conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae ut activa]</head>
-   
-      <p xml:id="l15-scnicv"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio non ex habitudine potentiae 
-       <lb ed="#SV"/>ut activa est cognitio denominatur cognitio <g ref="#slash"/>unde 
-       <lb ed="#SV"/><choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod cognitio habet habitudinem multiplicem 
-       <lb ed="#SV"/>ad suum subiectum <g ref="#slash"/>una est habitudo <corr><g ref="#carrot"/><add place="aboveLine">ut</add></corr> formae inhaerentis <g ref="#slash"/>alia 
-       <lb ed="#SV"/>est habitudo ut effectus a potentia producti <g ref="#slash"/>alia est habitudo 
-       <lb ed="#SV"/>ut vitaliter immutativus modo venandum est ex quo cognitio 
-       <lb ed="#SV"/>intrinsece et essentialiter non est cognitio a qua denominatione 
-       <lb ed="#SV"/>sine habitudine extrinseca dicatur cognitio <g ref="#slash"/>probatur igitur conclusio <choice><orig>2a</orig><reg>secunda</reg></choice>, 
-       <lb ed="#SV"/>scilicet quod cognitio non dicitur cognitio ex habitudine potentiae 
-       <lb ed="#SV"/>ut activa est <g ref="#slash"/>quia habitudo productionis notitiae est prior saltem 
-       <lb ed="#SV"/>natura quam sit immutatio potentiae vitalis igitur deus posset facere 
-       <lb ed="#SV"/>quod potentia produceret cognitionem <g ref="#slash"/>et tamen per eam potentia non cognosceret 
-       <lb ed="#SV"/>quia non vitaliter immutaret potentiam igitur conclusio vera</p> 
-       
-      <p xml:id="l15-sncapc"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nisi 
-       <lb ed="#SV"/>conclusio esset vera tunc ita videretur esse de qualibet notitia <g ref="#slash"/>modo in<lb ed="#SV"/>stantia 
-       est de notitia divina quia non dicitur per hoc cognitio 
-       <lb ed="#SV"/>quia producitur a potentia cognitiva</p>
-     </div>
-     
-     <div><head xml:id="l15-Htccpur">[Tertia conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae ut receptiva]</head>
-   
-      <p xml:id="l15-tccsis"><g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio cognitio non dicitur 
-       <lb ed="#SV"/>cognitio in habitudine ad suam potentiam ut est Receptiva 
-       <lb ed="#SV"/>probatur conclusio quia de facto aliqua est cognitio quae non est in aliquo 
-       <lb ed="#SV"/>subiective igitur de ratione cognitionis non est quod sit in 
-       <lb ed="#SV"/>subiecto</p> 
-       
-      <p xml:id="l15-spccee"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> probatur conclusio quia si per dei potentiam cognitio poneretur 
-       <lb ed="#SV"/>in lapide lapis ad eam haberet habitudinem Receptivam 
-       <lb ed="#SV"/>et tamen per hoc lapis non denominaretur cognoscens 
-       <lb ed="#SV"/>igitur etc</p>
-     </div>
-     
-     <div>
-      
-      <head xml:id="l15-Hqccevi">[Quarta conclusio: cognitio dicitur "cognitio" ex habitudine ad suam potentiam ut perceptivam et vitaliter immutabilem]</head>
-   
-      <p xml:id="l15-qccasp"><g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> conclusio cognitio dicitur esse cognitio ex habitudine 
-       <lb ed="#SV"/>ad suam potentiam ut perceptivam et vitaliter immutabilem 
-       <lb ed="#SV"/>et hoc loquendo de cognitione creata <g ref="#slash"/>probatur conclusio nam oportet 
-       <lb ed="#SV"/>ex quo cognitio non est intrinsece et essentialiter cognitio 
-       <lb ed="#SV"/>quod hoc sit ex aliqua habitudine sive denominatione 
-       <lb ed="#SV"/>extrinseca <g ref="#slash"/>et maxime ad suam potentiam <g ref="#slash"/>et hoc 
-       <lb ed="#SV"/>non est ex habitudine ad suam potentiam ut est activa 
-       <lb ed="#SV"/><g ref="#slash"/>nec ut est Receptiva per <choice><orig>2as</orig><reg>duas</reg></choice> conclusiones praecedentes 
-       <lb ed="#SV"/>igitur etc <g ref="#slash"/>quia non videntur esse nisi <choice><orig>3es</orig><reg>tres</reg></choice> habitudines co<lb ed="#SV"/>gnitionis 
-       ad suam potentiam</p>
-     
-     </div>
-    </div>
-    
-    <div><head xml:id="l15-Hcccccc">[Corollaria circa cognitionem]</head>
-    
-     <div><head xml:id="l15-Hthpasc">[Triplex habitudo potentiae ad suam cognitionem]</head>
-    
-      <p xml:id="l15-eppdah"><g ref="#slash"/>Ex praedictis patet quod potentiae 
-       <lb ed="#SV"/>ad suam cognitionem sive econverso triplex est habitudo 
-       <cb ed="#SV" n="206vb"/><lb ed="#SV"/>una est subiectiva in hoc quod potentia Recipit cognitionem in se 
-       <lb ed="#SV"/>subiective <g ref="#slash"/>alia est activa in hoc quod potentia producit illam cognitionem 
-       <lb ed="#SV"/><g ref="#slash"/>alia est vitaliter immutabilis in hoc quod per illam cognitionem talis 
-       <lb ed="#SV"/>potentia fertur in obiectum suum <g ref="#slash"/>modo ad propositum dicitur quod illa quali<lb ed="#SV"/>tas 
-       quae est cognitio <g ref="#slash"/>dicitur esse cognitio ex habitudine illa 
-       <lb ed="#SV"/><choice><orig>3a</orig><reg>tertia</reg></choice> secundum quam scilicet potentia fertur in obiectum et cognoscit illud 
-       <lb ed="#SV"/>et non ex <choice><orig>2abus</orig><reg>duabus</reg></choice> <corr><del>quia non haberent illam <choice><orig>3am</orig><reg>tertiam</reg></choice></del></corr> aliis habitu<lb ed="#SV"/>dinibus</p>
-     </div>
-     <div>
-      
-      <head xml:id="l15-Hcepcne">[Cognitio extra potentiam cognitivam cognitionem non est]</head>
-    
-      <p xml:id="l15-eipncb"><g ref="#dbslash"/>Ex istis patet quod si illa qualitas quae est 
-       <lb ed="#SV"/>cognitio poneretur extra potentiam cognitivam non esset co<lb ed="#SV"/>gnitio 
-       quia non haberet illam <choice><orig>3am</orig><reg>tertiam</reg></choice> habitudinem ad suum subiectum 
-       <lb ed="#SV"/>quae est vitalis immutatio Requisitam ad hoc quod talis qualitas 
-       <lb ed="#SV"/>sit cognitio <g ref="#slash"/>et ista si produceretur a potentia <g ref="#slash"/>et Reciperetur 
-       <lb ed="#SV"/><choice><orig>eciam</orig><reg>etiam</reg></choice> in ipsa potentia sine hoc quod vitaliter immutaret potentiam 
-       <lb ed="#SV"/>non diceretur per hoc cognitio patet ex praedictis <g ref="#slash"/>dicunt consequenter 
-       <lb ed="#SV"/>se <name ref="#Candia">magister petrus de candia</name> et sui sequaces sicut fuit 
-       <lb ed="#SV"/><name ref="#Ripa">magister Iohannes de Rippa</name> quod istae <choice><orig>3es</orig><reg>tres</reg></choice> habitudines sunt 
-       <lb ed="#SV"/>separabiles ab invicem <g ref="#slash"/>ita quod quaelibet potest esse sine alia 
-       <lb ed="#SV"/><g ref="#slash"/>utrum autem sic sint separabiles ab invicem alias videtur 
-       <lb ed="#SV"/>et non plus pro nunc causa brevitatis</p>
-     
-     </div>
-    </div>
-   </div>
-  </body>
- </text>
+  <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="206-r"/>
+        <cb ed="#SV" n="b"/>
+      </div>
+    </front>
+    <body>
+      <div xml:id="lectio15">
+        <head>Lectio 15, De fide [St. Victor Transcription]</head>
+        <div>
+          <head xml:id="l15-Hrdpdpc">[Recapitulatio duarum praedictarum conclusionum]</head>
+          <p xml:id="l15-seqapd">
+            <g ref="#dbslash"/>Sciendum est quod in praecedenti lectione positae 
+            <lb ed="#SV" n="64"/>fuerunt duae conclusiones <g ref="#slash"/>una fuit quod actus sciendi et 
+            <lb ed="#SV"/>actus fidei de eodem sunt compossibiles <g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> fuit quod lumen natura<lb ed="#SV" break="no"/>le 
+            in infinitum ascendit per latitudinem veritatum a principiis 
+            <lb ed="#SV"/>distantium
+          </p>
+        </div>
+        <div>
+          <head xml:id="l15-Hcpcnsc">
+            [Circa primam conclusionem: opinio quod actus fidei actus scientificus non sunt compossibiles]
+          </head>
+          <p xml:id="l15-ecppss">
+            <g ref="#slash"/>et circa primam conclusionem fuit tacta <choice><orig>oppinio</orig><reg>opinio</reg></choice> 
+            <lb ed="#SV"/>communis quod actus fidei <g ref="#slash"/>et actus scientificus respectu eiusdem non possunt 
+            <lb ed="#SV"/>simul stare
+          </p>
+        </div>
+        <div>
+          <head xml:id="l15-Hopdpdc">[Opinio Petri de Candia]</head>
+          <p xml:id="l15-ncmani">
+            <g ref="#slash"/>nihilominus considerando materiam sciendum est quod <name ref="#Candia">magister 
+            <lb ed="#SV"/>petrus de candia</name> in ista materia ponit istam conclusionem quod licet 
+            <lb ed="#SV"/>actus fidei <g ref="#slash"/>et actus scientificus sic sunt impossibiles respectu eiusdem 
+            <lb ed="#SV"/>quod impossibile sit quis <choice><orig>apperire</orig><reg>aperire</reg></choice> eidem actu fidei et actu 
+            <lb ed="#SV"/>scientifico <g ref="#slash"/>tamen sunt simul compossibiles subiective <g ref="#slash"/>Ita quod conclusio sua 
+            <lb ed="#SV"/>est ista quod actus fidei et actus sciendi de eodem sunt simul 
+            <lb ed="#SV"/>compossibiles in eadem potentia subiective <g ref="#slash"/>non tamen sic quod quilibet illorum 
+            <lb ed="#SV"/>actuum immutet <sic>veritatis</sic> potentiam <g ref="#slash"/>ita quod nullus <choice><orig>inmutat</orig><reg>immutat</reg></choice><g ref="#slash"/> 
+            <lb ed="#SV"/>vel si unus immutet <g ref="#slash"/>alter non immutat
+          </p>
+        </div>
+        <div>
+          <head xml:id="l15-Hrapcrc">[Responsio ad opinionem Petri de Candia: quattuor conclusiones circa rationem cognitionis]</head>
+          <p xml:id="l15-cicimc">
+            <g ref="#slash"/>circa istam 
+            <lb ed="#SV"/>conclusionem possunt poni plura quae pro nunc non discutientur 
+            <lb ed="#SV"/>ad plenum <g ref="#slash"/>sed solum ponentur aliqua in generali et 
+            <lb ed="#SV"/>possunt poni in modum conclusionum
+          </p>
+          <div>
+            <head xml:id="l15-Hpccdce">[Prima conclusio: cognitio non dicitur "cognitio" essentialiter]</head>
+            <p xml:id="l15-pdenep">
+              <g ref="#slash"/>primum dictum est <g ref="#slash"/>cognitio 
+              <lb ed="#SV"/>non dicitur intrinsece et essentialiter cognitio <g ref="#slash"/>et ita diceretur 
+              <lb ed="#SV"/>de quocumque actu cognoscendi generaliter <g ref="#slash"/>probatur sic primo 
+              <lb ed="#SV"/>quia circumscriptis potentia et obiecto cognitio non Remaneret 
+              <lb ed="#SV"/>cognitio igitur etc <g ref="#slash"/>consequentia tenet quia illud quod est intrinsece ali<lb ed="#SV" break="no"/>quale 
+              semper Remanet tale <g ref="#slash"/>omnibus extrinsecis circumscriptis  
+              <lb ed="#SV"/>antecedens patet quia si non esset potentia praeceptiva talis qualitas quae 
+              <lb ed="#SV"/>est cognitio <g ref="#slash"/>non esset cognitio <g ref="#slash"/>quia nec sibi <g ref="#slash"/>quia non 
+              <lb ed="#SV"/>cognovit <g ref="#slash"/>nec potentiae <g ref="#slash"/>quia per casum nulla est potentia
+            </p>
+            <p xml:id="l15-spcsqq">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
+              <lb ed="#SV"/>probatur conclusio praedicta quia si cognitio esset essentialiter et intrinsece 
+              <lb ed="#SV"/>cognitio <g ref="#slash"/>tunc cum quilibet gradus Repositus in latitudine 
+              <lb ed="#SV"/>cognitionum dicat perfectionem similiter Repositam 
+              <lb ed="#SV"/>sub latitudine viventium <g ref="#slash"/>sequeretur quod cognitio viveret <g ref="#slash"/>et 
+              <pb ed="#SV" n="206-v"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>per consequens esset perfectior subiecta non vivente quod est falsum cum 
+              <lb ed="#SV"/>sit quaedam qualitas
+            </p>
+            <p xml:id="l15-taippp">
+              <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> ad idem sic si cognitio poneretur 
+              <lb ed="#SV"/>in lapide si esset essentialiter cognitio tunc lapis per eam de<lb ed="#SV" break="no"/>nominaretur 
+              intrinsece et essentialiter cognoscens consequens est 
+              <lb ed="#SV"/>falsum quia non stat intrinsece lapidem intrinsece cognoscere nisi 
+              <lb ed="#SV"/>esset per communicationem <choice><orig>ydiomatum</orig><reg>idiomatum</reg></choice> quod non est ad propositum igitur illa 
+              <lb ed="#SV"/>cognitio non est intrinsece et essentialiter cognitio <g ref="#slash"/>consequentia 
+              <lb ed="#SV"/>probatur quia quandocumque aliqua forma communicatur alicui subiecto illa forma 
+              <lb ed="#SV"/>communicat sibi in <choice><orig>concretto</orig><reg>concreto</reg></choice> omnem denominationem sibi competentem 
+              <lb ed="#SV"/>in abstracto supple essentialem <g ref="#slash"/>et eodem esset dicendum 
+              <lb ed="#SV"/>de omnibus aliis actibus intellectus et voluntatis quod nullus talis est 
+              <lb ed="#SV"/>intrinsece et essentialiter cognitio vel volitio et sic patet propositum 
+              <lb ed="#SV"/>et sic patet propositio probata
+            </p>
+          </div>
+          <div>
+            <head xml:id="l15-Hsccpua">
+              [Secunda conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae ut activa]
+            </head>
+            <p xml:id="l15-scnicv">
+              <g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio non ex habitudine potentiae 
+              <lb ed="#SV"/>ut activa est cognitio denominatur cognitio <g ref="#slash"/>unde 
+              <lb ed="#SV"/><choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod cognitio habet habitudinem multiplicem 
+              <lb ed="#SV"/>ad suum subiectum <g ref="#slash"/>una est habitudo <corr><g ref="#carrot"/><add place="aboveLine">ut</add></corr> formae inhaerentis <g ref="#slash"/>alia 
+              <lb ed="#SV"/>est habitudo ut effectus a potentia producti <g ref="#slash"/>alia est habitudo 
+              <lb ed="#SV"/>ut vitaliter immutativus modo venandum est ex quo cognitio 
+              <lb ed="#SV"/>intrinsece et essentialiter non est cognitio a qua denominatione 
+              <lb ed="#SV"/>sine habitudine extrinseca dicatur cognitio <g ref="#slash"/>probatur igitur conclusio <choice><orig>2a</orig><reg>secunda</reg></choice>, 
+              <lb ed="#SV"/>scilicet quod cognitio non dicitur cognitio ex habitudine potentiae 
+              <lb ed="#SV"/>ut activa est <g ref="#slash"/>quia habitudo productionis notitiae est prior saltem 
+              <lb ed="#SV"/>natura quam sit immutatio potentiae vitalis igitur deus posset facere 
+              <lb ed="#SV"/>quod potentia produceret cognitionem <g ref="#slash"/>et tamen per eam potentia non cognosceret 
+              <lb ed="#SV"/>quia non vitaliter immutaret potentiam igitur conclusio vera
+            </p>
+            <p xml:id="l15-sncapc">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nisi 
+              <lb ed="#SV"/>conclusio esset vera tunc ita videretur esse de qualibet notitia <g ref="#slash"/>modo in<lb ed="#SV" break="no"/>stantia 
+              est de notitia divina quia non dicitur per hoc cognitio 
+              <lb ed="#SV"/>quia producitur a potentia cognitiva
+            </p>
+          </div>
+          <div>
+            <head xml:id="l15-Htccpur">[Tertia conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae ut receptiva]</head>
+            <p xml:id="l15-tccsis">
+              <g ref="#dbslash"/><choice><orig>3a</orig><reg>tertia</reg></choice> propositio cognitio non dicitur 
+              <lb ed="#SV"/>cognitio in habitudine ad suam potentiam ut est Receptiva 
+              <lb ed="#SV"/>probatur conclusio quia de facto aliqua est cognitio quae non est in aliquo 
+              <lb ed="#SV"/>subiective igitur de ratione cognitionis non est quod sit in 
+              <lb ed="#SV"/>subiecto
+            </p>
+            <p xml:id="l15-spccee">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> probatur conclusio quia si per dei potentiam cognitio poneretur 
+              <lb ed="#SV"/>in lapide lapis ad eam haberet habitudinem Receptivam 
+              <lb ed="#SV"/>et tamen per hoc lapis non denominaretur cognoscens 
+              <lb ed="#SV"/>igitur etc
+            </p>
+          </div>
+          <div>
+            <head xml:id="l15-Hqccevi">[Quarta conclusio: cognitio dicitur "cognitio" ex habitudine ad suam potentiam ut perceptivam et vitaliter immutabilem]</head>
+            <p xml:id="l15-qccasp">
+              <g ref="#dbslash"/><choice><orig>4a</orig><reg>quarta</reg></choice> conclusio cognitio dicitur esse cognitio ex habitudine 
+              <lb ed="#SV"/>ad suam potentiam ut perceptivam et vitaliter immutabilem 
+              <lb ed="#SV"/>et hoc loquendo de cognitione creata <g ref="#slash"/>probatur conclusio nam oportet 
+              <lb ed="#SV"/>ex quo cognitio non est intrinsece et essentialiter cognitio 
+              <lb ed="#SV"/>quod hoc sit ex aliqua habitudine sive denominatione 
+              <lb ed="#SV"/>extrinseca <g ref="#slash"/>et maxime ad suam potentiam <g ref="#slash"/>et hoc 
+              <lb ed="#SV"/>non est ex habitudine ad suam potentiam ut est activa 
+              <lb ed="#SV"/><g ref="#slash"/>nec ut est Receptiva per <choice><orig>2as</orig><reg>duas</reg></choice> conclusiones praecedentes 
+              <lb ed="#SV"/>igitur etc <g ref="#slash"/>quia non videntur esse nisi <choice><orig>3es</orig><reg>tres</reg></choice> habitudines co<lb ed="#SV" break="no"/>gnitionis 
+              ad suam potentiam
+            </p>
+          </div>
+        </div>
+        <div>
+          <head xml:id="l15-Hcccccc">[Corollaria circa cognitionem]</head>
+          <div>
+            <head xml:id="l15-Hthpasc">[Triplex habitudo potentiae ad suam cognitionem]</head>
+            <p xml:id="l15-eppdah">
+              <g ref="#slash"/>Ex praedictis patet quod potentiae 
+              <lb ed="#SV"/>ad suam cognitionem sive econverso triplex est habitudo 
+              <cb ed="#SV" n="b"/> <!--206vb -->
+              <lb ed="#SV"/>una est subiectiva in hoc quod potentia Recipit cognitionem in se 
+              <lb ed="#SV"/>subiective <g ref="#slash"/>alia est activa in hoc quod potentia producit illam cognitionem 
+              <lb ed="#SV"/><g ref="#slash"/>alia est vitaliter immutabilis in hoc quod per illam cognitionem talis 
+              <lb ed="#SV"/>potentia fertur in obiectum suum <g ref="#slash"/>modo ad propositum dicitur quod illa quali<lb ed="#SV" break="no"/>tas 
+              quae est cognitio <g ref="#slash"/>dicitur esse cognitio ex habitudine illa 
+              <lb ed="#SV"/><choice><orig>3a</orig><reg>tertia</reg></choice> secundum quam scilicet potentia fertur in obiectum et cognoscit illud 
+              <lb ed="#SV"/>et non ex <choice><orig>2abus</orig><reg>duabus</reg></choice> <corr><del>quia non haberent illam <choice><orig>3am</orig><reg>tertiam</reg></choice></del></corr> aliis habitu<lb ed="#SV" break="no"/>dinibus
+            </p>
+          </div>
+          <div>
+            <head xml:id="l15-Hcepcne">[Cognitio extra potentiam cognitivam cognitionem non est]</head>
+            <p xml:id="l15-eipncb">
+              <g ref="#dbslash"/>Ex istis patet quod si illa qualitas quae est 
+              <lb ed="#SV"/>cognitio poneretur extra potentiam cognitivam non esset co<lb ed="#SV" break="no"/>gnitio 
+              quia non haberet illam <choice><orig>3am</orig><reg>tertiam</reg></choice> habitudinem ad suum subiectum 
+              <lb ed="#SV"/>quae est vitalis immutatio Requisitam ad hoc quod talis qualitas 
+              <lb ed="#SV"/>sit cognitio <g ref="#slash"/>et ista si produceretur a potentia <g ref="#slash"/>et Reciperetur 
+              <lb ed="#SV"/><choice><orig>eciam</orig><reg>etiam</reg></choice> in ipsa potentia sine hoc quod vitaliter immutaret potentiam 
+              <lb ed="#SV"/>non diceretur per hoc cognitio patet ex praedictis <g ref="#slash"/>dicunt consequenter 
+              <lb ed="#SV"/>se <name ref="#Candia">magister petrus de candia</name> et sui sequaces sicut fuit 
+              <lb ed="#SV"/><name ref="#Ripa">magister Iohannes de Rippa</name> quod istae <choice><orig>3es</orig><reg>tres</reg></choice> habitudines sunt 
+              <lb ed="#SV"/>separabiles ab invicem <g ref="#slash"/>ita quod quaelibet potest esse sine alia 
+              <lb ed="#SV"/><g ref="#slash"/>utrum autem sic sint separabiles ab invicem alias videtur 
+              <lb ed="#SV"/>et non plus pro nunc causa brevitatis
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
 </TEI>
