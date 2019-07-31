@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI  xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,20 +16,32 @@
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-10-01">October 1st, 2011</date>  
+        <date when="2011-10-01">October 1, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S">Sorbonne</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-01" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <facsimile>
     <surface n="S36v">
       <graphic url="S36v.jpg"/>
@@ -91,283 +103,305 @@
   </facsimile>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#S" n="36-v"/>
+        <cb ed="#S" n="b"/>
+      </div>
     </front>
     <body>
-     <div xml:id="lectio21"> 
-       <head subtype="title">Lectio 21, de Notitia [Sorbonne Transcription]</head>
-      
-       <p xml:id="l21-sqtppt"><lb ed="#S"/><g ref="#pilcrow"/>secundum quod in praecedenti lectione tactum est ex divina 
-         <lb ed="#S"/>providentia factum est quod res se ipsas diffun<lb ed="#S"/>dunt 
-         multiplicando species quasdam quia non possunt 
-         <lb ed="#S"/>immediate se ipsis communicari sive cognosci 
-         <lb ed="#S"/>et sicut dictum est omnia ista facta sunt 
-         <lb ed="#S"/>ad utilitatem hominis nam res istae inferiores 
-         <lb ed="#S"/>ad usum hominis multiplicantur et se offerunt ut 
-         <lb ed="#S"/>eis utatur homo ad eius indigentias nec 
-         <lb ed="#S"/>aliquas consumendo nunc alias conservando et ordinando 
-         <lb ed="#S"/>ad alios usus secundum quod homini congruit et nedum 
-         <lb ed="#S"/>praesentant se huiusmodi res se offerunt pro 
-         <lb ed="#S"/>indigentiis hominum succurrendo sed etiam pro per<lb ed="#S"/>fectione 
-         ipsius ut si ab ipso intellectu cog<lb ed="#S"/>noscantur 
-         tam physice quantum ad proprietates naturales 
-         <lb ed="#S"/>quam mathematice sive metaphysice et generaliter secundum 
-         <lb ed="#S"/>omnes modos secundum quos intelligitur perficitur eas 
-         <cb ed="#S" n="37ra"/><lb ed="#S"/>cognoscendo et finaliter se praesentant et offerunt 
-         <lb ed="#S"/>ostendendo suum creatorem in quo consistit humana 
-         <lb ed="#S"/>felicitas et hoc testatur <name ref="#Augustine">Augustinus</name> in pluribus 
-         <lb ed="#S"/>locis <g ref="#slash"/>unde in libro <title ref="#Confessions">confessionum</title> et in libro <title ref="#CityOfGod">de 
-         <lb ed="#S"/>civitate</title> sic inquit: <quote>totus enim iste mundus 
-         <lb ed="#S"/>clamat se factum a suo creatore <g ref="#slash"/>tamen a 
-         <lb ed="#S"/>turpe audientibus non auditur clamor iste</quote> 
-         <lb ed="#S"/>ita quod generaliter omnes res mundi sunt sui 
-         <lb ed="#S"/>diffusivae cognitive id est quod omnis res mundi 
-         <lb ed="#S"/>sive sit res immensa sive intelligentia spiritualis sive 
-         <lb ed="#S"/>res corporalis causat vel causare potest obiective 
-         <lb ed="#S"/>sui ipsius cognitionem in potentia cognoscente et hoc ex 
-         <lb ed="#S"/>divina providentia specialiter omnia bene disponente 
-         <lb ed="#S"/>quod posui pro illo principio theologico.</p>
-      
-       <div><head xml:id="l21-Hdeodeo">[Duae extremae opiniones]</head>
-      
-         <p xml:id="l21-atqaed"><g ref="#pilcrow"/>advertendum tamen 
-           <lb ed="#S"/>quod in ista materia sunt duae opiniones extremae 
-           <lb ed="#S"/>praeter opinionem <name ref="#Ripa">Magistri Ioannis de rippa</name> 
-           <lb ed="#S"/>de qua nunc aliqualiter veritas est declaranda.</p> 
-      
-         <div><head xml:id="l21-Hpopopo">[Prima opinio]</head>
-      
-           <p xml:id="l21-poprun"><lb ed="#S"/><g ref="#pilcrow"/>prima <choice><orig>oppinio</orig><reg>opinio</reg></choice> ponit quod realiter res diffundunt 
-             <lb ed="#S"/>se ipsas ita quod species rei est met ipsa res 
-             <lb ed="#S"/>in esse tali in quo potest uniri animae cognitive 
-             <lb ed="#S"/>et istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> legi in <name ref="#RogerBacon">bachon</name> in quodam 
-             <lb ed="#S"/>tractatu quem fecit de multiplicatione specierum agen<lb ed="#S"/>tium 
-             et ultra multa pulchra continentur <g ref="#slash"/>sed 
-             <lb ed="#S"/>diu est quod ego vidi alias sed non potui 
-             <lb ed="#S"/>reperire usque nunc.</p> 
-      </div>
-      <div>
-        <head xml:id="l21-Hsososo">[Secunda opinio]</head>
-      
-        <p xml:id="l21-aotmsc"><g ref="#pilcrow"/>alia <choice><orig>oppinio</orig><reg>opinio</reg></choice> totaliter 
-          <lb ed="#S"/>extrema quod nullae sunt huiusmodi species <g ref="#slash"/>nec res 
-          <lb ed="#S"/>se sic diffundant per suas species sicut 
-          <lb ed="#S"/>dictum est <g ref="#slash"/>sed ex ordinatione divina ad 
-          <lb ed="#S"/>praesentiam obiecti ipsi potentiae cum certa distantia 
-          <lb ed="#S"/>medii et dispositione res cognoscitur <g ref="#slash"/>licet nihil pe<lb ed="#S"/>nitus 
-          causet in potentia cognoscente ita quod eo 
-          <lb ed="#S"/>ipso quod obiectum sic se habet ad potentiam ex 
-          <lb ed="#S"/>parte quantitatis distantiae et qualitatis oritur 
-          <lb ed="#S"/>quod ipsa res potest percipi <g ref="#pilcrow"/>Unde <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est 
-          <lb ed="#S"/>quod una certa latitudo habitudinum distantiae potentiae 
-          <lb ed="#S"/>ad obiectum in qua res potest percipi posset tamen 
-          <lb ed="#S"/>dari maior distantia in qua res non 
-          <lb ed="#S"/>perciperetur <g ref="#slash"/>vel minor propter maximam elongationem 
-          <lb ed="#S"/>vel maximam propinquitatem <g ref="#slash"/>consequenter infra huiusmodi 
-          <lb ed="#S"/>habitudinum latitudinem ponunt quod res per applicationem 
-          <lb ed="#S"/>ipsarum rei opacae vel speculo vel alteri 
-          <lb ed="#S"/>opaco res videtur <g ref="#slash"/>tamen non statim obiectatur et 
-          <lb ed="#S"/>directe quia illud clauditur in habitudines 
-          <lb ed="#S"/>illas quibus positis cognoscitur obiectum <g ref="#slash"/>et illud 
-          <cb ed="#S" n="37rb"/><lb ed="#S"/>provenit ex ordinatione divina quia non semper congruit 
-          <lb ed="#S"/>quod res obiectaliter et directe cognoscatur <g ref="#slash"/>et consequenter 
-          <lb ed="#S"/>dicuntur alii quod in anima non formantur actus 
-          <lb ed="#S"/>cognoscendi distincti ab ipsa anima sed anima est 
-          <lb ed="#S"/>met sua cognitio.</p>
-      </div>
-         <div><head xml:id="l21-Hrapeso">[Responsio ad primam et secundum opinionem]</head>
-      
-           <p xml:id="l21-ecmeai"><g ref="#slash"/>et circa materiam istam quia 
-             <lb ed="#S"/>non teneo primam nec secundam opiniones volo eas 
-             <lb ed="#S"/>aliqualiter Improbare.</p>
-      
-           <p xml:id="l21-peossl"><g ref="#pilcrow"/>prima enim opinio videtur 
-             <lb ed="#S"/>repugnare philosophiae naturali multipliciter primo quod una res 
-             <lb ed="#S"/>materialis sit in diversis locis secundum se totam 
-             <lb ed="#S"/>idem quod non stat de potentia dei ordinata 
-             <lb ed="#S"/>sive communi quod res eadem sit in diversis locis 
-             <lb ed="#S"/>secundum se totam. <g ref="#pilcrow"/>Item videtur repugnare philosophiae 
-             <lb ed="#S"/>naturali quod aliquod compositum ex materia et forma 
-             <lb ed="#S"/>inhaereat animae et immutet eam vitaliter. 
-             <lb ed="#S"/>Item istud videatur immediate contra <name ref="#Aristotle">aristotelem</name> <num>3o</num> 
-             <lb ed="#S"/><title ref="#deAnima">de anima</title> ubi dicit quod <quote xml:id="l21-QClnessl" type="Classical">“lapis non est in anima, 
-             <lb ed="#S"/>sed species lapidis.”</quote></p>  
-      
-           <p xml:id="l21-veqris"><g ref="#pilcrow"/>verum est quod ista <choice><orig>oppinio</orig><reg>opinio</reg></choice> re<lb ed="#S"/>sponderet 
-             quod res corpore non se diffun<lb ed="#S"/>dit 
-             vel multiplicat corporaliter cum suis 
-             <lb ed="#S"/>accidentibus corporalibus communibus <g ref="#slash"/>sed communicat se pure 
-             <lb ed="#S"/>substantialiter sine huiusmodi accidentibus corporalibus communibus 
-             <lb ed="#S"/>quae insunt ipsi rei in se</p> 
-      
-           <p xml:id="l21-ebcpdc"><g ref="#slash"/>et breviter 
-             <lb ed="#S"/>circa materiam notandum est quod varietas istarum 
-             <lb ed="#S"/><choice><orig>oppinionum</orig><reg>opinionum</reg></choice> reducitur ad debilitatem ingenii 
-             <lb ed="#S"/>humani ex qua contingit in <space extent="oneWordLength"/> erroribus 
-             <lb ed="#S"/>adhaerere propter pronitatem intellectus ad errores qui 
-             <lb ed="#S"/>magis inclinatur ad errores quam ad veri<lb ed="#S"/>tates 
-             et sicut dicit <name ref="#Aristotle">aristoteles</name> in libro <title ref="#Ethics">ethicorum</title> in 
-             <lb ed="#S"/>materia moralium infiniti sunt modi procedendi 
-             <lb ed="#S"/>et tamen unicus est modus <choice><orig>actingendi</orig><reg>attingendi</reg></choice> eas <g ref="#slash"/>et <!-- possible homoteleuton here --> 
-             <lb ed="#S"/>ideo in talibus principaliter insistendi <sic>etc</sic> auctoritatibus 
-             <lb ed="#S"/>in philosophia sicut fuit <name>aristoteles</name> qui maxime 
-             <lb ed="#S"/>laboravit ad inquisitionem veritatis ideo opinio 
-             <lb ed="#S"/>sua est tenenda quasi ex quadam fide 
-             <lb ed="#S"/>supponenda <g ref="#slash"/>ideo tenendum est quod res sic se mul<lb ed="#S"/>tiplicant 
-             diffundendo species suas quia illud 
-             <lb ed="#S"/>nihil posuit et istud est consonum fi<lb ed="#S"/>dei 
-             et veritati quia <name ref="#Aristotle">aristoteles</name> in omni doctrina 
-             <lb ed="#S"/>sua quasi <sic>immutatus</sic> est veritatem et quasi in 
-             <lb ed="#S"/>omnibus consonat fidei et veritati licet tamen 
-             <lb ed="#S"/>cum auctoritate habere rationes <g ref="#slash"/>Et tamen ne op<lb ed="#S"/>orteat 
-             redire solvam quaestionem illam 
-             <lb ed="#S"/>utrum anima seipsam cognoscat <g ref="#slash"/>et breviter 
-             <lb ed="#S"/>pro isto ponam duas conclusiones.</p>
-      </div>
-      
-         <div>
-           <head xml:id="l21-pcpcpc">[Prima conclusio]</head>
-      
-           <p xml:id="l21-peqrev"><g ref="#pilcrow"/>prima est quod 
-             <cb ed="#S" n="37va"/><lb ed="#S"/>anima realiter distinguitur a suis actibus <g ref="#slash"/>ad hoc 
-             <lb ed="#S"/>enim sunt articuli tres parisius condemnati <g ref="#slash"/>unus est quod 
-             <lb ed="#S"/>aliqua intelligentia creata intelligat per suam essentiam 
-             <lb ed="#S"/>error <g ref="#slash"/><choice><orig>2us</orig><reg>secundus</reg></choice> articulus quod anima non possit in se ac<lb ed="#S"/>quirere 
-             <lb ed="#S"/>dispositiones error <g ref="#pilcrow"/><choice><orig>3us</orig><reg>tertius</reg></choice> articulus quod habens 
-             <lb ed="#S"/>meliora naturalia sit perfectior error et tamen 
-             <lb ed="#S"/>immediate istud sequeretur si anima esset sua cognitio 
-             <lb ed="#S"/><g ref="#slash"/>Item in <name>clementinis</name> continetur expresse quod anima 
-             <lb ed="#S"/>se ipsa sine actu superaddito posset beatificari error 
-             <g ref="#slash"/>unde decretalis ponit quod sunt duo actus beatitudinis 
-             <lb ed="#S"/>formalis ipsius animae distincti ab ipsa anima scilicet fruitio et 
-             <lb ed="#S"/>dilectio ideo apparet satis ex determinatione ecclesiae et 
-             <lb ed="#S"/>determinatione parisiensis quod anima habet in se actus 
-             <lb ed="#S"/>cognoscendi distinctos ab ipsa anima sicut communiter ponitur 
-             <lb ed="#S"/>de actibus gratuitis sicut sunt spes fides 
-             <lb ed="#S"/>et caritas <g ref="#slash"/>et istud consonat dictis <name ref="#Aristotle">aristotelis</name> <choice><orig>eciam</orig><reg>etiam</reg></choice> 
-             <lb ed="#S"/>consonat rationi et veritati.</p>
-      </div>  
-      
-         <div>
-           <head xml:id="l21-scscsc">[Secunda conclusio]</head>
-        
-           <p xml:id="l21-scnave"><g ref="#pilcrow"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio non est demonstratio 
-             <lb ed="#S"/>absolute cogens protervum ad contrarium <g ref="#slash"/>Ita quod oppositum 
-             <lb ed="#S"/>potest sustineri sine contradictione seclusis articulis condem<lb ed="#S"/>natis 
-             licet sit falsum et istud salvaretur resol<lb ed="#S"/>vendo 
-             se ad habitudines quasdam potentiae ad obiectum secundum 
-             <lb ed="#S"/>certas applicationes ad ipsam animam <g ref="#slash"/>ita quod per huiusmodi 
-             <lb ed="#S"/>applicationes obiecti ad potentiam anima esset cognitio et inter 
-             <lb ed="#S"/>cognitiones poneretur talis ordo quod primo anima esset 
-             <lb ed="#S"/>cognitio simplex apprehensiva <g ref="#slash"/>deinde compositiva vel divisiva de<lb ed="#S"/>inde 
-             assertiva et sic ascendendo per gradus cognitionum 
-             <lb ed="#S"/>et consequenter esset prius intellectio quam volitio</p>
-        
-           <p xml:id="l21-sspais"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> <choice><orig>substine<lb ed="#S"/>retur</orig><reg>sustine<lb ed="#S"/>retur</reg></choice> 
-             ista opinio per alium modum <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> de ipsa 
-             <lb ed="#S"/>sicut de divina essentia quae modo cognoscit <name ref="#Sortes">Sortem</name> esse 
-             <lb ed="#S"/>et ante non cognoscebat et sic de aliis <g ref="#slash"/>et hoc sine ac<lb ed="#S"/>quisitione 
-             alicuius rei in se tamen ibi esset aliqualis 
-             <lb ed="#S"/>mutatio quia de non sciente fieret sciens <g ref="#slash"/>ad 
-             <lb ed="#S"/>articulos diceretur quod intelliguntur quod anima non est 
-             <lb ed="#S"/>intrinsece et essentialiter notitia <g ref="#slash"/>modo licet de facto esset 
-             <lb ed="#S"/>cognitio sive notitia sua tamen non esset essentialiter cognitio quia 
-             <lb ed="#S"/>ipsa remanente posset non esse cognitio <g ref="#pilcrow"/>Item <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
-             <lb ed="#S"/>de quantitate figurata <g ref="#slash"/>licet non distinguitur a figura tamen non 
-             <lb ed="#S"/>est essentialiter figura quia potest non esse circulus vel quadrangulus 
-             <lb ed="#S"/>et sic de aliis <g ref="#slash"/>ipsa eadem remanente in sua essentia 
-             <lb ed="#S"/>et ista proficiunt intellectui ad <choice><orig>exercicacionem</orig><reg>exercitationem</reg></choice> 
-             <lb ed="#S"/>et non alias et si dicatur replicando quia tenendo quod 
-             <lb ed="#S"/>anima esset sua cognitio non posset salvari quod esset 
-             <lb ed="#S"/>species intelligibilis negatur consequentia quia anima per prius esset species 
-             <lb ed="#S"/>intelligibilis et postea intellectio <g ref="#slash"/>postea volitio quia <choice><orig>scat</orig><reg>stat</reg></choice> 
-             <lb ed="#S"/>quod simul sit cognitio intellectio volitio <g ref="#slash"/>quod <choice><orig>eciam</orig><reg>etiam</reg></choice> simul sit 
-             <lb ed="#S"/>amor unius et odium alterius et sic de aliis 
-             <cb ed="#S" n="37vb"/><lb ed="#S"/><g ref="#slash"/>ad auctoritates faciliter solverentur reducendo totum 
-             <lb ed="#S"/>ad ordinem et habitudinem animae in se.</p> 
-      </div>  
-      <div>
-        <head xml:id="l21-Huaoaoe">Una alia opinio extrema</head>
-        
-        <p xml:id="l21-eaudet"><g ref="#slash"/>Est adhuc una alia <choice><orig>oppinio</orig><reg>opinio</reg></choice> extrema quae 
-          <lb ed="#S"/>ponit quod visio fit extra mittendo et istam tangit 
-          <lb ed="#S"/><name ref="#Aristotle">philosophus</name> <num>3o</num> <title ref="#deAnima">de anima</title> et in <title>de sensu et sensato</title> et 
-          <lb ed="#S"/>eam reprobat ideo pro nunc de ea transeo.</p> 
-      </div>
-        </div>
-       
-       <div> 
-         <head xml:id="l21-Hraiidv">Reditio ad inquisitionem de veritate</head>
-        
-         <p xml:id="l21-reapid">redeundo 
-           <lb ed="#S"/>igitur ad praedicta de veritate inquirendum est et sicut 
-           <lb ed="#S"/>dixi teneo et tenebo quod quaelibet res concurrit 
-           <lb ed="#S"/>vel concurrere potest obiective ad causandam sui ipsius 
-           <lb ed="#S"/>notitiam in anima et hoc potest <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> dupliciter</p> 
+      <div xml:id="lectio21">
+        <head>Lectio 21, de Notitia [Sorbonne Transcription]</head>
+        <p xml:id="l21-sqtppt">
+          <lb ed="#S"/><g ref="#pilcrow"/>secundum quod in praecedenti lectione tactum est ex divina 
+          <lb ed="#S"/>providentia factum est quod res se ipsas diffun<lb ed="#S" break="no"/>dunt 
+          multiplicando species quasdam quia non possunt 
+          <lb ed="#S"/>immediate se ipsis communicari sive cognosci 
+          <lb ed="#S"/>et sicut dictum est omnia ista facta sunt 
+          <lb ed="#S"/>ad utilitatem hominis nam res istae inferiores 
+          <lb ed="#S"/>ad usum hominis multiplicantur et se offerunt ut 
+          <lb ed="#S"/>eis utatur homo ad eius indigentias nec 
+          <lb ed="#S"/>aliquas consumendo nunc alias conservando et ordinando 
+          <lb ed="#S"/>ad alios usus secundum quod homini congruit et nedum 
+          <lb ed="#S"/>praesentant se huiusmodi res se offerunt pro 
+          <lb ed="#S"/>indigentiis hominum succurrendo sed etiam pro per<lb ed="#S" break="no"/>fectione 
+          ipsius ut si ab ipso intellectu cog<lb ed="#S" break="no"/>noscantur 
+          tam physice quantum ad proprietates naturales 
+          <lb ed="#S"/>quam mathematice sive metaphysice et generaliter secundum 
+          <lb ed="#S"/>omnes modos secundum quos intelligitur perficitur eas 
+          <pb ed="#S" n="37-r"/>
+          <cb ed="#S" n="a"/>
+          <lb ed="#S"/>cognoscendo et finaliter se praesentant et offerunt 
+          <lb ed="#S"/>ostendendo suum creatorem in quo consistit humana 
+          <lb ed="#S"/>felicitas et hoc testatur <name ref="#Augustine">Augustinus</name> in pluribus 
+          <lb ed="#S"/>locis <g ref="#slash"/>unde in libro <title ref="#Confessions">confessionum</title> et in libro <title ref="#CityOfGod">de 
+          <lb ed="#S"/>civitate</title> sic inquit: <quote>totus enim iste mundus 
+          <lb ed="#S"/>clamat se factum a suo creatore <g ref="#slash"/>tamen a 
+          <lb ed="#S"/>turpe audientibus non auditur clamor iste</quote> 
+          <lb ed="#S"/>ita quod generaliter omnes res mundi sunt sui 
+          <lb ed="#S"/>diffusivae cognitive id est quod omnis res mundi 
+          <lb ed="#S"/>sive sit res immensa sive intelligentia spiritualis sive 
+          <lb ed="#S"/>res corporalis causat vel causare potest obiective 
+          <lb ed="#S"/>sui ipsius cognitionem in potentia cognoscente et hoc ex 
+          <lb ed="#S"/>divina providentia specialiter omnia bene disponente 
+          <lb ed="#S"/>quod posui pro illo principio theologico
+        </p>
         <div>
-        
-          <head xml:id="l21-Hprmprim">[Primus modus]</head>
-        
-          <p xml:id="l21-umqppi">Uno modo 
-            <lb ed="#S"/>quod per eandem speciem per quam immutat sensum res materialis per eandem immutet intellectum et hoc dupliciter 
-            <lb ed="#S"/>uno modo quod species existens in sensu communi concurreret ad 
-            <lb ed="#S"/>speciem aliam in intellectu causandam alterius speciei 
-            <lb ed="#S"/>et immaterialem cum adiutorio obiecti et potentiae intellectivae 
-            <lb ed="#S"/>quae concurrit active ad actum intelligendi et forte ad 
-            <lb ed="#S"/>speciem intelligibilem <g ref="#pilcrow"/><choice><orig>2us</orig><reg>secundus</reg></choice> modus imaginandi esset quod 
-            <lb ed="#S"/>species sensibilis et obiectum non aliter concurrerent ad 
-            <lb ed="#S"/>immutandum potentiam intellectivam et sensitivam quia realiter non 
-            <lb ed="#S"/>distinguuntur anima intellectiva et sensitiva ita quod species 
-            <lb ed="#S"/>sufficeret cum sensu ad producendum <unclear cert="medium">intentionem</unclear> sicut 
-            <lb ed="#S"/>cognitio intellectus sufficit ad producendum volitionem 
-            <lb ed="#S"/>et cum hoc cum ipsa voluntate ita quod species 
-            <lb ed="#S"/>quae requireretur et reciperetur in sensu esset causa suf<lb ed="#S"/>ficiens 
-            cum intellectu ad producendum intentionem 
-            <lb ed="#S"/>et ita de <choice><orig>fantasmate</orig><reg>phantasmate</reg></choice> quod est species sensibilis 
-            <lb ed="#S"/>reservata in <choice><orig>fantasia</orig><reg>phantasia</reg></choice> quod intellectus immediate mediante 
-            <lb ed="#S"/>ipso <choice><orig>fantasmate</orig><reg>phantasmate</reg></choice> producit intentionem.</p> 
+          <head xml:id="l21-Hdeodeo">[Duae extremae opiniones]</head>
+          <p xml:id="l21-atqaed">
+            <g ref="#pilcrow"/>advertendum tamen 
+            <lb ed="#S"/>quod in ista materia sunt duae opiniones extremae 
+            <lb ed="#S"/>praeter opinionem <name ref="#Ripa">Magistri Ioannis de rippa</name> 
+            <lb ed="#S"/>de qua nunc aliqualiter veritas est declaranda
+          </p>
+          <div>
+            <head xml:id="l21-Hpopopo">[Prima opinio]</head>
+            <p xml:id="l21-poprun">
+              <lb ed="#S"/><g ref="#pilcrow"/>prima <choice><orig>oppinio</orig><reg>opinio</reg></choice> ponit quod realiter res diffundunt 
+              <lb ed="#S"/>se ipsas ita quod species rei est met ipsa res 
+              <lb ed="#S"/>in esse tali in quo potest uniri animae cognitive 
+              <lb ed="#S"/>et istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> legi in <name ref="#RogerBacon">bachon</name> in quodam 
+              <lb ed="#S"/>tractatu quem fecit de multiplicatione specierum agen<lb ed="#S" break="no"/>tium 
+              et ultra multa pulchra continentur <g ref="#slash"/>sed 
+              <lb ed="#S"/>diu est quod ego vidi alias sed non potui 
+              <lb ed="#S"/>reperire usque nunc.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-Hsososo">[Secunda opinio]</head>
+            <p xml:id="l21-aotmsc">
+              <g ref="#pilcrow"/>alia <choice><orig>oppinio</orig><reg>opinio</reg></choice> totaliter 
+              <lb ed="#S"/>extrema quod nullae sunt huiusmodi species <g ref="#slash"/>nec res 
+              <lb ed="#S"/>se sic diffundant per suas species sicut 
+              <lb ed="#S"/>dictum est <g ref="#slash"/>sed ex ordinatione divina ad 
+              <lb ed="#S"/>praesentiam obiecti ipsi potentiae cum certa distantia 
+              <lb ed="#S"/>medii et dispositione res cognoscitur <g ref="#slash"/>licet nihil pe<lb ed="#S" break="no"/>nitus 
+              causet in potentia cognoscente ita quod eo 
+              <lb ed="#S"/>ipso quod obiectum sic se habet ad potentiam ex 
+              <lb ed="#S"/>parte quantitatis distantiae et qualitatis oritur 
+              <lb ed="#S"/>quod ipsa res potest percipi <g ref="#pilcrow"/>Unde <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est 
+              <lb ed="#S"/>quod una certa latitudo habitudinum distantiae potentiae 
+              <lb ed="#S"/>ad obiectum in qua res potest percipi posset tamen 
+              <lb ed="#S"/>dari maior distantia in qua res non 
+              <lb ed="#S"/>perciperetur <g ref="#slash"/>vel minor propter maximam elongationem 
+              <lb ed="#S"/>vel maximam propinquitatem <g ref="#slash"/>consequenter infra huiusmodi 
+              <lb ed="#S"/>habitudinum latitudinem ponunt quod res per applicationem 
+              <lb ed="#S"/>ipsarum rei opacae vel speculo vel alteri 
+              <lb ed="#S"/>opaco res videtur <g ref="#slash"/>tamen non statim obiectatur et 
+              <lb ed="#S"/>directe quia illud clauditur in habitudines 
+              <lb ed="#S"/>illas quibus positis cognoscitur obiectum <g ref="#slash"/>et illud 
+              <cb ed="#S" n="b"/><!-- 37rb-->
+              <lb ed="#S"/>provenit ex ordinatione divina quia non semper congruit 
+              <lb ed="#S"/>quod res obiectaliter et directe cognoscatur <g ref="#slash"/>et consequenter 
+              <lb ed="#S"/>dicuntur alii quod in anima non formantur actus 
+              <lb ed="#S"/>cognoscendi distincti ab ipsa anima sed anima est 
+              <lb ed="#S"/>met sua cognitio.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-Hrapeso">[Responsio ad primam et secundum opinionem]</head>
+            <p xml:id="l21-ecmeai">
+              <g ref="#slash"/>et circa materiam istam quia 
+              <lb ed="#S"/>non teneo primam nec secundam opiniones volo eas 
+              <lb ed="#S"/>aliqualiter Improbare.
+            </p>
+            <p xml:id="l21-peossl">
+              <g ref="#pilcrow"/>prima enim opinio videtur 
+              <lb ed="#S"/>repugnare philosophiae naturali multipliciter primo quod una res 
+              <lb ed="#S"/>materialis sit in diversis locis secundum se totam 
+              <lb ed="#S"/>idem quod non stat de potentia dei ordinata 
+              <lb ed="#S"/>sive communi quod res eadem sit in diversis locis 
+              <lb ed="#S"/>secundum se totam. <g ref="#pilcrow"/>Item videtur repugnare philosophiae 
+              <lb ed="#S"/>naturali quod aliquod compositum ex materia et forma 
+              <lb ed="#S"/>inhaereat animae et immutet eam vitaliter. 
+              <lb ed="#S"/>Item istud videatur immediate contra <name ref="#Aristotle">aristotelem</name> <num>3o</num> 
+              <lb ed="#S"/><title ref="#deAnima">de anima</title> ubi dicit quod <quote xml:id="l21-QClnessl">lapis non est in anima, 
+              <lb ed="#S"/>sed species lapidis</quote>
+            </p>
+            <p xml:id="l21-veqris">
+              <g ref="#pilcrow"/>verum est quod ista <choice><orig>oppinio</orig><reg>opinio</reg></choice> re<lb ed="#S" break="no"/>sponderet 
+              quod res corpore non se diffun<lb ed="#S" break="no"/>dit 
+              vel multiplicat corporaliter cum suis 
+              <lb ed="#S"/>accidentibus corporalibus communibus <g ref="#slash"/>sed communicat se pure 
+              <lb ed="#S"/>substantialiter sine huiusmodi accidentibus corporalibus communibus 
+              <lb ed="#S"/>quae insunt ipsi rei in se
+            </p>
+            <p xml:id="l21-ebcpdc">
+              <g ref="#slash"/>et breviter 
+              <lb ed="#S"/>circa materiam notandum est quod varietas istarum 
+              <lb ed="#S"/><choice><orig>oppinionum</orig><reg>opinionum</reg></choice> reducitur ad debilitatem ingenii 
+              <lb ed="#S"/>humani ex qua contingit in <space extent="oneWordLength"/> erroribus 
+              <lb ed="#S"/>adhaerere propter pronitatem intellectus ad errores qui 
+              <lb ed="#S"/>magis inclinatur ad errores quam ad veri<lb ed="#S" break="no"/>tates 
+              et sicut dicit <name ref="#Aristotle">aristoteles</name> in libro <title ref="#Ethics">ethicorum</title> in 
+              <lb ed="#S"/>materia moralium infiniti sunt modi procedendi 
+              <lb ed="#S"/>et tamen unicus est modus <choice><orig>actingendi</orig><reg>attingendi</reg></choice> eas <g ref="#slash"/>et <!-- possible homoteleuton here --> 
+              <lb ed="#S"/>ideo in talibus principaliter insistendi <sic>etc</sic> auctoritatibus 
+              <lb ed="#S"/>in philosophia sicut fuit <name>aristoteles</name> qui maxime 
+              <lb ed="#S"/>laboravit ad inquisitionem veritatis ideo opinio 
+              <lb ed="#S"/>sua est tenenda quasi ex quadam fide 
+              <lb ed="#S"/>supponenda <g ref="#slash"/>ideo tenendum est quod res sic se mul<lb ed="#S" break="no"/>tiplicant 
+              diffundendo species suas quia illud 
+              <lb ed="#S"/>nihil posuit et istud est consonum fi<lb ed="#S" break="no"/>dei 
+              et veritati quia <name ref="#Aristotle">aristoteles</name> in omni doctrina 
+              <lb ed="#S"/>sua quasi <sic>immutatus</sic> est veritatem et quasi in 
+              <lb ed="#S"/>omnibus consonat fidei et veritati licet tamen 
+              <lb ed="#S"/>cum auctoritate habere rationes <g ref="#slash"/>Et tamen ne op<lb ed="#S" break="no"/>orteat 
+              redire solvam quaestionem illam 
+              <lb ed="#S"/>utrum anima seipsam cognoscat <g ref="#slash"/>et breviter 
+              <lb ed="#S"/>pro isto ponam duas conclusiones
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-pcpcpc">[Prima conclusio]</head>
+            <p xml:id="l21-peqrev">
+              <g ref="#pilcrow"/>prima est quod 
+              <pb ed="#S" n="37-v"/>
+              <cb ed="#S" n="a"/>
+              <lb ed="#S"/>anima realiter distinguitur a suis actibus <g ref="#slash"/>ad hoc 
+              <lb ed="#S"/>enim sunt articuli tres parisius condemnati <g ref="#slash"/>unus est quod 
+              <lb ed="#S"/>aliqua intelligentia creata intelligat per suam essentiam 
+              <lb ed="#S"/>error <g ref="#slash"/><choice><orig>2us</orig><reg>secundus</reg></choice> articulus quod anima non possit in se ac<lb ed="#S" break="no"/>quirere 
+              <lb ed="#S"/>dispositiones error <g ref="#pilcrow"/><choice><orig>3us</orig><reg>tertius</reg></choice> articulus quod habens 
+              <lb ed="#S"/>meliora naturalia sit perfectior error et tamen 
+              <lb ed="#S"/>immediate istud sequeretur si anima esset sua cognitio 
+              <lb ed="#S"/><g ref="#slash"/>Item in <name>clementinis</name> continetur expresse quod anima 
+              <lb ed="#S"/>se ipsa sine actu superaddito posset beatificari error 
+              <g ref="#slash"/>unde decretalis ponit quod sunt duo actus beatitudinis 
+              <lb ed="#S"/>formalis ipsius animae distincti ab ipsa anima scilicet fruitio et 
+              <lb ed="#S"/>dilectio ideo apparet satis ex determinatione ecclesiae et 
+              <lb ed="#S"/>determinatione parisiensis quod anima habet in se actus 
+              <lb ed="#S"/>cognoscendi distinctos ab ipsa anima sicut communiter ponitur 
+              <lb ed="#S"/>de actibus gratuitis sicut sunt spes fides 
+              <lb ed="#S"/>et caritas <g ref="#slash"/>et istud consonat dictis <name ref="#Aristotle">aristotelis</name> <choice><orig>eciam</orig><reg>etiam</reg></choice> 
+              <lb ed="#S"/>consonat rationi et veritati
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-scscsc">[Secunda conclusio]</head>
+            <p xml:id="l21-scnave">
+              <g ref="#pilcrow"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio non est demonstratio 
+              <lb ed="#S"/>absolute cogens protervum ad contrarium <g ref="#slash"/>Ita quod oppositum 
+              <lb ed="#S"/>potest sustineri sine contradictione seclusis articulis condem<lb ed="#S" break="no"/>natis 
+              licet sit falsum et istud salvaretur resol<lb ed="#S" break="no"/>vendo 
+              se ad habitudines quasdam potentiae ad obiectum secundum 
+              <lb ed="#S"/>certas applicationes ad ipsam animam <g ref="#slash"/>ita quod per huiusmodi 
+              <lb ed="#S"/>applicationes obiecti ad potentiam anima esset cognitio et inter 
+              <lb ed="#S"/>cognitiones poneretur talis ordo quod primo anima esset 
+              <lb ed="#S"/>cognitio simplex apprehensiva <g ref="#slash"/>deinde compositiva vel divisiva de<lb ed="#S" break="no"/>inde 
+              assertiva et sic ascendendo per gradus cognitionum 
+              <lb ed="#S"/>et consequenter esset prius intellectio quam volitio
+            </p>
+            <p xml:id="l21-sspais">
+              <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> <choice><orig>substine<lb ed="#S" break="no"/>retur</orig><reg>sustine<lb ed="#S" break="no"/>retur</reg></choice> 
+              ista opinio per alium modum <choice><orig>ymaginando</orig><reg>imaginando</reg></choice> de ipsa 
+              <lb ed="#S"/>sicut de divina essentia quae modo cognoscit <name ref="#Sortes">Sortem</name> esse 
+              <lb ed="#S"/>et ante non cognoscebat et sic de aliis <g ref="#slash"/>et hoc sine ac<lb ed="#S" break="no"/>quisitione 
+              alicuius rei in se tamen ibi esset aliqualis 
+              <lb ed="#S"/>mutatio quia de non sciente fieret sciens <g ref="#slash"/>ad 
+              <lb ed="#S"/>articulos diceretur quod intelliguntur quod anima non est 
+              <lb ed="#S"/>intrinsece et essentialiter notitia <g ref="#slash"/>modo licet de facto esset 
+              <lb ed="#S"/>cognitio sive notitia sua tamen non esset essentialiter cognitio quia 
+              <lb ed="#S"/>ipsa remanente posset non esse cognitio <g ref="#pilcrow"/>Item <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
+              <lb ed="#S"/>de quantitate figurata <g ref="#slash"/>licet non distinguitur a figura tamen non 
+              <lb ed="#S"/>est essentialiter figura quia potest non esse circulus vel quadrangulus 
+              <lb ed="#S"/>et sic de aliis <g ref="#slash"/>ipsa eadem remanente in sua essentia 
+              <lb ed="#S"/>et ista proficiunt intellectui ad <choice><orig>exercicacionem</orig><reg>exercitationem</reg></choice> 
+              <lb ed="#S"/>et non alias et si dicatur replicando quia tenendo quod 
+              <lb ed="#S"/>anima esset sua cognitio non posset salvari quod esset 
+              <lb ed="#S"/>species intelligibilis negatur consequentia quia anima per prius esset species 
+              <lb ed="#S"/>intelligibilis et postea intellectio <g ref="#slash"/>postea volitio quia <choice><orig>scat</orig><reg>stat</reg></choice> 
+              <lb ed="#S"/>quod simul sit cognitio intellectio volitio <g ref="#slash"/>quod <choice><orig>eciam</orig><reg>etiam</reg></choice> simul sit 
+              <lb ed="#S"/>amor unius et odium alterius et sic de aliis 
+              <cb ed="#S" n="b"/><!-- 37vb -->
+              <lb ed="#S"/><g ref="#slash"/>ad auctoritates faciliter solverentur reducendo totum 
+              <lb ed="#S"/>ad ordinem et habitudinem animae in se.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-Huaoaoe">Una alia opinio extrema</head>
+            <p xml:id="l21-eaudet">
+              <g ref="#slash"/>Est adhuc una alia <choice><orig>oppinio</orig><reg>opinio</reg></choice> extrema quae 
+              <lb ed="#S"/>ponit quod visio fit extra mittendo et istam tangit 
+              <lb ed="#S"/><name ref="#Aristotle">philosophus</name> <num>3o</num> <title ref="#deAnima">de anima</title> et in <title>de sensu et sensato</title> et 
+              <lb ed="#S"/>eam reprobat ideo pro nunc de ea transeo
+            </p>
+          </div>
         </div>
-        
-         <div>
-           <head xml:id="l21-Hsmsmsm">[Secundus modus]</head>
-        
-           <p xml:id="l21-aveevc"><g ref="#slash"/>alia via est 
-             <lb ed="#S"/>quod materialis res multiplicat duplicem speciem unam 
-             <lb ed="#S"/>extensam quae habet immutare potentiam materialem <g ref="#slash"/>aliam autem 
-             <lb ed="#S"/>multiplicat quae est talis naturae quod immediate 
-             <lb ed="#S"/>sufficit immutare potentiam intellectivam verbi gratia si albedo 
-             <lb ed="#S"/>esset angelo praesens angelus perciperet albedinem illam 
-             <lb ed="#S"/>per aliam speciem quam per speciem multiplicatam ad orga<lb ed="#S"/>num 
-             visus et isto modo salvabitur quod species im<lb ed="#S"/>materialis 
-             immediate causabit notitiam in intellectu <g ref="#slash"/>et istam 
-             <lb ed="#S"/>viam tenuit <name ref="#GerardusCalcar">magister giradus calcar</name> in 
-             <lb ed="#S"/>suo principio <title>sententiarum</title> <g ref="#slash"/>et hoc totum provenit ex divina 
-             <lb ed="#S"/>providentia omnia optime disponente quia certum est 
-             <lb ed="#S"/>quod angelus praesens albedini cognoscit eam et tamen non 
-             <lb ed="#S"/>materialiter eam cognoscit nec per organum corporeum 
-             <lb ed="#S"/>tunc videtur quod eam cognoscat intuitive per speciem immaterialem 
-             <lb ed="#S"/>et haec est via satis <choice><orig>substinibilis</orig><reg>sustinibilis</reg></choice> et sic teneatis 
-             <lb ed="#S"/>quam volueritis <g ref="#slash"/>quidquid tamen teneamus <g ref="#slash"/>teneo 
-             <lb ed="#S"/>tamen quod ab infima <g ref="#slash"/>re usque ad supremam quaelibet <!-- possible quarto break here "posset concurrere" written at the bottom of the verso side -->
-             <cb ed="#S" n="38ra"/><lb ed="#S"/>posset concurrere obiective ad causandam sui ipsius notitiam 
-             <lb ed="#S"/>intuitivam et istud quasi experimur et est <choice><orig>eciam</orig><reg>etiam</reg></choice> 
-             <lb ed="#S"/>doctrinae <name ref="#Aristotle">aristotelis</name> et rationi et veritati consonum <g ref="#dbslash"/></p>
-         </div>
+        <div>
+          <head xml:id="l21-Hraiidv">Reditio ad inquisitionem de veritate</head>
+          <p xml:id="l21-reapid">
+            redeundo 
+            <lb ed="#S"/>igitur ad praedicta de veritate inquirendum est et sicut 
+            <lb ed="#S"/>dixi teneo et tenebo quod quaelibet res concurrit 
+            <lb ed="#S"/>vel concurrere potest obiective ad causandam sui ipsius 
+            <lb ed="#S"/>notitiam in anima et hoc potest <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> dupliciter
+          </p>
+          <div>
+            <head xml:id="l21-Hprmprim">[Primus modus]</head>
+            <p xml:id="l21-umqppi">
+              Uno modo 
+              <lb ed="#S"/>quod per eandem speciem per quam immutat sensum res materialis per eandem immutet intellectum et hoc dupliciter 
+              <lb ed="#S"/>uno modo quod species existens in sensu communi concurreret ad 
+              <lb ed="#S"/>speciem aliam in intellectu causandam alterius speciei 
+              <lb ed="#S"/>et immaterialem cum adiutorio obiecti et potentiae intellectivae 
+              <lb ed="#S"/>quae concurrit active ad actum intelligendi et forte ad 
+              <lb ed="#S"/>speciem intelligibilem <g ref="#pilcrow"/><choice><orig>2us</orig><reg>secundus</reg></choice> modus imaginandi esset quod 
+              <lb ed="#S"/>species sensibilis et obiectum non aliter concurrerent ad 
+              <lb ed="#S"/>immutandum potentiam intellectivam et sensitivam quia realiter non 
+              <lb ed="#S"/>distinguuntur anima intellectiva et sensitiva ita quod species 
+              <lb ed="#S"/>sufficeret cum sensu ad producendum <unclear cert="medium">intentionem</unclear> sicut 
+              <lb ed="#S"/>cognitio intellectus sufficit ad producendum volitionem 
+              <lb ed="#S"/>et cum hoc cum ipsa voluntate ita quod species 
+              <lb ed="#S"/>quae requireretur et reciperetur in sensu esset causa suf<lb ed="#S" break="no"/>ficiens 
+              cum intellectu ad producendum intentionem 
+              <lb ed="#S"/>et ita de <choice><orig>fantasmate</orig><reg>phantasmate</reg></choice> quod est species sensibilis 
+              <lb ed="#S"/>reservata in <choice><orig>fantasia</orig><reg>phantasia</reg></choice> quod intellectus immediate mediante 
+              <lb ed="#S"/>ipso <choice><orig>fantasmate</orig><reg>phantasmate</reg></choice> producit intentionem.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l21-Hsmsmsm">[Secundus modus]</head>
+            <p xml:id="l21-aveevc">
+              <g ref="#slash"/>alia via est 
+              <lb ed="#S"/>quod materialis res multiplicat duplicem speciem unam 
+              <lb ed="#S"/>extensam quae habet immutare potentiam materialem <g ref="#slash"/>aliam autem 
+              <lb ed="#S"/>multiplicat quae est talis naturae quod immediate 
+              <lb ed="#S"/>sufficit immutare potentiam intellectivam verbi gratia si albedo 
+              <lb ed="#S"/>esset angelo praesens angelus perciperet albedinem illam 
+              <lb ed="#S"/>per aliam speciem quam per speciem multiplicatam ad orga<lb ed="#S" break="no"/>num 
+              visus et isto modo salvabitur quod species im<lb ed="#S" break="no"/>materialis 
+              immediate causabit notitiam in intellectu <g ref="#slash"/>et istam 
+              <lb ed="#S"/>viam tenuit <name ref="#GerardusCalcar">magister giradus calcar</name> in 
+              <lb ed="#S"/>suo principio <title>sententiarum</title> <g ref="#slash"/>et hoc totum provenit ex divina 
+              <lb ed="#S"/>providentia omnia optime disponente quia certum est 
+              <lb ed="#S"/>quod angelus praesens albedini cognoscit eam et tamen non 
+              <lb ed="#S"/>materialiter eam cognoscit nec per organum corporeum 
+              <lb ed="#S"/>tunc videtur quod eam cognoscat intuitive per speciem immaterialem 
+              <lb ed="#S"/>et haec est via satis <choice><orig>substinibilis</orig><reg>sustinibilis</reg></choice> et sic teneatis 
+              <lb ed="#S"/>quam volueritis <g ref="#slash"/>quidquid tamen teneamus <g ref="#slash"/>teneo 
+              <lb ed="#S"/>tamen quod ab infima <g ref="#slash"/>re usque ad supremam quaelibet <!-- possible quarto break here "posset concurrere" written at the bottom of the verso side -->
+              <pb ed="#S" n="38-r"/>
+              <cb ed="#S" n="a"/>
+              <lb ed="#S"/>posset concurrere obiective ad causandam sui ipsius notitiam 
+              <lb ed="#S"/>intuitivam et istud quasi experimur et est <choice><orig>eciam</orig><reg>etiam</reg></choice> 
+              <lb ed="#S"/>doctrinae <name ref="#Aristotle">aristotelis</name> et rationi et veritati consonum <g ref="#dbslash"/>
+            </p>
+          </div>
         </div>
-          
         <div>
           <head xml:id="l21-Hraoidr">[Reditio ad opinionem Ioannis de Ripa]</head>
-        
-          <p xml:id="l21-reapsi"><lb ed="#S"/><g ref="#pilcrow"/>Redeundo igitur ad opinionem <name ref="#Ripa">magistri Ioannis 
+          <p xml:id="l21-reapsi">
+            <lb ed="#S"/><g ref="#pilcrow"/>Redeundo igitur ad opinionem <name ref="#Ripa">magistri Ioannis 
             <lb ed="#S"/>de Rippa</name> quae non negat omnino multiplicationem specierum sed concedit multiplicationem specierum ab obiectis 
             <lb ed="#S"/>materialibus <g ref="#pilcrow"/>Sed ponit quod possibiles sunt aliquae creaturae 
             <lb ed="#S"/>non communicabiles multiplicando huiusmodi species ideo non debet 
             <lb ed="#S"/>sic unde recipi quod neget multiplicationem specierum 
             <lb ed="#S"/>omnino sed solum eam negat in aliquibus <g ref="#slash"/>et 
-            <lb ed="#S"/>istud est unum punctum suae <choice><orig>ymaginationis</orig><reg>imaginationis</reg></choice>.</p>
-        
-          <p xml:id="l21-apecie"><g ref="#pilcrow"/>aliud punctum est quod genus accidentium est finitum et li<lb ed="#S"/>mitatum 
-            et quod, cuilibet obiecto alterius speciei co<lb ed="#S"/>rrespondet 
+            <lb ed="#S"/>istud est unum punctum suae <choice><orig>ymaginationis</orig><reg>imaginationis</reg></choice>
+          </p>
+          <p xml:id="l21-apecie">
+            <g ref="#pilcrow"/>aliud punctum est quod genus accidentium est finitum et li<lb ed="#S" break="no"/>mitatum 
+            et quod, cuilibet obiecto alterius speciei co<lb ed="#S" break="no"/>rrespondet 
             notitia intuitiva alterius speciei ita quod 
             <lb ed="#S"/>dato aliquo obiecto causabit notitiam alterius speciei 
             <lb ed="#S"/>et aliud causabit notitiam alterius speciei <g ref="#slash"/>et sic continue 
@@ -378,12 +412,13 @@
             <lb ed="#S"/>quae causabit supremam notitiam et deum sunt infinitae 
             <lb ed="#S"/>creabiles quarum nulla erit sui ipsius diffusiva 
             <lb ed="#S"/>nec poterit obiective concurrere ad causandam notitiam 
-            <lb ed="#S"/>sui intuitivam in potentia quia sic illa notitia ex<lb ed="#S"/>cederet 
+            <lb ed="#S"/>sui intuitivam in potentia quia sic illa notitia ex<lb ed="#S" break="no"/>cederet 
             totam latitudinem datam et sic excederet 
-            <lb ed="#S"/>supremam quod implicat contradictionem ideo etc.</p> 
-        
-          <p xml:id="l21-tiaqfe"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> 
-            <lb ed="#S"/>enim ipse arguit dato quod species non se habe<lb ed="#S"/>rent 
+            <lb ed="#S"/>supremam quod implicat contradictionem ideo etc.
+          </p>
+          <p xml:id="l21-tiaqfe">
+            <g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> 
+            <lb ed="#S"/>enim ipse arguit dato quod species non se habe<lb ed="#S" break="no"/>rent 
             sicut numeri tamen advertendum est mihi quod tota 
             <lb ed="#S"/>latitudo accidentium sive notitiarum est finita <g ref="#slash"/>et 
             <lb ed="#S"/>tunc <choice><orig>praemictit</orig><reg>praemittit</reg></choice> duas suppositiones <g ref="#slash"/>prima est 
@@ -393,7 +428,7 @@
             <lb ed="#S"/>species causat perfectiorem notitiam in eadem proportione 
             <lb ed="#S"/>tunc continue ascendendo secundum perfectionem specierum 
             <lb ed="#S"/>et earum notitiarum ex quo processus accidentium est 
-            <lb ed="#S"/>finitus tandem dabitur aliqua quae erit supre<lb ed="#S"/>ma 
+            <lb ed="#S"/>finitus tandem dabitur aliqua quae erit supre<lb ed="#S" break="no"/>ma 
             et maxime concursus obiectalis sit naturalis 
             <lb ed="#S"/>quia nisi sit tunc esset processus in infinitum 
             <lb ed="#S"/>in latitudine accidentium contra primam suppositionem <g ref="#slash"/>et tunc ex 
@@ -402,18 +437,22 @@
             <lb ed="#S"/>improbabo et dabo <space extent="oneWordLength"/> suarum rationum <g ref="#slash"/>ponit 
             <lb ed="#S"/>igitur supremam intelligentiam factam quae potest concurrere 
             <lb ed="#S"/>ad sui notitiam causandam in potentia obiective <g ref="#slash"/>ita 
-            <lb ed="#S"/>quod inter omnes res quae possunt concurrere obiective</p> 
-        <!-- lines skipped here perhaps homoteleuton -->
-          <p xml:id="l21-apidqi">ad sui ipsius notitiam causandam quia sic causaret 
-            <cb ed="#S" n="38rb"/><lb ed="#S"/>aliam notitiam ab ipsa nobiliorem et alterius speciei 
+            <lb ed="#S"/>quod inter omnes res quae possunt concurrere obiective
+          </p> 
+          <!-- lines skipped here perhaps homoteleuton -->
+          <p xml:id="l21-apidqi">
+            ad sui ipsius notitiam causandam quia sic causaret 
+            <cb ed="#S" n="b"/><!-- 38rb -->
+            <lb ed="#S"/>aliam notitiam ab ipsa nobiliorem et alterius speciei 
             <lb ed="#S"/>per <choice><orig>2am</orig><reg>secundam</reg></choice> suppositionem et sic illa esset supra supremam 
-            <lb ed="#S"/>datam quod implicet.</p> 
-        
-          <p xml:id="l21-cpedai"><g ref="#pilcrow"/>consequenter ponit et satis 
+            <lb ed="#S"/>datam quod implicet.
+          </p>
+          <p xml:id="l21-cpedai">
+            <g ref="#pilcrow"/>consequenter ponit et satis 
             <lb ed="#S"/>pertinenter ad propositum pro solvendo unum dubium quod 
             <lb ed="#S"/>posset sibi fieri <g ref="#slash"/>domine tu ponis quod inter supremam 
             <lb ed="#S"/>creaturam quae concurrere potest ad sui ipsius notitiam 
-            <lb ed="#S"/>causandam in intellectu et deum essent infinitae intel<lb ed="#S"/>ligentiae 
+            <lb ed="#S"/>causandam in intellectu et deum essent infinitae intel<lb ed="#S" break="no"/>ligentiae 
             causabiles quarum nulla posset concurrere etc 
             <lb ed="#S"/>quomodo igitur essent cognoscibiles sive communicabiles ad invicem 
             <lb ed="#S"/><g ref="#pilcrow"/>Respondet quod quaelibet intelligentia quae non esset apta 
@@ -423,19 +462,21 @@
             <lb ed="#S"/>quomodo omnes huiusmodi notitiae sive intelligentiae possent 
             <lb ed="#S"/>adinvicem cognosci quia quaelibet esset sibi notitia 
             <lb ed="#S"/>et posset esse alteri notitia sui ideo non indigeret 
-            <lb ed="#S"/>actu medio distincto ab ipsamet.</p> 
-        
-          <p xml:id="l21-cpqito"><g ref="#pilcrow"/>Consequenter ponit 
-          <lb ed="#S"/>quod deus non potest obiective concurrere ad sui 
+            <lb ed="#S"/>actu medio distincto ab ipsamet.
+          </p>
+          <p xml:id="l21-cpqito">
+            <g ref="#pilcrow"/>Consequenter ponit 
+            <lb ed="#S"/>quod deus non potest obiective concurrere ad sui 
             <lb ed="#S"/>ipsius notitiam causandam quia iam de facto 
             <lb ed="#S"/>data esset suprema species cognitionis igitur nec 
             <lb ed="#S"/>per dei potentiam nec alias est causabilis superior quia 
             <lb ed="#S"/>implicaret ut dictum est <g ref="#pilcrow"/>Circa materiam 
             <lb ed="#S"/>istam advertenda sunt aliqua <g ref="#slash"/>quantum enim est de 
             <lb ed="#S"/>concursu obiectivo rerum materialium non esset magna 
-            <lb ed="#S"/>difficultas quamvis intendo tenere oppositum.</p>
-        
-          <p xml:id="l21-iqadsb"><g ref="#pilcrow"/>Item 
+            <lb ed="#S"/>difficultas quamvis intendo tenere oppositum.
+          </p>
+          <p xml:id="l21-iqadsb">
+            <g ref="#pilcrow"/>Item 
             <lb ed="#S"/>quantum ad hoc quod intelligentiae aliquae possint esse 
             <lb ed="#S"/>sibi ipsis et alteris notitia non esset nimis 
             <lb ed="#S"/>offensivum absolute circumscriptis <unclear>articulis[?]</unclear> quantum ad hoc quod 
@@ -445,7 +486,7 @@
             <lb ed="#S"/>producere ita agit vel agere potest ad sui 
             <lb ed="#S"/>notitiam causandam in potentia obiective et hoc propter 
             <lb ed="#S"/>sui libertatem ita quod secundum quod potest producere 
-            <lb ed="#S"/>diversos effectus omnino eodem modo se habens in<lb ed="#S"/>trinsece 
+            <lb ed="#S"/>diversos effectus omnino eodem modo se habens in<lb ed="#S" break="no"/>trinsece 
             quosdam magis perfectos quosdam 
             <lb ed="#S"/>minus non obstante divina essentia inmensa 
             <lb ed="#S"/>inmense concurrente ita potest obiective producere 
@@ -458,16 +499,19 @@
             <lb ed="#S"/>libertatis suae voluntatem <g ref="#dbslash"/>ita dico quod secundum libertatem 
             <lb ed="#S"/>suae voluntatis deus omnino eodem modo se habens intrinsece 
             <lb ed="#S"/>in se producit sui notitiam obiective maiorem 
-            <cb ed="#S" n="38va"/><lb ed="#S"/>vel minorem secundum speciem et gradum secundum quos sibi 
+            <pb ed="#S" n="38-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>vel minorem secundum speciem et gradum secundum quos sibi 
             <lb ed="#S"/>placet <g ref="#dbslash"/>et hoc testatur sacra scriptura ubi ipse 
             <lb ed="#S"/>met dicit <quote xml:id="l21-QBidpsmm">in domo patris mei mansiones 
             <lb ed="#S"/>multae sunt</quote> <g ref="#slash"/>et istae mansiones diversae non 
             <lb ed="#S"/>sunt nisi beatitudines formales beatorum differentes secundum 
             <lb ed="#S"/>speciem vel secundum gradum in eadem specie ita quod secundum 
             <lb ed="#S"/>merita ipsorum dat eis diversos gradus et 
-            <lb ed="#S"/>diversas species beatitudinis.</p> 
-        
-          <p xml:id="l21-eisars">ex isto sequitur quod deus 
+            <lb ed="#S"/>diversas species beatitudinis
+          </p>
+          <p xml:id="l21-eisars">
+            ex isto sequitur quod deus 
             <lb ed="#S"/>potest obiective <sic>potest</sic> concurrere ad sui notitiam causandam 
             <lb ed="#S"/><choice><orig>imo</orig><reg>ymo</reg></choice> de ipso adaequate eodem modo se habente quantum est 
             <lb ed="#S"/>de se habentur diversae cognitiones intuitivae <g ref="#slash"/>istud 
@@ -489,18 +533,19 @@
             <lb ed="#S"/>est liber ita nec in exemplari quodammodo se communicando 
             <lb ed="#S"/>licet iste concursus reducatur ad genus causae 
             <lb ed="#S"/>agentis concurrit naturaliter et secundum ultimum sui posse 
-            <lb ed="#S"/>et sic non esset de agente libero <g ref="#pilcrow"/>Unde si al<lb ed="#S"/>bedo 
+            <lb ed="#S"/>et sic non esset de agente libero <g ref="#pilcrow"/>Unde si al<lb ed="#S" break="no"/>bedo 
             esset mere libera in omni eius actione 
             <lb ed="#S"/>mere libere concurreret ad sui notitiam obiective 
             <lb ed="#S"/>causandam ita quod breviter de ratione concursus 
             <lb ed="#S"/>obiectalis non est quod sit naturalis <g ref="#pilcrow"/>ideo <choice><orig>2a</orig><reg>secunda</reg></choice> suppositio 
             <lb ed="#S"/><name ref="#Ripa">Ioannis de Rippa</name> non est tenenda <g ref="#pilcrow"/>Restat ergo 
-            <lb ed="#S"/>Respondere ad radices suas.</p>
+            <lb ed="#S"/>Respondere ad radices suas.
+          </p>
         </div>
         <div>
           <head xml:id="l21-Hariidr">[Ad rationes Ioannis de Ripa]</head>
-        
-          <p xml:id="l21-apqrme"><g ref="#slash"/>ad primum quando supponit 
+          <p xml:id="l21-apqrme">
+            <g ref="#slash"/>ad primum quando supponit 
             <lb ed="#S"/>quod totum genus accidentium sit finitum distinguo 
             <lb ed="#S"/>sibi quia si intelligatur sic quod totum genus 
             <lb ed="#S"/>accidentium sit finitum sic quod quaelibet species quae 
@@ -511,7 +556,8 @@
             <lb ed="#S"/>finite species sunt producibiles sub illo genere 
             <lb ed="#S"/>tunc isto modo negaretur sibi <g ref="#pilcrow"/>nec sequitur infinitae 
             <lb ed="#S"/>species accidentium sunt producibiles quarum una 
-            <cb ed="#S" n="38vb"/><lb ed="#S"/>semper est perfectior alia igitur in isto genere est 
+            <cb ed="#S" n="b"/><!-- 38vb -->
+            <lb ed="#S"/>semper est perfectior alia igitur in isto genere est 
             <lb ed="#S"/>infinita latitudo specierum producibilium, vel illud genus 
             <lb ed="#S"/>est infinitum <g ref="#dbslash"/>similiter argueretur de <sic>conceptu</sic> quia 
             <lb ed="#S"/>quocumque continuo dato illud est finitum et tamen in 
@@ -520,9 +566,10 @@
             <lb ed="#S"/>una medietas infinitae sunt maiores quod patet 
             <lb ed="#S"/>continue accipiendo aliquid de illa parte ponendo cum prima 
             <lb ed="#S"/>eundo per partes proportionales numquam residua 
-            <lb ed="#S"/>medietas evacuaretur</p> 
-        
-          <p xml:id="l21-sdqade"><g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod accidentia 
+            <lb ed="#S"/>medietas evacuaretur
+          </p>
+          <p xml:id="l21-sdqade">
+            <g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod accidentia 
             <lb ed="#S"/>non reponerentur sub aliquo genere loquendo 
             <lb ed="#S"/>metaphysicaliter et istud tenui in <ref>primo principio meo</ref> 
             <lb ed="#S"/>ideo reservando istud usque ad <ref>secundum principium</ref> 
@@ -535,11 +582,12 @@
             <lb ed="#S"/>notitiae intuitivae et abstractivae differentia <g ref="#pilcrow"/>et 
             <lb ed="#S"/>isto modo salvaretur quod diversae notitiae intrinsece 
             <lb ed="#S"/>et essentialiter repraesentarent idem et sic non esset 
-            <lb ed="#S"/>processus in infinitum in speciebus notitiarum <choice><orig>me<lb ed="#S"/>thaphysicalium</orig><reg>me<lb ed="#S"/>taphysicalium</reg></choice> 
+            <lb ed="#S"/>processus in infinitum in speciebus notitiarum <choice><orig>me<lb ed="#S" break="no"/>thaphysicalium</orig><reg>me<lb ed="#S" break="no"/>taphysicalium</reg></choice> 
             sed solum logicalium scilicet quod circa eandem 
-            <lb ed="#S"/>rem acquirerentur aliae et aliae <choice><orig>denomina<lb ed="#S"/>ciones</orig><reg>denomina<lb ed="#S"/>tiones</reg></choice></p>  
-        
-          <p xml:id="l21-esppin"><g ref="#slash"/>et sic patet quod non oportet quod species accidentium 
+            <lb ed="#S"/>rem acquirerentur aliae et aliae <choice><orig>denomina<lb ed="#S" break="no"/>ciones</orig><reg>denomina<lb ed="#S" break="no"/>tiones</reg></choice>
+          </p>
+          <p xml:id="l21-esppin">
+            <g ref="#slash"/>et sic patet quod non oportet quod species accidentium 
             <lb ed="#S"/>sive notitiarum se habeant sicut numeri <g ref="#pilcrow"/>ita quod 
             <lb ed="#S"/>inter duas species finitas datas sunt 
             <lb ed="#S"/>infinitae producibiles ut forte nullae sed inter 
@@ -548,9 +596,10 @@
             <lb ed="#S"/>me tenui et tenebo quod species se habent sicut 
             <lb ed="#S"/>numeri <g ref="#pilcrow"/>Ita quod inter duas species finitas 
             <lb ed="#S"/>datas non sunt infinitae producibiles <choice><orig>ymo</orig><reg>immo</reg></choice> forte 
-            <lb ed="#S"/>nullae</p> 
-        
-          <p xml:id="l21-estpqi">et sic tota radix <name ref="#Ripa">magistri Ioannis 
+            <lb ed="#S"/>nullae
+          </p>
+          <p xml:id="l21-estpqi">
+            et sic tota radix <name ref="#Ripa">magistri Ioannis 
             <lb ed="#S"/>de Rippa</name> stabat in duobus <g ref="#pilcrow"/>primum erat 
             <lb ed="#S"/>quod species se habent sicut numeri <g ref="#dbslash"/>stabat <choice><orig>eciam</orig><reg>etiam</reg></choice> 
             <lb ed="#S"/><choice><orig>2o</orig><reg>secundo</reg></choice> in hoc quod obiectum alterius speciei producit 
@@ -561,67 +610,70 @@
             <lb ed="#S"/>materiali composito ex materia et forma quia supposito 
             <lb ed="#S"/>quod produceret accidens spirituale adhuc non 
             <lb ed="#S"/>ageret ultra gradum <g ref="#slash"/>proprium quia esset substantia modo 
-            <lb ed="#S"/>substantia est perfectior accidente sed haberet inten<lb ed="#S"/>tum 
-            de materiali albedine quia est materialis et produ<cb ed="#S" n="39ra"/><lb ed="#S"/>cerit 
-            quasi immateriale</p>
+            <lb ed="#S"/>substantia est perfectior accidente sed haberet inten<lb ed="#S" break="no"/>tum 
+            de materiali albedine quia est materialis et produ<pb ed="#S" n="39-r"/><cb ed="#S" n="a"/><lb ed="#S" break="no"/>cerit 
+            quasi immateriale
+          </p>
         </div>
-          <div>
-            <head xml:id="l21-Hoppppr">[Opinio Petri Ploul resolvitur]</head>
-        
-            <p xml:id="l21-chticd"><g ref="#pilcrow"/>circa hoc tenebo quod rerum 
-              <lb ed="#S"/>activitas et causalitas et influxus resolvuntur 
-              <lb ed="#S"/>in divinam providentiam libere sic ordinantem 
-              <lb ed="#S"/>magis quam ad proprias specificas rationes et hoc 
-              <lb ed="#S"/>totum fit per regimen universi non autem 
-              <lb ed="#S"/>sic est de formali concursu quia limitatus 
-              <lb ed="#S"/>est patet quia nos videmus ad experientiam aliquas 
-              <lb ed="#S"/>res minus perfectas magis agere quam magis 
-              <lb ed="#S"/>perfectas patet quia cum influentia generali homo 
-              <lb ed="#S"/>producit hominem et asinus asinum et tamen intelligentia 
-              <lb ed="#S"/>non potest producere intelligentiam <g ref="#slash"/>nec caelum potest 
-              <lb ed="#S"/>producere sibi simile <g ref="#pilcrow"/>ita quod nos videmus 
-              <lb ed="#S"/>ad experientiam quod causalitas non sequitur formas 
-              <lb ed="#S"/>rerum et ideo non est inconveniens concedere quod 
-              <lb ed="#S"/>aliqua res minus perfecta producit rem perfec<lb ed="#S"/>tiorem 
-              se <g ref="#slash"/>non tamen se sola si concursu 
-              <lb ed="#S"/>dei generali <g ref="#slash"/>ideo actio sive influxus non 
-              <lb ed="#S"/>competit rebus secundum perfectionem specificam sed secundum quod 
-              <lb ed="#S"/>congruit pro regimine universi et hoc ex 
-              <lb ed="#S"/>divina providentia et sic patet quid sit dicendum 
-              <lb ed="#S"/>ad praedictam <g ref="#pilcrow"/>Et tunc ad unum quod in<lb ed="#S"/>ducit 
-              quod tunc accidentia materialia deberent im<lb ed="#S"/>mutare 
-              animam christi in sacramento altari etc 
-              <lb ed="#S"/><g ref="#pilcrow"/>Istud argumentum retorqueretur contra ipsum <g ref="#slash"/>ipse enim 
-              <lb ed="#S"/>bene concedit quod accidentia materialia habent immutare 
-              <lb ed="#S"/>potentias sensitivas et tunc argueretur quod accidentia 
-              <lb ed="#S"/>in sacramento altaris deberent immutare 
-              <lb ed="#S"/>potentias sensitivas christi corporis ibidem existentis 
-              <lb ed="#S"/><g ref="#pilcrow"/>Ideo Respondetur pro se et pro aliis negando consequentiam 
-              <lb ed="#S"/>quia corpus christi in sacramento altaris non habet 
-              <lb ed="#S"/>habitudinem quae requiritur potentiae cognitivae ad 
-              <lb ed="#S"/>obiectum ut per ipsum potentia immutetur ita quod 
-              <lb ed="#S"/>corpus christi non est ibi modo naturali secundum 
-              <lb ed="#S"/>quem potentiam intellectivam et sensitivam posset immutare 
-              <lb ed="#S"/>quia naturaliter visio fit per piramidem cuius basis 
-              <lb ed="#S"/>est in re visa et conus in oculo <g ref="#slash"/>Utrum autem 
-              <lb ed="#S"/>posset videri in sacramento altaris <g ref="#slash"/><choice><orig>oppinio</orig><reg>opinio</reg></choice> 
-              <lb ed="#S"/>quaedam dicit quod si non ageret supernaturaliter 
-              <lb ed="#S"/>videret <g ref="#slash"/>sed suspendit actionem ne videamus 
-              <lb ed="#S"/>illud quia ibidem credere debemus</p> 
-        
-            <p xml:id="l21-epaple"><g ref="#pilcrow"/>Ex praedictis 
-              <lb ed="#S"/>satis apparet qualiter <name ref="#Ripa">magister Ioannis de Rippa</name> 
-              <lb ed="#S"/>non est tenendus in hoc quod dicit quod sunt 
-              <lb ed="#S"/>aliqua obiecta quae non possunt obiective con<lb ed="#S"/>currere 
-              ad sui notitiam causandam effective quod 
-              <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> deus non posset concurrere quod <choice><orig>eciam</orig><reg>etiam</reg></choice> 
-              <cb ed="#S" n="39rb"/><lb ed="#S"/>influxus obiectalis est mere naturalis de genere 
-              <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> <choice><orig>actidentium</orig><reg>accidentium</reg></choice> qualiter sit et qualiter 
-              <lb ed="#S"/>infinitum apparet satis quid sit dicendum <g ref="#slash"/>et 
-              <lb ed="#S"/>ista sufficiant pro praesenti lectione</p> 
-        
-          </div>
-     </div> 
+        <div>
+          <head xml:id="l21-Hoppppr">[Opinio Petri Ploul resolvitur]</head>
+          <p xml:id="l21-chticd">
+            <g ref="#pilcrow"/>circa hoc tenebo quod rerum 
+            <lb ed="#S"/>activitas et causalitas et influxus resolvuntur 
+            <lb ed="#S"/>in divinam providentiam libere sic ordinantem 
+            <lb ed="#S"/>magis quam ad proprias specificas rationes et hoc 
+            <lb ed="#S"/>totum fit per regimen universi non autem 
+            <lb ed="#S"/>sic est de formali concursu quia limitatus 
+            <lb ed="#S"/>est patet quia nos videmus ad experientiam aliquas 
+            <lb ed="#S"/>res minus perfectas magis agere quam magis 
+            <lb ed="#S"/>perfectas patet quia cum influentia generali homo 
+            <lb ed="#S"/>producit hominem et asinus asinum et tamen intelligentia 
+            <lb ed="#S"/>non potest producere intelligentiam <g ref="#slash"/>nec caelum potest 
+            <lb ed="#S"/>producere sibi simile <g ref="#pilcrow"/>ita quod nos videmus 
+            <lb ed="#S"/>ad experientiam quod causalitas non sequitur formas 
+            <lb ed="#S"/>rerum et ideo non est inconveniens concedere quod 
+            <lb ed="#S"/>aliqua res minus perfecta producit rem perfec<lb ed="#S" break="no"/>tiorem 
+            se <g ref="#slash"/>non tamen se sola si concursu 
+            <lb ed="#S"/>dei generali <g ref="#slash"/>ideo actio sive influxus non 
+            <lb ed="#S"/>competit rebus secundum perfectionem specificam sed secundum quod 
+            <lb ed="#S"/>congruit pro regimine universi et hoc ex 
+            <lb ed="#S"/>divina providentia et sic patet quid sit dicendum 
+            <lb ed="#S"/>ad praedictam <g ref="#pilcrow"/>Et tunc ad unum quod in<lb ed="#S" break="no"/>ducit 
+            quod tunc accidentia materialia deberent im<lb ed="#S" break="no"/>mutare 
+            animam christi in sacramento altari etc 
+            <lb ed="#S"/><g ref="#pilcrow"/>Istud argumentum retorqueretur contra ipsum <g ref="#slash"/>ipse enim 
+            <lb ed="#S"/>bene concedit quod accidentia materialia habent immutare 
+            <lb ed="#S"/>potentias sensitivas et tunc argueretur quod accidentia 
+            <lb ed="#S"/>in sacramento altaris deberent immutare 
+            <lb ed="#S"/>potentias sensitivas christi corporis ibidem existentis 
+            <lb ed="#S"/><g ref="#pilcrow"/>Ideo Respondetur pro se et pro aliis negando consequentiam 
+            <lb ed="#S"/>quia corpus christi in sacramento altaris non habet 
+            <lb ed="#S"/>habitudinem quae requiritur potentiae cognitivae ad 
+            <lb ed="#S"/>obiectum ut per ipsum potentia immutetur ita quod 
+            <lb ed="#S"/>corpus christi non est ibi modo naturali secundum 
+            <lb ed="#S"/>quem potentiam intellectivam et sensitivam posset immutare 
+            <lb ed="#S"/>quia naturaliter visio fit per piramidem cuius basis 
+            <lb ed="#S"/>est in re visa et conus in oculo <g ref="#slash"/>Utrum autem 
+            <lb ed="#S"/>posset videri in sacramento altaris <g ref="#slash"/><choice><orig>oppinio</orig><reg>opinio</reg></choice> 
+            <lb ed="#S"/>quaedam dicit quod si non ageret supernaturaliter 
+            <lb ed="#S"/>videret <g ref="#slash"/>sed suspendit actionem ne videamus 
+            <lb ed="#S"/>illud quia ibidem credere debemus
+          </p>
+          <p xml:id="l21-epaple">
+            <g ref="#pilcrow"/>Ex praedictis 
+            <lb ed="#S"/>satis apparet qualiter <name ref="#Ripa">magister Ioannis de Rippa</name> 
+            <lb ed="#S"/>non est tenendus in hoc quod dicit quod sunt 
+            <lb ed="#S"/>aliqua obiecta quae non possunt obiective con<lb ed="#S" break="no"/>currere 
+            ad sui notitiam causandam effective quod 
+            <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> deus non posset concurrere quod <choice><orig>eciam</orig><reg>etiam</reg></choice> 
+            <cb ed="#S" n="b"/><!-- 39rb -->
+            <lb ed="#S"/>influxus obiectalis est mere naturalis de genere 
+            <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> <choice><orig>actidentium</orig><reg>accidentium</reg></choice> qualiter sit et qualiter 
+            <lb ed="#S"/>infinitum apparet satis quid sit dicendum <g ref="#slash"/>et 
+            <lb ed="#S"/>ista sufficiant pro praesenti lectione
+          </p>
+        </div>
+      </div>
     </body>
   </text>
 </TEI>
