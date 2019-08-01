@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI  xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,20 +16,32 @@
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-10-01">October 1st, 2011</date>  
+        <date when="2011-10-01">October 1, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S">Sorbonne</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-01" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <facsimile>
     <surface n="S39r">
       <graphic url="S39r.jpg"/>
@@ -88,478 +100,522 @@
   </facsimile>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#S" n="39-r"/>
+        <cb ed="#S" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio22">
-      <head subtype="title">Lectio 22, de Notitia [Sorbonne Transcription]</head>
-           <div>
-       
-       <head xml:id="l22-Hcpdcpd">[Circa primam difficultatem]</head>
-      
-             <p xml:id="l22-seqqlp"><g ref="#slash"/>Sciendum 
-               <lb ed="#S"/>est quod in praecedenti lectione dictum est quod quaelibet 
-               <lb ed="#S"/>creatura potest concurrere obiective hoc est potest efficere 
-               <lb ed="#S"/>notitiam sui in potentia perceptiva <g ref="#pilcrow"/>nunc autem 
-               <lb ed="#S"/>restat videndum ex quo notitia dicitur alterius 
-               <lb ed="#S"/>obiecti notitia <g ref="#slash"/>et circa hoc aliqua repetam 
-               <lb ed="#S"/>quae dicta fuerunt in quadam lectione praecedenti.</p>
-      
-             <p xml:id="l22-ptqsss"><g ref="#pilcrow"/>primo enim tangebatur quod notitia sive cognitio non 
-               <lb ed="#S"/>est intrinsece et essentialiter <corr><del rend="blackout">eo</del></corr> cognitio sive notitia 
-               <lb ed="#S"/><g ref="#dbslash"/>quod patet quia staret per dei potentiam quod esset 
-               <lb ed="#S"/>sine subiecto et sic non esset cognitio quia nec sibi 
-               <lb ed="#S"/>nec alteri <g ref="#slash"/>non sibi quia non est potentia vitaliter 
-               <lb ed="#S"/>perceptiva cum sit quoddam accidens nec alteri per 
-               <lb ed="#S"/>suppositum quia stat sine subiecto.</p>
-      
-             <p xml:id="l22-sdqdls"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicebatur 
-               <lb ed="#S"/>quod notitia sive cognitio non dicitur notitia sive cognitio 
-               <lb ed="#S"/>in habitudine ad suam potentiam ut subiectiva nam 
-               <lb ed="#S"/>deus de potentia sua absoluta posset notitiam po<lb ed="#S"/>nere 
-               in lapide et tunc haberet huiusmodi habitudinem 
-               <lb ed="#S"/>ad lapidem et tamen non esset notitia ex illa 
-               <lb ed="#S"/>habitudine subiectiva ad lapidem nec denomina<lb ed="#S"/>ret 
-               lapidem cognoscentem.</p>
-      
-             <p xml:id="l22-tdqatp"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicebatur quod notitia 
-               <lb ed="#S"/>non dicitur notitia ex habitudine ad potentiam perceptivam 
-               <lb ed="#S"/>ut eius activa quia prius natura saltem anima pro<lb ed="#S"/>ducit 
-               notitiam quam vitaliter immutetur per eam 
-               <lb ed="#S"/>ergo deus potest separare primum a posteriori quia 
-               <lb ed="#S"/>quaecumque distincta deus potest etc. ergo de potentia dei 
-               <lb ed="#S"/>absoluta posset poni sine <choice><orig>2o</orig><reg>secundo</reg></choice> et per consequens staret 
-               <lb ed="#S"/>quod esset productio huiusmodi notitiae a potentia cognitiva et tamen 
-               <lb ed="#S"/>huiusmodi qualitas non esset animae cognitio <g ref="#slash"/>ideo dice<lb ed="#S"/>batur 
-               consequenter <g ref="#dbslash"/>quod cognitio dicitur cognitio ex habitudine 
-               <lb ed="#S"/>illa ut est potentia vitaliter immutabilis id est ex habitudine 
-               <lb ed="#S"/>illa qua talis potentia est obiecti per illam qualitatem 
-               <lb ed="#S"/>cognitiva et non ut subiectiva vel ut productiva 
-               <lb ed="#S"/>sed ut obiecti perceptiva ita quod notitia sive cognitio 
-               <lb ed="#S"/>ex habitudine illa dicitur cognitio ex qua <space extent="oneWordLength"/> 
-               <lb ed="#S"/>potentiam cognitivam intentionaliter cum obiecto per eam 
-               <lb ed="#S"/>cognito et a tali potentia.</p>
-      
-             <p xml:id="l22-eavenu"><g ref="#dbslash"/>et antequam veniam 
-               <lb ed="#S"/>ad principalem difficultatem materiae tactae scilicet 
-               <lb ed="#S"/>ex quo notitia dicitur esse obiecti repraesentativa <g ref="#pilcrow"/>ad<lb ed="#S"/>vertendum 
-               est quod notitia potest dici alicuius obiecti notitia 
-               <lb ed="#S"/>multipliciter. <g ref="#dbslash"/>uno modo potest dici notitia universalis et sic conceptus 
-               <lb ed="#S"/>entis esset dei notitia, quia cuiuslibet rei est notitia 
-               <lb ed="#S"/>universalis <g ref="#slash"/> tamen</p>
-      
-             <p xml:id="l22-sancid"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> aliqua notitia potest esse alicuius 
-               <lb ed="#S"/>obiecti notitia <g ref="#dbslash"/>propter aliquam <choice><orig>determinacionem</orig><reg>determinationem</reg></choice> ita 
-               <cb ed="#S" n="39va"/><lb ed="#S"/>quod propter illam <choice><orig>determinacionem</orig><reg>determinationem</reg></choice> conceptus ille vel <choice><orig>noticia</orig><reg>notitia</reg></choice> 
-               <lb ed="#S"/>esset proprius conceptus vel notitia dei <g ref="#pilcrow"/>verbi gratia 
-               <lb ed="#S"/>dato quod conceptui entis superaddatur ista de<lb ed="#S"/>terminatio 
-               <mentioned>a se</mentioned> vel <mentioned>independens</mentioned> vel <mentioned>primum</mentioned> <g ref="#slash"/>ille 
-               <lb ed="#S"/>conceptus <mentioned>ens a se</mentioned> vel <mentioned>ens independens</mentioned> 
-               <lb ed="#S"/>vel <mentioned>ens primum</mentioned> erit proprie conceptus dei adaequate 
-               <lb ed="#S"/>supponens pro ipso licet nulla pars esset proprie conceptus 
-               <lb ed="#S"/>dei</p>
-      
-             <p xml:id="l22-tcdeds"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> contingit de <g ref="#slash"/>re causari notitia in 
-               <lb ed="#S"/>particulari ut patet de conceptu singulari simpliciter adaequate 
-               <lb ed="#S"/>supponens pro illo obiecto <g ref="#slash"/>et sic de deo mediante conceptu 
-               <lb ed="#S"/>creaturae <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod posset elici aliquis conceptus 
-               <lb ed="#S"/>singularis et proprius <g ref="#pilcrow"/>Sed de hoc erit postea 
-               <lb ed="#S"/>difficultas specialis</p>
-      
-             <p xml:id="l22-qmpbip"><g ref="#slash"/>et quarto modo potest haberi notitia de 
-               <lb ed="#S"/>aliquo non terminata ad aliud ut immediate causata 
-               <lb ed="#S"/>ab alio sed immediate ab obiecto sicut notitia dei 
-               <lb ed="#S"/>hic in via intuitiva sicut potuit esse 
-               <lb ed="#S"/>in <name ref="#Paul">paulo</name> et sicut est in beatis in patria de 
-               <lb ed="#S"/>notitia beatifica intuitiva ipsius dei quam ha<lb ed="#S"/>bent 
-               beati in patria</p> 
-      
-             <p xml:id="l22-uaeeed"><g ref="#pilcrow"/>ulterius advertendum 
-               <lb ed="#S"/>quod differentia est inter notitiam universalem et confusam 
-               <lb ed="#S"/>nam notitia confusa potest esse sive sit singularis 
-               <lb ed="#S"/>sive universalis <g ref="#slash"/>unde notitia confusa et notitia distincta 
-               <lb ed="#S"/>per hoc distinguuntur quia notitia distincta est causa immediate 
-               <lb ed="#S"/>eliciendi propositiones affirmativas et negativas plures de 
-               <lb ed="#S"/>obiecto cognito per eam vel est notitia ex qua 
-               <lb ed="#S"/>intellectus potest immediate elicere plura praedicata 
-               <lb ed="#S"/>essentialia de obiecto cognito sive affirmativa sive 
-               <lb ed="#S"/>negativa <g ref="#slash"/>notitia vero confusa et indistincta 
-               <lb ed="#S"/>est illa ex qua non possunt sic elici plura 
-               <lb ed="#S"/>praedicata affirmativa et negativa obiecti cogniti <g ref="#pilcrow"/>exemplum 
-               <lb ed="#S"/>ponatur quod <name ref="#Sortes">sortes</name> videat <name ref="#Plato">platonem</name> a tanta 
-               <lb ed="#S"/><choice><orig>distancia</orig><reg>distantia</reg></choice> quod virtute suae cognitionis non 
-               <lb ed="#S"/>possit elicere magis particulare iudicium de 
-               <lb ed="#S"/><name ref="#Plato">platone</name> nisi quod est corpus <g ref="#pilcrow"/>deinde vi<lb ed="#S"/>deat 
-               <name ref="#Cicero">cinceronem</name> prope se vel <name ref="#Plato">platonem</name> 
-               <lb ed="#S"/>multiplicatum prope se tunc eandem rem cogno<lb ed="#S"/>scet 
-               confuse et indistincte et <choice><orig>eciam</orig><reg>etiam</reg></choice> distincte</p>  
-      
-             <p xml:id="l22-iecude"><g ref="#dbslash"/>indistincte 
-               <lb ed="#S"/>et confuse cognoscet <name>platonem</name> distantem ab 
-               <lb ed="#S"/>eo quia virtute illius cognitio creata ab eo 
-               <lb ed="#S"/>sit distante quam habet <name ref="#Sortes">sortes</name> non potest 
-               <lb ed="#S"/><name ref="#Sortes">sortes</name> elicere Iudicium particulare nisi quod 
-               <lb ed="#S"/>sit corpus nec potest elicere virtute illius cognitionis 
-               <lb ed="#S"/>utrum sit animatum vel inanimatum <g ref="#slash"/>utrum 
-               <lb ed="#S"/>sit animal vel planta <g ref="#pilcrow"/>utrum sit animal 
-               <lb ed="#S"/>rationale vel irrationale <g ref="#dbslash"/>utrum sit homo 
-               <cb ed="#S" n="39vb"/><lb ed="#S"/>vel asinus <g ref="#slash"/> utrum sit <name ref="#Sortes">sortes</name> vel <name>plato</name> nam 
-               <lb ed="#S"/>si interrogetur utrum sit animal vel non <g ref="#slash"/>vi<lb ed="#S"/>vens 
-               vel non semper dubitabit <g ref="#slash"/>et hoc ratione 
-               <lb ed="#S"/>confusionis <g ref="#slash"/>notitiae ignorabit de ipso tam 
-               <lb ed="#S"/>praedicata affirmativa quam negativa ut dictum est.</p> 
-      
-             <p xml:id="l22-cesnsp"><g ref="#dbslash"/>cog<lb ed="#S"/>noscet 
-               <choice><orig>eciam</orig><reg>etiam</reg></choice> <name ref="#Sortes">sortes</name> <name ref="#Plato">platonem</name> distincte et notitia 
-               <lb ed="#S"/>distincta causata a <name ref="#Plato">platone</name> prope se existente 
-               <lb ed="#S"/>quia virtute illius notitiae poterit elicere praedicata 
-               <lb ed="#S"/>affirmativa et negativa essentialia et accidentalia de 
-               <lb ed="#S"/>ipso <name ref="#Plato">platone</name> nam primo sciet mediante illa 
-               <lb ed="#S"/>notitia quod est corpus sed non est incor<lb ed="#S"/>poreum 
-               quod est vivens et quod non est non vi<lb ed="#S"/>vens 
-               quod est animal et non planta quod est animal 
-               <lb ed="#S"/>rationale et non brutum quod est homo et non 
-               <lb ed="#S"/>asinus quod est <name ref="#Plato">plato</name> et non <name ref="#Sortes">sortes</name> et sic continue de<lb ed="#S"/>scendendo 
-               per praedicata affirmativa removendo differentias 
-               <lb ed="#S"/>negativas et per conceptum confusum non 
-               <lb ed="#S"/>posset sic ideo vocatur notitia distincta quia est causa 
-               <lb ed="#S"/>sufficiens eliciendi notitiam de distinctione 
-               <lb ed="#S"/>obiecti a rebus aliquibus <g ref="#dbslash"/>et notitia vocatur 
-               <lb ed="#S"/>confusa quae sic non potest.</p> 
-      
-             <p xml:id="l22-qaedvi"><g ref="#dbslash"/>quantum autem est 
-               <lb ed="#S"/>de notitia universali sibi non repugnat quod sit 
-               <lb ed="#S"/>distincta <g ref="#pilcrow"/>unde circa hoc posset <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> quod notitia 
-               <lb ed="#S"/>universalis secundum unitatem intellectus in quo exi<lb ed="#S"/>steret 
-               <g ref="#slash"/>continue ascendendo secundum perfectionem intellectus 
-               <lb ed="#S"/>quod quanto esset in intellectu perfectiori et viva<lb ed="#S"/>ciori 
-               tanto esset distinctior ita quod 
-               <lb ed="#S"/>absolute non repugnat quod eadem notitia 
-               <lb ed="#S"/>sit distincta et universalis ita quod imaginandum est quod 
-               <lb ed="#S"/>universalitas non includit confusionem sive indis<lb ed="#S"/>tinctionem 
-               notitiae sed solum pluralitatem obiectorum <g ref="#dbslash"/>ita 
-               <lb ed="#S"/>quod de ratione cognitionis universalis est quod <sic>sit</sic> 
-               <lb ed="#S"/>semper sit plurium cognitio <g ref="#pilcrow"/>utrum autem distincte 
-               <lb ed="#S"/>vel indistincte <g ref="#slash"/>de ratione sua non est quod distincte 
-               <lb ed="#S"/>vel indistincte.</p> 
-     </div>
-      <div> 
-        <head xml:id="l22-Hqcqcqc">[Quattuor conclusiones]</head>
-      
-        <p xml:id="l22-vtaeqr"><g ref="#slash"/>veniendo tamen ad propositum 
-          <lb ed="#S"/>principale ponam <choice><orig>3es</orig><reg>tres</reg></choice> conclusiones contra modos <choice><orig>3es</orig><reg>tres</reg></choice> 
-          <lb ed="#S"/><choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> quod notitia sit sui obiecti repraesentativa</p>  
-      
-        <p xml:id="l22-pcnaso"><lb ed="#S"/><g ref="#pilcrow"/>prima conclusio notitia sive conceptus non dicitur repraesentativa 
-          <lb ed="#S"/>vel repraesentativus obiecti ratione similitudinis ipsius ad 
-          <lb ed="#S"/>obiectum suum</p>
-      
-        <p xml:id="l22-sccocc"><g ref="#pilcrow"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio conceptus non dicitur re<lb ed="#S"/>praesentativus 
-          sui obiecti ratione convenientiae specificae repertae 
-          <lb ed="#S"/>inter ipsum et obiectum essentialis in praedicatis vel 
-          <lb ed="#S"/>denominationibus essentialibus sibi et obiecto convenientibus.</p>
-      
-        <p xml:id="l22-tcchdh"><lb ed="#S"/><g ref="#pilcrow"/><choice><orig>3a</orig><reg>tertia</reg></choice> conclusio conceptus non dicitur esse sui obiecti repraesentativus 
-          <lb ed="#S"/>ex conditione sua specifica vel ex conditione suae 
-          <lb ed="#S"/>naturae specificae quod idem est <g ref="#dbslash"/>et ista conclusio <choice><orig>3a</orig><reg>tertia</reg></choice> 
-          <cb ed="#S" n="40ra"/><lb ed="#S"/>est contra <name ref="#Oyta">magistrum henricum de uta</name>.</p> 
-      
-        <p xml:id="l22-qcaeio"><g ref="#pilcrow"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
-          <lb ed="#S"/>conclusio affirmativa et <sic>adam</sic> forte post <g ref="#slash"/>ea aliqua quae 
-          <lb ed="#S"/>non dicam pro nunc ideo recipiatur conclusio pro nunc cum 
-          <lb ed="#S"/>protestatione aliquali aliqualiter postea decla<lb ed="#S"/>randa 
-          <g ref="#pilcrow"/>conclusio igitur affirmativa est ista quod conceptui 
-          <lb ed="#S"/>convenit repraesentare suum obiectum ex modo 
-          <lb ed="#S"/>habitudinum causarum proximarum ad ipsius productionem 
-          <lb ed="#S"/>concurrentium et ex modo motivitatis potentiae ab obiecto 
-          <lb ed="#S"/>et in obiectum.</p> 
-     </div>
-      <div>
-        <head xml:id="l22-Hptcptc">[Probatur tertia conclusio]</head>
-      
-        <p xml:id="l22-eicepa"><g ref="#dbslash"/>et ista conclusio quarta declarabitur posterius 
-          <lb ed="#S"/>quia primo volo insistere in probando <choice><orig>3es</orig><reg>tres</reg></choice> primas 
-          <lb ed="#S"/>conclusiones negativas et postea redibo ad <choice><orig>4am</orig><reg>quartam</reg></choice> 
-          <lb ed="#S"/>probandum quia <choice><orig>3a</orig><reg>tertia</reg></choice> conclusio videtur esse apparentior <g ref="#dbslash"/>sed eius oppositum 
-          <lb ed="#S"/>ponit <name ref="#Oyta">magister henricus de uuta</name> ideo primam 
-          <lb ed="#S"/>incipiam probando conclusionem et improbando <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> 
-          <lb ed="#S"/><name ref="#Oyta">magistri henrici de uuta</name> <g ref="#slash"/>unde ipse 
-          <lb ed="#S"/>dicit quod conceptus vel notitia dicitur esse sui notitia 
-          <lb ed="#S"/>ex conditione suae naturae specificae quam improbabo 
-          <lb ed="#S"/>sic quia stat esse duos conceptus eiusdem speciei 
-          <lb ed="#S"/>habentes diversa obiecta nec unus potest idem cum alio 
-          <lb ed="#S"/>repraesentare stantibus eisdem causis a quibus sunt 
-          <lb ed="#S"/>causati ergo consequentia tenet antecedens patet capiendo duos 
-          <lb ed="#S"/>conceptus quorum unus sit causatus a <name ref="#Sortes">sorte</name> et 
-          <lb ed="#S"/>alter a <name ref="#Plato">platone</name> in potentia cognitiva mere singularis 
-          <lb ed="#S"/>quo dato isti duo conceptus sunt eiusdem speciei quod 
-          <lb ed="#S"/>patet quia sunt eiusdem perfectionis adaequatae.</p>
-      
-        <p xml:id="l22-iqcned"><g ref="#pilcrow"/>Item 
-          <lb ed="#S"/>quia causantur a causis eiusdem speciei omnino eodem modo 
-          <lb ed="#S"/>se habentibus in potentia eodem modo se habente quia ponatur 
-          <lb ed="#S"/>quod <name ref="#Sortes">sortes</name> et <name ref="#Plato">plato</name> sint inaequali <choice><orig>distancia</orig><reg>distantia</reg></choice> 
-          <lb ed="#S"/>a potentia cognitiva et cetera omnia sunt paria 
-          <lb ed="#S"/>et tamen habent diversa obiecta et unus repraesentat 
-          <lb ed="#S"/>illud quod alter non posset repraesentare stantibus 
-          <lb ed="#S"/>eisdem causis <g ref="#dbslash"/>nam conceptus <name ref="#Sortes">sortis</name> non repraesen<lb ed="#S"/>tat 
-          nisi <name ref="#Sortes">sortem</name> singulariter et determinate quia est conceptus 
-          <lb ed="#S"/>mere singularis et determinatus et sibi repugnat 
-          <lb ed="#S"/>repraesentare <name ref="#Plato">platonem</name> causis omnibus eodem modo se ha<lb ed="#S"/>bentibus 
-          quia alias quilibet conceptus singularis repraesen<lb ed="#S"/>taret 
-          omnia alia individua eiusdem speciei quod 
-          <lb ed="#S"/>non est dicendum <g ref="#dbslash"/>et ita argueretur de conceptu 
-          <lb ed="#S"/>platonis <g ref="#slash"/>habeo ergo quod sunt duo conceptus eiusdem 
-          <lb ed="#S"/>speciei habentes diversa obiecta nec unum potest 
-          <lb ed="#S"/>repraesentare idem cum alio causis eisdem stantibus 
-          <lb ed="#S"/>igitur sequitur quod ex conditione specifica non convenit eis 
-          <lb ed="#S"/>repraesentare obiecta sua, quia sic competeret eis 
-          <lb ed="#S"/>idem repraesentare non enim essent alia Responsio nisi diceretur 
-          <cb ed="#S" n="40rb"/><lb ed="#S"/>quod non esset eiusdem speciei licet essent eiusdem perfectionis 
-          <lb ed="#S"/>quia causantur ab obiectis eiusdem perfectionis in eadem 
-          <lb ed="#S"/>potentia omnino et cetera sunt paria quia excludo omnem 
-          <lb ed="#S"/>aliam diversitatem ideo forte <choice><orig>scaret</orig><reg>staret</reg></choice> alia via quod 
-          <lb ed="#S"/>huiusmodi conceptus licet sint eiusdem perfectionis sunt 
-          <lb ed="#S"/>tamen diversarum specierum et quod ex natura specifica 
-          <lb ed="#S"/>convenit uni repraesentare <name ref="#Sortes">sortem</name> alteri <name ref="#Plato">platonem</name> 
-          <lb ed="#S"/>et ideo consequenter oporteret dicere quod essent duae species 
-          <lb ed="#S"/>diversae eiusdem perfectionis adaequatae et tunc 
-          <lb ed="#S"/>cuilibet conveniret ex sua natura specifica repraesentare 
-          <lb ed="#S"/>suum obiectum sed non potest stare quia species habent 
-          <lb ed="#S"/>ordinem inter se igitur semper oportet quod una sit per<lb ed="#S"/>fectior 
-          alia quia si essent sic collaterales 
-          <lb ed="#S"/>quod essent duae aeque perfectae tunc inter species 
-          <lb ed="#S"/>esset confusio et non debitus ordo quod non 
-          <lb ed="#S"/>est dicendum.</p> 
-      
-        <p xml:id="l22-ivqhdq"><g ref="#pilcrow"/>Item videtur quod species se habeant 
-          <lb ed="#S"/>sicut numeri et istud videtur esse <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> philosophi 
-          <lb ed="#S"/>ergo <choice><orig>eciam</orig><reg>etiam</reg></choice> sicut numeri sunt inter se ordinati sic 
-          <lb ed="#S"/>quod non stat quod sint duo numeri omnino aequales 
-          <lb ed="#S"/>sic ergo non stat quod sint duae species aequae 
-          <lb ed="#S"/>perfecte omnino <g ref="#pilcrow"/>Item ordo ponitur in praedicatis 
-          <lb ed="#S"/>essentialibus <g ref="#dbslash"/>qui tamen tolleretur si ponerentur 
-          <lb ed="#S"/>duae species aequae perfecte et istud ponitur 
-          <lb ed="#S"/>a <name ref="#Aristotle">philosopho</name> <num>2o</num> <title ref="#PosteriorAnalytics">posteriorum</title> et in aliis locis 
-          <lb ed="#S"/>ubicumque agit de processu demonstrativo <g ref="#dbslash"/>nam 
-          <lb ed="#S"/>in processu demonstrativo oportet accipere praedicata secundum 
-          <lb ed="#S"/>sub et supra descendendo usque ad species 
-          <lb ed="#S"/>specialissimas <g ref="#pilcrow"/>ad habendum diffinitiones quidditativas.</p>
-      
-        <p xml:id="l22-iaerie"><lb ed="#S"/>Item arguitur et <choice><orig>forcius</orig><reg>fortius</reg></choice> ex quid nominis denominationis 
-          <lb ed="#S"/>perfectae simpliciter communiter dato supponitur enim de 
-          <lb ed="#S"/>denominationibus mere essentialibus quod denominatio per<lb ed="#S"/>fectionis 
-          simpliciter mere absoluta <g ref="#dbslash"/>est medium suffi<lb ed="#S"/>ciens 
-          arguendi quod illud cui competit est perfectius 
-          <lb ed="#S"/>quolibet alio cui non competit et non curo hic 
-          <lb ed="#S"/>de logica quia ibi ponitur quam et aliud <g ref="#slash"/>ideo si velitis 
-          <lb ed="#S"/>dicatur propter logicam illud est melius cui competit 
-          <lb ed="#S"/>quam aliud cui non competit <g ref="#pilcrow"/>Istud patet ex de<lb ed="#S"/>scriptione 
-          <name ref="#Anselm">anselmi</name> <g ref="#dbslash"/>unde in <title ref="#Monologion">monologio</title> capitulo 
-          <lb ed="#S"/>5o describens <mentioned>perfectum simpliciter</mentioned> dicit quod <quote xml:id="l22-QSpseqni" type="Scholastic">per<lb ed="#S"/>fectum 
-          simpliciter est quod semper est melius ipsum 
-          <lb ed="#S"/>quam non ipsum</quote> <g ref="#pilcrow"/>ex ista suppositione probo evidenter 
-          <lb ed="#S"/>propositum <g ref="#pilcrow"/>supposito uno modo scilicet quod ab omni <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> 
-          <lb ed="#S"/>speciei essentialis cum omnibus superioribus speciebus 
-          <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> deo incluso <g ref="#slash"/>et non curo hic 
-          <lb ed="#S"/>utrum univoce aliqua denominatio conveniat deo 
-          <lb ed="#S"/>et creaturis potest sumi conceptus mere absolutus ita 
-          <cb ed="#S" n="40va"/><lb ed="#S"/>quod gratia exempli capiamus hominem <g ref="#dbslash"/>ex convenientia enim 
-          <lb ed="#S"/>hominis cum tota latitudine intelligentiarum naturalium 
-          <lb ed="#S"/>et deo potest sumi unus conceptus qui solum conveniat 
-          <lb ed="#S"/>speciei <sic>humone</sic> et a speciebus aliarum intelligentiarum 
-          <lb ed="#S"/>transcendens perfectionem omnium specierum in<lb ed="#S"/>feriorum 
-          et ita supra totam speciem non vi<lb ed="#S"/>ventium potest sumi conceptus solummodo competens vi<lb ed="#S"/>ventibus 
-          <g ref="#pilcrow"/>verum quod grammatici forte non 
-          <lb ed="#S"/>fuerunt ita instructi in methaphysicalibus quod 
-          <lb ed="#S"/>posuerunt vocabula propria correspondentia cuilibet speciei 
-          <lb ed="#S"/>tamen realiter ita est</p> 
-      
-        <p xml:id="l22-episor"><g ref="#dbslash"/>ex istis infertur 
-          <lb ed="#S"/>quod dicta positio implicat realiter contradictionem 
-          <lb ed="#S"/>nam ex <choice><orig>ypostasi</orig><reg>hypostasi</reg></choice> <c>a</c> conceptus <name ref="#Sortes">sortis</name> habet aliquam <choice><orig>de<lb ed="#S"/>nominacionem</orig><reg>de<lb ed="#S"/>nominationem</reg></choice> 
-          perfectionis simpliciter communem sibi et 
-          <lb ed="#S"/>aliis speciebus superioribus excludentem omnes 
-          <lb ed="#S"/>inferiores <g ref="#slash"/>sit igitur illa denominatio <c>b</c><g ref="#dot"/> tunc <c>b</c><g ref="#dot"/> 
-          <lb ed="#S"/>convenit sibi et non alteri igitur iste conceptus est per<lb ed="#S"/>fectior 
-          altero patet per primam suppositionem quia quandocumque 
-          <lb ed="#S"/>aliqua denominatio perfectionis simpliciter competit 
-          <lb ed="#S"/>alicui et non alteri illud cui competit est 
-          <lb ed="#S"/>perfectius quam illud cui non competit <g ref="#slash"/>et per idem 
-          <lb ed="#S"/>probatur econverso quod conceptus <name ref="#Plato">platonis</name> est perfectior conceptu 
-          <lb ed="#S"/><name ref="#Sortes">sortis</name> nam sicut a convenientia essentiali inter conceptum 
-          <lb ed="#S"/><name ref="#Sortes">sortis</name> et omnes superiores sumitur una denominatio 
-          <lb ed="#S"/>perfectionis simpliciter <g ref="#dot"/><c>c</c><g ref="#dot"/> et tunc <c>c</c><g ref="#dot"/> competit conceptui 
-          <lb ed="#S"/><name ref="#Plato">platonis</name> et non <name ref="#Sortes">Sortis</name> ergo conceptus <name ref="#Plato">platonis</name> per<lb ed="#S"/>fectior 
-          est conceptu <name ref="#Sortes">sortis</name> ex quid nominis denominationis 
-          <lb ed="#S"/>perfectionis simpliciter et tamen per praecedens argumentum 
-          <lb ed="#S"/>conceptus <name ref="#Sortes">sortis</name> est perfectior conceptu <name ref="#Plato">platonis</name> ergo 
-          <lb ed="#S"/>est perfectior et minus perfectus quod 
-          <lb ed="#S"/>implicat contradictionem et sic implicat contradictionem 
-          <lb ed="#S"/>esse duas species diversas eiusdem perfectio<lb ed="#S"/>nis 
-          omnino etc <g ref="#slash"/>et licet huiusmodi denominationibus 
-          <lb ed="#S"/>non sint nomina imposita tamen faciliter 
-          <lb ed="#S"/>possunt fabricari ab intellectu quia semper inter 
-          <lb ed="#S"/>quamcumque speciem et omnes superiores reperitur 
-          <lb ed="#S"/>convenientia essentialis sufficiens ad causandum etc et sic 
-          <lb ed="#S"/>patet quod non ex conditione specifica potest salvari 
-          <lb ed="#S"/>quod notitia sit sui obiecti repraesentativa.</p>  
-     </div>
-      
-      <div>
-        <head xml:id="l22-Hpscpsc">[Probatur secunda conclusio]</head>
-      
-        <p xml:id="l22-dpsemp"><g ref="#pilcrow"/>deinde 
-          <lb ed="#S"/>probatur 2a conclusio negativa scilicet quod non convenit conceptui re<lb ed="#S"/>praesentare 
-          suum obiectum ex convenientia essentiali 
-          <lb ed="#S"/>sui ad obiectum suum quia tunc homo magis 
-          <lb ed="#S"/>repraesentaret asinum quam qualitas illa quae 
-          <lb ed="#S"/>est notitia sive conceptus asini quia maior convenientia 
-          <lb ed="#S"/>essentialis reperitur inter hominem et asinum 
-          <lb ed="#S"/>quam inter asinum et illam notitiam cum notitia illa 
-          <cb ed="#S" n="40vb"/><lb ed="#S"/>sit quoddam accidens <g ref="#slash"/>ista conclusio est clara 
-          <lb ed="#S"/>ideo nolo plus insistere probando eam</p> 
-     </div>
-      <div> 
-        <head xml:id="l22-Hppcppc">[Probatur prima conclusio]</head>
-      
-        <p xml:id="l22-dppemi"><g ref="#slash"/>deinde 
-          <lb ed="#S"/>probatur prima conclusio negativa scilicet quod conceptus non sit sui obiecti 
-          <lb ed="#S"/>repraesentativus ratione similitudinis et ista conclusio est difficilior 
-          <lb ed="#S"/>ad probandum quam <choice><orig>2a</orig><reg>secunda</reg></choice> quia multi tenent oppositum <g ref="#dbslash"/>probatur 
-          igitur conclusio quia si sic tunc conceptus lapidis esset formalis 
-          <lb ed="#S"/>similitudo lapidis sicut impressio facta a sigillo 
-          <lb ed="#S"/>et per consequens in isto conceptu oporteret esse distinctionem li<lb ed="#S"/>neationem 
-          secundum quod est a parte obiecti quia alias non 
-          <lb ed="#S"/>bene salvaretur similitudo inter conceptum et obiectum nisi 
-          <lb ed="#S"/>proportionalis lineatio reperiretur in conceptu sicut in obiecto 
-          <lb ed="#S"/>adextra <g ref="#slash"/>confirmatur quia conceptus rei extensae non posset 
-          <lb ed="#S"/>haberi nisi ille conceptus haberet aliquid proportionale extensioni 
-          <lb ed="#S"/>obiecti ut scilicet pars parti corresponderet sed hoc est 
-          <lb ed="#S"/>falsum quia conceptus est mere indivisibilis</p>
-      
-        <p xml:id="l22-iqssii"><g ref="#pilcrow"/>Item sic <choice><orig>eciam</orig><reg>etiam</reg></choice> 
-          <lb ed="#S"/>conceptus esset sicut <choice><orig>ymago</orig><reg>imago</reg></choice> rei et cum <choice><orig>ymago</orig><reg>imago</reg></choice> non 
-          <lb ed="#S"/>repraesentat rem nisi cognoscatur prius <g ref="#dbslash"/>sequitur 
-          <lb ed="#S"/>quod res non posset cognosci sine conceptu sui conceptus 
-          <lb ed="#S"/>et iterum illa cognitio esset <choice><orig>ymago</orig><reg>imago</reg></choice> conceptus et sic 
-          <lb ed="#S"/>iterum non posset cognosci conceptus nisi haberetur cognitio 
-          <lb ed="#S"/>notitiae conceptus et sic in infinitum.</p>
-     </div> 
-    <div>  
-      <head xml:id="l22-Hcorria">[Corollaria]</head>
-      
-      <p xml:id="l22-eiaqin"><g ref="#pilcrow"/>Ex istis antequam 
-        <lb ed="#S"/>veniam ad principalem materiae difficultatem scilicet ad probationem 
-        <lb ed="#S"/><choice><orig>4ae</orig><reg>quartae</reg></choice> conclusionis infero aliqua corollaria <g ref="#slash"/>ubi advertendum quod 
-        <lb ed="#S"/>in opposito huius conclusionis primae fundat <name ref="#Ripa">magister Iohannes de Rippa</name> aliquas conclusiones affirmativas 
-        <lb ed="#S"/>contra quas infero negativas</p> 
-      
-      <p xml:id="l22-pcnoan"><g ref="#pilcrow"/>primum corollarium non 
-        <lb ed="#S"/>quaelibet entitas immaterialis potest esse respectu divinae 
-        <lb ed="#S"/>essentiae species intelligibilis <g ref="#slash"/>ipse enim <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
-        <lb ed="#S"/>quod quaelibet res indivisibilis sive immaterialis realiter 
-        <lb ed="#S"/>est <choice><orig>ymago</orig><reg>imago</reg></choice> trinitatis divinae <g ref="#pilcrow"/>ideo realiter est eius 
-        <lb ed="#S"/>species intelligibilis sed sicut tetigi non ex similitudine 
-        <lb ed="#S"/>consurgit quod notitia sit repraesentativa sui obiecti quia 
-        <lb ed="#S"/>anima intellectiva est realiter similitudo trinitatis et tamen 
-        <lb ed="#S"/>non est eius species intelligibilis sed solum obiective 
-        <lb ed="#S"/>repraesentat divinam essentiam et trinitatem et sic patet 
-        <lb ed="#S"/>quod prima sua conclusio fundatur in falso scilicet in similitudine 
-        <lb ed="#S"/>obiecti ad notitiam.</p>
-      
-      <p xml:id="l22-scnenf"><g ref="#pilcrow"/><choice><orig>2m</orig><reg>secundum</reg></choice> corollarium non quaelibet enti<lb ed="#S"/>tas 
-        immaterialis creata potest esse respectu dei notitia in<lb ed="#S"/>tuitiva 
-        quia nedum ponit quod quaelibet entitas 
-        <lb ed="#S"/>immaterialis creata sit respectu dei species intelligibilis 
-        <lb ed="#S"/>sed <choice><orig>eciam</orig><reg>etiam</reg></choice> notitia et non solum notitia sed <choice><orig>eciam</orig><reg>etiam</reg></choice> notitia 
-        <lb ed="#S"/>intuitiva patet quia anima intellectiva est similitudo trinitatis 
-        <lb ed="#S"/>et tamen non est notitia ipsius intuitiva <g ref="#pilcrow"/>Item 
-        <lb ed="#S"/>non concedimus quod aliquis angelus sit per 
-        <lb ed="#S"/>essentiam suam notitia intuitiva dei <choice><orig>ymo</orig><reg>immo</reg></choice> dubium 
-        <lb ed="#S"/>est inter doctores utrum sit species intelligibilis 
-        <lb ed="#S"/>trinitatis <g ref="#pilcrow"/>Item ex isto videretur sequi quod dae<lb ed="#S"/>mones 
-        essent notitia intuitiva dei ex quo 
-        <cb ed="#S" n="41ra"/><lb ed="#S"/>istud pervenit ratione similitudinis quia daemones 
-        <lb ed="#S"/>sunt realiter similitudo trinitatis quia ista similitudo non 
-        <lb ed="#S"/>est aliquod accidens <choice><orig>ymo</orig><reg>immo</reg></choice> est met essentia licet enim 
-        <lb ed="#S"/>quaelibet res sit ipsius dei obiective repraesentativa 
-        <lb ed="#S"/>non tamen formaliter <g ref="#pilcrow"/>Unde ipse <name ref="#Ripa">magister de Rip<lb ed="#S"/>pa</name> 
-        tenet quod quaelibet res sive materialis sive im<lb ed="#S"/>materialis 
-        est dei notitia quantum est de se ita 
-        <lb ed="#S"/>quod si posset animae uniri esset formaliter sibi notitia 
-        <lb ed="#S"/>intuitiva ipsius dei. <g ref="#pilcrow"/>Ego enim medio 
-        <lb ed="#S"/>secum concedo enim quod quaelibet res mundi 
-        <lb ed="#S"/>sive materialis sive immaterialis est ipsius dei et <choice><orig>tocius</orig><reg>totius</reg></choice> 
-        <lb ed="#S"/>trinitatis repraesentativa non tamen formaliter in se sed 
-        <lb ed="#S"/>solum obiective et forte circa hoc dicetur 
-        <lb ed="#S"/>quod quaelibet res dupliciter repraesentaret trinitatem 
-        <lb ed="#S"/><g ref="#pilcrow"/>trinitas autem habet duos modos in se secundum quos 
-        <lb ed="#S"/>repraesentatur a qualibet creatura nam trinitas tibi 
-        <lb ed="#S"/>adextra activa in esse causae efficientis praeter efficere 
-        <lb ed="#S"/>obiective ita <choice><orig>eciam</orig><reg>etiam</reg></choice> res sunt effectus adextra 
-        <lb ed="#S"/>praeter efficere obiective <g ref="#dbslash"/>sicut ignis generat 
-        <lb ed="#S"/>ignem etc sed praeter hoc in divina essentia est 
-        <lb ed="#S"/>quaedam efficientia per modum intentionis quae magis 
-        <lb ed="#S"/>reducitur ad concursum obiectalem quam ad aliud et 
-        <lb ed="#S"/>ibidem est res fecunda in se sicut pater 
-        <lb ed="#S"/>et se habet per modum obiecti communicando se producendo 
-        <lb ed="#S"/>filium <g ref="#slash"/>et deinde ab utroque producitur spiritus sanctus 
-        <lb ed="#S"/>per modum amoris sicut quaelibet res creata se 
-        <lb ed="#S"/>habet in se <g ref="#pilcrow"/>nam primo ex natura fecunda producit 
-        <lb ed="#S"/>speciem et deinde cognitionem <g ref="#dbslash"/>et deinde ab utroque 
-        <lb ed="#S"/>producitur amor quia quantum est de se quodlibet 
-        <lb ed="#S"/>obiectum est bonum ideo praesentat se ad finis con<lb ed="#S"/>secutionem 
-        ideo cuilibet rei competit repraesentare 
-        <lb ed="#S"/>trinitatem per modum efficientis obiectivum nam ex pro<lb ed="#S"/>ductione 
-        speciei in anima ab obiecto consequitur amor 
-        <lb ed="#S"/>quia obiectum quantum est de se debet esse conveniens potentiae 
-        <lb ed="#S"/>et sic consequentur <g ref="#slash"/>et amor et obiectum concurrunt 
-        <lb ed="#S"/>ad complacentiam obiecti cogniti <g ref="#slash"/>ideo trinitas 
-        <lb ed="#S"/>relucet in creaturis obiective et non formaliter.</p>
-      
-      <p xml:id="l22-tcnlbo"><lb ed="#S"/><g ref="#pilcrow"/><choice><orig>3m</orig><reg>tertium</reg></choice> corollarium non quilibet intellectus creatus potest sic 
-        <lb ed="#S"/>in divina natura videre deum seu divinam essentiam 
-        <lb ed="#S"/>se ipso quia licet sit obiective repraesentativus divinae essentiae 
-        <lb ed="#S"/>non tamen formaliter in se quia esse similitudinem quandam 
-        <lb ed="#S"/>in se divinae essentiae non sufficit ad esse forma<lb ed="#S"/>liter 
-        notitiam intuitivam dei licet bene obiective.</p> 
-      
-      <p xml:id="l22-qcnpse"><lb ed="#S"/><choice><orig>4m</orig><reg>quartum</reg></choice> corollarium non oportet quod deus secundum omnem <choice><orig>de<lb ed="#S"/>nominacionem</orig><reg>de<lb ed="#S"/>nominationem</reg></choice> 
-        perfectionis essentialis cognoscatur 
-        <lb ed="#S"/>ab aliqua creatura formaliter dicit enim <name ref="#Ripa">de rippa</name> 
-        <lb ed="#S"/>et ista <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> est subtilis licet falsa dicit 
-        <lb ed="#S"/>enim quod quanto aliqua species est perfectior 
-        <cb ed="#S" n="41rb"/><lb ed="#S"/>tanto repraesentat deum secundum plures <choice><orig>denominaciones</orig><reg>denominationes</reg></choice> 
-        <lb ed="#S"/>perfectionis ita quod infima species repraesentat 
-        <lb ed="#S"/>deum intuitive secundum unam denominationem per<lb ed="#S"/>fectionis 
-        solum et superior species immediate re<lb ed="#S"/>praesentat 
-        secundum duas et sic consequenter ascendendo secundum perfec<lb ed="#S"/>tionem 
-        specierum <g ref="#dbslash"/>data ergo suprema intelligentia 
-        <lb ed="#S"/>in qua concurrunt omnes <choice><orig>denominaciones</orig><reg>denominationes</reg></choice> perfectionis 
-        <lb ed="#S"/>simpliciter essentiales quia de nominibus non est curandum 
-        <lb ed="#S"/>sicut sunt omne independens omne increa<lb ed="#S"/>tum 
-        quia data suprema intelligentia <g ref="#slash"/>ad<lb ed="#S"/>huc 
-        esset dependens et creata ipsa suprema 
-        <lb ed="#S"/>intelligentia repraesentaret deum secundum omnes <choice><orig>de<lb ed="#S"/>nominaciones</orig><reg>de<lb ed="#S"/>nominationes</reg></choice> 
-        perfectionis simpliciter ipsius dei <g ref="#slash"/>et 
-        <lb ed="#S"/>esset notitia intuitiva ipsius dei secundum omnem praedicatum 
-        <lb ed="#S"/>perfectionale simpliciter essentiale.</p> 
-      
-      <p xml:id="l22-peofia"><lb ed="#S"/><g ref="#pilcrow"/>pono igitur oppositum quod non oporteret quod repraesentaret formaliter 
-        <lb ed="#S"/>deum licet enim repraesentaret deum obiective non tamen 
-        <lb ed="#S"/>formaliter et sic data suprema intelligentia non esset 
-        <lb ed="#S"/>ipsius dei notitia intuitiva secundum omnem praedicatum per<lb ed="#S"/>fectionale 
-        <g ref="#dbslash"/>licet esset sibi simillima intelligentia 
-        <lb ed="#S"/>quae posset creari <g ref="#slash"/>nihilominus tamen non haberet nisi 
-        <lb ed="#S"/>obiectaliter et non formaliter repraesentare ipsum deum 
-        <lb ed="#S"/>quia ex similitudine ut dictum est non consurgit 
-        <lb ed="#S"/>ratio formalis repraesentandi <g ref="#dbslash"/>quantum est de materiae principalis 
-        <lb ed="#S"/>prosecutione tractabitur in sequenti lectione <g ref="#slash"/> 
-        <lb ed="#S"/><g ref="#pilcrow"/>et faciam finem huius articuli. <space extent="18andHalfBlankColumns"/></p>
-      
-      <!-- column and half of repeated stuff follows starting at "non tamen formaliter". This should probably be included in this file. But it's not clear what kind of paragraph arrangement or identification to use, perhaps new xml:id should be created and they should be linked using the 'sameAs' attribute -->
-    </div>    
+      <head>Lectio 22, de Notitia [Sorbonne Transcription]</head>
+        <div>
+          <head xml:id="l22-Hcpdcpd">[Circa primam difficultatem]</head>
+          <p xml:id="l22-seqqlp">
+            <g ref="#slash"/>Sciendum 
+            <lb ed="#S"/>est quod in praecedenti lectione dictum est quod quaelibet 
+            <lb ed="#S"/>creatura potest concurrere obiective hoc est potest efficere 
+            <lb ed="#S"/>notitiam sui in potentia perceptiva <g ref="#pilcrow"/>nunc autem 
+            <lb ed="#S"/>restat videndum ex quo notitia dicitur alterius 
+            <lb ed="#S"/>obiecti notitia <g ref="#slash"/>et circa hoc aliqua repetam 
+            <lb ed="#S"/>quae dicta fuerunt in quadam lectione praecedenti.
+          </p>
+          <p xml:id="l22-ptqsss">
+            <g ref="#pilcrow"/>primo enim tangebatur quod notitia sive cognitio non 
+            <lb ed="#S"/>est intrinsece et essentialiter <corr><del rend="blackout">eo</del></corr> cognitio sive notitia 
+            <lb ed="#S"/><g ref="#dbslash"/>quod patet quia staret per dei potentiam quod esset 
+            <lb ed="#S"/>sine subiecto et sic non esset cognitio quia nec sibi 
+            <lb ed="#S"/>nec alteri <g ref="#slash"/>non sibi quia non est potentia vitaliter 
+            <lb ed="#S"/>perceptiva cum sit quoddam accidens nec alteri per 
+            <lb ed="#S"/>suppositum quia stat sine subiecto.
+          </p>
+          <p xml:id="l22-sdqdls">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicebatur 
+            <lb ed="#S"/>quod notitia sive cognitio non dicitur notitia sive cognitio 
+            <lb ed="#S"/>in habitudine ad suam potentiam ut subiectiva nam 
+            <lb ed="#S"/>deus de potentia sua absoluta posset notitiam po<lb ed="#S" break="no"/>nere 
+            in lapide et tunc haberet huiusmodi habitudinem 
+            <lb ed="#S"/>ad lapidem et tamen non esset notitia ex illa 
+            <lb ed="#S"/>habitudine subiectiva ad lapidem nec denomina<lb ed="#S" break="no"/>ret 
+            lapidem cognoscentem.
+          </p>
+          <p xml:id="l22-tdqatp">
+            <g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicebatur quod notitia 
+            <lb ed="#S"/>non dicitur notitia ex habitudine ad potentiam perceptivam 
+            <lb ed="#S"/>ut eius activa quia prius natura saltem anima pro<lb ed="#S" break="no"/>ducit 
+            notitiam quam vitaliter immutetur per eam 
+            <lb ed="#S"/>ergo deus potest separare primum a posteriori quia 
+            <lb ed="#S"/>quaecumque distincta deus potest etc. ergo de potentia dei 
+            <lb ed="#S"/>absoluta posset poni sine <choice><orig>2o</orig><reg>secundo</reg></choice> et per consequens staret 
+            <lb ed="#S"/>quod esset productio huiusmodi notitiae a potentia cognitiva et tamen 
+            <lb ed="#S"/>huiusmodi qualitas non esset animae cognitio <g ref="#slash"/>ideo dice<lb ed="#S" break="no"/>batur 
+            consequenter <g ref="#dbslash"/>quod cognitio dicitur cognitio ex habitudine 
+            <lb ed="#S"/>illa ut est potentia vitaliter immutabilis id est ex habitudine 
+            <lb ed="#S"/>illa qua talis potentia est obiecti per illam qualitatem 
+            <lb ed="#S"/>cognitiva et non ut subiectiva vel ut productiva 
+            <lb ed="#S"/>sed ut obiecti perceptiva ita quod notitia sive cognitio 
+            <lb ed="#S"/>ex habitudine illa dicitur cognitio ex qua <space extent="oneWordLength"/> 
+            <lb ed="#S"/>potentiam cognitivam intentionaliter cum obiecto per eam 
+            <lb ed="#S"/>cognito et a tali potentia
+          </p>
+          <p xml:id="l22-eavenu">
+            <g ref="#dbslash"/>et antequam veniam 
+            <lb ed="#S"/>ad principalem difficultatem materiae tactae scilicet 
+            <lb ed="#S"/>ex quo notitia dicitur esse obiecti repraesentativa <g ref="#pilcrow"/>ad<lb ed="#S" break="no"/>vertendum 
+            est quod notitia potest dici alicuius obiecti notitia 
+            <lb ed="#S"/>multipliciter. <g ref="#dbslash"/>uno modo potest dici notitia universalis et sic conceptus 
+            <lb ed="#S"/>entis esset dei notitia, quia cuiuslibet rei est notitia 
+            <lb ed="#S"/>universalis <g ref="#slash"/> tamen
+          </p>
+          <p xml:id="l22-sancid">
+            <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> aliqua notitia potest esse alicuius 
+            <lb ed="#S"/>obiecti notitia <g ref="#dbslash"/>propter aliquam <choice><orig>determinacionem</orig><reg>determinationem</reg></choice> ita 
+            <pb ed="#S" n="39-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>quod propter illam <choice><orig>determinacionem</orig><reg>determinationem</reg></choice> conceptus ille vel <choice><orig>noticia</orig><reg>notitia</reg></choice> 
+            <lb ed="#S"/>esset proprius conceptus vel notitia dei <g ref="#pilcrow"/>verbi gratia 
+            <lb ed="#S"/>dato quod conceptui entis superaddatur ista de<lb ed="#S" break="no"/>terminatio 
+            <mentioned>a se</mentioned> vel <mentioned>independens</mentioned> vel <mentioned>primum</mentioned> <g ref="#slash"/>ille 
+            <lb ed="#S"/>conceptus <mentioned>ens a se</mentioned> vel <mentioned>ens independens</mentioned> 
+            <lb ed="#S"/>vel <mentioned>ens primum</mentioned> erit proprie conceptus dei adaequate 
+            <lb ed="#S"/>supponens pro ipso licet nulla pars esset proprie conceptus 
+            <lb ed="#S"/>dei
+          </p>
+          <p xml:id="l22-tcdeds">
+            <g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> contingit de <g ref="#slash"/>re causari notitia in 
+            <lb ed="#S"/>particulari ut patet de conceptu singulari simpliciter adaequate 
+            <lb ed="#S"/>supponens pro illo obiecto <g ref="#slash"/>et sic de deo mediante conceptu 
+            <lb ed="#S"/>creaturae <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod posset elici aliquis conceptus 
+            <lb ed="#S"/>singularis et proprius <g ref="#pilcrow"/>Sed de hoc erit postea 
+            <lb ed="#S"/>difficultas specialis
+          </p>
+          <p xml:id="l22-qmpbip">
+            <g ref="#slash"/>et quarto modo potest haberi notitia de 
+            <lb ed="#S"/>aliquo non terminata ad aliud ut immediate causata 
+            <lb ed="#S"/>ab alio sed immediate ab obiecto sicut notitia dei 
+            <lb ed="#S"/>hic in via intuitiva sicut potuit esse 
+            <lb ed="#S"/>in <name ref="#Paul">paulo</name> et sicut est in beatis in patria de 
+            <lb ed="#S"/>notitia beatifica intuitiva ipsius dei quam ha<lb ed="#S" break="no"/>bent 
+            beati in patria
+          </p>
+          <p xml:id="l22-uaeeed">
+            <g ref="#pilcrow"/>ulterius advertendum 
+            <lb ed="#S"/>quod differentia est inter notitiam universalem et confusam 
+            <lb ed="#S"/>nam notitia confusa potest esse sive sit singularis 
+            <lb ed="#S"/>sive universalis <g ref="#slash"/>unde notitia confusa et notitia distincta 
+            <lb ed="#S"/>per hoc distinguuntur quia notitia distincta est causa immediate 
+            <lb ed="#S"/>eliciendi propositiones affirmativas et negativas plures de 
+            <lb ed="#S"/>obiecto cognito per eam vel est notitia ex qua 
+            <lb ed="#S"/>intellectus potest immediate elicere plura praedicata 
+            <lb ed="#S"/>essentialia de obiecto cognito sive affirmativa sive 
+            <lb ed="#S"/>negativa <g ref="#slash"/>notitia vero confusa et indistincta 
+            <lb ed="#S"/>est illa ex qua non possunt sic elici plura 
+            <lb ed="#S"/>praedicata affirmativa et negativa obiecti cogniti <g ref="#pilcrow"/>exemplum 
+            <lb ed="#S"/>ponatur quod <name ref="#Sortes">sortes</name> videat <name ref="#Plato">platonem</name> a tanta 
+            <lb ed="#S"/><choice><orig>distancia</orig><reg>distantia</reg></choice> quod virtute suae cognitionis non 
+            <lb ed="#S"/>possit elicere magis particulare iudicium de 
+            <lb ed="#S"/><name ref="#Plato">platone</name> nisi quod est corpus <g ref="#pilcrow"/>deinde vi<lb ed="#S" break="no"/>deat 
+            <name ref="#Cicero">cinceronem</name> prope se vel <name ref="#Plato">platonem</name> 
+            <lb ed="#S"/>multiplicatum prope se tunc eandem rem cogno<lb ed="#S" break="no"/>scet 
+            confuse et indistincte et <choice><orig>eciam</orig><reg>etiam</reg></choice> distincte
+          </p>
+          <p xml:id="l22-iecude">
+            <g ref="#dbslash"/>indistincte 
+            <lb ed="#S"/>et confuse cognoscet <name>platonem</name> distantem ab 
+            <lb ed="#S"/>eo quia virtute illius cognitio creata ab eo 
+            <lb ed="#S"/>sit distante quam habet <name ref="#Sortes">sortes</name> non potest 
+            <lb ed="#S"/><name ref="#Sortes">sortes</name> elicere Iudicium particulare nisi quod 
+            <lb ed="#S"/>sit corpus nec potest elicere virtute illius cognitionis 
+            <lb ed="#S"/>utrum sit animatum vel inanimatum <g ref="#slash"/>utrum 
+            <lb ed="#S"/>sit animal vel planta <g ref="#pilcrow"/>utrum sit animal 
+            <lb ed="#S"/>rationale vel irrationale <g ref="#dbslash"/>utrum sit homo 
+            <cb ed="#S" n="b"/> <!--39vb -->
+            <lb ed="#S"/>vel asinus <g ref="#slash"/> utrum sit <name ref="#Sortes">sortes</name> vel <name>plato</name> nam 
+            <lb ed="#S"/>si interrogetur utrum sit animal vel non <g ref="#slash"/>vi<lb ed="#S" break="no"/>vens 
+            vel non semper dubitabit <g ref="#slash"/>et hoc ratione 
+            <lb ed="#S"/>confusionis <g ref="#slash"/>notitiae ignorabit de ipso tam 
+            <lb ed="#S"/>praedicata affirmativa quam negativa ut dictum est.
+          </p>
+          <p xml:id="l22-cesnsp">
+            <g ref="#dbslash"/>cog<lb ed="#S" break="no"/>noscet 
+            <choice><orig>eciam</orig><reg>etiam</reg></choice> <name ref="#Sortes">sortes</name> <name ref="#Plato">platonem</name> distincte et notitia 
+            <lb ed="#S"/>distincta causata a <name ref="#Plato">platone</name> prope se existente 
+            <lb ed="#S"/>quia virtute illius notitiae poterit elicere praedicata 
+            <lb ed="#S"/>affirmativa et negativa essentialia et accidentalia de 
+            <lb ed="#S"/>ipso <name ref="#Plato">platone</name> nam primo sciet mediante illa 
+            <lb ed="#S"/>notitia quod est corpus sed non est incor<lb ed="#S" break="no"/>poreum 
+            quod est vivens et quod non est non vi<lb ed="#S" break="no"/>vens 
+            quod est animal et non planta quod est animal 
+            <lb ed="#S"/>rationale et non brutum quod est homo et non 
+            <lb ed="#S"/>asinus quod est <name ref="#Plato">plato</name> et non <name ref="#Sortes">sortes</name> et sic continue de<lb ed="#S" break="no"/>scendendo 
+            per praedicata affirmativa removendo differentias 
+            <lb ed="#S"/>negativas et per conceptum confusum non 
+            <lb ed="#S"/>posset sic ideo vocatur notitia distincta quia est causa 
+            <lb ed="#S"/>sufficiens eliciendi notitiam de distinctione 
+            <lb ed="#S"/>obiecti a rebus aliquibus <g ref="#dbslash"/>et notitia vocatur 
+            <lb ed="#S"/>confusa quae sic non potest.
+          </p>
+          <p xml:id="l22-qaedvi">
+            <g ref="#dbslash"/>quantum autem est 
+            <lb ed="#S"/>de notitia universali sibi non repugnat quod sit 
+            <lb ed="#S"/>distincta <g ref="#pilcrow"/>unde circa hoc posset <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> quod notitia 
+            <lb ed="#S"/>universalis secundum unitatem intellectus in quo exi<lb ed="#S" break="no"/>steret 
+            <g ref="#slash"/>continue ascendendo secundum perfectionem intellectus 
+            <lb ed="#S"/>quod quanto esset in intellectu perfectiori et viva<lb ed="#S" break="no"/>ciori 
+            tanto esset distinctior ita quod 
+            <lb ed="#S"/>absolute non repugnat quod eadem notitia 
+            <lb ed="#S"/>sit distincta et universalis ita quod imaginandum est quod 
+            <lb ed="#S"/>universalitas non includit confusionem sive indis<lb ed="#S" break="no"/>tinctionem 
+            notitiae sed solum pluralitatem obiectorum <g ref="#dbslash"/>ita 
+            <lb ed="#S"/>quod de ratione cognitionis universalis est quod <sic>sit</sic> 
+            <lb ed="#S"/>semper sit plurium cognitio <g ref="#pilcrow"/>utrum autem distincte 
+            <lb ed="#S"/>vel indistincte <g ref="#slash"/>de ratione sua non est quod distincte 
+            <lb ed="#S"/>vel indistincte.
+          </p>
+        </div>
+        <div>
+          <head xml:id="l22-Hqcqcqc">[Quattuor conclusiones]</head>
+          <p xml:id="l22-vtaeqr">
+            <g ref="#slash"/>veniendo tamen ad propositum 
+            <lb ed="#S"/>principale ponam <choice><orig>3es</orig><reg>tres</reg></choice> conclusiones contra modos <choice><orig>3es</orig><reg>tres</reg></choice> 
+            <lb ed="#S"/><choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> quod notitia sit sui obiecti repraesentativa
+          </p>
+          <p xml:id="l22-pcnaso">
+            <lb ed="#S"/><g ref="#pilcrow"/>prima conclusio notitia sive conceptus non dicitur repraesentativa 
+            <lb ed="#S"/>vel repraesentativus obiecti ratione similitudinis ipsius ad 
+            <lb ed="#S"/>obiectum suum
+          </p>
+          <p xml:id="l22-sccocc">
+            <g ref="#pilcrow"/><choice><orig>2a</orig><reg>secunda</reg></choice> conclusio conceptus non dicitur re<lb ed="#S" break="no"/>praesentativus 
+            sui obiecti ratione convenientiae specificae repertae 
+            <lb ed="#S"/>inter ipsum et obiectum essentialis in praedicatis vel 
+            <lb ed="#S"/>denominationibus essentialibus sibi et obiecto convenientibus
+          </p>
+          <p xml:id="l22-tcchdh">
+            <lb ed="#S"/><g ref="#pilcrow"/><choice><orig>3a</orig><reg>tertia</reg></choice> conclusio conceptus non dicitur esse sui obiecti repraesentativus 
+            <lb ed="#S"/>ex conditione sua specifica vel ex conditione suae 
+            <lb ed="#S"/>naturae specificae quod idem est <g ref="#dbslash"/>et ista conclusio <choice><orig>3a</orig><reg>tertia</reg></choice> 
+            <pb ed="#S" n="40-r"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>est contra <name ref="#Oyta">magistrum henricum de uta</name>
+          </p>
+          <p xml:id="l22-qcaeio">
+            <g ref="#pilcrow"/><choice><orig>4a</orig><reg>quarta</reg></choice> 
+            <lb ed="#S"/>conclusio affirmativa et <sic>adam</sic> forte post <g ref="#slash"/>ea aliqua quae 
+            <lb ed="#S"/>non dicam pro nunc ideo recipiatur conclusio pro nunc cum 
+            <lb ed="#S"/>protestatione aliquali aliqualiter postea decla<lb ed="#S" break="no"/>randa 
+            <g ref="#pilcrow"/>conclusio igitur affirmativa est ista quod conceptui 
+            <lb ed="#S"/>convenit repraesentare suum obiectum ex modo 
+            <lb ed="#S"/>habitudinum causarum proximarum ad ipsius productionem 
+            <lb ed="#S"/>concurrentium et ex modo motivitatis potentiae ab obiecto 
+            <lb ed="#S"/>et in obiectum
+          </p>
+        </div>
+        <div>
+          <head xml:id="l22-Hptcptc">[Probatur tertia conclusio]</head>
+          <p xml:id="l22-eicepa">
+            <g ref="#dbslash"/>et ista conclusio quarta declarabitur posterius 
+            <lb ed="#S"/>quia primo volo insistere in probando <choice><orig>3es</orig><reg>tres</reg></choice> primas 
+            <lb ed="#S"/>conclusiones negativas et postea redibo ad <choice><orig>4am</orig><reg>quartam</reg></choice> 
+            <lb ed="#S"/>probandum quia <choice><orig>3a</orig><reg>tertia</reg></choice> conclusio videtur esse apparentior <g ref="#dbslash"/>sed eius oppositum 
+            <lb ed="#S"/>ponit <name ref="#Oyta">magister henricus de uuta</name> ideo primam 
+            <lb ed="#S"/>incipiam probando conclusionem et improbando <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> 
+            <lb ed="#S"/><name ref="#Oyta">magistri henrici de uuta</name> <g ref="#slash"/>unde ipse 
+            <lb ed="#S"/>dicit quod conceptus vel notitia dicitur esse sui notitia 
+            <lb ed="#S"/>ex conditione suae naturae specificae quam improbabo 
+            <lb ed="#S"/>sic quia stat esse duos conceptus eiusdem speciei 
+            <lb ed="#S"/>habentes diversa obiecta nec unus potest idem cum alio 
+            <lb ed="#S"/>repraesentare stantibus eisdem causis a quibus sunt 
+            <lb ed="#S"/>causati ergo consequentia tenet antecedens patet capiendo duos 
+            <lb ed="#S"/>conceptus quorum unus sit causatus a <name ref="#Sortes">sorte</name> et 
+            <lb ed="#S"/>alter a <name ref="#Plato">platone</name> in potentia cognitiva mere singularis 
+            <lb ed="#S"/>quo dato isti duo conceptus sunt eiusdem speciei quod 
+            <lb ed="#S"/>patet quia sunt eiusdem perfectionis adaequatae
+          </p>
+          <p xml:id="l22-iqcned">
+            <g ref="#pilcrow"/>Item 
+            <lb ed="#S"/>quia causantur a causis eiusdem speciei omnino eodem modo 
+            <lb ed="#S"/>se habentibus in potentia eodem modo se habente quia ponatur 
+            <lb ed="#S"/>quod <name ref="#Sortes">sortes</name> et <name ref="#Plato">plato</name> sint inaequali <choice><orig>distancia</orig><reg>distantia</reg></choice> 
+            <lb ed="#S"/>a potentia cognitiva et cetera omnia sunt paria 
+            <lb ed="#S"/>et tamen habent diversa obiecta et unus repraesentat 
+            <lb ed="#S"/>illud quod alter non posset repraesentare stantibus 
+            <lb ed="#S"/>eisdem causis <g ref="#dbslash"/>nam conceptus <name ref="#Sortes">sortis</name> non repraesen<lb ed="#S" break="no"/>tat 
+            nisi <name ref="#Sortes">sortem</name> singulariter et determinate quia est conceptus 
+            <lb ed="#S"/>mere singularis et determinatus et sibi repugnat 
+            <lb ed="#S"/>repraesentare <name ref="#Plato">platonem</name> causis omnibus eodem modo se ha<lb ed="#S" break="no"/>bentibus 
+            quia alias quilibet conceptus singularis repraesen<lb ed="#S" break="no"/>taret 
+            omnia alia individua eiusdem speciei quod 
+            <lb ed="#S"/>non est dicendum <g ref="#dbslash"/>et ita argueretur de conceptu 
+            <lb ed="#S"/>platonis <g ref="#slash"/>habeo ergo quod sunt duo conceptus eiusdem 
+            <lb ed="#S"/>speciei habentes diversa obiecta nec unum potest 
+            <lb ed="#S"/>repraesentare idem cum alio causis eisdem stantibus 
+            <lb ed="#S"/>igitur sequitur quod ex conditione specifica non convenit eis 
+            <lb ed="#S"/>repraesentare obiecta sua, quia sic competeret eis 
+            <lb ed="#S"/>idem repraesentare non enim essent alia Responsio nisi diceretur 
+            <cb ed="#S" n="b"/> <!-- 40rb -->
+            <lb ed="#S"/>quod non esset eiusdem speciei licet essent eiusdem perfectionis 
+            <lb ed="#S"/>quia causantur ab obiectis eiusdem perfectionis in eadem 
+            <lb ed="#S"/>potentia omnino et cetera sunt paria quia excludo omnem 
+            <lb ed="#S"/>aliam diversitatem ideo forte <choice><orig>scaret</orig><reg>staret</reg></choice> alia via quod 
+            <lb ed="#S"/>huiusmodi conceptus licet sint eiusdem perfectionis sunt 
+            <lb ed="#S"/>tamen diversarum specierum et quod ex natura specifica 
+            <lb ed="#S"/>convenit uni repraesentare <name ref="#Sortes">sortem</name> alteri <name ref="#Plato">platonem</name> 
+            <lb ed="#S"/>et ideo consequenter oporteret dicere quod essent duae species 
+            <lb ed="#S"/>diversae eiusdem perfectionis adaequatae et tunc 
+            <lb ed="#S"/>cuilibet conveniret ex sua natura specifica repraesentare 
+            <lb ed="#S"/>suum obiectum sed non potest stare quia species habent 
+            <lb ed="#S"/>ordinem inter se igitur semper oportet quod una sit per<lb ed="#S" break="no"/>fectior 
+            alia quia si essent sic collaterales 
+            <lb ed="#S"/>quod essent duae aeque perfectae tunc inter species 
+            <lb ed="#S"/>esset confusio et non debitus ordo quod non 
+            <lb ed="#S"/>est dicendum.
+          </p>
+          <p xml:id="l22-ivqhdq">
+            <g ref="#pilcrow"/>Item videtur quod species se habeant 
+            <lb ed="#S"/>sicut numeri et istud videtur esse <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> philosophi 
+            <lb ed="#S"/>ergo <choice><orig>eciam</orig><reg>etiam</reg></choice> sicut numeri sunt inter se ordinati sic 
+            <lb ed="#S"/>quod non stat quod sint duo numeri omnino aequales 
+            <lb ed="#S"/>sic ergo non stat quod sint duae species aequae 
+            <lb ed="#S"/>perfecte omnino <g ref="#pilcrow"/>Item ordo ponitur in praedicatis 
+            <lb ed="#S"/>essentialibus <g ref="#dbslash"/>qui tamen tolleretur si ponerentur 
+            <lb ed="#S"/>duae species aequae perfecte et istud ponitur 
+            <lb ed="#S"/>a <name ref="#Aristotle">philosopho</name> <num>2o</num> <title ref="#PosteriorAnalytics">posteriorum</title> et in aliis locis 
+            <lb ed="#S"/>ubicumque agit de processu demonstrativo <g ref="#dbslash"/>nam 
+            <lb ed="#S"/>in processu demonstrativo oportet accipere praedicata secundum 
+            <lb ed="#S"/>sub et supra descendendo usque ad species 
+            <lb ed="#S"/>specialissimas <g ref="#pilcrow"/>ad habendum diffinitiones quidditativas
+          </p>
+          <p xml:id="l22-iaerie">
+            <lb ed="#S"/>Item arguitur et <choice><orig>forcius</orig><reg>fortius</reg></choice> ex quid nominis denominationis 
+            <lb ed="#S"/>perfectae simpliciter communiter dato supponitur enim de 
+            <lb ed="#S"/>denominationibus mere essentialibus quod denominatio per<lb ed="#S" break="no"/>fectionis 
+            simpliciter mere absoluta <g ref="#dbslash"/>est medium suffi<lb ed="#S" break="no"/>ciens 
+            arguendi quod illud cui competit est perfectius 
+            <lb ed="#S"/>quolibet alio cui non competit et non curo hic 
+            <lb ed="#S"/>de logica quia ibi ponitur quam et aliud <g ref="#slash"/>ideo si velitis 
+            <lb ed="#S"/>dicatur propter logicam illud est melius cui competit 
+            <lb ed="#S"/>quam aliud cui non competit <g ref="#pilcrow"/>Istud patet ex de<lb ed="#S" break="no"/>scriptione 
+            <name ref="#Anselm">anselmi</name> <g ref="#dbslash"/>unde in <title ref="#Monologion">monologio</title> capitulo 
+            <lb ed="#S"/>5o describens <mentioned>perfectum simpliciter</mentioned> dicit quod <quote xml:id="l22-QSpseqni" type="Scholastic">per<lb ed="#S" break="no"/>fectum 
+            simpliciter est quod semper est melius ipsum 
+            <lb ed="#S"/>quam non ipsum</quote> <g ref="#pilcrow"/>ex ista suppositione probo evidenter 
+            <lb ed="#S"/>propositum <g ref="#pilcrow"/>supposito uno modo scilicet quod ab omni <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> 
+            <lb ed="#S"/>speciei essentialis cum omnibus superioribus speciebus 
+            <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> deo incluso <g ref="#slash"/>et non curo hic 
+            <lb ed="#S"/>utrum univoce aliqua denominatio conveniat deo 
+            <lb ed="#S"/>et creaturis potest sumi conceptus mere absolutus ita 
+            <pb ed="#S" n="40-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>quod gratia exempli capiamus hominem <g ref="#dbslash"/>ex convenientia enim 
+            <lb ed="#S"/>hominis cum tota latitudine intelligentiarum naturalium 
+            <lb ed="#S"/>et deo potest sumi unus conceptus qui solum conveniat 
+            <lb ed="#S"/>speciei <sic>humone</sic> et a speciebus aliarum intelligentiarum 
+            <lb ed="#S"/>transcendens perfectionem omnium specierum in<lb ed="#S" break="no"/>feriorum 
+            et ita supra totam speciem non vi<lb ed="#S" break="no"/>ventium 
+            potest sumi conceptus solummodo competens vi<lb ed="#S" break="no"/>ventibus 
+            <g ref="#pilcrow"/>verum quod grammatici forte non 
+            <lb ed="#S"/>fuerunt ita instructi in methaphysicalibus quod 
+            <lb ed="#S"/>posuerunt vocabula propria correspondentia cuilibet speciei 
+            <lb ed="#S"/>tamen realiter ita est
+          </p>
+          <p xml:id="l22-episor">
+            <g ref="#dbslash"/>ex istis infertur 
+            <lb ed="#S"/>quod dicta positio implicat realiter contradictionem 
+            <lb ed="#S"/>nam ex <choice><orig>ypostasi</orig><reg>hypostasi</reg></choice> <c>a</c> conceptus <name ref="#Sortes">sortis</name> habet aliquam <choice><orig>de<lb ed="#S" break="no"/>nominacionem</orig><reg>de<lb ed="#S" break="no"/>nominationem</reg></choice> 
+            perfectionis simpliciter communem sibi et 
+            <lb ed="#S"/>aliis speciebus superioribus excludentem omnes 
+            <lb ed="#S"/>inferiores <g ref="#slash"/>sit igitur illa denominatio <c>b</c><g ref="#dot"/> tunc <c>b</c><g ref="#dot"/> 
+            <lb ed="#S"/>convenit sibi et non alteri igitur iste conceptus est per<lb ed="#S" break="no"/>fectior 
+            altero patet per primam suppositionem quia quandocumque 
+            <lb ed="#S"/>aliqua denominatio perfectionis simpliciter competit 
+            <lb ed="#S"/>alicui et non alteri illud cui competit est 
+            <lb ed="#S"/>perfectius quam illud cui non competit <g ref="#slash"/>et per idem 
+            <lb ed="#S"/>probatur econverso quod conceptus <name ref="#Plato">platonis</name> est perfectior conceptu 
+            <lb ed="#S"/><name ref="#Sortes">sortis</name> nam sicut a convenientia essentiali inter conceptum 
+            <lb ed="#S"/><name ref="#Sortes">sortis</name> et omnes superiores sumitur una denominatio 
+            <lb ed="#S"/>perfectionis simpliciter <g ref="#dot"/><c>c</c><g ref="#dot"/> et tunc <c>c</c><g ref="#dot"/> competit conceptui 
+            <lb ed="#S"/><name ref="#Plato">platonis</name> et non <name ref="#Sortes">Sortis</name> ergo conceptus <name ref="#Plato">platonis</name> per<lb ed="#S" break="no"/>fectior 
+            est conceptu <name ref="#Sortes">sortis</name> ex quid nominis denominationis 
+            <lb ed="#S"/>perfectionis simpliciter et tamen per praecedens argumentum 
+            <lb ed="#S"/>conceptus <name ref="#Sortes">sortis</name> est perfectior conceptu <name ref="#Plato">platonis</name> ergo 
+            <lb ed="#S"/>est perfectior et minus perfectus quod 
+            <lb ed="#S"/>implicat contradictionem et sic implicat contradictionem 
+            <lb ed="#S"/>esse duas species diversas eiusdem perfectio<lb ed="#S" break="no"/>nis 
+            omnino etc <g ref="#slash"/>et licet huiusmodi denominationibus 
+            <lb ed="#S"/>non sint nomina imposita tamen faciliter 
+            <lb ed="#S"/>possunt fabricari ab intellectu quia semper inter 
+            <lb ed="#S"/>quamcumque speciem et omnes superiores reperitur 
+            <lb ed="#S"/>convenientia essentialis sufficiens ad causandum etc et sic 
+            <lb ed="#S"/>patet quod non ex conditione specifica potest salvari 
+            <lb ed="#S"/>quod notitia sit sui obiecti repraesentativa.
+          </p>
+        </div>
+        <div>
+          <head xml:id="l22-Hpscpsc">[Probatur secunda conclusio]</head>
+          <p xml:id="l22-dpsemp">
+            <g ref="#pilcrow"/>deinde 
+            <lb ed="#S"/>probatur 2a conclusio negativa scilicet quod non convenit conceptui re<lb ed="#S" break="no"/>praesentare 
+            suum obiectum ex convenientia essentiali 
+            <lb ed="#S"/>sui ad obiectum suum quia tunc homo magis 
+            <lb ed="#S"/>repraesentaret asinum quam qualitas illa quae 
+            <lb ed="#S"/>est notitia sive conceptus asini quia maior convenientia 
+            <lb ed="#S"/>essentialis reperitur inter hominem et asinum 
+            <lb ed="#S"/>quam inter asinum et illam notitiam cum notitia illa 
+            <cb ed="#S" n="b"/><!-- 40vb -->
+            <lb ed="#S"/>sit quoddam accidens <g ref="#slash"/>ista conclusio est clara 
+            <lb ed="#S"/>ideo nolo plus insistere probando eam
+          </p>
+        </div>
+        <div>
+          <head xml:id="l22-Hppcppc">[Probatur prima conclusio]</head>
+          <p xml:id="l22-dppemi">
+            <g ref="#slash"/>deinde 
+            <lb ed="#S"/>probatur prima conclusio negativa scilicet quod conceptus non sit sui obiecti 
+            <lb ed="#S"/>repraesentativus ratione similitudinis et ista conclusio est difficilior 
+            <lb ed="#S"/>ad probandum quam <choice><orig>2a</orig><reg>secunda</reg></choice> quia multi tenent oppositum <g ref="#dbslash"/>probatur 
+            igitur conclusio quia si sic tunc conceptus lapidis esset formalis 
+            <lb ed="#S"/>similitudo lapidis sicut impressio facta a sigillo 
+            <lb ed="#S"/>et per consequens in isto conceptu oporteret esse distinctionem li<lb ed="#S" break="no"/>neationem 
+            secundum quod est a parte obiecti quia alias non 
+            <lb ed="#S"/>bene salvaretur similitudo inter conceptum et obiectum nisi 
+            <lb ed="#S"/>proportionalis lineatio reperiretur in conceptu sicut in obiecto 
+            <lb ed="#S"/>adextra <g ref="#slash"/>confirmatur quia conceptus rei extensae non posset 
+            <lb ed="#S"/>haberi nisi ille conceptus haberet aliquid proportionale extensioni 
+            <lb ed="#S"/>obiecti ut scilicet pars parti corresponderet sed hoc est 
+            <lb ed="#S"/>falsum quia conceptus est mere indivisibilis
+          </p>
+          <p xml:id="l22-iqssii">
+            <g ref="#pilcrow"/>Item sic <choice><orig>eciam</orig><reg>etiam</reg></choice> 
+            <lb ed="#S"/>conceptus esset sicut <choice><orig>ymago</orig><reg>imago</reg></choice> rei et cum <choice><orig>ymago</orig><reg>imago</reg></choice> non 
+            <lb ed="#S"/>repraesentat rem nisi cognoscatur prius <g ref="#dbslash"/>sequitur 
+            <lb ed="#S"/>quod res non posset cognosci sine conceptu sui conceptus 
+            <lb ed="#S"/>et iterum illa cognitio esset <choice><orig>ymago</orig><reg>imago</reg></choice> conceptus et sic 
+            <lb ed="#S"/>iterum non posset cognosci conceptus nisi haberetur cognitio 
+            <lb ed="#S"/>notitiae conceptus et sic in infinitum
+          </p>
+        </div>
+        <div>
+          <head xml:id="l22-Hcorria">[Corollaria]</head>
+          <p xml:id="l22-eiaqin">
+            <g ref="#pilcrow"/>Ex istis antequam 
+            <lb ed="#S"/>veniam ad principalem materiae difficultatem scilicet ad probationem 
+            <lb ed="#S"/><choice><orig>4ae</orig><reg>quartae</reg></choice> conclusionis infero aliqua corollaria <g ref="#slash"/>ubi advertendum quod 
+            <lb ed="#S"/>in opposito huius conclusionis primae fundat <name ref="#Ripa">magister Iohannes de Rippa</name> aliquas conclusiones affirmativas 
+            <lb ed="#S"/>contra quas infero negativas
+          </p>
+          <p xml:id="l22-pcnoan">
+            <g ref="#pilcrow"/>primum corollarium non 
+            <lb ed="#S"/>quaelibet entitas immaterialis potest esse respectu divinae 
+            <lb ed="#S"/>essentiae species intelligibilis <g ref="#slash"/>ipse enim <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
+            <lb ed="#S"/>quod quaelibet res indivisibilis sive immaterialis realiter 
+            <lb ed="#S"/>est <choice><orig>ymago</orig><reg>imago</reg></choice> trinitatis divinae <g ref="#pilcrow"/>ideo realiter est eius 
+            <lb ed="#S"/>species intelligibilis sed sicut tetigi non ex similitudine 
+            <lb ed="#S"/>consurgit quod notitia sit repraesentativa sui obiecti quia 
+            <lb ed="#S"/>anima intellectiva est realiter similitudo trinitatis et tamen 
+            <lb ed="#S"/>non est eius species intelligibilis sed solum obiective 
+            <lb ed="#S"/>repraesentat divinam essentiam et trinitatem et sic patet 
+            <lb ed="#S"/>quod prima sua conclusio fundatur in falso scilicet in similitudine 
+            <lb ed="#S"/>obiecti ad notitiam.
+          </p>
+          <p xml:id="l22-scnenf">
+            <g ref="#pilcrow"/><choice><orig>2m</orig><reg>secundum</reg></choice> corollarium non quaelibet enti<lb ed="#S" break="no"/>tas 
+            immaterialis creata potest esse respectu dei notitia in<lb ed="#S" break="no"/>tuitiva 
+            quia nedum ponit quod quaelibet entitas 
+            <lb ed="#S"/>immaterialis creata sit respectu dei species intelligibilis 
+            <lb ed="#S"/>sed <choice><orig>eciam</orig><reg>etiam</reg></choice> notitia et non solum notitia sed <choice><orig>eciam</orig><reg>etiam</reg></choice> notitia 
+            <lb ed="#S"/>intuitiva patet quia anima intellectiva est similitudo trinitatis 
+            <lb ed="#S"/>et tamen non est notitia ipsius intuitiva <g ref="#pilcrow"/>Item 
+            <lb ed="#S"/>non concedimus quod aliquis angelus sit per 
+            <lb ed="#S"/>essentiam suam notitia intuitiva dei <choice><orig>ymo</orig><reg>immo</reg></choice> dubium 
+            <lb ed="#S"/>est inter doctores utrum sit species intelligibilis 
+            <lb ed="#S"/>trinitatis <g ref="#pilcrow"/>Item ex isto videretur sequi quod dae<lb ed="#S" break="no"/>mones 
+            essent notitia intuitiva dei ex quo 
+            <pb ed="#S" n="41-r"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>istud pervenit ratione similitudinis quia daemones 
+            <lb ed="#S"/>sunt realiter similitudo trinitatis quia ista similitudo non 
+            <lb ed="#S"/>est aliquod accidens <choice><orig>ymo</orig><reg>immo</reg></choice> est met essentia licet enim 
+            <lb ed="#S"/>quaelibet res sit ipsius dei obiective repraesentativa 
+            <lb ed="#S"/>non tamen formaliter <g ref="#pilcrow"/>Unde ipse <name ref="#Ripa">magister de Rip<lb ed="#S" break="no"/>pa</name> 
+            tenet quod quaelibet res sive materialis sive im<lb ed="#S" break="no"/>materialis 
+            est dei notitia quantum est de se ita 
+            <lb ed="#S"/>quod si posset animae uniri esset formaliter sibi notitia 
+            <lb ed="#S"/>intuitiva ipsius dei. <g ref="#pilcrow"/>Ego enim medio 
+            <lb ed="#S"/>secum concedo enim quod quaelibet res mundi 
+            <lb ed="#S"/>sive materialis sive immaterialis est ipsius dei et <choice><orig>tocius</orig><reg>totius</reg></choice> 
+            <lb ed="#S"/>trinitatis repraesentativa non tamen formaliter in se sed 
+            <lb ed="#S"/>solum obiective et forte circa hoc dicetur 
+            <lb ed="#S"/>quod quaelibet res dupliciter repraesentaret trinitatem 
+            <lb ed="#S"/><g ref="#pilcrow"/>trinitas autem habet duos modos in se secundum quos 
+            <lb ed="#S"/>repraesentatur a qualibet creatura nam trinitas tibi 
+            <lb ed="#S"/>adextra activa in esse causae efficientis praeter efficere 
+            <lb ed="#S"/>obiective ita <choice><orig>eciam</orig><reg>etiam</reg></choice> res sunt effectus adextra 
+            <lb ed="#S"/>praeter efficere obiective <g ref="#dbslash"/>sicut ignis generat 
+            <lb ed="#S"/>ignem etc sed praeter hoc in divina essentia est 
+            <lb ed="#S"/>quaedam efficientia per modum intentionis quae magis 
+            <lb ed="#S"/>reducitur ad concursum obiectalem quam ad aliud et 
+            <lb ed="#S"/>ibidem est res fecunda in se sicut pater 
+            <lb ed="#S"/>et se habet per modum obiecti communicando se producendo 
+            <lb ed="#S"/>filium <g ref="#slash"/>et deinde ab utroque producitur spiritus sanctus 
+            <lb ed="#S"/>per modum amoris sicut quaelibet res creata se 
+            <lb ed="#S"/>habet in se <g ref="#pilcrow"/>nam primo ex natura fecunda producit 
+            <lb ed="#S"/>speciem et deinde cognitionem <g ref="#dbslash"/>et deinde ab utroque 
+            <lb ed="#S"/>producitur amor quia quantum est de se quodlibet 
+            <lb ed="#S"/>obiectum est bonum ideo praesentat se ad finis con<lb ed="#S" break="no"/>secutionem 
+            ideo cuilibet rei competit repraesentare 
+            <lb ed="#S"/>trinitatem per modum efficientis obiectivum nam ex pro<lb ed="#S" break="no"/>ductione 
+            speciei in anima ab obiecto consequitur amor 
+            <lb ed="#S"/>quia obiectum quantum est de se debet esse conveniens potentiae 
+            <lb ed="#S"/>et sic consequentur <g ref="#slash"/>et amor et obiectum concurrunt 
+            <lb ed="#S"/>ad complacentiam obiecti cogniti <g ref="#slash"/>ideo trinitas 
+            <lb ed="#S"/>relucet in creaturis obiective et non formaliter.
+          </p>
+          <p xml:id="l22-tcnlbo">
+            <lb ed="#S"/><g ref="#pilcrow"/><choice><orig>3m</orig><reg>tertium</reg></choice> corollarium non quilibet intellectus creatus potest sic 
+            <lb ed="#S"/>in divina natura videre deum seu divinam essentiam 
+            <lb ed="#S"/>se ipso quia licet sit obiective repraesentativus divinae essentiae 
+            <lb ed="#S"/>non tamen formaliter in se quia esse similitudinem quandam 
+            <lb ed="#S"/>in se divinae essentiae non sufficit ad esse forma<lb ed="#S" break="no"/>liter 
+            notitiam intuitivam dei licet bene obiective.
+          </p>
+          <p xml:id="l22-qcnpse">
+            <lb ed="#S"/><choice><orig>4m</orig><reg>quartum</reg></choice> corollarium non oportet quod deus secundum omnem <choice><orig>de<lb ed="#S" break="no"/>nominacionem</orig><reg>de<lb ed="#S" break="no"/>nominationem</reg></choice> 
+            perfectionis essentialis cognoscatur 
+            <lb ed="#S"/>ab aliqua creatura formaliter dicit enim <name ref="#Ripa">de rippa</name> 
+            <lb ed="#S"/>et ista <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> est subtilis licet falsa dicit 
+            <lb ed="#S"/>enim quod quanto aliqua species est perfectior 
+            <cb ed="#S" n="b"/> <!-- 41rb -->
+            <lb ed="#S"/>tanto repraesentat deum secundum plures <choice><orig>denominaciones</orig><reg>denominationes</reg></choice> 
+            <lb ed="#S"/>perfectionis ita quod infima species repraesentat 
+            <lb ed="#S"/>deum intuitive secundum unam denominationem per<lb ed="#S" break="no"/>fectionis 
+            solum et superior species immediate re<lb ed="#S" break="no"/>praesentat 
+            secundum duas et sic consequenter ascendendo secundum perfec<lb ed="#S" break="no"/>tionem 
+            specierum <g ref="#dbslash"/>data ergo suprema intelligentia 
+            <lb ed="#S"/>in qua concurrunt omnes <choice><orig>denominaciones</orig><reg>denominationes</reg></choice> perfectionis 
+            <lb ed="#S"/>simpliciter essentiales quia de nominibus non est curandum 
+            <lb ed="#S"/>sicut sunt omne independens omne increa<lb ed="#S" break="no"/>tum 
+            quia data suprema intelligentia <g ref="#slash"/>ad<lb ed="#S" break="no"/>huc 
+            esset dependens et creata ipsa suprema 
+            <lb ed="#S"/>intelligentia repraesentaret deum secundum omnes <choice><orig>de<lb ed="#S" break="no"/>nominaciones</orig><reg>de<lb ed="#S" break="no"/>nominationes</reg></choice> 
+            perfectionis simpliciter ipsius dei <g ref="#slash"/>et 
+            <lb ed="#S"/>esset notitia intuitiva ipsius dei secundum omnem praedicatum 
+            <lb ed="#S"/>perfectionale simpliciter essentiale.
+          </p>
+          <p xml:id="l22-peofia">
+            <lb ed="#S"/><g ref="#pilcrow"/>pono igitur oppositum quod non oporteret quod repraesentaret formaliter 
+            <lb ed="#S"/>deum licet enim repraesentaret deum obiective non tamen 
+            <lb ed="#S"/>formaliter et sic data suprema intelligentia non esset 
+            <lb ed="#S"/>ipsius dei notitia intuitiva secundum omnem praedicatum per<lb ed="#S" break="no"/>fectionale 
+            <g ref="#dbslash"/>licet esset sibi simillima intelligentia 
+            <lb ed="#S"/>quae posset creari <g ref="#slash"/>nihilominus tamen non haberet nisi 
+            <lb ed="#S"/>obiectaliter et non formaliter repraesentare ipsum deum 
+            <lb ed="#S"/>quia ex similitudine ut dictum est non consurgit 
+            <lb ed="#S"/>ratio formalis repraesentandi <g ref="#dbslash"/>quantum est de materiae principalis 
+            <lb ed="#S"/>prosecutione tractabitur in sequenti lectione <g ref="#slash"/> 
+            <lb ed="#S"/><g ref="#pilcrow"/>et faciam finem huius articuli. <space extent="18andHalfBlankColumns"/>
+          </p>
+          <!-- column and half of repeated stuff follows starting at "non tamen formaliter". This should probably be included in this file. But it's not clear what kind of paragraph arrangement or identification to use, perhaps new xml:id should be created and they should be linked using the 'sameAs' attribute -->
+        </div>
       </div>
     </body>
   </text>
