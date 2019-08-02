@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -16,20 +16,32 @@
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2011-10-01">October 1st, 2011</date>  
+        <date when="2011-10-01">October 1, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="V">Vatican</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-01" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <facsimile>
     <surface n="V47r">
       <graphic url="V47r.jpg"/>
@@ -83,30 +95,36 @@
   </facsimile>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#V" n="47-r"/>
+        <cb ed="#V" n="b"/>
+      </div>
     </front>
     <body>
       
       <div xml:id="lectio24">
         <head>Lectio 24, de Notitia [Vatican Transcription]</head>
-      
         <div>
           <head xml:id="l24-Hiplipl">Recapitulatio</head>
-          <p xml:id="l24-iploua"><g ref="#dbslash"/>In praecedenti lectione dictum 
-            <lb ed="#V"/>fuit unde notitia et praecipue intuitiva habeat quod 
+          <p xml:id="l24-iploua">
+            <g ref="#dbslash"/>In praecedenti lectione dictum 
+            <lb ed="#V" n="71"/>fuit unde notitia et praecipue intuitiva habeat quod 
             <lb ed="#V"/>sit talis vel talis obiecti repraesentativa et consequenter 
             <lb ed="#V"/>dicendum est de notitia beatifica quod ipsa est quodammodo 
             <lb ed="#V"/>ad placitum significativa et ex consequenti pro huiusmodi materiae 
             <lb ed="#V"/>ampliori declaratione dicebatur quod deus concurrit dupliciter 
             <lb ed="#V"/>ad causandum huiusmodi <choice><orig>noticiam</orig><reg>notitiam</reg></choice> beatificam licet utroque modo 
-            <lb ed="#V"/>concurrat immense et omnino uniformiter adaequate</p> 
-      
-          <p xml:id="l24-qedaos"><lb ed="#V"/>quantum est de se uno modo concurrit pure effective 
+            <lb ed="#V"/>concurrat immense et omnino uniformiter adaequate
+          </p>
+          <p xml:id="l24-qedaos">
+            <lb ed="#V"/>quantum est de se uno modo concurrit pure effective 
             <lb ed="#V"/>et secundum hoc datur tali notitiae beatificae speciem 
             <lb ed="#V"/>essentialem <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo concurrit obiective uniformiter tamen 
             <lb ed="#V"/>concurrendo obiective quantum est ex parte sui potest 
             <lb ed="#V"/>dare alium et alium modum repraesentandi tali 
-            <cb ed="#V" n="47va"/><lb ed="#V"/>Notitiae beatificae secundum bene placitum suae liberae volun<lb ed="#V"/>tatis 
+            <pb ed="#V" n="47-v"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>Notitiae beatificae secundum bene placitum suae liberae volun<lb ed="#V" break="no"/>tatis 
             unde cum <choice><orig>ydemptitate</orig><reg>identitate</reg></choice> specifica actuum potest deus 
             <lb ed="#V"/>facere quod unus actus plura repraesentet uni quam alteri 
             <lb ed="#V"/>ideo dicebatur quod diversitas actuum non provenit 
@@ -116,20 +134,21 @@
             <lb ed="#V"/>deus talem actum tantum vel taliter repraesentare 
             <lb ed="#V"/>ideo Radix principalis repraesentationis notitiae beatificae est ex 
             <lb ed="#V"/>divina libertate et ista est natura actuum 
-            <lb ed="#V"/>revelatorum supernaturalium et hoc quodammodo imi<lb ed="#V"/>tando 
+            <lb ed="#V"/>revelatorum supernaturalium et hoc quodammodo imi<lb ed="#V" break="no"/>tando 
             divinam notitiam et de facto ita est 
             <lb ed="#V"/>de assensibus et <choice><orig>noticiis</orig><reg>notitiis</reg></choice> beatorum sicut alias dictum 
             <lb ed="#V"/>est de fide et assensu fidei nam sicut fides est 
             <lb ed="#V"/>assensus respectu alicuius futuri et tamen potest numquam fuisse 
             <lb ed="#V"/>assensus illius ita oportet concedere quod beati habent iudicia 
             <lb ed="#V"/>de aliquo futuro taliter fore et tamen possunt 
-            <lb ed="#V"/>numquam fuisse iudicia de sic fore sine de<lb ed="#V"/>ceptione 
+            <lb ed="#V"/>numquam fuisse iudicia de sic fore sine de<lb ed="#V" break="no"/>ceptione 
             quacumque ideo per hoc habetur quod huiusmodi 
             <lb ed="#V"/>actus supernaturales sunt alterius speciei et alterius 
             <lb ed="#V"/>conditionis quam actus naturaliter in nobis causati ab 
-            <lb ed="#V"/>obiectis sensibilibus</p>  
-     
-          <p xml:id="l24-echirv">Et circa hoc prius notatum fuit 
+            <lb ed="#V"/>obiectis sensibilibus
+          </p>
+          <p xml:id="l24-echirv">
+            Et circa hoc prius notatum fuit 
             <lb ed="#V"/>quod aliquae notitiae dependent a suis obiectis 
             <lb ed="#V"/><choice><orig>ymo</orig><reg>immo</reg></choice> etiam veritates a nobis naturaliter causatae 
             <lb ed="#V"/>et de talibus verificetur illud ab eo quod res 
@@ -139,388 +158,417 @@
             <lb ed="#V"/>fore ad extra Consequenter dicebatur quod staret 
             <lb ed="#V"/>quod est unus actus in specie qui esset in uno 
             <lb ed="#V"/>notitia plurium quam in <choice><orig>2o</orig><reg>secundo</reg></choice> et sic per eundem actum 
-            <lb ed="#V"/>beatificum omnes essent beati <g ref="#dot"/>unde iuxta hoc salva<lb ed="#V"/>retur 
+            <lb ed="#V"/>beatificum omnes essent beati <g ref="#dot"/>unde iuxta hoc salva<lb ed="#V" break="no"/>retur 
             quod latitudo accidentium sive visionum 
             <lb ed="#V"/>beatificarum esset simpliciter finita quantum ad speciem licet 
             <lb ed="#V"/>essent infinitae quantum visiones possibiles 
-            <lb ed="#V"/>quia omnes essent eiusdem speciei ideo non redde<lb ed="#V"/>rent 
+            <lb ed="#V"/>quia omnes essent eiusdem speciei ideo non redde<lb ed="#V" break="no"/>rent 
             latitudinem actu infinitam quo ad speciem 
             <lb ed="#V"/><choice><orig>ymo</orig><reg>immo</reg></choice> <choice><orig>nichil</orig><reg>nihil</reg></choice> adderent per hoc etiam salvaretur 
-            <lb ed="#V"/>de capacitate animae <corr><del rend="strikethrough">quod anima plus posset mere</del></corr> in<lb ed="#V"/>tellectivae 
+            <lb ed="#V"/>de capacitate animae <corr><del rend="strikethrough">quod anima plus posset mere</del></corr> in<lb ed="#V" break="no"/>tellectivae 
             quia communiter consuevit dici in materia ista 
             <lb ed="#V"/>de capacitate animae quod anima plus posset mereri quam 
             <lb ed="#V"/>posset beatificari istud faciliter solveretur ex quo 
             <lb ed="#V"/>eadem est species omnium visionum beatificarum 
-            <cb ed="#V" n="47vb"/><lb ed="#V"/>ideo quaelibet anima beatificata esset per eundem actum specie beati<lb ed="#V"/>fica 
+            <cb ed="#V" n="b"/><!--47vb -->
+            <lb ed="#V"/>ideo quaelibet anima beatificata esset per eundem actum specie beati<lb ed="#V" break="no"/>fica 
             quae non respicit limitationem capacitatis 
-            <lb ed="#V"/>animae ex quo consequenter posset salvari quod fieret diver<lb ed="#V"/>sae 
+            <lb ed="#V"/>animae ex quo consequenter posset salvari quod fieret diver<lb ed="#V" break="no"/>sae 
             revelationes sive successione vel multiplicatione 
             <lb ed="#V"/>actuum quia idem actus ex divina libertate potest 
-            <lb ed="#V"/>nunc aliquid repraesentare aliter quod ante non repraesen<lb ed="#V"/>tabat 
+            <lb ed="#V"/>nunc aliquid repraesentare aliter quod ante non repraesen<lb ed="#V" break="no"/>tabat 
             et consequenter dicebatur quod staret quod 
             <lb ed="#V"/>idem actus repraesentaret primo verbum deinde creaturam 
             <lb ed="#V"/>et verbum secundum quemcumque numerum sibi placuerit et 
             <lb ed="#V"/>consequenter diceretur quod idem actus posset repraesentare verbum 
-            <lb ed="#V"/>et seipsum et stat quod repraesentaret solum ver<lb ed="#V"/>bum 
+            <lb ed="#V"/>et seipsum et stat quod repraesentaret solum ver<lb ed="#V" break="no"/>bum 
             et sic staret eundem actum esse rectum et 
-            <lb ed="#V"/>reflexum quia esset reflexus inquantum repraesenta<lb ed="#V"/>ret 
-            se et esset rectus inquantum repraesentaret verbum</p>
-      
-          <p xml:id="l24-idqsns"><lb ed="#V"/>Item diceretur quod non est improbabile <unclear>quin</unclear> 
+            <lb ed="#V"/>reflexum quia esset reflexus inquantum repraesenta<lb ed="#V" break="no"/>ret 
+            se et esset rectus inquantum repraesentaret verbum
+          </p>
+          <p xml:id="l24-idqsns">
+            <lb ed="#V"/>Item diceretur quod non est improbabile <unclear>quin</unclear> 
             <lb ed="#V"/>actus posset esse simplex dei <choice><orig>noticia</orig><reg>notitia</reg></choice> apprehensiva 
             <lb ed="#V"/>et <choice><orig>eciam</orig><reg>etiam</reg></choice> complexa non solum affirmativa sed negativa 
-            <lb ed="#V"/>quod etiam eadem notitia esset affirmativa unius et nega<lb ed="#V"/>tiva 
+            <lb ed="#V"/>quod etiam eadem notitia esset affirmativa unius et nega<lb ed="#V" break="no"/>tiva 
             alterius sicut quod eadem <choice><orig>noticia</orig><reg>notitia</reg></choice> esset affirmativa divinae 
             <lb ed="#V"/>perfectionis et negativa imperfectionum vel aliarum 
             <lb ed="#V"/>habitudinum <choice><orig>repugnancium</orig><reg>repugnantium</reg></choice> ipsi deo non esset 
             <lb ed="#V"/>tamen concedendum quod huiusmodi actus posset esse contradictorius 
             <lb ed="#V"/>patet quia si sic tunc certum est quod esset propositio 
-            <lb ed="#V"/><sic>propositio</sic> falsa et impossibilis quia esset copula<lb ed="#V"/>tiva 
+            <lb ed="#V"/><sic>propositio</sic> falsa et impossibilis quia esset copula<lb ed="#V" break="no"/>tiva 
             composita ex contradictoriis vel sibi aequivalentibus 
             <lb ed="#V"/>et sic beatus assentiendo per ipsam <choice><orig>noticiam</orig><reg>notitiam</reg></choice> 
-            <lb ed="#V"/>deciperetur deceptione maxima scilicet assentien<lb ed="#V"/>do 
+            <lb ed="#V"/>deciperetur deceptione maxima scilicet assentien<lb ed="#V" break="no"/>do 
             simul duobus contradictoriis isto tamen non obstante 
             <lb ed="#V"/>potest eadem notitia esse successiva iudicium contradictoriorum 
-            <lb ed="#V"/>sed numquam simul</p>
-      </div>
-      
-      <div>
-        <head xml:id="d3a1l22Hrangcu">Reditio ad notitias abstractivas: duo genera conceptuum universalium</head>
-      
-        <p xml:id="l24-qaagse"><g ref="#dbslash"/>Quantum autem ad <choice><orig>noticias</orig><reg>notitias</reg></choice> ab<lb ed="#V"/>stractivas 
-          circa hoc fuerunt dati modi 
-          <lb ed="#V"/>causandi <choice><orig>noticias</orig><reg>notitias</reg></choice> abstractivas ex notitiis immediate 
-          <lb ed="#V"/>causatis ab obiectis sensibilibus <g ref="#dot"/>unus modus fuit da<lb ed="#V"/>to 
-          uno conceptu singulari cum <unclear>conotatione</unclear> accidentali 
-          <lb ed="#V"/>et <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> accidentalibus vis abstractiva potest 
-          <lb ed="#V"/>immediate conceptum simplice absolutum abstrahere absque 
-          <lb ed="#V"/>concursu aliarum causarum particularium sed de concep<lb ed="#V"/>tibus 
-          particularibus universalibus sive communibus et ordine 
-          <lb ed="#V"/>ipsorum restat aliquid dicendum pro nunc ubi notandum 
-          <lb ed="#V"/>quod huiusmodi conceptus sunt duplices quidam sunt 
-          <lb ed="#V"/>dicentes perfectionem simpliciter sine quacumque limi<lb ed="#V"/>tatione 
-          alii sunt conceptus limitati propter 
-          <cb ed="#V" n="48ra"/><lb ed="#V"/>limitationem cognitionis sive imperfectionem sicut 
-          <lb ed="#V"/>sunt genera subalterna species specialissimae unica for<lb ed="#V"/>te 
-          excepta in genere substantiae</p>
-      </div>
-      
-      <div>
-        <head xml:id="l24-Hpcudps">Primus conceptus universalis: circa conceptus universales dicentes perfectionem simpliciter</head>
-      
-        <p xml:id="l24-cpdpsp"><g ref="#dbslash"/>Circa primum de 
-          <lb ed="#V"/>modo causandi huiusmodi conceptus est advertendum 
-          <lb ed="#V"/>quod conceptus a convenientiis rerum generalibus cau<lb ed="#V"/>santur 
-          unde gratia exempli capiatur infima species quae<lb ed="#V"/>cumque 
-          sit illa et minime participans divinam 
-          <lb ed="#V"/>perfectionem participet solum in esse ita quod habeat solum 
-          <lb ed="#V"/>esse sicut divina essentia habet esse tunc a convenientia 
-          <lb ed="#V"/>generali ipsius tamen deo quia quilibet habet esse potest 
-          <lb ed="#V"/>sumi conceptus universalis dicens perfectionem simpliciter et est 
-          <lb ed="#V"/>iste conceptus ens deinde sit <choice><orig>2a</orig><reg>secunda</reg></choice> species quae<lb ed="#V"/>cumque 
-          sit illa conveniat cum deo in aliqua maiori 
-          <lb ed="#V"/>perfectione quam prima et sic gratia exempli vivere quae a 
-          <lb ed="#V"/>convenientia sumitur id est quae erit communis deo et sibi 
-          <lb ed="#V"/>sumitur unus conceptus dicens perfectionem simpliciter 
-          <lb ed="#V"/>et sic consequenter de <choice><orig>3a</orig><reg>tertia</reg></choice> et <choice><orig>4a</orig><reg>quarta</reg></choice> et sic continue ascendendo 
-          <lb ed="#V"/>secundum perfectionem specierum possibilium</p> 
-      
-        <p xml:id="l24-essvls">et sic sicut est processus 
-          <lb ed="#V"/>in infinitum in huiusmodi speciebus quia quacumque 
-          <lb ed="#V"/>data potest dari perfectior quia quacumque data 
-          <lb ed="#V"/>cum inter illam et deum possunt produci infinitae 
-          <lb ed="#V"/>quarum semper una erit perfectior alia quia potentia 
-          <lb ed="#V"/>infinita numquam adaequat sibi aliquem effectum 
-          <lb ed="#V"/>suum ad extra quia si sic iam esset potentia finita 
-          <lb ed="#V"/>et limitata ad illum effectum ita est processus 
-          <lb ed="#V"/>in infinitum in huiusmodi <choice><orig>noticiis</orig><reg>notitiis</reg></choice> abstractivis a convenientia 
-          <lb ed="#V"/>specierum causabilium cum deo ideo quot tot sunt 
-          <lb ed="#V"/>producibiles species a deo tot sunt conceptus forma<lb ed="#V"/>les 
-          ab intellectu ex <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> specierum cum deo continue 
-          <lb ed="#V"/>perfectiorum et secundum perfectiones specierum competentes 
-          <lb ed="#V"/>deo non particulariter sed universaliter utrum aliqua 
-          <lb ed="#V"/>perfectio univoce competat deo et creaturis de hoc 
-          <lb ed="#V"/>alias videbitur loco suo</p>
-      </div>
-      <div>
-        <head xml:id="l24-Hscucul">Secundus conceptus universalis: circa conceptus universales limitatos</head>
-      
-        <p xml:id="l24-aemeap"><g ref="#dbslash"/>alius est modus 
-          <lb ed="#V"/><corr>abstrahendi<del>is</del></corr> conceptus generum vel specierum 
-          <lb ed="#V"/>subalternarum etc et iste modus satis expli<lb ed="#V"/>catur 
-          in vico straminum secundum subordina<lb ed="#V"/>tionem 
-          terminorum repositorum in praedicamento substantiae et 
-          <lb ed="#V"/>arbore porphyriana</p>
-      </div>
-      <div>
-        <head xml:id="l24-Huecdps">Ulterior explicatio circa conceptus universales dicentes perfectionem simpliciter</head>
-      
-        <p xml:id="l24-cmpicc"><g ref="#dbslash"/>Circa primum est iterum ad<lb ed="#V"/>vertendum 
-          quod a quolibet universali conveniente deo et 
-          <lb ed="#V"/>creaturis dicente perfectionem simpliciter potest abstrahi 
-          <lb ed="#V"/>conceptus eiusdem generis dicens perfectionem 
-          <lb ed="#V"/>immensam cum exclusione omnium imperfectionum 
-          <cb ed="#V" n="48rb"/><lb ed="#V"/>possibilium verbi gratia ab infima specie et eius 
-          <lb ed="#V"/><choice><orig>conveniencia</orig><reg>convenientia</reg></choice> cum deo sumitur iste conceptus 
-          <lb ed="#V"/>ens dicens perfectionem simpliciter <g ref="#slash"/>consequenter 
-          <lb ed="#V"/>iste conceptus ens cum certis <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> 
-          <lb ed="#V"/>et determinationibus sibi additis potest sumi unus 
-          <lb ed="#V"/>conceptus complexus adaequate supponens 
-          <lb ed="#V"/>pro deo ut <mentioned>ens independens</mentioned> <mentioned>ens primum</mentioned> 
-          <lb ed="#V"/>ab isto conceptu complexo abstrahi potest 
-          <lb ed="#V"/>unus conceptus simplex et proprius et absolutus 
-          <lb ed="#V"/>ipsius dei supponens pro omni illo pro quo 
-          <lb ed="#V"/>supponit iste conceptus complexus et ita consequenter 
-          <lb ed="#V"/>a <choice><orig>2a</orig><reg>secunda</reg></choice> specie cum eius <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> essentiali cum 
-          <lb ed="#V"/>deo potest sumi unus conceptus universalis supponens 
-          <lb ed="#V"/>pro deo et creaturis et ille conceptus 
-          <lb ed="#V"/>cum certis <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> et determinationibus sibi additis 
-          <lb ed="#V"/>erit adaequate supponens pro deo et ab 
-          <lb ed="#V"/>illo conceptu tamen poterit abstrahi conceptus 
-          <lb ed="#V"/>simplex proprius et absolutus ipsius dei supponens 
-          <lb ed="#V"/>pro omni illo pro quo supponit ille conceptus 
-          <lb ed="#V"/>complexus</p> 
-      
-        <p xml:id="l24-esedpe">et sic est processus in infinitum 
-          <lb ed="#V"/>in conceptibus communibus deo et creaturis 
-          <lb ed="#V"/>formatis a <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> essentialibus inter deum 
-          <lb ed="#V"/>et creaturam dicentibus perfectionem simpliciter 
-          <lb ed="#V"/>ita est processus in infinitum continue ascen<lb ed="#V"/>dendo 
-          secundum perfectius et perfectius secundum perfectionem 
-          <lb ed="#V"/>specierum et ita etiam in huiusmodi conceptibus 
-          <lb ed="#V"/>propriis ipsi deo abstractis ab huiusmodi conceptibus 
-          <lb ed="#V"/>est processus in infinitum proportionaliter sicut 
-          <lb ed="#V"/>in praecedentibus ita quod sicut in latitudine 
-          <lb ed="#V"/>conceptuum consequenter deo et creaturis contingit 
-          <lb ed="#V"/>procedere in infinitum semper secundum perfectius et 
-          <lb ed="#V"/>perfectius secundum perfectionem specierum ita in latitudine 
-          <lb ed="#V"/>conceptuum propriorum deo formatorum sive abstrac<lb ed="#V"/>torum 
-          ab huiusmodi conceptibus deo et creaturis 
-          <lb ed="#V"/>communibus et tot sunt huiusmodi conceptus deo 
-          <lb ed="#V"/>proprii deo formales ab intellectu quot sunt de<lb ed="#V"/>nominationes 
-          <lb ed="#V"/>perfectionis simpliciter competentes deo 
-          <lb ed="#V"/>et creaturis quia quilibet conceptus sumptus 
-          <lb ed="#V"/>a <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> essentiali conveniente deo et crea<lb ed="#V"/>turis 
-          dicente perfectionem simpliciter quilibet 
-          <cb ed="#V" n="48va"/><lb ed="#V"/>Talis repraesentat deum cum limitatione quadam 
-          <lb ed="#V"/>ut quod Deus est ens quod Deus est vivens et 
-          <lb ed="#V"/>sic de aliis quia non habemus nomina im<lb ed="#V"/>posita 
-          <choice><orig>significancia</orig><reg>significantia</reg></choice> omnes denominationes 
-          <lb ed="#V"/>perfectionis simpliciter competentes deo et creaturis 
-          <lb ed="#V"/>ideo contingit infinitos conceptus formari ab 
-          <lb ed="#V"/>intellectu ab huiusmodi <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> communibus deo et 
-          <lb ed="#V"/>creaturis et consequenter ab illis conceptibus 
-          <lb ed="#V"/>formare conceptus infinitos ipsius dei proprios 
-          <lb ed="#V"/>etc.</p> 
-      
-        <p xml:id="l24-etcpid"><g ref="#dbslash"/>Et tunc consequenter <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod possit eli<lb ed="#V"/>ci 
-          quidam conceptus absolutus et proprius ipsius dei 
-          <lb ed="#V"/>aequivalens omnibus istis conceptibus propriis ipsi 
-          <lb ed="#V"/>deo et esset ens in prima sui significatione 
-          <lb ed="#V"/>competens ipsi deo quia secundum combinationem plu<lb ed="#V"/>rium 
-          conceptuum propriorum ipsi deo possent eli<lb ed="#V"/>ci 
-          conceptus perfectiores et perfectiores <sic>proprii</sic> ipsi deo 
-          <lb ed="#V"/>secundum perfectiorem et perfectiorem combinationem plu<lb ed="#V"/>rium 
-          conceptuum propriorum ipsius dei</p>
-      
-        <p xml:id="l24-eiadec"><g ref="#dbslash"/>Ex istis 
-          <lb ed="#V"/>apparet quod plures possunt haberi conceptus absoluti quorum 
-          <lb ed="#V"/>quilibet supponit pro deo adaequate et singulariter 
-          <lb ed="#V"/>sed iterum per combinationem illorum conceptuum proprio<lb ed="#V"/>rum 
-          ipsius dei absolutorum possunt haberi conceptus 
-          <lb ed="#V"/>proprii dei perfectiores et perfectores secundum pluralitatem 
-          <lb ed="#V"/>combinationum plurium conceptuum propriorum ipsius 
-          <lb ed="#V"/>dei et inter illos esset ordo talis quia 
-          <lb ed="#V"/>quanto causaretur a conceptibus propriis magis 
-          <lb ed="#V"/>magis divinam essentiam <unclear>explicantibus</unclear> tanto esset 
-          <lb ed="#V"/>perfectior et sic esset processus in infinitum 
-          <lb ed="#V"/>in huiusmodi conceptibus secundum perfectionem specierum 
-          <lb ed="#V"/>abstractarum etc. quia licet in homine da<lb ed="#V"/>retur 
-          perfectior quae posset elici ab homine 
-          <lb ed="#V"/>tamen ab angelo posset perfectior elici et sic consequenter 
-          <lb ed="#V"/>ascendendo secundum perfectionem <choice><orig>potenciarum</orig><reg>potentiarum</reg></choice> 
-          <lb ed="#V"/>abstractarum possibilium utrum autem conceptus 
-          <lb ed="#V"/>formatus ab omnibus huiusmodi conceptibus propriis 
-          <lb ed="#V"/>ipsius dei sit possibilis hic in via <g ref="#dbslash"/>Dico 
-          <lb ed="#V"/>quod non Tamen dico quod beati in patria 
-          <lb ed="#V"/>possunt habere huiusmodi <choice><orig>noticiam</orig><reg>notitiam</reg></choice> dei aequivalentem 
-          <lb ed="#V"/>omnibus denominationibus perfectionis simpliciter competentibus 
-          <lb ed="#V"/>deo et creaturis</p> 
-      </div>
-      <div>
-        <head xml:id="l24-Hueccul">Ulterior explicatio circa conceptus universales limitatos</head>
-      
-        <p xml:id="l24-aeipmp">alius est modus 
-          <cb ed="#V" n="48vb"/><lb ed="#V"/>imaginandi abstrahendi <choice><orig>noticiam</orig><reg>notitiam</reg></choice> 
-          <lb ed="#V"/>propriam ipsius dei non secundum processum da<lb ed="#V"/>tum 
-          sed ex conceptibus limitatis creaturarum 
-          <lb ed="#V"/>et est quasi differens specie a primo modo <g ref="#dot"/>unde 
-          <lb ed="#V"/>advertendum est quod quaelibet notitia creaturae est 
-          <lb ed="#V"/>immediate apta nata concurrere ad causandum <choice><orig>no<lb ed="#V"/>ticiam</orig><reg>no<lb ed="#V"/>titiam</reg></choice> 
-          ipsius dei propriam abstractivam <corr><del rend="strikethrough">abstractionem</del><add place="inline">abstractivam</add></corr> 
-          <lb ed="#V"/>nam sicut creaturae habent ordinem ad deum sic 
-          <lb ed="#V"/><choice><orig>eciam</orig><reg>etiam</reg></choice> <choice><orig>noticiae</orig><reg>notitiae</reg></choice> creaturarum ad notitiam ipsius dei 
-          <lb ed="#V"/>ergo sicut creaturae sunt quaedam luminaria deum <choice><orig>repraesen<lb ed="#V"/>tancia</orig><reg>repraesen<lb ed="#V"/>tantia</reg></choice> sic <choice><orig>noticiae</orig><reg>notitiae</reg></choice> creaturarum sunt quasi 
-          <lb ed="#V"/>quaedam luminaria apta nata quantum est de se 
-          <lb ed="#V"/>concurrere ad dei notitiae productionem ita quod ex 
-          <lb ed="#V"/>univoca <choice><orig>noticia</orig><reg>notitia</reg></choice> creaturae possumus elicere 
-          <lb ed="#V"/>notitiam ipsius dei <choice><orig>ymo</orig><reg>immo</reg></choice> ut plurimum <sic>requiritur</sic> 
-          <lb ed="#V"/>requiruntur in nobis plures <choice><orig>noticiae</orig><reg>notitiae</reg></choice> 
-          <lb ed="#V"/>creaturarum et comprehensivae et adhaesivae etc ad 
-          <lb ed="#V"/>formandum <choice><orig>noticiam</orig><reg>notitiam</reg></choice> abstractivam ipsius 
-          <lb ed="#V"/>dei propter <choice><orig>deffectum</orig><reg>defectum</reg></choice> et debilitatem potentiae 
-          <lb ed="#V"/>abstractivae sed quaelibet notitia quantum est de se 
-          <lb ed="#V"/>sufficiat ideo in nobis requiruntur 
-          <lb ed="#V"/>plures notitiae creaturarum nunc simplices nunc 
-          <lb ed="#V"/>cum compositione et divisione vel cum discursu vel cum 
-          <lb ed="#V"/>ratiosignatione vel secundum compositionem huiusmodi no<lb ed="#V"/>titiarum 
-          creaturarum resultant diversi conceptus 
-          <lb ed="#V"/>dei magis vel minus perfecti et ideo inter po<lb ed="#V"/>tentias 
-          animae vis abstractiva est multum 
-          <lb ed="#V"/>nobilis et perfectam multum perficiens</p> 
-      
-        <p xml:id="l24-edhiia">et de 
-          <lb ed="#V"/>huiusmodi cognitione dei sunt multi modi dicendi 
-          <lb ed="#V"/>antiquorum nam recitat <name ref="#Maimonides">raby moises</name> 
-          <lb ed="#V"/>quod fuerunt quidam dicentes quod non fuit 
-          <lb ed="#V"/>nisi unicum nomen dei affirmativum et 
-          <lb ed="#V"/>fuit hoc nomen multum secretum et non 
-          <lb ed="#V"/>fuit revelatum nisi <choice><orig>ydoneis</orig><reg>idoneis</reg></choice> habentibus 
-          <lb ed="#V"/>intellectum sufficienter dispositum ad abstrahendum 
-          <lb ed="#V"/>unde ars abstractiva esset valde nobilis 
-          <lb ed="#V"/>si posset sciri quia per eam possemus 
-          <lb ed="#V"/>acquirere diversas notitias ipsius dei 
-          <lb ed="#V"/>et aliorum quas non habemus unde licet habe<lb ed="#V"/>amus 
-          practicam abstrahendi non tamen habemus 
-          <lb ed="#V"/>artem nec mirum quia illud est valde 
-          <cb ed="#V" n="49ra"/><lb ed="#V"/>difficile propter latentes operationes intellectus unde 
-          <lb ed="#V"/>per viam abstractionis potuerunt <name ref="#Philosophers">philosophi</name> de<lb ed="#V"/>venire 
-          in <choice><orig>noticiam</orig><reg>notitiam</reg></choice> intuitivam ipsius dei et 
-          <lb ed="#V"/>sic vocarem ipsum intellectum adeptum</p>
-      
-        <p xml:id="l24-uchsid"><g ref="#dot"/>unde circa 
-          <lb ed="#V"/>hoc advertendum bene per quid notitia abstractiva est 
-          <lb ed="#V"/>sui obiecti notitia considerandum est quod certa 
-          <lb ed="#V"/>habitudo et combinatio notitiarum nunc complex<lb ed="#V"/>arum 
-          nunc incomplexarum animae ex talibus 
-          <lb ed="#V"/>combinationibus quasi per modum speciei repraesenta<lb ed="#V"/>tis 
-          deus licet nulla pars illius combina<lb ed="#V"/>tionis 
-          vel congeriei <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> <corr><del rend="strikethrough"><unclear>oportet</unclear></del></corr> repraesentet 
-          <lb ed="#V"/>deum tamen tota illa congeries quasi per modum 
-          <lb ed="#V"/>speciei repraesentat deum intellectui et sic intellectus 
-          <lb ed="#V"/>ex illa congerie aptus natus est exire in 
-          <lb ed="#V"/>actum ad causandum <choice><orig>noticiam</orig><reg>notitiam</reg></choice> ipsius dei quasi 
-          <lb ed="#V"/>habens speciem repraesentativam ipsius dei format 
-          <lb ed="#V"/><choice><orig>noticiam</orig><reg>notitiam</reg></choice> ipsius dei et sic patet quod ex 
-          <lb ed="#V"/>illa tota congerie <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creaturarum resul<lb ed="#V"/>tat 
-          quasi species repraesentativa ipsius dei 
-          <lb ed="#V"/>et tamen nulla illarum <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> est huiusmodi 
-          <lb ed="#V"/>species sive nulli illarum notitiarum convenit illa 
-          <lb ed="#V"/>conditio competens toti congeriei sicut armo<lb ed="#V"/>nia 
-          est combinatio multorum sonorum simul 
-          <lb ed="#V"/>et tamen nec unus nec alter illorum sonorum est 
-          <lb ed="#V"/>armonia et secundum varias combinationes crea<lb ed="#V"/>turarum 
-          eliciuntur variae notitiae dei specificae 
-          <lb ed="#V"/>simile est <choice><orig>sicud</orig><reg>sicut</reg></choice> de eductione formarum substantia<lb ed="#V"/>lium 
-          de materia nam secundum aliam et 
-          <lb ed="#V"/>aliam combinationem qualitatum primarum 
-          <lb ed="#V"/>educitur alia et alia forma de materia etiam 
-          <lb ed="#V"/>secundum hoc quod possunt perfectius et perfectius combinari 
-          <lb ed="#V"/>si perfectiorem et perfectiorem formam edu<lb ed="#V"/>cunt 
-          de potentia materiae Sic <choice><orig>imaginandum</orig><reg>ymaginandum</reg></choice> est 
-          <lb ed="#V"/>de <choice><orig>noticiis</orig><reg>notitiis</reg></choice> tam complexis quam incomplexis 
-          <lb ed="#V"/>creaturarum quod ex alia et alia combinatione ipsarum 
-          <lb ed="#V"/>possunt elici varii conceptus ipsius dei et 
-          <lb ed="#V"/>secundum perfectiorem et perfectiorem combinationem huiusmodi 
-          <lb ed="#V"/><choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> secundum hoc potest haberi conceptus ma<lb ed="#V"/>gis 
-          et magis perfectus ipsius dei et tunc 
-          <lb ed="#V"/><choice><orig>sicud</orig><reg>sicut</reg></choice> esset processus in infinitum in huiusmodi 
-          <lb ed="#V"/>combinationibus sic esset processus in infinitum 
-          <cb ed="#V" n="49rb"/><lb ed="#V"/>In huiusmodi <choice><orig>noticiis</orig><reg>notitiis</reg></choice> abstractivis ipsius dei formatis 
-          <lb ed="#V"/>ab intellectu ex huiusmodi combinationibus <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> 
-          <lb ed="#V"/>creatarum ita quod tot essent conceptus dei forma<lb ed="#V"/>biles 
-          ab intellectu quot essent huiusmodi combina<lb ed="#V"/>tiones 
-          <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creatarum possibiles et posito isto 
-          <lb ed="#V"/>quod huiusmodi <sic>conditio</sic> <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creaturae teneat 
-          <lb ed="#V"/>locum speciei tamen non causat proprie speciem ipsius 
-          <lb ed="#V"/>dei nec est propria species ipsius</p>  
-      </div>
-      <div>
-        <head xml:id="l24-Hohdhdh">Opinio Henrici de Huta</head>
-      
-        <p xml:id="l24-eehfee">et ex hoc patet 
-          <lb ed="#V"/>quod salva reverentia <name ref="#Oyta">magistri henrici de huta</name> ipse 
-          <lb ed="#V"/>non bene videtur dicere quod in potentia sensitiva ex 
-          <lb ed="#V"/>concursu duorum obiectorum causatur species tertii obiecti 
-          <lb ed="#V"/>verbi gratia ex specie lucis cum aliis opacis species 
-          <lb ed="#V"/>albedinis vel rubedinis ut <sic>viredis</sic> in nobis 
-          <lb ed="#V"/>causatur sicut in <choice><orig>yride</orig><reg>iride</reg></choice> ex speciebus lucis et 
-          <lb ed="#V"/>aliorum opacorum causatur in nobis species ru<lb ed="#V"/>bedinis 
-          et tamen non est ibi rubedo sed 
-          <lb ed="#V"/>in hoc potest sensus bene decipi <g ref="#dot"/> exemplum est cla<lb ed="#V"/>re 
-          de calce nam si calx praesentaretur alicui 
-          <lb ed="#V"/>in vase in quo consuevit poni farina 
-          <lb ed="#V"/>intellectus vel sensus non exibit in actum 
-          <lb ed="#V"/>nisi iudicando de calce sed ibidem decipietur 
-          <lb ed="#V"/>ex parte reflexionis quia intellectus iudicabit 
-          <lb ed="#V"/>se videre farinam et si dicatur talis iudi<lb ed="#V"/>cabit 
-          in illo videre farina ergo</p> 
-      </div>
-      <div>
-        <head xml:id="l24-Hrahhdh">Responsio ad Henricum de Huta</head>
-      
-        <p xml:id="l24-rduecc">Respondetur 
-          <lb ed="#V"/>dupliciter <g ref="#dot"/> uno modo negando quod causabit actum 
-          <lb ed="#V"/>farinae sed correspondenter ad propriam speciem cal<lb ed="#V"/>cis 
-          naturaliter agentis causabit notitiam 
-          <lb ed="#V"/>calcis sed intellectus reflectendo supra su<lb ed="#V"/>um 
-          actum decipietur Iudicando quod ibi 
-          <lb ed="#V"/>sit farina quia proprietates accidentium albedinis 
-          <lb ed="#V"/>et calcis possibile est quod intellectus exeat in 
-          <lb ed="#V"/>actum calcis mediante eius propria specie et tamen 
-          <lb ed="#V"/>iudicabit se non habere actum calcis sed 
-          <lb ed="#V"/>albedinis et sic si intellectus velit habere notitiam 
-          <lb ed="#V"/>reflexam supra suum actum decipietur iudicando 
-          <lb ed="#V"/>se cognoscere calcem notitia reflexa ergo cognoscit 
-          <lb ed="#V"/>calcem.</p>
-      
-        <p xml:id="l24-sdqcre"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod ex propria specie cal<lb ed="#V"/>cis 
-          cum habituali <choice><orig>noticia</orig><reg>notitia</reg></choice> cum qua<lb ed="#V"/>dam 
-          habituali recordatione sive cognitione fa<lb ed="#V"/>rinae 
-          ideo aliter diceretur quod in <choice><orig>yride</orig><reg>iride</reg></choice> intellectus 
-          <lb ed="#V"/>vel ex habituali <choice><orig>noticia</orig><reg>notitia</reg></choice> quam habet de rubedine 
-          <cb ed="#V" n="49va"/><lb ed="#V"/>cum speciebus lucis et aliorum opacorum iu<lb ed="#V"/>dicat 
-          tamen se cognoscere rubedinem etc.</p> 
-      </div>
-      <div>
-        <head xml:id="l24-Hrpnncd">[Resolutio: possibilitas notitiae circa Deum]</head>
-      
-        <p xml:id="l24-eissde"><lb ed="#V"/>ex istis satis apparet quod multipliciter de deo possumus 
-          <lb ed="#V"/>habere <choice><orig>noticiam</orig><reg>notitiam</reg></choice> simplicem et absolutam propriam 
-          <lb ed="#V"/>uno modo ex conceptibus propriis creaturarum pos<lb ed="#V"/>sumus 
-          elicere conceptus proprios ipsius dei 
-          <lb ed="#V"/><choice><orig>sicud</orig><reg>sicut</reg></choice> dictum est <choice><orig>2o</orig><reg>secundo</reg></choice> modo ex proprietatibus communibus 
-          <lb ed="#V"/>deo et creaturis possunt elici conceptus proprii 
-          <lb ed="#V"/>ipsius et in talibus est processus in infinitum 
-          <lb ed="#V"/>secundum perfectionem specierum <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> modo combinatione propriorum 
-          <lb ed="#V"/>conceptuum dei abstractorum a <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> 
-          <lb ed="#V"/>simul competentibus deo et creaturis et secundum 
-          <lb ed="#V"/>hoc quod a pluribus conceptibus elicitur proprius 
-          <lb ed="#V"/>ipsius dei secundum hoc est perfectior et in ta<lb ed="#V"/>libus 
-          est processus in infinitum sicut dictum 
-          <lb ed="#V"/>est.</p>
-      
-        <p xml:id="l24-eippne"><g ref="#dot"/>Ex istis possunt inferri plura 
-          <lb ed="#V"/>corollaria contra oppositum <choice><orig>oppinantes</orig><reg>opinantes</reg></choice> <name ref="#Ockham">okam</name> <name ref="#Rimini">gregorius</name> et 
-          <lb ed="#V"/><name ref="#Aquinas">sanctus thomas</name> qui ponit quod magis via re<lb ed="#V"/>motionis 
-          quam affirmationis potest haberi conceptus dei 
-          <lb ed="#V"/>proprius scilicet removendo imperfectiones creaturarum 
-          <lb ed="#V"/>et quod deus est ens independens incorruptibile 
-          <lb ed="#V"/>etc. et quanto plures imperfectiones removen<lb ed="#V"/>tur 
-          tanto conceptus erat perfectior etc. <del rend="strikethrough">et 
-          <lb ed="#V"/>quanto plures imperfectiones</del></p>  
-      </div>
+            <lb ed="#V"/>sed numquam simul
+          </p>
         </div>
-            </body>
+        <div>
+          <head xml:id="d3a1l22Hrangcu">Reditio ad notitias abstractivas: duo genera conceptuum universalium</head>
+          <p xml:id="l24-qaagse">
+            <g ref="#dbslash"/>Quantum autem ad <choice><orig>noticias</orig><reg>notitias</reg></choice> ab<lb ed="#V" break="no"/>stractivas 
+            circa hoc fuerunt dati modi 
+            <lb ed="#V"/>causandi <choice><orig>noticias</orig><reg>notitias</reg></choice> abstractivas ex notitiis immediate 
+            <lb ed="#V"/>causatis ab obiectis sensibilibus <g ref="#dot"/>unus modus fuit da<lb ed="#V" break="no"/>to 
+            uno conceptu singulari cum <unclear>conotatione</unclear> accidentali 
+            <lb ed="#V"/>et <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> accidentalibus vis abstractiva potest 
+            <lb ed="#V"/>immediate conceptum simplice absolutum abstrahere absque 
+            <lb ed="#V"/>concursu aliarum causarum particularium sed de concep<lb ed="#V" break="no"/>tibus 
+            particularibus universalibus sive communibus et ordine 
+            <lb ed="#V"/>ipsorum restat aliquid dicendum pro nunc ubi notandum 
+            <lb ed="#V"/>quod huiusmodi conceptus sunt duplices quidam sunt 
+            <lb ed="#V"/>dicentes perfectionem simpliciter sine quacumque limi<lb ed="#V" break="no"/>tatione 
+            alii sunt conceptus limitati propter 
+            <pb ed="#V" n="48-r"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>limitationem cognitionis sive imperfectionem sicut 
+            <lb ed="#V"/>sunt genera subalterna species specialissimae unica for<lb ed="#V" break="no"/>te 
+            excepta in genere substantiae
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hpcudps">Primus conceptus universalis: circa conceptus universales dicentes perfectionem simpliciter</head>
+          <p xml:id="l24-cpdpsp">
+            <g ref="#dbslash"/>Circa primum de 
+            <lb ed="#V"/>modo causandi huiusmodi conceptus est advertendum 
+            <lb ed="#V"/>quod conceptus a convenientiis rerum generalibus cau<lb ed="#V" break="no"/>santur 
+            unde gratia exempli capiatur infima species quae<lb ed="#V" break="no"/>cumque 
+            sit illa et minime participans divinam 
+            <lb ed="#V"/>perfectionem participet solum in esse ita quod habeat solum 
+            <lb ed="#V"/>esse sicut divina essentia habet esse tunc a convenientia 
+            <lb ed="#V"/>generali ipsius tamen deo quia quilibet habet esse potest 
+            <lb ed="#V"/>sumi conceptus universalis dicens perfectionem simpliciter et est 
+            <lb ed="#V"/>iste conceptus ens deinde sit <choice><orig>2a</orig><reg>secunda</reg></choice> species quae<lb ed="#V" break="no"/>cumque 
+            sit illa conveniat cum deo in aliqua maiori 
+            <lb ed="#V"/>perfectione quam prima et sic gratia exempli vivere quae a 
+            <lb ed="#V"/>convenientia sumitur id est quae erit communis deo et sibi 
+            <lb ed="#V"/>sumitur unus conceptus dicens perfectionem simpliciter 
+            <lb ed="#V"/>et sic consequenter de <choice><orig>3a</orig><reg>tertia</reg></choice> et <choice><orig>4a</orig><reg>quarta</reg></choice> et sic continue ascendendo 
+            <lb ed="#V"/>secundum perfectionem specierum possibilium
+          </p>
+          <p xml:id="l24-essvls">
+            et sic sicut est processus 
+            <lb ed="#V"/>in infinitum in huiusmodi speciebus quia quacumque 
+            <lb ed="#V"/>data potest dari perfectior quia quacumque data 
+            <lb ed="#V"/>cum inter illam et deum possunt produci infinitae 
+            <lb ed="#V"/>quarum semper una erit perfectior alia quia potentia 
+            <lb ed="#V"/>infinita numquam adaequat sibi aliquem effectum 
+            <lb ed="#V"/>suum ad extra quia si sic iam esset potentia finita 
+            <lb ed="#V"/>et limitata ad illum effectum ita est processus 
+            <lb ed="#V"/>in infinitum in huiusmodi <choice><orig>noticiis</orig><reg>notitiis</reg></choice> abstractivis a convenientia 
+            <lb ed="#V"/>specierum causabilium cum deo ideo quot tot sunt 
+            <lb ed="#V"/>producibiles species a deo tot sunt conceptus forma<lb ed="#V" break="no"/>les 
+            ab intellectu ex <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> specierum cum deo continue 
+            <lb ed="#V"/>perfectiorum et secundum perfectiones specierum competentes 
+            <lb ed="#V"/>deo non particulariter sed universaliter utrum aliqua 
+            <lb ed="#V"/>perfectio univoce competat deo et creaturis de hoc 
+            <lb ed="#V"/>alias videbitur loco suo
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hscucul">Secundus conceptus universalis: circa conceptus universales limitatos</head>
+          <p xml:id="l24-aemeap">
+            <g ref="#dbslash"/>alius est modus 
+            <lb ed="#V"/><corr>abstrahendi<del>is</del></corr> conceptus generum vel specierum 
+            <lb ed="#V"/>subalternarum etc et iste modus satis expli<lb ed="#V" break="no"/>catur 
+            in vico straminum secundum subordina<lb ed="#V" break="no"/>tionem 
+            terminorum repositorum in praedicamento substantiae et 
+            <lb ed="#V"/>arbore porphyriana
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Huecdps">Ulterior explicatio circa conceptus universales dicentes perfectionem simpliciter</head>
+          <p xml:id="l24-cmpicc">
+            <g ref="#dbslash"/>Circa primum est iterum ad<lb ed="#V" break="no"/>vertendum 
+            quod a quolibet universali conveniente deo et 
+            <lb ed="#V"/>creaturis dicente perfectionem simpliciter potest abstrahi 
+            <lb ed="#V"/>conceptus eiusdem generis dicens perfectionem 
+            <lb ed="#V"/>immensam cum exclusione omnium imperfectionum 
+            <cb ed="#V" n="b"/><!--48rb -->
+            <lb ed="#V"/>possibilium verbi gratia ab infima specie et eius 
+            <lb ed="#V"/><choice><orig>conveniencia</orig><reg>convenientia</reg></choice> cum deo sumitur iste conceptus 
+            <lb ed="#V"/>ens dicens perfectionem simpliciter <g ref="#slash"/>consequenter 
+            <lb ed="#V"/>iste conceptus ens cum certis <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> 
+            <lb ed="#V"/>et determinationibus sibi additis potest sumi unus 
+            <lb ed="#V"/>conceptus complexus adaequate supponens 
+            <lb ed="#V"/>pro deo ut <mentioned>ens independens</mentioned> <mentioned>ens primum</mentioned> 
+            <lb ed="#V"/>ab isto conceptu complexo abstrahi potest 
+            <lb ed="#V"/>unus conceptus simplex et proprius et absolutus 
+            <lb ed="#V"/>ipsius dei supponens pro omni illo pro quo 
+            <lb ed="#V"/>supponit iste conceptus complexus et ita consequenter 
+            <lb ed="#V"/>a <choice><orig>2a</orig><reg>secunda</reg></choice> specie cum eius <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> essentiali cum 
+            <lb ed="#V"/>deo potest sumi unus conceptus universalis supponens 
+            <lb ed="#V"/>pro deo et creaturis et ille conceptus 
+            <lb ed="#V"/>cum certis <choice><orig>circumstanciis</orig><reg>circumstantiis</reg></choice> et determinationibus sibi additis 
+            <lb ed="#V"/>erit adaequate supponens pro deo et ab 
+            <lb ed="#V"/>illo conceptu tamen poterit abstrahi conceptus 
+            <lb ed="#V"/>simplex proprius et absolutus ipsius dei supponens 
+            <lb ed="#V"/>pro omni illo pro quo supponit ille conceptus 
+            <lb ed="#V"/>complexus
+          </p>
+          <p xml:id="l24-esedpe">
+            et sic est processus in infinitum 
+            <lb ed="#V"/>in conceptibus communibus deo et creaturis 
+            <lb ed="#V"/>formatis a <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> essentialibus inter deum 
+            <lb ed="#V"/>et creaturam dicentibus perfectionem simpliciter 
+            <lb ed="#V"/>ita est processus in infinitum continue ascen<lb ed="#V" break="no"/>dendo 
+            secundum perfectius et perfectius secundum perfectionem 
+            <lb ed="#V"/>specierum et ita etiam in huiusmodi conceptibus 
+            <lb ed="#V"/>propriis ipsi deo abstractis ab huiusmodi conceptibus 
+            <lb ed="#V"/>est processus in infinitum proportionaliter sicut 
+            <lb ed="#V"/>in praecedentibus ita quod sicut in latitudine 
+            <lb ed="#V"/>conceptuum consequenter deo et creaturis contingit 
+            <lb ed="#V"/>procedere in infinitum semper secundum perfectius et 
+            <lb ed="#V"/>perfectius secundum perfectionem specierum ita in latitudine 
+            <lb ed="#V"/>conceptuum propriorum deo formatorum sive abstrac<lb ed="#V" break="no"/>torum 
+            ab huiusmodi conceptibus deo et creaturis 
+            <lb ed="#V"/>communibus et tot sunt huiusmodi conceptus deo 
+            <lb ed="#V"/>proprii deo formales ab intellectu quot sunt de<lb ed="#V" break="no"/>nominationes 
+            <lb ed="#V"/>perfectionis simpliciter competentes deo 
+            <lb ed="#V"/>et creaturis quia quilibet conceptus sumptus 
+            <lb ed="#V"/>a <choice><orig>conveniencia</orig><reg>convenientia</reg></choice> essentiali conveniente deo et crea<lb ed="#V" break="no"/>turis 
+            dicente perfectionem simpliciter quilibet 
+            <pb ed="#V" n="48-v"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>Talis repraesentat deum cum limitatione quadam 
+            <lb ed="#V"/>ut quod Deus est ens quod Deus est vivens et 
+            <lb ed="#V"/>sic de aliis quia non habemus nomina im<lb ed="#V" break="no"/>posita 
+            <choice><orig>significancia</orig><reg>significantia</reg></choice> omnes denominationes 
+            <lb ed="#V"/>perfectionis simpliciter competentes deo et creaturis 
+            <lb ed="#V"/>ideo contingit infinitos conceptus formari ab 
+            <lb ed="#V"/>intellectu ab huiusmodi <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> communibus deo et 
+            <lb ed="#V"/>creaturis et consequenter ab illis conceptibus 
+            <lb ed="#V"/>formare conceptus infinitos ipsius dei proprios 
+            <lb ed="#V"/>etc.
+          </p>
+          <p xml:id="l24-etcpid">
+            <g ref="#dbslash"/>Et tunc consequenter <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod possit eli<lb ed="#V" break="no"/>ci 
+            quidam conceptus absolutus et proprius ipsius dei 
+            <lb ed="#V"/>aequivalens omnibus istis conceptibus propriis ipsi 
+            <lb ed="#V"/>deo et esset ens in prima sui significatione 
+            <lb ed="#V"/>competens ipsi deo quia secundum combinationem plu<lb ed="#V" break="no"/>rium 
+            conceptuum propriorum ipsi deo possent eli<lb ed="#V" break="no"/>ci 
+            conceptus perfectiores et perfectiores <sic>proprii</sic> ipsi deo 
+            <lb ed="#V"/>secundum perfectiorem et perfectiorem combinationem plu<lb ed="#V" break="no"/>rium 
+            conceptuum propriorum ipsius dei
+          </p>
+          <p xml:id="l24-eiadec">
+            <g ref="#dbslash"/>Ex istis 
+            <lb ed="#V"/>apparet quod plures possunt haberi conceptus absoluti quorum 
+            <lb ed="#V"/>quilibet supponit pro deo adaequate et singulariter 
+            <lb ed="#V"/>sed iterum per combinationem illorum conceptuum proprio<lb ed="#V" break="no"/>rum 
+            ipsius dei absolutorum possunt haberi conceptus 
+            <lb ed="#V"/>proprii dei perfectiores et perfectores secundum pluralitatem 
+            <lb ed="#V"/>combinationum plurium conceptuum propriorum ipsius 
+            <lb ed="#V"/>dei et inter illos esset ordo talis quia 
+            <lb ed="#V"/>quanto causaretur a conceptibus propriis magis 
+            <lb ed="#V"/>magis divinam essentiam <unclear>explicantibus</unclear> tanto esset 
+            <lb ed="#V"/>perfectior et sic esset processus in infinitum 
+            <lb ed="#V"/>in huiusmodi conceptibus secundum perfectionem specierum 
+            <lb ed="#V"/>abstractarum etc. quia licet in homine da<lb ed="#V" break="no"/>retur 
+            perfectior quae posset elici ab homine 
+            <lb ed="#V"/>tamen ab angelo posset perfectior elici et sic consequenter 
+            <lb ed="#V"/>ascendendo secundum perfectionem <choice><orig>potenciarum</orig><reg>potentiarum</reg></choice> 
+            <lb ed="#V"/>abstractarum possibilium utrum autem conceptus 
+            <lb ed="#V"/>formatus ab omnibus huiusmodi conceptibus propriis 
+            <lb ed="#V"/>ipsius dei sit possibilis hic in via <g ref="#dbslash"/>Dico 
+            <lb ed="#V"/>quod non Tamen dico quod beati in patria 
+            <lb ed="#V"/>possunt habere huiusmodi <choice><orig>noticiam</orig><reg>notitiam</reg></choice> dei aequivalentem 
+            <lb ed="#V"/>omnibus denominationibus perfectionis simpliciter competentibus 
+            <lb ed="#V"/>deo et creaturis
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hueccul">Ulterior explicatio circa conceptus universales limitatos</head>
+          <p xml:id="l24-aeipmp">
+            alius est modus 
+            <cb ed="#V" n="b"/><!--48vb -->
+            <lb ed="#V"/>imaginandi abstrahendi <choice><orig>noticiam</orig><reg>notitiam</reg></choice> 
+            <lb ed="#V"/>propriam ipsius dei non secundum processum da<lb ed="#V" break="no"/>tum 
+            sed ex conceptibus limitatis creaturarum 
+            <lb ed="#V"/>et est quasi differens specie a primo modo <g ref="#dot"/>unde 
+            <lb ed="#V"/>advertendum est quod quaelibet notitia creaturae est 
+            <lb ed="#V"/>immediate apta nata concurrere ad causandum <choice><orig>no<lb ed="#V" break="no"/>ticiam</orig><reg>no<lb ed="#V" break="no"/>titiam</reg></choice> 
+            ipsius dei propriam abstractivam <corr><del rend="strikethrough">abstractionem</del><add place="inline">abstractivam</add></corr> 
+            <lb ed="#V"/>nam sicut creaturae habent ordinem ad deum sic 
+            <lb ed="#V"/><choice><orig>eciam</orig><reg>etiam</reg></choice> <choice><orig>noticiae</orig><reg>notitiae</reg></choice> creaturarum ad notitiam ipsius dei 
+            <lb ed="#V"/>ergo sicut creaturae sunt quaedam luminaria deum <choice><orig>repraesen<lb ed="#V" break="no"/>tancia</orig><reg>repraesen<lb ed="#V" break="no"/>tantia</reg></choice> 
+            sic <choice><orig>noticiae</orig><reg>notitiae</reg></choice> creaturarum sunt quasi 
+            <lb ed="#V"/>quaedam luminaria apta nata quantum est de se 
+            <lb ed="#V"/>concurrere ad dei notitiae productionem ita quod ex 
+            <lb ed="#V"/>univoca <choice><orig>noticia</orig><reg>notitia</reg></choice> creaturae possumus elicere 
+            <lb ed="#V"/>notitiam ipsius dei <choice><orig>ymo</orig><reg>immo</reg></choice> ut plurimum <sic>requiritur</sic> 
+            <lb ed="#V"/>requiruntur in nobis plures <choice><orig>noticiae</orig><reg>notitiae</reg></choice> 
+            <lb ed="#V"/>creaturarum et comprehensivae et adhaesivae etc ad 
+            <lb ed="#V"/>formandum <choice><orig>noticiam</orig><reg>notitiam</reg></choice> abstractivam ipsius 
+            <lb ed="#V"/>dei propter <choice><orig>deffectum</orig><reg>defectum</reg></choice> et debilitatem potentiae 
+            <lb ed="#V"/>abstractivae sed quaelibet notitia quantum est de se 
+            <lb ed="#V"/>sufficiat ideo in nobis requiruntur 
+            <lb ed="#V"/>plures notitiae creaturarum nunc simplices nunc 
+            <lb ed="#V"/>cum compositione et divisione vel cum discursu vel cum 
+            <lb ed="#V"/>ratiosignatione vel secundum compositionem huiusmodi no<lb ed="#V" break="no"/>titiarum 
+            creaturarum resultant diversi conceptus 
+            <lb ed="#V"/>dei magis vel minus perfecti et ideo inter po<lb ed="#V" break="no"/>tentias 
+            animae vis abstractiva est multum 
+            <lb ed="#V"/>nobilis et perfectam multum perficiens
+          </p>
+          <p xml:id="l24-edhiia">
+            et de 
+            <lb ed="#V"/>huiusmodi cognitione dei sunt multi modi dicendi 
+            <lb ed="#V"/>antiquorum nam recitat <name ref="#Maimonides">raby moises</name> 
+            <lb ed="#V"/>quod fuerunt quidam dicentes quod non fuit 
+            <lb ed="#V"/>nisi unicum nomen dei affirmativum et 
+            <lb ed="#V"/>fuit hoc nomen multum secretum et non 
+            <lb ed="#V"/>fuit revelatum nisi <choice><orig>ydoneis</orig><reg>idoneis</reg></choice> habentibus 
+            <lb ed="#V"/>intellectum sufficienter dispositum ad abstrahendum 
+            <lb ed="#V"/>unde ars abstractiva esset valde nobilis 
+            <lb ed="#V"/>si posset sciri quia per eam possemus 
+            <lb ed="#V"/>acquirere diversas notitias ipsius dei 
+            <lb ed="#V"/>et aliorum quas non habemus unde licet habe<lb ed="#V" break="no"/>amus 
+            practicam abstrahendi non tamen habemus 
+            <lb ed="#V"/>artem nec mirum quia illud est valde 
+            <pb ed="#V" n="49-r"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>difficile propter latentes operationes intellectus unde 
+            <lb ed="#V"/>per viam abstractionis potuerunt <name ref="#Philosophers">philosophi</name> de<lb ed="#V" break="no"/>venire 
+            in <choice><orig>noticiam</orig><reg>notitiam</reg></choice> intuitivam ipsius dei et 
+            <lb ed="#V"/>sic vocarem ipsum intellectum adeptum
+          </p>
+          <p xml:id="l24-uchsid">
+            <g ref="#dot"/>unde circa 
+            <lb ed="#V"/>hoc advertendum bene per quid notitia abstractiva est 
+            <lb ed="#V"/>sui obiecti notitia considerandum est quod certa 
+            <lb ed="#V"/>habitudo et combinatio notitiarum nunc complex<lb ed="#V" break="no"/>arum 
+            nunc incomplexarum animae ex talibus 
+            <lb ed="#V"/>combinationibus quasi per modum speciei repraesenta<lb ed="#V" break="no"/>tis 
+            deus licet nulla pars illius combina<lb ed="#V" break="no"/>tionis 
+            vel congeriei <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> <corr><del rend="strikethrough"><unclear>oportet</unclear></del></corr> repraesentet 
+            <lb ed="#V"/>deum tamen tota illa congeries quasi per modum 
+            <lb ed="#V"/>speciei repraesentat deum intellectui et sic intellectus 
+            <lb ed="#V"/>ex illa congerie aptus natus est exire in 
+            <lb ed="#V"/>actum ad causandum <choice><orig>noticiam</orig><reg>notitiam</reg></choice> ipsius dei quasi 
+            <lb ed="#V"/>habens speciem repraesentativam ipsius dei format 
+            <lb ed="#V"/><choice><orig>noticiam</orig><reg>notitiam</reg></choice> ipsius dei et sic patet quod ex 
+            <lb ed="#V"/>illa tota congerie <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creaturarum resul<lb ed="#V" break="no"/>tat 
+            quasi species repraesentativa ipsius dei 
+            <lb ed="#V"/>et tamen nulla illarum <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> est huiusmodi 
+            <lb ed="#V"/>species sive nulli illarum notitiarum convenit illa 
+            <lb ed="#V"/>conditio competens toti congeriei sicut armo<lb ed="#V" break="no"/>nia 
+            est combinatio multorum sonorum simul 
+            <lb ed="#V"/>et tamen nec unus nec alter illorum sonorum est 
+            <lb ed="#V"/>armonia et secundum varias combinationes crea<lb ed="#V" break="no"/>turarum 
+            eliciuntur variae notitiae dei specificae 
+            <lb ed="#V"/>simile est <choice><orig>sicud</orig><reg>sicut</reg></choice> de eductione formarum substantia<lb ed="#V" break="no"/>lium 
+            de materia nam secundum aliam et 
+            <lb ed="#V"/>aliam combinationem qualitatum primarum 
+            <lb ed="#V"/>educitur alia et alia forma de materia etiam 
+            <lb ed="#V"/>secundum hoc quod possunt perfectius et perfectius combinari 
+            <lb ed="#V"/>si perfectiorem et perfectiorem formam edu<lb ed="#V" break="no"/>cunt 
+            de potentia materiae Sic <choice><orig>imaginandum</orig><reg>ymaginandum</reg></choice> est 
+            <lb ed="#V"/>de <choice><orig>noticiis</orig><reg>notitiis</reg></choice> tam complexis quam incomplexis 
+            <lb ed="#V"/>creaturarum quod ex alia et alia combinatione ipsarum 
+            <lb ed="#V"/>possunt elici varii conceptus ipsius dei et 
+            <lb ed="#V"/>secundum perfectiorem et perfectiorem combinationem huiusmodi 
+            <lb ed="#V"/><choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> secundum hoc potest haberi conceptus ma<lb ed="#V" break="no"/>gis 
+            et magis perfectus ipsius dei et tunc 
+            <lb ed="#V"/><choice><orig>sicud</orig><reg>sicut</reg></choice> esset processus in infinitum in huiusmodi 
+            <lb ed="#V"/>combinationibus sic esset processus in infinitum 
+            <cb ed="#V" n="b"/><!-- 49rb-->
+            <lb ed="#V"/>In huiusmodi <choice><orig>noticiis</orig><reg>notitiis</reg></choice> abstractivis ipsius dei formatis 
+            <lb ed="#V"/>ab intellectu ex huiusmodi combinationibus <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> 
+            <lb ed="#V"/>creatarum ita quod tot essent conceptus dei forma<lb ed="#V" break="no"/>biles 
+            ab intellectu quot essent huiusmodi combina<lb ed="#V" break="no"/>tiones 
+            <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creatarum possibiles et posito isto 
+            <lb ed="#V"/>quod huiusmodi <sic>conditio</sic> <choice><orig>noticiarum</orig><reg>notitiarum</reg></choice> creaturae teneat 
+            <lb ed="#V"/>locum speciei tamen non causat proprie speciem ipsius 
+            <lb ed="#V"/>dei nec est propria species ipsius
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hohdhdh">Opinio Henrici de Huta</head>
+          <p xml:id="l24-eehfee">
+            et ex hoc patet 
+            <lb ed="#V"/>quod salva reverentia <name ref="#Oyta">magistri henrici de huta</name> ipse 
+            <lb ed="#V"/>non bene videtur dicere quod in potentia sensitiva ex 
+            <lb ed="#V"/>concursu duorum obiectorum causatur species tertii obiecti 
+            <lb ed="#V"/>verbi gratia ex specie lucis cum aliis opacis species 
+            <lb ed="#V"/>albedinis vel rubedinis ut <sic>viredis</sic> in nobis 
+            <lb ed="#V"/>causatur sicut in <choice><orig>yride</orig><reg>iride</reg></choice> ex speciebus lucis et 
+            <lb ed="#V"/>aliorum opacorum causatur in nobis species ru<lb ed="#V" break="no"/>bedinis 
+            et tamen non est ibi rubedo sed 
+            <lb ed="#V"/>in hoc potest sensus bene decipi <g ref="#dot"/> exemplum est cla<lb ed="#V" break="no"/>re 
+            de calce nam si calx praesentaretur alicui 
+            <lb ed="#V"/>in vase in quo consuevit poni farina 
+            <lb ed="#V"/>intellectus vel sensus non exibit in actum 
+            <lb ed="#V"/>nisi iudicando de calce sed ibidem decipietur 
+            <lb ed="#V"/>ex parte reflexionis quia intellectus iudicabit 
+            <lb ed="#V"/>se videre farinam et si dicatur talis iudi<lb ed="#V" break="no"/>cabit 
+            in illo videre farina ergo
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hrahhdh">Responsio ad Henricum de Huta</head>
+          <p xml:id="l24-rduecc">
+            Respondetur 
+            <lb ed="#V"/>dupliciter <g ref="#dot"/> uno modo negando quod causabit actum 
+            <lb ed="#V"/>farinae sed correspondenter ad propriam speciem cal<lb ed="#V" break="no"/>cis 
+            naturaliter agentis causabit notitiam 
+            <lb ed="#V"/>calcis sed intellectus reflectendo supra su<lb ed="#V" break="no"/>um 
+            actum decipietur Iudicando quod ibi 
+            <lb ed="#V"/>sit farina quia proprietates accidentium albedinis 
+            <lb ed="#V"/>et calcis possibile est quod intellectus exeat in 
+            <lb ed="#V"/>actum calcis mediante eius propria specie et tamen 
+            <lb ed="#V"/>iudicabit se non habere actum calcis sed 
+            <lb ed="#V"/>albedinis et sic si intellectus velit habere notitiam 
+            <lb ed="#V"/>reflexam supra suum actum decipietur iudicando 
+            <lb ed="#V"/>se cognoscere calcem notitia reflexa ergo cognoscit 
+            <lb ed="#V"/>calcem
+          </p>
+          <p xml:id="l24-sdqcre">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> diceretur quod ex propria specie cal<lb ed="#V" break="no"/>cis 
+            cum habituali <choice><orig>noticia</orig><reg>notitia</reg></choice> cum qua<lb ed="#V" break="no"/>dam 
+            habituali recordatione sive cognitione fa<lb ed="#V" break="no"/>rinae 
+            ideo aliter diceretur quod in <choice><orig>yride</orig><reg>iride</reg></choice> intellectus 
+            <lb ed="#V"/>vel ex habituali <choice><orig>noticia</orig><reg>notitia</reg></choice> quam habet de rubedine 
+            <pb ed="#V" n="49-v"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>cum speciebus lucis et aliorum opacorum iu<lb ed="#V" break="no"/>dicat 
+            tamen se cognoscere rubedinem etc.
+          </p>
+        </div>
+        <div>
+          <head xml:id="l24-Hrpnncd">[Resolutio: possibilitas notitiae circa Deum]</head>
+          <p xml:id="l24-eissde">
+            <lb ed="#V"/>ex istis satis apparet quod multipliciter de deo possumus 
+            <lb ed="#V"/>habere <choice><orig>noticiam</orig><reg>notitiam</reg></choice> simplicem et absolutam propriam 
+            <lb ed="#V"/>uno modo ex conceptibus propriis creaturarum pos<lb ed="#V" break="no"/>sumus 
+            elicere conceptus proprios ipsius dei 
+            <lb ed="#V"/><choice><orig>sicud</orig><reg>sicut</reg></choice> dictum est <choice><orig>2o</orig><reg>secundo</reg></choice> modo ex proprietatibus communibus 
+            <lb ed="#V"/>deo et creaturis possunt elici conceptus proprii 
+            <lb ed="#V"/>ipsius et in talibus est processus in infinitum 
+            <lb ed="#V"/>secundum perfectionem specierum <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> modo combinatione propriorum 
+            <lb ed="#V"/>conceptuum dei abstractorum a <choice><orig>convenienciis</orig><reg>convenientiis</reg></choice> 
+            <lb ed="#V"/>simul competentibus deo et creaturis et secundum 
+            <lb ed="#V"/>hoc quod a pluribus conceptibus elicitur proprius 
+            <lb ed="#V"/>ipsius dei secundum hoc est perfectior et in ta<lb ed="#V" break="no"/>libus 
+            est processus in infinitum sicut dictum 
+            <lb ed="#V"/>est
+          </p>
+          <p xml:id="l24-eippne">
+            <g ref="#dot"/>Ex istis possunt inferri plura 
+            <lb ed="#V"/>corollaria contra oppositum <choice><orig>oppinantes</orig><reg>opinantes</reg></choice> <name ref="#Ockham">okam</name> <name ref="#Rimini">gregorius</name> et 
+            <lb ed="#V"/><name ref="#Aquinas">sanctus thomas</name> qui ponit quod magis via re<lb ed="#V" break="no"/>motionis 
+            quam affirmationis potest haberi conceptus dei 
+            <lb ed="#V"/>proprius scilicet removendo imperfectiones creaturarum 
+            <lb ed="#V"/>et quod deus est ens independens incorruptibile 
+            <lb ed="#V"/>etc. et quanto plures imperfectiones removen<lb ed="#V" break="no"/>tur 
+            tanto conceptus erat perfectior etc. <del rend="strikethrough">et 
+            <lb ed="#V"/>quanto plures imperfectiones</del>
+          </p>
+        </div>
+      </div>
+    </body>
   </text>
 </TEI>
