@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -7,18 +10,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.05-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 34, de Fruitione</title>
           <date when="2012-05-29">May 29, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2012-05-29">May 29th, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -30,147 +31,599 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="external"/>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-05-29" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        
-      </div>
+      <div xml:id="starts-on"></div>
     </front>
     <body>
       <div xml:id="lectio34">
-        <head xml:id="l34-Hldldld" subtype="title">Lectio 34, de Fruitione</head>
+        <head xml:id="l34-Hldldld">Lectio 34, de Fruitione</head>
         <div xml:id="l34-Dd1e93">
           <head xml:id="l34-Hqinspf">Quod in nulla creatura sit ponenda felicitas</head>
-          
-            <p xml:id="l34-pqoapi">Postquam ostensum est<anchor xml:id="l34-Aostest"/> theologia dirigit investigationem humanam, nunc consequenter<anchor xml:id="l34-Anunter"/> <cb ed="#R" n="58ra"/>declarare oportet sic<anchor xml:id="l34-oposic"/> primam esse bonitatem cuius affectio perficit affectum et cuius adeptio perficit intellectum.</p> 
-          
-          <p xml:id="l34-eeqcphf">Et quia circa felicitatem erraverunt multi antiqui ut, scilicet, declarat <name ref="#Augustine">Augustinus</name> et <ref xml:id="l34-Rd1e114"><name ref="#Aristotle">Aristoteles</name> Io <title ref="#Ethics">Ethicorum</title></ref> ut <name ref="#Epicureans">Epicurii</name> qui posuerunt felicitatem in voluptatibus et sic de aliis. Ideo ad hoc, quod humana investigatio sit certa<anchor xml:id="l34-Asitcer"/> circa hoc indiget<anchor xml:id="l34-Ahocind"/> theologia et sapientia. Et istam partem sapientiae tradidit<anchor xml:id="l34-Asaptra"/> <ref xml:id="l34-Rd1e131"><name ref="#Lombard">Magister</name> in prima distinctione</ref>. Probatur ergo ratione quod in nulla creatura sit ponenda huiusmodi<anchor xml:id="l34-ponhui"/> felicitas.</p> 
-          
+          <p xml:id="l34-pqoapi">
+            Postquam ostensum est
+            <anchor xml:id="l34-Aostest"/> 
+            theologia dirigit investigationem humanam, nunc consequenter 
+            <anchor xml:id="l34-Anunter"/> 
+            <pb ed="#R" n="58-r"/>
+            <cb ed="#R" n="a"/> 
+            declarare oportet sic 
+            <anchor xml:id="l34-oposic"/> 
+            primam esse bonitatem cuius affectio perficit affectum et cuius adeptio perficit intellectum.
+          </p> 
+          <p xml:id="l34-eeqcphf">
+            Et quia circa felicitatem erraverunt multi antiqui ut, scilicet, declarat 
+            <name ref="#Augustine">Augustinus</name> et 
+            <ref xml:id="l34-Rd1e114">
+              <name ref="#Aristotle">Aristoteles</name> 
+              Io 
+              <title ref="#Ethics">Ethicorum</title>
+            </ref> 
+            ut 
+            <name ref="#Epicureans">Epicurii</name> 
+            qui posuerunt felicitatem in voluptatibus et sic de aliis. 
+            Ideo ad hoc, 
+            quod humana investigatio sit certa
+            <anchor xml:id="l34-Asitcer"/> 
+            circa hoc indiget
+            <anchor xml:id="l34-Ahocind"/> 
+            theologia et sapientia. 
+            Et istam partem sapientiae tradidit 
+            <anchor xml:id="l34-Asaptra"/>
+            <ref xml:id="l34-Rd1e131">
+              <name ref="#Lombard">Magister</name> 
+              in prima distinctione
+            </ref>. 
+            Probatur ergo ratione 
+            quod in nulla creatura sit ponenda huiusmodi 
+            <anchor xml:id="l34-ponhui"/> 
+            felicitas.
+          </p>
           <div xml:id="l34-Dd1e139">
             <head xml:id="l34-Hprprpr">Primo ratio</head>
-            
-            <p xml:id="l34-eheabe">Et haec ex parte creaturae, quia nulla creatura sufficit sibi ad esse nec ad bene esse.</p>
-      
-            <p xml:id="l34-qnaesc">Quod non ad esse patet quia creatura est in maiori dependentia respectu Dei quam accidens respectu substantiae, immo Deus est sustentans creaturam.</p>
-      
-            <p xml:id="l34-spetse">Secundo proportionalis est habitudo causarum secundarium efficientium ad suos effectus, sicut finalium ad suos. Sed constat evidenter theologo quod causa secunda non sufficit ad ponendum effectum in esse, igitur<anchor xml:id="l34-Aessigi"/> causa finalis non sufficit terminare suum effectum.</p> 
-      
-            <p xml:id="l34-isnfsa">Item sicut nulla causa secunda est essentialiter causa, ita nulla causa finalis est essentialiter finis, sed<anchor xml:id="l34-Afinsed"/> accidentaliter finis<anchor xml:id="l34-Aaccfin"/>.</p>
-        </div>
-      
-        <div xml:id="l34-Dd1e163">
-          <head xml:id="l34-Hsrsrsr">Secunda ratio</head>
-          
-          <p xml:id="l34-sinrpb">Secundo, in nulla creatura reperitur ratio perfectae 
-        bonitatis.</p>
-        
-          <p xml:id="l34-mfepob">Modo <quote xml:id="l34-Qfesbap" ana="#aa-consolatio-34">"felicitas est status omnium bonorum aggregative perfectus."</quote><note corresp="#l34-Qfesbap"><name ref="#Boethius">Boethius</name>, <title ref="#Consolation">Consolatio Philosophiae</title>, III, 2, "Liquet igitur esse beatitudinem statum bonorum omnium congregatione perfectum"</note> <ref xml:id="l34-Rd1e183" corresp="#l51-nalals">per <name ref="#Boethius">Boetium</name></ref>. Modo, in nulla creatura est plenitudo omnium bonorum.</p>
-          
-          <p xml:id="l34-iichbf">Item in creatura sunt imperfectiones multae, ideo in nulla creatura potest esse terminus<anchor xml:id="l34-Aesster"/> beatitudinis finalis.</p>
-      
-          <p xml:id="l34-iofpef">Item obiectum finale sub ratione finis est quod sit principium omnium bonorum et plenitudo <sic>fundamentaria</sic> et productiva omnium, et quod omnia redeant<anchor xml:id="l34-Aomnred"/> in illud principium. Modo nulla creatura est illo modo principium, igitur in solo Deo qui<anchor xml:id="l34-Adeoqui"/> est principium fundamentale et plenitudo omnium bonorum ad quem redeunt omnes creaturae est felicitas. Ideo non sine causa vocatur Deus <c>a</c> in <ref xml:id="l34-Rd1e206" corresp="#l34-Qaeopef"><title ref="#ap">Apocalypsis</title></ref><note type="editorNote" subtype="citation" corresp="#l34-Qaeopef"><title>Apocalypsis</title> 1:8</note> <quote xml:id="l34-Qaeopef" ana="#ap1_8">"alpha et omega principium et finis."</quote></p>
-      
-        </div>
+            <p xml:id="l34-eheabe">
+              Et haec ex parte creaturae, 
+              quia nulla creatura sufficit sibi ad esse nec ad bene esse.
+            </p>
+            <p xml:id="l34-qnaesc">
+              Quod non ad esse patet 
+              quia creatura est in maiori dependentia 
+              respectu Dei quam accidens respectu substantiae, 
+              immo Deus est sustentans creaturam.
+            </p>
+            <p xml:id="l34-spetse">
+              Secundo proportionalis est habitudo causarum 
+              secundarium efficientium ad suos effectus, 
+              sicut finalium ad suos. 
+              Sed constat evidenter theologo 
+              quod causa secunda non sufficit ad ponendum effectum in esse, 
+              igitur
+              <anchor xml:id="l34-Aessigi"/> 
+              causa finalis non sufficit terminare suum effectum.
+            </p> 
+            <p xml:id="l34-isnfsa">
+              Item sicut nulla causa secunda est essentialiter causa, 
+              ita nulla causa finalis est essentialiter finis, 
+              sed 
+              <anchor xml:id="l34-Afinsed"/> 
+              accidentaliter finis 
+              <anchor xml:id="l34-Aaccfin"/>.
+            </p>
+          </div>
+          <div xml:id="l34-Dd1e163">
+            <head xml:id="l34-Hsrsrsr">Secunda ratio</head>
+            <p xml:id="l34-sinrpb">
+              Secundo, 
+              in nulla creatura reperitur ratio perfectae 
+              bonitatis.
+            </p>
+            <p xml:id="l34-mfepob">
+              Modo 
+              <cit>
+                <quote xml:id="l34-Qfesbap" source="http://scta.info/resource/hy7y6y-d1e67">
+                  felicitas est status omnium bonorum aggregative perfectus
+                </quote>
+                <bibl>
+                  <name ref="#Boethius">Boethius</name>, 
+                  <title ref="#Consolation">Consolatio Philosophiae</title>, 
+                  III, 2, 
+                  <!--"Liquet igitur esse beatitudinem statum bonorum omnium congregatione perfectum"-->
+                </bibl> 
+              </cit>.
+              <ref xml:id="l34-Rd1e183" corresp="#l34-Qfesbap">
+                per 
+                <name ref="#Boethius">Boetium</name>
+              </ref>. 
+              Modo, in nulla creatura est plenitudo omnium bonorum.
+            </p>
+            <p xml:id="l34-iichbf">
+              Item in creatura sunt imperfectiones multae, 
+              ideo in nulla creatura potest esse terminus
+              <anchor xml:id="l34-Aesster"/> 
+              beatitudinis finalis.
+            </p>
+            <p xml:id="l34-iofpef">
+              Item obiectum finale sub ratione finis est 
+              quod sit principium omnium bonorum et plenitudo 
+              <sic>fundamentaria</sic> et productiva omnium, 
+              et quod omnia redeant 
+              <anchor xml:id="l34-Aomnred"/> 
+              in illud principium. 
+              Modo nulla creatura est illo modo principium, 
+              igitur in solo Deo qui 
+              <anchor xml:id="l34-Adeoqui"/> 
+              est principium fundamentale 
+              et plenitudo omnium bonorum ad quem redeunt omnes creaturae est felicitas. 
+              Ideo non sine causa vocatur Deus <c>a</c> 
+              in 
+              <ref xml:id="l34-Rd1e206" corresp="#l34-Qaeopef">
+                <title ref="#ap">Apocalypsis</title>
+              </ref>
+              <cit>
+                <quote xml:id="l34-Qaeopef" source="http://scta.info/resource/ap1_8">
+                  alpha et omega principium et finis
+                </quote>
+                <bibl>
+                  <title>Apocalypsis</title> 1:8
+                </bibl>
+              </cit>
+            </p>
+          </div>
         </div>
         <div xml:id="l34-Dd1e220">
-        
           <head xml:id="l34-Hcqdesb">Conclusio: quod Deus est summa bonitas</head>
-            
-          <p xml:id="l34-eeiiep">Et ex istis, sequitur evidenter quod Deus est summa bonitas mentis quietativa in quo ponendus est finis laetitiae. Et ideo <name ref="#Lombard">Magister</name> usus est istis terminis <mentioned>'frui'</mentioned> et <mentioned>'uti'</mentioned>, verum est quod ista materia tractatur sub aliis terminis dando mandatum de dilectione Dei, scilicet, <quote xml:id="l34-Qdddetv">"diliges<anchor xml:id="l34-Ascidil"/> Dominum Deum tuum ex tota mente tua, ex toto corde, ex totis viribus,"</quote><note corresp="#l34-Qdddetv">Luke 10:27; cf. Deuteronomy 6:5; Matt 22:37; Mark 12:30</note> scilicet quod mens feratur se tota, scilicet, ex totis viribus in Deum. Et illud mandatum est maximum<anchor xml:id="l34-Aetmmax"/> in lege per cuius observationem ingreditur quis vitam. Dilectio igitur Dei ex tota anima, scilicet propter se, non<anchor xml:id="l34-Asennon"/> propter <cb ed="#S" n="74rb"/> commodum, est fruitio. Consequenter praecipit diligi proximum <cb ed="#R" n="58rb"/> et hoc propter Deum, et ideo est hic<anchor xml:id="l34-Aesthic"/> materia de usu et traditur in evangelio principaliter.</p>
-        <div xml:id="l34-Dd1e255">
-          <head xml:id="l34-Hqddped">Quomodo Deus debemus diligi toto corde et proximus est diligendus</head>
-        
-          <p xml:id="l34-eimddt">Et ideo materia huius distinctionis tractatur quomodo Deus <unclear>debemus[?]</unclear> diligi toto corde et proximus est diligendus. Et dilectio Dei super omnia est dilectio quae non debet referi in aliud, sed diligi debet propter suam bonitatem. Et diligere proximum est eum diligere in relatione ad Deum, et magistri hic aequivocant de terminis, et ideo debent distingui termini.</p>
-        </div>
-        
-        <div xml:id="l34-Dd1e267">
-          <head xml:id="l34-Hdtdtdt">Distinctio termini</head>
-          
-          <p xml:id="l34-ufcega">Unde <mentioned>'fruitio'</mentioned> causatur aliquando generaliter<anchor xml:id="l34-Aaligen"/> pro omni actu potentiae appetitivae cum dilectione<anchor xml:id="l34-Acumdil"/> tantum. Et sic homines et bruta dicuntur frui cibo, et ista est generalis acceptio.</p>
-      
-          <p xml:id="l34-smssra">Secundo <supplied>capiatur</supplied> magis stricte pro omni actu voluntatis quo aliquid diligitur propter se sine relatione<anchor xml:id="l34-Asinerel"/> actuali. Et sic virtutes possunt diligi sine relatione actuali.</p>
-      
-          <p xml:id="l34-tsphia">Tertio <supplied>capiatur</supplied> strictius pro actu voluntatis respectu obiecti <sic>inreferibiliter</sic> actu vel habitu in aliud. Et sic capitur in proposito, et posterius videbitur, utrum eodem actu diligitur Deus et creatura, et hoc non refert quantum ad materiam.</p>
-        
-          <p xml:id="l34-escuca">Similiter, <mentioned>'usus'</mentioned> quandoque<anchor xml:id="l34-Ausuqua"/> capitur communissime, ut in <ref xml:id="l34-Rd1e306" corresp="#l34-Qcubqbe"><title ref="#TopicsBoethius">Topicis</title></ref><note corresp="#l34-Qcubqbe">Boethius, De differentiis topicis, P.L 64, 1189D)</note> cum dicitur, <quote xml:id="l34-Qcubqbe">"cuius usus bonus ipsum quoque bonum est"</quote>.</p>
-          
-          <p xml:id="l34-apapas">Aliquando pro acceptare vel deacceptare propter aliud sumendum.<anchor xml:id="l34-Aalisum"/></p>
-        
-        <p xml:id="l34-apauca">Aliquando pro acceptare vel deacceptare aliquid propter aliud quo fruendum<anchor xml:id="l34-Aquofru"/> est. Et isto modo distinguitur<anchor xml:id="l34-Amoddis"/> <mentioned>'uti'</mentioned> contra <mentioned>'abuti'</mentioned>.</p>
+          <p xml:id="l34-eeiiep">
+            Et ex istis, 
+            sequitur evidenter quod Deus est summa bonitas mentis quietativa in quo ponendus est finis laetitiae.
+            Et ideo <name ref="#Lombard">Magister</name> 
+            usus est istis terminis 
+            <mentioned>frui</mentioned> 
+            et <mentioned>uti</mentioned>, 
+            verum est quod ista materia tractatur 
+            sub aliis terminis dando mandatum de dilectione Dei, 
+            scilicet, 
+            <cit>
+              <quote xml:id="l34-Qdddetv" source="http://scta.info/source/lc10_27">
+                diliges
+                <anchor xml:id="l34-Ascidil"/>
+                Dominum Deum tuum ex tota mente tua, ex toto corde, 
+                ex totis viribus
+              </quote>
+              <bibl>Luke 10:27</bibl>
+              <note>cf. Deuteronomy 6:5; Matt 22:37; Mark 12:30</note>
+            </cit>
+            scilicet quod mens feratur se tota, 
+            scilicet, ex totis viribus in Deum. 
+            Et illud mandatum est maximum 
+            <anchor xml:id="l34-Aetmmax"/> 
+            in lege per cuius observationem ingreditur quis vitam. 
+            Dilectio igitur Dei ex tota anima, scilicet propter se, 
+            non 
+            <anchor xml:id="l34-Asennon"/> 
+            propter 
+            <cb ed="#S" n="b"/><!-- S754rb --> 
+            commodum, est fruitio. Consequenter praecipit diligi proximum 
+            <cb ed="#R" n="b"/><!-- R58rb--> 
+            et hoc propter Deum, 
+            et ideo est hic 
+            <anchor xml:id="l34-Aesthic"/> 
+            materia de usu et traditur in evangelio principaliter.
+          </p>
+          <div xml:id="l34-Dd1e255">
+            <head xml:id="l34-Hqddped">Quomodo Deus debemus diligi toto corde et proximus est diligendus</head>
+            <p xml:id="l34-eimddt">
+               Et ideo materia huius distinctionis 
+               tractatur quomodo Deus <unclear>debemus[?]</unclear> 
+              diligi toto corde et proximus est diligendus. 
+              Et dilectio Dei super omnia est dilectio quae non debet referi in aliud, 
+              sed diligi debet propter suam bonitatem. 
+              Et diligere proximum est eum diligere in relatione ad Deum, 
+              et magistri hic aequivocant de terminis, 
+              et ideo debent distingui termini.
+            </p>
+          </div>
+          <div xml:id="l34-Dd1e267">
+            <head xml:id="l34-Hdtdtdt">Distinctio termini</head>
+            <p xml:id="l34-ufcega">
+             Unde <mentioned>'fruitio'</mentioned> 
+              causatur aliquando generaliter 
+              <anchor xml:id="l34-Aaligen"/> 
+              pro omni actu potentiae appetitivae cum dilectione 
+              <anchor xml:id="l34-Acumdil"/> 
+              tantum. Et sic homines et bruta dicuntur frui cibo, 
+              et ista est generalis acceptio.
+            </p>
+            <p xml:id="l34-smssra">
+              Secundo <supplied>capiatur</supplied> magis stricte 
+              pro omni actu voluntatis quo aliquid diligitur propter 
+              se sine relatione 
+              <anchor xml:id="l34-Asinerel"/> actuali. 
+              Et sic virtutes possunt diligi sine relatione actuali.
+            </p>
+            <p xml:id="l34-tsphia">
+              Tertio <supplied>capiatur</supplied> 
+              strictius pro actu voluntatis respectu obiecti 
+              <sic>inreferibiliter</sic> actu vel habitu in aliud. 
+              Et sic capitur in proposito, et posterius videbitur, 
+              utrum eodem actu diligitur Deus et creatura, 
+              et hoc non refert quantum ad materiam.
+            </p>
+            <p xml:id="l34-escuca">
+              Similiter, 
+              <mentioned>usus</mentioned> 
+              quandoque 
+              <anchor xml:id="l34-Ausuqua"/> 
+              capitur communissime, 
+              ut in 
+              <ref xml:id="l34-Rd1e306" corresp="#l34-Qcubqbe">
+                <title ref="#TopicsBoethius">Topicis</title>
+              </ref>
+              cum dicitur, 
+              <cit>
+                <quote xml:id="l34-Qcubqbe">
+                  cuius usus bonus ipsum quoque bonum est
+                </quote>
+                <bibl>
+                  Boethius, De differentiis topicis, P.L 64, 1189D)
+                </bibl>
+              </cit>
+            </p>
+            <p xml:id="l34-apapas">
+              Aliquando pro acceptare vel deacceptare 
+              propter aliud sumendum.
+              <anchor xml:id="l34-Aalisum"/>
+            </p>
+            <p xml:id="l34-apauca">
+              Aliquando pro acceptare vel deacceptare 
+              aliquid propter aliud quo fruendum 
+              <anchor xml:id="l34-Aquofru"/> 
+              est. 
+              Et isto modo distinguitur 
+              <anchor xml:id="l34-Amoddis"/> 
+              <mentioned>uti</mentioned> 
+              contra <mentioned>abuti</mentioned>.
+            </p>
         </div>
        </div> 
         <div xml:id="l34-Dd1e336">
           <head xml:id="l34-Hrpcpcc">Rationes principales contra conclusionem</head>
-          
-          <p xml:id="l34-pdmimt">Pro declaratione materiae praesentis quae continet multas utilitates, immo tota theologia posset hic tractari iuxta illud:<note corresp="#l34-Qihdlep">Matthew 22:40</note> <quote xml:id="l34-Qihdlep">"in hiis duabus mandatis pendet tota lex et prophetae."</quote> Et ideo hic introducetur ratio humana contra fidem et theologiam et introducentur<anchor xml:id="l34-Aeteint"/> materiae tractandae.</p>
-      
-      <div xml:id="l34-Dd1e352">
-        <head xml:id="l34-Hprpprp">Prima ratio principalis</head>
-        
-        <p xml:id="l34-paphsf">Primo<note type="crossReference">See below <ref xml:id="l34-Rd1e361" target="lectio35.xml#l35-ptfuea" type="crossReference">Lecture 35, para. </ref></note> arguitur pro ratione humana sic: anima humana est finita,<anchor xml:id="l34-Aestfin"/> igitur potest quietari in aliquo bono finito.<anchor xml:id="l34-Abonfin"/></p> 
-        
-        <p xml:id="l34-cdereq">Confirmatur<note type="crossReference">See below <ref xml:id="l34-Rd1e372" target="lectio37.xml#l37-qdisii" type="crossReference">Lecture 37, para. </ref></note> divina essentia movet bonum praecise finite, igitur aliqua creatura in maiori proportione potest movere rationem et quietative.<anchor xml:id="l34-Aetqqui"/></p>
-        
-        <p xml:id="l34-cqpdmc">Confirmatur,<note type="crossReference">See below <ref xml:id="l34-Rd1e381" target="lectio37.xml#l37-savebc" type="crossReference">Lecture 37, para. </ref></note> quia per divinam essentiam praecise finite est bonum creaturae, igitur potest dari creatura quae faciet in duplo melius creaturae.</p>
-        
-        <p xml:id="l34-icrqic">Item<note type="crossReference">See below <ref xml:id="l34-Rd1e389" target="lectio37.xml#l37-arfsde" type="crossReference">Lecture 37, para. </ref></note> creatura rationalis est in potentia obedientali ad hoc quod quietetur in illo in quo Deus vult eam quietare, igitur non repugnat, quin quietetur in creatura.</p>
-      
-        <p xml:id="l34-iictia">Item<note type="crossReference">See below <ref xml:id="l34-Rd1e398" target="lectio37.xml#l37-uatiri" type="crossReference">Lecture 37, para. </ref></note> inclinatio creaturae in Deum est quaedam commotio<anchor xml:id="l34-Aquacom"/> ad extra igitur Deus potest suspendere motionem suam respectu creaturae, igitur creatura tendet in aliud.</p>
-      
-        <p xml:id="l34-icmdoc">Item<note type="crossReference">See below <ref xml:id="l34-Rd1e408" target="lectio37.xml#l37-arfpod" type="crossReference">Lecture 37, para. </ref></note> creatura magis inclinatur ad se quam ad Deum, quia creatura non potest se odire nec <cb ed="#R" n="58va"/> actu nec habitu. Sed creatura potest odire Deum, et sic Deus non erit<anchor xml:id="l34-Anoneri"/> finis creaturae. Et sic,<anchor xml:id="l34-Aetssic"/> si diligit Deum, hoc est ut bonum sit <supplied>sibi</supplied><anchor xml:id="l34-Asitsib"/>. Et ideo, quicquid creatura <cb ed="#S" n="74va"/> appetit, hoc est propter sui conservationem.</p> 
-        
-        <p xml:id="l34-csdnff">Confirmatur, si Deus esset finis naturaliter intentus, tunc naturaliter posset adipisci, quia Deus et natura nihil faciunt frustra.</p>
-        
-        <p xml:id="l34-cqodoc">Confirmatur, quia omnia alia possunt acquirere naturaliter suum finem, igitur et homo cum sit<anchor xml:id="l34-Acumsit"/> perfectior et etiam dans formam dat omnia consequentia.<anchor xml:id="l34-Aomncon"/></p> 
-      </div>
+          <p xml:id="l34-pdmimt">
+            Pro declaratione materiae praesentis 
+            quae continet multas utilitates, 
+            immo tota theologia posset 
+            hic tractari iuxta illud:
+            <cit>
+              <quote xml:id="l34-Qihdlep" source="http://scta.info/resource/mt22_40">
+                in hiis duabus mandatis pendet tota lex et prophetae
+              </quote>
+              <bibl>Matthew 22:40</bibl> 
+            </cit> 
+            Et ideo hic introducetur 
+            ratio humana contra fidem et theologiam 
+            et introducentur 
+            <anchor xml:id="l34-Aeteint"/> 
+            materiae tractandae.
+          </p>
+          <div xml:id="l34-Dd1e352">
+            <head xml:id="l34-Hprpprp">Prima ratio principalis</head>
+            <p xml:id="l34-paphsf">
+              Primo
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e361" target="lectio35.xml#l35-ptfuea" type="crossReference">Lecture 35, para. </ref></note>--> 
+              arguitur pro ratione humana sic: anima humana est finita,
+              <anchor xml:id="l34-Aestfin"/> igitur potest quietari in aliquo bono finito.
+              <anchor xml:id="l34-Abonfin"/>
+            </p>
+            <p xml:id="l34-cdereq">
+              Confirmatur 
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e372" target="lectio37.xml#l37-qdisii" type="crossReference">Lecture 37, para. </ref></note>--> 
+              divina essentia movet bonum praecise finite, 
+              igitur aliqua creatura in maiori proportione 
+              potest movere rationem et quietative.
+              <anchor xml:id="l34-Aetqqui"/>
+            </p>
+            <p xml:id="l34-cqpdmc">
+              Confirmatur,
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e381" target="lectio37.xml#l37-savebc" type="crossReference">Lecture 37, para. </ref></note>--> 
+              quia per divinam essentiam praecise finite est bonum creaturae, igitur potest dari creatura quae faciet in duplo melius creaturae.
+            </p>
+            <p xml:id="l34-icrqic">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e389" target="lectio37.xml#l37-arfsde" type="crossReference">Lecture 37, para. </ref></note>--> 
+              creatura rationalis est in potentia obedientali ad hoc quod quietetur in illo in quo Deus vult eam quietare, igitur non repugnat, quin quietetur in creatura.
+            </p>
+            <p xml:id="l34-iictia">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e398" target="lectio37.xml#l37-uatiri" type="crossReference">Lecture 37, para. </ref></note>--> 
+              inclinatio creaturae in Deum est quaedam commotio<anchor xml:id="l34-Aquacom"/> ad extra igitur Deus potest suspendere motionem suam respectu creaturae, igitur creatura tendet in aliud.
+            </p>
+            <p xml:id="l34-icmdoc">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e408" target="lectio37.xml#l37-arfpod" type="crossReference">Lecture 37, para. </ref></note>--> 
+              creatura magis inclinatur ad se quam ad Deum, quia creatura non potest se odire nec 
+              <pb ed="#R" n="58-v"/> 
+              <cb ed="#R" n="a"/> 
+              actu nec habitu. Sed creatura potest odire Deum, et sic Deus non erit
+              <anchor xml:id="l34-Anoneri"/> finis creaturae. 
+              Et sic, 
+              <anchor xml:id="l34-Aetssic"/> 
+              si diligit Deum, hoc est ut bonum sit 
+              <supplied>sibi</supplied> 
+              <anchor xml:id="l34-Asitsib"/>. 
+              Et ideo, quicquid creatura 
+              <pb ed="#S" n="74-v"/> 
+              <cb ed="#S" n="a"/> 
+              appetit, hoc est propter sui conservationem.
+            </p>
+            <p xml:id="l34-csdnff">
+              Confirmatur, 
+              si Deus esset finis naturaliter intentus, 
+              tunc naturaliter posset adipisci, 
+              quia Deus et natura nihil faciunt frustra.
+            </p>
+            <p xml:id="l34-cqodoc">
+              Confirmatur, quia omnia alia possunt acquirere naturaliter suum finem, 
+              igitur et homo cum sit 
+              <anchor xml:id="l34-Acumsit"/> 
+              perfectior et etiam dans formam 
+              dat omnia consequentia.
+              <anchor xml:id="l34-Aomncon"/>
+            </p>
+          </div>
           <div xml:id="l34-Dd1e435">
             <head xml:id="l34-Hsrpsrp">Secunda ratio principalis</head>
-            
-            <p xml:id="l34-spnpep">Secundo principaliter non videtur<anchor xml:id="l34-Anonvid"/> rationale creaturae diligere Deum, quia non potest ex sua naturali facultate Deum diligere supra alia<anchor xml:id="l34-Asupali"/> propter errorem <name ref="#Pelagius">Pelagii</name>.</p>
-      
-            <p xml:id="l34-ineaaf">Item non est ex libertate voluntatis<anchor xml:id="l34-Alibvol"/> obiectum huiusmodi velle, quia nullus est actus liber, quia respectu cuiuscumque actus est motio Dei praevia<anchor xml:id="l34-Adeipra"/> qua posita non stat voluntatem resilire et illa non est in potestate voluntatis, sed solum Dei, igitur nec actus est in potestate voluntatis. Unde prima causa non solum facit effectum sed etiam movet causam. Unde sequitur Deus vult quod voluntas agat, igitur voluntas agit, sed antecedens non est in potestate voluntatis. Igitur nec consequens immo Deus est causa necessitans quia quando vult agere aliquid, illud agitur, alias frustraretur.</p>
-      
-            <p xml:id="l34-inpaas">Item<note type="crossReference">See below <ref xml:id="l34-Rd1e461" target="lectio41.xml#l41-reedpp" type="crossReference">Lecture 41, para. </ref></note> nulla persona divina est obiectum<anchor xml:id="l34-Aestobi"/> fruibile, igitur. Antecedens patet, quia si Pater esset obiectum fruibile, Filius frueretur alio a se.</p>
-      
-            <p xml:id="l34-ineuof">Item<note type="crossReference">See below <ref xml:id="l34-Rd1e471" target="lectio41.xml#l41-reedpp" type="crossReference">Lecture 41, para. </ref></note> non esset unicum obiectum fruibile.</p>
-      
-            <p xml:id="l34-ideaed">Item<note type="crossReference">Objection is re-introduced at <ref xml:id="l34-Rd1e480" target="lectio40.xml#l40-scaeim" type="crossReference">Lecture 40, para. </ref> and responded to at <ref xml:id="l34-Rd1e483" target="lectio40.xml#l40-aprnof">Lecture 40, para. </ref></note> Deus est diligendus propter beneficia, igitur beneficia sunt magis diligenda. <cb ed="#SV" n="240va"/> Et sic Deus non propter se absolute est diligendus.</p>
-      
-            <p xml:id="l34-iddfqd">Item <name ref="#David">David</name> dicit:<note corresp="#l34-Qssllpr">Psalm 118:112</note> <quote xml:id="l34-Qssllpr">se<anchor xml:id="l34-Adicses"/> servavisse legem propter retributionem</quote>, igitur retributio est finale quod diligitur.</p>
-      
-            <p xml:id="l34-isddpm">Item si Deus esset diligendus propter bonitatem, tunc<anchor xml:id="l34-Abontun"/> proportio bonitatis esset<anchor xml:id="l34-Aboness"/> ratio dilectionis. Igitur angelus magis deberet<anchor xml:id="l34-Amagdeb"/> diligi ab homine quam homo, et sic homo teneretur magis diligere proximum meliorem.</p>
-      
-            <p xml:id="l34-ibiesm">Item beatitudo illa<anchor xml:id="l34-Abeaill"/> non est summum bonum, quia privatio eius non est summe mala, alias nos essemus summe mali.</p>
-        
+            <p xml:id="l34-spnpep">
+              Secundo principaliter non videtur 
+              <anchor xml:id="l34-Anonvid"/> 
+              rationale creaturae diligere Deum, 
+              quia non potest ex sua naturali facultate 
+              Deum diligere supra alia 
+              <anchor xml:id="l34-Asupali"/> 
+              propter errorem <name ref="#Pelagius">Pelagii</name>.
+            </p>
+            <p xml:id="l34-ineaaf">
+              Item non est ex libertate voluntatis 
+              <anchor xml:id="l34-Alibvol"/> 
+              obiectum huiusmodi velle, 
+              quia nullus est actus liber, 
+              quia respectu cuiuscumque actus 
+              est motio Dei praevia 
+              <anchor xml:id="l34-Adeipra"/> 
+              qua posita non stat voluntatem resilire 
+              et illa non est in potestate voluntatis, 
+              sed solum Dei, 
+              igitur nec actus est in potestate voluntatis. 
+              Unde prima causa non solum facit effectum 
+              sed etiam movet causam. 
+              Unde sequitur Deus vult quod voluntas agat, igitur voluntas agit, 
+              sed antecedens non est in potestate voluntatis. 
+              Igitur nec consequens immo Deus est causa necessitans quia quando 
+              vult agere aliquid, illud agitur, alias frustraretur.
+            </p>
+            <p xml:id="l34-inpaas">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e461" target="lectio41.xml#l41-reedpp" type="crossReference">Lecture 41, para. </ref></note>--> 
+              nulla persona divina est obiectum 
+              <anchor xml:id="l34-Aestobi"/> 
+              fruibile, igitur. 
+              Antecedens patet, 
+              quia si Pater esset obiectum fruibile, 
+              Filius frueretur alio a se.
+            </p>
+            <p xml:id="l34-ineuof">
+              Item 
+              <!--<note type="crossReference">See below <ref xml:id="l34-Rd1e471" target="lectio41.xml#l41-reedpp" type="crossReference">Lecture 41, para. </ref></note>--> 
+              non esset unicum obiectum fruibile.
+            </p>
+            <p xml:id="l34-ideaed">
+              Item
+              <!--<note type="crossReference">Objection is re-introduced at <ref xml:id="l34-Rd1e480" target="lectio40.xml#l40-scaeim" type="crossReference">Lecture 40, para. </ref> and responded to at <ref xml:id="l34-Rd1e483" target="lectio40.xml#l40-aprnof">Lecture 40, para. </ref></note>--> 
+              Deus est diligendus propter beneficia, 
+              igitur beneficia sunt magis diligenda. 
+              <pb ed="#SV" n="240-v"/>
+              <cb ed="#SV" n="a"/>
+              Et sic Deus non propter se absolute est diligendus.
+            </p>
+            <p xml:id="l34-iddfqd">
+              Item <name ref="#David">David</name> dicit:
+              <cit>
+                <quote xml:id="l34-Qssllpr" source="http://scta.info/resource/ps118_112">
+                  se
+                  <anchor xml:id="l34-Adicses"/> 
+                  servavisse legem propter retributionem
+                </quote>
+                <bibl>Psalm 118:112</bibl>
+              </cit>, 
+              igitur retributio est finale quod diligitur.
+            </p>
+            <p xml:id="l34-isddpm">
+              Item si Deus esset diligendus propter bonitatem, 
+              tunc
+              <anchor xml:id="l34-Abontun"/>
+              proportio bonitatis esset 
+              <anchor xml:id="l34-Aboness"/> 
+              ratio dilectionis. 
+              Igitur angelus magis deberet 
+              <anchor xml:id="l34-Amagdeb"/> 
+              diligi ab homine quam homo, 
+              et sic homo teneretur magis 
+              diligere proximum meliorem.
+            </p>
+            <p xml:id="l34-ibiesm">
+              Item beatitudo illa 
+              <anchor xml:id="l34-Abeaill"/> 
+              non est summum bonum, 
+              quia privatio eius non est summe mala, 
+              alias nos essemus summe mali.
+            </p>
           </div>
           <div xml:id="l34-Dd1e518">
             <head xml:id="l34-Hararar">Aliae rationes</head>
-            
-            <p xml:id="l34-arfrfe">Alias rationes facit <name ref="#RichardKilvington">Climento</name>.</p> 
-        
-            <p xml:id="l34-equdqp">Et quaerit utrum Deus sit in infinitum magis diligendus quam proximus.</p> 
-        
-            <p xml:id="l34-esspca">Et si sic vel<anchor xml:id="l34-Asicvel"/><app><lem>vel</lem><rdg wit="R">nihil</rdg></app> ergo finite, et sic poterit augeri dilectio proximi quod erit aequalis dilectioni Dei. Si infinite, non posset<anchor xml:id="l34-Anonpos"/> creatura adimplere.</p>
-      
-            <p xml:id="l34-iascam">Item arguit<anchor xml:id="l34-Aitearg"/> sic: sint <name ref="#Sortes">Sortes</name> et <name ref="#Plato">Plato</name> quorum quilibet diligat <c>a</c> gradu et velit <name ref="#Sortes">Sortes</name> suum gradum esse magis<anchor xml:id="l34-Aessmag"/> adimpletivum praecepti quam <name ref="#Plato">Platonis</name> gradus, tunc videtur quod <name ref="#Sortes">Sortes</name> magis mereatur cum illa <cb ed="#R" n="58vb"/> circumstantia. Tunc ponatur quod <name ref="#Plato">Plato</name> intendat suum gradum usque ad summum, et <name ref="#Sortes">Sortes</name> actum suum quo vult esse magis adimpletivum et maneat dilectio <name ref="#Sortes">Sortis</name> <c>a</c> gradu, tunc aequaliter merebuntur, quia <name ref="#Sortes">Sortes</name> illa <cb ed="#S" n="76vb"/> circumstantia tantum meretur sicut <name ref="#Plato">Plato</name> et tamen inaequaliter diligent, et sic inaequaliter diligentes deum ex caritate aequaliter merebuntur.</p>
-      
-            <p xml:id="l34-veqiie">Verum est quod circa primum argumentum erunt multa tractanda et circa potentiam et circa obiectum, unde utrum potentia finita sit in causando vel infinita. Unde potest imaginari et sustineri quod potentia sit infinita in esse capacitatis. Et fortior ratio contra illam positionem est, quia esse<anchor xml:id="l34-Aquiomn"/> perceptivum est denominatio perfectionis simpliciter, igitur competit limitate potentiae.</p> 
-            
-            <p xml:id="l34-iidiie">Istem ista denominatio non est de primis modo posteriores communicantur in remissiori gradu ex eo quod gradus posteriores<anchor xml:id="l34-Agrapos"/> includit priores,<anchor xml:id="l34-Aincpri"/> quia quilibet gradus esse perceptivum includit quemlibet gradum esse<anchor xml:id="l34-Agraess"/> entis communicati sub perceptivo. Unde, si communicetur<anchor xml:id="l34-Asiccom"/> denominatio esse perceptivum, tunc latitudo graduum supra perceptivum<anchor xml:id="l34-Asupper"/> communicatur perceptivo, et sic non stat aliquid esse infinitum in perceptibilitate et non esse infinitum in entitate.</p>
-      
-            <p xml:id="l34-scqeic">Sed contra, quia dicit <ref xml:id="l34-Rd1e614" corresp="#l34-Qspeesl"><name ref="#Aristotle">Philosophus</name> IIo <title ref="#deAnima">De Anima</title></ref><note corresp="#l34-Qspeesl">Aristotle, De Anima, II, "Excellens sensibile corrumpit sensum"; Cf. Auctoritates</note> quod <quote xml:id="l34-Qspeesl" source="http://scta.info/resource/aristda-l2">"sensus propter excellens sensibile laeditur"</quote>. Sed intellectus quanto altiora intelligit redditur aptior ad intelligendum, igitur cum in infinitum contingit ascendere in intentione superioris cuius contrarium est in potentiis organicis quae laeduntur ab excellenti sensibili, sequitur quod intellectus est infinitae capacitatis.</p> 
-      
-            <p xml:id="l34-uarcnf">Unde ad rationes in oppositum, cum arguitur quod nulli rei finitae correspondet denominatio infinita<anchor xml:id="l34-Adeninf"/> simpliciter <g ref="#slash"/>breviter advertendum est<anchor xml:id="l34-Aadvest"/> quod aliquae sunt denominationes quae sunt mere essentiales et capiuntur abstractae a convenientia Dei <cb ed="#SV" n="240vb"/> et creaturarum et istae sunt specierum constitutivae, et sic ens est prima. Modo de istis, nulla est communicabilis creaturae nisi finite.</p>
-      
-            <p xml:id="l34-asmsea">Aliae sunt morales accidentales et extrinsecae et istae possunt intensius communicari vel remissius ut esse activum communicatur intensius vel remissius secundum Dei bene placitum. Unde materia quae est perfectior caritate non est activa, et tamen caritas est activa, ita quod esse activum est denominatio extrinseca accidentalis moralis et tunc diceretur quod esse perceptivum est denominatio accidentalis moralis, et sic esse capax vitaliter est denominatio moralis variabilis ad voluntatem Dei, sicut esse activum. Unde posset communicari angelo quod produceret infinitum et tamen esset finitae essentiae, sicut accidentia producunt substantias <cb ed="#R" n="59ra"/> non in virtute proprie sed primae causae. Sed si capitur opposito modo esse perceptivum ut sit denominatio essentialis non convertibilis, tunc diceretur quod potentia est solum finitae capacitatis, et sic passio non convertibilis. Et per hoc salvatur de anima <cb ed="#S" n="75ra"/> Christi quod licet infinita participaret tamen esset finitae capacitatis, et per hoc possent solvi argumenta <name ref="#Wodeham">Adae</name>. Unde arguit quod esse aliquis qui tantum meretur quod non posset praemiari. Unde diceretur quod non esset dabilis maximus gradus <unclear>beatificabilis</unclear> et beatitudinis etc.</p>
-      
+            <p xml:id="l34-arfrfe">
+              Alias rationes facit 
+              <name ref="#RichardKilvington">Climento</name>.
+            </p>
+            <p xml:id="l34-equdqp">
+              Et quaerit utrum Deus sit in infinitum magis diligendus quam proximus.
+            </p>
+            <p xml:id="l34-esspca">
+              Et si sic vel 
+              <anchor xml:id="l34-Asicvel"/>
+              <app>
+                <lem>vel</lem>
+                <rdg wit="R">nihil</rdg>
+              </app> 
+              ergo finite,
+              et sic poterit augeri dilectio proximi 
+              quod erit aequalis dilectioni Dei.
+              Si infinite, non posset 
+              <anchor xml:id="l34-Anonpos"/> 
+              creatura adimplere.
+            </p>
+            <p xml:id="l34-iascam">
+              Item arguit 
+              <anchor xml:id="l34-Aitearg"/> 
+              sic: sint 
+              <name ref="#Sortes">Sortes</name> et 
+              <name ref="#Plato">Plato</name> 
+              quorum quilibet diligat <c>a</c> gradu et velit 
+              <name ref="#Sortes">Sortes</name> 
+              suum gradum esse magis 
+              <anchor xml:id="l34-Aessmag"/> 
+              adimpletivum praecepti quam <name ref="#Plato">Platonis</name> gradus, 
+              tunc videtur quod <name ref="#Sortes">Sortes</name> 
+              magis mereatur cum illa 
+              <cb ed="#R" n="b"/><!-- 58vb--> 
+              circumstantia. 
+              Tunc ponatur quod <name ref="#Plato">Plato</name> intendat 
+              suum gradum usque ad summum, 
+              et <name ref="#Sortes">Sortes</name> 
+              actum suum quo vult esse magis adimpletivum 
+              et maneat dilectio <name ref="#Sortes">Sortis</name> <c>a</c> gradu, 
+              tunc aequaliter merebuntur, 
+              quia <name ref="#Sortes">Sortes</name> illa 
+              <cb ed="#S" n="b"/> <!-- 76vb -->
+              circumstantia tantum meretur sicut 
+              <name ref="#Plato">Plato</name> et tamen inaequaliter diligent, 
+              et sic inaequaliter diligentes deum ex caritate aequaliter merebuntur.
+            </p>
+            <p xml:id="l34-veqiie">
+              Verum est quod circa primum argumentum erunt 
+              multa tractanda et circa potentiam et circa obiectum, 
+              unde utrum potentia finita sit in causando vel infinita. 
+              Unde potest imaginari et sustineri quod potentia sit infinita in esse capacitatis. 
+              Et fortior ratio contra illam positionem est, 
+              quia esse 
+              <anchor xml:id="l34-Aquiomn"/> 
+              perceptivum est denominatio perfectionis simpliciter, 
+              igitur competit limitate potentiae.
+            </p> 
+            <p xml:id="l34-iidiie">
+              Item ista denominatio non est de primis modo posteriores 
+              communicantur in remissiori gradu ex eo quod gradus posteriores 
+              <anchor xml:id="l34-Agrapos"/> 
+              includit priores, 
+              <anchor xml:id="l34-Aincpri"/> 
+              quia quilibet gradus esse perceptivum includit quemlibet gradum esse 
+              <anchor xml:id="l34-Agraess"/> 
+              entis communicati sub perceptivo. 
+              Unde, si communicetur 
+              <anchor xml:id="l34-Asiccom"/> 
+              denominatio esse perceptivum, 
+              tunc latitudo graduum supra perceptivum 
+              <anchor xml:id="l34-Asupper"/> 
+              communicatur perceptivo, 
+              et sic non stat aliquid esse infinitum 
+              in perceptibilitate et non esse infinitum in entitate.
+            </p>
+            <p xml:id="l34-scqeic">
+              Sed contra, quia dicit 
+              <ref xml:id="l34-Rd1e614" corresp="#l34-Qspeesl">
+                <name ref="#Aristotle">Philosophus</name> IIo <title ref="#deAnima">De Anima</title>
+              </ref>
+              quod 
+              <cit>
+                <quote xml:id="l34-Qspeesl" source="http://scta.info/resource/aristda-l2">
+                sensus propter excellens sensibile laeditur</quote>
+                <bibl>
+                  Aristotle, 
+                  De Anima, II, 
+                  <!--"Excellens sensibile corrumpit sensum"; Cf. Auctoritates-->
+                </bibl>
+              </cit>. 
+              Sed intellectus quanto altiora intelligit 
+              redditur aptior ad intelligendum, 
+              igitur cum in infinitum contingit ascendere 
+              in intentione superioris cuius contrarium est 
+              in potentiis organicis quae laeduntur ab excellenti sensibili, 
+              sequitur quod intellectus est infinitae capacitatis.
+            </p> 
+            <p xml:id="l34-uarcnf">
+              Unde ad rationes in oppositum, 
+              cum arguitur quod nulli rei finitae correspondet 
+              denominatio infinita 
+              <anchor xml:id="l34-Adeninf"/> 
+              simpliciter <g ref="#slash"/> 
+              breviter advertendum est 
+              <anchor xml:id="l34-Aadvest"/> 
+              quod aliquae sunt denominationes 
+              quae sunt mere essentiales et capiuntur 
+              abstractae a convenientia Dei 
+              <cb ed="#SV" n="b"/> <!-- 240vb-->
+              et creaturarum et istae sunt specierum constitutivae, 
+              et sic ens est prima. 
+              Modo de istis, 
+              nulla est communicabilis creaturae nisi finite.
+            </p>
+            <p xml:id="l34-asmsea">
+              Aliae sunt morales accidentales et extrinsecae 
+              et istae possunt intensius communicari 
+              vel remissius ut esse activum communicatur intensius vel remissius 
+              secundum Dei bene placitum. 
+              Unde materia 
+              quae est perfectior caritate non est activa, 
+              et tamen caritas est activa, 
+              ita quod esse activum est denominatio extrinseca accidentalis 
+              moralis et tunc diceretur quod esse perceptivum est 
+              denominatio accidentalis moralis, 
+              et sic esse capax vitaliter est denominatio moralis 
+              variabilis ad voluntatem Dei, 
+              sicut esse activum. 
+              Unde posset communicari angelo quod produceret 
+              infinitum et tamen esset finitae essentiae, 
+              sicut accidentia producunt substantias 
+              <pb ed="#R" n="59-r"/>
+              <cb ed="#R" n="a"/>
+              non in virtute proprie sed primae causae. 
+              Sed si capitur opposito modo esse perceptivum 
+              ut sit denominatio essentialis non convertibilis, 
+              tunc diceretur quod potentia est solum finitae capacitatis, 
+              et sic passio non convertibilis. 
+              Et per hoc salvatur de anima 
+              <pb ed="#S" n="75-r"/>
+              <cb ed="#S" n="a"/>
+              Christi quod licet infinita participaret tamen esset finitae capacitatis, 
+              et per hoc possent solvi argumenta <name ref="#Wodeham">Adae</name>. 
+              Unde arguit quod esse aliquis qui tantum meretur quod non posset praemiari. 
+              Unde diceretur quod non 
+              esset dabilis maximus gradus <unclear>beatificabilis</unclear> et beatitudinis etc.
+            </p>
           </div>
-          </div>
-          </div>
-
+        </div>
+      </div>
     </body>
   </text>
 </TEI>
