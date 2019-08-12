@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,65 +10,83 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.07-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 40, de Fruitione [Reims Transcription]</title>
           <date when="2012-07-07">July 07, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
-        <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+        <authority>SCTA</authority>
+        <availability  status="free">
+          <p>Published under a <ref  target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-07-07">July 7th, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="R">Reims</witness>
+          <witness  xml:id="R"  n="reims">Reims</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
-<surface n="R65r">
-<graphic url="R65r.jpg"/>
-  <zone start="#l40-aecldn" ulx="149" uly="332" lrx="799" lry="882" n="1"/>
-  <zone start="#l40-dsqecl" ulx="149" uly="802" lrx="799" lry="986" n="1"/>
-  <zone start="#l40-tdqpfn" ulx="157" uly="907" lrx="807" lry="1265" n="1"/>
-  <zone start="#l40-idccnd" ulx="157" uly="1181" lrx="807" lry="1331" n="1"/>
-  <zone start="#l40-idqpni" ulx="157" uly="1256" lrx="807" lry="1494" n="1"/>
-<zone start="#l40-vamdps" ulx="157" uly="1447" lrx="807" lry="1770" n="1"/>
-<zone start="#l40-scaeim" ulx="152" uly="1690" lrx="802" lry="1833" n="1"/>
-<zone start="#l40-scaeim" ulx="794" uly="190" lrx="1444" lry="273" n="2"/>
-<zone start="#l40-iacnvc" ulx="796" uly="190" lrx="1446" lry="854" n="1"/>
-<zone start="#l40-arprof" ulx="804" uly="769" lrx="1454" lry="995" n="1"/>
-<zone start="#l40-iqqnrb" ulx="804" uly="948" lrx="1454" lry="1101" n="1"/>
-<zone start="#l40-eqdsde" ulx="804" uly="1055" lrx="1454" lry="1213" n="1"/>
-<zone start="#l40-iaqpoe" ulx="804" uly="1135" lrx="1454" lry="1332" n="1"/>
-<zone start="#l40-aprnof" ulx="804" uly="1241" lrx="1454" lry="1755" n="1"/>
-<zone start="#l40-speici" ulx="804" uly="1671" lrx="1454" lry="1830" n="1"/>
-</surface>
-<surface n="R65v">
-<graphic url="R65v.jpg"/>
-<zone start="#l40-speici" ulx="319" uly="189" lrx="969" lry="266" n="2"/>
-<zone start="#l40-tpcddf" ulx="321" uly="189" lrx="971" lry="435" n="1"/>
-<zone start="#l40-qpcgce" ulx="326" uly="355" lrx="976" lry="470" n="1"/>
-<zone start="#l40-qpcqdd" ulx="324" uly="388" lrx="974" lry="1315" n="1"/>
-<zone start="#l40-qaspnr" ulx="324" uly="1230" lrx="974" lry="1679" n="1"/>
-<zone start="#l40-seasod" ulx="324" uly="1595" lrx="974" lry="1833" n="1"/>
-<zone start="#l40-seasod" ulx="980" uly="200" lrx="1630" lry="626" n="2"/>
-<zone start="#l40-eivsod" ulx="971" uly="576" lrx="1621" lry="1339" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-07-07" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="R65r">
+      <graphic url="R65r.jpg"/>
+      <zone start="#l40-aecldn" ulx="149" uly="332" lrx="799" lry="882" n="1"/>
+      <zone start="#l40-dsqecl" ulx="149" uly="802" lrx="799" lry="986" n="1"/>
+      <zone start="#l40-tdqpfn" ulx="157" uly="907" lrx="807" lry="1265" n="1"/>
+      <zone start="#l40-idccnd" ulx="157" uly="1181" lrx="807" lry="1331" n="1"/>
+      <zone start="#l40-idqpni" ulx="157" uly="1256" lrx="807" lry="1494" n="1"/>
+      <zone start="#l40-vamdps" ulx="157" uly="1447" lrx="807" lry="1770" n="1"/>
+      <zone start="#l40-scaeim" ulx="152" uly="1690" lrx="802" lry="1833" n="1"/>
+      <zone start="#l40-scaeim" ulx="794" uly="190" lrx="1444" lry="273" n="2"/>
+      <zone start="#l40-iacnvc" ulx="796" uly="190" lrx="1446" lry="854" n="1"/>
+      <zone start="#l40-arprof" ulx="804" uly="769" lrx="1454" lry="995" n="1"/>
+      <zone start="#l40-iqqnrb" ulx="804" uly="948" lrx="1454" lry="1101" n="1"/>
+      <zone start="#l40-eqdsde" ulx="804" uly="1055" lrx="1454" lry="1213" n="1"/>
+      <zone start="#l40-iaqpoe" ulx="804" uly="1135" lrx="1454" lry="1332" n="1"/>
+      <zone start="#l40-aprnof" ulx="804" uly="1241" lrx="1454" lry="1755" n="1"/>
+      <zone start="#l40-speici" ulx="804" uly="1671" lrx="1454" lry="1830" n="1"/>
+    </surface>
+    <surface n="R65v">
+      <graphic url="R65v.jpg"/>
+      <zone start="#l40-speici" ulx="319" uly="189" lrx="969" lry="266" n="2"/>
+      <zone start="#l40-tpcddf" ulx="321" uly="189" lrx="971" lry="435" n="1"/>
+      <zone start="#l40-qpcgce" ulx="326" uly="355" lrx="976" lry="470" n="1"/>
+      <zone start="#l40-qpcqdd" ulx="324" uly="388" lrx="974" lry="1315" n="1"/>
+      <zone start="#l40-qaspnr" ulx="324" uly="1230" lrx="974" lry="1679" n="1"/>
+      <zone start="#l40-seasod" ulx="324" uly="1595" lrx="974" lry="1833" n="1"/>
+      <zone start="#l40-seasod" ulx="980" uly="200" lrx="1630" lry="626" n="2"/>
+      <zone start="#l40-eivsod" ulx="971" uly="576" lrx="1621" lry="1339" n="1"/>
+    </surface>
   </facsimile>
   <text>
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#R" n="65-r"/>
+        <cb ed="#R" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio40">
-        <head subtype="title" xml:id="l40-Hldfldf">Lectio 40, de Fruitione [Reims Transcription]</head>
+        <head xml:id="l40-Hldfldf">Lectio 40, de Fruitione [Reims Transcription]</head>
         <div>
           <head xml:id="l40-Hqeqdnp">Quod ea quae tacta fuerunt quantum ad materiam nobilitatis non sunt intelligenda de nobilitate politica</head>
-          
-          <p xml:id="l40-aecldn"><g ref="#dbslash"/>Advertendum 
-            <lb ed="#R"/>est circa prius dicta quod ea quae tacta fuerunt 
+          <p xml:id="l40-aecldn">
+            <g ref="#dbslash"/>Advertendum 
+            <lb ed="#R" n="6"/>est circa prius dicta quod ea quae tacta fuerunt 
             <lb ed="#R"/>quantum ad materiam nobilitatis non sunt intelligenda 
             <lb ed="#R"/>de nobilitate politica secundum communem usum loquendi, 
             <lb ed="#R"/>quia ad Dei subiectionem non sufficit talis 
@@ -76,17 +96,19 @@
             <lb ed="#R"/>reflectendo aliquid in se, <g ref="#slash"/>ideo dicit <name>Augustinus</name>
             <lb ed="#R"/>in libro <title>De civitate Dei</title> duas civitates 
             <lb ed="#R"/>fecerunt duo amores, <g ref="#slash"/>amor Dei usque 
-            <lb ed="#R"/>ad contemptum sui, <g ref="#slash"/>amor sui usque ad contemp<g ref="#slash"/><lb ed="#R"/>tum 
+            <lb ed="#R"/>ad contemptum sui, <g ref="#slash"/>amor sui usque ad contemp<g ref="#slash"/><lb ed="#R" break="no"/>tum 
             Dei et huiusmodi subiectio non sufficit 
             <lb ed="#R"/>ad nobilitatem politicam secundum quod utuntur leges de 
-            nobilitate.</p>
-          
-          <p xml:id="l40-dsqecl"><g ref="#dbslash"/>Dico secundo quod ab huiusmodi subiectione 
-            <lb ed="#R"/>et eius umbra nobilitas po??ta[?] sumpser[??] <name>Ori<g ref="#slash"/><lb ed="#R"/>ginem</name>, 
+            <lb ed="#R"/>nobilitate.
+          </p>
+          <p xml:id="l40-dsqecl">
+            <g ref="#dbslash"/>Dico secundo quod ab huiusmodi subiectione 
+            <lb ed="#R"/>et eius umbra nobilitas po??ta[?] sumpser[??] <name>Ori<g ref="#slash"/><lb ed="#R" break="no"/>ginem</name>, 
             quia ab ea antiqui sumpserunt et 
-            <lb ed="#R"/>considerunt leges.</p>
-          
-          <p xml:id="l40-tdqpfn"><g ref="#dbslash"/>Tertio dico quod ad nobilitatem 
+            <lb ed="#R"/>considerunt leges.
+          </p>
+          <p xml:id="l40-tdqpfn">
+            <g ref="#dbslash"/>Tertio dico quod ad nobilitatem 
             <lb ed="#R"/>politicam ultra virtutem apparentem vel existentem 
             <lb ed="#R"/>requiritur applicatio ad conferentia politicae. <g ref="#slash"/>Unde 
             <lb ed="#R"/>quantumcumque quis esset virtuosus non propter hoc diceretur 
@@ -94,197 +116,215 @@
             <lb ed="#R"/>in politia. <g ref="#slash"/>Requiritur etiam longa continuatio 
             <lb ed="#R"/>quia propter unum solum factum in politia non dicitur 
             <lb ed="#R"/>unus nobilis, <g ref="#slash"/>sed requiritur quod continuet et faciat 
-            <lb ed="#R"/>plura facta nobilitatis.</p>
-          
-          <p xml:id="l40-idccnd"><g ref="#dbslash"/>Ideo dicitur consequentur quod servitus 
+            <lb ed="#R"/>plura facta nobilitatis.
+          </p>
+          <p xml:id="l40-idccnd">
+            <g ref="#dbslash"/>Ideo dicitur consequentur quod servitus 
             <lb ed="#R"/>peccati non tollit nobilitatem pol?tam[?], saltem condui[?] 
-            <lb ed="#R"/>non duret.</p>
-          
-          <p xml:id="l40-idqpni"><g ref="#slash"/>Item dicitur quod servitus peccati non etiam 
+            <lb ed="#R"/>non duret
+          </p>
+          <p xml:id="l40-idqpni">
+            <g ref="#slash"/>Item dicitur quod servitus peccati non etiam 
             <lb ed="#R"/>tollit dominium, <g ref="#slash"/>nam sacra scriptura praecipit 
             <lb ed="#R"/>quod servi obediant dominis suis supposito 
             <lb ed="#R"/>adhuc quod sint in peccato. <g ref="#slash"/>quae autem sunt de 
-            <lb ed="#R"/>intrinsecam ratione nobilitatis non pertinet ad propo<g ref="#slash"/><lb ed="#R"/>situm 
-            nec pro nunc investigabitur.</p>
-          
+            <lb ed="#R"/>intrinsecam ratione nobilitatis non pertinet ad propo<g ref="#slash"/><lb ed="#R" break="no"/>situm 
+            nec pro nunc investigabitur
+          </p>
         </div>
         <div>
           <head xml:id="l40-Hmpddfo">Materia principalis: diffinitio fruitionis ordinatae</head>
-          
-      <p xml:id="l40-vamdps"><lb ed="#R"/>Veniendo ad materiam principalem satis ex 
-        <lb ed="#R"/>declaratione habitudinis ipsius Dei ad 
-        <lb ed="#R"/>creaturam apparet quod Deus est solum obiectum 
-        <lb ed="#R"/>licitae fruitionis et obiectum beatificum, quia in nulla 
-        <lb ed="#R"/>creatura reperitur ratio fruibilis vel terminantis fina<g ref="#slash"/><lb ed="#R"/>liter 
-      vel satiantis. Unde fruitio ordinata potest 
-        <lb ed="#R"/>sic describi, <g ref="#slash"/>fruitio ordinata est dilectio Dei 
-        <lb ed="#R"/>propter se.</p>
-      
-      <div>
-        <head xml:id="l40-Hobines">Obiectiones</head>
-      
-        <p xml:id="l40-scaeim"><g ref="#dbslash"/>Sed contra arguitur ex dictis in praecedenti 
-        <lb ed="#R"/>quaestione, <g ref="#slash"/>nam Deus est diligendus propter beneficia, 
-        <lb ed="#R"/>ergo beneficia sunt magis diligenda, <g ref="#slash"/>quia 
-        <cb ed="#R" n="65rb"/><lb ed="#R"/>propter unum quodque talem et illud magis.</p>
-      
-        <p xml:id="l40-iacnvc"><g ref="#dbslash"/>Item 
-        <lb ed="#R"/>arguitur contra illud propter se, <g ref="#slash"/>quia vel li 'propter se' 
-        <lb ed="#R"/>causatur[??] negative vel positive, <g ref="#slash"/>non negative, quia creatura 
-        <lb ed="#R"/>esset fruendum, quia virtutes propter se diliguntur 
-        <lb ed="#R"/>quia virtutes possunt diligi eet quod illa dilectio 
-        <lb ed="#R"/>non referatur in aliud, <g ref="#slash"/>si causatur[?] positive oportet quod 
-        <lb ed="#R"/>sit alterum duorum modorum vel quia huiusmodi dilectio 
-        <lb ed="#R"/>habet li propter se tamquam partem obiecti, <g ref="#slash"/>vel quia huiusmodi 
-        <lb ed="#R"/>dilectionem praecedit amor Dei alius propter quem 
-        <lb ed="#R"/>amor Dei causatur quia non videtur alius modus 
-        <lb ed="#R"/>explicandi li propter se, <g ref="#slash"/>sed neutrum est dicendum quia 
-        <lb ed="#R"/>si detur principium[?], tunc realiter erit bis[?vis] obiectum 
-        <lb ed="#R"/>eiusdem dilectionis si li propter se sit pars dilectionis 
-        <lb ed="#R"/>obiecti Dei, <g ref="#slash"/>nam tunc replicabit idem quod 
-        <lb ed="#R"/>non videtur conveniens, <g ref="#slash"/>si detur secundum tunc numquam 
-        <lb ed="#R"/>staret habere unicum actum diligendi Deum 
-        <lb ed="#R"/>fruitione, <g ref="#slash"/>sed semper duo requirerentur quod non 
-        <lb ed="#R"/>videtur conveniens.</p> 
-      
-        <p xml:id="l40-arprof"><g ref="#dbslash"/>Aliae rationes possunt induci 
-        <lb ed="#R"/>quia quaereretur qua dilectione una par??va[?] divina 
-        <lb ed="#R"/>diligit aliam, quia videtur quod persona in 
-        <lb ed="#R"/>esse personali non habet rationem obiecti fruibilis, quia 
-        <lb ed="#R"/>tunc essent plures rationes obiectales fruibiles.</p>
-      
-        <p xml:id="l40-iqqnrb"><lb ed="#R"/><g ref="#dbslash"/>Item quaereretur qua ratione Pater diligit 
-        <lb ed="#R"/>Filium, <g ref="#slash"/>et sic si Filius in esse personali non 
-        <lb ed="#R"/>dicat rationem fruibilis, ergo nec rationem bonitatis.</p>
-      
-        <p xml:id="l40-eqdsde"><lb ed="#R"/>Etiam quaereretur de tota civitate, <g ref="#slash"/>etiam apud 
-        <lb ed="#R"/>formalizantes quaereretur sub qua ratione comprae<g ref="#slash"/><lb ed="#R"/>hendit 
-        se divina essentia.</p>
-      
-        <p xml:id="l40-iaqpoe"><g ref="#dbslash"/>Item arguitur[?] quia 
-        <lb ed="#R"/>idem actus est usus et fruitio ordinata 
-        <lb ed="#R"/>sit, ergo ille actus A[?], tunc est fruitio et 
-        <lb ed="#R"/>habet creaturam pro obiecto, ergo.</p>
-      </div>
+          <p xml:id="l40-vamdps">
+            <lb ed="#R"/>Veniendo ad materiam principalem satis ex 
+            <lb ed="#R"/>declaratione habitudinis ipsius Dei ad 
+            <lb ed="#R"/>creaturam apparet quod Deus est solum obiectum 
+            <lb ed="#R"/>licitae fruitionis et obiectum beatificum, quia in nulla 
+            <lb ed="#R"/>creatura reperitur ratio fruibilis vel terminantis fina<g ref="#slash"/><lb ed="#R" break="no"/>liter 
+            vel satiantis. Unde fruitio ordinata potest 
+            <lb ed="#R"/>sic describi, <g ref="#slash"/>fruitio ordinata est dilectio Dei 
+            <lb ed="#R"/>propter se
+          </p>
           <div>
-            
+            <head xml:id="l40-Hobines">Obiectiones</head>
+            <p xml:id="l40-scaeim">
+              <g ref="#dbslash"/>Sed contra arguitur ex dictis in praecedenti 
+              <lb ed="#R"/>quaestione, <g ref="#slash"/>nam Deus est diligendus propter beneficia, 
+              <lb ed="#R"/>ergo beneficia sunt magis diligenda, <g ref="#slash"/>quia 
+              <cb ed="#R" n="b"/><!-- 65rb -->
+              <lb ed="#R"/>propter unum quodque talem et illud magis
+            </p>
+            <p xml:id="l40-iacnvc">
+              <g ref="#dbslash"/>Item 
+              <lb ed="#R"/>arguitur contra illud propter se, <g ref="#slash"/>quia vel li 'propter se' 
+              <lb ed="#R"/>causatur[??] negative vel positive, <g ref="#slash"/>non negative, quia creatura 
+              <lb ed="#R"/>esset fruendum, quia virtutes propter se diliguntur 
+              <lb ed="#R"/>quia virtutes possunt diligi eet quod illa dilectio 
+              <lb ed="#R"/>non referatur in aliud, <g ref="#slash"/>si causatur[?] positive oportet quod 
+              <lb ed="#R"/>sit alterum duorum modorum vel quia huiusmodi dilectio 
+              <lb ed="#R"/>habet li propter se tamquam partem obiecti, <g ref="#slash"/>vel quia huiusmodi 
+              <lb ed="#R"/>dilectionem praecedit amor Dei alius propter quem 
+              <lb ed="#R"/>amor Dei causatur quia non videtur alius modus 
+              <lb ed="#R"/>explicandi li propter se, <g ref="#slash"/>sed neutrum est dicendum quia 
+              <lb ed="#R"/>si detur principium[?], tunc realiter erit bis[?vis] obiectum 
+              <lb ed="#R"/>eiusdem dilectionis si li propter se sit pars dilectionis 
+              <lb ed="#R"/>obiecti Dei, <g ref="#slash"/>nam tunc replicabit idem quod 
+              <lb ed="#R"/>non videtur conveniens, <g ref="#slash"/>si detur secundum tunc numquam 
+              <lb ed="#R"/>staret habere unicum actum diligendi Deum 
+              <lb ed="#R"/>fruitione, <g ref="#slash"/>sed semper duo requirerentur quod non 
+              <lb ed="#R"/>videtur conveniens
+            </p>
+            <p xml:id="l40-arprof">
+              <g ref="#dbslash"/>Aliae rationes possunt induci 
+              <lb ed="#R"/>quia quaereretur qua dilectione una par??va[?] divina 
+              <lb ed="#R"/>diligit aliam, quia videtur quod persona in 
+              <lb ed="#R"/>esse personali non habet rationem obiecti fruibilis, quia 
+              <lb ed="#R"/>tunc essent plures rationes obiectales fruibiles
+            </p>
+            <p xml:id="l40-iqqnrb">
+              <lb ed="#R"/><g ref="#dbslash"/>Item quaereretur qua ratione Pater diligit 
+              <lb ed="#R"/>Filium, <g ref="#slash"/>et sic si Filius in esse personali non 
+              <lb ed="#R"/>dicat rationem fruibilis, ergo nec rationem bonitatis
+            </p>
+            <p xml:id="l40-eqdsde">
+              <lb ed="#R"/>Etiam quaereretur de tota civitate, <g ref="#slash"/>etiam apud 
+              <lb ed="#R"/>formalizantes quaereretur sub qua ratione comprae<g ref="#slash"/><lb ed="#R" break="no"/>hendit 
+              se divina essentia
+            </p>
+            <p xml:id="l40-iaqpoe">
+              <g ref="#dbslash"/>Item arguitur[?] quia 
+              <lb ed="#R"/>idem actus est usus et fruitio ordinata 
+              <lb ed="#R"/>sit, ergo ille actus A[?], tunc est fruitio et 
+              <lb ed="#R"/>habet creaturam pro obiecto, ergo
+            </p>
+          </div>
+          <div>
             <head xml:id="l40-Hraorao">Responsiones ad obiectiones</head>
-        
             <div>
               <head xml:id="l40-Hapapap">Ad primum</head>
-              
-              <p xml:id="l40-aprnof"><g ref="#dbslash"/>Ad primum respondendum est 
-        <lb ed="#R"/>de dilectione propter beneficia quia beneficia possunt 
-        <lb ed="#R"/>multipliciter concurrere ad dilectionem Dei fruitativam[??] 
-        <lb ed="#R"/>primo ut ostensiva rationis diligibilitatis[??} intrinsece 
-        <lb ed="#R"/>nam ex diffinitione bonitatis ad extra arguitur 
-        <lb ed="#R"/>interior bonitas, <g ref="#slash"/>et ideo beneficia sunt iu<g ref="#slash"/><lb ed="#R"/>dicativa 
-        intrinsece bonitatis, <g ref="#slash"/>et hoc est conlusione[?ne?], quia 
-        <lb ed="#R"/>omnis operatio liberalitatis iudicat virtutem in<lb ed="#R"/>dante 
-        et isto modo beneficia divina ar<g ref="#slash"/><lb ed="#R"/>guunt 
-        ad intra summam bonitatem et lar<g ref="#slash"/><lb ed="#R"/>gitatem 
-        <g ref="#slash"/>modo ex hoc quod beneficia solum iudicant 
-        <lb ed="#R"/>non propter hoc habent rationem fruibilis, sed solum iudi<lb ed="#R"/>cant 
-        notitiam obiecti fruibilis.</p> 
-              
-              <p xml:id="l40-speici"><g ref="#slash"/>Secundo possunt[deletion??} esse causa 
-        <lb ed="#R"/>rememorativa ad istum sensum quod faciant 
-        <lb ed="#R"/>ostendere materiam obiecti fruibilis ex hoc inducunt 
-        <cb ed="#R" n="65va"/><lb ed="#R"/>in considerationem ipsius.</p> 
-              
-              <p xml:id="l40-tpcddf"><g ref="#slash"/>Tertio possunt considerari 
-        <lb ed="#R"/>alligando et <del rend="strikethrough">noo</del> movendo[?] potentiam, <g ref="#slash"/>nam ex re<g ref="#slash"/><lb ed="#R"/>ceptione 
-        beneficiorum creatura redditur prom<g ref="#slash"/><lb ed="#R"/>tior 
-        ad existendum in actum fruitive et 
-        <lb ed="#R"/>in hoc reddunt potentiam volitivam protiorem[??] 
-        <lb ed="#R"/>ad diligendum Deum fruitive.</p> 
-      
-              <p xml:id="l40-qpcgce"><g ref="#dbslash"/>Quarto possunt 
-        <lb ed="#R"/>concurrere in genere causae efficientis.</p> 
-      
-              <p xml:id="l40-qpcqdd"><g ref="#slash"/>Quinto possunt 
-        <lb ed="#R"/>concurrere in genere causae finalis, sed non essentialiter 
-        <lb ed="#R"/>ordinat et iste est intellectus de quo magis 
-        <lb ed="#R"/>ad propositum, <g ref="#slash"/>in materia possunt enim concurrere beneficia 
-        <lb ed="#R"/>vel dilectionis fruitione in genere causae fi<g ref="#slash"/><lb ed="#R"/>nalis 
-        sic quod realiter moveant per modum 
-        <lb ed="#R"/>finis ad productionem dilectionis respectu Dei non 
-        <lb ed="#R"/>numquam per modum finis essentialiter ordinati, sed sic 
-        <lb ed="#R"/>non quod beneficium sit finis. <g ref="#slash"/>Et quod Deus essentialiter 
-        <lb ed="#R"/>ordinetur sibi nec amores huiusmodi obiectorum 
-        <lb ed="#R"/>habent talem ordinem essentialem, sed magis e converso 
-        <lb ed="#R"/>quia ultimum in executione est primum in intensione 
-        <lb ed="#R"/>et sic non sequitur quod magis diligantur 
-        <lb ed="#R"/>beneficia, <g ref="#slash"/>quia non est ordo essentialis sic quod 
-        <lb ed="#R"/>Deus ordinetur in beneficium nec amore 
-        <lb ed="#R"/>beneficii est prior essentialiter amore Dei, sed 
-        <lb ed="#R"/>quod concursu et extrinseco et accidentia concurrit 
-        <lb ed="#R"/>ad dilectione Dei, <g ref="#slash"/>et sic non diligo Deum 
-        <lb ed="#R"/>propter beneficium sic quod bene finium[???] sic causa finalis 
-        <lb ed="#R"/>essentialis propter quam diligo Deum. <g ref="#slash"/>Si autem 
-        <lb ed="#R"/>li 'propter' dicat causam occasionalem, tunc poterit 
-        <lb ed="#R"/>concedi quod Deus diligitur propter beneficia, <g ref="#slash"/>quia 
-        <lb ed="#R"/>beneficia sunt causa occasionalis propter quam 
-        <lb ed="#R"/>Deus diligitur.</p>
+              <p xml:id="l40-aprnof">
+                <g ref="#dbslash"/>Ad primum respondendum est 
+                <lb ed="#R"/>de dilectione propter beneficia quia beneficia possunt 
+                <lb ed="#R"/>multipliciter concurrere ad dilectionem Dei fruitativam[??] 
+                <lb ed="#R"/>primo ut ostensiva rationis diligibilitatis[??} intrinsece 
+                <lb ed="#R"/>nam ex diffinitione bonitatis ad extra arguitur 
+                <lb ed="#R"/>interior bonitas, <g ref="#slash"/>et ideo beneficia sunt iu<g ref="#slash"/><lb ed="#R" break="no"/>dicativa 
+                intrinsece bonitatis, <g ref="#slash"/>et hoc est conlusione[?ne?], quia 
+                <lb ed="#R"/>omnis operatio liberalitatis iudicat virtutem in<lb ed="#R" break="no"/>dante 
+                et isto modo beneficia divina ar<g ref="#slash"/><lb ed="#R" break="no"/>guunt 
+                ad intra summam bonitatem et lar<g ref="#slash"/><lb ed="#R" break="no"/>gitatem 
+                <g ref="#slash"/>modo ex hoc quod beneficia solum iudicant 
+                <lb ed="#R"/>non propter hoc habent rationem fruibilis, sed solum iudi<lb ed="#R" break="no"/>cant 
+                notitiam obiecti fruibilis
+              </p>
+              <p xml:id="l40-speici">
+                <g ref="#slash"/>Secundo possunt[deletion??} esse causa 
+                <lb ed="#R"/>rememorativa ad istum sensum quod faciant 
+                <lb ed="#R"/>ostendere materiam obiecti fruibilis ex hoc inducunt 
+                <pb ed="#R" n="65-v"/>
+                <cb ed="#R" n="a"/>
+                <lb ed="#R"/>in considerationem ipsius
+              </p> 
+              <p xml:id="l40-tpcddf">
+                <g ref="#slash"/>Tertio possunt considerari 
+                <lb ed="#R"/>alligando et <del rend="strikethrough">noo</del> movendo[?] potentiam, <g ref="#slash"/>nam ex re<g ref="#slash"/><lb ed="#R" break="no"/>ceptione 
+                beneficiorum creatura redditur prom<g ref="#slash"/><lb ed="#R" break="no"/>tior 
+                ad existendum in actum fruitive et 
+                <lb ed="#R"/>in hoc reddunt potentiam volitivam protiorem[??] 
+                <lb ed="#R"/>ad diligendum Deum fruitive
+              </p> 
+              <p xml:id="l40-qpcgce">
+                <g ref="#dbslash"/>Quarto possunt 
+                <lb ed="#R"/>concurrere in genere causae efficientis
+              </p> 
+              <p xml:id="l40-qpcqdd">
+                <g ref="#slash"/>Quinto possunt 
+                <lb ed="#R"/>concurrere in genere causae finalis, sed non essentialiter 
+                <lb ed="#R"/>ordinat et iste est intellectus de quo magis 
+                <lb ed="#R"/>ad propositum, <g ref="#slash"/>in materia possunt enim concurrere beneficia 
+                <lb ed="#R"/>vel dilectionis fruitione in genere causae fi<g ref="#slash"/><lb ed="#R" break="no"/>nalis 
+                sic quod realiter moveant per modum 
+                <lb ed="#R"/>finis ad productionem dilectionis respectu Dei non 
+                <lb ed="#R"/>numquam per modum finis essentialiter ordinati, sed sic 
+                <lb ed="#R"/>non quod beneficium sit finis. <g ref="#slash"/>Et quod Deus essentialiter 
+                <lb ed="#R"/>ordinetur sibi nec amores huiusmodi obiectorum 
+                <lb ed="#R"/>habent talem ordinem essentialem, sed magis e converso 
+                <lb ed="#R"/>quia ultimum in executione est primum in intensione 
+                <lb ed="#R"/>et sic non sequitur quod magis diligantur 
+                <lb ed="#R"/>beneficia, <g ref="#slash"/>quia non est ordo essentialis sic quod 
+                <lb ed="#R"/>Deus ordinetur in beneficium nec amore 
+                <lb ed="#R"/>beneficii est prior essentialiter amore Dei, sed 
+                <lb ed="#R"/>quod concursu et extrinseco et accidentia concurrit 
+                <lb ed="#R"/>ad dilectione Dei, <g ref="#slash"/>et sic non diligo Deum 
+                <lb ed="#R"/>propter beneficium sic quod bene finium[???] sic causa finalis 
+                <lb ed="#R"/>essentialis propter quam diligo Deum. <g ref="#slash"/>Si autem 
+                <lb ed="#R"/>li 'propter' dicat causam occasionalem, tunc poterit 
+                <lb ed="#R"/>concedi quod Deus diligitur propter beneficia, <g ref="#slash"/>quia 
+                <lb ed="#R"/>beneficia sunt causa occasionalis propter quam 
+                <lb ed="#R"/>Deus diligitur
+              </p>
             </div>
             <div>
               <head xml:id="l40-Hasasas">Ad secundum</head>
-            
-              <p xml:id="l40-qaspnr"><g ref="#dbslash"/>Quantum ad secundum, utrum li 'propter' 
-        <lb ed="#R"/>se causatur[?] negative vel positive, <g ref="#slash"/>dicendum quod po<lb ed="#R"/>sitive 
-        causatur non negative, <g ref="#slash"/>quia tunc illa di<g ref="#slash"/><lb ed="#R"/>lectio 
-        propter quam diligeretur Deus non referretur. 
-        <lb ed="#R"/><g ref="#slash"/>Sed ibi est difficultas in modo exprimendi, <g ref="#slash"/>et 
-        breviter aquam[?Aquinam?] diligit[?dicit?] quod Deus diligitur 
-        <lb ed="#R"/>propter se, <g ref="#slash"/>quia Deus diligitur et propter nullum 
-        <lb ed="#R"/>aliud, <g ref="#slash"/>et quodlibet aliud diligitur propter ipsum 
-        <lb ed="#R"/>loquendo semper de dilectione fruitiva. <g ref="#slash"/>Et in hoc 
-        <lb ed="#R"/>dicitur Deus diligi propter se secundum <choice><orig>ymaginem</orig><reg>imaginem</reg></choice> <name><choice><orig>Okam</orig><reg>Ockham</reg></choice></name> 
-        <lb ed="#R"/>sed illud pro praesenti non reprobabitur.</p>
-      
-              <p xml:id="l40-seasod"><g ref="#dbslash"/>Sed est 
-        <lb ed="#R"/>aliu<subst><del>s</del><add place="overExisting">d</add></subst> modus magis g?a?tus, ubi advertendum 
-        <lb ed="#R"/>quod ad dilectionem Dei fruitivam concurrunt duae 
-        <lb ed="#R"/>causae. <g ref="#slash"/>Una est praeceptum legis universale. 
-        <lb ed="#R"/><g ref="#slash"/>Alia est ratio deitatis sumpta et subsumpta 
-        <lb ed="#R"/>sub lege universale in minori. <g ref="#slash"/>Verbi gratia 
-        <cb ed="#R" n="65vb"/><lb ed="#R"/>solus Deus est super omnia diligendus A 
-        <lb ed="#R"/>est Deus ergo est super omnia diligendus hoc as<g ref="#slash"/><lb ed="#R"/>sumitur 
-        <choice><orig>Aor</orig><reg>maior</reg></choice> quae est legis et hanc <choice><orig>Aorem</orig><reg>maiorem</reg></choice> accepto 
-        <lb ed="#R"/>per fidem, quia credo ex fide Deum esse super omnia 
-        <lb ed="#R"/>diligendum, <g ref="#slash"/>et <choice><orig>Bor</orig><reg>minor</reg></choice> sumitur participaliter[?] et illa sumitur aliquod 
-        <lb ed="#R"/>supponens quod Deo, <g ref="#slash"/>nam hic li propter se vel refert 
-        <lb ed="#R"/><choice><orig>Aorem</orig><reg>maiorem</reg></choice> universalem vel ad medium quod sumitur in 
-        <lb ed="#R"/>minori, <g ref="#slash"/>et debet li propter referri ad notitiam de illo 
-        <lb ed="#R"/>pro quo supponit in minore, <g ref="#slash"/>quia non est aliud 
-        <lb ed="#R"/>dicere quod consideratio deitatis est medium concludendi 
-        <lb ed="#R"/>in sillo[?] practico <add place="aboveLine">quam</add> quod Deus est super omnia diligendus.</p>
-               
-              <p xml:id="l40-eivsod"><lb ed="#R"/><g ref="#slash"/>Et istam viam ponit <choice><orig>Chaton</orig><reg>Chatton</reg></choice>, et ita dicit quod 
-        <lb ed="#R"/>ita debet intelligi quod Deus est super omnia 
-        <lb ed="#R"/>diligendus, <g ref="#slash"/>non quod li 'propter se' teneat a 
-        <lb ed="#R"/>parte obiecti, <g ref="#slash"/>nec quod dilectionem fruitivam praecedat 
-        <lb ed="#R"/>maior alius, sed quia dilectionem fruitivam praecedit 
-        <lb ed="#R"/>una <choice><orig>Aor</orig><reg>maior</reg></choice> cui asseritur ex fide, <g ref="#slash"/>et minor as<g ref="#slash"/><lb ed="#R"/>sumitur 
-        in qua ponitur terminus supponens pro di<g ref="#slash"/><lb ed="#R"/>vinitate, <g ref="#slash"/>ex quibus concluditur quod Deus est super 
-        <lb ed="#R"/>omnia diligendus, <g ref="#slash"/>et quomodo asserimus maiori 
-        <lb ed="#R"/>non oportet quod ibi sit alius amore, sed ex lege et 
-        <lb ed="#R"/>fide asserimus maiori, <g ref="#slash"/>non autem sic est in 
-        <lb ed="#R"/>aliis quia oportet quod sit desiderium asseriendi, <g ref="#slash"/>
-        <lb ed="#R"/>et hoc respectu silli[??] practici, verbi gratia, <g ref="#slash"/>ponatur quod sit 
-        <lb ed="#R"/>aliquis qui non infinetur et tunc sumatur 
-        <lb ed="#R"/>ista <choice><orig>Aor</orig><reg>maior</reg></choice> omne remedium pro sanitate ha<g ref="#slash"/><lb ed="#R"/>benda 
-        est quaerendum, <g ref="#slash"/>tunc iste non asseriet[?] 
-        <lb ed="#R"/><choice><orig>Aori</orig><reg>maiori</reg></choice>, quia non vult nec desiderat, <g ref="#slash"/>non autem sic 
-        <lb ed="#R"/>est in proposito quia maiori asserietur ex fide, <g ref="#slash"/>et 
-        <lb ed="#R"/>minor erit consideratio deitatis, <g ref="#slash"/>et ex illo, id est, 
-        <lb ed="#R"/>ex maiori et consideratione deitatis inferetur 
-        <lb ed="#R"/>quod Deus est super omnia diligendus.</p>
-              
+              <p xml:id="l40-qaspnr">
+                <g ref="#dbslash"/>Quantum ad secundum, utrum li 'propter' 
+                <lb ed="#R"/>se causatur[?] negative vel positive, <g ref="#slash"/>dicendum quod po<lb ed="#R" break="no"/>sitive 
+                causatur non negative, <g ref="#slash"/>quia tunc illa di<g ref="#slash"/><lb ed="#R" break="no"/>lectio 
+                propter quam diligeretur Deus non referretur. 
+                <lb ed="#R"/><g ref="#slash"/>Sed ibi est difficultas in modo exprimendi, <g ref="#slash"/>et 
+                breviter aquam[?Aquinam?] diligit[?dicit?] quod Deus diligitur 
+                <lb ed="#R"/>propter se, <g ref="#slash"/>quia Deus diligitur et propter nullum 
+                <lb ed="#R"/>aliud, <g ref="#slash"/>et quodlibet aliud diligitur propter ipsum 
+                <lb ed="#R"/>loquendo semper de dilectione fruitiva. <g ref="#slash"/>Et in hoc 
+                <lb ed="#R"/>dicitur Deus diligi propter se secundum <choice><orig>ymaginem</orig><reg>imaginem</reg></choice> <name><choice><orig>Okam</orig><reg>Ockham</reg></choice></name> 
+                <lb ed="#R"/>sed illud pro praesenti non reprobabitur
+              </p>
+              <p xml:id="l40-seasod">
+                <g ref="#dbslash"/>Sed est 
+                <lb ed="#R"/>aliu<subst><del>s</del><add place="overExisting">d</add></subst> modus magis g?a?tus, ubi advertendum 
+                <lb ed="#R"/>quod ad dilectionem Dei fruitivam concurrunt duae 
+                <lb ed="#R"/>causae. <g ref="#slash"/>Una est praeceptum legis universale. 
+                <lb ed="#R"/><g ref="#slash"/>Alia est ratio deitatis sumpta et subsumpta 
+                <lb ed="#R"/>sub lege universale in minori. <g ref="#slash"/>Verbi gratia 
+                <cb ed="#R" n="b"/><!-- 65vb -->
+                <lb ed="#R"/>solus Deus est super omnia diligendus A 
+                <lb ed="#R"/>est Deus ergo est super omnia diligendus hoc as<g ref="#slash"/><lb ed="#R" break="no"/>sumitur 
+                <choice><orig>Aor</orig><reg>maior</reg></choice> quae est legis et hanc <choice><orig>Aorem</orig><reg>maiorem</reg></choice> accepto 
+                <lb ed="#R"/>per fidem, quia credo ex fide Deum esse super omnia 
+                <lb ed="#R"/>diligendum, <g ref="#slash"/>et <choice><orig>Bor</orig><reg>minor</reg></choice> sumitur participaliter[?] et illa sumitur aliquod 
+                <lb ed="#R"/>supponens quod Deo, <g ref="#slash"/>nam hic li propter se vel refert 
+                <lb ed="#R"/><choice><orig>Aorem</orig><reg>maiorem</reg></choice> universalem vel ad medium quod sumitur in 
+                <lb ed="#R"/>minori, <g ref="#slash"/>et debet li propter referri ad notitiam de illo 
+                <lb ed="#R"/>pro quo supponit in minore, <g ref="#slash"/>quia non est aliud 
+                <lb ed="#R"/>dicere quod consideratio deitatis est medium concludendi 
+                <lb ed="#R"/>in sillo[?] practico <add place="aboveLine">quam</add> quod Deus est super omnia diligendus.
+              </p>
+              <p xml:id="l40-eivsod">
+                <lb ed="#R"/><g ref="#slash"/>Et istam viam ponit <choice><orig>Chaton</orig><reg>Chatton</reg></choice>, et ita dicit quod 
+                <lb ed="#R"/>ita debet intelligi quod Deus est super omnia 
+                <lb ed="#R"/>diligendus, <g ref="#slash"/>non quod li 'propter se' teneat a 
+                <lb ed="#R"/>parte obiecti, <g ref="#slash"/>nec quod dilectionem fruitivam praecedat 
+                <lb ed="#R"/>maior alius, sed quia dilectionem fruitivam praecedit 
+                <lb ed="#R"/>una <choice><orig>Aor</orig><reg>maior</reg></choice> cui asseritur ex fide, <g ref="#slash"/>et minor as<g ref="#slash"/><lb ed="#R" break="no"/>sumitur 
+                in qua ponitur terminus supponens pro di<g ref="#slash"/><lb ed="#R" break="no"/>vinitate, 
+                <g ref="#slash"/>ex quibus concluditur quod Deus est super 
+                <lb ed="#R"/>omnia diligendus, <g ref="#slash"/>et quomodo asserimus maiori 
+                <lb ed="#R"/>non oportet quod ibi sit alius amore, sed ex lege et 
+                <lb ed="#R"/>fide asserimus maiori, <g ref="#slash"/>non autem sic est in 
+                <lb ed="#R"/>aliis quia oportet quod sit desiderium asseriendi, <g ref="#slash"/>
+                <lb ed="#R"/>et hoc respectu silli[??] practici, verbi gratia, <g ref="#slash"/>ponatur quod sit 
+                <lb ed="#R"/>aliquis qui non infinetur et tunc sumatur 
+                <lb ed="#R"/>ista <choice><orig>Aor</orig><reg>maior</reg></choice> omne remedium pro sanitate ha<g ref="#slash"/><lb ed="#R" break="no"/>benda 
+                est quaerendum, <g ref="#slash"/>tunc iste non asseriet[?] 
+                <lb ed="#R"/><choice><orig>Aori</orig><reg>maiori</reg></choice>, quia non vult nec desiderat, <g ref="#slash"/>non autem sic 
+                <lb ed="#R"/>est in proposito quia maiori asserietur ex fide, <g ref="#slash"/>et 
+                <lb ed="#R"/>minor erit consideratio deitatis, <g ref="#slash"/>et ex illo, id est, 
+                <lb ed="#R"/>ex maiori et consideratione deitatis inferetur 
+                <lb ed="#R"/>quod Deus est super omnia diligendus.
+              </p>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </body>
   </text>
 </TEI>
