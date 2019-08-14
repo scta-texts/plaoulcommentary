@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,96 +10,113 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.07-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 43, de Fruitione [St. Victor Transcription]</title>
           <date when="2012-07-19">July 19, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2012-07-19">July 19th, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV">St. Victor</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>    <facsimile>
-<surface n="SV249v">
-<graphic url="SV249v.jpg"/>
-<zone start="#l43-pcivta" ulx="381" uly="428" lrx="1031" lry="836" n="1"/>
-<zone start="#l43-suirvr" ulx="381" uly="761" lrx="1031" lry="952" n="1"/>
-<zone start="#l43-sqorvr" ulx="380" uly="869" lrx="1030" lry="1060" n="1"/>
-<zone start="#l43-dcqrim" ulx="380" uly="987" lrx="1030" lry="1469" n="1"/>
-<zone start="#l43-csquef" ulx="380" uly="1432" lrx="1030" lry="1694" n="1"/>
-<zone start="#l43-sedorm" ulx="387" uly="1614" lrx="1037" lry="1907" n="1"/>
-<zone start="#l43-sedorm" ulx="1028" uly="301" lrx="1678" lry="422" n="2"/>
-<zone start="#l43-sucfpd" ulx="1028" uly="346" lrx="1678" lry="770" n="1"/>
-<zone start="#l43-hrtiep" ulx="1028" uly="686" lrx="1678" lry="1536" n="1"/>
-<zone start="#l43-iceier" ulx="1028" uly="1495" lrx="1678" lry="1764" n="1"/>
-<zone start="#l43-ifiecs" ulx="1028" uly="1680" lrx="1678" lry="1899" n="1"/>
-</surface>
-<surface n="SV250r">
-<graphic url="SV250r.jpg"/>
-<zone start="#l43-ifiecs" ulx="91" uly="293" lrx="741" lry="472" n="2"/>
-<zone start="#l43-cnsdps" ulx="91" uly="393" lrx="741" lry="665" n="1"/>
-<zone start="#l43-iipnav" ulx="101" uly="580" lrx="751" lry="1088" n="1"/>
-<zone start="#l43-iiipmc" ulx="91" uly="1002" lrx="741" lry="1367" n="1"/>
-<zone start="#l43-cdibem" ulx="91" uly="1289" lrx="741" lry="1672" n="1"/>
-<zone start="#l43-isqdpo" ulx="97" uly="1604" lrx="747" lry="1875" n="1"/>
-<zone start="#l43-isqdpo" ulx="726" uly="304" lrx="1376" lry="405" n="2"/>
-<zone start="#l43-sqcidr" ulx="726" uly="370" lrx="1376" lry="873" n="1"/>
-<zone start="#l43-isaoae" ulx="727" uly="797" lrx="1379" lry="1089" n="1"/>
-<zone start="#l43-egqoae" ulx="730" uly="1007" lrx="1380" lry="1312" n="1"/>
-<zone start="#l43-redpnm" ulx="722" uly="1234" lrx="1372" lry="1565" n="1"/>
-<zone start="#l43-sqcidr" ulx="887" uly="762" lrx="962" lry="835" n="1"/>
-<zone start="#l43-egqoae" ulx="1220" uly="1137" lrx="1290" lry="1199" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-07-10" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="SV249v">
+      <graphic url="SV249v.jpg"/>
+      <zone start="#l43-pcivta" ulx="381" uly="428" lrx="1031" lry="836" n="1"/>
+      <zone start="#l43-suirvr" ulx="381" uly="761" lrx="1031" lry="952" n="1"/>
+      <zone start="#l43-sqorvr" ulx="380" uly="869" lrx="1030" lry="1060" n="1"/>
+      <zone start="#l43-dcqrim" ulx="380" uly="987" lrx="1030" lry="1469" n="1"/>
+      <zone start="#l43-csquef" ulx="380" uly="1432" lrx="1030" lry="1694" n="1"/>
+      <zone start="#l43-sedorm" ulx="387" uly="1614" lrx="1037" lry="1907" n="1"/>
+      <zone start="#l43-sedorm" ulx="1028" uly="301" lrx="1678" lry="422" n="2"/>
+      <zone start="#l43-sucfpd" ulx="1028" uly="346" lrx="1678" lry="770" n="1"/>
+      <zone start="#l43-hrtiep" ulx="1028" uly="686" lrx="1678" lry="1536" n="1"/>
+      <zone start="#l43-iceier" ulx="1028" uly="1495" lrx="1678" lry="1764" n="1"/>
+      <zone start="#l43-ifiecs" ulx="1028" uly="1680" lrx="1678" lry="1899" n="1"/>
+    </surface>
+    <surface n="SV250r">
+      <graphic url="SV250r.jpg"/>
+      <zone start="#l43-ifiecs" ulx="91" uly="293" lrx="741" lry="472" n="2"/>
+      <zone start="#l43-cnsdps" ulx="91" uly="393" lrx="741" lry="665" n="1"/>
+      <zone start="#l43-iipnav" ulx="101" uly="580" lrx="751" lry="1088" n="1"/>
+      <zone start="#l43-iiipmc" ulx="91" uly="1002" lrx="741" lry="1367" n="1"/>
+      <zone start="#l43-cdibem" ulx="91" uly="1289" lrx="741" lry="1672" n="1"/>
+      <zone start="#l43-isqdpo" ulx="97" uly="1604" lrx="747" lry="1875" n="1"/>
+      <zone start="#l43-isqdpo" ulx="726" uly="304" lrx="1376" lry="405" n="2"/>
+      <zone start="#l43-sqcidr" ulx="726" uly="370" lrx="1376" lry="873" n="1"/>
+      <zone start="#l43-isaoae" ulx="727" uly="797" lrx="1379" lry="1089" n="1"/>
+      <zone start="#l43-egqoae" ulx="730" uly="1007" lrx="1380" lry="1312" n="1"/>
+      <zone start="#l43-redpnm" ulx="722" uly="1234" lrx="1372" lry="1565" n="1"/>
+      <zone start="#l43-sqcidr" ulx="887" uly="762" lrx="962" lry="835" n="1"/>
+      <zone start="#l43-egqoae" ulx="1220" uly="1137" lrx="1290" lry="1199" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="249-v"/>
+        <cb ed="#SV" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio43">
-        <head xml:id="l43-Hldfldf" subtype="title">Lectio 43, de Fruitione [St. Victor Transcription]</head>
-        
+        <head xml:id="l43-Hldfldf">Lectio 43, de Fruitione [St. Victor Transcription]</head>
         <div>
           <head xml:id="l43-Hqqoueo">Quod quamvis omnis fruitio sit amore et etiam omnis usus sit amore, aliquis tamen usus est odium</head>
-          
-          <p xml:id="l43-pcivta"><lb ed="#SV"/><hi rend="dropCapThreeLines">P</hi>ro clariori intellectu istorum terminorum uti et 
+          <p xml:id="l43-pcivta">
+            <lb ed="#SV" n="4"/><hi rend="dropCapThreeLines">P</hi>ro clariori intellectu istorum terminorum uti et 
             <lb ed="#SV"/>frui, sciendum est quod quamvis omnis fruitio sit 
             <lb ed="#SV"/>amore <g ref="#slash"/>et etiam omnis usus sit amore, <g ref="#slash"/>aliquis tamen 
-            <lb ed="#SV"/>usus est odium, <g ref="#slash"/>nam mala propter deum ordinatur etiam ordi<lb ed="#SV"/>nate. 
+            <lb ed="#SV"/>usus est odium, <g ref="#slash"/>nam mala propter deum ordinatur etiam ordi<lb ed="#SV" break="no"/>nate. 
             <g ref="slash"/>Ex quo patet quod fruitio debet describi per amorem 
             <lb ed="#SV"/>per velle diligere prosequi acceptare assuere propter se. <g ref="slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
             <lb ed="#SV"/>patet quod usus sub disiunctione debet describi per amare vel odire 
             <lb ed="#SV"/>fugere vel prosequi nolle velle acceptare deacceptare 
             <lb ed="#SV"/>propter aliud dilectum, <g ref="#slash"/>ideo in descriptone usus debet poni 
-            <lb ed="#SV"/>amor vel odium <g ref="#slash"/>vel termini aequivalentes.</p>
+            <lb ed="#SV"/>amor vel odium <g ref="#slash"/>vel termini aequivalentes
+          </p>
         </div>
-          
-          <div>
-            <head xml:id="l43-Hqiauef">Quod idem actus est usus et fruitio</head>
-            
-            <p xml:id="l43-suirvr"><g ref="dbslash"/>Sequitur ulterius 
-              <lb ed="#SV"/>iuxta viam <name><choice><orig>oquam</orig><reg>okam</reg></choice></name> et <name>adae</name> ponendo quod idem actus est usus et fruitio 
-              <lb ed="#SV"/>quod omne odium est lectum. <g ref="slash"/>et cum non sit processus in infinitum, 
-              <lb ed="#SV"/>oportet quod habeat finem propter quem ultimate diligitur.</p>
-          
-          </div>
-          
+        <div>
+          <head xml:id="l43-Hqiauef">Quod idem actus est usus et fruitio</head>
+          <p xml:id="l43-suirvr">
+            <g ref="dbslash"/>Sequitur ulterius 
+            <lb ed="#SV"/>iuxta viam <name><choice><orig>oquam</orig><reg>okam</reg></choice></name> et <name>adae</name> ponendo quod idem actus est usus et fruitio 
+            <lb ed="#SV"/>quod omne odium est lectum. <g ref="slash"/>et cum non sit processus in infinitum, 
+            <lb ed="#SV"/>oportet quod habeat finem propter quem ultimate diligitur.
+          </p>
+        </div>
         <div>
           <head xml:id="l43-Hqpavsn">Quod primus actus voluntatis sit nolitio</head>
-          
-    <p xml:id="l43-sqorvr"><g ref="#slash"/>sequitur 
-      <lb ed="#SV"/>quod omnis nolitio est volitio, quia omnis nolitio alicuius ma<lb ed="#SV"/>li 
-      est volitio alicuius boni propter quod illud malum 
-      <lb ed="#SV"/>Repellitur <g ref="#slash"/>vel Refutatur.</p>
-          
-          <p xml:id="l43-dcqrim"><g ref="dbslash"/>Dicitur consequentur quod cum isto stat 
+          <p xml:id="l43-sqorvr">
+            <g ref="#slash"/>sequitur 
+            <lb ed="#SV"/>quod omnis nolitio est volitio, quia omnis nolitio alicuius ma<lb ed="#SV" break="no"/>li 
+            est volitio alicuius boni propter quod illud malum 
+            <lb ed="#SV"/>Repellitur <g ref="#slash"/>vel Refutatur
+          </p>
+          <p xml:id="l43-dcqrim">
+            <g ref="dbslash"/>Dicitur consequentur quod cum isto stat 
             <lb ed="#SV"/>quod primus actus voluntatis sit nolitio, <g ref="#slash"/>nam licet nulla sit 
             <lb ed="#SV"/>nolitio, nisi propter bonum, <g ref="slash"/>et ille idem actus est acceptio boni, 
             <lb ed="#SV"/>tamen stat quod sit idem actus adaequate quo Respuitur malum et 
@@ -108,35 +127,35 @@
             <lb ed="#SV"/>illud obiectum absque volitione praevia, quo facto habebit nole 
             <lb ed="#SV"/>respectu illius obiecti, <g ref="slash"/>et sic illa nolitio erit odium mali <g ref="#slash"/>et etiam erit 
             <lb ed="#SV"/>dilectio dei, <g ref="slash"/>et per consequens nolitio non praerequirit aliquam volitionem 
-            <lb ed="#SV"/>distinctam de bono propter quod Respuitur illud malum.</p> 
-          
-          <p xml:id="l43-csquef"><lb ed="#SV"/><g ref="slash"/>Consequenter sequitur quod omnis usus mundi, sive sit ordinatus 
+            <lb ed="#SV"/>distinctam de bono propter quod Respuitur illud malum
+          </p> 
+          <p xml:id="l43-csquef">
+            <lb ed="#SV"/><g ref="slash"/>Consequenter sequitur quod omnis usus mundi, sive sit ordinatus 
             <lb ed="#SV"/>sive deordinatus, est fruitio. patet de usu ordinato ex prius 
             <lb ed="#SV"/>dictis, <g ref="slash"/>quia dilectio creaturae propter deum est dilectio dei propter 
             <lb ed="#SV"/>se, ergo est fruitio, licet sit usus creaturae, <g ref="#slash"/>etiam dilectio creaturae 
             <lb ed="#SV"/>propter se est usus inordinatus et est fruitio, quia stat sibi finem 
-            <lb ed="#SV"/>in creatura, <g ref="slash"/>et sic generaliter omnis usus est fruitio.</p>
-          
+            <lb ed="#SV"/>in creatura, <g ref="slash"/>et sic generaliter omnis usus est fruitio.
+          </p>
         </div>
-          
-          <div>
-            <head xml:id="l43-Hqaesao">Quod amor est superius ad odium</head>
-            
-            <p xml:id="l43-sedorm"><g ref="slash"/>Sequitur 
+        <div>
+          <head xml:id="l43-Hqaesao">Quod amor est superius ad odium</head>
+            <p xml:id="l43-sedorm">
+              <g ref="slash"/>Sequitur 
               <lb ed="#SV"/>ex dictis quod amor est superius ad odium, <g ref="slash"/>ita quod omne 
               <lb ed="#SV"/>odium est amor <g ref="#slash"/>et non econtra. <g ref="slash"/>patet, quia omne odium mali 
               <lb ed="#SV"/>est amor boni propter quod illud malum oditur. <g ref="slash"/>Sed quod non 
-              <lb ed="#SV"/>omnis amor sit odium <g ref="#slash"/>patet de fruitione ordinata quae terminatur im<lb ed="#SV"/>mediate 
+              <lb ed="#SV"/>omnis amor sit odium <g ref="#slash"/>patet de fruitione ordinata quae terminatur im<lb ed="#SV" break="no"/>mediate 
               ad deum. <g ref="slash"/>illa est sic amor quod non odium, <g ref="slash"/>tamen posset 
               <lb ed="#SV"/>esse odium, <g ref="slash"/>quia staret quod illa dilectio non solum haberet 
-              <cb ed="#SV" n="249vb"/><lb ed="#SV"/>deum pro obiecto, <g ref="slash"/>sed etiam malum, et sic esset odium respectu ma<lb ed="#SV"/>li.</p>
-          
+              <cb ed="#SV" n="b"/><!-- 249vb -->
+              <lb ed="#SV"/>deum pro obiecto, <g ref="slash"/>sed etiam malum, et sic esset odium respectu ma<lb ed="#SV" break="no"/>li.
+            </p>
           </div>
-          
           <div>
             <head xml:id="l43-Hcqdeui">Contra quemdam doctorem qui ponit quod idem actus est fruitio illius quod contingit ordinate frui, et tamen est usus inordinatus</head>
-            
-            <p xml:id="l43-sucfpd"><g ref="dbslash"/>Sequitur ulterius contra quemdam doctorem, qui ponit 
+            <p xml:id="l43-sucfpd">
+              <g ref="dbslash"/>Sequitur ulterius contra quemdam doctorem, qui ponit 
               <lb ed="#SV"/>istam propositionem idem actus est fruitio illius quod contingit 
               <lb ed="#SV"/>ordinate frui et tamen est usus inordinatus. <g ref="slash"/>sensus est 
               <lb ed="#SV"/>quod stat quod sit aliquis usus qui Realiter habet obiectum fruibile 
@@ -145,9 +164,10 @@
               <lb ed="#SV"/>propositionem sic stat quod aliquis velit propter deum formari 
               <lb ed="#SV"/>quo casu stante, <g ref="slash"/>iste habet unum actum usus qui habet debitum 
               <lb ed="#SV"/>obiectum fruibile et tamen est usus inordinatus, quia est peccatum, 
-              <lb ed="#SV"/>ergo corollarium suum verum.</p>
-            
-            <p xml:id="l43-hrtiep"><g ref="dbslash"/>hic Respondeo tenendo quod nullus est 
+              <lb ed="#SV"/>ergo corollarium suum verum
+            </p>
+            <p xml:id="l43-hrtiep">
+              <g ref="dbslash"/>hic Respondeo tenendo quod nullus est 
               <lb ed="#SV"/>usus si habet obiectum fruibile pro obiecto quin sit licitus, <g ref="slash"/>et 
               <lb ed="#SV"/>tunc ad motivum quando ponit casum quod sit aliquis qui vellit 
               <lb ed="#SV"/>fornicari propter deum. <g ref="slash"/>Dico quod casus est impossibilis, nisi capiat 
@@ -160,41 +180,47 @@
               <lb ed="#SV"/>et praecipere, <g ref="slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> praecepit iuxta illud, <g ref="slash"/>vade et fac 
               <lb ed="#SV"/>tibi filios fornicationis, <g ref="slash"/>et ita potest praecipere cum sit 
               <lb ed="#SV"/>dominus, <g ref="#slash"/>et ita potest praecipere fieri furtum, et sic nihil esset 
-              <lb ed="#SV"/>ad propositum, quia tunc esset actus meritorius et adimple<lb ed="#SV"/>tivus 
+              <lb ed="#SV"/>ad propositum, quia tunc esset actus meritorius et adimple<lb ed="#SV" break="no"/>tivus 
               praecepti, <g ref="slash"/>volo ergo contra fundamentum rationis non valet 
               <lb ed="#SV"/>arguere contra istam positionem Repugnat in eodem actu 
               <lb ed="#SV"/>quod sit summus honor et contemptus, <g ref="#slash"/>et ita esset in 
               <lb ed="#SV"/>proposito, quia dilectio fruitiva est dilectio dei maxime 
               <lb ed="#SV"/><sic>maxime</sic> honorativa, quia Refert se totam et operationes suas 
               <lb ed="#SV"/>in deum, <g ref="slash"/>et tamen contempneret deum, quia esset transgressor 
-              <lb ed="#SV"/>praecepti, <g ref="slash"/>et isti actus sunt imcompossibiles eidem personae.</p>
-            
-            <p xml:id="l43-iceier"><lb ed="#SV"/><g ref="dbslash"/>Item conversio et adversio non sunt compossibiles in eodem actu 
+              <lb ed="#SV"/>praecepti, <g ref="slash"/>et isti actus sunt imcompossibiles eidem personae.
+            </p>
+            <p xml:id="l43-iceier">
+              <lb ed="#SV"/><g ref="dbslash"/>Item conversio et adversio non sunt compossibiles in eodem actu 
               <lb ed="#SV"/>et in eadem potentia. <g ref="slash"/>unde quod idem actus moveat ad contraria 
               <lb ed="#SV"/>seipso immediate, hoc est impossibile. <g ref="slash"/>modo, actus fruitionis dei 
               <lb ed="#SV"/>movet in deum, <g ref="#slash"/>sed actus fruitionis movet ad bonum 
               <lb ed="#SV"/>commutabile, <g ref="#slash"/>et sic quod eadem potentia moveatur motibus contrariis, 
-              <lb ed="#SV"/>hoc videtur impossibile et Repugnare.</p>
-      
-            <p xml:id="l43-ifiecs"><g ref="dbslash"/>Item fruitio 
+              <lb ed="#SV"/>hoc videtur impossibile et Repugnare
+            </p>
+            <p xml:id="l43-ifiecs">
+              <g ref="dbslash"/>Item fruitio 
               <lb ed="#SV"/>in esse fruitionis, <g ref="slash"/>hoc est dei propter suam bonitatem secundum 
               <lb ed="#SV"/>illud quod afficit animam in deum est quaedam Rectitudo, 
               <lb ed="#SV"/>et sic illa fruitio inquantum <sic>inquantum</sic> ad deum est bona 
               <lb ed="#SV"/>licet ex habitudine quia est fruitio est adversio a 
-              <cb ed="#SV" n="250ra"/><lb ed="#SV"/>deo, <g ref="slash"/>et sic <choice><orig>defficit</orig><reg>deficit</reg></choice>, quia ponit quod talis fruitio in esse 
+              <pb ed="#SV" n="250-r"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>deo, <g ref="slash"/>et sic <choice><orig>defficit</orig><reg>deficit</reg></choice>, quia ponit quod talis fruitio in esse 
               <lb ed="#SV"/>fruitionis est inordinata, <g ref="slash"/>quia habitudo quae competit 
               <lb ed="#SV"/>sibi ut est fruitio dei movet in deum. <g ref="slash"/>et sic in esse 
-              <lb ed="#SV"/>fruitionis non est inordinata quod est contra se.</p>
-      
-            <p xml:id="l43-cnsdps"><g ref="dbslash"/>Confir<lb ed="#SV"/>matur, 
+              <lb ed="#SV"/>fruitionis non est inordinata quod est contra se.
+            </p>
+            <p xml:id="l43-cnsdps">
+              <g ref="dbslash"/>Confir<lb ed="#SV" break="no"/>matur, 
               nam si istae habitudines velle fornicari et 
               <lb ed="#SV"/>diligere deum essent separatae. <g ref="slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> esset Recta et tamen 
               <lb ed="#SV"/>prima esset viceversa, <g ref="#slash"/>nec tamen vitia prima <choice><orig>2am</orig><reg>secundam</reg></choice>, <g ref="#slash"/>licet 
               <lb ed="#SV"/>ponat duos. <g ref="slash"/>unde ex hoc quod actus non est Rectus respectu 
               <lb ed="#SV"/>creaturae, <g ref="#slash"/>non tamen oportet, quoniam sit Rectus respectu dei, quia facit 
-              <lb ed="#SV"/>creaturam ferri in deum propter se.</p>
-      
-            <p xml:id="l43-iipnav"><g ref="dbslash"/>Item Iudaei propter zaelum 
+              <lb ed="#SV"/>creaturam ferri in deum propter se.
+            </p>
+            <p xml:id="l43-iipnav">
+              <g ref="dbslash"/>Item Iudaei propter zaelum 
               <lb ed="#SV"/>legis volentis christum persequi credebant frui deo 
               <lb ed="#SV"/>et tamen non fruebantur, <g ref="slash"/>nam secundum <name>apostolum</name>, licet haberent 
               <lb ed="#SV"/>zaelum dei, <g ref="slash"/>non tamen secundum scientiam, <g ref="#slash"/>unde in casu nostro, <g ref="#slash"/>licet 
@@ -206,55 +232,55 @@
               <lb ed="#SV"/>circa christum. <g ref="slash"/>unde sicut dictum est prius quis credit 
               <lb ed="#SV"/>aliquando Recte diligere qui tamen non diligit Recte 
               <lb ed="#SV"/>propter difficultatem Resolutionis, et etiam nescientiam 
-              <lb ed="#SV"/>actuum voluntatis.</p>
-      
-            <p xml:id="l43-iiipmc"><g ref="slash"/>Ideo in illo casu, Iudaei pecca<lb ed="#SV"/>bant 
+              <lb ed="#SV"/>actuum voluntatis
+            </p>
+            <p xml:id="l43-iiipmc">
+              <g ref="slash"/>Ideo in illo casu, Iudaei pecca<lb ed="#SV" break="no"/>bant 
               contra deum, <g ref="slash"/>vel vana gloria vel propter cupiditatem 
               <lb ed="#SV"/>vel propter aliud, <g ref="slash"/>ideo male procurabant mortem 
-              <lb ed="#SV"/>christi. <g ref="dbslash"/>Confirmatur nam omnis fruitio est dile<lb ed="#SV"/>ctio 
+              <lb ed="#SV"/>christi. <g ref="dbslash"/>Confirmatur nam omnis fruitio est dile<lb ed="#SV" break="no"/>ctio 
               dei super omnia, ergo iste qui frueretur sic deo 
               <lb ed="#SV"/>et quod propter deum vellet fornicari diligeret 
               <lb ed="#SV"/>deum super omnia, ergo non esset in peccato, quia non stat 
               <lb ed="#SV"/>quod quis sit in peccato, <g ref="slash"/>et diligat deum super omnia, 
-              <lb ed="#SV"/>ut probabo inferius.</p>
-          
+              <lb ed="#SV"/>ut probabo inferius
+            </p>
           </div>
-          
           <div>
             <head xml:id="l43-Hqouvam">Quod omnis usus ordinatus est vitae aeternae meritorius</head>
-            
-            <p xml:id="l43-cdibem"><g ref="dbslash"/>Consequenter, dimittendo istam 
+            <p xml:id="l43-cdibem">
+              <g ref="dbslash"/>Consequenter, dimittendo istam 
               <lb ed="#SV"/>materiam, infero quod omnis usus ordinatus est vitae aeternae 
               <lb ed="#SV"/>meritorius, et quia multi doctores moderni contrarium 
               <lb ed="#SV"/>tenent, <g ref="slash"/>ideo solum Recito probabiliter, <g ref="slash"/>probatur corollarium 
-              <lb ed="#SV"/>quia omnis usus ordinatus est fruitio dei, ergo dile<lb ed="#SV"/>ctio 
+              <lb ed="#SV"/>quia omnis usus ordinatus est fruitio dei, ergo dile<lb ed="#SV" break="no"/>ctio 
               dei super omnia et ex caritate et in caritate. <g ref="#slash"/>unde 
               <lb ed="#SV"/>omnis usus est dilectio vel odium creaturae propter deum, 
               <lb ed="#SV"/>ergo per huius actus diligitur deus fruitive, ergo 
-              <lb ed="#SV"/>fruitio summi boni, ergo meritoria.</p>
-      
+              <lb ed="#SV"/>fruitio summi boni, ergo meritoria
+            </p>
           </div>
           <div>
             <head xml:id="l43-Hqoamef">Quod omnis actio meritoria est fruitio</head>
-            
-            <p xml:id="l43-isqdpo">Item sequitur 
+            <p xml:id="l43-isqdpo">
+              Item sequitur 
               <lb ed="#SV"/>quod omnis actio meritoria est fruitio. patet quia omnis 
               <lb ed="#SV"/>actio meritoria loquendo proprie de actu meritorio quia 
               <lb ed="#SV"/>exterior actus non est proprie meritorius <g ref="#slash"/>omnis talis est 
-              <lb ed="#SV"/>dilectio creaturae in Relatione ad deum, <g ref="slash"/>vel dilec<lb ed="#SV"/>tio 
+              <lb ed="#SV"/>dilectio creaturae in Relatione ad deum, <g ref="slash"/>vel dilec<lb ed="#SV" break="no"/>tio 
               dei propter se, <g ref="slash"/>et sic est dilectio dei super 
               <lb ed="#SV"/>omnia <g ref="#slash"/>et est meritoria, <g ref="#slash"/>quia si sic respectu 
-              <cb ed="#SV" n="250rb"/><lb ed="#SV"/>creaturae vel proximi est usus et omnis usus est fruitio, <g ref="#slash"/>quia 
-              <lb ed="#SV"/>omnis actus diligendi vel odiendi aliquid propter deum habet deum pro obiecto.</p>
-          
+              <cb ed="#SV" n="b"/><!-- 250rb-->
+              <lb ed="#SV"/>creaturae vel proximi est usus et omnis usus est fruitio, <g ref="#slash"/>quia 
+              <lb ed="#SV"/>omnis actus diligendi vel odiendi aliquid propter deum habet deum pro obiecto.
+            </p>
           </div>
-          
           <div>
             <head xml:id="l43-Hqcmdeo">Quod cuiuslibet meritoriae actionis Deus est obiectum</head>
-            
-            <p xml:id="l43-sqcidr"><lb ed="#SV"/>Sequitur quod cuiuslibet meritoriae actionis Deus est obiectum, <g ref="#slash"/>quia omnis 
+            <p xml:id="l43-sqcidr">
+              <lb ed="#SV"/>Sequitur quod cuiuslibet meritoriae actionis Deus est obiectum, <g ref="#slash"/>quia omnis 
               <lb ed="#SV"/>meritoria actio est fruitio, ergo habet Deum pro obiecto. <g ref="slash"/>Ex quo 
-              <lb ed="#SV"/>patet quod magna debet esse solicitudo omnis actus suos delibera<lb ed="#SV"/>tos 
+              <lb ed="#SV"/>patet quod magna debet esse solicitudo omnis actus suos delibera<lb ed="#SV" break="no"/>tos 
               Referendi in deum <g ref="#slash"/>quia si non <choice><orig>Refferret</orig><reg>referret</reg></choice>, tunc tales actus 
               <lb ed="#SV"/>essent creaturae fruitio quod quae secundum <name>augustinum</name> est summa perversitas. 
               <lb ed="#SV"/>Et istud fundatur in scriptura sacra, <g ref="slash"/>nam <name>apostolus</name> scribit in 
@@ -264,39 +290,41 @@
               enim est Deum ex toto corde diligere, scilicet, intende per quamcumque 
               <lb ed="#SV"/>operatione ultimum finem, <g ref="slash"/>et sic deum diligere ex toto est 
               <lb ed="#SV"/>diligere sic quin nihil faciat homo quin cor totum illud in deum 
-              <lb ed="#SV"/>Referat.</p>
-      
-            <p xml:id="l43-isaoae"><g ref="slash"/>Item scribit <name>apostolus</name>, <choice><orig>2ae</orig><reg>IIae</reg></choice> <title>ad corinthios</title>, <g ref="slash"/>in captivitatem 
+              <lb ed="#SV"/>Referat.
+            </p>
+            <p xml:id="l43-isaoae">
+              <g ref="slash"/>Item scribit <name>apostolus</name>, <choice><orig>2ae</orig><reg>IIae</reg></choice> <title>ad corinthios</title>, <g ref="slash"/>in captivitatem 
               <lb ed="#SV"/>Redigentes omnem intellectum in obsequium christi. <g ref="slash"/>et hic est ex 
               <lb ed="#SV"/>tota mente deum diligere. unde debet sic diligere ex tota 
               <lb ed="#SV"/>mente quod captivet intellectum sic quod credat quaecumque <sic>revala</sic>, <g ref="#slash"/>et sic 
               <lb ed="#SV"/>anima diligit tota mente, quando credit incomprehensibilia. <g ref="slash"/>etiam 
               <lb ed="#SV"/>si evidentia maxima esset ad contrarium, <g ref="slash"/>et hoc est tota mente 
-              <lb ed="#SV"/>se dare deo.</p> 
-            
-            <p xml:id="l43-egqoae"><g ref="slash"/>Etiam generaliter quod anima omnem affectionem 
+              <lb ed="#SV"/>se dare deo.
+            </p> 
+            <p xml:id="l43-egqoae">
+              <g ref="slash"/>Etiam generaliter quod anima omnem affectionem 
               <lb ed="#SV"/>in deum dirigat, <choice><orig>2ae</orig><reg>IIae</reg></choice> <title>ad corinthios</title> quod caritas christi nos 
               <lb ed="#SV"/>urget. <g ref="slash"/>Et ibi <sic>postille</sic> <sic>glosant</sic> quod caritas christi 
               <lb ed="#SV"/>afficit nos sic quod nullam habemus affectionem quoniam eam 
-              <lb ed="#SV"/>in deum dirigamus <g ref="slash"/>tandem omnia opera exteriora dant re<lb ed="#SV"/>fferri 
+              <lb ed="#SV"/>in deum dirigamus <g ref="slash"/>tandem omnia opera exteriora dant re<lb ed="#SV" break="no"/>fferri 
               in deum <g ref="#slash"/>et hoc est diligere ex tota fortitudine, <g ref="#slash"/>quia 
-              <lb ed="#SV"/>fortitudo est respectu executionis operum ad extra.</p> 
-      </div>
-        
+              <lb ed="#SV"/>fortitudo est respectu executionis operum ad extra.
+            </p>
+          </div>
         <div>
           <head xml:id="l43-Hrectio">Recapitulatio</head>
-          
-          <p xml:id="l43-redpnm"><g ref="slash"/>Recapi<lb ed="#SV"/>tulando, 
+          <p xml:id="l43-redpnm">
+            <g ref="slash"/>Recapi<lb ed="#SV" break="no"/>tulando, 
             ergo, debemus deum diligere ex toto corde, scilicet, 
             <lb ed="#SV"/>quando tota intentio Reffertur in deum <g ref="#slash"/>ex tota mente propter 
             <lb ed="#SV"/>continuam captivitatem intellectus ut credat absque apparentia 
             <lb ed="#SV"/>ex tota anima ex tota Relatione in deum <g ref="#slash"/>ex tota fortitudine, 
             <lb ed="#SV"/>id est, ex tota Relatione omnium actuum exteriorum in deum 
             <lb ed="#SV"/><g ref="#slash"/>et quantum ad materiam praesentem intendo inferius tractare 
-            <lb ed="#SV"/>utrum sit aliquis actus deliberatus qui nec sit peccatum nec meritum.</p>
-        
+            <lb ed="#SV"/>utrum sit aliquis actus deliberatus qui nec sit peccatum nec meritum.
+          </p>
         </div>
-          </div>
+      </div>
     </body>
   </text>
 </TEI>
