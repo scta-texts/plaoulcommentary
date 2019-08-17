@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,210 +10,237 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.08-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 48, de Fruitione [Sorbonne Transcription]</title>
           <date when="2012-08-17">August 17, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2012-08-17">August 17, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S">Sorbonne</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
-<surface n="S94r">
-<graphic url="S94r.jpg"/>
-<zone start="#l48-ccmege" ulx="26" uly="1618" lrx="676" lry="1909" n="1"/>
-<zone start="#l48-ccmege" ulx="620" uly="281" lrx="1270" lry="495" n="2"/>
-<zone start="#l48-carcfd" ulx="628" uly="412" lrx="1278" lry="635" n="1"/>
-<zone start="#l48-aradce" ulx="628" uly="549" lrx="1278" lry="767" n="1"/>
-<zone start="#l48-adaacp" ulx="621" uly="684" lrx="1271" lry="1262" n="1"/>
-<zone start="#l48-sdqdef" ulx="608" uly="1177" lrx="1258" lry="1905" n="1"/>
-</surface>
-<surface n="S94v">
-<graphic url="S94v.jpg"/>
-<zone start="#l48-sdqdef" ulx="535" uly="285" lrx="1185" lry="427" n="2"/>
-<zone start="#l48-tdqnpp" ulx="535" uly="344" lrx="1185" lry="1025" n="1"/>
-<zone start="#l48-sdqedr" ulx="542" uly="942" lrx="1192" lry="1125" n="1"/>
-<zone start="#l48-pehebm" ulx="542" uly="1044" lrx="1192" lry="1237" n="1"/>
-<zone start="#l48-sqadbm" ulx="542" uly="1144" lrx="1192" lry="1373" n="1"/>
-<zone start="#l48-esieof" ulx="546" uly="1286" lrx="1196" lry="1593" n="1"/>
-<zone start="#l48-acqisd" ulx="546" uly="1537" lrx="1196" lry="1776" n="1"/>
-<zone start="#l48-ipiqnf" ulx="546" uly="1687" lrx="1196" lry="1902" n="1"/>
-<zone start="#l48-ipiqnf" ulx="1107" uly="283" lrx="1757" lry="420" n="2"/>
-<zone start="#l48-esipmc" ulx="1107" uly="344" lrx="1757" lry="558" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-08-17" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="S94r">
+      <graphic url="S94r.jpg"/>
+      <zone start="#l48-ccmege" ulx="26" uly="1618" lrx="676" lry="1909" n="1"/>
+      <zone start="#l48-ccmege" ulx="620" uly="281" lrx="1270" lry="495" n="2"/>
+      <zone start="#l48-carcfd" ulx="628" uly="412" lrx="1278" lry="635" n="1"/>
+      <zone start="#l48-aradce" ulx="628" uly="549" lrx="1278" lry="767" n="1"/>
+      <zone start="#l48-adaacp" ulx="621" uly="684" lrx="1271" lry="1262" n="1"/>
+      <zone start="#l48-sdqdef" ulx="608" uly="1177" lrx="1258" lry="1905" n="1"/>
+    </surface>
+    <surface n="S94v">
+      <graphic url="S94v.jpg"/>
+      <zone start="#l48-sdqdef" ulx="535" uly="285" lrx="1185" lry="427" n="2"/>
+      <zone start="#l48-tdqnpp" ulx="535" uly="344" lrx="1185" lry="1025" n="1"/>
+      <zone start="#l48-sdqedr" ulx="542" uly="942" lrx="1192" lry="1125" n="1"/>
+      <zone start="#l48-pehebm" ulx="542" uly="1044" lrx="1192" lry="1237" n="1"/>
+      <zone start="#l48-sqadbm" ulx="542" uly="1144" lrx="1192" lry="1373" n="1"/>
+      <zone start="#l48-esieof" ulx="546" uly="1286" lrx="1196" lry="1593" n="1"/>
+      <zone start="#l48-acqisd" ulx="546" uly="1537" lrx="1196" lry="1776" n="1"/>
+      <zone start="#l48-ipiqnf" ulx="546" uly="1687" lrx="1196" lry="1902" n="1"/>
+      <zone start="#l48-ipiqnf" ulx="1107" uly="283" lrx="1757" lry="420" n="2"/>
+      <zone start="#l48-esipmc" ulx="1107" uly="344" lrx="1757" lry="558" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#S" n="94-r"/>
+        <cb ed="#S" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio48">
-        <head xml:id="l48-Hldfldf" subtype="title">Lectio 48, de Fruitione [Sorbonne Transcription]</head>
-        
+        <head xml:id="l48-Hldfldf">Lectio 48, de Fruitione [Sorbonne Transcription]</head>
         <div>
           <head xml:id="l48-Hurqesg">Una ratio quod fruitio Dei posset esse sine gratia</head>
-        
-      <p xml:id="l48-ccmege"><g ref="#pilcrow"/>Consequenter continuando materiam, ego 
-        <lb ed="#S"/>faciam unam rationem quod fruitio dei posset esse 
-        <lb ed="#S"/>sine gratia. <g ref="#slash"/>et illud probatur de opere obstetricum de 
-        <lb ed="#S"/>quo habetur <title>exodi</title> primo capitulo, quod fecerunt bonum 
-        <lb ed="#S"/>opus, <choice><orig>ymo</orig><reg>immo</reg></choice> ex illo fuerunt Remuneratae. <g ref="#slash"/>Unde dicitur 
-        <lb ed="#S"/>ibi <g ref="#slash"/>unde ergo fecit deus obstetricibus. et quia 
-        <lb ed="#S"/>timuerunt obstetrices deum aedificavit 
-        <cb ed="#S" n="94rb"/><lb ed="#S"/>vel domos, ergo opus erat earum bonum, et tamen 
-        <lb ed="#S"/>erat extra gratiam, <g ref="#slash"/>tunc sic opus earum erat bonum 
-        <lb ed="#S"/>et non erat usus dei ex quo erat bonum, ergo erat 
-        <lb ed="#S"/>usus creaturae. et per consequens fruitio dei, et tamen extra gratiam 
-        <lb ed="#S"/>ergo.</p>
-      
-      <p xml:id="l48-carcfd"><g ref="#slash"/>confirmatur de recton?bus[?] rei pu?te[?] romanorum et 
-        <lb ed="#S"/>aliarum potentiarum, et licet secundum <name>augustinum</name> essent mali fecerunt, 
-        <lb ed="#S"/>tamen aliqua bona opera quae opera debebant Re 
-        <lb ed="#S"/>munerari saltem per aliquod bonum temporale. <g ref="#slash"/>et per consequens ac<lb ed="#S"/>tus 
-        eorum erant boni. et per consequens fruitio dei.</p>
-      </div>
+          <p xml:id="l48-ccmege">
+            <g ref="#pilcrow"/>Consequenter continuando materiam, ego 
+            <lb ed="#S" n="40"/>faciam unam rationem quod fruitio dei posset esse 
+            <lb ed="#S"/>sine gratia. <g ref="#slash"/>et illud probatur de opere obstetricum de 
+            <lb ed="#S"/>quo habetur <title>exodi</title> primo capitulo, quod fecerunt bonum 
+            <lb ed="#S"/>opus, <choice><orig>ymo</orig><reg>immo</reg></choice> ex illo fuerunt Remuneratae. <g ref="#slash"/>Unde dicitur 
+            <lb ed="#S"/>ibi <g ref="#slash"/>unde ergo fecit deus obstetricibus. et quia 
+            <lb ed="#S"/>timuerunt obstetrices deum aedificavit 
+            <cb ed="#S" n="b"/><!--94rb -->
+            <lb ed="#S"/>vel domos, ergo opus erat earum bonum, et tamen 
+            <lb ed="#S"/>erat extra gratiam, <g ref="#slash"/>tunc sic opus earum erat bonum 
+            <lb ed="#S"/>et non erat usus dei ex quo erat bonum, ergo erat 
+            <lb ed="#S"/>usus creaturae. et per consequens fruitio dei, et tamen extra gratiam 
+            <lb ed="#S"/>ergo.
+          </p>
+          <p xml:id="l48-carcfd">
+            <g ref="#slash"/>confirmatur de recton?bus[?] rei pu?te[?] romanorum et 
+            <lb ed="#S"/>aliarum potentiarum, et licet secundum <name>augustinum</name> essent mali fecerunt, 
+            <lb ed="#S"/>tamen aliqua bona opera quae opera debebant Re 
+            <lb ed="#S"/>munerari saltem per aliquod bonum temporale. <g ref="#slash"/>et per consequens ac<lb ed="#S" break="no"/>tus 
+            eorum erant boni. et per consequens fruitio dei.
+          </p>
+        </div>
+        <div>
+          <head xml:id="l48-Hcaqidc">Contra antecedens quod intellectus ex puris naturalibus potest dicare Deum esse summum bonum et voluntas poterat se illi dictamini conformare</head>
+          <p xml:id="l48-aradce">
+            <g ref="#pilcrow"/>Ad 
+            <lb ed="#S"/>rationes ante factas. <g ref="#slash"/>ad primam rationem, <g ref="#slash"/>unde in prima 
+            <lb ed="#S"/>ratione tangebatur quod intellectus ex puris naturalibus potest di<lb ed="#S" break="no"/>care 
+            deum esse summum bonum <g ref="#slash"/>et super omnia diligendum. 
+            <lb ed="#S"/>et voluntas poterat se illi dictamini conformare.
+          </p>
           <div>
-            <head xml:id="l48-Hcaqidc">Contra antecedens quod intellectus ex puris naturalibus potest dicare Deum esse summum bonum et voluntas poterat se illi dictamini conformare</head>
-            
-      <p xml:id="l48-aradce"><g ref="#pilcrow"/>Ad 
-        <lb ed="#S"/>rationes ante factas. <g ref="#slash"/>ad primam rationem, <g ref="#slash"/>unde in prima 
-        <lb ed="#S"/>ratione tangebatur quod intellectus ex puris naturalibus potest di<lb ed="#S"/>care 
-        deum esse summum bonum <g ref="#slash"/>et super omnia diligendum. 
-        <lb ed="#S"/>et voluntas poterat se illi dictamini conformare.</p>
-     
-            <div>
-        
-        <head xml:id="l48-Hprqnsc">Prima ratio: quod investigatio humana non possunt pertingere praeter notitiam substantiarum corporearum</head>
-        
-              <p xml:id="l48-adaacp"><g ref="#slash"/>igitur 
-                <lb ed="#S"/>antequam descendendam ad materiam stabo circa antecedens huius 
-                <lb ed="#S"/>rationis solum. <g ref="#slash"/>et breviter circa antecedens, sicut alias declaratum 
-                <lb ed="#S"/>est in materia fidei, <g ref="#slash"/>intellectus ex puris naturalibus nec 
-                <lb ed="#S"/><del rend="strikethrough">ex</del> investigatio humana possunt pertingere ex se nisi ad 
-                <lb ed="#S"/>notitiarum substantiarum corporearum. nec possunt concludere esse 
-                <lb ed="#S"/>incorporeum ut patuit de puris philosophibus[?], qui 
-                <lb ed="#S"/>posuerunt deum esse corporalem. de illis qui 
-                <lb ed="#S"/>ponebant deum esse solem. alii stellas et propter hoc 
-                <lb ed="#S"/><name>aristotles</name> dicit quod veritas philosophiae fuit revelata philosophis. 
-                <lb ed="#S"/>et <name>Iosephus</name> in libro <title>antiquitatum</title> dicit quod veritas philosophiae 
-                <lb ed="#S"/>fuit revelata et communicata populo Iudaico. <g ref="#slash"/>non circa 
-                <lb ed="#S"/>illud antecedens potest negari quod ex puris naturalibus cum in<lb ed="#S"/>fluentia 
-                dicitur generali, nisi esset revelatio posset quis ad 
-                <lb ed="#S"/>dei cognitionem pervenire.</p> 
-            </div>
-            
-            <div>
-            
-              <head xml:id="l48-Hsrsrsr">Secunda Ratio</head>
-              
-        <p xml:id="l48-sdqdef"><g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod dato quod ratio 
-          <lb ed="#S"/>naturalis et humana investigatio posset de <del rend="strikethrough">a</del> <space extent="oneWordLength"/> ad <choice><orig>2am</orig><reg>secundam</reg></choice> 
-          <lb ed="#S"/>notitiam quod deus est, tamen non propter hoc cognoscebant eum 
-          <lb ed="#S"/>esse super omnia diligendum, sicut aliqui erant qui ponebant 
-          <lb ed="#S"/>deum esse. et tamen felicitatem non ponebant in eo obiective 
-          <lb ed="#S"/>et licet cognosceretur deus non tamen propter hoc cognosceretur sub 
-          <lb ed="#S"/>ratione fruibilitatis. <g ref="#slash"/>unde licet cognoscerent deum, non tamen oportet quod 
-          <lb ed="#S"/>cognosceret eum secundum omne praedicatum sibi competens. <g ref="#slash"/>et sic hoc 
-          <lb ed="#S"/>praedicatum quod est fruibile non fuisset cognitum dici 
-          <lb ed="#S"/>de deo, quia non oportet quod si aliqua res cognoscatur quod 
-          <lb ed="#S"/>quaelibet eius conditio cognoscatur. <g ref="#slash"/>et sic negatur ista consequentia 
-          <lb ed="#S"/>philosophi potuerint devenire ad istam veritatem deus est, 
-          <lb ed="#S"/>ergo potuerunt devenire ad istam veritatem quod deus est obiectum 
-          <lb ed="#S"/>fruibile. <choice><orig>ymo</orig><reg>immo</reg></choice> illud non est invenibile naturaliter. <g ref="#slash"/>et sic non est 
-          <lb ed="#S"/>evidens quod ex puris naturalibus creatura non adiuta 
-          <lb ed="#S"/>speciali adiutorio posset devenire ad istam notitiam quod 
-          <lb ed="#S"/>deus est fruibile. et hoc satis <g ref="#slash"/>patet de diversitate philosopho<lb ed="#S"/>rum 
-          ponentium felicitatem <g ref="#slash"/>aliqui in voluptatibus aliqui in 
-          <lb ed="#S"/>honoribus, aliqui in divitiis, et sic de aliis, et tamen tales 
-          <cb ed="#S" n="94va"/><lb ed="#S"/>ponebant deum esse, et sic licet hoc posset devenire ad 
-          <lb ed="#S"/>hanc veritatem deus est. non tamen ad hanc veri<lb ed="#S"/>tatem 
-          deus est fruibiles.</p>
-      
-            </div>
-            <div>
-              <head xml:id="l48-Htrtrtr">Tertia ratio</head>
-              
-      <p xml:id="l48-tdqnpp"><g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> diceretur quod licet intellectus quantum 
-        <lb ed="#S"/>est de se ex puris naturalibus posset devenire ad 
-        <lb ed="#S"/>hanc veritatem deus est sicut videtur innuere 
-        <lb ed="#S"/><name>apostolus</name> quia intellectus ex creaturis potest cognoscere deum esse. 
-        <lb ed="#S"/>et licet etiam devenisset ad illam notitiam quod deus 
-        <lb ed="#S"/>est et quod deus est summum bonum, et deus est obiectum 
-        <lb ed="#S"/>fruibile, tamen <choice><orig>malicia</orig><reg>malitia</reg></choice> eorum excaecavit eos 
-        <lb ed="#S"/>sic quod non potuissent exire in actum fruendum, quia 
-        <lb ed="#S"/>licet deum cognovissent, non tamen sicut deum glorifica<lb ed="#S"/>verunt, 
-        ideo erraverunt in cogitationibus suis. et 
-        <lb ed="#S"/>credentes sapientes <space extent="twoWordsLength"/> sunt. et sic non per<lb ed="#S"/>manserunt 
-        in cognitione dei, quae sufficeret ut 
-        <lb ed="#S"/>voluntas in fruitionem dei exiret. et sic in primo instanti 
-        <lb ed="#S"/>in quo habuerunt notitiam obligati fuerunt ad faciendum 
-        <lb ed="#S"/>quod in se erat ad se disponendum et quia non fe<lb ed="#S"/>cerunt. 
-        ideo fuerunt excaecati et licet <del rend="strikethrough">post</del> potuissent 
-        <lb ed="#S"/>se disposuisse in primo instanti in quo habuerunt notitiam 
-        <lb ed="#S"/>de deo ad recipiendum gratiam dei, et quia non fecerunt, 
-        <lb ed="#S"/>ideo excaecati sunt. et nec postea potuerunt.</p>
-      
-            </div>
-            <div>
-              <head xml:id="l48-Hqrqrqr">Quarta ratio</head>
-      
-              <p xml:id="l48-sdqedr"><g ref="#slash"/><sic><choice><orig>2o</orig><reg>secundo</reg></choice></sic> 
-                <lb ed="#S"/>diceretur quod licet intellectus quantum est de se cognosceret 
-                <lb ed="#S"/>quod deus est et quod deus est fruibilis, <g ref="#slash"/>tamen peccatum 
-                <lb ed="#S"/>impedit huiusmodi Iudicium intellectus ex <choice><orig>dupplici</orig><reg>duplici</reg></choice> ratione.</p>
-              
-              <p xml:id="l48-pehebm"><g ref="#slash"/>prima 
-                <lb ed="#S"/>ex habitudine potentiae volitivae ad intellectum, quia potentia volitiva 
-                <lb ed="#S"/>est superior. <g ref="#slash"/>ideo secundum affectionem suam movet intellectum 
-                <lb ed="#S"/>et se divertit a consideratione intellectus.</p> 
-              
-              <p xml:id="l48-sqadbm"><g ref="#slash"/>ideo quia affectio 
-                <lb ed="#S"/>prava est quaedam apparentia de 'sic esse', sicut voluntas 
-                <lb ed="#S"/>afficitur, <g ref="#slash"/>ideo affectio depravat intellectum quantum ad 
-                <lb ed="#S"/>Iudicium et facit sibi apparere de bono malum 
-                <lb ed="#S"/>et de malo bonum.</p> 
-              
-          <p xml:id="l48-esieof">et per istam considerationem debet 
-            <lb ed="#S"/>intelligi quod amor et odium pervertunt iudicium, <g ref="#slash"/>nam af<lb ed="#S"/>fectio 
-            prava facit realiter apparere, sicut voluntas 
-            <lb ed="#S"/>afficitur et licet in intellectu sit aliquod Iudicium recte 
-            <lb ed="#S"/>elicitum. tamen affectio prava, quia semper suspendit Iudicium 
-            <lb ed="#S"/>intellectus, et sic <choice><orig>malicia</orig><reg>malitia</reg></choice> illorum, qui sunt extra caritatem 
-            <lb ed="#S"/>Impedit ne Iudicent quod deus est obiectum fruibile.</p>
-              
-              <p xml:id="l48-acqisd"><lb ed="#S"/><g ref="#pilcrow"/>alia causa, quia secundum proportionem potentiarum est ordo assistentiae 
-                <lb ed="#S"/>dei, ut deus assistit voluntati, ut recte afficiatur 
-                <lb ed="#S"/>et assistit intellectui, ut veritatem cognoscat. per peccatum autem de<lb ed="#S"/>perditur 
-                ista assistentia quae deperdita substrahitur influentia 
-                <lb ed="#S"/>specialis dei.</p> 
-              
-              <p xml:id="l48-ipiqnf"><g ref="#slash"/>ideo propter istas causas, quia aliquis non potest 
-                <lb ed="#S"/>habere evidens Iudicium ex depravatione <g ref="#slash"/>nec potest 
-                <lb ed="#S"/>habere evidens Iudicium quod deus est, nisi esset in bona 
-                <lb ed="#S"/>dispositione, et licet haberet iudicium quod deus est di<lb ed="#S"/>ligendus, 
-                <g ref="#slash"/>vel est diligendus propter beneficia, licet crederet re<cb ed="#S" n="94vb"/><lb ed="#S"/>ferre dilectionem in deum, non tamen referret. <g ref="#slash"/>sed in 
-                <lb ed="#S"/>se referret sicut multi credunt frui deo 
-                <lb ed="#S"/>qui non fruuntur.</p>
-            
-            </div>
-            <div>
-              <head xml:id="l48-Hconsio">Conclusio</head>
-        
-              <p xml:id="l48-esipmc"><g ref="#slash"/>et sic illud antecedens, scilicet, quod intellectus 
-                <lb ed="#S"/>ex puris naturalibus potest dicare quod deus est 
-                <lb ed="#S"/>summum bonum et super omnia diligendum, et quod voluntas 
-                <lb ed="#S"/>se potest illi dictamini conformare, potest multipliciter <choice><orig>ca<lb ed="#S"/>lumpniari</orig><reg>ca<lb ed="#S"/>lumniari</reg></choice>.</p> </div>
-      </div>
-      
+            <head xml:id="l48-Hprqnsc">Prima ratio: quod investigatio humana non possunt pertingere praeter notitiam substantiarum corporearum</head>
+            <p xml:id="l48-adaacp">
+              <g ref="#slash"/>igitur 
+              <lb ed="#S"/>antequam descendendam ad materiam stabo circa antecedens huius 
+              <lb ed="#S"/>rationis solum. <g ref="#slash"/>et breviter circa antecedens, sicut alias declaratum 
+              <lb ed="#S"/>est in materia fidei, <g ref="#slash"/>intellectus ex puris naturalibus nec 
+              <lb ed="#S"/><del rend="strikethrough">ex</del> investigatio humana possunt pertingere ex se nisi ad 
+              <lb ed="#S"/>notitiarum substantiarum corporearum. nec possunt concludere esse 
+              <lb ed="#S"/>incorporeum ut patuit de puris philosophibus[?], qui 
+              <lb ed="#S"/>posuerunt deum esse corporalem. de illis qui 
+              <lb ed="#S"/>ponebant deum esse solem. alii stellas et propter hoc 
+              <lb ed="#S"/><name>aristotles</name> dicit quod veritas philosophiae fuit revelata philosophis. 
+              <lb ed="#S"/>et <name>Iosephus</name> in libro <title>antiquitatum</title> dicit quod veritas philosophiae 
+              <lb ed="#S"/>fuit revelata et communicata populo Iudaico. <g ref="#slash"/>non circa 
+              <lb ed="#S"/>illud antecedens potest negari quod ex puris naturalibus cum in<lb ed="#S" break="no"/>fluentia 
+              dicitur generali, nisi esset revelatio posset quis ad 
+              <lb ed="#S"/>dei cognitionem pervenire.
+            </p>
           </div>
+          <div>
+            <head xml:id="l48-Hsrsrsr">Secunda Ratio</head>
+            <p xml:id="l48-sdqdef">
+              <g ref="#pilcrow"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod dato quod ratio 
+              <lb ed="#S"/>naturalis et humana investigatio posset de <del rend="strikethrough">a</del> <space extent="oneWordLength"/> ad <choice><orig>2am</orig><reg>secundam</reg></choice> 
+              <lb ed="#S"/>notitiam quod deus est, tamen non propter hoc cognoscebant eum 
+              <lb ed="#S"/>esse super omnia diligendum, sicut aliqui erant qui ponebant 
+              <lb ed="#S"/>deum esse. et tamen felicitatem non ponebant in eo obiective 
+              <lb ed="#S"/>et licet cognosceretur deus non tamen propter hoc cognosceretur sub 
+              <lb ed="#S"/>ratione fruibilitatis. <g ref="#slash"/>unde licet cognoscerent deum, non tamen oportet quod 
+              <lb ed="#S"/>cognosceret eum secundum omne praedicatum sibi competens. <g ref="#slash"/>et sic hoc 
+              <lb ed="#S"/>praedicatum quod est fruibile non fuisset cognitum dici 
+              <lb ed="#S"/>de deo, quia non oportet quod si aliqua res cognoscatur quod 
+              <lb ed="#S"/>quaelibet eius conditio cognoscatur. <g ref="#slash"/>et sic negatur ista consequentia 
+              <lb ed="#S"/>philosophi potuerint devenire ad istam veritatem deus est, 
+              <lb ed="#S"/>ergo potuerunt devenire ad istam veritatem quod deus est obiectum 
+              <lb ed="#S"/>fruibile. <choice><orig>ymo</orig><reg>immo</reg></choice> illud non est invenibile naturaliter. <g ref="#slash"/>et sic non est 
+              <lb ed="#S"/>evidens quod ex puris naturalibus creatura non adiuta 
+              <lb ed="#S"/>speciali adiutorio posset devenire ad istam notitiam quod 
+              <lb ed="#S"/>deus est fruibile. et hoc satis <g ref="#slash"/>patet de diversitate philosopho<lb ed="#S" break="no"/>rum 
+              ponentium felicitatem <g ref="#slash"/>aliqui in voluptatibus aliqui in 
+              <lb ed="#S"/>honoribus, aliqui in divitiis, et sic de aliis, et tamen tales 
+              <pb ed="#S" n="94-v"/>
+              <cb ed="#S" n="a"/>
+              <lb ed="#S"/>ponebant deum esse, et sic licet hoc posset devenire ad 
+              <lb ed="#S"/>hanc veritatem deus est. non tamen ad hanc veri<lb ed="#S" break="no"/>tatem 
+              deus est fruibiles.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l48-Htrtrtr">Tertia ratio</head>
+            <p xml:id="l48-tdqnpp">
+              <g ref="#pilcrow"/><choice><orig>3o</orig><reg>tertio</reg></choice> diceretur quod licet intellectus quantum 
+              <lb ed="#S"/>est de se ex puris naturalibus posset devenire ad 
+              <lb ed="#S"/>hanc veritatem deus est sicut videtur innuere 
+              <lb ed="#S"/><name>apostolus</name> quia intellectus ex creaturis potest cognoscere deum esse. 
+              <lb ed="#S"/>et licet etiam devenisset ad illam notitiam quod deus 
+              <lb ed="#S"/>est et quod deus est summum bonum, et deus est obiectum 
+              <lb ed="#S"/>fruibile, tamen <choice><orig>malicia</orig><reg>malitia</reg></choice> eorum excaecavit eos 
+              <lb ed="#S"/>sic quod non potuissent exire in actum fruendum, quia 
+              <lb ed="#S"/>licet deum cognovissent, non tamen sicut deum glorifica<lb ed="#S" break="no"/>verunt, 
+              ideo erraverunt in cogitationibus suis. et 
+              <lb ed="#S"/>credentes sapientes <space extent="twoWordsLength"/> sunt. et sic non per<lb ed="#S" break="no"/>manserunt 
+              in cognitione dei, quae sufficeret ut 
+              <lb ed="#S"/>voluntas in fruitionem dei exiret. et sic in primo instanti 
+              <lb ed="#S"/>in quo habuerunt notitiam obligati fuerunt ad faciendum 
+              <lb ed="#S"/>quod in se erat ad se disponendum et quia non fe<lb ed="#S" break="no"/>cerunt. 
+              ideo fuerunt excaecati et licet <del rend="strikethrough">post</del> potuissent 
+              <lb ed="#S"/>se disposuisse in primo instanti in quo habuerunt notitiam 
+              <lb ed="#S"/>de deo ad recipiendum gratiam dei, et quia non fecerunt, 
+              <lb ed="#S"/>ideo excaecati sunt. et nec postea potuerunt.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l48-Hqrqrqr">Quarta ratio</head>
+            <p xml:id="l48-sdqedr">
+              <g ref="#slash"/><sic><choice><orig>2o</orig><reg>secundo</reg></choice></sic> 
+              <lb ed="#S"/>diceretur quod licet intellectus quantum est de se cognosceret 
+              <lb ed="#S"/>quod deus est et quod deus est fruibilis, <g ref="#slash"/>tamen peccatum 
+              <lb ed="#S"/>impedit huiusmodi Iudicium intellectus ex <choice><orig>dupplici</orig><reg>duplici</reg></choice> ratione
+            </p>
+            <p xml:id="l48-pehebm">
+              <g ref="#slash"/>prima 
+              <lb ed="#S"/>ex habitudine potentiae volitivae ad intellectum, quia potentia volitiva 
+              <lb ed="#S"/>est superior. <g ref="#slash"/>ideo secundum affectionem suam movet intellectum 
+              <lb ed="#S"/>et se divertit a consideratione intellectus
+            </p>
+            <p xml:id="l48-sqadbm">
+              <g ref="#slash"/>ideo quia affectio 
+              <lb ed="#S"/>prava est quaedam apparentia de 'sic esse', sicut voluntas 
+              <lb ed="#S"/>afficitur, <g ref="#slash"/>ideo affectio depravat intellectum quantum ad 
+              <lb ed="#S"/>Iudicium et facit sibi apparere de bono malum 
+              <lb ed="#S"/>et de malo bonum
+            </p>
+            <p xml:id="l48-esieof">
+              et per istam considerationem debet 
+              <lb ed="#S"/>intelligi quod amor et odium pervertunt iudicium, <g ref="#slash"/>nam af<lb ed="#S" break="no"/>fectio 
+              prava facit realiter apparere, sicut voluntas 
+              <lb ed="#S"/>afficitur et licet in intellectu sit aliquod Iudicium recte 
+              <lb ed="#S"/>elicitum. tamen affectio prava, quia semper suspendit Iudicium 
+              <lb ed="#S"/>intellectus, et sic <choice><orig>malicia</orig><reg>malitia</reg></choice> illorum, qui sunt extra caritatem 
+              <lb ed="#S"/>Impedit ne Iudicent quod deus est obiectum fruibile
+            </p>
+            <p xml:id="l48-acqisd">
+              <lb ed="#S"/><g ref="#pilcrow"/>alia causa, quia secundum proportionem potentiarum est ordo assistentiae 
+              <lb ed="#S"/>dei, ut deus assistit voluntati, ut recte afficiatur 
+              <lb ed="#S"/>et assistit intellectui, ut veritatem cognoscat. per peccatum autem de<lb ed="#S" break="no"/>perditur 
+              ista assistentia quae deperdita substrahitur influentia 
+              <lb ed="#S"/>specialis dei
+            </p>
+            <p xml:id="l48-ipiqnf">
+              <g ref="#slash"/>ideo propter istas causas, quia aliquis non potest 
+              <lb ed="#S"/>habere evidens Iudicium ex depravatione <g ref="#slash"/>nec potest 
+              <lb ed="#S"/>habere evidens Iudicium quod deus est, nisi esset in bona 
+              <lb ed="#S"/>dispositione, et licet haberet iudicium quod deus est di<lb ed="#S" break="no"/>ligendus, 
+              <g ref="#slash"/>vel est diligendus propter beneficia, licet crederet re<cb ed="#S" n="b"/><!--94vb --><lb ed="#S" break="no"/>ferre 
+              dilectionem in deum, non tamen referret. <g ref="#slash"/>sed in 
+              <lb ed="#S"/>se referret sicut multi credunt frui deo 
+              <lb ed="#S"/>qui non fruuntur
+            </p>
+          </div>
+          <div>
+            <head xml:id="l48-Hconsio">Conclusio</head>
+            <p xml:id="l48-esipmc">
+              <g ref="#slash"/>et sic illud antecedens, scilicet, quod intellectus 
+              <lb ed="#S"/>ex puris naturalibus potest dicare quod deus est 
+              <lb ed="#S"/>summum bonum et super omnia diligendum, et quod voluntas 
+              <lb ed="#S"/>se potest illi dictamini conformare, potest multipliciter <choice><orig>ca<lb ed="#S" break="no"/>lumpniari</orig><reg>ca<lb ed="#S" break="no"/>lumniari</reg></choice>.
+            </p> 
+          </div>
+        </div>
+      </div>
     </body>
   </text>
 </TEI>
