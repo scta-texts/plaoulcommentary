@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,210 +10,243 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.11-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 65, de Trinitate [Vatican Transcription]</title>
           <date when="2012-11-30">November 30, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2012-11-30">November 30, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="V">Vatican</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
-<surface n="V137v">
-<graphic url="V137v.jpg"/>
-<zone start="#l65-pidppi" ulx="392" uly="1060" lrx="1042" lry="1330" n="1"/>
-<zone start="#l65-nrivma" ulx="398" uly="1252" lrx="1048" lry="1407" n="1"/>
-<zone start="#l65-peisia" ulx="392" uly="1332" lrx="1042" lry="1515" n="1"/>
-<zone start="#l65-esrend" ulx="388" uly="1482" lrx="1038" lry="1782" n="1"/>
-<zone start="#l65-aiepea" ulx="387" uly="1710" lrx="1037" lry="1783" n="1"/>
-<zone start="#l65-aiepea" ulx="1018" uly="183" lrx="1668" lry="583" n="2"/>
-<zone start="#l65-icicrf" ulx="1027" uly="508" lrx="1677" lry="815" n="1"/>
-<zone start="#l65-ibdevv" ulx="1022" uly="738" lrx="1672" lry="925" n="1"/>
-<zone start="#l65-aeifrm" ulx="1022" uly="853" lrx="1672" lry="1238" n="1"/>
-<zone start="#l65-aiesap" ulx="1008" uly="1203" lrx="1658" lry="1498" n="1"/>
-<zone start="#l65-dargcf" ulx="998" uly="1427" lrx="1648" lry="1715" n="1"/>
-<zone start="#l65-sivmif" ulx="1002" uly="1647" lrx="1652" lry="1790" n="1"/>
-</surface>
-<surface n="V138r">
-<graphic url="V138r.jpg"/>
-<zone start="#l65-sivmif" ulx="215" uly="145" lrx="865" lry="322" n="2"/>
-<zone start="#l65-ifhfrm" ulx="218" uly="290" lrx="868" lry="1040" n="1"/>
-<zone start="#l65-ecpcpd" ulx="217" uly="960" lrx="867" lry="1748" n="1"/>
-<zone start="#l65-ecpcpd" ulx="832" uly="155" lrx="1482" lry="338" n="2"/>
-<zone start="#l65-idecsm" ulx="833" uly="263" lrx="1483" lry="775" n="1"/>
-<zone start="#l65-ceehic" ulx="838" uly="697" lrx="1488" lry="1092" n="1"/>
-<zone start="#l65-eitsue" ulx="838" uly="1013" lrx="1488" lry="1215" n="1"/>
-<zone start="#l65-ipcpic" ulx="838" uly="1140" lrx="1488" lry="1378" n="1"/>
-<zone start="#l65-ipospd" ulx="842" uly="1295" lrx="1492" lry="1648" n="1"/>
-<zone start="#l65-ineedd" ulx="843" uly="1568" lrx="1493" lry="1765" n="1"/>
-</surface>
-<surface n="V138v">
-<graphic url="V138v.jpg"/>
-<zone start="#l65-ineedd" ulx="327" uly="145" lrx="977" lry="322" n="2"/>
-<zone start="#l65-cempdc" ulx="328" uly="257" lrx="978" lry="550" n="1"/>
-<zone start="#l65-ehahcc" ulx="323" uly="482" lrx="973" lry="910" n="1"/>
-<zone start="#l65-aiapsc" ulx="318" uly="832" lrx="968" lry="1152" n="1"/>
-<zone start="#l65-aieufs" ulx="313" uly="1077" lrx="963" lry="1522" n="1"/>
-</surface>
-<surface n="V139r">
-<graphic url="V139r.jpg"/>
-<zone start="#l65-Hesupvi" ulx="230" uly="145" lrx="880" lry="225" n="2"/>
-<zone start="#l65-eieppn" ulx="230" uly="145" lrx="880" lry="433" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-11-30" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="V137v">
+      <graphic url="V137v.jpg"/>
+      <zone start="#l65-pidppi" ulx="392" uly="1060" lrx="1042" lry="1330" n="1"/>
+      <zone start="#l65-nrivma" ulx="398" uly="1252" lrx="1048" lry="1407" n="1"/>
+      <zone start="#l65-peisia" ulx="392" uly="1332" lrx="1042" lry="1515" n="1"/>
+      <zone start="#l65-esrend" ulx="388" uly="1482" lrx="1038" lry="1782" n="1"/>
+      <zone start="#l65-aiepea" ulx="387" uly="1710" lrx="1037" lry="1783" n="1"/>
+      <zone start="#l65-aiepea" ulx="1018" uly="183" lrx="1668" lry="583" n="2"/>
+      <zone start="#l65-icicrf" ulx="1027" uly="508" lrx="1677" lry="815" n="1"/>
+      <zone start="#l65-ibdevv" ulx="1022" uly="738" lrx="1672" lry="925" n="1"/>
+      <zone start="#l65-aeifrm" ulx="1022" uly="853" lrx="1672" lry="1238" n="1"/>
+      <zone start="#l65-aiesap" ulx="1008" uly="1203" lrx="1658" lry="1498" n="1"/>
+      <zone start="#l65-dargcf" ulx="998" uly="1427" lrx="1648" lry="1715" n="1"/>
+      <zone start="#l65-sivmif" ulx="1002" uly="1647" lrx="1652" lry="1790" n="1"/>
+    </surface>
+    <surface n="V138r">
+      <graphic url="V138r.jpg"/>
+      <zone start="#l65-sivmif" ulx="215" uly="145" lrx="865" lry="322" n="2"/>
+      <zone start="#l65-ifhfrm" ulx="218" uly="290" lrx="868" lry="1040" n="1"/>
+      <zone start="#l65-ecpcpd" ulx="217" uly="960" lrx="867" lry="1748" n="1"/>
+      <zone start="#l65-ecpcpd" ulx="832" uly="155" lrx="1482" lry="338" n="2"/>
+      <zone start="#l65-idecsm" ulx="833" uly="263" lrx="1483" lry="775" n="1"/>
+      <zone start="#l65-ceehic" ulx="838" uly="697" lrx="1488" lry="1092" n="1"/>
+      <zone start="#l65-eitsue" ulx="838" uly="1013" lrx="1488" lry="1215" n="1"/>
+      <zone start="#l65-ipcpic" ulx="838" uly="1140" lrx="1488" lry="1378" n="1"/>
+      <zone start="#l65-ipospd" ulx="842" uly="1295" lrx="1492" lry="1648" n="1"/>
+      <zone start="#l65-ineedd" ulx="843" uly="1568" lrx="1493" lry="1765" n="1"/>
+    </surface>
+    <surface n="V138v">
+      <graphic url="V138v.jpg"/>
+      <zone start="#l65-ineedd" ulx="327" uly="145" lrx="977" lry="322" n="2"/>
+      <zone start="#l65-cempdc" ulx="328" uly="257" lrx="978" lry="550" n="1"/>
+      <zone start="#l65-ehahcc" ulx="323" uly="482" lrx="973" lry="910" n="1"/>
+      <zone start="#l65-aiapsc" ulx="318" uly="832" lrx="968" lry="1152" n="1"/>
+      <zone start="#l65-aieufs" ulx="313" uly="1077" lrx="963" lry="1522" n="1"/>
+    </surface>
+    <surface n="V139r">
+      <graphic url="V139r.jpg"/>
+      <zone start="#l65-Hesupvi" ulx="230" uly="145" lrx="880" lry="225" n="2"/>
+      <zone start="#l65-eieppn" ulx="230" uly="145" lrx="880" lry="433" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#V" n="137-v"/>
+        <cb ed="#V" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio65">
-        <head xml:id="l65-Hldtldt" subtype="title">Lectio 65, de Trinitate [Vatican Transcription]</head>
+        <head xml:id="l65-Hldtldt">Lectio 65, de Trinitate [Vatican Transcription]</head>
         <div>
-          
           <head xml:id="l65-Hrpcrpc">Recapitulatio priores conclusiones</head>
-          
-          <p xml:id="l65-pidppi"><lb ed="#V"/><g ref="#slash"/>pro inquisitione 
+          <p xml:id="l65-pidppi">
+            <lb ed="#V"/><g ref="#slash"/>pro inquisitione 
             <lb ed="#V"/>divinae simplicitatis dictum fuit in lectione 
             <lb ed="#V"/>praecedenti quod no potest personaliter 
             <lb ed="#V"/>influere nec potest esse forma formativa 
             <lb ed="#V"/>creaturae nec vitaliter immutare potentiam 
-            <lb ed="#V"/>creaturae perceptivam</p>
-            
+            <lb ed="#V"/>creaturae perceptivam
+          </p>
         </div>
         <div>
           <head xml:id="l65-Hobines">Obiectiones</head>
-          
-          <p xml:id="l65-nrivma"><g ref="#slash"/>nunc restat in<lb ed="#V"/>ducere motiva ad contrarium ut veritas ma<lb ed="#V"/>gis 
-            appareat.</p> 
-          
-          <p xml:id="l65-peisia">et primo arguitur ex <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> 
-            <lb ed="#V"/>philosophorum <choice><orig>ponencium</orig><reg>ponentium</reg></choice> quod deus est anima mun<lb ed="#V"/>di. 
+          <p xml:id="l65-nrivma">
+            <g ref="#slash"/>nunc restat in<lb ed="#V" break="no"/>ducere 
+            motiva ad contrarium ut veritas ma<lb ed="#V" break="no"/>gis 
+            appareat
+          </p> 
+          <p xml:id="l65-peisia">
+            et primo arguitur ex <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> 
+            <lb ed="#V"/>philosophorum <choice><orig>ponencium</orig><reg>ponentium</reg></choice> quod deus est anima mun<lb ed="#V" break="no"/>di. 
             <g ref="#dot"/>unde expresse ponit <name>virgilius</name> in 
-            <lb ed="#V"/><choice><orig>6o</orig><reg>sexto</reg></choice> <title>eneidos</title> <space extent="oneWordLength"/> spiritus intus alit.</p>
-          
-          <p xml:id="l65-esrend"><lb ed="#V"/>et sicut recitat <name>albertus</name> oppinio fuit mul<lb ed="#V"/>torum 
-          philosophorum quod distinctio specierum non est nisi 
+            <lb ed="#V"/><choice><orig>6o</orig><reg>sexto</reg></choice> <title>eneidos</title> <space extent="oneWordLength"/> spiritus intus alit
+          </p>
+          <p xml:id="l65-esrend">
+            <lb ed="#V"/>et sicut recitat <name>albertus</name> oppinio fuit mul<lb ed="#V" break="no"/>torum 
+            philosophorum quod distinctio specierum non est nisi 
             <lb ed="#V"/>ex parte materiae, ita quod deus est unica forma 
             <lb ed="#V"/>omnium rerum et secundum gradus complexionum 
-            <lb ed="#V"/>sunt gradus operationum et quod nobilio<lb ed="#V"/>res 
+            <lb ed="#V"/>sunt gradus operationum et quod nobilio<lb ed="#V" break="no"/>res 
             exercet operationes ubi materia est melius 
-            <lb ed="#V"/>disposita.</p>
-          
-          <p xml:id="l65-aiepea"><g ref="#dot"/>ad idem est <name>raby moises</name> in libro 
-            <cb ed="#V" n="137vb"/><lb ed="#V"/><title>de deuce dubiorum</title> ubi ponit expresse quod mun<lb ed="#V"/>dus 
+            <lb ed="#V"/>disposita
+          </p>
+          <p xml:id="l65-aiepea">
+            <g ref="#dot"/>ad idem est <name>raby moises</name> in libro 
+            <cb ed="#V" n="b"/><!--137vb -->
+            <lb ed="#V"/><title>de deuce dubiorum</title> ubi ponit expresse quod mun<lb ed="#V" break="no"/>dus 
             <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> tamquam quoddam vivens[?uniens?]
-            <lb ed="#V"/>habens diversa membra quaedam magis terres<lb ed="#V"/>tria 
+            <lb ed="#V"/>habens diversa membra quaedam magis terres<lb ed="#V" break="no"/>tria 
             alia minus et alia mere spirutalia et 
             <lb ed="#V"/>consequenter ponit quod deus se habet in triplici genere 
             <lb ed="#V"/>causae respectu universi efficientis formalis et finalis 
             <lb ed="#V"/>ergo ex intentione philosophorum patet quod deus realiter 
             <lb ed="#V"/>formam mundi et nedum de po[?], <choice><orig>ymo</orig><reg>immo</reg></choice> actuatur 
             <lb ed="#V"/>informat et actuat tamquam prima forma 
-            <lb ed="#V"/>et principissima.</p>
-          
-          <p xml:id="l65-icicrf">Item <name>commentator</name> in pluribus 
+            <lb ed="#V"/>et principissima
+          </p>
+          <p xml:id="l65-icicrf">
+            Item <name>commentator</name> in pluribus 
             <lb ed="#V"/>locis et in pluribus commentis <choice><orig>2o</orig><reg>IIo</reg></choice> <title>metaphysicae</title> 
             ponit deum concurrere in triplici genere causae, scilicet, formalis 
-            <lb ed="#V"/>efficientis et finalis, ergo ex intentione philospho<lb ed="#V"/>rum 
+            <lb ed="#V"/>efficientis et finalis, ergo ex intentione philospho<lb ed="#V" break="no"/>rum 
             fuit expresse quod deus concurrat formaliter 
             <lb ed="#V"/>in genere causae formalis respectu cuiuscumque formalis 
-            <lb ed="#V"/>et quod sit prima et principissima forma.</p>
-            
-          <p xml:id="l65-ibdevv">Item <name>beatus 
+            <lb ed="#V"/>et quod sit prima et principissima forma
+          </p>
+          <p xml:id="l65-ibdevv">
+            Item <name>beatus 
             dyonisius</name> in libris suis quasi[?] innumeris locis 
-              <lb ed="#V"/>ponit quod deus est esse <choice><orig>encium</orig><reg>entium</reg></choice> et vita <choice><orig>vivencium</orig><reg>viventium</reg></choice></p> 
-              
-          <p xml:id="l65-aeifrm"><g ref="#dot"/><name>augustinus</name> etiam in libro <title>confessionum</title> omnes 
+            <lb ed="#V"/>ponit quod deus est esse <choice><orig>encium</orig><reg>entium</reg></choice> et vita <choice><orig>vivencium</orig><reg>viventium</reg></choice>
+          </p> 
+          <p xml:id="l65-aeifrm">
+            <g ref="#dot"/><name>augustinus</name> etiam in libro <title>confessionum</title> omnes 
             <lb ed="#V"/>formas mutabilis differat subdi in aliquam 
             <lb ed="#V"/>immutabilem in eodem genere causae proportionaliter 
             <lb ed="#V"/>si sic de efficientibus ergo videtur quod deus concurrat 
             <lb ed="#V"/>in genere causae formalis ut distinguitur ab aliis 
             <lb ed="#V"/>causis ergo nedum est forma de possibili, sed actuatur 
-            <lb ed="#V"/>et <choice><orig>10</orig><reg>X</reg></choice> <title>confessionum</title> <name>augusinus</name> expresse approbat <choice><orig>sen<lb ed="#V"/>tenciam</orig><reg>sen<lb ed="#V"/>tentiam</reg></choice> 
+            <lb ed="#V"/>et <choice><orig>10</orig><reg>X</reg></choice> <title>confessionum</title> <name>augusinus</name> expresse approbat <choice><orig>sen<lb ed="#V" break="no"/>tenciam</orig><reg>sen<lb ed="#V" break="no"/>tentiam</reg></choice> 
             <name>ptholomei</name> philosophi platonici ponentes 
-            <lb ed="#V"/>quod deus sit realiter forma rerum mutabilium.</p>
-          
-          <p xml:id="l65-aiesap"><lb ed="#V"/>ad idem est <name>linconiensis</name> supra librum <title>de divi<lb ed="#V"/>nis 
+            <lb ed="#V"/>quod deus sit realiter forma rerum mutabilium
+          </p>
+          <p xml:id="l65-aiesap">
+            <lb ed="#V"/>ad idem est <name>linconiensis</name> supra librum <title>de divi<lb ed="#V" break="no"/>nis 
             nominibus</title> in pluribus locis. <g ref="#dot"/>conformiter ad 
             <lb ed="#V"/><name>beatum dyonsium</name> qui ponit quod deus est forma 
             <lb ed="#V"/>mutabilium sicut impressio et forma sigilli est 
             <lb ed="#V"/>forma liquidorum quamquam sit forma extrinseca tamen 
             <lb ed="#V"/>dicit eum esse formam et hoc sufficit ad 
-            <lb ed="#V"/>propositionum.</p>
-          
+            <lb ed="#V"/>propositionum
+          </p>
         </div>
         <div>
           <head xml:id="l65-Hresnes">Responsiones[?]</head>
-          
-          <p xml:id="l65-dargcf"><g ref="#dbslash"/>deinde arguitur rationibus. primo sit nulla 
+          <p xml:id="l65-dargcf">
+            <g ref="#dbslash"/>deinde arguitur rationibus. primo sit nulla 
             <lb ed="#V"/>causa <choice><orig>2a</orig><reg>secunda</reg></choice> sufficit influere in aliquo genere causae 
             <lb ed="#V"/>primo ergo sequiumur quod in omni genere causae 
             <lb ed="#V"/>influentis oportet devenire ad aliquam primam 
             <lb ed="#V"/>causam et illa non est nisi deus ergo 
             <lb ed="#V"/>deus est prima causa concurrens in genere 
-            <lb ed="#V"/>causae formalis.</p>
-            
-          <p xml:id="l65-sivmif"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic informare vel 
-            <lb ed="#V"/>influxus formalis dicit communicationem bon<lb ed="#V"/>tatis 
+            <lb ed="#V"/>causae formalis
+          </p>
+          <p xml:id="l65-sivmif">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sic informare vel 
+            <lb ed="#V"/>influxus formalis dicit communicationem bon<lb ed="#V" break="no"/>tatis 
             et perfectionis ergo debet deo attribui <choice><orig>ymo</orig><reg>immo</reg></choice> 
-            <cb ed="#V" n="138ra"/><lb ed="#V"/>maxime est sibi attribuendam quia communicatio 
-            <lb ed="#V"/>bonitatis consurgit ex plenitudine boni<lb ed="#V"/>tatis 
-            ergo ubi est summa plenititudo bonitat<lb ed="#V"/>tis 
-            ibi debet esse summus formalis influxus.</p> 
-          
-          <p xml:id="l65-ifhfrm"><lb ed="#V"/>Item forma habet multiplicem habitudinem ad suum 
+            <pb ed="#V" n="138-r"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>maxime est sibi attribuendam quia communicatio 
+            <lb ed="#V"/>bonitatis consurgit ex plenitudine boni<lb ed="#V" break="no"/>tatis 
+            ergo ubi est summa plenititudo bonitat<lb ed="#V" break="no"/>tis 
+            ibi debet esse summus formalis influxus
+          </p> 
+          <p xml:id="l65-ifhfrm">
+            <lb ed="#V"/>Item forma habet multiplicem habitudinem ad suum 
             <lb ed="#V"/>formabile habet enim quamdam habitudinem secundum quam 
-            <lb ed="#V"/>recipit perfectionem a suo formali sicut inhaesio<lb ed="#V"/>nem 
-            nam inhaerentia est quoddam genus de pen<lb ed="#V"/>dentiae 
+            <lb ed="#V"/>recipit perfectionem a suo formali sicut inhaesio<lb ed="#V" break="no"/>nem 
+            nam inhaerentia est quoddam genus de pen<lb ed="#V" break="no"/>dentiae 
             formae a suo formali quantum ad sui productionem
             <lb ed="#V"/>quia formae materiales educuntur de potentia 
             <lb ed="#V"/>materiae ergo quantum ad inhaerere reduci de materia 
             <lb ed="#V"/>forma magis dependet a materia quam econtra 
             <lb ed="#V"/>et <choice><orig>pocius</orig><reg>potius</reg></choice> per??rem[?] a materia quam sibi communicet ita quod 
-            <lb ed="#V"/>istae duae habitudines, scilicet[?] tam ex parte in<lb ed="#V"/>haesionis 
+            <lb ed="#V"/>istae duae habitudines, scilicet[?] tam ex parte in<lb ed="#V" break="no"/>haesionis 
             quam eductionis dicunt perfectionem in materia 
             <lb ed="#V"/>et imperfectionem informa sed constat quod secundum has 
-            <lb ed="#V"/>duas habitudines forma non dicitur in forma<lb ed="#V"/>re 
+            <lb ed="#V"/>duas habitudines forma non dicitur in forma<lb ed="#V" break="no"/>re 
             materiam, scilicet communicare sibi suam intrinsecam 
             <lb ed="#V"/>perfectionem ponenda est ergo multiplex habitudo formae 
             <lb ed="#V"/>ad suum formale quia communiter forma inhaeret 
             <lb ed="#V"/>materiae et quantum ad hoc forma magis dependet 
-            <lb ed="#V"/>a suo formali quam econtra quia inhaesio est quaedam de<lb ed="#V"/>pendentia 
-            formae ab illo cui inhaeret.</p>
-            
-          <p xml:id="l65-ecpcpd"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> ut 
-              <lb ed="#V"/>plurium forma dependet in esse et conservari a 
-              <lb ed="#V"/>suo formali et huiusmodi habitudines non sunt habi<lb ed="#V"/>tudines 
-              fluxus formalis quia forma ut sic 
-              <lb ed="#V"/>non influit, ita quod inhaesio nec ed?to[?] 
-              <lb ed="#V"/>non sunt de integritate informationis sive 
-              <lb ed="#V"/>influxus formalis habet, ergo formam <choice><orig>3am</orig><reg>tertiam</reg></choice> habitudinem 
-              <lb ed="#V"/>quae est perficere suum formabile quia communiter formam 
-              <lb ed="#V"/>inhaeret vel constitutum, scilicet, communicando sibi suas 
-              <lb ed="#V"/>denominationes in concreto quas habet in abstracto 
-              <lb ed="#V"/>capiamus ergo influere formaliter vel posse in<lb ed="#V"/>fluere 
-              formaliter istud dicit perfectionem simpliciter 
-              <lb ed="#V"/>et nullam imperfectionem, ergo potest deo competere modo 
-              <lb ed="#V"/>quidquid dicit perfectionem sive imperfectione an<lb ed="#V"/>nexa 
-              potest deo competere, sed sic est de influxu 
-              <lb ed="#V"/>formali quia est communicare suam per??m[?] vel 
-              <lb ed="#V"/>denominationem intrinsecam vi cuius communicationis 
-              <lb ed="#V"/>consurgit denominationes concretive in illo 
-              <lb ed="#V"/>cui inhaeret sic talis communicatio ita quod influere 
-              <cb ed="#V" n="138rb"/><lb ed="#V"/>formaliter est <choice><orig>pocius</orig><reg>potius</reg></choice> dare quam recipere et ex 
-              <lb ed="#V"/>parte formae et aliae duae habitudines, scilicet, inhaere<lb ed="#V"/>re 
-              et educi de potentia materiae sive[?] conservaro 
-              <lb ed="#V"/>dicunt <choice><orig>pocius</orig><reg>potius</reg></choice> recipere quam dare.</p>
-          
-          <p xml:id="l65-idecsm">Item deus 
+            <lb ed="#V"/>a suo formali quam econtra quia inhaesio est quaedam de<lb ed="#V" break="no"/>pendentia 
+            formae ab illo cui inhaeret
+          </p>
+          <p xml:id="l65-ecpcpd">
+            <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> ut 
+            <lb ed="#V"/>plurium forma dependet in esse et conservari a 
+            <lb ed="#V"/>suo formali et huiusmodi habitudines non sunt habi<lb ed="#V" break="no"/>tudines 
+            fluxus formalis quia forma ut sic 
+            <lb ed="#V"/>non influit, ita quod inhaesio nec ed?to[?] 
+            <lb ed="#V"/>non sunt de integritate informationis sive 
+            <lb ed="#V"/>influxus formalis habet, ergo formam <choice><orig>3am</orig><reg>tertiam</reg></choice> habitudinem 
+            <lb ed="#V"/>quae est perficere suum formabile quia communiter formam 
+            <lb ed="#V"/>inhaeret vel constitutum, scilicet, communicando sibi suas 
+            <lb ed="#V"/>denominationes in concreto quas habet in abstracto 
+            <lb ed="#V"/>capiamus ergo influere formaliter vel posse in<lb ed="#V" break="no"/>fluere 
+            formaliter istud dicit perfectionem simpliciter 
+            <lb ed="#V"/>et nullam imperfectionem, ergo potest deo competere modo 
+            <lb ed="#V"/>quidquid dicit perfectionem sive imperfectione an<lb ed="#V" break="no"/>nexa 
+            potest deo competere, sed sic est de influxu 
+            <lb ed="#V"/>formali quia est communicare suam per??m[?] vel 
+            <lb ed="#V"/>denominationem intrinsecam vi cuius communicationis 
+            <lb ed="#V"/>consurgit denominationes concretive in illo 
+            <lb ed="#V"/>cui inhaeret sic talis communicatio ita quod influere 
+            <cb ed="#V" n="b"/><!--138rb-->
+            <lb ed="#V"/>formaliter est <choice><orig>pocius</orig><reg>potius</reg></choice> dare quam recipere et ex 
+            <lb ed="#V"/>parte formae et aliae duae habitudines, scilicet, inhaere<lb ed="#V" break="no"/>re 
+            et educi de potentia materiae sive[?] conservaro 
+            <lb ed="#V"/>dicunt <choice><orig>pocius</orig><reg>potius</reg></choice> recipere quam dare
+          </p>
+          <p xml:id="l65-idecsm">
+            Item deus 
             <lb ed="#V"/>est universalis[?] in esse personali naturae humanae sicut 
             <lb ed="#V"/>de facto est ergo est universalis[?] et communicabilis essentialiter et 
             <lb ed="#V"/>formaliter. antecedens est claram de unione verbi divini 
@@ -222,9 +257,10 @@
             <lb ed="#V"/>aut ad intra est incommunicabilis, ergo si in esse personali 
             <lb ed="#V"/>deus univocabilis[universalis?] creaturae videtur quod magis sit 
             <lb ed="#V"/>universalis[?] creaturae in suo esse essentiali communicando creaturae 
-            <lb ed="#V"/>suam essentialem perfectionem.</p>
-          
-          <p xml:id="l65-ceehic"><g ref="#dbslash"/>Confirmatur nam sicut 
+            <lb ed="#V"/>suam essentialem perfectionem
+          </p>
+          <p xml:id="l65-ceehic">
+            <g ref="#dbslash"/>Confirmatur nam sicut 
             <lb ed="#V"/>tactum est essentia communicabilis est ad intra <choice><orig>ydemptitate</orig><reg>identitate</reg></choice> 
             <lb ed="#V"/>per plenitudinem, ergo potest etiam ad extra per participationem 
             <lb ed="#V"/>ex quo communicari ad extra formaliter dicit perfectionem 
@@ -232,146 +268,164 @@
             <lb ed="#V"/>forte diceretur quod ex parte communicantis scilicet deitatis 
             <lb ed="#V"/>non esset repugnantia quin[?] sit absolute[??] communicabilis 
             <lb ed="#V"/>sed repugnaret ex parte limitationis creaturae 
-            <lb ed="#V"/>quae non est huiusmodi influxus capax.</p> 
-          
-          <p xml:id="l65-eitsue">istud 
+            <lb ed="#V"/>quae non est huiusmodi influxus capax
+          </p> 
+          <p xml:id="l65-eitsue">
+            istud 
             <lb ed="#V"/>tollitur quia non videtur maior repugnantia 
             <lb ed="#V"/>quod creatura sit capax unionis essentialis verbi 
-            <lb ed="#V"/>ad ipsam, ergo etc.</p>
-            
-          <p xml:id="l65-ipcpic">Item potentialitas creaturae 
-            <lb ed="#V"/>ad huiusmodi uniones supernaturalis non est intrin<lb ed="#V"/>seca 
-            creaturae quantum ad hoc magis debet men<lb ed="#V"/>surari 
-            penes <choice><orig>potenciam</orig><reg>potentiam</reg></choice> sic ordinantem quam pe<lb ed="#V"/>nes 
-            intrinsecam perfectionem.</p>
-          
-          <p xml:id="l65-ipospd">Item potentia obedientalis 
+            <lb ed="#V"/>ad ipsam, ergo etc.
+          </p>
+          <p xml:id="l65-ipcpic">
+            Item potentialitas creaturae 
+            <lb ed="#V"/>ad huiusmodi uniones supernaturalis non est intrin<lb ed="#V" break="no"/>seca 
+            creaturae quantum ad hoc magis debet men<lb ed="#V" break="no"/>surari 
+            penes <choice><orig>potenciam</orig><reg>potentiam</reg></choice> sic ordinantem quam pe<lb ed="#V" break="no"/>nes 
+            intrinsecam perfectionem
+          </p>
+          <p xml:id="l65-ipospd">
+            Item potentia obedientalis 
             <lb ed="#V"/>non est intrinseca, sed quantificatur secundum gradum 
-            <lb ed="#V"/>potentiae intrinseca pot[?] sic uit vel tali in<lb ed="#V"/>strumento 
+            <lb ed="#V"/>potentiae intrinseca pot[?] sic uit vel tali in<lb ed="#V" break="no"/>strumento 
             et sic patet quod ex parte creaturae considerata 
             <lb ed="#V"/>potentia obedientali causaretur et immensitati potentiae 
             <lb ed="#V"/>divinae non repugnat quin[?] sit divina[?] essentia 
             <lb ed="#V"/>formabilis et quin[?] deus posset communicari creaturae 
-            <lb ed="#V"/>secundum plenitudinem deitatis.</p>
-          
-          <p xml:id="l65-ineedd">Item <choice><orig>nichil</orig><reg>nihil</reg></choice> est de 
+            <lb ed="#V"/>secundum plenitudinem deitatis
+          </p>
+          <p xml:id="l65-ineedd">
+            Item <choice><orig>nichil</orig><reg>nihil</reg></choice> est de 
             <lb ed="#V"/>negandum vel removendum a divina omnipotentia nisi 
             <lb ed="#V"/>appareat clara repugnantia vel contradictoria, sed deum 
             <lb ed="#V"/>formaliter influere non implicat contradictionem 
-            <cb ed="#V" n="138va"/><lb ed="#V"/>eo quod salvatur influxus formalis cum remotione 
+            <pb ed="#V" n="138-v"/>
+            <cb ed="#V" n="a"/>
+            <lb ed="#V"/>eo quod salvatur influxus formalis cum remotione 
             <lb ed="#V"/>cuiuscumque imperfectionis, scilicet, inhaesionis et eductionis 
             <lb ed="#V"/>et conservationis, ergo istud non videtur omnipotentiae esse 
-            <lb ed="#V"/>denegandum.</p>
-          
-          <p xml:id="l65-cempdc"><g ref="#dot"/>Item arguitur <choice><orig>apparencius</orig><reg>apparentius</reg></choice> quia de 
-            <lb ed="#V"/>facto deitas est humanitati christi communicata per rea<lb ed="#V"/>lem 
+            <lb ed="#V"/>denegandum
+          </p>
+          <p xml:id="l65-cempdc">
+            <g ref="#dot"/>Item arguitur <choice><orig>apparencius</orig><reg>apparentius</reg></choice> quia de 
+            <lb ed="#V"/>facto deitas est humanitati christi communicata per rea<lb ed="#V" break="no"/>lem 
             informationem, ergo concedendum est de possibili 
             <lb ed="#V"/>informatio dei respectu cuiuscumque creaturae. antecedens probatur 
             <lb ed="#V"/>per <name>apostolum</name> <title>ad colossenses</title> <choice><orig>2o</orig><reg>secundo</reg></choice> capitulo ubi loquendo 
             <lb ed="#V"/>de humanitate christi dicit inhemcat[?] plenitudo 
-            <lb ed="#V"/>deitatis corporaliter.</p> 
-          
-          <p xml:id="l65-ehahcc">et hanc auctoritatem 
+            <lb ed="#V"/>deitatis corporaliter
+          </p> 
+          <p xml:id="l65-ehahcc">
+            et hanc auctoritatem 
             <lb ed="#V"/>exponunt doctores approbati ad intellectum 
             <lb ed="#V"/>huiusmodi informationis nam <name>hugo</name> in libello 
             <lb ed="#V"/>suo <title>de sapientia animae christi</title> allegando istam 
             <lb ed="#V"/>auctoritatem ponit quod humanitati christi est 
             <lb ed="#V"/><del rend="strikethrough">omnis scientia sed etiam omnipotentia</del> communicatur per 
-            <lb ed="#V"/>gratiam, id est, <choice><orig>graciose</orig><reg>gratiose</reg></choice> et temporaliter quid<lb ed="#V"/>quid 
+            <lb ed="#V"/>gratiam, id est, <choice><orig>graciose</orig><reg>gratiose</reg></choice> et temporaliter quid<lb ed="#V" break="no"/>quid 
             deus habet per naturam, ergo sequitur quod 
             <lb ed="#V"/>tota plenitudo deitatis est huiusmodi humanitati 
-            <lb ed="#V"/>christi <del rend="strikethrough">contulit</del> communicata.</p>
-          
-          <p xml:id="l65-aiapsc"><g ref="#dot"/>ad idem est <name>ambrosius</name> 
-              <lb ed="#V"/>qui expresse ponit quod dei humanitati christi con<lb ed="#V"/>tulit 
-              quidquid habuit in se aeternaliter, ergo 
-              <lb ed="#V"/>humanitati christi communicatur deitas secundum plenitudinem 
-              <lb ed="#V"/>deitatis et hoc non potuit esse nisi 
-              <lb ed="#V"/>per communicationem deitatis per modum formae igitur 
-              <lb ed="#V"/>etc.</p> 
-          
-          <p xml:id="l65-aieufs">ad idem est <name>ricardus</name> in libro <title>de con<lb ed="#V"/>templatione</title> 
+            <lb ed="#V"/>christi <del rend="strikethrough">contulit</del> communicata
+          </p>
+          <p xml:id="l65-aiapsc">
+            <g ref="#dot"/>ad idem est <name>ambrosius</name> 
+            <lb ed="#V"/>qui expresse ponit quod dei humanitati christi con<lb ed="#V" break="no"/>tulit 
+            quidquid habuit in se aeternaliter, ergo 
+            <lb ed="#V"/>humanitati christi communicatur deitas secundum plenitudinem 
+            <lb ed="#V"/>deitatis et hoc non potuit esse nisi 
+            <lb ed="#V"/>per communicationem deitatis per modum formae igitur 
+            <lb ed="#V"/>etc.
+          </p> 
+          <p xml:id="l65-aieufs">
+            ad idem est <name>ricardus</name> in libro <title>de con<lb ed="#V" break="no"/>templatione</title> 
             parte prima qui inquirens de 
             <lb ed="#V"/>communicatione deitatis ad naturam humanam 
             <lb ed="#V"/>ponit quod nedum humanitati christi est omnis scientia 
             <lb ed="#V"/>sed etiam omni potentia, ergo et tota latitudo 
-            <lb ed="#V"/>divinae perfectionis et hoc non potest esse per vi<lb ed="#V"/>talem 
-            immutationem solum cum omnia sint repraesen<lb ed="#V"/>tata 
+            <lb ed="#V"/>divinae perfectionis et hoc non potest esse per vi<lb ed="#V" break="no"/>talem 
+            immutationem solum cum omnia sint repraesen<lb ed="#V" break="no"/>tata 
             ergo vi unionis formalis deitatis 
-            <lb ed="#V"/>ad humanitate christi deus secundum rationem dei<lb ed="#V"/>tatis 
-            formaliter influxit.</p>
-          
-          <p>Item comparando 
+            <lb ed="#V"/>ad humanitate christi deus secundum rationem dei<lb ed="#V" break="no"/>tatis 
+            formaliter influxit
+          </p>
+          <p>
+            Item comparando 
             <lb ed="#V"/>unionem humanitatis christi ad verbum et econtra 
-            <lb ed="#V"/>nam tanta est unio deitatis ad huma<lb ed="#V"/>nitatem 
+            <lb ed="#V"/>nam tanta est unio deitatis ad huma<lb ed="#V" break="no"/>nitatem 
             <choice><orig>sicud</orig><reg>sicut</reg></choice> econtra, scilicet, humanitas ad deitatem 
             <lb ed="#V"/>sed unio humanitatis ad verbum tanta est quod vi 
             <lb ed="#V"/>illius unionis verbum recipit denominationes 
             <lb ed="#V"/>concretivas humanitatis, ergo viceversa vi unionis 
-            <cb ed="#V" n="138vb"/><lb ed="#V"/>verbi ad humanitatem humanitas debet recipere 
+            <cb ed="#V" n="b"/><!--138vb-->
+            <lb ed="#V"/>verbi ad humanitatem humanitas debet recipere 
             <lb ed="#V"/>denominationes concretivas verbi, ergo si vi unionis 
-            <lb ed="#V"/>verbi ad humanitatem denominetur homo, ita econtra vi u<lb ed="#V"/>nionis 
-            humanitatis ad verbum humanitatis denomina<lb ed="#V"/>bitur 
+            <lb ed="#V"/>verbi ad humanitatem denominetur homo, ita econtra vi u<lb ed="#V" break="no"/>nionis 
+            humanitatis ad verbum humanitatis denomina<lb ed="#V" break="no"/>bitur 
             deus, ergo a posteriori arguitur quod influxus 
             <lb ed="#V"/>formalis communicat deo quia praecedens[?] influxus non 
-            <lb ed="#V"/>potest esse materialis.</p>
-            
-          <p xml:id="l65-ipqhvs"><g ref="#dbslash"/>deinde arguitur quantum ad con??em[?] 
+            <lb ed="#V"/>potest esse materialis
+          </p>
+          <p xml:id="l65-ipqhvs">
+            <g ref="#dbslash"/>deinde arguitur quantum ad con??em[?] 
             <lb ed="#V"/><choice><orig>4am</orig><reg>quartam</reg></choice> quod deus possit potentiam perceptivam vitaliter 
-            <lb ed="#V"/>immutare. <g ref="#dot"/>primo auctoritas <name>magistri</name> est ex<lb ed="#V"/>presse 
+            <lb ed="#V"/>immutare. <g ref="#dot"/>primo auctoritas <name>magistri</name> est ex<lb ed="#V" break="no"/>presse 
             ad hoc licet in hoc non teneatur 
-            <lb ed="#V"/>tamen ad hoc allegat auctoritatem <name>augustini</name>.</p>
-            
+            <lb ed="#V"/>tamen ad hoc allegat auctoritatem <name>augustini</name>
+          </p>
           <div>
             <head xml:id="l65-Hurdrdr">Una ratio De Rippa</head>
-              
-            <p xml:id="l65-atpess">arguo 
+            <p xml:id="l65-atpess">
+              arguo 
               <lb ed="#V"/>tamen per unicam rationem quae videtur[?] movere <g ref="#slash"/><name>magister 
               Iohannes de ripa</name> quantum ad hoc ipse enim praesupponit quod 
-                <lb ed="#V"/>notitia habet multiplicem habitu divinae ad potentiam 
-                <lb ed="#V"/>perceptivam habet enim habitudinem inhaesionis quia 
-                <lb ed="#V"/>notitia communiter est accidens quod independens a 
-                <lb ed="#V"/>suo subiecto ideo inhaeret.</p>
-            
-            <p xml:id="l65-ihhpua"><choice><orig>2o</orig><reg>secundo</reg></choice> notitia ut p??m[?] 
-              <lb ed="#V"/>habet habitudinem ad suam <choice><orig>potenciam</orig><reg>potentiam</reg></choice> ut ac<lb ed="#V"/>tiva.</p> 
-              
-            <p xml:id="l65-tnhefp"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> habitudinem ut vitaliter immutativam 
-            <lb ed="#V"/>modo sequestremus duas primas habitudines 
-            <lb ed="#V"/>quae sunt omnino impertinentes nam inhaesio est 
-            <lb ed="#V"/>impertinens qualitati ad hoc quod[?] vitaliter immu<lb ed="#V"/>tet 
-            non enim est de ratione notitiae quod inhaereat 
-            <lb ed="#V"/>nam <choice><orig>scaret</orig><reg>staret</reg></choice> quod inhaeret et quod non immutaret 
-            <lb ed="#V"/>vitaliter sibi[?] notitia ex inhaesione non deno??tur[?] 
-            <lb ed="#V"/>vitaliter immutatio nec ex habitudine ipsius 
-            <lb ed="#V"/>ad potentiam ut productiva non enim de ratione 
-            <lb ed="#V"/>notitiae est quod sit producta quia de facto aliqua est 
-            <lb ed="#V"/>notitia quae non est producta, scilicet, divina notitia.</p> 
-            
-            <p xml:id="l65-Hesupvi"><lb ed="#V"/>Item si aliqua notitia immediate causaretur adeo[?] in 
-                <lb ed="#V"/>potentia non videtur repugnantia quod potentia perceptivam 
-                <lb ed="#V"/>participaret et tamen potentia illam non perd??ret[?] 
-                <lb ed="#V"/>ergo non ex habitudine notitiae ad <choice><orig>potenciam</orig><reg>potentiam</reg></choice> 
-                ut subiecti nam ergo praecise ex habitudine ut vi<lb ed="#V"/>taliter 
-                immutativa notitia denominatur <choice><orig>noticia</orig><reg>notitia</reg></choice> 
-                <lb ed="#V"/>modo duae primae habitudines dicunt imper<lb ed="#V"/>fectionem, 
-                ideo non possunt deo competere omni, ergo de ratione 
-                <lb ed="#V"/>notitiae non sit quod inhaereat sine producatur a potentia 
-                <lb ed="#V"/>sed solum, quia vitaliter immutat <choice><orig>potenciam</orig><reg>potentiam</reg></choice> 
-                <lb ed="#V"/>perceptivam et illi habitudo non dicit imperfectionem 
-                <lb ed="#V"/>sed magis reducitur ad causalitatem extra[?] rem[?] et 
-                <cb ed="#V" n="139ra"/><lb ed="#V"/>et effectiva ergo potest deo competere.</p> 
-              
-            <p xml:id="l65-eieppn">et ista est tota ra<lb ed="#V"/>dix 
-                <name>magistri iohannes de rippa</name> licet ad hoc fa<lb ed="#V"/>ciat 
-                multas alias rationes et breviter in ista 
-                <lb ed="#V"/>materia quia intendo aliquid dicere de habi<lb ed="#V"/>tudinibus 
-                formarum substantialium et accidentalium 
-                <lb ed="#V"/>ad sua formabilia, ideo non intrabo decisionem 
-                quaestionis usque ad aliam lectionem, etc.</p>
-                
-              </div>
-            
+              <lb ed="#V"/>notitia habet multiplicem habitu divinae ad potentiam 
+              <lb ed="#V"/>perceptivam habet enim habitudinem inhaesionis quia 
+              <lb ed="#V"/>notitia communiter est accidens quod independens a 
+              <lb ed="#V"/>suo subiecto ideo inhaeret
+            </p>
+            <p xml:id="l65-ihhpua">
+              <choice><orig>2o</orig><reg>secundo</reg></choice> notitia ut p??m[?] 
+              <lb ed="#V"/>habet habitudinem ad suam <choice><orig>potenciam</orig><reg>potentiam</reg></choice> ut ac<lb ed="#V" break="no"/>tiva
+            </p> 
+            <p xml:id="l65-tnhefp">
+              <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> habitudinem ut vitaliter immutativam 
+              <lb ed="#V"/>modo sequestremus duas primas habitudines 
+              <lb ed="#V"/>quae sunt omnino impertinentes nam inhaesio est 
+              <lb ed="#V"/>impertinens qualitati ad hoc quod[?] vitaliter immu<lb ed="#V" break="no"/>tet 
+              non enim est de ratione notitiae quod inhaereat 
+              <lb ed="#V"/>nam <choice><orig>scaret</orig><reg>staret</reg></choice> quod inhaeret et quod non immutaret 
+              <lb ed="#V"/>vitaliter sibi[?] notitia ex inhaesione non deno??tur[?] 
+              <lb ed="#V"/>vitaliter immutatio nec ex habitudine ipsius 
+              <lb ed="#V"/>ad potentiam ut productiva non enim de ratione 
+              <lb ed="#V"/>notitiae est quod sit producta quia de facto aliqua est 
+              <lb ed="#V"/>notitia quae non est producta, scilicet, divina notitia
+            </p> 
+            <p xml:id="l65-Hesupvi">
+              <lb ed="#V"/>Item si aliqua notitia immediate causaretur adeo[?] in 
+              <lb ed="#V"/>potentia non videtur repugnantia quod potentia perceptivam 
+              <lb ed="#V"/>participaret et tamen potentia illam non perd??ret[?] 
+              <lb ed="#V"/>ergo non ex habitudine notitiae ad <choice><orig>potenciam</orig><reg>potentiam</reg></choice> 
+              ut subiecti nam ergo praecise ex habitudine ut vi<lb ed="#V" break="no"/>taliter 
+              immutativa notitia denominatur <choice><orig>noticia</orig><reg>notitia</reg></choice> 
+              <lb ed="#V"/>modo duae primae habitudines dicunt imper<lb ed="#V" break="no"/>fectionem, 
+              ideo non possunt deo competere omni, ergo de ratione 
+              <lb ed="#V"/>notitiae non sit quod inhaereat sine producatur a potentia 
+              <lb ed="#V"/>sed solum, quia vitaliter immutat <choice><orig>potenciam</orig><reg>potentiam</reg></choice> 
+              <lb ed="#V"/>perceptivam et illi habitudo non dicit imperfectionem 
+              <lb ed="#V"/>sed magis reducitur ad causalitatem extra[?] rem[?] et 
+              <pb ed="#V" n="139-r"/>
+              <cb ed="#V" n="a"/>
+              <lb ed="#V"/>et effectiva ergo potest deo competere
+            </p> 
+            <p xml:id="l65-eieppn">
+              et ista est tota ra<lb ed="#V" break="no"/>dix 
+              <name>magistri iohannes de rippa</name> licet ad hoc fa<lb ed="#V" break="no"/>ciat 
+              multas alias rationes et breviter in ista 
+              <lb ed="#V"/>materia quia intendo aliquid dicere de habi<lb ed="#V" break="no"/>tudinibus 
+              formarum substantialium et accidentalium 
+              <lb ed="#V"/>ad sua formabilia, ideo non intrabo decisionem 
+              quaestionis usque ad aliam lectionem, etc.
+            </p>
+          </div>
         </div>
       </div>
     </body>
