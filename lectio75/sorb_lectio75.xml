@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,80 +10,90 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.11-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 75, de Trinitate [Sorbonne Transcription]</title>
           <date when="2012-11-07">November 07, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2012-09-22">September 22, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S">Sorbonne</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
-<surface n="S135r">
-<graphic url="S135r.jpg"/>
-<zone start="#l75-edarss" ulx="653" uly="1250" lrx="1303" lry="1705" n="1"/>
-<zone start="#l75-srsqef" ulx="647" uly="1622" lrx="1297" lry="1949" n="1"/>
-<zone start="#l75-tsqndp" ulx="647" uly="1860" lrx="1297" lry="1983" n="1"/>
-</surface>
-<surface n="S135v">
-<graphic url="S135v.jpg"/>
-<zone start="#l75-tsqndp" ulx="495" uly="305" lrx="1145" lry="1985" n="2"/>
-<zone start="#l75-pmivpl" ulx="503" uly="1893" lrx="1153" lry="1990" n="1"/>
-<zone start="#l75-pmivpl" ulx="1075" uly="312" lrx="1725" lry="695" n="2"/>
-<zone start="#l75-sfnias" ulx="1075" uly="622" lrx="1725" lry="730" n="1"/>
-<zone start="#l75-tfncie" ulx="1080" uly="657" lrx="1730" lry="879" n="1"/>
-<zone start="#l75-cqgqcg" ulx="1077" uly="798" lrx="1727" lry="1331" n="1"/>
-<zone start="#l75-saopef" ulx="1095" uly="1252" lrx="1745" lry="1739" n="1"/>
-<zone start="#l75-eehprd" ulx="1103" uly="1650" lrx="1753" lry="1965" n="1"/>
-</surface>
-<surface n="S136r">
-<graphic url="S136r.jpg"/>
-<zone start="#l75-eehprd" ulx="72" uly="298" lrx="722" lry="380" n="2"/>
-<zone start="#l75-eehpid" ulx="67" uly="298" lrx="717" lry="706" n="1"/>
-<zone start="#l75-tasnvs" ulx="67" uly="623" lrx="717" lry="1740" n="1"/>
-<zone start="#l75-eciaph" ulx="52" uly="1657" lrx="702" lry="1984" n="1"/>
-<zone start="#l75-eciaph" ulx="670" uly="298" lrx="1320" lry="658" n="2"/>
-<zone start="#l75-caaich" ulx="663" uly="577" lrx="1313" lry="834" n="1"/>
-<zone start="#l75-pdaaid" ulx="667" uly="755" lrx="1317" lry="1320" n="1"/>
-<zone start="#l75-sdqeii" ulx="660" uly="1275" lrx="1310" lry="1722" n="1"/>
-<zone start="#l75-ihpipc" ulx="660" uly="1635" lrx="1310" lry="1992" n="1"/>
-</surface>
-<surface n="S136v">
-<graphic url="S136v.jpg"/>
-<zone start="#l75-ihpipc" ulx="482" uly="312" lrx="1132" lry="812" n="2"/>
-<zone start="#l75-sneiif" ulx="488" uly="717" lrx="1138" lry="1354" n="1"/>
-<zone start="#l75-tneapp" ulx="503" uly="1262" lrx="1153" lry="1547" n="1"/>
-<zone start="#l75-dpnaea" ulx="505" uly="1457" lrx="1155" lry="1964" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-11-07" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>  
+  <facsimile>
+    <surface n="S135r">
+      <graphic url="S135r.jpg"/>
+      <zone start="#l75-edarss" ulx="653" uly="1250" lrx="1303" lry="1705" n="1"/>
+      <zone start="#l75-srsqef" ulx="647" uly="1622" lrx="1297" lry="1949" n="1"/>
+      <zone start="#l75-tsqndp" ulx="647" uly="1860" lrx="1297" lry="1983" n="1"/>
+    </surface>
+    <surface n="S135v">
+      <graphic url="S135v.jpg"/>
+      <zone start="#l75-tsqndp" ulx="495" uly="305" lrx="1145" lry="1985" n="2"/>
+      <zone start="#l75-pmivpl" ulx="503" uly="1893" lrx="1153" lry="1990" n="1"/>
+      <zone start="#l75-pmivpl" ulx="1075" uly="312" lrx="1725" lry="695" n="2"/>
+      <zone start="#l75-sfnias" ulx="1075" uly="622" lrx="1725" lry="730" n="1"/>
+      <zone start="#l75-tfncie" ulx="1080" uly="657" lrx="1730" lry="879" n="1"/>
+      <zone start="#l75-cqgqcg" ulx="1077" uly="798" lrx="1727" lry="1331" n="1"/>
+      <zone start="#l75-saopef" ulx="1095" uly="1252" lrx="1745" lry="1739" n="1"/>
+      <zone start="#l75-eehprd" ulx="1103" uly="1650" lrx="1753" lry="1965" n="1"/>
+    </surface>
+    <surface n="S136r">
+      <graphic url="S136r.jpg"/>
+      <zone start="#l75-eehprd" ulx="72" uly="298" lrx="722" lry="380" n="2"/>
+      <zone start="#l75-eehpid" ulx="67" uly="298" lrx="717" lry="706" n="1"/>
+      <zone start="#l75-tasnvs" ulx="67" uly="623" lrx="717" lry="1740" n="1"/>
+      <zone start="#l75-eciaph" ulx="52" uly="1657" lrx="702" lry="1984" n="1"/>
+      <zone start="#l75-eciaph" ulx="670" uly="298" lrx="1320" lry="658" n="2"/>
+      <zone start="#l75-caaich" ulx="663" uly="577" lrx="1313" lry="834" n="1"/>
+      <zone start="#l75-pdaaid" ulx="667" uly="755" lrx="1317" lry="1320" n="1"/>
+      <zone start="#l75-sdqeii" ulx="660" uly="1275" lrx="1310" lry="1722" n="1"/>
+      <zone start="#l75-ihpipc" ulx="660" uly="1635" lrx="1310" lry="1992" n="1"/>
+    </surface>
+    <surface n="S136v">
+      <graphic url="S136v.jpg"/>
+      <zone start="#l75-ihpipc" ulx="482" uly="312" lrx="1132" lry="812" n="2"/>
+      <zone start="#l75-sneiif" ulx="488" uly="717" lrx="1138" lry="1354" n="1"/>
+      <zone start="#l75-tneapp" ulx="503" uly="1262" lrx="1153" lry="1547" n="1"/>
+      <zone start="#l75-dpnaea" ulx="505" uly="1457" lrx="1155" lry="1964" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#S" n="135-r"/>
+        <cb ed="#S" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio75">
-        
         <head xml:id="l75-Hldtldt">Lectio 75, de Trinitate [Sorbonne Transcription]</head>
         <div>
           <head xml:id="l75-Hcapdid">Contra aliqui ponentes distinctiones in divinis</head>
-        
-          <p xml:id="l75-edarss"><lb ed="#S"/><g ref="#pilcrow"/><hi rend="largeFont">Ex prius dictis</hi> patet quod in materia praesenti 
-            <lb ed="#S"/>plures concedunt artem vel regulas artis obligatoriae fi<lb ed="#S"/>dei. 
+          <p xml:id="l75-edarss">
+            <lb ed="#S"/><g ref="#pilcrow"/><hi rend="largeFont">Ex prius dictis</hi> patet quod in materia praesenti 
+            <lb ed="#S"/>plures concedunt artem vel regulas artis obligatoriae fi<lb ed="#S" break="no"/>dei. 
             <g ref="#dbslash"/>primi sunt positores diversarum positionem scilicet 
             <lb ed="#S"/>divinae proprietatis a personae et personae ab essentia <g ref="#slash"/>et istis sub 
             <lb ed="#S"/>dividuntur secundum multiplices errores in hac materia 
@@ -91,19 +101,21 @@
             <lb ed="#S"/>divinis nulla est praeter relativa ponenda distinctio <choice><orig>eciam</orig><reg>etiam</reg></choice> huiusmodi 
             <lb ed="#S"/>constitutiones proprietatum cum personalibus evidenter repugnant 
             <lb ed="#S"/>summae simplicitati quia Implicite continet compositioni quamdam quae 
-            <lb ed="#S"/>summae simplicitati et Impossibilis.</p>
-          
-          <p xml:id="l75-srsqef">Item refellendi 
+            <lb ed="#S"/>summae simplicitati et Impossibilis
+          </p>
+          <p xml:id="l75-srsqef">
+            Item refellendi 
             <lb ed="#S"/>sunt positores in hac materia plurium absolutorum 
-            <lb ed="#S"/>ubi advertendum quod personas divinas posuerunt quiddam esse re<lb ed="#S"/>aliter 
+            <lb ed="#S"/>ubi advertendum quod personas divinas posuerunt quiddam esse re<lb ed="#S" break="no"/>aliter 
             Impugnari <g ref="#slash"/>ex illa tamen fidei sequitur evidenter 
             <lb ed="#S"/>quod personae non possunt esse <choice><orig>encia</orig><reg>entia</reg></choice> absoluta eo quod inter 
-            <lb ed="#S"/><choice><orig>encia</orig><reg>entia</reg></choice> absoluta non potest esse nisi essentialis distinctio.</p>
-        
-        
+            <lb ed="#S"/><choice><orig>encia</orig><reg>entia</reg></choice> absoluta non potest esse nisi essentialis distinctio
+          </p>
           <p xml:id="l75-tsqndp"><g ref="#pilcrow"/>sequitur 
             <lb ed="#S"/>ulterius contra separantes hanc materiam trinitatis a formis 
-            <cb ed="#S" n="135va"/><lb ed="#S"/><choice><orig>sillogisticis[?]</orig><reg>syllogistics[?]</reg></choice> non considerantes quid virtutis habeat dici 
+            <pb ed="#S" n="135-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/><choice><orig>sillogisticis[?]</orig><reg>syllogistics[?]</reg></choice> non considerantes quid virtutis habeat dici 
             <lb ed="#S"/>de omni nam considerato <name ref="#Aristotle">aristotelis</name> processu. <g ref="#slash"/>nulla alia ars 
             <lb ed="#S"/>tradenda est pro praesenti materia quam sit ars a <name ref="#Aristotle">philosopho</name> 
             <lb ed="#S"/>traditam <g ref="#slash"/>omnis enim <choice><orig>sillogismus</orig><reg>syllogismus</reg></choice> in debito modo et debita 
@@ -120,7 +132,7 @@
             <lb ed="#S"/>propositionum sed <choice><orig>eciam</orig><reg>etiam</reg></choice> requiritur quod praedicatum verificetur vel 
             <lb ed="#S"/>possit verificari a quolibet de quo subiectum verificatur 
             <lb ed="#S"/>vel potest verificari <g ref="#slash"/>exemplum ista propositio secundum communem modum 
-            <lb ed="#S"/>loquendi omnis essentia est pater est universalis quae sumeretur ne<lb ed="#S"/>dum 
+            <lb ed="#S"/>loquendi omnis essentia est pater est universalis quae sumeretur ne<lb ed="#S" break="no"/>dum 
             per singularia vaga <g ref="#slash"/>ut haec essentia est pater vel 
             <lb ed="#S"/>si esset aliquis terminus singularis determinatus qui continentur sub 
             <lb ed="#S"/>li essentia quaelibet talis esset vera si de quolibet tali 
@@ -141,160 +153,170 @@
             <lb ed="#S"/>verificatur et denotatur li essentia quod de eo dicatur praedicatum 
             <lb ed="#S"/>et tunc in illo <choice><orig>sillogismo</orig><reg>syllogismo</reg></choice> mairo esset falsa ut notum est <g ref="#dbslash"/>
             <!-- probably need to add a paragraph break here -->
-            <lb ed="#S"/><g ref="#pilcrow"/>Consequenter circa istam materiam notavi alias quindecim decep<lb ed="#S"/>tiones 
+            <lb ed="#S"/><g ref="#pilcrow"/>Consequenter circa istam materiam notavi alias quindecim decep<lb ed="#S" break="no"/>tiones 
             <choice><orig>tractancium</orig><reg>tractantium</reg></choice> communiter[?] istam materiam alibi quam non 
             <lb ed="#S"/>prosequar pro praesenti sed forsan postquam tractavero materiam 
             <lb ed="#S"/>trinitatis quia eam intendo expedire et venire 
             <lb ed="#S"/>ad materiam 17ae distinctionis quae forsan erit magis 
-            <lb ed="#S"/>placens.</p>
-          
-           
-      </div>
-      <div>
-        <head xml:id="l75-Hcgacga">Circa generationem aeternam</head>
-        
-        <p xml:id="l75-pmivpl"><g ref="#slash"/>pro maiori tamen intellectu divinae generationis 
-          <cb ed="#S" n="135vb"/><lb ed="#S"/>inducam rationem <name ref="#Arius">arrii</name> quam facit contra <name ref="#Victorinus">victorinum</name> arguit 
-          <lb ed="#S"/>per quamcumque viam generationis ergo falsum est quod filius 
-          <lb ed="#S"/>procedat a patre cum virtute essentiae quia <name ref="#Arius">arrius</name> 
-          <lb ed="#S"/>non negat productionem filii sed negat eam cum[?] 
-          <lb ed="#S"/>unitatem essentiae et inducit <name ref="#Arius">arrius</name> quod filius non procedit 
-          <lb ed="#S"/>a patre omnes productiones in creaturis arguendo per sumitur[?] 
-          <lb ed="#S"/>quia filius non procedit a patre sicut linea a puncto 
-          <lb ed="#S"/>fluente <g ref="#slash"/>ut <name ref="#Mathematicians">mathematici</name> dicunt linea producitur[?] 
-          <lb ed="#S"/>a puncto fluente.</p> 
-        <!-- questionable paragraph break -->
-        <p xml:id="l75-sfnias">nec producitur filius a patre sicut 
-          <lb ed="#S"/>impressio a sigillo.</p>
-        
-        <p xml:id="l75-tfncie"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> nec producitur filius a patre 
-          <lb ed="#S"/>sicut radius a sole et sic usque ad duodecimos[?] 
-          <lb ed="#S"/>modos processionis qui reperiuntur in creaturis ipse 
-          <lb ed="#S"/>inducit <g ref="#slash"/>ergo impossibile est filium a patre procedere cum 
-          <lb ed="#S"/><choice><orig>ydemptitate</orig><reg>identitate</reg></choice> essentiae.</p>
-        
-      </div>
-      <div>
-        <head xml:id="l75-Hcontio">Confirmatio</head>
-        <div>
-          <head xml:id="l75-Hpriimo">Primo</head>
-          <p xml:id="l75-cqgqcg"><g ref="#pilcrow"/>confirmatur nam generatio est indita 
-            <lb ed="#S"/>rebus ratione <choice><orig>deffectus</orig><reg>defectus</reg></choice> ergo generatio in divinis illum 
-            <lb ed="#S"/>habet locum consequentia est clara antecedens probatur nam generatio est indita 
-            <lb ed="#S"/>rebus propter individuorum corruptionem, quae quia non[?] 
-            <lb ed="#S"/>possunt conservari in se ideo natura indidit quod in 
-            <lb ed="#S"/>specie Regenerationem conservetur ideo generatio est imperfectio 
-            <lb ed="#S"/>ergo non reperitur in divinis alias parat[?patet?] <name ref="#Aristotle">philosophus</name> 2o <title ref="#deGeneratione">de 
-            <lb ed="#S"/>generatione</title> ubi ponit quod natura indidit generationem 
-            <lb ed="#S"/>ut individua quae non possunt in se conservari[?] 
-            <lb ed="#S"/>per speciem conserventur <g ref="#slash"/>et propter hoc generaliter non quarti[?] 
-            <lb ed="#S"/>substantiis indivisibilibus et angelis quia possunt conservari 
-            <lb ed="#S"/>sine generatione ergo contradictorio generationis non reperitur 
-            <lb ed="#S"/>in divinis</p>
-            
-            
+            <lb ed="#S"/>placens
+          </p>
         </div>
         <div>
-          <head xml:id="l75-Hsecndo">Secundo</head>
-          
-          <p xml:id="l75-saopef"><g ref="#pilcrow"/>Item omnis generatio communicat omnem per<lb ed="#S"/>fectionem 
-            suam generatio ergo si filius emanat 
-            <lb ed="#S"/>a patrem per generationem tunc sequitur quod filius est <del>ap[?]</del> 
-            <lb ed="#S"/>generativus et si sit generativus tunc potest generatione 
-            <lb ed="#S"/>alium filium et pari ratione ille <choice><orig>2us</orig><reg>secundus</reg></choice> filius alium filium 
-            <lb ed="#S"/>et sic infinitum ergo in divinis ponendi sunt infinit 
-            <lb ed="#S"/>filii per modum generationes <g ref="#slash"/>nec valet fundamentum prius 
-            <lb ed="#S"/>tactum scilicet quod radix generationis ad intra con?[?] 
-            <lb ed="#S"/>summa fecunditas et redundantia plenitudine 
-            <lb ed="#S"/>bonitatis quia ex ista radice probaretur quod spiritus sanctus 
-            <lb ed="#S"/>ratione suae immensae fecunditatis potest alium spiritum sanctum 
-            <lb ed="#S"/>producere ergo illa radix non est valida.</p>
-          
-          <p xml:id="l75-eehprd"><g ref="#pilcrow"/>Consequenter 
-            <lb ed="#S"/>arguitur de spiritu sancto quod per spirationem non procedat a divinis[?] 
-            <lb ed="#S"/>quia parte dictum est quod realtiones in divinis 
-            <lb ed="#S"/>sunt met personalitates <g ref="#slash"/>ex hoc sequitur quod filius 
-            <lb ed="#S"/>et pater non producunt spiritus sancti nam spiratio activa 
-            <lb ed="#S"/>est alia relatio in filio quam passiva generation ergo 
-            <lb ed="#S"/>est alia personalitas a prima igitur erunt loco[?] f[?] 
-            <cb ed="#S" n="136ra"/><lb ed="#S"/>duae personae realiter distinctae.</p>
-            
-          <p xml:id="l75-eehpid">pari ratione probaretur quod 
-            <lb ed="#S"/>pater sit duae personae <g ref="#slash"/>nam alia est relatio quae est 
-            <lb ed="#S"/>generatio activa relata ad filium et alia spi<lb ed="#S"/>ratio 
-            activa relata ad spiritum sanctum <g ref="#slash"/>si ergo quaelibet ido[?] 
-            <lb ed="#S"/>sit persona et sint inter se distinctae rationes sequitur quod 
-            <lb ed="#S"/>pater erit duae personae et <choice><orig>eciam</orig><reg>etiam</reg></choice> filius erit duae et sic 
-            <lb ed="#S"/>erunt quinque personae in divinis <g ref="#pilcrow"/>consequenter quia spiratio 
-            <lb ed="#S"/>activa est unica relatio communis patri et filio videtur 
-            <lb ed="#S"/>quod sit personalitas ergo erunt sex personae in 
-            <lb ed="#S"/>divinis</p>
-            
+          <head xml:id="l75-Hcgacga">Circa generationem aeternam</head>
+          <p xml:id="l75-pmivpl">
+            <g ref="#slash"/>pro maiori tamen intellectu divinae generationis 
+            <cb ed="#S" n="b"/><!--135vb -->
+            <lb ed="#S"/>inducam rationem <name ref="#Arius">arrii</name> quam facit contra <name ref="#Victorinus">victorinum</name> arguit 
+            <lb ed="#S"/>per quamcumque viam generationis ergo falsum est quod filius 
+            <lb ed="#S"/>procedat a patre cum virtute essentiae quia <name ref="#Arius">arrius</name> 
+            <lb ed="#S"/>non negat productionem filii sed negat eam cum[?] 
+            <lb ed="#S"/>unitatem essentiae et inducit <name ref="#Arius">arrius</name> quod filius non procedit 
+            <lb ed="#S"/>a patre omnes productiones in creaturis arguendo per sumitur[?] 
+            <lb ed="#S"/>quia filius non procedit a patre sicut linea a puncto 
+            <lb ed="#S"/>fluente <g ref="#slash"/>ut <name ref="#Mathematicians">mathematici</name> dicunt linea producitur[?] 
+            <lb ed="#S"/>a puncto fluente.
+          </p>
+          <!-- questionable paragraph break -->
+          <p xml:id="l75-sfnias">
+            nec producitur filius a patre sicut 
+            <lb ed="#S"/>impressio a sigillo
+          </p>
+          <p xml:id="l75-tfncie">
+            <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> nec producitur filius a patre 
+            <lb ed="#S"/>sicut radius a sole et sic usque ad duodecimos[?] 
+            <lb ed="#S"/>modos processionis qui reperiuntur in creaturis ipse 
+            <lb ed="#S"/>inducit <g ref="#slash"/>ergo impossibile est filium a patre procedere cum 
+            <lb ed="#S"/><choice><orig>ydemptitate</orig><reg>identitate</reg></choice> essentiae
+          </p>
         </div>
         <div>
-          
-          <head xml:id="l75-Htertio">Tertio</head>
-          
-          <p xml:id="l75-tasnvs"><g ref="#pilcorw"/>Item probatur quod spiritus sanctus non procedat a filio, 
-            <lb ed="#S"/>nam in <name>consilio niceno</name> quod fuit inter consilia 
-            <lb ed="#S"/>autentica magis autentiquum et grave 
-            et maioris auctoritatis communiter in illo <choice><orig>simboli</orig><reg>symboli</reg></choice> ponitur 
-            <lb ed="#S"/>a patre procedit et solum ponatur quod spiritus sanctus procedit 
-            <lb ed="#S"/>a patre et in finem illius <choice><orig>simboli</orig><reg>symboli</reg></choice> ponatur anathematis[?] 
-            <lb ed="#S"/>sententia <g ref="#slash"/>quicumque huic <choice><orig>simbolo</orig><reg>symbolo</reg></choice> addit vel 
-            <lb ed="#S"/>quicumque addidit anathema sit et <choice><orig>eciam</orig><reg>etiam</reg></choice> illud ponitur 
-            <lb ed="#S"/>in canonibus <name ref="#IsidoreOfSeville">ysidori</name> ubi recitat et ponit 
-            <lb ed="#S"/>sententias patrum et ibidem ego lego legi <g ref="#slash"/>tunc 
-            <lb ed="#S"/>arguitur sic illud consilium fuerit tantae auctoritatis quod num<lb ed="#S"/>quam 
-            aliquod consilium nisi esset generaliter celebratum 
-            <lb ed="#S"/>potuit ad aequalitatem auctoritatis <choice><orig>actingere</orig><reg>attingere</reg></choice> ergo 
-            <lb ed="#S"/>quaecumque posterior determinatio non obstante quod sit 
-            <lb ed="#S"/>determinatio ecclesiae quod illa sit suspecta <choice><orig>ymo</orig><reg>imo</reg></choice> in<lb ed="#S"/>currit 
-            sententia ergo <name ref="#Latins">latini</name> censendi sunt haeretici 
-            <lb ed="#S"/>vel <choice><orig>scismatici</orig><reg>schismatici</reg></choice> vel incurrentes ex communicationis 
-            <lb ed="#S"/>sententiam. <!-- should there be a paragraph break here --> <g ref="#pilcrorw"/>ubi advertendum quod in consilio generali tali 
-            <lb ed="#S"/>quali ubi materia de processioni spiritus sancti per <name ref="#Latins">lati<lb ed="#S"/>nos</name>  
-            fuit determinata nec <name ref="#Greeks">graeci</name> fuerunt nec 
-            <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> focati sunt ergo consilium generale in puncto 
-            <lb ed="#S"/>huiusmodi determinationi non fuit sufficienter congrega<lb ed="#S"/>tum 
-            nec convocatum ergo non fuit auctoritatem consilii 
-            <lb ed="#S"/>generale ergo solum habuit auctoritatem particularem[?] fidei quae 
-            <lb ed="#S"/>contra auctoritatem totalem ecclesiae non potest determinare <choice><orig>ymo</orig><reg>immo</reg></choice> 
-            <lb ed="#S"/>ex hoc incurret sententiam ergo <name ref="#Greeks">graeci</name> habent nos 
-            <lb ed="#S"/>reputare haereticos et <choice><orig>conscismaticos</orig><reg>conschismaticos</reg></choice> eo 
-            <lb ed="#S"/>quod auctoritas illius consilii non fuit universalis 
-            <lb ed="#S"/>congregatio fidelium sed solum <name ref="#Latins">latinorum</name></p>
-           
-          <p xml:id="l75-eciaph"><g ref="#pilcrow"/>Circa 
-            <lb ed="#S"/>istam materiam posset induci materia de auctoritate 
-            <lb ed="#S"/>consilii generalis et prima facie videretur quod consilium 
-            <lb ed="#S"/>generale posset errare saltem 
-            <lb ed="#S"/>in temporalibus et aliis quae concernunt sacrorum 
-            <lb ed="#S"/>administrationem <g ref="#slash"/>et circa hoc posset <choice><orig>eciam</orig><reg>etiam</reg></choice> induci 
-            <lb ed="#S"/>de praesenti <choice><orig>scismatae</orig><reg>schismate</reg></choice> quid in hoc praesenti <choice><orig>scismate</orig><reg>schismate</reg></choice> 
-            <lb ed="#S"/>aliqui refugiunt consilium generale allegantes 
-            <cb ed="#S" n="136rb"/><lb ed="#S"/>pluralitatem ex una parte quae non ex alia ergo consilium 
-            <lb ed="#S"/>generale praecise reduceretur ad humanam potentiam vel 
-            <lb ed="#S"/>multitudinem vocum <g ref="#slash"/>vel ad alia concernentia providentiam[?] 
-            <lb ed="#S"/>humanam ergo consilium generale non regitur spiritu sancto <choice><orig>eciam</orig><reg>etiam</reg></choice> 
-            <lb ed="#S"/>in suis determinationibus et <choice><orig>eciam</orig><reg>etiam</reg></choice> concludentur quod in materia 
-            <lb ed="#S"/>de processione spiritus sancti quod procederet ab utroque <g ref="#slash"/>una 
-            <lb ed="#S"/>pars determinant hoc non esset sibi credendum maxime 
-            <lb ed="#S"/>cum determinet contra consilium generale sufficiens cele<lb ed="#S"/>bratum 
-            et congregatum.</p>
-        </div>
+          <head xml:id="l75-Hcontio">Confirmatio</head>
+          <div>
+            <head xml:id="l75-Hpriimo">Primo</head>
+            <p xml:id="l75-cqgqcg">
+              <g ref="#pilcrow"/>confirmatur nam generatio est indita 
+              <lb ed="#S"/>rebus ratione <choice><orig>deffectus</orig><reg>defectus</reg></choice> ergo generatio in divinis illum 
+              <lb ed="#S"/>habet locum consequentia est clara antecedens probatur nam generatio est indita 
+              <lb ed="#S"/>rebus propter individuorum corruptionem, quae quia non[?] 
+              <lb ed="#S"/>possunt conservari in se ideo natura indidit quod in 
+              <lb ed="#S"/>specie Regenerationem conservetur ideo generatio est imperfectio 
+              <lb ed="#S"/>ergo non reperitur in divinis alias parat[?patet?] <name ref="#Aristotle">philosophus</name> 2o <title ref="#deGeneratione">de 
+              <lb ed="#S"/>generatione</title> ubi ponit quod natura indidit generationem 
+              <lb ed="#S"/>ut individua quae non possunt in se conservari[?] 
+              <lb ed="#S"/>per speciem conserventur <g ref="#slash"/>et propter hoc generaliter non quarti[?] 
+              <lb ed="#S"/>substantiis indivisibilibus et angelis quia possunt conservari 
+              <lb ed="#S"/>sine generatione ergo contradictorio generationis non reperitur 
+              <lb ed="#S"/>in divinis
+            </p>
+          </div>
+          <div>
+            <head xml:id="l75-Hsecndo">Secundo</head>
+            <p xml:id="l75-saopef">
+              <g ref="#pilcrow"/>Item omnis generatio communicat omnem per<lb ed="#S" break="no"/>fectionem 
+              suam generatio ergo si filius emanat 
+              <lb ed="#S"/>a patrem per generationem tunc sequitur quod filius est <del>ap[?]</del> 
+              <lb ed="#S"/>generativus et si sit generativus tunc potest generatione 
+              <lb ed="#S"/>alium filium et pari ratione ille <choice><orig>2us</orig><reg>secundus</reg></choice> filius alium filium 
+              <lb ed="#S"/>et sic infinitum ergo in divinis ponendi sunt infinit 
+              <lb ed="#S"/>filii per modum generationes <g ref="#slash"/>nec valet fundamentum prius 
+              <lb ed="#S"/>tactum scilicet quod radix generationis ad intra con?[?] 
+              <lb ed="#S"/>summa fecunditas et redundantia plenitudine 
+              <lb ed="#S"/>bonitatis quia ex ista radice probaretur quod spiritus sanctus 
+              <lb ed="#S"/>ratione suae immensae fecunditatis potest alium spiritum sanctum 
+              <lb ed="#S"/>producere ergo illa radix non est valida
+            </p>
+            <p xml:id="l75-eehprd">
+              <g ref="#pilcrow"/>Consequenter 
+              <lb ed="#S"/>arguitur de spiritu sancto quod per spirationem non procedat a divinis[?] 
+              <lb ed="#S"/>quia parte dictum est quod realtiones in divinis 
+              <lb ed="#S"/>sunt met personalitates <g ref="#slash"/>ex hoc sequitur quod filius 
+              <lb ed="#S"/>et pater non producunt spiritus sancti nam spiratio activa 
+              <lb ed="#S"/>est alia relatio in filio quam passiva generation ergo 
+              <lb ed="#S"/>est alia personalitas a prima igitur erunt loco[?] f[?] 
+              <pb ed="#S" n="136-r"/>
+              <cb ed="#S" n="a"/>
+              <lb ed="#S"/>duae personae realiter distinctae
+            </p>
+            <p xml:id="l75-eehpid">
+              pari ratione probaretur quod 
+              <lb ed="#S"/>pater sit duae personae <g ref="#slash"/>nam alia est relatio quae est 
+              <lb ed="#S"/>generatio activa relata ad filium et alia spi<lb ed="#S" break="no"/>ratio 
+              activa relata ad spiritum sanctum <g ref="#slash"/>si ergo quaelibet ido[?] 
+              <lb ed="#S"/>sit persona et sint inter se distinctae rationes sequitur quod 
+              <lb ed="#S"/>pater erit duae personae et <choice><orig>eciam</orig><reg>etiam</reg></choice> filius erit duae et sic 
+              <lb ed="#S"/>erunt quinque personae in divinis <g ref="#pilcrow"/>consequenter quia spiratio 
+              <lb ed="#S"/>activa est unica relatio communis patri et filio videtur 
+              <lb ed="#S"/>quod sit personalitas ergo erunt sex personae in 
+              <lb ed="#S"/>divinis
+            </p>
+          </div>
+          <div>
+            <head xml:id="l75-Htertio">Tertio</head>
+            <p xml:id="l75-tasnvs">
+              <g ref="#pilcorw"/>Item probatur quod spiritus sanctus non procedat a filio, 
+              <lb ed="#S"/>nam in <name>consilio niceno</name> quod fuit inter consilia 
+              <lb ed="#S"/>autentica magis autentiquum et grave 
+              et maioris auctoritatis communiter in illo <choice><orig>simboli</orig><reg>symboli</reg></choice> ponitur 
+              <lb ed="#S"/>a patre procedit et solum ponatur quod spiritus sanctus procedit 
+              <lb ed="#S"/>a patre et in finem illius <choice><orig>simboli</orig><reg>symboli</reg></choice> ponatur anathematis[?] 
+              <lb ed="#S"/>sententia <g ref="#slash"/>quicumque huic <choice><orig>simbolo</orig><reg>symbolo</reg></choice> addit vel 
+              <lb ed="#S"/>quicumque addidit anathema sit et <choice><orig>eciam</orig><reg>etiam</reg></choice> illud ponitur 
+              <lb ed="#S"/>in canonibus <name ref="#IsidoreOfSeville">ysidori</name> ubi recitat et ponit 
+              <lb ed="#S"/>sententias patrum et ibidem ego lego legi <g ref="#slash"/>tunc 
+              <lb ed="#S"/>arguitur sic illud consilium fuerit tantae auctoritatis quod num<lb ed="#S" break="no"/>quam 
+              aliquod consilium nisi esset generaliter celebratum 
+              <lb ed="#S"/>potuit ad aequalitatem auctoritatis <choice><orig>actingere</orig><reg>attingere</reg></choice> ergo 
+              <lb ed="#S"/>quaecumque posterior determinatio non obstante quod sit 
+              <lb ed="#S"/>determinatio ecclesiae quod illa sit suspecta <choice><orig>ymo</orig><reg>imo</reg></choice> in<lb ed="#S" break="no"/>currit 
+              sententia ergo <name ref="#Latins">latini</name> censendi sunt haeretici 
+              <lb ed="#S"/>vel <choice><orig>scismatici</orig><reg>schismatici</reg></choice> vel incurrentes ex communicationis 
+              <lb ed="#S"/>sententiam. <!-- should there be a paragraph break here --> <g ref="#pilcrorw"/>ubi advertendum quod in consilio generali tali 
+              <lb ed="#S"/>quali ubi materia de processioni spiritus sancti per <name ref="#Latins">lati<lb ed="#S" break="no"/>nos</name>  
+              fuit determinata nec <name ref="#Greeks">graeci</name> fuerunt nec 
+              <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> focati sunt ergo consilium generale in puncto 
+              <lb ed="#S"/>huiusmodi determinationi non fuit sufficienter congrega<lb ed="#S" break="no"/>tum 
+              nec convocatum ergo non fuit auctoritatem consilii 
+              <lb ed="#S"/>generale ergo solum habuit auctoritatem particularem[?] fidei quae 
+              <lb ed="#S"/>contra auctoritatem totalem ecclesiae non potest determinare <choice><orig>ymo</orig><reg>immo</reg></choice> 
+              <lb ed="#S"/>ex hoc incurret sententiam ergo <name ref="#Greeks">graeci</name> habent nos 
+              <lb ed="#S"/>reputare haereticos et <choice><orig>conscismaticos</orig><reg>conschismaticos</reg></choice> eo 
+              <lb ed="#S"/>quod auctoritas illius consilii non fuit universalis 
+              <lb ed="#S"/>congregatio fidelium sed solum <name ref="#Latins">latinorum</name>
+            </p>
+            <p xml:id="l75-eciaph">
+              <g ref="#pilcrow"/>Circa 
+              <lb ed="#S"/>istam materiam posset induci materia de auctoritate 
+              <lb ed="#S"/>consilii generalis et prima facie videretur quod consilium 
+              <lb ed="#S"/>generale posset errare saltem 
+              <lb ed="#S"/>in temporalibus et aliis quae concernunt sacrorum 
+              <lb ed="#S"/>administrationem <g ref="#slash"/>et circa hoc posset <choice><orig>eciam</orig><reg>etiam</reg></choice> induci 
+              <lb ed="#S"/>de praesenti <choice><orig>scismatae</orig><reg>schismate</reg></choice> quid in hoc praesenti <choice><orig>scismate</orig><reg>schismate</reg></choice> 
+              <lb ed="#S"/>aliqui refugiunt consilium generale allegantes 
+              <cb ed="#S" n="b"/><!--136rb-->
+              <lb ed="#S"/>pluralitatem ex una parte quae non ex alia ergo consilium 
+              <lb ed="#S"/>generale praecise reduceretur ad humanam potentiam vel 
+              <lb ed="#S"/>multitudinem vocum <g ref="#slash"/>vel ad alia concernentia providentiam[?] 
+              <lb ed="#S"/>humanam ergo consilium generale non regitur spiritu sancto <choice><orig>eciam</orig><reg>etiam</reg></choice> 
+              <lb ed="#S"/>in suis determinationibus et <choice><orig>eciam</orig><reg>etiam</reg></choice> concludentur quod in materia 
+              <lb ed="#S"/>de processione spiritus sancti quod procederet ab utroque <g ref="#slash"/>una 
+              <lb ed="#S"/>pars determinant hoc non esset sibi credendum maxime 
+              <lb ed="#S"/>cum determinet contra consilium generale sufficiens cele<lb ed="#S" break="no"/>bratum 
+              et congregatum
+            </p>
+          </div>
         </div>
         <div>
           <head xml:id="l75-Hcaacaa">Circa argumentum <name>Arrii</name></head>
-            
-          <p xml:id="l75-caaich"><g ref="#pilcrow"/>Circa argumentum <name ref="#Arius">arrii</name> ut tan<lb ed="#S"/>git 
+          <p xml:id="l75-caaich">
+            <g ref="#pilcrow"/>Circa argumentum <name ref="#Arius">arrii</name> ut tan<lb ed="#S" break="no"/>git 
             <name ref="#Boethius">boecius</name> et dictum est superius fuit ex hoc quod 
             <lb ed="#S"/>per similitudinem creaturarum ipse processus ad concludendum proportionaliter 
             <lb ed="#S"/>proprietates dei et sic arguebat <name ref="#Sortes">sortes</name> homo <name ref="#Plato">plato</name> <name ref="#Cicero">cicero</name> 
-            <lb ed="#S"/>est homo ergo <name>plato</name>, <name>sortes</name>, <name>cicero</name> sunt <choice><orig>3es</orig><reg>tres</reg></choice> homines.</p>
+            <lb ed="#S"/>est homo ergo <name>plato</name>, <name>sortes</name>, <name>cicero</name> sunt <choice><orig>3es</orig><reg>tres</reg></choice> homines
+          </p>
           <!-- rethink break here -->
-          
-          <p xml:id="l75-pdaaid"><g ref="#slash"/>ita 
+          <p xml:id="l75-pdaaid">
+            <g ref="#slash"/>ita 
             <lb ed="#S"/>arguebat in divinis pater est deus filius est deus spiritus sanctus 
             <lb ed="#S"/>est pater ergo pater filius et spiritus sanctus <choice><orig>3es</orig><reg>tres</reg></choice> dii sed theologice 
             <lb ed="#S"/>dicit <name ref="#Boethius">boetius</name> debebat arguere pater est deus 
@@ -306,10 +328,11 @@
             <lb ed="#S"/><g ref="#slash"/>et tunc ad argumentum suum dicitur quod <add place="aboveLine">licet</add> ex parte productionis 
             <lb ed="#S"/>creaturarum non Inveniatur omnimoda similitudo ad productionem 
             <lb ed="#S"/>filii in divinis tamen consequentia est neganda ergo non est aliqua 
-            <lb ed="#S"/>generatio in divinis quia fundatur quod sit similtudo ad<lb ed="#S"/>aequate 
-            reperibilis in generatione filii et in creaturis.</p>
-            
-          <p xml:id="l75-sdqeii"><lb ed="#S"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicendum est quod subtiliter considerando productiones creaturarum 
+            <lb ed="#S"/>generatio in divinis quia fundatur quod sit similtudo ad<lb ed="#S" break="no"/>aequate 
+            reperibilis in generatione filii et in creaturis
+          </p>
+          <p xml:id="l75-sdqeii">
+            <lb ed="#S"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicendum est quod subtiliter considerando productiones creaturarum 
             <lb ed="#S"/>satis possumus manuduci ad concludendum productionem 
             <lb ed="#S"/>in divinis <g ref="#slash"/>ubi advertendum quod ex pluribus productionibus 
             <lb ed="#S"/>creaturarum separando illud quod est imperfectionis et 
@@ -319,54 +342,58 @@
             <lb ed="#S"/>vel aliquem alium effectum non est creatura capiamus 
             <lb ed="#S"/>unum scilicet quod ignis producit splendorem coaevae[?] 
             <lb ed="#S"/>sibi et sic quantum ad hoc perfectio est in effectu scilicet 
-            <lb ed="#S"/>esse coaevum suae causae.</p>
-          
-          <p xml:id="l75-ihpipc"><g ref="#slash"/>homo autem producit hominem 
+            <lb ed="#S"/>esse coaevum suae causae
+          </p>
+          <p xml:id="l75-ihpipc">
+            <g ref="#slash"/>homo autem producit hominem 
             <lb ed="#S"/>non secundum coaevitatem
             <lb ed="#S"/>est perfectio in producto <g ref="#slash"/>quantum autem ad inaequalitatem 
             <lb ed="#S"/>est imperfectio tunc removeatur conditio imperfectionis 
             <lb ed="#S"/>scilicet inaequalitatis et accipiatur illud quod est 
             <lb ed="#S"/>perfectionis scilicet coaevitas effectus consuatio[?] 
             <lb ed="#S"/><choice><orig>eciam</orig><reg>etiam</reg></choice> in productione hominis retinatur[?] illud quod est 
-            <cb ed="#S" n="136va"/><lb ed="#S"/>perfectionis scilicet ??pluralitas[?] effectus cum sua causa 
+            <pb ed="#S" n="136-v"/>
+            <cb ed="#S" n="a"/>
+            <lb ed="#S"/>perfectionis scilicet ??pluralitas[?] effectus cum sua causa 
             <lb ed="#S"/>et tallatur illud quod est imperfectionis scilicet non 
             <lb ed="#S"/>coaevitas effectus <g ref="#slash"/>tunc cum unicus istas perfectiones 
             <lb ed="#S"/>affectuum scilicet esse aequalem et coaevum s?e causae et sic 
             <lb ed="#S"/>in singulis[?] aliis effectibus removeamus illud quod est 
             <lb ed="#S"/>imperfectionis et capiamus illud quod est perfectionis 
-            <lb ed="#S"/>tunc isto modo poterit verbo <g ref="#dot"/> vel filio in divinis ge<lb ed="#S"/>neratio 
+            <lb ed="#S"/>tunc isto modo poterit verbo <g ref="#dot"/> vel filio in divinis ge<lb ed="#S" break="no"/>neratio 
             competere per similitudinem ad generationem in creaturis 
             <lb ed="#S"/>scilicet capiendo illud quod est perfectionis in creaturis et 
             <lb ed="#S"/>ac?do[?] generationem die removendo illud quod est 
             <lb ed="#S"/>imperfectionis <g ref="#slash"/>et hoc tangit <name ref="#AlexanderOfHales">alexander de halis</name> 
-            <lb ed="#S"/>circa primum <title ref="#SentencesAlexanderOfHales">sententiarum</title></p>
-            
-          <p xml:id="l75-sneiif">ultierus advertendum quod non est 
-            <lb ed="#S"/>de ratione crea?tive[?] productionis recipere suae du<lb ed="#S"/>rationis 
+            <lb ed="#S"/>circa primum <title ref="#SentencesAlexanderOfHales">sententiarum</title>
+          </p>
+          <p xml:id="l75-sneiif">
+            ulterius advertendum quod non est 
+            <lb ed="#S"/>de ratione crea?tive[?] productionis recipere suae du<lb ed="#S" break="no"/>rationis 
             Initium <choice><orig>eciam</orig><reg>etiam</reg></choice> in creaturis patet quia multi 
             <lb ed="#S"/>doctores concesserunt in absoluto <g ref="#slash"/>deus potuit 
             <lb ed="#S"/>creaturam ab aeterno secum cum produxisse <g ref="#slash"/>quo 
             <lb ed="#S"/>dat creatura esset deo coaeva nec haberet esse 
             <lb ed="#S"/>post non esse <g ref="#slash"/>esset tamen producta et sic non 
-            <lb ed="#S"/>est de ratione creativae[?] productionis recipere suae du<lb ed="#S"/>rationis 
+            <lb ed="#S"/>est de ratione creativae[?] productionis recipere suae du<lb ed="#S" break="no"/>rationis 
             <sic>Innitium</sic> sit quod de non esse ad esse 
             <lb ed="#S"/>processit et sic si huiusmodi habitudine coniungamus cum 
             <lb ed="#S"/>aliquo quod ex productione verbi <choice><orig>admictitur</orig><reg>admittitur</reg></choice> quia in sua 
             <lb ed="#S"/>productione non admittitur inceptio vel potentialitas[?] 
             <lb ed="#S"/>vel imperfectio aliqua <g ref="#slash"/>tunc illo posito posset esse 
             <lb ed="#S"/>similtudo productionis creaturae <space extent="oneWordLength"/> aliqua productionem 
-            <lb ed="#S"/>verbi in divinis.</p>
-            
-          <p xml:id="l75-tneapp"><g ref="#pilcrow"/>ulterius advertendum quod licet ut dictum 
+            <lb ed="#S"/>verbi in divinis
+          </p>
+          <p xml:id="l75-tneapp">
+            <g ref="#pilcrow"/>ulterius advertendum quod licet ut dictum 
             <lb ed="#S"/>est reperiatur in creaturis productio tamen verbi ad intra 
             <lb ed="#S"/>non est reperibilis in creatura nec <choice><orig>eciam</orig><reg>etiam</reg></choice> est communicabilis 
             <lb ed="#S"/>creaturae ita quod per quacumque potentiam productio in divinis vel 
             <lb ed="#S"/>similis non est reperibilis in creaturis et causa sub 
-            <lb ed="#S"/>est.</p> 
-            
-          <p/>
-          
-          <p xml:id="l75-dpnaea"><g ref="#pilcrow"/>pro quo advertendum quod licet aliqui <choice><orig>ymaginati</orig><reg>imaginati</reg></choice>  
+            <lb ed="#S"/>est
+          </p>
+          <p xml:id="l75-dpnaea">
+            <g ref="#pilcrow"/>pro quo advertendum quod licet aliqui <choice><orig>ymaginati</orig><reg>imaginati</reg></choice>  
             <lb ed="#S"/>fuerunt creaturas posset existere et non coexistere 
             <lb ed="#S"/>tempori realiter <g ref="#slash"/>Impossibile tamen est creaturam esse aeternam 
             <lb ed="#S"/>vel aeterna productione produci et quantum ad primum 
@@ -378,28 +405,29 @@
             <lb ed="#S"/>tamen ipsi non coexistere vel commser?ari[?] quo 
             <lb ed="#S"/>concesso adhuc non sequitur quod huiusmodi creatura 
             <lb ed="#S"/>esset aeterna vel instanti aeternitatis commensuraretur[?] 
-            <cb ed="#S" n="136vb"/><lb ed="#S"/>quia in ea adhuc esset intrinseca successio quia 
+            <cb ed="#S" n="b"/><!--136vb -->
+            <lb ed="#S"/>quia in ea adhuc esset intrinseca successio quia 
             <lb ed="#S"/>ipse posset non fore et sic instans temporis esset ab ea 
             <lb ed="#S"/>remobile et sic non sequitur a creatura non coexistit 
             <lb ed="#S"/>tempori ergo est aeterna <g ref="#slash"/>posset tamen dici quod casus est 
             <lb ed="#S"/>impossibilis <g ref="#slash"/>si <choice><orig>admicteretur</orig><reg>admitteretur</reg></choice> tamen non posset adextra simile[?] 
-            <lb ed="#S"/>genero Reperiri.</p>
-              
-          <p xml:id="l75-spdqtm">[omitted or in the above paragraph]</p>
-            
-          <p xml:id="l75-eiscep"><g ref="#pilcrow"/>ulterius sequitur quod talis emanatio 
-            <lb ed="#S"/>qualis est adintra est proprietas immediate consur<lb ed="#S"/>gens 
-            ex immensa infinite et immensa perfec<lb ed="#S"/>tionem 
+            <lb ed="#S"/>genero Reperiri
+          </p>
+          <p xml:id="l75-spdqtm">
+            [omitted or in the above paragraph]
+          </p>
+          <p xml:id="l75-eiscep">
+            <g ref="#pilcrow"/>ulterius sequitur quod talis emanatio 
+            <lb ed="#S"/>qualis est adintra est proprietas immediate consur<lb ed="#S" break="no"/>gens 
+            ex immensa infinite et immensa perfec<lb ed="#S" break="no"/>tionem 
             et sic talis generatio adintra est immensa propter[?] 
             <lb ed="#S"/>et per illud potest <g ref="#slash"/><choice><orig>ymaginari</orig><reg>imaginari</reg></choice> quod est proprie proprietatis dici 
             <lb ed="#S"/>et per hoc <choice><orig>eciam</orig><reg>etiam</reg></choice> <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod emanatio productionis ad 
             <lb ed="#S"/>intra non est creatura reperibilis nec <choice><orig>eciam</orig><reg>etiam</reg></choice> ei similis 
             <lb ed="#S"/>quia est proprietatis immensitatis divinae <g ref="#slash"/>de rationibus quae 
-            <lb ed="#S"/>tangunt processionem spiritus sanctus et de consilio ge<lb ed="#S"/>nerali 
-            videbitur in aliis lectionibus.</p>
-           
-      
-      
+            <lb ed="#S"/>tangunt processionem spiritus sanctus et de consilio ge<lb ed="#S" break="no"/>nerali 
+            videbitur in aliis lectionibus
+          </p>
         </div>
       </div>
     </body>
