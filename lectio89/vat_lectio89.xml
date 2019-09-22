@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -8,152 +10,173 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.01-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 89, de Caritate [Vatican Transcription]</title>
           <date when="2013-01-20">January 20, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2013-01-20">January 20, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="V">Vatican</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>  <facsimile>
-<surface n="V180v">
-<graphic url="V180v.jpg"/>
-<zone start="#l89-dfaerm" ulx="341" uly="140" lrx="991" lry="340" n="1"/>
-<zone start="#l89-dfaerm" ulx="348" uly="142" lrx="1026" lry="1175" n="2"/>
-<zone start="#l89-eiemdi" ulx="352" uly="1117" lrx="989" lry="1567" n="1"/>
-<zone start="#l89-sainhm" ulx="345" uly="1508" lrx="985" lry="1693" n="1"/>
-<zone start="#l89-tdanei" ulx="345" uly="1662" lrx="992" lry="1732" n="1"/>
-<zone start="#l89-tdanei" ulx="968" uly="143" lrx="1655" lry="651" n="2"/>
-<zone start="#l89-esfnrm" ulx="960" uly="592" lrx="1652" lry="1005" n="1"/>
-<zone start="#l89-esress" ulx="955" uly="978" lrx="1642" lry="1735" n="1"/>
-</surface>
-<surface n="V181r">
-<graphic url="V181r.jpg"/>
-<zone start="#l89-tcocnm" ulx="188" uly="165" lrx="843" lry="457" n="1"/>
-<zone start="#l89-spasst" ulx="185" uly="403" lrx="842" lry="545" n="1"/>
-<zone start="#l89-tqseaa" ulx="188" uly="487" lrx="845" lry="625" n="1"/>
-<zone start="#l89-qsscai" ulx="192" uly="573" lrx="854" lry="836" n="1"/>
-<zone start="#l89-qsqeni" ulx="197" uly="775" lrx="859" lry="1048" n="1"/>
-<zone start="#l89-aprnqp" ulx="200" uly="992" lrx="865" lry="1379" n="1"/>
-<zone start="#l89-aqqclm" ulx="193" uly="1322" lrx="873" lry="1557" n="1"/>
-<zone start="#l89-aqqclm" ulx="820" uly="172" lrx="1470" lry="260" n="2"/>
-<zone start="#l89-aqnhmi" ulx="817" uly="207" lrx="1494" lry="512" n="1"/>
-<zone start="#l89-scaple" ulx="795" uly="452" lrx="1497" lry="1019" n="1"/>
-<zone start="#dCl86aqqclm" ulx="812" uly="177" lrx="1462" lry="265" n="2"/>
-</surface>
-<surface n="V179v">
-<graphic url="V179v.jpg"/>
-<zone start="#l89-suedae" ulx="0" uly="0" lrx="0" lry="0" n="1"/>
-<zone start="#l89-suedae" ulx="977" uly="148" lrx="1652" lry="813" n="2"/>
-<zone start="#l89-scifei" ulx="975" uly="757" lrx="1638" lry="1190" n="1"/>
-<zone start="#l89-pqncpm" ulx="982" uly="1118" lrx="1654" lry="1583" n="1"/>
-<zone start="#l89-sssens" ulx="977" uly="1517" lrx="1652" lry="1784" n="1"/>
-</surface>
-<surface n="V180r">
-<graphic url="V180r.jpg"/>
-<zone start="#l89-sssens" ulx="182" uly="137" lrx="835" lry="232" n="2"/>
-<zone start="#l89-tdicci" ulx="183" uly="203" lrx="851" lry="880" n="1"/>
-<zone start="#l89-reiivr" ulx="175" uly="848" lrx="843" lry="1485" n="1"/>
-<zone start="#l89-praino" ulx="183" uly="1425" lrx="851" lry="1730" n="1"/>
-<zone start="#l89-praino" ulx="815" uly="143" lrx="1477" lry="708" n="2"/>
-<zone start="#l89-esnsst" ulx="803" uly="642" lrx="1478" lry="1574" n="1"/>
-</surface>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-01-20" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface n="V180v">
+      <graphic url="V180v.jpg"/>
+      <zone start="#l89-dfaerm" ulx="341" uly="140" lrx="991" lry="340" n="1"/>
+      <zone start="#l89-dfaerm" ulx="348" uly="142" lrx="1026" lry="1175" n="2"/>
+      <zone start="#l89-eiemdi" ulx="352" uly="1117" lrx="989" lry="1567" n="1"/>
+      <zone start="#l89-sainhm" ulx="345" uly="1508" lrx="985" lry="1693" n="1"/>
+      <zone start="#l89-tdanei" ulx="345" uly="1662" lrx="992" lry="1732" n="1"/>
+      <zone start="#l89-tdanei" ulx="968" uly="143" lrx="1655" lry="651" n="2"/>
+      <zone start="#l89-esfnrm" ulx="960" uly="592" lrx="1652" lry="1005" n="1"/>
+      <zone start="#l89-esress" ulx="955" uly="978" lrx="1642" lry="1735" n="1"/>
+    </surface>
+    <surface n="V181r">
+      <graphic url="V181r.jpg"/>
+      <zone start="#l89-tcocnm" ulx="188" uly="165" lrx="843" lry="457" n="1"/>
+      <zone start="#l89-spasst" ulx="185" uly="403" lrx="842" lry="545" n="1"/>
+      <zone start="#l89-tqseaa" ulx="188" uly="487" lrx="845" lry="625" n="1"/>
+      <zone start="#l89-qsscai" ulx="192" uly="573" lrx="854" lry="836" n="1"/>
+      <zone start="#l89-qsqeni" ulx="197" uly="775" lrx="859" lry="1048" n="1"/>
+      <zone start="#l89-aprnqp" ulx="200" uly="992" lrx="865" lry="1379" n="1"/>
+      <zone start="#l89-aqqclm" ulx="193" uly="1322" lrx="873" lry="1557" n="1"/>
+      <zone start="#l89-aqqclm" ulx="820" uly="172" lrx="1470" lry="260" n="2"/>
+      <zone start="#l89-aqnhmi" ulx="817" uly="207" lrx="1494" lry="512" n="1"/>
+      <zone start="#l89-scaple" ulx="795" uly="452" lrx="1497" lry="1019" n="1"/>
+      <zone start="#dCl86aqqclm" ulx="812" uly="177" lrx="1462" lry="265" n="2"/>
+    </surface>
+    <surface n="V179v">
+      <graphic url="V179v.jpg"/>
+      <zone start="#l89-suedae" ulx="0" uly="0" lrx="0" lry="0" n="1"/>
+      <zone start="#l89-suedae" ulx="977" uly="148" lrx="1652" lry="813" n="2"/>
+      <zone start="#l89-scifei" ulx="975" uly="757" lrx="1638" lry="1190" n="1"/>
+      <zone start="#l89-pqncpm" ulx="982" uly="1118" lrx="1654" lry="1583" n="1"/>
+      <zone start="#l89-sssens" ulx="977" uly="1517" lrx="1652" lry="1784" n="1"/>
+    </surface>
+    <surface n="V180r">
+      <graphic url="V180r.jpg"/>
+      <zone start="#l89-sssens" ulx="182" uly="137" lrx="835" lry="232" n="2"/>
+      <zone start="#l89-tdicci" ulx="183" uly="203" lrx="851" lry="880" n="1"/>
+      <zone start="#l89-reiivr" ulx="175" uly="848" lrx="843" lry="1485" n="1"/>
+      <zone start="#l89-praino" ulx="183" uly="1425" lrx="851" lry="1730" n="1"/>
+      <zone start="#l89-praino" ulx="815" uly="143" lrx="1477" lry="708" n="2"/>
+      <zone start="#l89-esnsst" ulx="803" uly="642" lrx="1478" lry="1574" n="1"/>
+    </surface>
   </facsimile>
   <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#V" n="179-v"/>
+        <cb ed="#V" n="a"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio89">
-        <head xml:id="l89-Hldcldc" subtype="title">Lectio 89, de Caritate [Vatican Transcription]</head>
+        <head xml:id="l89-Hldcldc">Lectio 89, de Caritate [Vatican Transcription]</head>
         <div>
           <head xml:id="l89-Hdieerc">De intensione et remissione caritatis</head>
-        
-          <p xml:id="l89-pdeivr"><lb ed="#V"/><g ref="#slash"/>Primo tactum est de influentia caritatis respectu 
-        <lb ed="#V"/>omnium virtutum et operationum virtuosarum cuius pro<lb ed="#V"/>secutio 
-        esset in particulari de partibus virtutibus loqui, sed 
-        <lb ed="#V"/>quia tempus labitur isto[?] dimisso oportet[?] venire ad in<g ref="#slash"/><lb ed="#V"/>tensionem 
-        qualiter sit intensibilis et remissibilis.</p> 
-        
+          <p xml:id="l89-pdeivr">
+            <lb ed="#V"/><g ref="#slash"/>Primo tactum est de influentia caritatis respectu 
+            <lb ed="#V"/>omnium virtutum et operationum virtuosarum cuius pro<lb ed="#V" break="no"/>secutio 
+            esset in particulari de partibus virtutibus loqui, sed 
+            <lb ed="#V"/>quia tempus labitur isto[?] dimisso oportet[?] venire ad in<g ref="#slash"/><lb ed="#V" break="no"/>tensionem 
+            qualiter sit intensibilis et remissibilis
+          </p>
           <div>
             <head xml:id="l89-Hppvegd">Propositio: probabilior videtur quod caritas potest componi ex gradibus distinctis</head>
-        
-            <p xml:id="l89-pcmegd">et circa 
-            <lb ed="#V"/>hoc sit haec prima conclusio quamvis slavari posset cari<lb ed="#V"/>tatem 
-            non esse compositam realiter et essentialiter ex gra<lb ed="#V"/>dibus 
-            distinctis communior tamen via videtur esse proba<lb ed="#V"/>bilior.</p>
-          
-            <p xml:id="l89-ppangc">prima pars patet multipliciter et unus 
-            <lb ed="#V"/>modus <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> tactus est prius nam existente eadem 
-            <lb ed="#V"/>caritate in anima secundum quod per <choice><orig>assicenciam</orig><reg>assistentiam</reg></choice> spiritus sancti magis 
-            <lb ed="#V"/>vel unus vivificatur potest in maiorem vel mino<lb ed="#V"/>rem 
-            effectum, ergo cum eius simplicitate tam quo 
-            <lb ed="#V"/>ad partes extensivas quam intensivas potest sal<lb ed="#V"/>vari 
-            diversitas suorum effectuum et ideo absque acquisi<lb ed="#V"/>tione 
-            novi gradus potest salvari perfectus in caritate 
-            <lb ed="#V"/>nam secundum quod spiritus sanctus specialius caritati <choice><orig>assicit</orig><reg>assistit</reg></choice> potest 
-            <lb ed="#V"/>salvari quod caritas et ipsa voluntas possint 
-            <lb ed="#V"/>in nobiliores effectus sine hoc quod ponamus 
-            <lb ed="#V"/>acquisitionem novi gradus.</p> 
-            
-            <p xml:id="l89-suedae">alia via est po<g ref="#slash"/><lb ed="#V"/>noendo 
-            quod forma quaelibet generaliter sive substantialis sive 
-            <lb ed="#V"/>accidentalis est simpliciter indivisibilis intensive ita 
-            <lb ed="#V"/>quod nulla forma est composita ex gradibus inten<lb ed="#V"/>tionalibus 
-            et circa istum modum sunt plures et 
-            <lb ed="#V"/>diversi modi et inter alios est modus <name>sancti thomae</name> 
-            <lb ed="#V"/>in <choice><orig>2a2ae</orig><reg>IIaIIae</reg></choice> quaestione 24, ubi movet quaestionem utrum 
-            <cb ed="#V" n="179vb"/><lb ed="#V"/>caritas sit augmentabilis intensibilis et remissibilis et tenet 
-            <lb ed="#V"/><choice><orig>iscam</orig><reg>istam</reg></choice> viam quod, scilicet, caritas est omnino simplex ca<lb ed="#V"/>rens 
-            partibus intensivis et extensivis et <choice><orig>ni<lb ed="#V"/>chilominus</orig><reg>ni<lb ed="#V"/>hilominus</reg></choice> 
-            tamen dicit ipse potest caritas vocari intendi et 
-            <lb ed="#V"/>reitti[?] ad istum intellectum quod subiectum potest huiusmodi qualitatem 
-            <lb ed="#V"/>plus vel minus participare, scilicet, ipsa anima et ipsa ca<lb ed="#V"/>ritas 
-            potest etiam magis vel minus communicari sub suo seu 
-            <lb ed="#V"/>magis sibi inesse et ista via dividitur secundum du<lb ed="#V"/>os 
-            varios modos considerandae unus modus 
-            <lb ed="#V"/>esset quod realiter caritas et ita generaliter sicut loquitur 
-            <lb ed="#V"/>de caritate ita loqueretur de qualibet forma ac<lb ed="#V"/>cidentali 
-            quod caritas posset realiter intensius et re<lb ed="#V"/>missius 
-            suos subiecto communicari ipsa manens eadem adaequa<lb ed="#V"/>tae 
-            ita quod <choice><orig>ymaginale</orig><reg>imaginabile</reg></choice> est quod eadem forma secundum applicationem 
-            <lb ed="#V"/>agentis fortioris seu potentioris communicatur 
-            <lb ed="#V"/>subiecto secundum maiorem intensionem et secundum quod pos<lb ed="#V"/>sum 
-            est magis ipsius susceptivum et sic diceretur 
-            <lb ed="#V"/>quod per maiorem intimationem actuationis et informa<lb ed="#V"/>tionis 
-            caritatis intensio salvaretur et quod magis 
-            <lb ed="#V"/>denominaret subiectum suum absque acquisitione cuiuscumque 
-            <lb ed="#V"/>gradus distincti ab ea.</p>
-            
+            <p xml:id="l89-pcmegd">
+              et circa 
+              <lb ed="#V"/>hoc sit haec prima conclusio quamvis slavari posset cari<lb ed="#V" break="no"/>tatem 
+              non esse compositam realiter et essentialiter ex gra<lb ed="#V" break="no"/>dibus 
+              distinctis communior tamen via videtur esse proba<lb ed="#V" break="no"/>bilior
+            </p>
+            <p xml:id="l89-ppangc">
+              prima pars patet multipliciter et unus 
+              <lb ed="#V"/>modus <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> tactus est prius nam existente eadem 
+              <lb ed="#V"/>caritate in anima secundum quod per <choice><orig>assicenciam</orig><reg>assistentiam</reg></choice> spiritus sancti magis 
+              <lb ed="#V"/>vel unus vivificatur potest in maiorem vel mino<lb ed="#V" break="no"/>rem 
+              effectum, ergo cum eius simplicitate tam quo 
+              <lb ed="#V"/>ad partes extensivas quam intensivas potest sal<lb ed="#V" break="no"/>vari 
+              diversitas suorum effectuum et ideo absque acquisi<lb ed="#V" break="no"/>tione 
+              novi gradus potest salvari perfectus in caritate 
+              <lb ed="#V"/>nam secundum quod spiritus sanctus specialius caritati <choice><orig>assicit</orig><reg>assistit</reg></choice> potest 
+              <lb ed="#V"/>salvari quod caritas et ipsa voluntas possint 
+              <lb ed="#V"/>in nobiliores effectus sine hoc quod ponamus 
+              <lb ed="#V"/>acquisitionem novi gradus.
+            </p> 
+            <p xml:id="l89-suedae">
+              alia via est po<g ref="#slash"/><lb ed="#V" break="no"/>noendo 
+              quod forma quaelibet generaliter sive substantialis sive 
+              <lb ed="#V"/>accidentalis est simpliciter indivisibilis intensive ita 
+              <lb ed="#V"/>quod nulla forma est composita ex gradibus inten<lb ed="#V" break="no"/>tionalibus 
+              et circa istum modum sunt plures et 
+              <lb ed="#V"/>diversi modi et inter alios est modus <name>sancti thomae</name> 
+              <lb ed="#V"/>in <choice><orig>2a2ae</orig><reg>IIaIIae</reg></choice> quaestione 24, ubi movet quaestionem utrum 
+              <cb ed="#V" n="b"/><!--179vb -->
+              <lb ed="#V"/>caritas sit augmentabilis intensibilis et remissibilis et tenet 
+              <lb ed="#V"/><choice><orig>iscam</orig><reg>istam</reg></choice> viam quod, scilicet, caritas est omnino simplex ca<lb ed="#V" break="no"/>rens 
+              partibus intensivis et extensivis et <choice><orig>ni<lb ed="#V" break="no"/>chilominus</orig><reg>ni<lb ed="#V" break="no"/>hilominus</reg></choice> 
+              tamen dicit ipse potest caritas vocari intendi et 
+              <lb ed="#V"/>reitti[?] ad istum intellectum quod subiectum potest huiusmodi qualitatem 
+              <lb ed="#V"/>plus vel minus participare, scilicet, ipsa anima et ipsa ca<lb ed="#V" break="no"/>ritas 
+              potest etiam magis vel minus communicari sub suo seu 
+              <lb ed="#V"/>magis sibi inesse et ista via dividitur secundum du<lb ed="#V" break="no"/>os 
+              varios modos considerandae unus modus 
+              <lb ed="#V"/>esset quod realiter caritas et ita generaliter sicut loquitur 
+              <lb ed="#V"/>de caritate ita loqueretur de qualibet forma ac<lb ed="#V" break="no"/>cidentali 
+              quod caritas posset realiter intensius et re<lb ed="#V" break="no"/>missius 
+              suos subiecto communicari ipsa manens eadem adaequa<lb ed="#V" break="no"/>tae 
+              ita quod <choice><orig>ymaginale</orig><reg>imaginabile</reg></choice> est quod eadem forma secundum applicationem 
+              <lb ed="#V"/>agentis fortioris seu potentioris communicatur 
+              <lb ed="#V"/>subiecto secundum maiorem intensionem et secundum quod pos<lb ed="#V" break="no"/>sum 
+              est magis ipsius susceptivum et sic diceretur 
+              <lb ed="#V"/>quod per maiorem intimationem actuationis et informa<lb ed="#V" break="no"/>tionis 
+              caritatis intensio salvaretur et quod magis 
+              <lb ed="#V"/>denominaret subiectum suum absque acquisitione cuiuscumque 
+              <lb ed="#V"/>gradus distincti ab ea
+            </p>
           </div>
-          
           <div>
             <head xml:id="l89-Hscoidr">Sed Contra: opinio Iohannes de Rippa</head>
-            
-            <p xml:id="l89-scifei">Sed contra istam viam est <name>Iohannes de 
-            <lb ed="#V"/>rippa</name> in principio sui prologi articulo primo primae 
-            <lb ed="#V"/>quaestionis ubi tractat utrum aliqua forma possit 
-            <lb ed="#V"/>remissius informare suum formabile quam sit in sua 
-            <lb ed="#V"/>natura et facit ibidem aliquas rationes et ponit 
-            <lb ed="#V"/>etiam aliquas propositiones et ponam unam et responsivam 
-            <lb ed="#V"/>ad intentionem suam formam per idem formaliter est 
-            <lb ed="#V"/>sua intrinseca quidditas et formalis causalitas unde 
-            <lb ed="#V"/><choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod ponere intensionem remissionem vel 
-            <lb ed="#V"/>influxum distinctum a quidditate ipsius formae 
-            <lb ed="#V"/>sit omnis in remissionem vel influxum distinctum 
-            <lb ed="#V"/>et ad hoc facit aliquas rationes. primo nam suta[?] 
-            <lb ed="#V"/>esset sequeretur inconvenientia.</p>
-            
-            <p xml:id="l89-pqncpm"><g ref="#slash"/>primum quod aliud esset 
+            <p xml:id="l89-scifei">
+              Sed contra istam viam est <name>Iohannes de 
+              <lb ed="#V"/>rippa</name> in principio sui prologi articulo primo primae 
+              <lb ed="#V"/>quaestionis ubi tractat utrum aliqua forma possit 
+              <lb ed="#V"/>remissius informare suum formabile quam sit in sua 
+              <lb ed="#V"/>natura et facit ibidem aliquas rationes et ponit 
+              <lb ed="#V"/>etiam aliquas propositiones et ponam unam et responsivam 
+              <lb ed="#V"/>ad intentionem suam formam per idem formaliter est 
+              <lb ed="#V"/>sua intrinseca quidditas et formalis causalitas unde 
+              <lb ed="#V"/><choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod ponere intensionem remissionem vel 
+              <lb ed="#V"/>influxum distinctum a quidditate ipsius formae 
+              <lb ed="#V"/>sit omnis in remissionem vel influxum distinctum 
+              <lb ed="#V"/>et ad hoc facit aliquas rationes. primo nam suta[?] 
+              <lb ed="#V"/>esset sequeretur inconvenientia
+            </p>
+            <p xml:id="l89-pqncpm">
+              <g ref="#slash"/>primum quod aliud esset 
               <lb ed="#V"/>vivere <name>sortes</name> et aliud vivere animae eius et ex consequenti 
               <lb ed="#V"/><choice><orig>scaret</orig><reg>staret</reg></choice> inconveniens aliud, scilicet, quod realiter anima <name>sortis</name> 
               <lb ed="#V"/>esset melior et perfectior quam <name>sortes</name> nam ponamus 
@@ -165,79 +188,84 @@
               <lb ed="#V"/>quam <name>sortes</name> propter maiorem latitudinem suae perfectionis 
               <lb ed="#V"/>et tunc consequenter <choice><orig>scaret</orig><reg>staret</reg></choice> animam <name>sortis</name> magis mereri 
               <lb ed="#V"/>vel demereri et consequenter in caelo maigs praemiari 
-              <lb ed="#V"/>vel in inferno magis puniri quam <name>sortes</name> modo ista vi<lb ed="#V"/>dentur 
-              inconvenientia et absurda, ergo etc.</p>
-            
-            <p xml:id="l89-sssens"><g ref="#dot"/>Item sequeretur 
+              <lb ed="#V"/>vel in inferno magis puniri quam <name>sortes</name> modo ista vi<lb ed="#V" break="no"/>dentur 
+              inconvenientia et absurda, ergo etc.
+            </p>
+            <p xml:id="l89-sssens">
+              <g ref="#dot"/>Item sequeretur 
               <lb ed="#V"/>quod aliquod agere posset sibi correspondere quod nullo modo 
               <lb ed="#V"/>correspondenter supposito. consequens est falsum, quia actiones 
               <lb ed="#V"/>sunt suppositorum vel sustentiarum et consequentia patet 
               <lb ed="#V"/>nam capiamus aliquem gradum vitae intelligibilis 
               <lb ed="#V"/>secundum quem forma <name>sortis</name>, scilicet, anima eius non sibi communicatur 
               <lb ed="#V"/>secundum illam portionem anima <name>sortis</name> potest habere aliquam 
-              <cb ed="#V" n="180ra"/><lb ed="#V"/>operationem seu aliquem actum qui non competet supposito 
-              <lb ed="#V"/>quia secundum illam perfectionem non communicatur <name>sortis</name>, ergo etc.</p>
-            
-            <p xml:id="l89-tdicci"><lb ed="#V"/>Item data ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> sequeretur homo inconveniens 
+              <pb ed="#V" n="180-r"/>
+              <cb ed="#V" n="a"/>
+              <lb ed="#V"/>operationem seu aliquem actum qui non competet supposito 
+              <lb ed="#V"/>quia secundum illam perfectionem non communicatur <name>sortis</name>, ergo etc.
+            </p>
+            <p xml:id="l89-tdicci">
+              <lb ed="#V"/>Item data ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> sequeretur homo inconveniens 
               <lb ed="#V"/>scilicet, quod compositum ex anima intellectiva et corpore esset perfectius 
               <lb ed="#V"/>quam lapis vel asinus, <choice><orig>ymo</orig><reg>immo</reg></choice> posset esse cuiuscumque speciei 
-              <lb ed="#V"/>ascendendo a non gradu usque ad gradum speciei in<lb ed="#V"/>tellective   
+              <lb ed="#V"/>ascendendo a non gradu usque ad gradum speciei in<lb ed="#V" break="no"/>tellective   
               ista clare. patent nam qua ratione 
-              <lb ed="#V"/>ponimus quod anima ponimus quod anima potest in aliquo gra<lb ed="#V"/>du 
-              remissius communicari <choice><orig>3lo</orig><reg>triplo</reg></choice> quam ipsa sit in se quaedam qui<lb ed="#V"/>ditas 
+              <lb ed="#V"/>ponimus quod anima ponimus quod anima potest in aliquo gra<lb ed="#V" break="no"/>du 
+              remissius communicari <choice><orig>3lo</orig><reg>triplo</reg></choice> quam ipsa sit in se quaedam qui<lb ed="#V" break="no"/>ditas 
               eadem ratione poterit in <choice><orig>2lo</orig><reg>dupplo</reg></choice> remissius et in 
               <lb ed="#V"/>triplo et sic in infinitum, ergo <choice><orig>scabit</orig><reg>stabit</reg></choice> quod communicetur solum 
               <lb ed="#V"/>secundum rationem essendi et si constitutum erit quoddam compositum 
               <lb ed="#V"/>in esse quod non habebit aliam perfectionem quia alia 
               <lb ed="#V"/>perfectio sibi non communicabitur, ergo erit minus perfectum quam lapis 
-              vel asinus. <g ref="#slash"/>Consequenter respectu quod potest communicari forma secundum gra<lb ed="#V"/>dum 
-            essendi praecise ita potest secundum <choice><orig>2m</orig><reg>secundum</reg></choice> gradum et sic 
+              vel asinus. <g ref="#slash"/>Consequenter respectu quod potest communicari forma secundum gra<lb ed="#V" break="no"/>dum 
+              essendi praecise ita potest secundum <choice><orig>2m</orig><reg>secundum</reg></choice> gradum et sic 
               <lb ed="#V"/>constituetur compositum <choice><orig>alcioris</orig><reg>altioris</reg></choice> speciei et sicut consequenter 
-            posset communicari in esse vegetativo praecise et sic continue 
+              posset communicari in esse vegetativo praecise et sic continue 
               <lb ed="#V"/>ascendendo usque ad gradum specificum speciei 
               <lb ed="#V"/>intellective et sic patet quod secundum gradus perfectionis 
               <lb ed="#V"/>ipsorum posset posset aliqua res ascendere de specie 
               <lb ed="#V"/>in speciem etc. alia sunt <choice><orig>inconveniencia</orig><reg>inconvenientia</reg></choice> quae inducit 
-              <lb ed="#V"/><name>Iohannes de rippa</name>, sed illa videntur coincidere omni[?] praedictis.</p>
-            
-             
+              <lb ed="#V"/><name>Iohannes de rippa</name>, sed illa videntur coincidere omni[?] praedictis
+            </p>
          </div>
           <div>
             <head xml:id="l89-Hraoidr">Responsio ad opinionem Iohannis de Rippa</head>
-            
-            <p xml:id="l89-reiivr"><lb ed="#V"/>dicendum est in ista materia quod <choice><orig>oppinio</orig><reg>opinio</reg></choice> tenens 
+            <p xml:id="l89-reiivr">
+              <lb ed="#V"/>dicendum est in ista materia quod <choice><orig>oppinio</orig><reg>opinio</reg></choice> tenens 
               <lb ed="#V"/>quod forma sit intensius et remissius communicabilis et quod potest 
               <lb ed="#V"/>suum subiectum intensius et remissius denominare absque 
               <lb ed="#V"/>hoc quod acquiratur aliquis gradus novus est 
               <lb ed="#V"/>sustinibilis de formis accidentalibus de substantialibus autem 
               <lb ed="#V"/>secus est quia forma substantialis communicat eius quidditas 
-              <lb ed="#V"/>supposito ideo communicatur essentialiter et intrinsece ut pars in<lb ed="#V"/>trinseca 
+              <lb ed="#V"/>supposito ideo communicatur essentialiter et intrinsece ut pars in<lb ed="#V" break="no"/>trinseca 
               ipsius compositi, ideo communicatur secundum se totam. utrum at[?] 
-              <lb ed="#V"/>intensius et remissius possit communicari adhuc proba<lb ed="#V"/>bile 
+              <lb ed="#V"/>intensius et remissius possit communicari adhuc proba<lb ed="#V" break="no"/>bile 
               esset dicere quod sic licet istud non credam esse 
               <lb ed="#V"/>veram ita quod licet forma substantialis secundum se totam potest tamen 
               <lb ed="#V"/>intensius communcari et secundum hoc constitutum habebit 
               nobiliores operationes et per hoc salvaretur differentia 
               <lb ed="#V"/>ingeniorum. unde rationes <name>magistri Iohannes de rippa</name> 
               inductae contra istam viam solum probant de forma 
-              <lb ed="#V"/>substantiali et non accidentali, ideo quantum ad praesentem ma<lb ed="#V"/>teriam 
-              <choice><orig>nichil</orig><reg>nihil</reg></choice> vel modicum facerent. <g ref="#slash"/>quantum ad for<lb ed="#V"/>mas 
-              substantiales qui vellet gratia exercitii susti<lb ed="#V"/>nere 
+              <lb ed="#V"/>substantiali et non accidentali, ideo quantum ad praesentem ma<lb ed="#V" break="no"/>teriam 
+              <choice><orig>nichil</orig><reg>nihil</reg></choice> vel modicum facerent. <g ref="#slash"/>quantum ad for<lb ed="#V" break="no"/>mas 
+              substantiales qui vellet gratia exercitii susti<lb ed="#V" break="no"/>nere 
               partem istam posset responderi ad rationes 
-              <lb ed="#V"/><name>magistri Iohannes de rippa</name>.</p> 
-            
-            <p xml:id="l89-praino">posset ergo dici ut tactum 
+              <lb ed="#V"/><name>magistri Iohannes de rippa</name>
+            </p> 
+            <p xml:id="l89-praino">
+              posset ergo dici ut tactum 
               <lb ed="#V"/>est quod tota quidditas formae de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> est 
-              <lb ed="#V"/>pars compositi, ideo per istam responsionem quae coin<lb ed="#V"/>cidit 
-              cum <name>magistro Iohanne</name> quantum ad hoc quod con<lb ed="#V"/>cederetur 
+              <lb ed="#V"/>pars compositi, ideo per istam responsionem quae coin<lb ed="#V" break="no"/>cidit 
+              cum <name>magistro Iohanne</name> quantum ad hoc quod con<lb ed="#V" break="no"/>cederetur 
               quod forma se tota communicatur composito ergo non 
               <lb ed="#V"/>potest intensius communicari. negatur consequentia ad probationem quia 
-              <lb ed="#V"/>sequerentur inconvenientia quae intulit iam induca<lb ed="#V"/>ta[?]. 
+              <lb ed="#V"/>sequerentur inconvenientia quae intulit iam induca<lb ed="#V" break="no"/>ta[?]. 
               <g ref="#slash"/>primum inconveniens quod <choice><orig>scaret</orig><reg>staret</reg></choice> constitutum ex 
               <lb ed="#V"/>anima intellectiva et corpore esse minus perfectum quam lapis 
-              <cb ed="#V" n="180rb"/><lb ed="#V"/>vel asinus etc. notatur istud ubi pro ampliori de<lb ed="#V"/>claratione 
-              est advertendum quod non <choice><orig>scat</orig><reg>stat</reg></choice> quod anima huma<lb ed="#V"/>na 
-              communicetur quin[?] communicetur secundum totam perfectionem in<lb ed="#V"/>trinsecam 
+              <cb ed="#V" n="b"/><!--180rb-->
+              <lb ed="#V"/>vel asinus etc. notatur istud ubi pro ampliori de<lb ed="#V" break="no"/>claratione 
+              est advertendum quod non <choice><orig>scat</orig><reg>stat</reg></choice> quod anima huma<lb ed="#V" break="no"/>na 
+              communicetur quin[?] communicetur secundum totam perfectionem in<lb ed="#V" break="no"/>trinsecam 
               et essentialem ipsi compositi <choice><orig>scat</orig><reg>stat</reg></choice> tamen quod secundum 
               <lb ed="#V"/>quamlibet suarum perfectionem intensius et remissius 
               <lb ed="#V"/>communicetur non quod in ea fuit ponendi gradus, quia 
@@ -251,12 +279,13 @@
               <lb ed="#V"/>formali quod omni ydemptitate essentiae forma communicetur 
               <lb ed="#V"/>intensius vel remissius et ex hoc ratio habetur 
               <lb ed="#V"/>quod posset communicari secundum aliquam sui perfectionem quin[?] secundum 
-              <lb ed="#V"/>quamlibet.</p> 
-            
-            <p xml:id="l89-esnsst">et ideo diceretur consequenter quod non <choice><orig>secuntur</orig><reg>sequuntur</reg></choice> 
+              <lb ed="#V"/>quamlibet
+            </p> 
+            <p xml:id="l89-esnsst">
+              et ideo diceretur consequenter quod non <choice><orig>secuntur</orig><reg>sequuntur</reg></choice> 
               <lb ed="#V"/>illa inconvenientia quae <del rend="strikethrough">secuntur</del> inferuntur, scilicet, 
               <lb ed="#V"/>quod anima intellectiva et corpus possunt constituere unum 
-              <lb ed="#V"/>corpus quod esset praecise ens quia omne con<lb ed="#V"/>stitutum 
+              <lb ed="#V"/>corpus quod esset praecise ens quia omne con<lb ed="#V" break="no"/>stitutum 
               ex anima humana et corpore continet realiter 
               <lb ed="#V"/>omnem perfectionem animae licet non ista perfecte communicatam, 
               <lb ed="#V"/>ideo omne tale compositum est aeque perfectum quantumcumque 
@@ -267,10 +296,10 @@
               <lb ed="#V"/>de transitu de specie in speciem quia forma humana 
               <lb ed="#V"/>non potest communicari per modum formae quin[?] communicetur totaliter 
               <lb ed="#V"/>secundum quamlibet eius perfectionem intrinsecam licet 
-              <lb ed="#V"/>quantum ad executionem operum non posset quodlibet com<lb ed="#V"/>positum 
-              exire in actum sicut in pueris et fui?<lb ed="#V"/>osis 
-              licet quantum ad gradum intrinsece et essentialis perfectio<lb ed="#V"/>nis 
-              cuilibet aequaliter communicetur et tamen quantum ad exe<lb ed="#V"/>cutionem 
+              <lb ed="#V"/>quantum ad executionem operum non posset quodlibet com<lb ed="#V" break="no"/>positum 
+              exire in actum sicut in pueris et fui?<lb ed="#V" break="no"/>osis 
+              licet quantum ad gradum intrinsece et essentialis perfectio<lb ed="#V" break="no"/>nis 
+              cuilibet aequaliter communicetur et tamen quantum ad exe<lb ed="#V" break="no"/>cutionem 
               operum longe refert et secundum hoc posset 
               <lb ed="#V"/>sustineri quod secundum maiorem indispositionem corporum 
               <lb ed="#V"/>est minor communicatio formae quantum ad executionem operum 
@@ -281,54 +310,57 @@
               <lb ed="#V"/>opportet ad ipsas respondere sigillatim <choice><orig>nichilominus</orig><reg>nihilominus</reg></choice> tamen via 
               <lb ed="#V"/>communis est magis se cura, scilicet, quod non sunt ponendi 
               <lb ed="#V"/>gradus in communicaitone formae substantialis <choice><orig>ymo</orig><reg>immo</reg></choice> communicatur 
-              <lb ed="#V"/>propter <choice><orig>2m</orig><reg>secundum</reg></choice> cuius totalem latitudinem perfectionis.</p>
-           </div>
-           <div>
-             <head xml:id="l89-Hdfadfa">De formis accidentalibus</head>
-             
-             <p xml:id="l89-dfaerm">quantum 
-               <lb ed="#V"/>autem est de forma accidentali secus esset quia solum 
-               <lb ed="#V"/>extrinsece communicatur ideo posset dici probabiliter quod secundum ma<lb ed="#V"/>iorem 
-               intimationem actuationis et informa<lb ed="#V"/>tionem 
-               ipsius vel minorem subiectum denominaretur 
-               <lb ed="#V"/>magis vel minus tale nec aliqua ratio in contrarium 
-               <cb ed="#V" n="180va"/><lb ed="#V"/>concluderet compositum. verum est quod <name>sanctus thomas</name> habet 
-               <lb ed="#V"/>aliam <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> unde circa hae <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
-               <lb ed="#V"/>non sunt proprie <choice><orig>encia</orig><reg>entia</reg></choice> seu quidditates rerum 
-               <lb ed="#V"/>ita quod non habent intrinsece esse sed suum esse tale 
-               <lb ed="#V"/>quale habent est formalius alteri <choice><orig>inexistencia</orig><reg>inexistentia</reg></choice> 
-               et non formam accidentalem esse magnam 
-               <lb ed="#V"/>non est nisi alicui magis in esse et ideo 
-               <lb ed="#V"/>consequenter <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod quanto accidens alicui 
-               <lb ed="#V"/>magis <choice><orig>inexiscat</orig><reg>inexistat</reg></choice> tanto est minor forma 
-               <lb ed="#V"/>quia sua magnitudo non est nisi in extrinseca 
-               <lb ed="#V"/>respectu sui subiecti et ideo secundum quod forma magis inexis<lb ed="#V"/>tat 
-               vel inhaeret suo subiecto secundum hoc diceretur 
-               <lb ed="#V"/>esse maior quia magis participat rationem 
-               <lb ed="#V"/>essendi accidentis quia accidens non est intrinsece 
-               <lb ed="#V"/>aliqua quidditas et ista est positio <name>aristotelis</name> 
-               <lb ed="#V"/>sed solum eius esse alteri in esse et ideo secundum quod ma<lb ed="#V"/>gis 
-               inest secundum hoc ipsa forma accidentalis 
-               <lb ed="#V"/>dicitur esse maior et denominat subiectum suum 
-               <lb ed="#V"/>concretive magis tale <choice><orig>isca</orig><reg>ista</reg></choice> est <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> 
-               <lb ed="#V"/><name>sancti thomae</name> secundum quod ego possum capere unde ratio 
-               <lb ed="#V"/>in qua ipse fundat se in ista materia et etiam 
-               <lb ed="#V"/>in multis aliis locis credo quod non sit bona 
-               <lb ed="#V"/>ratio est ista omnis distinctio vel est specifica 
-               <lb ed="#V"/>vel individualis et istud bene conceditur quantum 
-               <lb ed="#V"/>ad hoc modo dicit ipse formae praeexistentes et 
-               <lb ed="#V"/>advenientes non differunt specie quia etiam non 
-               <lb ed="#V"/>constituerent unam speciem totalem. unde ibidem 
-               <lb ed="#V"/>vult probare quod intentio qualitatis non fit per 
-               <lb ed="#V"/>additionem gradus ad gradum nec est indivi<lb ed="#V"/>dualis 
-               quia omnis differens est <space extent="oneWordLength"/> praecise 
-               <lb ed="#V"/>ut ipse supponit, ergo etc.</p> 
-             
+              <lb ed="#V"/>propter <choice><orig>2m</orig><reg>secundum</reg></choice> cuius totalem latitudinem perfectionis
+            </p>
+          </div>
+          <div>
+            <head xml:id="l89-Hdfadfa">De formis accidentalibus</head>
+            <p xml:id="l89-dfaerm">
+              quantum 
+              <lb ed="#V"/>autem est de forma accidentali secus esset quia solum 
+              <lb ed="#V"/>extrinsece communicatur ideo posset dici probabiliter quod secundum ma<lb ed="#V" break="no"/>iorem 
+              intimationem actuationis et informa<lb ed="#V" break="no"/>tionem 
+              ipsius vel minorem subiectum denominaretur 
+              <lb ed="#V"/>magis vel minus tale nec aliqua ratio in contrarium 
+              <pb ed="#V" n="180-v"/>
+              <cb ed="#V" n="a"/>
+              <lb ed="#V"/>concluderet compositum. verum est quod <name>sanctus thomas</name> habet 
+              <lb ed="#V"/>aliam <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> unde circa hae <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
+              <lb ed="#V"/>non sunt proprie <choice><orig>encia</orig><reg>entia</reg></choice> seu quidditates rerum 
+              <lb ed="#V"/>ita quod non habent intrinsece esse sed suum esse tale 
+              <lb ed="#V"/>quale habent est formalius alteri <choice><orig>inexistencia</orig><reg>inexistentia</reg></choice> 
+              et non formam accidentalem esse magnam 
+              <lb ed="#V"/>non est nisi alicui magis in esse et ideo 
+              <lb ed="#V"/>consequenter <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod quanto accidens alicui 
+              <lb ed="#V"/>magis <choice><orig>inexiscat</orig><reg>inexistat</reg></choice> tanto est minor forma 
+              <lb ed="#V"/>quia sua magnitudo non est nisi in extrinseca 
+              <lb ed="#V"/>respectu sui subiecti et ideo secundum quod forma magis inexis<lb ed="#V" break="no"/>tat 
+              vel inhaeret suo subiecto secundum hoc diceretur 
+              <lb ed="#V"/>esse maior quia magis participat rationem 
+              <lb ed="#V"/>essendi accidentis quia accidens non est intrinsece 
+              <lb ed="#V"/>aliqua quidditas et ista est positio <name>aristotelis</name> 
+              <lb ed="#V"/>sed solum eius esse alteri in esse et ideo secundum quod ma<lb ed="#V" break="no"/>gis 
+              inest secundum hoc ipsa forma accidentalis 
+              <lb ed="#V"/>dicitur esse maior et denominat subiectum suum 
+              <lb ed="#V"/>concretive magis tale <choice><orig>isca</orig><reg>ista</reg></choice> est <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> 
+              <lb ed="#V"/><name>sancti thomae</name> secundum quod ego possum capere unde ratio 
+              <lb ed="#V"/>in qua ipse fundat se in ista materia et etiam 
+              <lb ed="#V"/>in multis aliis locis credo quod non sit bona 
+              <lb ed="#V"/>ratio est ista omnis distinctio vel est specifica 
+              <lb ed="#V"/>vel individualis et istud bene conceditur quantum 
+              <lb ed="#V"/>ad hoc modo dicit ipse formae praeexistentes et 
+              <lb ed="#V"/>advenientes non differunt specie quia etiam non 
+              <lb ed="#V"/>constituerent unam speciem totalem. unde ibidem 
+              <lb ed="#V"/>vult probare quod intentio qualitatis non fit per 
+              <lb ed="#V"/>additionem gradus ad gradum nec est indivi<lb ed="#V" break="no"/>dualis 
+              quia omnis differens est <space extent="oneWordLength"/> praecise 
+              <lb ed="#V"/>ut ipse supponit, ergo etc.
+            </p>
             <div>
               <head xml:id="l89-Hprrprr">Prima ratio</head>
-              
-              <p xml:id="l89-eiemdi">cum correctione suae sancti<lb ed="#V"/>tatis 
-                istud est falsum et erroneum funda<lb ed="#V"/>vit 
+              <p xml:id="l89-eiemdi">
+                cum correctione suae sancti<lb ed="#V" break="no"/>tatis 
+                istud est falsum et erroneum funda<lb ed="#V" break="no"/>vit 
                 se alibi ponens quod impossibile est plures 
                 <lb ed="#V"/>angelos esse in eadem specie, <choice><orig>ymo</orig><reg>immo</reg></choice> dicit ipse quot 
                 <lb ed="#V"/>possunt esse species tot possunt esse individua et 
@@ -338,34 +370,38 @@
                 <lb ed="#V"/>in hoc communiter etiam non tenetur potest enim evidenter 
                 <lb ed="#V"/>dari <choice><orig>inscancia</orig><reg>instantia</reg></choice> de anima intellectiva nam captis 
                 <lb ed="#V"/>duabus animabus separatis intellectis aui?u[?] 
-                <lb ed="#V"/>ipse differunt ab invicem individuatur supposito[?] quod num<lb ed="#V"/>quam 
-                essent communicatae materiae, ergo etc.</p>
-              
-              <p xml:id="l89-sainhm">Item nam 
+                <lb ed="#V"/>ipse differunt ab invicem individuatur supposito[?] quod num<lb ed="#V" break="no"/>quam 
+                essent communicatae materiae, ergo etc.
+              </p>
+              <p xml:id="l89-sainhm">
+                Item nam 
                 <lb ed="#V"/>capiamus duas qualitates eiusdem speciei si per 
-                <lb ed="#V"/>dei potentiam separarentur a materia adhuc. u<lb ed="#V"/>na 
+                <lb ed="#V"/>dei potentiam separarentur a materia adhuc. u<lb ed="#V" break="no"/>na 
                 differret ab alia individualiter nam 
-                <lb ed="#V"/>per dei gratiam una non converteretur in aliam.</p>
-              
-              <p xml:id="l89-tdanei">Item dato quocumque angelo denegare 
-                <cb ed="#V" n="180vb"/><lb ed="#V"/>a <choice><orig>potencia</orig><reg>potentia</reg></choice> divina quod non possit creare unum aliam 
+                <lb ed="#V"/>per dei gratiam una non converteretur in aliam.
+              </p>
+              <p xml:id="l89-tdanei">
+                Item dato quocumque angelo denegare 
+                <cb ed="#V" n="b"/><!--180vb-->
+                <lb ed="#V"/>a <choice><orig>potencia</orig><reg>potentia</reg></choice> divina quod non possit creare unum aliam 
                 <lb ed="#V"/>angelum similem in eadem specie non videtur esse bene 
                 <lb ed="#V"/>solidum. verum est quod istam <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> sumpsit 
-                <lb ed="#V"/>ab <name>aristotele</name> et <name>commentatore</name> in <title>metaphysica[?]</title> <name>aristotelis</name> in an<lb ed="#V"/>tiqua 
+                <lb ed="#V"/>ab <name>aristotele</name> et <name>commentatore</name> in <title>metaphysica[?]</title> <name>aristotelis</name> in an<lb ed="#V" break="no"/>tiqua 
                 translatione propter dicta eorum male intellecta 
                 <lb ed="#V"/>ob <choice><orig>reverencia</orig><reg>reverentia</reg></choice> sua une verum est quod <name>commentator</name> ibidem 
                 <lb ed="#V"/>dicit quod non est aliquod medium sufficiens 
-                <lb ed="#V"/>apud intellectum rectum concludendi diversitatem numera<lb ed="#V"/>lem 
+                <lb ed="#V"/>apud intellectum rectum concludendi diversitatem numera<lb ed="#V" break="no"/>lem 
                 apud aliqua nisi ratione materiae et in hoc dicit 
                 <lb ed="#V"/>veritatem nam si essent duo accidentia separata 
                 <lb ed="#V"/>a loco et materia non habetur sufficiens medium 
                 <lb ed="#V"/>concludendi apud intellectum nostrum differentiam numeralem 
-                <lb ed="#V"/>ipsorum et ex hoc non sequitur quin[?] sit inter ea materia<lb ed="#V"/>lis 
+                <lb ed="#V"/>ipsorum et ex hoc non sequitur quin[?] sit inter ea materia<lb ed="#V" break="no"/>lis 
                 differentia nam illa duo accidentia adhuc essent 
                 <lb ed="#V"/>et unum non esset aliud et cum hoc essent eiusdem 
-                <lb ed="#V"/>speciei ergo etc.</p> 
-              
-              <p xml:id="l89-esfnrm">et sic apparet quod quantum ad hoc fundamentum 
+                <lb ed="#V"/>speciei ergo etc.
+              </p> 
+              <p xml:id="l89-esfnrm">
+                et sic apparet quod quantum ad hoc fundamentum 
                 <lb ed="#V"/>non est solidum tamen ex isto fundamento dicit sic 
                 <lb ed="#V"/>nam si des <choice><orig>michi</orig><reg>mihi</reg></choice> duo accidentia in eadem materia 
                 <lb ed="#V"/>et non differunt materialiter ex <choice><orig>ypostasi</orig><reg>hypostasi</reg></choice> data. <g ref="#slash"/>respondendo 
@@ -377,43 +413,49 @@
                 <lb ed="#V"/>ad sua principia ita quod adhuc dato quod essent in 
                 <lb ed="#V"/>eadem materia essent aliae rationes concludendi eas 
                 <lb ed="#V"/>differre numeraliter[?] quia, scilicet, una producitur in uno 
-                <lb ed="#V"/>tempore et alia in alio et ab alio agente.</p>
-              
-              <p xml:id="l89-esress"><lb ed="#V"/>ex istis dicit ipse apparet quod non potest esse specifica nec 
+                <lb ed="#V"/>tempore et alia in alio et ab alio agente
+              </p>
+              <p xml:id="l89-esress">
+                <lb ed="#V"/>ex istis dicit ipse apparet quod non potest esse specifica nec 
                 <lb ed="#V"/>numeralis differentia in eadem specie respectu eiusdem subiecti ideo 
                 <lb ed="#V"/>qualitas intensa et remissa sunt idem formaliter in 
                 <lb ed="#V"/>eodem subiecto sed eadem qualitas vocatur intensa 
                 <lb ed="#V"/>quia magis intimatur et communicatur suo subiecto sed eadem 
-                <lb ed="#V"/>qualitas vocatur intensa minus intensa seu re<lb ed="#V"/>missa 
+                <lb ed="#V"/>qualitas vocatur intensa minus intensa seu re<lb ed="#V" break="no"/>missa 
                 quia minus communicatur, quia suum esse non est 
                 <lb ed="#V"/>esse proprie sed magis alterin in esse, ideo quantum magis inhaeret 
                 <lb ed="#V"/>tanto magis est eodem quo accidens, ergo etc. quantum 
-                <lb ed="#V"/>ad hoc licet ratio non concludat de distinctione individu<lb ed="#V"/>ali 
+                <lb ed="#V"/>ad hoc licet ratio non concludat de distinctione individu<lb ed="#V" break="no"/>ali 
                 quantum tamen ad modum ponendi reputo modum 
                 <lb ed="#V"/>probabilem licet modus probationis non valeat 
                 <lb ed="#V"/>sive teneatur prius, scilicet, quod forma accidentalis est 
                 <lb ed="#V"/>quaedam quidditas intrinsece etiam dato quod esset sine 
-                <lb ed="#V"/>subiecto et quod suum esse non est formaliter alteri in<lb ed="#V"/>existere 
+                <lb ed="#V"/>subiecto et quod suum esse non est formaliter alteri in<lb ed="#V" break="no"/>existere 
                 potest tamen eadem qualitas magis vel minus 
-                <lb ed="#V"/>denominare suum subiectum, ita quod secundum quod magis in<lb ed="#V"/>timatur 
-                subiecto actuando et inhaerendo ipsum ma<lb ed="#V"/>gis 
-                denominat et secundum quod minus minus tenendo.</p>
-          </div>
+                <lb ed="#V"/>denominare suum subiectum, ita quod secundum quod magis in<lb ed="#V" break="no"/>timatur 
+                subiecto actuando et inhaerendo ipsum ma<lb ed="#V" break="no"/>gis 
+                denominat et secundum quod minus minus tenendo
+              </p>
+            </div>
             <div>
               <head xml:id="l89-Hscrscr">Secunda ratio</head>
-              <p xml:id="l89-speier"><lb ed="#V"/>etiam <choice><orig>2m</orig><reg>secundum</reg></choice> modum, scilicet, quod esse accidentis est formaliter al<lb ed="#V"/>?a 
+              <p xml:id="l89-speier">
+                <lb ed="#V"/>etiam <choice><orig>2m</orig><reg>secundum</reg></choice> modum, scilicet, quod esse accidentis est formaliter al<lb ed="#V" break="no"/>?a 
                 inexistere probabile est dicere quod eadem qualitas 
                 <lb ed="#V"/>potest denominare suum subiectum magis vel minus secundum 
-                <lb ed="#V"/>quod inesset suo subiecto.</p>
+                <lb ed="#V"/>quod inesset suo subiecto
+              </p>
             </div>
-             </div>
+          </div>
           <div>
             <head xml:id="l89-Hobines">Obiectiones</head>
-          
             <div>
               <head xml:id="l89-Hprprpr">Prima ratio</head>
-              <p xml:id="l89-tcocnm">sed contra istam positionem posset sic 
-                <cb ed="#V" n="181ra"/><lb ed="#V"/>argui quia generaliter loquitur de omni qualitate, 
+              <p xml:id="l89-tcocnm">
+                sed contra istam positionem posset sic 
+                <pb ed="#V" n="181-r"/>
+                <cb ed="#V" n="a"/>
+                <lb ed="#V"/>argui quia generaliter loquitur de omni qualitate, 
                 <lb ed="#V"/>ita quod nulla qualitas habet gradus intensionales 
                 <lb ed="#V"/>secundum istam viam primo sit quia per omnem motum 
                 <lb ed="#V"/>alterationis acquiritur aliquid si ergo continue aliquid 
@@ -421,137 +463,145 @@
                 <lb ed="#V"/>continue calidior seu albior oportet quod continue aliquid 
                 <lb ed="#V"/>acquiratur et cum parte <choice><orig>nichil</orig><reg>nihil</reg></choice> acquiratur parte 
                 <lb ed="#V"/>modo istud est contra naturam motus et maxime 
-                <lb ed="#V"/>alterationis, ergo etc.</p>
-          </div>
+                <lb ed="#V"/>alterationis, ergo etc.
+              </p>
+            </div>
             <div>
               <head xml:id="l89-Hsrsrsr">Secunda ratio</head>
-              <p xml:id="l89-spasst"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia forma aliquibus quae 
-                <lb ed="#V"/>communicatur communicata est subiecto suo secundum se totam ergo deno<lb ed="#V"/>minat 
-                suum subiectum secundum se totum, ergo non potest ma<lb ed="#V"/>gis 
-                vel minus ipsam denominare.</p>
+              <p xml:id="l89-spasst">
+                <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quia forma aliquibus quae 
+                <lb ed="#V"/>communicatur communicata est subiecto suo secundum se totam ergo deno<lb ed="#V" break="no"/>minat 
+                suum subiectum secundum se totum, ergo non potest ma<lb ed="#V" break="no"/>gis 
+                vel minus ipsam denominare
+              </p>
             </div>
-            
             <div>
               <head xml:id="l89-Htrtrtr">Tertia ratio</head>
-              <p xml:id="l89-tqseaa"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> quia tunc seque<lb ed="#V"/>retur 
+              <p xml:id="l89-tqseaa">
+                <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> quia tunc seque<lb ed="#V" break="no"/>retur 
                 quod in <name>sorte</name> et <name>platone</name> essent aequales 
                 <lb ed="#V"/>albedines et tamen unus esset in duplo albior 
-                <lb ed="#V"/>alio.</p>
-          </div>
-            
+                <lb ed="#V"/>alio.
+              </p>
+            </div>
             <div>
               <head xml:id="l89-Hqarqar">Quarta ratio</head>
-              <p xml:id="l89-qsscai"><g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sic aliquod medium uniformiter dis<lb ed="#V"/>positum 
-                et applicetur sibi lucidum certe intensio<lb ed="#V"/>nis 
+              <p xml:id="l89-qsscai">
+                <g ref="#slash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sic aliquod medium uniformiter dis<lb ed="#V" break="no"/>positum 
+                et applicetur sibi lucidum certe intensio<lb ed="#V" break="no"/>nis 
                 tunc causabit in eo lumen certe intensionis 
                 <lb ed="#V"/>quo causato removeatur illud et applicetur 
-                <lb ed="#V"/>eidem medio unum aliud lucidum duplum, tunc causa<lb ed="#V"/>bit 
-                lumen duplum intensive et tamen subiectum est uni<lb ed="#V"/>formiter 
-                dispositionem, ergo intensio qualitatis non est resol<lb ed="#V"/>venda 
-                ad dispositionem subiecti quod tamen positionis[?].</p>
+                <lb ed="#V"/>eidem medio unum aliud lucidum duplum, tunc causa<lb ed="#V" break="no"/>bit 
+                lumen duplum intensive et tamen subiectum est uni<lb ed="#V" break="no"/>formiter 
+                dispositionem, ergo intensio qualitatis non est resol<lb ed="#V" break="no"/>venda 
+                ad dispositionem subiecti quod tamen positionis[?]
+              </p>
             </div>
             <div>
               <head xml:id="l89-Hqrqrqr">Quinta ratio</head>
-              <p xml:id="l89-qsqeni"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> et ma<lb ed="#V"/>gis 
+              <p xml:id="l89-qsqeni">
+                <g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> et ma<lb ed="#V" break="no"/>gis 
                 apparenter sequeretur quod accidentia in sacramento altarum 
-                <lb ed="#V"/>non possent intendi vel remitti, consequens est contra <choice><orig>ex<lb ed="#V"/>perienciam</orig><reg>ex<lb ed="#V"/>perientiam</reg></choice> 
+                <lb ed="#V"/>non possent intendi vel remitti, consequens est contra <choice><orig>ex<lb ed="#V" break="no"/>perienciam</orig><reg>ex<lb ed="#V" break="no"/>perientiam</reg></choice> 
                 quia si applicetur frigidum aliquod 
                 <lb ed="#V"/>frigiditas ibidem existens intendetur et ita de causalitate 
                 <lb ed="#V"/>si sibi applicetur calidum et hoc tamen non fiet 
                 <lb ed="#V"/>per maiorem communicationem vel intimationem ad subiectum suum 
-                <lb ed="#V"/>quod non inhaerent subiecto alio modo.</p>
-          </div> 
+                <lb ed="#V"/>quod non inhaerent subiecto alio modo
+              </p>
+            </div>
           </div>
           <div>
             <head xml:id="l89-Hrarrar">Responsiones ad rationes</head>
             <div>
-            
               <head xml:id="l89-aprapr">Ad primam rationem</head>
-            
-              <p xml:id="l89-aprnqp"><g ref="#dbslash"/>Ad primum diceret 
-            <lb ed="#V"/>tenens positionem <name>sancti thomae</name> quod per alterationem non oportet 
-            <lb ed="#V"/>quod aliquid propria acquiratur quia accidens non est 
-            <lb ed="#V"/>aliquid proprie et sic diceretur quod ad salvandum 
-            <lb ed="#V"/>quod in alteratione aliquid acquiratur sufficit quod 
-            <lb ed="#V"/>modus accidentis secundum quem habet esse, scilicet, inexistere 
-            <lb ed="#V"/>alicui intendatur ita quod sufficit quod <space extent="oneWordLength"/> 
-            <lb ed="#V"/>accidens magis inexistat subiecto suo et quantum ad hoc 
-            <lb ed="#V"/>acquirit quamdam latitudinem <choice><orig>2a</orig><reg>secunda</reg></choice> non est aliqua 
-            <lb ed="#V"/>quidditas sed est maior <choice><orig>inexiscencia</orig><reg>inexistentia</reg></choice> ipsius 
-            <lb ed="#V"/>ad subiectum, ita quod in esse tali quali accidens habet esse 
-            <lb ed="#V"/>perfectiori et intensiori modo in sic suo subiecto.</p> 
-            
+              <p xml:id="l89-aprnqp">
+                <g ref="#dbslash"/>Ad primum diceret 
+                <lb ed="#V"/>tenens positionem <name>sancti thomae</name> quod per alterationem non oportet 
+                <lb ed="#V"/>quod aliquid propria acquiratur quia accidens non est 
+                <lb ed="#V"/>aliquid proprie et sic diceretur quod ad salvandum 
+                <lb ed="#V"/>quod in alteratione aliquid acquiratur sufficit quod 
+                <lb ed="#V"/>modus accidentis secundum quem habet esse, scilicet, inexistere 
+                <lb ed="#V"/>alicui intendatur ita quod sufficit quod <space extent="oneWordLength"/> 
+                <lb ed="#V"/>accidens magis inexistat subiecto suo et quantum ad hoc 
+                <lb ed="#V"/>acquirit quamdam latitudinem <choice><orig>2a</orig><reg>secunda</reg></choice> non est aliqua 
+                <lb ed="#V"/>quidditas sed est maior <choice><orig>inexiscencia</orig><reg>inexistentia</reg></choice> ipsius 
+                <lb ed="#V"/>ad subiectum, ita quod in esse tali quali accidens habet esse 
+                <lb ed="#V"/>perfectiori et intensiori modo in sic suo subiecto
+              </p>
+            </div>
+            <div>
+              <head xml:id="l89-asrasr">Ad secundam rationem</head>
+              <p xml:id="l89-ephfei">
+                et 
+                <lb ed="#V"/>per hoc respondetur ad rationem aliam quia licet 
+                <lb ed="#V"/>forma secundum se totam communicetur semper suo subiecto tamen intentiori 
+                <lb ed="#V"/>potest sibi communicari quia, scilicet, potest intensiori modo sibi 
+                <lb ed="#V"/><choice><orig>inexiscere</orig><reg>inexistere</reg></choice> et ex consequenti
+              </p>
+            </div>
+            <div>
+              <head xml:id="l89-Hatratr">Ad tertiam rationem</head>
+              <p xml:id="l89-esdiap">
+                ad <choice><orig>3am</orig><reg>tertiam</reg></choice> rationem, quia albedinem 
+                <lb ed="#V"/>esse tantam vel tantam atteditur penes tantae 
+                <lb ed="#V"/>vel tantae <choice><orig>inexiscenciae</orig><reg>inexistentiae</reg></choice> suo subiecto
+              </p>
+            </div>
+            <div>
+              <head xml:id="l89-Haqtaqt">Ad quartam rationem</head>
+              <p xml:id="dCl86aqqclm">
+                <g ref="#dbslash"/>ad <choice><orig>4am</orig><reg>quartam</reg></choice> rationem 
+                <lb ed="#V"/>de lucido diceretur quod <choice><orig>agencius</orig><reg>agentius</reg></choice> <choice><orig>potencius</orig><reg>potentius</reg></choice> et <choice><orig>for<lb ed="#V" break="no"/>cius</orig><reg>for<lb ed="#V" break="no"/>tius</reg></choice> 
+                respectu eiusdem passi eodem modo dispositi faceret 
+                <lb ed="#V"/>eamdem qualitatem magis <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> suo subiecto 
+                <lb ed="#V"/>ideo in <choice><orig>isco</orig><reg>isto</reg></choice> casu maior dispositio subiecti non est causa 
+                <lb ed="#V"/>maioris intenssionis eiusdem qualitatis unde 
+                <lb ed="#V"/>lucidum intensius et <choice><orig>forcius</orig><reg>fortius</reg></choice> in duplo causa<lb ed="#V" break="no"/>bit 
+                lumen intensius in duplo respectu eiusdem 
+                <cb ed="#V" n="b"/><!--181rb-->
+                <lb ed="#V"/>passi eodem modo disposit adequate et sic patet 
+                <lb ed="#V"/>quod <choice><orig>iscae</orig><reg>istae</reg></choice> rationes modo dicum[?] probant
+              </p>
+            </div>
+            <div>
+              <head xml:id="l89-Haqraqr">Ad quintam rationem</head>
+              <p xml:id="l89-aqnhmi">
+                sed difficultas 
+                <lb ed="#V"/>est de alia ratione, scilicet, de accidentibus in sacramento alta<lb ed="#V" break="no"/>ris, 
+                quia ibidem tollitur tota causa tua in<lb ed="#V" break="no"/>tensionis 
+                qualitatis quia non habet ibidem subiectum 
+                <lb ed="#V"/>ideo non potest ibidem intendi per maiorem intima<lb ed="#V" break="no"/>tionem 
+                ad suum subiectum. <g ref="#slash"/>advertendum est quod tenentes 
+                <lb ed="#V"/>quod <choice><orig>accidencia</orig><reg>accidentia</reg></choice> non sunt <choice><orig>encia</orig><reg>entia</reg></choice> secundum suum esse praecise 
+                <lb ed="#V"/>alteri <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> dicerent consequenter quod accidentia in sacramento 
+                <lb ed="#V"/>altaris non haberent essentialem quiditatem sed <choice><orig>in<lb ed="#V" break="no"/>exiscunt</orig><reg>in<lb ed="#V" break="no"/>existunt</reg></choice> 
+                vel habent modum inexistendi
+              </p>
+              <p xml:id="l89-scaple">
+                sed contra quia 
+                <lb ed="#V"/>non habent subiectum advertendum est quantum ad habitudinem 
+                <lb ed="#V"/>vim ut accidens natum est sibi <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> dicit 
+                <lb ed="#V"/>perfectionem quamdam in subiecto cuius obiectum dicit inhaesio 
+                <lb ed="#V"/>ideo quantum ad hoc habitudo subiecti ad actum potest a deo 
+                <lb ed="#V"/>suppleri nam secundum viam <name>aristotelis</name> et <name>sancti thomae</name> 
+                <lb ed="#V"/>quod, scilicet, accidentia non sint quiditatis intrinsece et essentialiter 
+                <lb ed="#V"/>sed unum esse est praecise alteri <choice><orig>inexiscere</orig><reg>inexistere</reg></choice>, id est habent u<lb ed="#V" break="no"/>nam 
+                talem <choice><orig>dependenciam</orig><reg>dependentiam</reg></choice> a subiecto sine qua 
+                <lb ed="#V"/>deus de potentia sua absoluta non posset facere 
+                <lb ed="#V"/>quod accidentia essent <choice><orig>iscam</orig><reg>istam</reg></choice> tamen habitudinem deus potest 
+                <lb ed="#V"/>supplere quia reducitur ad causalitatem conserva<lb ed="#V" break="no"/>tivam 
+                et si non potest in genere causae materialis potest 
+                <lb ed="#V"/>per aliud nobilius genus causae, scilicet, efficientis 
+                <lb ed="#V"/>ut alias deductum est per suppletionem cuius actus[?] 
+                <lb ed="#V"/>habet suum esse non inhaerendo, sed conservatur sua habi<lb ed="#V" break="no"/>tudo 
+                quam <choice><orig>neccessario</orig><reg>necessario</reg></choice> requirit ad suum esse et cre<lb ed="#V" break="no"/>do 
+                quod <choice><orig>isca</orig><reg>ista</reg></choice> sit bona quo ad hoc etc.
+              </p>
+            </div>
           </div>
-          
-          <div>
-            <head xml:id="l89-asrasr">Ad secundam rationem</head>
-            <p xml:id="l89-ephfei">et 
-              <lb ed="#V"/>per hoc respondetur ad rationem aliam quia licet 
-              <lb ed="#V"/>forma secundum se totam communicetur semper suo subiecto tamen intentiori 
-              <lb ed="#V"/>potest sibi communicari quia, scilicet, potest intensiori modo sibi 
-              <lb ed="#V"/><choice><orig>inexiscere</orig><reg>inexistere</reg></choice> et ex consequenti.</p>
-            
-          </div>
-          
-          <div>
-            <head xml:id="l89-Hatratr">Ad tertiam rationem</head>
-            <p xml:id="l89-esdiap">ad <choice><orig>3am</orig><reg>tertiam</reg></choice> rationem, quia albedinem 
-              <lb ed="#V"/>esse tantam vel tantam atteditur penes tantae 
-              <lb ed="#V"/>vel tantae <choice><orig>inexiscenciae</orig><reg>inexistentiae</reg></choice> suo subiecto.</p>
-          </div>
-          <div>
-            <head xml:id="l89-Haqtaqt">Ad quartam rationem</head>
-            <p xml:id="dCl86aqqclm"><g ref="#dbslash"/>ad <choice><orig>4am</orig><reg>quartam</reg></choice> rationem 
-              <lb ed="#V"/>de lucido diceretur quod <choice><orig>agencius</orig><reg>agentius</reg></choice> <choice><orig>potencius</orig><reg>potentius</reg></choice> et <choice><orig>for<lb ed="#V"/>cius</orig><reg>for<lb ed="#V"/>tius</reg></choice> 
-              respectu eiusdem passi eodem modo dispositi faceret 
-              <lb ed="#V"/>eamdem qualitatem magis <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> suo subiecto 
-              <lb ed="#V"/>ideo in <choice><orig>isco</orig><reg>isto</reg></choice> casu maior dispositio subiecti non est causa 
-              <lb ed="#V"/>maioris intenssionis eiusdem qualitatis unde 
-              <lb ed="#V"/>lucidum intensius et <choice><orig>forcius</orig><reg>fortius</reg></choice> in duplo causa<lb ed="#V"/>bit 
-              lumen intensius in duplo respectu eiusdem 
-              <cb ed="#V" n="181rb"/><lb ed="#V"/>passi eodem modo disposit adequate et sic patet 
-              <lb ed="#V"/>quod <choice><orig>iscae</orig><reg>istae</reg></choice> rationes modo dicum[?] probant.</p> 
-          </div>
-          
-          <div>
-            <head xml:id="l89-Haqraqr">Ad quintam rationem</head>
-          
-            <p xml:id="l89-aqnhmi">sed difficultas 
-              <lb ed="#V"/>est de alia ratione, scilicet, de accidentibus in sacramento alta<lb ed="#V"/>ris, 
-              quia ibidem tollitur tota causa tua in<lb ed="#V"/>tensionis 
-              qualitatis quia non habet ibidem subiectum 
-              <lb ed="#V"/>ideo non potest ibidem intendi per maiorem intima<lb ed="#V"/>tionem 
-              ad suum subiectum. <g ref="#slash"/>advertendum est quod tenentes 
-              <lb ed="#V"/>quod <choice><orig>accidencia</orig><reg>accidentia</reg></choice> non sunt <choice><orig>encia</orig><reg>entia</reg></choice> secundum suum esse praecise 
-              <lb ed="#V"/>alteri <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> dicerent consequenter quod accidentia in sacramento 
-              <lb ed="#V"/>altaris non haberent essentialem quiditatem sed <choice><orig>in<lb ed="#V"/>exiscunt</orig><reg>in<lb ed="#V"/>existunt</reg></choice> 
-              vel habent modum inexistendi.</p>
-            
-            <p xml:id="l89-scaple">sed contra quia 
-              <lb ed="#V"/>non habent subiectum advertendum est quantum ad habitudinem 
-              <lb ed="#V"/>vim ut accidens natum est sibi <choice><orig>inexiscere</orig><reg>inexistere</reg></choice> dicit 
-              <lb ed="#V"/>perfectionem quamdam in subiecto cuius obiectum dicit inhaesio 
-              <lb ed="#V"/>ideo quantum ad hoc habitudo subiecti ad actum potest a deo 
-              <lb ed="#V"/>suppleri nam secundum viam <name>aristotelis</name> et <name>sancti thomae</name> 
-              <lb ed="#V"/>quod, scilicet, accidentia non sint quiditatis intrinsece et essentialiter 
-              <lb ed="#V"/>sed unum esse est praecise alteri <choice><orig>inexiscere</orig><reg>inexistere</reg></choice>, id est habent u<lb ed="#V"/>nam 
-              talem <choice><orig>dependenciam</orig><reg>dependentiam</reg></choice> a subiecto sine qua 
-              <lb ed="#V"/>deus de potentia sua absoluta non posset facere 
-              <lb ed="#V"/>quod accidentia essent <choice><orig>iscam</orig><reg>istam</reg></choice> tamen habitudinem deus potest 
-              <lb ed="#V"/>supplere quia reducitur ad causalitatem conserva<lb ed="#V"/>tivam 
-              et si non potest in genere causae materialis potest 
-              <lb ed="#V"/>per aliud nobilius genus causae, scilicet, efficientis 
-              <lb ed="#V"/>ut alias deductum est per suppletionem cuius actus[?] 
-              <lb ed="#V"/>habet suum esse non inhaerendo, sed conservatur sua habi<lb ed="#V"/>tudo 
-              quam <choice><orig>neccessario</orig><reg>necessario</reg></choice> requirit ad suum esse et cre<lb ed="#V"/>do 
-              quod <choice><orig>isca</orig><reg>ista</reg></choice> sit bona quo ad hoc etc.</p>
-          
-          
-          </div>
-          </div>
-          
         </div>
-        </div>
+      </div>
     </body>
   </text>
 </TEI>
