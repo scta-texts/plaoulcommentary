@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,63 +10,75 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 121, de Libertate [St. Victor Transcription]</title>
           <date when="2013-03-24">March 24, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2013-03-24">March 24, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV">St. Victor</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>    <facsimile>
-  </facsimile>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-24" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="349-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio121">
-      <head xml:id="l121-Hldlldl" subtype="title">Lectio 121, de Libertate [St. Victor Transcription]</head>
+        <head xml:id="l121-Hldlldl">Lectio 121, de Libertate [St. Victor Transcription]</head>
         <div>
           <head xml:id="l121-Hrarrar">Responsio ad rationes</head>
           <div>
             <head xml:id="l121-arbarb">Ad primam et secundam rationes Boetii</head>
-            <p xml:id="l121-readpv"><g ref="#dbslash"/>Respondendum 
+            <p xml:id="l121-readpv">
+              <g ref="#dbslash"/>Respondendum 
               <lb ed="#SV"/>est ad rationes circa praesentem materiam inductas, <g ref="#slash"/>et 
               <lb ed="#SV"/>primo ad rationem <name ref="#Boethius">boecii</name><note>See above, <ref target="dLlecture116.xml#dLl116epafep">lectio 116, n.</ref> and <ref target="dLlecture116.xml#dLl116ssassd">lectio 116, n.</ref></note> quae stabat in hoc deus 
               <lb ed="#SV"/>cuncta prospicit et nullo modo falli potest igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
-              <lb ed="#SV"/>est sic evenire sicut deus indidit et cognoscit <g ref="#slash"/>con<lb ed="#SV"/>firmatur 
-              quia nisi divina scientia esset ad unam partem sic li<lb ed="#SV"/>mitata, 
+              <lb ed="#SV"/>est sic evenire sicut deus indidit et cognoscit <g ref="#slash"/>con<lb ed="#SV" break="no"/>firmatur 
+              quia nisi divina scientia esset ad unam partem sic li<lb ed="#SV" break="no"/>mitata, 
               <g ref="#slash"/>sequitur quod ipsa non haberet eandem iudicium de 
-              <lb ed="#SV"/>parte veritatis.</p>
-        
-            <p xml:id="l121-prqpcl"><g ref="#dbslash"/>Primo Respondetur quod <name ref="#Boethius">boecius</name> loquitur 
+              <lb ed="#SV"/>parte veritatis.
+            </p>
+            <p xml:id="l121-prqpcl">
+              <g ref="#dbslash"/>Primo Respondetur quod <name ref="#Boethius">boecius</name> loquitur 
               <lb ed="#SV"/>de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> <choice><orig>condicionata</orig><reg>conditionata</reg></choice> vel de <choice><orig>neccessitata</orig><reg>necessitata</reg></choice> commune intendendo 
               <lb ed="#SV"/>hanc consequentiam esse <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> deus ita novit fore 
-              <lb ed="#SV"/>igitur ita erit et sic quantum ad hoc solutio esset fa<lb ed="#SV"/>cilis, 
+              <lb ed="#SV"/>igitur ita erit et sic quantum ad hoc solutio esset fa<lb ed="#SV" break="no"/>cilis, 
               <g ref="#slash"/>Sed quia per hoc plene non evacuatur 
               <lb ed="#SV"/>difficultas, <g ref="#slash"/>ideo ut videtur redibit ridiculum <name ref="#Tiresias">tirisii</name> 
               <lb ed="#SV"/>nisi divina notitia sit immobiliter ad aliquam partem 
-              <lb ed="#SV"/>contradictionis limitata.</p> 
-            
-            <p xml:id="l121-pcdsqo"><g ref="#slash"/>Pro cuius declaratione 
+              <lb ed="#SV"/>contradictionis limitata.
+            </p> 
+            <p xml:id="l121-pcdsqo">
+              <g ref="#slash"/>Pro cuius declaratione 
               <lb ed="#SV"/>praemittit <name ref="#Boethius">boecius</name> in loco praeallegato quod sunt plures 
-              <lb ed="#SV"/>gradus cognoscendi quorum superior semper pangit inferi<lb ed="#SV"/>orem, 
+              <lb ed="#SV"/>gradus cognoscendi quorum superior semper pangit inferi<lb ed="#SV" break="no"/>orem, 
               <g ref="#slash"/>hoc patet clare in eodem supposito, de sensu 
               <lb ed="#SV"/>tactus et visus, <g ref="#slash"/>quia visus melius iudicat et distinctius 
               <lb ed="#SV"/>de quantitate Rei quam effectus tactus, <g ref="#slash"/>Et Iterum sensus 
@@ -78,33 +90,36 @@
               <lb ed="#SV"/>in quo non potest sensus exterior igitur ascendendo ad 
               <lb ed="#SV"/><choice><orig>suppremum</orig><reg>supremum</reg></choice> gradum concludit <name ref="#Boethius">boecius</name> quod scientia divina 
               <lb ed="#SV"/>habet <choice><orig>suppremum</orig><reg>supremum</reg></choice> gradum cognoscendi, <g ref="#slash"/>pro cuius ampliori 
-              <lb ed="#SV"/>satisfactione et solutione rationum <choice><orig>sequencium</orig><reg>sequentium</reg></choice> eli<lb ed="#SV"/>go 
+              <lb ed="#SV"/>satisfactione et solutione rationum <choice><orig>sequencium</orig><reg>sequentium</reg></choice> eli<lb ed="#SV" break="no"/>go 
               tamen viam quam Reputo magis probabilem, 
               <lb ed="#SV"/>scilicet, quod divina scientia se habet ad modum potentiae libere 
               <lb ed="#SV"/>respectu cognoscibilium et contingentium veritatum <g ref="#slash"/>et sicut 
               <lb ed="#SV"/>divina voluntas dicitur libera quia uniformiter se 
               <lb ed="#SV"/>habens in se et intrinsece tunc agit <g ref="#slash"/>et nunc 
-              <lb ed="#SV"/>non agit, <g ref="#slash"/>et tamen tunc et nunc se habet pure uni<lb ed="#SV"/>formiter 
+              <lb ed="#SV"/>non agit, <g ref="#slash"/>et tamen tunc et nunc se habet pure uni<lb ed="#SV" break="no"/>formiter 
               <g ref="#slash"/>Et ita <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est de divina 
               <lb ed="#SV"/>cognitione quod ipsa quantum ad hoc habet modum libertatis 
               <lb ed="#SV"/>ut uniformiter se habendo nunc sit scientia alicuius 
               <lb ed="#SV"/>et uniformiter eodem modo intrinsece se habendo est 
-              <lb ed="#SV"/>scientia suae oppositae.</p> 
-            
-            <p xml:id="l121-espeid"><g ref="#slash"/>Et sicut per eandem volitionem 
+              <lb ed="#SV"/>scientia suae oppositae
+            </p> 
+            <p xml:id="l121-espeid">
+              <g ref="#slash"/>Et sicut per eandem volitionem 
               <lb ed="#SV"/>adaequate deus producit Rem in esse, <g ref="#slash"/>et per eandem 
               <lb ed="#SV"/>volitionem eam destruit <seg>ita<desc>unclear if "a" above is crossed out</desc></seg> divina notitia 
               <lb ed="#SV"/>respectu unius veritatis est assensus, <g ref="#slash"/>et ille idem 
               <lb ed="#SV"/>assensus est postea eius veritatis dissensus et 
-              <cb ed="#SV" n="349rb"/><lb ed="#SV"/>contrarii assensus <g ref="#slash"/>Similiter divina voluntas seu volitio eadem 
+              <cb ed="#SV" n="b"/><!--349rb-->
+              <lb ed="#SV"/>contrarii assensus <g ref="#slash"/>Similiter divina voluntas seu volitio eadem 
               <lb ed="#SV"/>existens adaequate est diversorum effectuum productiva <g ref="#slash"/>nam 
               <lb ed="#SV"/><sic>nam</sic> eadem Ratione causali producitur vermis vel angelus seu 
               <lb ed="#SV"/>ambo simul, <g ref="#slash"/>et ita per eandem volitionem assensit deus quod 
               <lb ed="#SV"/>antichristus erit antequam producitur, <g ref="#slash"/>et per eandem volitionem 
-              <lb ed="#SV"/>adaequate assensit quod antichristus non erit ipso destructo.</p> 
-            
-            <p xml:id="l121-espiip"><lb ed="#SV"/>Et sicut per eandem causalitatem voluntas exit in actu 
-              <lb ed="#SV"/>producendo diversos effectus <g ref="#slash"/>sumendo quod in deo rationes causa<lb ed="#SV"/>les 
+              <lb ed="#SV"/>adaequate assensit quod antichristus non erit ipso destructo
+            </p> 
+            <p xml:id="l121-espiip">
+              <lb ed="#SV"/>Et sicut per eandem causalitatem voluntas exit in actu 
+              <lb ed="#SV"/>producendo diversos effectus <g ref="#slash"/>sumendo quod in deo rationes causa<lb ed="#SV" break="no"/>les 
               non sint distinctae ad intra, <g ref="#slash"/>ita <choice><orig>eciam</orig><reg>etiam</reg></choice> scientia divina 
               <lb ed="#SV"/>potest esse scientia diversarum veritatis uniformiter et adaequate 
               <lb ed="#SV"/>se habens <g ref="#slash"/><seg ana="#theologia #philosophia">et hic est differentia inter theologiam et philosophiam</seg> 
@@ -116,18 +131,19 @@
               <lb ed="#SV"/><choice><orig>ymo</orig><reg>immo</reg></choice> dicit quod idem inquantum idem ratione suae immensitatis 
               <lb ed="#SV"/>potest in diversa aequae primo per eandem rationem qualem quae est ratione 
               <lb ed="#SV"/>suae simplicitatis causam contentiva, <g ref="#slash"/>et ita dicendum est de 
-              <lb ed="#SV"/>scientia divina quod res ratione suae immensitatis cum omni<lb ed="#SV"/>moda 
+              <lb ed="#SV"/>scientia divina quod res ratione suae immensitatis cum omni<lb ed="#SV" break="no"/>moda 
               simplicitate est formaliter assensus huius antichristus erit. 
               <lb ed="#SV"/>Et per idem potest esse assensus suae oppositae, <g ref="#slash"/>nam eodem 
-              <lb ed="#SV"/>assensu deus assensit respectu <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> veritatis et contin<lb ed="#SV"/>gentis 
+              <lb ed="#SV"/>assensu deus assensit respectu <choice><orig>neccessariae</orig><reg>necessariae</reg></choice> veritatis et contin<lb ed="#SV" break="no"/>gentis 
               nec omnino eodem assensu ipse assensit quod est 
-              <lb ed="#SV"/>summum bonum et quod antichristus erit.</p> 
-            
-            <p xml:id="l121-eqatad"><g ref="#slash"/>Ex quibus apparet 
+              <lb ed="#SV"/>summum bonum et quod antichristus erit
+            </p> 
+            <p xml:id="l121-eqatad">
+              <g ref="#slash"/>Ex quibus apparet 
               <lb ed="#SV"/>istam consequentiam non valere aeternum dei exempla adaequatur 
               <lb ed="#SV"/><c>a</c><g ref="#dot"/> exemplato adaequatione simplicis veritatis, <g ref="#slash"/>et <choice><orig>eciam</orig><reg>etiam</reg></choice> 
               <lb ed="#SV"/>adaequatur <g ref="#dot"/><c>b</c><g ref="#dot"/> igitur <g ref="#dot"/><c>a</c><g ref="#dot"/> et <c>b</c><g ref="#dot"/> inter se adaequantur. <g ref="#slash"/>ubi 
-              <lb ed="#SV"/>est advertendum quod secundum doctores veritatis creatae <choice><orig>consis<lb ed="#SV"/>cunt</orig><reg>consis<lb ed="#SV"/>tunt</reg></choice> 
+              <lb ed="#SV"/>est advertendum quod secundum doctores veritatis creatae <choice><orig>consis<lb ed="#SV" break="no"/>cunt</orig><reg>consis<lb ed="#SV" break="no"/>tunt</reg></choice> 
               in quadam adaequatione exemplari ad exemplar 
               <lb ed="#SV"/>et in quadam conformitate Reperibili inter causam et effectum, 
               <lb ed="#SV"/><g ref="#slash"/>modo non sequitur <g ref="#dot"/><c>b</c><g ref="#dot"/> effectus adaequatur suo exemplari 
@@ -141,41 +157,46 @@
               <lb ed="#SV"/>erit et antichristus potest non esse et postquam fuerit ille 
               <lb ed="#SV"/>idem assensus <del rend="strikethrough">io</del> erit illius antichristus est ipso existente, <g ref="#slash"/>et 
               <lb ed="#SV"/>erit assensus illius antichristus non est antichristus non erit 
-              <lb ed="#SV"/>ipso tamen antichristo destructo.</p>
-        
-            <p xml:id="l121-eqahqf"><g ref="#dbslash"/>Ex quibus apparet quod deus 
+              <lb ed="#SV"/>ipso tamen antichristo destructo
+            </p>
+            <p xml:id="l121-eqahqf">
+              <g ref="#dbslash"/>Ex quibus apparet quod deus 
               <lb ed="#SV"/>sine sui mutatione potest aliquid scire noviter, <g ref="#slash"/>et sic patet consequentiam 
               <lb ed="#SV"/>non valere quae est similis extra tamen istam materiam et hoc 
-              <lb ed="#SV"/>sumendo quod unum infimum non sit maius alio <g ref="#slash"/><choice><orig>eciam</orig><reg>etiam</reg></choice> ad<lb ed="#SV"/>mittendo 
+              <lb ed="#SV"/>sumendo quod unum infimum non sit maius alio <g ref="#slash"/><choice><orig>eciam</orig><reg>etiam</reg></choice> ad<lb ed="#SV" break="no"/>mittendo 
               quod infiniti ad finitum infinita proportio quod satis 
-              <cb ed="#SV" n="349va"/><lb ed="#SV"/>communiter admittitur et tunc constat quod tempus infinitum vel 
+              <pb ed="#SV" n="349-v"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>communiter admittitur et tunc constat quod tempus infinitum vel 
               <lb ed="#SV"/>duratio infinita si daretur haberet eandem proportionem 
-              <lb ed="#SV"/>ad annum sicut ad diem igitur proportio infinitae dura<lb ed="#SV"/>tionis 
-              ad annum est aequalis proportioni infinitae dura<lb ed="#SV"/>tionis 
+              <lb ed="#SV"/>ad annum sicut ad diem igitur proportio infinitae dura<lb ed="#SV" break="no"/>tionis 
+              ad annum est aequalis proportioni infinitae dura<lb ed="#SV" break="no"/>tionis 
               ad diem et tamen dies et annus non adaequantur 
               <lb ed="#SV"/>inter se. <g ref="#slash"/>et sic apparet quod Res infinita habet alias habitudines 
-              <lb ed="#SV"/>quam finita.</p> 
-            
-            <p xml:id="l121-iedfie"><g ref="#slash"/>Illud <choice><orig>eciam</orig><reg>etiam</reg></choice> dicitur ad tollendum quod si in 
+              <lb ed="#SV"/>quam finita
+            </p> 
+            <p xml:id="l121-iedfie">
+              <g ref="#slash"/>Illud <choice><orig>eciam</orig><reg>etiam</reg></choice> dicitur ad tollendum quod si in 
               <lb ed="#SV"/>nobis non potest esse assensus contradictorum <del rend="expunctuated">successive 
               <lb ed="#SV"/>sive eius</del> non sequitur propter hoc quin in 
-              <lb ed="#SV"/>deo sit assensus contradictorum successione sine eius mu<lb ed="#SV"/>tatione 
+              <lb ed="#SV"/>deo sit assensus contradictorum successione sine eius mu<lb ed="#SV" break="no"/>tatione 
               <g ref="#slash"/>et sicut dicitur de duratione infinita 
               <lb ed="#SV"/>ita posset dici de corpore infinito quod haberet 
               <lb ed="#SV"/>proportionem eandem ad pedale et ad bipedale, <g ref="#slash"/>non tamen 
-              <lb ed="#SV"/>ipsa adaequarentur inter se, <g ref="#slash"/>et Ideo ratione immen<lb ed="#SV"/>sitatis 
+              <lb ed="#SV"/>ipsa adaequarentur inter se, <g ref="#slash"/>et Ideo ratione immen<lb ed="#SV" break="no"/>sitatis 
               divinae notitiae ipsa praevenit utrumque contradictorum 
               <lb ed="#SV"/>et utrumque sciret nisi alterum extremorum esset falsum 
               <lb ed="#SV"/>et sic divinus assensus est sufficiens[?] pro omni veritate 
               <lb ed="#SV"/>actuali vel potentiali sed quia ipsa est pura veritas cui 
               <lb ed="#SV"/>Repugnat assensus ad falsitatem, <g ref="#slash"/>ideo non conceditur 
               <lb ed="#SV"/>quod sciat contradictoria simul esse falsa vel vera licet habeat 
-              <lb ed="#SV"/>cognitionem aequalem de vero et falso, <choice><orig>ymo</orig><reg>immo</reg></choice> eandem. <g ref="#slash"/></p>
-        
-            <p xml:id="l121-eqoeap"><lb ed="#SV"/><g ref="#dbslash"/>Ex quibus omnibus sequitur clare compossibilitas 
+              <lb ed="#SV"/>cognitionem aequalem de vero et falso, <choice><orig>ymo</orig><reg>immo</reg></choice> eandem. <g ref="#slash"/>
+            </p>
+            <p xml:id="l121-eqoeap">
+              <lb ed="#SV"/><g ref="#dbslash"/>Ex quibus omnibus sequitur clare compossibilitas 
               <lb ed="#SV"/><choice><orig>infalibilitatis</orig><reg>infallibilitatis</reg></choice> divinae praescientiae et eius immutabilitatis 
               <lb ed="#SV"/>cum mutabilitate scibilium <g ref="#slash"/>patet quia idem assensus qui est 
-              <lb ed="#SV"/>adaequate respectu huius antichristus erit, <g ref="#slash"/>et tamen si anti<lb ed="#SV"/>christus 
+              <lb ed="#SV"/>adaequate respectu huius antichristus erit, <g ref="#slash"/>et tamen si anti<lb ed="#SV" break="no"/>christus 
               non producatur ille assensus erit dissensus illius 
               <lb ed="#SV"/>met <g ref="#slash"/>igitur ex eo quod divina scientia cognoscit antichristum 
               <lb ed="#SV"/>fore <g ref="#slash"/>et quod potest esse notitia sui contrarii nulla 
@@ -183,9 +204,10 @@
               <lb ed="#SV"/>producit <name ref="#Sortes">sortem</name> et per idem corrumpit, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> per 
               <lb ed="#SV"/>idem velle vult <name ref="#Sortes">sortem</name> esse, <g ref="#slash"/>et per idem non vult 
               <lb ed="#SV"/><name ref="#Sortes">sortem</name> esse quia omnino uniformiter se habet quando producit 
-              <lb ed="#SV"/>et antequam producit.</p>
-        
-            <p xml:id="l121-eihpep"><g ref="#dbslash"/>Et iuxta hanc <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> 
+              <lb ed="#SV"/>et antequam producit.
+            </p>
+            <p xml:id="l121-eihpep">
+              <g ref="#dbslash"/>Et iuxta hanc <choice><orig>ymaginationem</orig><reg>imaginationem</reg></choice> 
               <lb ed="#SV"/>dixerunt haec esse conditionem potentiae rationalis, scilicet 
               <lb ed="#SV"/>quod uniformiter se habens possit in contraria, <g ref="#slash"/>et hoc
               <lb ed="#SV"/>habet locum nedum circa divinam essentiam sed <choice><orig>eciam</orig><reg>etiam</reg></choice> 
@@ -193,42 +215,47 @@
               <lb ed="#SV"/>se habentibus stat quod exeat in actum vel quod 
               <lb ed="#SV"/>non exeat, <g ref="#slash"/>nam staret quod voluntas produceret 
               <lb ed="#SV"/>actum et eum non Recipere subiective<g ref="#dot"/> <g ref="#slash"/>et ideo omnino 
-              <lb ed="#SV"/>uniformiter se haberet prius et posterius. <g ref="#dbslash"/></p>
-        
-            <p xml:id="l121-sempic"><cb ed="#SV" n="349vb"/><lb ed="#SV"/><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> eodem modo se habens adaequate potest in contraria.</p>
-        
-            <p xml:id="l121-tpisid"><g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> potest intensiorem vel Remissiorem actum 
+              <lb ed="#SV"/>uniformiter se haberet prius et posterius. <g ref="#dbslash"/>
+            </p>
+            <p xml:id="l121-sempic">
+              <cb ed="#SV" n="b"/><!--349vb-->
+              <lb ed="#SV"/><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> eodem modo se habens adaequate potest in contraria.
+            </p>
+            <p xml:id="l121-tpisid">
+              <g ref="#slash"/><choice><orig>3o</orig><reg>tertio</reg></choice> potest intensiorem vel Remissiorem actum 
               <lb ed="#SV"/>producere igitur si in potentia creata Reperiatur 
               <lb ed="#SV"/>potentia ad contrarios effectus non est mirum si 
               <lb ed="#SV"/>hoc sit in divina voluntate <g ref="#slash"/>nec ex hoc 
               <lb ed="#SV"/>arguitur eius mutatio et sic Resolvendo non est 
-              <lb ed="#SV"/>inconveniens dicere libertatem divinam immuta<lb ed="#SV"/>biliter 
+              <lb ed="#SV"/>inconveniens dicere libertatem divinam immuta<lb ed="#SV" break="no"/>biliter 
               et uniformiter se habendo stare 
               <lb ed="#SV"/>cum mutabilitate <choice><orig>contingencium</orig><reg>contingentium</reg></choice> futurorum, <g ref="#slash"/>ideo 
               <lb ed="#SV"/>ideo non est inconveniens dicere quod deus respectu futurorum 
               <lb ed="#SV"/>habeat causalitatem liberam, quia idem est formaliter 
-              <lb ed="#SV"/>velle et scire in deo.</p>
-        
-            <p xml:id="l121-eihupc"><g ref="#dbslash"/>Et iuxta hoc 
+              <lb ed="#SV"/>velle et scire in deo
+            </p>
+            <p xml:id="l121-eihupc">
+              <g ref="#dbslash"/>Et iuxta hoc 
               <lb ed="#SV"/>possunt glosari <name ref="#Boethius">boecius</name> et sui sequaces 
               <lb ed="#SV"/>dicentes quod futura <choice><orig>contingencia</orig><reg>contingentia</reg></choice> in se considerata 
               <lb ed="#SV"/>sunt contingentia Relata tamen ad divinam scientiam 
-              <lb ed="#SV"/>sunt <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> per quid non videtur praecise intelli<lb ed="#SV"/>gere 
+              <lb ed="#SV"/>sunt <choice><orig>neccessaria</orig><reg>necessaria</reg></choice> per quid non videtur praecise intelli<lb ed="#SV" break="no"/>gere 
               <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> <g ref="#dot"/> <choice><orig>condicionalem</orig><reg>conditionalem</reg></choice> quia nullius est 
               <lb ed="#SV"/>difficultatis ad capiendum quia de nobis sequitur 
               <lb ed="#SV"/>si videam <name ref="#Sortes">sortem</name> currere quod <name ref="#Sortes">sortes</name> currit <g ref="#slash"/>sed <name ref="#Boethius">boecius</name> 
               <lb ed="#SV"/>in hoc dicit includi maior difficultas, <g ref="#slash"/>cum 
-              <lb ed="#SV"/>ait quod hoc non capit nisi animus divisorum[?] spe<lb ed="#SV"/>culator, 
+              <lb ed="#SV"/>ait quod hoc non capit nisi animus divisorum[?] spe<lb ed="#SV" break="no"/>culator, 
               <g ref="#slash"/>et ideo <name ref="#Boethius">boecius</name> intelligit <choice><orig>neccessitatem</orig><reg>necessitatem</reg></choice> divini 
               <lb ed="#SV"/>Iudicii et cognitionis, <g ref="#slash"/>nam habitudo divinae notitiae 
               <lb ed="#SV"/>ad futura contingentia est immutabiliter in deo 
               <lb ed="#SV"/>et tamen est mutabilis in producentibus, <g ref="#slash"/>et haec resolvitur 
               <lb ed="#SV"/>ad immensitatem divinum iudicii ratione cuius 
-              <lb ed="#SV"/>ipsa praevenit utrumque partem contradictionis.</p> 
-            
-            <p xml:id="l121-eqstqp"><g ref="#slash"/>Ex quo 
+              <lb ed="#SV"/>ipsa praevenit utrumque partem contradictionis
+            </p> 
+            <p xml:id="l121-eqstqp">
+              <g ref="#slash"/>Ex quo 
               <lb ed="#SV"/>sequitur quod creata notitia vel divina magis assensit[?] 
-              <lb ed="#SV"/>ex modo enunciandi quam ex praescientiae divinae immuta<lb ed="#SV"/>bilitate 
+              <lb ed="#SV"/>ex modo enunciandi quam ex praescientiae divinae immuta<lb ed="#SV" break="no"/>bilitate 
               quia si deus scivit aliquid ab aeterno illud 
               <lb ed="#SV"/>scivit, <g ref="#slash"/>et si Reprobavit aliquem ab aeterno ipsum 
               <lb ed="#SV"/>Reprobavit. <g ref="#slash"/>Etiam si antichristus est futurus 
@@ -236,150 +263,176 @@
               <lb ed="#SV"/>eum non praescivisset, <g ref="#slash"/>et ideo consurgit ex modo 
               <lb ed="#SV"/>enunciandi quod deo non Repugnat noviter 
               <lb ed="#SV"/>alicuius assentire. Unde si <g ref="#dot"/><c>a</c><g ref="#dot"/> producitur assentit isti 
-              <lb ed="#SV"/><g ref="#dot"/><c>a</c><g ref="#dot"/> est et ante non assentiebat illi, <g ref="#slash"/>sed assentie<lb ed="#SV"/>bat 
+              <lb ed="#SV"/><g ref="#dot"/><c>a</c><g ref="#dot"/> est et ante non assentiebat illi, <g ref="#slash"/>sed assentie<lb ed="#SV" break="no"/>bat 
               uni propositioni factae de <c>a</c><g ref="#dot"/> fore respectu alterius 
-              <lb ed="#SV"/>differentiae temporis quam praesentis.</p>
-        
-            <p xml:id="l121-cqssdp"><g ref="#dbslash"/>Confirmatur quia sicut 
-              <lb ed="#SV"/>non Repugnat divinae immensitati quod unifor<lb ed="#SV"/>miter 
+              <lb ed="#SV"/>differentiae temporis quam praesentis
+            </p>
+            <p xml:id="l121-cqssdp">
+              <g ref="#dbslash"/>Confirmatur quia sicut 
+              <lb ed="#SV"/>non Repugnat divinae immensitati quod unifor<lb ed="#SV" break="no"/>miter 
               se habens acceptet <name ref="#Sortes">sortem</name> ad gloriam 
-              <lb ed="#SV"/>qua acceptatione ipsum gratificat de no<lb ed="#SV"/>vo, 
+              <lb ed="#SV"/>qua acceptatione ipsum gratificat de no<lb ed="#SV" break="no"/>vo, 
               igitur non est <choice><orig>Repugnancia</orig><reg>Repugnantia</reg></choice> quod aliquid noviter 
-              <cb ed="#SV" n="350ra"/><lb ed="#SV"/>sciat sed ratione suae immensitatis potest esse 
+              <pb ed="#SV" n="350-r"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>sciat sed ratione suae immensitatis potest esse 
               <lb ed="#SV"/>non scientia et ante non erit huiusmodi scientia et tamen 
               <lb ed="#SV"/>uniformiter se habet ante et post, <g ref="#slash"/>nam 
-              <lb ed="#SV"/>deus uniformiter se habuit ante et mundi pro<lb ed="#SV"/>ductionem 
+              <lb ed="#SV"/>deus uniformiter se habuit ante et mundi pro<lb ed="#SV" break="no"/>ductionem 
               et eum producendo <g ref="#slash"/>et post huius 
               <lb ed="#SV"/>productionem. <g ref="#slash"/>Sed si quaeratur quare deus non 
               <lb ed="#SV"/>intulit effectum ante ex quo omnino eodem modo 
-              <lb ed="#SV"/>se habet certe ista difficultas continet aequalem dif<lb ed="#SV"/>ficultatem 
-              sicut de praescientia.</p> 
-        
-            <p xml:id="l121-sarapr"><g ref="#slash"/>Sed adhuc re<lb ed="#SV"/>stat 
+              <lb ed="#SV"/>se habet certe ista difficultas continet aequalem dif<lb ed="#SV" break="no"/>ficultatem 
+              sicut de praescientia
+            </p> 
+            <p xml:id="l121-sarapr">
+              <g ref="#slash"/>Sed adhuc re<lb ed="#SV" break="no"/>stat 
               dubium si deus quantum est de se sit respectu 
               <lb ed="#SV"/>utriusque partis contradictionis aequaliter notitia quomodo 
               <lb ed="#SV"/>dicetur quod ipse magis est assensus huius quam illius 
               <lb ed="#SV"/>si assensus sit indifferens ad utramque partem 
               <lb ed="#SV"/>contradictionis nam videtur quod Remaneat incertus 
-              <lb ed="#SV"/>si non possit altera pars Revelari.</p>
-          
-            <p xml:id="l121-rqhish"><g ref="#dbslash"/>Respondetur 
+              <lb ed="#SV"/>si non possit altera pars Revelari
+            </p>
+            <p xml:id="l121-rqhish">
+              <g ref="#dbslash"/>Respondetur 
               <lb ed="#SV"/>quod haec omnia consurgunt ex immensitate 
               <lb ed="#SV"/>divinae scientiae et habitudine quam habet ad qualibet 
               <lb ed="#SV"/>veritatem <g ref="#slash"/>et posset sic dici de voluntate 
-              <lb ed="#SV"/>quia ex quo ipsa est aequaliter quod <name ref="#Sortes">sortes</name> pro<lb ed="#SV"/>ducatur 
+              <lb ed="#SV"/>quia ex quo ipsa est aequaliter quod <name ref="#Sortes">sortes</name> pro<lb ed="#SV" break="no"/>ducatur 
               vel quod non producatur quaer<del rend="strikethrough">e</del>itur quare magis 
               <lb ed="#SV"/>ipsa assequitur unam partem quam aliam. <g ref="#slash"/>hoc enim 
               <lb ed="#SV"/>Resolvendum est ad immensitatem talis causae 
               <lb ed="#SV"/>sufficit, enim theologo defendenti materiam 
-              <lb ed="#SV"/>de praedestinatione adducere exempla ut ma<lb ed="#SV"/>gis 
+              <lb ed="#SV"/>de praedestinatione adducere exempla ut ma<lb ed="#SV" break="no"/>gis 
               intelligatur et evadere difficultates quae sunt 
               <lb ed="#SV"/>impertinentes ad materiam licet hoc non apparet, <g ref="#slash"/>et per istam 
-              <lb ed="#SV"/>Radicem apparet solutio aliarum rationum</p> 
+              <lb ed="#SV"/>Radicem apparet solutio aliarum rationum
+            </p> 
           </div>
           <div>
             <head xml:id="l121-Haqranr">Ad quintam rationem</head>
-            <p xml:id="l121-tarish"><g ref="#slash"/>tamen ad aliam 
+            <p xml:id="l121-tarish">
+              <g ref="#slash"/>tamen ad aliam 
               <lb ed="#SV"/>rationem quando arguitur sic: <g ref="#slash"/>hoc praescivit <g ref="#dot"/><c>a</c><g ref="#dot"/> fore 
               <lb ed="#SV"/>igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> est ipsum praescivisse. conceditur consequentia illa etiam ista 
               <lb ed="#SV"/>homo scit ita esse, igitur ita est et bene sequitur 
               <lb ed="#SV"/>hoc scivit hoc igitur <choice><orig>neccesse</orig><reg>necesse</reg></choice> est ipsum scivisse 
-              <lb ed="#SV"/>hoc.</p>
-        
-            <p xml:id="l121-esasfc"><g ref="#slash"/>Et si arguitur igitur debet sic argui in deo 
+              <lb ed="#SV"/>hoc
+            </p>
+            <p xml:id="l121-esasfc">
+              <g ref="#slash"/>Et si arguitur igitur debet sic argui in deo 
               <lb ed="#SV"/>per locum a simili negatur consequentia, <g ref="#slash"/>quia non est simile 
               <lb ed="#SV"/>primo ratione immensitatis divinae scientiae ut 
               <lb ed="#SV"/>possit futura contingentia certitudinaliter scire, 
               <lb ed="#SV"/>Sed bene cognoscimus evidenter <choice><orig>praesencia</orig><reg>praesentia</reg></choice> quibus 
-              <lb ed="#SV"/>non sequitur <choice><orig>neccessitas</orig><reg>necessitas</reg></choice>, quia non sequitur scio <name rend="#Sortem">sor<lb ed="#SV"/>tem</name> 
+              <lb ed="#SV"/>non sequitur <choice><orig>neccessitas</orig><reg>necessitas</reg></choice>, quia non sequitur scio <name rend="#Sortem">sor<lb ed="#SV" break="no"/>tem</name> 
               esse igitur <choice><orig>neccessariam</orig><reg>necessariam</reg></choice> est <name ref="#Sortes">sortem</name> esse sicut non 
               <lb ed="#SV"/>sequitur deus praevidet <name ref="#Sortes">sortem</name> fore igitur <name ref="#Sortes">sortes</name> 
-              <lb ed="#SV"/><choice><orig>neccessario</orig><reg>necessario</reg></choice> erit.</p> 
-            
-            <p xml:id="l121-sevsfc"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> ex varia habitudine scientiae 
+              <lb ed="#SV"/><choice><orig>neccessario</orig><reg>necessario</reg></choice> erit
+            </p> 
+            <p xml:id="l121-sevsfc">
+              <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> ex varia habitudine scientiae 
               <lb ed="#SV"/>ad scibilia, <g ref="#slash"/>nam scientia humana acquiritur 
-              <lb ed="#SV"/>per concursum obiectorum scibilium mediate vel imme<lb ed="#SV"/>diate. 
+              <lb ed="#SV"/>per concursum obiectorum scibilium mediate vel imme<lb ed="#SV" break="no"/>diate. 
               <g ref="#slash"/>Ideo ipsa dependet ab eis, <g ref="#slash"/>scientia dei 
-              <cb ed="#SV" n="350rb"/><lb ed="#SV"/>non sic, quia ipsa est impertinens in esse scientiae respectu fu<lb ed="#SV"/>turorum, 
-              <g ref="#slash"/>vel non provenit dependenter ab eis scibi<lb ed="#SV"/>libus 
-              nam si confirmitione[?] nostrae scientiae concludatur stabi<lb ed="#SV"/>litas 
+              <cb ed="#SV" n="b"/><!--350rb-->
+              <lb ed="#SV"/>non sic, quia ipsa est impertinens in esse scientiae respectu fu<lb ed="#SV" break="no"/>turorum, 
+              <g ref="#slash"/>vel non provenit dependenter ab eis scibi<lb ed="#SV" break="no"/>libus 
+              nam si confirmitione[?] nostrae scientiae concludatur stabi<lb ed="#SV" break="no"/>litas 
               <del rend="strikethrough">opp</del> obiectorum, <g ref="#slash"/>non sic tamen est in deo quin[?] 
-              <lb ed="#SV"/>ex eius scientia non concluditur stabilitas futurorum contin<lb ed="#SV"/>gentium.</p> 
-        
-            <p xml:id="l121-arafec"><g ref="#slash"/>Aliter Respondet <name>antis[?]</name> et dicit quod ex ista causa 
-              <lb ed="#SV"/>quin[?] scientia dei non causatur a Rebus sed quantum ad infa<lb ed="#SV"/>llibilitatem 
+              <lb ed="#SV"/>ex eius scientia non concluditur stabilitas futurorum contin<lb ed="#SV" break="no"/>gentium
+            </p>
+            <p xml:id="l121-arafec">
+              <g ref="#slash"/>Aliter Respondet <name>antis[?]</name> et dicit quod ex ista causa 
+              <lb ed="#SV"/>quin[?] scientia dei non causatur a Rebus sed quantum ad infa<lb ed="#SV" break="no"/>llibilitatem 
               scientia dei est nostra certior, quia cum nostra scientia 
               <lb ed="#SV"/>nullo modo stat Rei scibilibus contingentia in deo non 
-              <lb ed="#SV"/>sit quin[?] sua scientia stat futurorum eventus contingens.</p>
+              <lb ed="#SV"/>sit quin[?] sua scientia stat futurorum eventus contingens
+            </p>
           </div>
-        <div>
-          <head xml:id="l121-Haaraar">Ad sextam rationem</head>
-          
-          <p xml:id="l121-aarnep"><lb ed="#SV"/><g ref="#dbslash"/>Ad aliam rationem: numerus praedestinatarum est <choice><orig>incomplectus</orig><reg>incompletus</reg></choice> 
-            igitur implicat praedestinatos non <choice><orig>neccessario</orig><reg>necessario</reg></choice> salvari da<lb ed="#SV"/>to 
-            quod maximus numerus sit finitus, quia eo ipso quod non 
-            <lb ed="#SV"/>impletur non erat[?] praede<g ref="#slash"/>stinati.</p>
-        
-          <p xml:id="l121-sdqsdp"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod quilibet 
-            <lb ed="#SV"/>numerus mundi potest esse numerus praedestinatarum quia possent 
-            <lb ed="#SV"/>esse duo tantum salvati <choice><orig>ymo</orig><reg>immo</reg></choice> nullus esset praedestinatus 
-            <lb ed="#SV"/>si deo placeret.</p>
-        
-          <p xml:id="l121-tddtcg"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur dato quod de lege esset 
-            <lb ed="#SV"/>numerus praedestinatarum ordinatus et ex lege 
-            <lb ed="#SV"/>taxatus adhuc quilibet viator posset facere quod non esset 
-            <lb ed="#SV"/>de numero illorum et quilibet praescitus posset facere quod 
-            <lb ed="#SV"/>esset praedestinatus quia potest facere quod in se est <g ref="#slash"/>et tunc 
-            <lb ed="#SV"/>consequetur gratiam.</p>
-        
-          <p xml:id="l121-qdqcnd"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dico quod licet sit in pote<lb ed="#SV"/>state 
-            cuiuslibet privati viatoris quod sit de numero praede<lb ed="#SV"/>stinatarum 
-            in nullius tamen potestate est quod numerus praede<lb ed="#SV"/>stinaturm 
-            sit maior vel minor, <g ref="#slash"/>unde bene stat quod dispositio 
-            <lb ed="#SV"/>communis <space extent="oneWordLength"/> non sit in potestate <name rend="#Sortes">sortis</name> et tamen ipsa 
-            <lb ed="#SV"/>dependet a tota multitudine hominum ut <choice><orig>neccesse</orig><reg>necesse</reg></choice> est 
-            <lb ed="#SV"/>quod eveniant scandala et <g ref="#slash"/><del rend="expunctuated">forte hoc potest Resolvi</del> 
-            <lb ed="#SV"/>tamen quilibet potest evitare quod ad se, <g ref="#slash"/>non tamen potest 
-            <lb ed="#SV"/>quis evitare quin sint scandala et forte hoc 
-            <lb ed="#SV"/>potest Resolvi quod in nullius potestate est quin talis 
-            <lb ed="#SV"/>effectus producatur, <g ref="#slash"/>Et de <name rend="#Jews">Iudaeis</name> diceretur quod 
-            <lb ed="#SV"/>in potestate cuiuslibet fuit ut non esset christi perse<lb ed="#SV"/>cutor 
-            <g ref="#slash"/>et tamen in nullius potestate fuit quin 
-            <lb ed="#SV"/>ab aliquo persequeretur. <g ref="#slash"/>verum est tamen quod circa hoc <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
-            <lb ed="#SV"/>est quod ita fiat et hoc intelligitur de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> infallibilitatis, 
-            <lb ed="#SV"/>id est, sic credens numquam deciperetur.</p>
-        </div>
-        <div>
-          <head xml:id="l121-arfarf">Ad septimam rationem FitzRalph</head>
-          <p xml:id="l121-arfavc"><g ref="#dbslash"/>Alia ratio fuit <name ref="#FitzRalph">hymberici</name><note>See above <ref target="dLlecture116.xml#dLl116saerso">Lectio 116, n.</ref></note> 
-            <lb ed="#SV"/>ipsemet Respondet dicendo quod deus naturaliter Repraesentat antichristum 
-            <lb ed="#SV"/>fore, <g ref="#slash"/>et videatur super hoc <name ref="#Wodeham">adam</name> qui Reprobat <name ref="#FitzRalph">hymbericum</name> 
-            <lb ed="#SV"/>dicentem quod deus naturaliter Repraesentat antichristum fore et tamen 
-            <lb ed="#SV"/>contingenter. <g ref="#slash"/>Aliter dicitur quod deus libere et contingenter assentit 
-            <lb ed="#SV"/>quod antichristus erit et proportionaliter se habet ad assensum veri<lb ed="#SV"/>tatis 
-            contingentis.</p>
-        </div>
-        <div>
-          <head xml:id="l121-Harriae">Ad octavam rationem Rodington</head>
-          <p xml:id="l121-arriae"><g ref="#dbslash"/>Alia ratio <name ref="#JohnOfRodington">Rodicon</name> est quod praedictis 
-          <lb ed="#SV"/>quia antichristo producto deus assentit illi antichristus 
-          <cb ed="#SV" n="350va"/><lb ed="#SV"/>est et tamen ante productionem antichristi <choice><orig>neccesse</orig><reg>necesse</reg></choice> est illum 
-          <lb ed="#SV"/>assensisse illi antichristus erit.</p>
-        </div>
-        <div>
-          <head xml:id="l121-Haarsed">Ad nonam rationem Rodington</head>
-          <p xml:id="l121-aarsed"><g ref="#dbslash"/>Ad aliam rationem 
-          <lb ed="#SV"/>quia si sic sequitur quod quilibet esse praedestinatus de isto 
-          <lb ed="#SV"/>satis est dictum.</p>
-        </div>
-        <div>
-          <head xml:id="l121-aaraar">Ad undecimam rationem</head>
-          <p xml:id="l121-arddar"><g ref="#dbslash"/>Alia ratio de minimo tempore et 
-            <lb ed="#SV"/>maximo, <g ref="#slash"/>dicitur quod est dare minimum tempus per quod 
-            <lb ed="#SV"/>antichristus potest esse futurus et sic apparet quid dicendum 
-            <lb ed="#SV"/>ad rationes.</p>
-        </div>
+          <div>
+            <head xml:id="l121-Haaraar">Ad sextam rationem</head>
+            <p xml:id="l121-aarnep">
+              <lb ed="#SV"/><g ref="#dbslash"/>Ad aliam rationem: numerus praedestinatarum est <choice><orig>incomplectus</orig><reg>incompletus</reg></choice> 
+              igitur implicat praedestinatos non <choice><orig>neccessario</orig><reg>necessario</reg></choice> salvari da<lb ed="#SV" break="no"/>to 
+              quod maximus numerus sit finitus, quia eo ipso quod non 
+              <lb ed="#SV"/>impletur non erat[?] praede<g ref="#slash"/>stinati
+            </p>
+            <p xml:id="l121-sdqsdp">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> dicitur quod quilibet 
+              <lb ed="#SV"/>numerus mundi potest esse numerus praedestinatarum quia possent 
+              <lb ed="#SV"/>esse duo tantum salvati <choice><orig>ymo</orig><reg>immo</reg></choice> nullus esset praedestinatus 
+              <lb ed="#SV"/>si deo placeret
+            </p>
+            <p xml:id="l121-tddtcg">
+              <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> dicitur dato quod de lege esset 
+              <lb ed="#SV"/>numerus praedestinatarum ordinatus et ex lege 
+              <lb ed="#SV"/>taxatus adhuc quilibet viator posset facere quod non esset 
+              <lb ed="#SV"/>de numero illorum et quilibet praescitus posset facere quod 
+              <lb ed="#SV"/>esset praedestinatus quia potest facere quod in se est <g ref="#slash"/>et tunc 
+              <lb ed="#SV"/>consequetur gratiam
+            </p>
+            <p xml:id="l121-qdqcnd">
+              <g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> dico quod licet sit in pote<lb ed="#SV" break="no"/>state 
+              cuiuslibet privati viatoris quod sit de numero praede<lb ed="#SV" break="no"/>stinatarum 
+              in nullius tamen potestate est quod numerus praede<lb ed="#SV" break="no"/>stinaturm 
+              sit maior vel minor, <g ref="#slash"/>unde bene stat quod dispositio 
+              <lb ed="#SV"/>communis <space extent="oneWordLength"/> non sit in potestate <name rend="#Sortes">sortis</name> et tamen ipsa 
+              <lb ed="#SV"/>dependet a tota multitudine hominum ut <choice><orig>neccesse</orig><reg>necesse</reg></choice> est 
+              <lb ed="#SV"/>quod eveniant scandala et <g ref="#slash"/><del rend="expunctuated">forte hoc potest Resolvi</del> 
+              <lb ed="#SV"/>tamen quilibet potest evitare quod ad se, <g ref="#slash"/>non tamen potest 
+              <lb ed="#SV"/>quis evitare quin sint scandala et forte hoc 
+              <lb ed="#SV"/>potest Resolvi quod in nullius potestate est quin talis 
+              <lb ed="#SV"/>effectus producatur, <g ref="#slash"/>Et de <name rend="#Jews">Iudaeis</name> diceretur quod 
+              <lb ed="#SV"/>in potestate cuiuslibet fuit ut non esset christi perse<lb ed="#SV" break="no"/>cutor 
+              <g ref="#slash"/>et tamen in nullius potestate fuit quin 
+              <lb ed="#SV"/>ab aliquo persequeretur. <g ref="#slash"/>verum est tamen quod circa hoc <choice><orig>neccesse</orig><reg>necesse</reg></choice> 
+              <lb ed="#SV"/>est quod ita fiat et hoc intelligitur de <choice><orig>neccessitate</orig><reg>necessitate</reg></choice> infallibilitatis, 
+              <lb ed="#SV"/>id est, sic credens numquam deciperetur
+            </p>
           </div>
+          <div>
+            <head xml:id="l121-arfarf">Ad septimam rationem FitzRalph</head>
+            <p xml:id="l121-arfavc">
+              <g ref="#dbslash"/>Alia ratio fuit <name ref="#FitzRalph">hymberici</name><note>See above <ref target="dLlecture116.xml#dLl116saerso">Lectio 116, n.</ref></note> 
+              <lb ed="#SV"/>ipsemet Respondet dicendo quod deus naturaliter Repraesentat antichristum 
+              <lb ed="#SV"/>fore, <g ref="#slash"/>et videatur super hoc <name ref="#Wodeham">adam</name> qui Reprobat <name ref="#FitzRalph">hymbericum</name> 
+              <lb ed="#SV"/>dicentem quod deus naturaliter Repraesentat antichristum fore et tamen 
+              <lb ed="#SV"/>contingenter. <g ref="#slash"/>Aliter dicitur quod deus libere et contingenter assentit 
+              <lb ed="#SV"/>quod antichristus erit et proportionaliter se habet ad assensum veri<lb ed="#SV" break="no"/>tatis 
+              contingentis.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l121-Harriae">Ad octavam rationem Rodington</head>
+            <p xml:id="l121-arriae">
+              <g ref="#dbslash"/>Alia ratio <name ref="#JohnOfRodington">Rodicon</name> est quod praedictis 
+              <lb ed="#SV"/>quia antichristo producto deus assentit illi antichristus 
+              <pb ed="#SV" n="350-v"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>est et tamen ante productionem antichristi <choice><orig>neccesse</orig><reg>necesse</reg></choice> est illum 
+              <lb ed="#SV"/>assensisse illi antichristus erit.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l121-Haarsed">Ad nonam rationem Rodington</head>
+            <p xml:id="l121-aarsed">
+              <g ref="#dbslash"/>Ad aliam rationem 
+              <lb ed="#SV"/>quia si sic sequitur quod quilibet esse praedestinatus de isto 
+              <lb ed="#SV"/>satis est dictum.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l121-aaraar">Ad undecimam rationem</head>
+            <p xml:id="l121-arddar">
+              <g ref="#dbslash"/>Alia ratio de minimo tempore et 
+              <lb ed="#SV"/>maximo, <g ref="#slash"/>dicitur quod est dare minimum tempus per quod 
+              <lb ed="#SV"/>antichristus potest esse futurus et sic apparet quid dicendum 
+              <lb ed="#SV"/>ad rationes
+            </p>
+          </div>
+        </div>
       </div>
     </body>
   </text>
