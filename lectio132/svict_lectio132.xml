@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,168 +10,203 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.04-dev-master">
-          <title>Lectio 139, de Incarnatione [St. Victor Transcription]</title>
+        <edition n="0.0.0-dev">
+          <title>Lectio 132, de Incarnatione [St. Victor Transcription]</title>
           <date when="2013-04-04">April 4, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2013-04-04">April 04, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV">St. Victor</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>    <facsimile>
-  </facsimile>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-04-03" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="367-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio132">
-      <head xml:id="l132-HldIld" subtype="title">Lectio 132, de Incarnatione [St. Victor Transcription]</head>
+        <head xml:id="l132-HldIld">Lectio 132, de Incarnatione [St. Victor Transcription]</head>
         <div>
           <head xml:id="l132-Hnotnda">Notanda</head>
-        <div>
-          <head xml:id="l132-Hpnmpnm">Primum notandum</head>
-          <p xml:id="l132-pdpvaa"><lb ed="#SV"/><g ref="#dbslash"/>Pro declaratione praesentis materiae sciendum est quod suppositum 
-            <lb ed="#SV"/>est alicuius naturae ultimata <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> et hoc est 
-            <lb ed="#SV"/>ad declarandum illam difficultatem in materiae praesenti 
-            <lb ed="#SV"/>scilicet, quid notitiae suppositi intelligitur, <g ref="#slash"/>pro cuius intellectu, <g ref="#slash"/>notandum 
-            <cb ed="#SV" n="367rb"/><lb ed="#SV"/>est quod ordo reperitur tendentiarum[?] unius Rei in aliam vel ad aliam.</p>
-        <div>
-          <head xml:id="l132-Hqqtqqt">Quinque tendentia</head>
-          <p xml:id="l132-petacp"><lb ed="#SV"/><g ref="#slash"/>prima est tendentiae formae ad suum subiectum sive sit substantialis sive 
-            <lb ed="#SV"/>accidentalis, <g ref="#slash"/>et dividitur quia quaedam est actualis et alia habitualis. 
-            <lb ed="#SV"/><g ref="#slash"/>primum est nomen, <g ref="#slash"/>exemplum <choice><orig>2i</orig><reg>secundi</reg></choice> ut animae separatae ad corpus proprium.</p> 
-        
-          <p xml:id="l132-seteec"><g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> 
-            <lb ed="#SV"/>est tendentia partis ad partem in ordine ad <choice><orig>tocius</orig><reg>totius</reg></choice> constitutionem 
-            <lb ed="#SV"/>et ex hoc consurgit unio <choice><orig>parcium</orig><reg>partium</reg></choice> continui et earum <del rend="strikethrough">contingentis</del> 
-            <lb ed="#SV"/>continuatis.</p>
-        
-          <p xml:id="l132-tetlen"><g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> est tendentia locati ad locum proprium et naturalem 
-            <lb ed="#SV"/>et hac tendentia tendit ignis ad concavum orbis lunae 
-            <lb ed="#SV"/>quod est sibi conveniens locus et naturalis.</p>
-        
-          <p xml:id="l132-qtempd"><g ref="#slash"/><choice><orig>4a</orig><reg>quarta</reg></choice> tendentia est naturaliter 
-            <lb ed="#SV"/><choice><orig>coexistencium</orig><reg>coexistencium</reg></choice> seclusis prioribus habitudinibus tribus et isto modo intelligentia 
-            <lb ed="#SV"/>tendit ad orbis <choice><orig>praesencia</orig><reg>praesentia</reg></choice> et orbis ad <choice><orig>praesenciam</orig><reg>praesentiam</reg></choice> intelligentiae 
-            <lb ed="#SV"/>nam intelligentiam non se habet ad orbem ut inhaerens forma <g ref="#slash"/>nec 
-            <lb ed="#SV"/>aliquo modorum prius doctorum.</p>
-        
-          <p xml:id="l132-qetasf"><g ref="#slash"/><choice><orig>5a</orig><reg>quinta</reg></choice> est tendentia Rei in suum ulti<lb ed="#SV"/>mum 
-            finem vel in causam conservantem, <g ref="#slash"/>et isto modo <del rend="strikethrough">cuiuscum</del> cuiuslibet 
-            <lb ed="#SV"/>creaturae in deum aut insolubilis tendentia quia sicut creatura 
-            <lb ed="#SV"/>sine efficientia primae causae non poterit produci sic in conservari 
-            <lb ed="#SV"/>modo non potest esse absque adhibitudine[?] illius ad suum finem.</p>
-      </div>
-        </div>
-      <div>
-        <head xml:id="l132-Hsnmsnm">Secundum notandum</head>
-        <p xml:id="l132-snqitc"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
-          <lb ed="#SV"/>notandum quod praeter quinque habitudines tendentiarum[?] iam dictarum est alia 
-          <lb ed="#SV"/>scilicet, cuiuslibet Rei ad seipsam vel ad sui existentiam si nata 
-          <lb ed="#SV"/>sit ex se existere, <g ref="#slash"/>vel in alterius subsistentiam si non sit 
-          <lb ed="#SV"/>ex se nata existere et hoc tamquam in quemdam termini rationem quietatis 
-          <lb ed="#SV"/>habentem licet non ultimate quantum ad creaturas et iste terminus vocatur 
-          <lb ed="#SV"/>subsistentia in quam Res naturaliter tendit <g ref="#slash"/>iuxta quem modum 
-          <lb ed="#SV"/>quodIibet compositum substantiale sibi naturaliter derelictum tendit in seipsum 
-          <lb ed="#SV"/>tanquam in propriam unitatem quam appetit licet non ultimate. <g ref="#slash"/>deinde 
-          <lb ed="#SV"/>omnia <choice><orig>accidencia</orig><reg>accidentia</reg></choice> in ipsum tamquam in intrinsecam tendunt coexistere. <g ref="#dbslash"/></p>
-      </div>
-        <div>
-          <head xml:id="l132-Htnmtnm">Tertium notandum</head>
-          <p xml:id="l132-tenadc"><lb ed="#SV"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> est notandum quod denominationes concretive omnium tendentium in aliquid tamquam 
-            <lb ed="#SV"/>in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> <g ref="#slash"/>vel tanquam in illud in quo subsistunt communicantur 
-            <lb ed="#SV"/>illi <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice>, <g ref="#slash"/>unde et accidentia in toto composito naturaliter existentia 
-            <lb ed="#SV"/>sive inhaereant sive non, <g ref="#slash"/>tamen toti composito seu <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> 
-            <lb ed="#SV"/>omnes denominationes concretivas communicant <g ref="#slash"/>unde proprie quam qualitas 
-            <lb ed="#SV"/>inhaereant materiae non tamen denominat eam qualem ut de causalitate 
-            <lb ed="#SV"/>sed subsistentiam principalem si totum compositum, <g ref="#slash"/>similem est de substantiali forma 
-            <lb ed="#SV"/>quae licet materiae inhaereat non tamen materiae denominationes communicat sed toti 
-            <lb ed="#SV"/>composito quod in ultima <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> rei denotando ipsum vivens 
-            <lb ed="#SV"/>et non materiam primam quia proprie non vivit et sic de aliis denominationibus 
-            <lb ed="#SV"/><sic>concrettivis</sic>.</p>
-        </div>
-        <div>
-          <head xml:id="l132-Hqnmqnm">Quartum notandum</head>
-          <p xml:id="l132-qnebdv"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> notandum est quod tendentiae creaturarum subiacent 
-            <lb ed="#SV"/>divinae omnipotentiae et libero dei decreto sic quod sunt in potentia obedientiali 
-            <lb ed="#SV"/>ad taliter vel taliter tendendum iuxta beneplacitum divinae vo<lb ed="#SV"/>luntatis.</p>
-        </div>
+          <div>
+            <head xml:id="l132-Hpnmpnm">Primum notandum</head>
+            <p xml:id="l132-pdpvaa">
+              <lb ed="#SV"/><g ref="#dbslash"/>Pro declaratione praesentis materiae sciendum est quod suppositum 
+              <lb ed="#SV"/>est alicuius naturae ultimata <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> et hoc est 
+              <lb ed="#SV"/>ad declarandum illam difficultatem in materiae praesenti 
+              <lb ed="#SV"/>scilicet, quid notitiae suppositi intelligitur, <g ref="#slash"/>pro cuius intellectu, <g ref="#slash"/>notandum 
+              <cb ed="#SV" n="b"/><!--367rb-->
+              <lb ed="#SV"/>est quod ordo reperitur tendentiarum[?] unius Rei in aliam vel ad aliam.
+            </p>
+            <div>
+              <head xml:id="l132-Hqqtqqt">Quinque tendentia</head>
+              <p xml:id="l132-petacp">
+                <lb ed="#SV"/><g ref="#slash"/>prima est tendentiae formae ad suum subiectum sive sit substantialis sive 
+                <lb ed="#SV"/>accidentalis, <g ref="#slash"/>et dividitur quia quaedam est actualis et alia habitualis. 
+                <lb ed="#SV"/><g ref="#slash"/>primum est nomen, <g ref="#slash"/>exemplum <choice><orig>2i</orig><reg>secundi</reg></choice> ut animae separatae ad corpus proprium.
+              </p>
+              <p xml:id="l132-seteec">
+                <g ref="#slash"/><choice><orig>2a</orig><reg>secunda</reg></choice> 
+                <lb ed="#SV"/>est tendentia partis ad partem in ordine ad <choice><orig>tocius</orig><reg>totius</reg></choice> constitutionem 
+                <lb ed="#SV"/>et ex hoc consurgit unio <choice><orig>parcium</orig><reg>partium</reg></choice> continui et earum <del rend="strikethrough">contingentis</del> 
+                <lb ed="#SV"/>continuatis.
+              </p>
+              <p xml:id="l132-tetlen">
+                <g ref="#slash"/><choice><orig>3a</orig><reg>tertia</reg></choice> est tendentia locati ad locum proprium et naturalem 
+                <lb ed="#SV"/>et hac tendentia tendit ignis ad concavum orbis lunae 
+                <lb ed="#SV"/>quod est sibi conveniens locus et naturalis.
+              </p>
+              <p xml:id="l132-qtempd">
+                <g ref="#slash"/><choice><orig>4a</orig><reg>quarta</reg></choice> tendentia est naturaliter 
+                <lb ed="#SV"/><choice><orig>coexistencium</orig><reg>coexistencium</reg></choice> seclusis prioribus habitudinibus tribus et isto modo intelligentia 
+                <lb ed="#SV"/>tendit ad orbis <choice><orig>praesencia</orig><reg>praesentia</reg></choice> et orbis ad <choice><orig>praesenciam</orig><reg>praesentiam</reg></choice> intelligentiae 
+                <lb ed="#SV"/>nam intelligentiam non se habet ad orbem ut inhaerens forma <g ref="#slash"/>nec 
+                <lb ed="#SV"/>aliquo modorum prius doctorum.
+              </p>
+              <p xml:id="l132-qetasf">
+                <g ref="#slash"/><choice><orig>5a</orig><reg>quinta</reg></choice> est tendentia Rei in suum ulti<lb ed="#SV" break="no"/>mum 
+                finem vel in causam conservantem, <g ref="#slash"/>et isto modo <del rend="strikethrough">cuiuscum</del> cuiuslibet 
+                <lb ed="#SV"/>creaturae in deum aut insolubilis tendentia quia sicut creatura 
+                <lb ed="#SV"/>sine efficientia primae causae non poterit produci sic in conservari 
+                <lb ed="#SV"/>modo non potest esse absque adhibitudine[?] illius ad suum finem.
+              </p>
+            </div>
+          </div>
+          <div>
+            <head xml:id="l132-Hsnmsnm">Secundum notandum</head>
+            <p xml:id="l132-snqitc">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> 
+              <lb ed="#SV"/>notandum quod praeter quinque habitudines tendentiarum[?] iam dictarum est alia 
+              <lb ed="#SV"/>scilicet, cuiuslibet Rei ad seipsam vel ad sui existentiam si nata 
+              <lb ed="#SV"/>sit ex se existere, <g ref="#slash"/>vel in alterius subsistentiam si non sit 
+              <lb ed="#SV"/>ex se nata existere et hoc tamquam in quemdam termini rationem quietatis 
+              <lb ed="#SV"/>habentem licet non ultimate quantum ad creaturas et iste terminus vocatur 
+              <lb ed="#SV"/>subsistentia in quam Res naturaliter tendit <g ref="#slash"/>iuxta quem modum 
+              <lb ed="#SV"/>quodIibet compositum substantiale sibi naturaliter derelictum tendit in seipsum 
+              <lb ed="#SV"/>tanquam in propriam unitatem quam appetit licet non ultimate. <g ref="#slash"/>deinde 
+              <lb ed="#SV"/>omnia <choice><orig>accidencia</orig><reg>accidentia</reg></choice> in ipsum tamquam in intrinsecam tendunt coexistere. <g ref="#dbslash"/>
+            </p>
+          </div>
+          <div>
+            <head xml:id="l132-Htnmtnm">Tertium notandum</head>
+            <p xml:id="l132-tenadc">
+              <lb ed="#SV"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> est notandum quod denominationes concretive omnium tendentium in aliquid tamquam 
+              <lb ed="#SV"/>in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> <g ref="#slash"/>vel tanquam in illud in quo subsistunt communicantur 
+              <lb ed="#SV"/>illi <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice>, <g ref="#slash"/>unde et accidentia in toto composito naturaliter existentia 
+              <lb ed="#SV"/>sive inhaereant sive non, <g ref="#slash"/>tamen toti composito seu <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> 
+              <lb ed="#SV"/>omnes denominationes concretivas communicant <g ref="#slash"/>unde proprie quam qualitas 
+              <lb ed="#SV"/>inhaereant materiae non tamen denominat eam qualem ut de causalitate 
+              <lb ed="#SV"/>sed subsistentiam principalem si totum compositum, <g ref="#slash"/>similem est de substantiali forma 
+              <lb ed="#SV"/>quae licet materiae inhaereat non tamen materiae denominationes communicat sed toti 
+              <lb ed="#SV"/>composito quod in ultima <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> rei denotando ipsum vivens 
+              <lb ed="#SV"/>et non materiam primam quia proprie non vivit et sic de aliis denominationibus 
+              <lb ed="#SV"/><sic>concrettivis</sic>.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l132-Hqnmqnm">Quartum notandum</head>
+            <p xml:id="l132-qnebdv">
+              <g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> notandum est quod tendentiae creaturarum subiacent 
+              <lb ed="#SV"/>divinae omnipotentiae et libero dei decreto sic quod sunt in potentia obedientiali 
+              <lb ed="#SV"/>ad taliter vel taliter tendendum iuxta beneplacitum divinae vo<lb ed="#SV" break="no"/>luntatis.
+            </p>
+          </div>
           <div>
             <head xml:id="l132-Hcdtdtc">Corollaria de tendentia creaturarum</head>
-          
-            <p xml:id="l132-csqiic"><g ref="#slash"/>Consequenter sequitur quod tendentiae <sic>variebiles[?]</sic> sunt secundum 
+            <p xml:id="l132-csqiic">
+              <g ref="#slash"/>Consequenter sequitur quod tendentiae <sic>variebiles[?]</sic> sunt secundum 
               <lb ed="#SV"/>dei beneplacitum sicut alias exemplificatum est de <choice><orig>tendencia</orig><reg>tendentia</reg></choice> naturali 
               <lb ed="#SV"/>ignis ad concavum orbis lunae quae subiacet divinae voluntati, 
               <lb ed="#SV"/>ita quod naturaliter deus posset statuere locum ignis naturalem deorsum 
-              <lb ed="#SV"/>et naturaliter ibi ipsum collocare.</p> 
-          
-            <p xml:id="l132-ehseps"><g ref="#slash"/>ex hoc sequitur quod licet compositum 
+              <lb ed="#SV"/>et naturaliter ibi ipsum collocare.
+            </p>
+            <p xml:id="l132-ehseps">
+              <g ref="#slash"/>ex hoc sequitur quod licet compositum 
               <lb ed="#SV"/>substantiale quod licet sive naturae derelictum tendat in propriam <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> 
               quod licet tamen talem potest non tendere in ipsum tamquam in eius propriam 
-              <lb ed="#SV"/><choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>.</p> 
-          
-            <p xml:id="l132-eqsrht"><g ref="#slash"/>Ex quo sequitur statim quod quodIibet compositum substantiale 
+              <lb ed="#SV"/><choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>.
+            </p> 
+            <p xml:id="l132-eqsrht">
+              <g ref="#slash"/>Ex quo sequitur statim quod quodIibet compositum substantiale 
               <lb ed="#SV"/>quod nunc est compositum vel subsistentia vel <choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> 
               <lb ed="#SV"/>potest desinere esse suppositum vel <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> vel <choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> 
               <lb ed="#SV"/>patet Radice Iam tacta quia tendentia creaturae ad se 
-              <cb ed="#SV" n="367va"/><lb ed="#SV"/>citra finem ultimum est absolute variabilis, igitur deus poterit <choice><orig>subspendere</orig><reg>suspendere</reg></choice> 
+              <pb ed="#SV" n="367-v"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>citra finem ultimum est absolute variabilis, igitur deus poterit <choice><orig>subspendere</orig><reg>suspendere</reg></choice> 
               <lb ed="#SV"/>tendentiam creaturae in seipsam tanquam in propriam <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>, <g ref="#slash"/>et ex 
               <lb ed="#SV"/>eadem Radice sequitur quod quaelibet creatura poterit actualiter in deum tendere 
               <lb ed="#SV"/>tanquam in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> ultimatam ita quod actualiter tendit 
               <lb ed="#SV"/>in deum tanquam in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> propriam et non in se, <g ref="#slash"/>modo divinae 
-              <lb ed="#SV"/>potentiae non Repugnat hanc <choice><orig>tendenciam</orig><reg>tendentiam</reg></choice> terminare.</p>
-            
-            <p xml:id="l132-isqqci"><g ref="#slash"/>ideo sequitur 
+              <lb ed="#SV"/>potentiae non Repugnat hanc <choice><orig>tendenciam</orig><reg>tendentiam</reg></choice> terminare.
+            </p>
+            <p xml:id="l132-isqqci">
+              <g ref="#slash"/>ideo sequitur 
               <lb ed="#SV"/>quod deus respectu cuiuslibet creaturae poterit esse subsistentia vel <choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> 
               <lb ed="#SV"/>vel terminus tendentiae cuiuslibet creaturae tamquam eius subsistentia e
-              <lb ed="#SV"/>t terminus <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> ultimate ad quam creatura inclinatur.</p>
+              <lb ed="#SV"/>t terminus <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> ultimate ad quam creatura inclinatur.
+            </p>
           </div>
         </div>
         <div>
           <head xml:id="l132-Hcqssid">Conclusio quod stat naturam humanam non tendere in se vel ad eius subsistentiam propriam sed in Deum</head>
-          <p xml:id="l132-ehrdet"><lb ed="#SV"/><g ref="#slash"/>et hic Radicatur difficultas materiae praesentis et ex hac 
+          <p xml:id="l132-ehrdet">
+            <lb ed="#SV"/><g ref="#slash"/>et hic Radicatur difficultas materiae praesentis et ex hac 
             <lb ed="#SV"/>Radice concluditur quod stat naturam humanam non tendere 
             <lb ed="#SV"/>in se vel ad se tanquam ad eius <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> propriam et sic 
             <lb ed="#SV"/>stat quod in deum tendant tamquam in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> ultimatam 
             <lb ed="#SV"/>et principalem et deo non reputat quin terminat huiusmodi <choice><orig>tendenciam</orig><reg>tendentiam</reg></choice> 
             <lb ed="#SV"/><g ref="#slash"/>nam explicando materiam sufficit quod creatura nullo modo tendat in se, 
-            <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod ipsa tendat in deum, id est, quod deus eius tendentiam terminet.</p>
+            <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod ipsa tendat in deum, id est, quod deus eius tendentiam terminet.
+          </p>
         </div>
         <div>
           <head xml:id="l132-Hcorria">Corollaria</head>
-          <p xml:id="l132-Heehies"><g ref="#slash"/>et ex hoc sequitur quod deus sit huiusmodi naturae <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> et huiusmodi naturae 
+          <p xml:id="l132-Heehies">
+            <g ref="#slash"/>et ex hoc sequitur quod deus sit huiusmodi naturae <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> et huiusmodi naturae 
             <lb ed="#SV"/>suppositum vel <choice><orig>ypostasis</orig><reg>hypostasis</reg></choice>, <g ref="#slash"/>et ex <choice><orig>3o</orig><reg>tertio</reg></choice> notabili sequitur quod vi huiusmodi 
             <lb ed="#SV"/>habitudinis <choice><orig>subsiscenciae</orig><reg>subsistentiae</reg></choice> deus sit Recipiens denominationes concretivas 
-            <lb ed="#SV"/>tam naturae competentes quam accidentibus in eo subsistentibus.</p>
-        
-          <p xml:id="l132-sspgvd"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur 
-            <lb ed="#SV"/>possibilitas et modus <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> quod sit subsistentia huma<lb ed="#SV"/>nae 
-            creaturae, <g ref="#slash"/>ita quod natura humana tendat et appetat sub<lb ed="#SV"/>sistere 
-            et sic salvatur quod deus est homo et rationalis et sic de aliis de<lb ed="#SV"/>nominationibus 
+            <lb ed="#SV"/>tam naturae competentes quam accidentibus in eo subsistentibus.
+          </p>
+          <p xml:id="l132-sspgvd">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur 
+            <lb ed="#SV"/>possibilitas et modus <choice><orig>ymaginandi</orig><reg>imaginandi</reg></choice> quod sit subsistentia huma<lb ed="#SV" break="no"/>nae 
+            creaturae, <g ref="#slash"/>ita quod natura humana tendat et appetat sub<lb ed="#SV" break="no"/>sistere 
+            et sic salvatur quod deus est homo et rationalis et sic de aliis de<lb ed="#SV" break="no"/>nominationibus 
             quae competerent naturae humanae si per se subsisteret, <g ref="#slash"/>et 
             <lb ed="#SV"/>ista materia est difficilis ad explicandum, <g ref="#slash"/>Ideo bene ait <g ref="#dot"/><name ref="#Isaiah"><choice><orig>ysaia</orig><reg>isaia</reg></choice></name><g ref="#dot"/> 
             generationem eius quis enarrabit loquendo de utraque generatione verbi 
-            <lb ed="#SV"/>dei.</p> 
-        
-          <p xml:id="l132-Heqsiea"><g ref="#dbslash"/>Ex quo sequitur <choice><orig>3o</orig><reg>tertio</reg></choice> quod nulla natura est essentialiter compositum 
+            <lb ed="#SV"/>dei.
+          </p>
+          <p xml:id="l132-Heqsiea">
+            <g ref="#dbslash"/>Ex quo sequitur <choice><orig>3o</orig><reg>tertio</reg></choice> quod nulla natura est essentialiter compositum 
             <lb ed="#SV"/>vel <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> nisi sint <choice><orig>3a</orig><reg>tria</reg></choice> supposita et <choice><orig>3es</orig><reg>tres</reg></choice> <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> patet 
-            <lb ed="#SV"/>ex deductione priori quia quaelibet creatura tendens ad sui sub<lb ed="#SV"/>sistentiam 
+            <lb ed="#SV"/>ex deductione priori quia quaelibet creatura tendens ad sui sub<lb ed="#SV" break="no"/>sistentiam 
             tendit tendentia pure <choice><orig>contingenci</orig><reg>contingenti</reg></choice> et ab ea Remobili[?], 
             <lb ed="#SV"/>igitur ipsa non est intrinsece et essentialiter subsistentia sui <choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> 
             <lb ed="#SV"/>vel suppositum <g ref="#slash"/>ideo sola natura divina est intrinsece et essentialiter 
@@ -179,34 +214,38 @@
             <lb ed="#SV"/>et non subsistere in se ipsa, id est, non habere <choice><orig>tendenciam</orig><reg>tendentiam</reg></choice> ad se 
             <lb ed="#SV"/>vel in se subsistendum, <g ref="#slash"/>sed in aliud extrinsecum, <g ref="#slash"/>sola autem divina 
             <lb ed="#SV"/>natura est intrinsece sua <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> quia tendentiae naturae naturae ad suas 
-            <lb ed="#SV"/><choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> est immutabilis et aeterna.</p>
-        
-          <p xml:id="l132-sqqdvv"><g ref="#dbslash"/>Sequitur <choice><orig>4o</orig><reg>quarto</reg></choice> quod quaelibet subsistentia 
+            <lb ed="#SV"/><choice><orig>ypostasis</orig><reg>hypostasis</reg></choice> est immutabilis et aeterna.
+          </p>
+          <p xml:id="l132-sqqdvv">
+            <g ref="#dbslash"/>Sequitur <choice><orig>4o</orig><reg>quarto</reg></choice> quod quaelibet subsistentia 
             <lb ed="#SV"/>creata poterit desinere esse <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> absque hoc quod aliquid 
             <lb ed="#SV"/>a parte Rei desinat esse, <g ref="#slash"/>probatur ex variatione possibili <choice><orig>tendenciae</orig><reg>tendentiae</reg></choice> creaturae 
             <lb ed="#SV"/>in propriam subsistentiam eo quod nihil a parte Rei acquiritur vel deperditur 
-            <lb ed="#SV"/>vel variatur.</p>
-          
-          <p xml:id="l132-udqiea"><g ref="#slash"/>unde dato quod deus quamlibet creaturam suppositioniet[?] tamen de<lb ed="#SV"/>sineret 
+            <lb ed="#SV"/>vel variatur.
+          </p>
+          <p xml:id="l132-udqiea">
+            <g ref="#slash"/>unde dato quod deus quamlibet creaturam suppositioniet[?] tamen de<lb ed="#SV" break="no"/>sineret 
             esse subsistentia cuiuslibet creaturae absque creaturae desinitione 
             <lb ed="#SV"/>esse vel creatura desinere esse sua <choice><orig>subsistencia</orig><reg>subsistentia</reg></choice> sine hoc quod aliqua 
             <lb ed="#SV"/>creatura corrumperetur vel desineret esse, <g ref="#slash"/>cum hoc tamen stat quod aliqua 
             <lb ed="#SV"/>res desineret esse homo, <g ref="#slash"/>et tamen nulla creatura desineret esse aliquid, <g ref="#slash"/>nec 
             <lb ed="#SV"/>sequitur <g ref="#dot"/><c>a</c><g ref="#dot"/> desinit esse asinus <g ref="#dot"/>igitur <g ref="#dot"/><c>a</c><g ref="#dot"/> desinit esse, <g ref="#slash"/>et eodem modo 
-            <lb ed="#SV"/>arguitur de incipit, <g ref="#slash"/>nam in casu quod deus esset cuilibet creaturae <choice><orig>sub<lb ed="#SV"/>sistencia</orig><reg>sub<lb ed="#SV"/>sistentia</reg></choice> 
+            <lb ed="#SV"/>arguitur de incipit, <g ref="#slash"/>nam in casu quod deus esset cuilibet creaturae <choice><orig>sub<lb ed="#SV" break="no"/>sistencia</orig><reg>sub<lb ed="#SV" break="no"/>sistentia</reg></choice> 
             si deus supponiret[?] asinum, <g ref="#slash"/>asinus desineret esse asinus, 
             <lb ed="#SV"/>et tamen non desineret esse aliquid, <g ref="#slash"/><choice><orig>eciam</orig><reg>etiam</reg></choice> non sequitur deus inciperet esse 
-            <lb ed="#SV"/>asinus vel lapis, et tamen deus non inciperet esse aliquid.</p> 
-          
-          <p xml:id="l132-siatsv"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> in 
+            <lb ed="#SV"/>asinus vel lapis, et tamen deus non inciperet esse aliquid.
+          </p> 
+          <p xml:id="l132-siatsv">
+            <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> in 
             <lb ed="#SV"/>alio casu non supernaturali <choice><orig>scat</orig><reg>stat</reg></choice> quod aliquis incipiat esse homo et 
-            <cb ed="#SV" n="367vb"/><lb ed="#SV"/>tamen non incipiat esse aliquid, <g ref="#slash"/>unde signata parte Residua hominis 
+            <cb ed="#SV" n="b"/><!--367vb-->
+            <lb ed="#SV"/>tamen non incipiat esse aliquid, <g ref="#slash"/>unde signata parte Residua hominis 
             <lb ed="#SV"/>praeter brachium, et tamen per sublationem brachii illa pars incipieret 
-            <lb ed="#SV"/>esse homo et haberet rationem totius et <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> ulimatae 
+            <lb ed="#SV"/>esse homo et haberet rationem totius et <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> <unclear>ulimatae</unclear> 
             <lb ed="#SV"/>et sic apparet quod sine miraculo stat quod aliquis incipiat esse homo 
             <lb ed="#SV"/>et tamen non incipiat esse aliquid <g ref="#slash"/>similiter angelus <seg type="subject" ana="#potentiaabsoluta">de potentia dei 
-              <lb ed="#SV"/>absoluta</seg> posset materia informare, <g ref="#slash"/>vel cum alio angelo unitive 
-            <lb ed="#SV"/>concurrere ad modum quo duo gradus albedinis simul concurre<lb ed="#SV"/>rent 
+            <lb ed="#SV"/>absoluta</seg> posset materia informare, <g ref="#slash"/>vel cum alio angelo unitive 
+            <lb ed="#SV"/>concurrere ad modum quo duo gradus albedinis simul concurre<lb ed="#SV" break="no"/>rent 
             et constituerent unam <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>, scilicet, unam 
             <lb ed="#SV"/>albedinem quo dato angelus desineret esse suppositum <g ref="#slash"/>eo 
             <lb ed="#SV"/>quod de ratione partis est non habere subsistentiam ultimatam <g ref="#slash"/>sed 
@@ -218,41 +257,46 @@
             <lb ed="#SV"/>concretivis et personalibus quae contingenter dicuntur de natura humana 
             <lb ed="#SV"/>eo quod per <choice><orig>carenciam</orig><reg>carentiam</reg></choice> <choice><orig>subsistenciae</orig><reg>subsistentiae</reg></choice> possunt huiusmodi praedicata ab 
             <lb ed="#SV"/>ipsa Removeri, <g ref="#slash"/>igitur contingenter competunt ei cum <del rend="strikethrough">de</del> tendentia 
-            <lb ed="#SV"/>sit variabilis.</p>
-        
-          <p xml:id="l132-eqsuti"><g ref="#slash"/>Ex quo sequitur quod omnis res mondi[?] posset 
+            <lb ed="#SV"/>sit variabilis.
+          </p>
+          <p xml:id="l132-eqsuti">
+            <g ref="#slash"/>Ex quo sequitur quod omnis res mondi[?] posset 
             <lb ed="#SV"/>deo denominationes concretivas communicare patet quia quaelibet res potest 
             <lb ed="#SV"/>in deo ultimate subsistere igitur ipsa potest deo praedicata concretiva 
             <lb ed="#SV"/>communicare <g ref="#slash"/>patet consequentia quia de ratione <choice><orig>subsistenciae</orig><reg>subsitentiae</reg></choice> est Recipere 
             <lb ed="#SV"/>denominationes concretivas omni tali subsistentia <choice><orig>subsistencium</orig><reg>subsistentium</reg></choice> 
-            <lb ed="#SV"/>quia quaelibet res potest in deum ultimate tendere, igitur.</p>
-      </div>
+            <lb ed="#SV"/>quia quaelibet res potest in deum ultimate tendere, igitur.
+          </p>
+        </div>
         <div>
           <head xml:id="l132-Hdduads">Dubium de unione: Utrum quaelibet res sit a deo supposibilis[?]</head>
-          <p xml:id="l132-chnvsu"><g ref="#dbslash"/>Circa 
+          <p xml:id="l132-chnvsu">
+            <g ref="#dbslash"/>Circa 
             <lb ed="#SV"/>hoc notandum quod dubium est inter doctores utrum quaelibet res sit 
-            <lb ed="#SV"/>a deo suppositibilis[?] vel suppositibiliter[?] unibilis[?].</p>
-          
-          <p xml:id="l132-epepsu"><g ref="#slash"/>Et primo est 
+            <lb ed="#SV"/>a deo suppositibilis[?] vel suppositibiliter[?] unibilis[?].
+          </p>
+          <p xml:id="l132-epepsu">
+            <g ref="#slash"/>Et primo est 
             <lb ed="#SV"/>una <choice><orig>oppinio</orig><reg>opinio</reg></choice> quod nulla res est a deo suppositibilis[?] vel deo <choice><orig>ypostatice</orig><reg>hypostatice</reg></choice> 
             <lb ed="#SV"/>unibilis[?] nisi talis Res sit nata esse suppositum vel subsistere 
-            <lb ed="#SV"/>subsistentia propria, <g ref="#slash"/>et quia accidentia non possunt de se nec in se sub<lb ed="#SV"/>sistere, 
+            <lb ed="#SV"/>subsistentia propria, <g ref="#slash"/>et quia accidentia non possunt de se nec in se sub<lb ed="#SV" break="no"/>sistere, 
             <g ref="#slash"/>ideo non potest accidentia sibi unire <choice><orig>ypostatice</orig><reg>hypostatice</reg></choice> vel supponibiliter[?] 
             <lb ed="#SV"/>in partes essentiales alicuius non possunt in se subsistere, <g ref="#slash"/>ideo non sunt 
             <lb ed="#SV"/>deo unibiles[?] supponibiliter[?] vel <choice><orig>yppostatice</orig><reg>hypostatice</reg></choice> eo quod non habent propriam 
-            <lb ed="#SV"/><choice><orig>subsitentiam</orig><reg>subsistentiam</reg></choice> <g ref="#slash"/>ideo non potest deus illas partes sibi uniri.</p>
-        
-          <p xml:id="l132-adqicc"><g ref="#slash"/>Alii 
+            <lb ed="#SV"/><choice><orig>subsitentiam</orig><reg>subsistentiam</reg></choice> <g ref="#slash"/>ideo non potest deus illas partes sibi uniri.
+          </p>
+          <p xml:id="l132-adqicc">
+            <g ref="#slash"/>Alii 
             <lb ed="#SV"/>dicunt quod <choice><orig>ymo</orig><reg>immo</reg></choice> generaliter, <g ref="#slash"/>et sine dubio ista difficultas non 
             <lb ed="#SV"/>est nisi in vocabilis nec est Realis nam si per suppositibile[?] intelligitur 
-            <lb ed="#SV"/>esse suppositum alicuius Rei quae sibi derelicta esset met su<lb ed="#SV"/>ppositum, 
+            <lb ed="#SV"/>esse suppositum alicuius Rei quae sibi derelicta esset met su<lb ed="#SV" break="no"/>ppositum, 
             <g ref="#slash"/>tunc prima propositio haberet veritatem, <g ref="#slash"/>si autem intelligatur 
             <lb ed="#SV"/>per suppositibile[?] esse subsistentiam alicuius, <g ref="#slash"/>tunc cuiuslibet rei deus 
-            <lb ed="#SV"/>potest esse subsistentia vel suppositum et qualiter rem poterit suppo<lb ed="#SV"/>sitaliter[?] 
+            <lb ed="#SV"/>potest esse subsistentia vel suppositum et qualiter rem poterit suppo<lb ed="#SV" break="no"/>sitaliter[?] 
             sibi unire et quod iste modus sit tenendus apparet 
             <lb ed="#SV"/>ratione quia in triduo de facto fuit unio materiae ad verbum quae 
-            <lb ed="#SV"/>non habet rationem suppositi sed potius partes si esset sibi natura<lb ed="#SV"/>liter 
-            derelicta vi tamen cuius unionis verbum suscepti de<lb ed="#SV"/>nominationes 
+            <lb ed="#SV"/>non habet rationem suppositi sed potius partes si esset sibi natura<lb ed="#SV" break="no"/>liter 
+            derelicta vi tamen cuius unionis verbum suscepti de<lb ed="#SV" break="no"/>nominationes 
             concretivas communicatas sibi ex parte materiae ut 
             <lb ed="#SV"/>iacere in sepulchro nam illud praedicatum non potest competere verbo 
             <lb ed="#SV"/>nisi ratione materiae eo quod non potest competere nisi rei corporali 
@@ -262,31 +306,36 @@
             <lb ed="#SV"/>ad inferos et hoc non posset dici nisi esset unio qua 
             <lb ed="#SV"/>verbum dei esset anima subsistentia ratione cuius habitudinis 
             <lb ed="#SV"/>verbum reciperet denominationes concretivas per animam communicabiles 
-            <cb ed="#SV" n="368ra"/><lb ed="#SV"/>patet ergo quod respectu cuiuscumque creaturae poterit deus habere habitudinem ex qua consurgit 
-            <lb ed="#SV"/><choice><orig>ydiotatum</orig><reg>idioatatum</reg></choice> communicatio quia deus poterit cuiuslibet creaturae esse subsistentia in reci<lb ed="#SV"/>pere 
+            <pb ed="#SV" n="368-r"/>
+            <cb ed="#SV" n="a"/>
+            <lb ed="#SV"/>patet ergo quod respectu cuiuscumque creaturae poterit deus habere habitudinem ex qua consurgit 
+            <lb ed="#SV"/><choice><orig>ydiotatum</orig><reg>idioatatum</reg></choice> communicatio quia deus poterit cuiuslibet creaturae esse subsistentia in reci<lb ed="#SV" break="no"/>pere 
             denominationes concretivas et praedicta concretiva et per consequens <choice><orig>ydiomata</orig><reg>idiomata</reg></choice> 
-            <lb ed="#SV"/>creaturae competentia.</p>
-        
-          <p xml:id="l132-pcdsaf"><g ref="#dbslash"/>Pro cuius declaratione notandum est 
+            <lb ed="#SV"/>creaturae competentia.
+          </p>
+          <p xml:id="l132-pcdsaf">
+            <g ref="#dbslash"/>Pro cuius declaratione notandum est 
             <lb ed="#SV"/>quod <choice><orig>ydioma</orig><reg>idioma</reg></choice> graece dicitur ab idos quod est forma et moma[?] quod 
-            <lb ed="#SV"/>est nomen quasi nomen sumptum a forma.</p>
-        
-          <p xml:id="l132-snenpe"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod naturae creatae duplex 
-            <lb ed="#SV"/>competit <choice><orig>ydioma</orig><reg>idioma</reg></choice> vel duplicia <choice><orig>ydiomata</orig><reg>idiomata</reg></choice>, id est, praedicata proprietatem Rei expri<lb ed="#SV"/>mentia 
-            sunt duplicia quaedam competunt naturae creatae intrinsece et inse<lb ed="#SV"/>parabiliter 
-            tamquam propria ut humanitati convenit[?] hoc praedicatum esse huma<lb ed="#SV"/>nitatem 
+            <lb ed="#SV"/>est nomen quasi nomen sumptum a forma.
+          </p>
+          <p xml:id="l132-snenpe">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod naturae creatae duplex 
+            <lb ed="#SV"/>competit <choice><orig>ydioma</orig><reg>idioma</reg></choice> vel duplicia <choice><orig>ydiomata</orig><reg>idiomata</reg></choice>, id est, praedicata proprietatem Rei expri<lb ed="#SV" break="no"/>mentia 
+            sunt duplicia quaedam competunt naturae creatae intrinsece et inse<lb ed="#SV" break="no"/>parabiliter 
+            tamquam propria ut humanitati convenit[?] hoc praedicatum esse huma<lb ed="#SV" break="no"/>nitatem 
             intrinsece et inseparabiliter et esse animalitatem, et sic de aliis praedicatis 
             <lb ed="#SV"/>abstractivis, <g ref="#slash"/>similiter animae convenit[?] intrinsece esse vitam, <g ref="#slash"/>alia sunt praedicata 
             <lb ed="#SV"/>seu <choice><orig>ydiomata</orig><reg>idiomata</reg></choice> quae competunt naturae creatae non inseparabiliter, <g ref="#slash"/>naturaliter tamen 
-            <lb ed="#SV"/>inseparabiliter, sed absolute possunt separari sicut esse hominem convenit[?] naturae huma<lb ed="#SV"/>nae 
+            <lb ed="#SV"/>inseparabiliter, sed absolute possunt separari sicut esse hominem convenit[?] naturae huma<lb ed="#SV" break="no"/>nae 
             tamquam subsistentiae, quia sibi derelicta et suae naturae personae subsisteret, 
             <lb ed="#SV"/>et sic de aliis praedicatis in recta linea positis qui praedicata supponunt pro homine 
-            <lb ed="#SV"/>et absolute sunt separabilia, quia humanitas potest non in se subsi<lb ed="#SV"/>stere 
+            <lb ed="#SV"/>et absolute sunt separabilia, quia humanitas potest non in se subsi<lb ed="#SV" break="no"/>stere 
             et sic illa praedicata subsistentiam significatia[?] possunt Removeri, <g ref="#slash"/>et sic 
             <lb ed="#SV"/>apparet quod praedicata quae inseparabiliter naturae competunt vocantur <choice><orig>ydiomata</orig><reg>idiomata</reg></choice> 
-            <lb ed="#SV"/>illius naturae proprietatem exprimentia.</p>
-        
-          <p xml:id="l132-sensed"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> est notandum quod praedicata quae sunt concretiva 
+            <lb ed="#SV"/>illius naturae proprietatem exprimentia.
+          </p>
+          <p xml:id="l132-sensed">
+            <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> est notandum quod praedicata quae sunt concretiva 
             <lb ed="#SV"/>et absolute Remobilia[?] possunt communicari naturae vel subsistentiae in qua huiusmodi 
             <lb ed="#SV"/>natura poterit subsistere, <g ref="#slash"/>unde vi unionis humanitatis ad verbum humanitatis 
             <lb ed="#SV"/>non communicat verbo praedicata sibi intrinsece competentia quoniam[?] vi huiusmodi 
@@ -296,132 +345,153 @@
             <lb ed="#SV"/>est quod verbum est corpus supponendo concretive, <g ref="#slash"/>sed humanitas non est homo nec 
             <lb ed="#SV"/>corpus eodem modo supponendo sed magis corporeitas vel substantialitas 
             <lb ed="#SV"/>licet tamen nomina concretiva aliquando supponant nunc abstractive nunc concretive, 
-            <lb ed="#SV"/><g ref="#slash"/>et sic esset distinguendum.</p>
-        
-          <p xml:id="l132-eppatc"><g ref="#slash"/>Ex praedictis patet quod unio <choice><orig>ypostatica</orig><reg>hypostatica</reg></choice> in christo 
+            <lb ed="#SV"/><g ref="#slash"/>et sic esset distinguendum.
+          </p>
+          <p xml:id="l132-eppatc">
+            <g ref="#slash"/>Ex praedictis patet quod unio <choice><orig>ypostatica</orig><reg>hypostatica</reg></choice> in christo 
             <lb ed="#SV"/>est unio verbi ad humanam naturam virtute cuius persona divina sit naturae 
             <lb ed="#SV"/>humanae subsistentia. <g ref="#slash"/>unde tollatur tendentia creaturae in <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> 
-            <lb ed="#SV"/>suam, <g ref="#slash"/>deinde quod deus sit terminus in quem tendat, quia de facto deus su<lb ed="#SV"/>fficit 
+            <lb ed="#SV"/>suam, <g ref="#slash"/>deinde quod deus sit terminus in quem tendat, quia de facto deus su<lb ed="#SV" break="no"/>fficit 
             et quod eius <choice><orig>tendenciam</orig><reg>tendentiam</reg></choice> terminet. <g ref="#slash"/>Doctores tamen utuntur 
             <lb ed="#SV"/>terminis extraneis in hac materia atque verbis armatis et deberent 
-            <lb ed="#SV"/>se resolvere ad terminos clariores.</p> 
-        <div>
-          <head xml:id="l132-Hqhuass">Quod haec unio est similis unioni accidentis ad suum subiectum</head>
-          <p xml:id="l132-ptmsnh"><g ref="#slash"/>pro tamen maiori manuductione in praesenti 
-            <lb ed="#SV"/>materia <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod iuxta <name ref="#Scotus">doctorem subtilem</name> haec unio 
-            <lb ed="#SV"/>est similis unioni accidentis ad suum subiectum, <g ref="#slash"/>et quantum ad aliquid est dissimilitudo 
-            <lb ed="#SV"/>eo quod accidens inhaeret et informat suum subiectum et quantum ad hoc debet 
-            <lb ed="#SV"/>tolli habitudo haec comparando naturam humanam ad verbum dei, <g ref="#slash"/>eo quod natura 
-            <lb ed="#SV"/>divina non potest esse subiectum naturae humanae.</p>
-        
-          <p xml:id="l132-aehehr"><g ref="#dbslash"/>alia est habitudo accidentis ad 
-            <lb ed="#SV"/><del rend="expunctuated">suum</del> subiectum quia subiectum est subsistentia accidentis et haec habitudo dicit per<lb ed="#SV"/>fectionem 
-            in subiecto quod in eo accidens conservetur dicit perfectionem subiecti quia 
-            <lb ed="#SV"/>ex hoc subiectum habet rationem finis et conservantis in quem alia res tendit 
-            <lb ed="#SV"/>ideo haec habitudo sola est ex qua consurgit denominatio concretiva quam 
-            <lb ed="#SV"/>communicat accidens suo subiecto, <g ref="#slash"/>et sic circumscribendo quidquid imperfectionis di<lb ed="#SV"/>ceret 
-            in habitudine accidentis ad subiectum, <g ref="#slash"/>diceretur consequenter quod respectu verbi 
-            <lb ed="#SV"/><choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> humanitas habere habitudinem per modum revitentis[?] et per modum 
-            <lb ed="#SV"/>subsistentiae virtute cuius humanitatis denominat verbum denominatio<lb ed="#SV"/>nibus 
-            concretivis sibi competentibus, <g ref="#slash"/>ita quod sicut substantia denominatur 
-            <lb ed="#SV"/>alba vi <del rend="strikethrough">habetnis</del> habitudinis albedinis ad substantiam ita humanitas 
-            <lb ed="#SV"/>communicat verbo denominationes concretivas, <g ref="#slash"/>ita quod humanitas se haberet per modum 
-            <lb ed="#SV"/>formae et verbum per modum subsistentiae, et sic verbum divinum esset 
-            <lb ed="#SV"/>homo, <g ref="#slash"/>licet esset res simplicissima et mori et pati attribueretur verbo 
-            <lb ed="#SV"/>et <g ref="#slash"/>per hoc facile esset dicere qualiter salvaretur communicatio <choice><orig>ydiotatum</orig><reg>idiotatum</reg></choice>, <g ref="#slash"/>et hoc est 
-            <cb ed="#SV" n="368rb"/><lb ed="#SV"/>quando praedicamenta concretiva huiusmodi termini homo dicuntur de isto termino deus, <g ref="#slash"/>et econverso quando praedicata 
-            <lb ed="#SV"/>competentia huic termino deus dicuntur de isto termino homo ut concedatur quod ille homo est 
-            <lb ed="#SV"/>omnipotens et quod homo est aeternus et immensus et quod ille homo creavit centrum 
-            <lb ed="#SV"/>et terram et <choice><orig>eciam</orig><reg>etiam</reg></choice> conceditur quod deus est homo, <g ref="#slash"/>deus est mortuus crucifixus et 
-            <lb ed="#SV"/>resurrexit, <g ref="#slash"/>et sic praedicata convenientia huic subiecto homo conveniunt huic termino deus 
-            <lb ed="#SV"/>et econtra et tunc data ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> facile esset Respondere consequenter 
-            <lb ed="#SV"/>et habita Radice.</p>
-        </div>
-        <div>
-          <head xml:id="l132-Hnqdduc">Notanda: qualiter deus utitur creatura</head>
-          <p xml:id="l132-ptpude"><g ref="#dbslash"/>Pro tamen particulari declaratione materiae est adver<lb ed="#SV"/>tendum 
-            quod deus utitur creatura generaliter tamquam instrumento et praecipue 
-            <lb ed="#SV"/>tanquam in bonis actionibus licet cum hoc servetur libertas ut dictum est.</p>
-        
-          <p xml:id="l132-snepoe"><lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod deus poterit duplici modo specialiter uti instrumento. <g ref="#slash"/>uno modo ipsum 
-            <lb ed="#SV"/>movendo ad operationes speciales facultatem instrumenti excedentis. <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod 
-            <lb ed="#SV"/>deus non potest specialiori modo uti instrumento non tamquam extrinseco, sed simpliciter 
-            <lb ed="#SV"/>intrinseco ut anima potest uti instrumento intrinseco et extrinseco, <g ref="#slash"/>intrinseco 
-            <lb ed="#SV"/>ut cognitio, <g ref="#slash"/>extrinseco ut pes vel manus <g ref="#slash"/>et istis duobus modis 
-            <lb ed="#SV"/><choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod verbum utatur humanitate speciali, <g ref="#slash"/>modo <g ref="#slash"/>quantum ad primum 
-            <lb ed="#SV"/>uti humanitate ipsam elevando ad operationes suas nobiles exercendum. <g ref="#slash"/> 
-            <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo utitur deus humanitate tamquam proprio instrumento ad proprias operationes 
-            <lb ed="#SV"/>exercendum.</p>
-        </div>
-        <div>
-          <head xml:id="l132-Hocnocn">Opinio Chatton</head>
-          <p xml:id="l132-eihppu"><g ref="#slash"/>Et iuxta hoc sequitur via quam tangit <name ref="#Chaton">chaton</name> in 13a<g ref="#dot"/> 
-            <lb ed="#SV"/>distinctione <choice><orig>3ii</orig><reg>tertii</reg></choice>, scilicet, quod tanta est haec benedicta unio ut verbum ita plene 
-            <lb ed="#SV"/>sit humanitati illapsum quod omnis volitio verbi et cognitio sit Realiter 
-            <lb ed="#SV"/>humanitati volitio et cognitio et sic eadem est operatio dei et humanitatis assum<lb ed="#SV"/>ptae, 
-            <g ref="#slash"/>ideo deus naturam quasi supra se Rapuit ad suum ultimum et <choice><orig>su<lb ed="#SV"/>ppremum</orig><reg>su<lb ed="#SV"/>premum</reg></choice> 
-            gradum et cum tanta intrinsece quod omnis divina operatio praeter 
-            <lb ed="#SV"/>operationem ad intra et omnis voluntas divina humanitati christi absolute 
-            <lb ed="#SV"/>competat et haec est alta <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> <g ref="#slash"/>unde ex hoc Raptu humanitas[?] 
-            <lb ed="#SV"/>supra se et ex communicatione operationis inter se consurgit quod humanitas assumpta 
-            <lb ed="#SV"/>non subsistit, <choice><orig>ymo</orig><reg>immo</reg></choice> <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> ipsa est assumpta extra se et subsistit 
-            <lb ed="#SV"/>in verbo, <g ref="#slash"/>et hoc ponit in Radice <name ref="#Aquinas">sanctus thomas</name> in <choice><orig>4o</orig><reg>quarto</reg></choice> libro <title ref="#SummaContraGentiles">contra genti<lb ed="#SV"/>les</title>. 
-            <g ref="#slash"/>Ex ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> et pro eius declaratione <g ref="#slash"/>primo infertur 
-            <lb ed="#SV"/>quod humanitas christi nullo modo potest peccare unita.</p>
-          
-          <p xml:id="l132-pedcvv"><g ref="#slash"/>patet ex duplici radice 
-            <lb ed="#SV"/>quia omnis effectus operatio est supra eius naturae facultatem <g ref="#slash"/>et deus non 
-            <lb ed="#SV"/>poterit naturaliter inclinare ad malum speciali tamen inclinatione. <g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> Radix est 
-            <lb ed="#SV"/>quia omnis divina operatio est esse sibi cognitio, scilicet, humanitati et non potest 
-            <lb ed="#SV"/>esse Repugnans cognitio vel volitio.</p>
-        
-          <p xml:id="l132-siquei"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infero quod haec unio est infinita 
-            <lb ed="#SV"/>et summa Rectitudo patet quia ipsa est raptus in divinam bonitatem et hoc 
-            <lb ed="#SV"/>infinite supra quamlibet Rectitudinem igitur illa unio est infinita.</p>
-        
-          <p xml:id="l132-tsqmeb"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod haec 
-            <lb ed="#SV"/>benedicta unio est formaliter beatitudo <g ref="#slash"/>patet quia ipsa est <choice><orig>suppremus</orig><reg>supremus</reg></choice> gradus 
-            <lb ed="#SV"/>attingendi perfecte summum bonum, scilicet, ultimum finem igitur ipsa maxime 
-            <lb ed="#SV"/>est beatitudo.</p>
-        
-          <p xml:id="l132-qsqebs"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sequitur quod beatitudo humanitatis christi non dependet ab anima 
-            <lb ed="#SV"/>vel humanitate, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> econverso humanitas christi dependet a beatitudine et eius 
-            <lb ed="#SV"/>subsistentia est beatifica simpliciter.</p>
-        
-          <p xml:id="l132-qsqoep"><g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> sequitur quod vi huius unionis huma<lb ed="#SV"/>nitas 
-            est potens respectu cuiuscumque effectus productionis, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> est de facto causa 
-            <lb ed="#SV"/>cuiuslibet effectus patet quia humanitas sic est in deum Rapta quod omnis 
-            <lb ed="#SV"/><choice><orig>volicio</orig><reg>volitio</reg></choice> dei est sibi volitio et cognitio et quidquid a verbo fit 
-            <lb ed="#SV"/>ab humanitate fit, <g ref="#slash"/>et sic apparet quod ex parte Regiminis totalis spiritualis in 
-            <lb ed="#SV"/>ecclesia militante, <g ref="#slash"/>vel in Regimine naturali et poletico[?] naturali ac orbium 
-            <lb ed="#SV"/>caelestium et alterationum ipsa est causa universaliter immediate sub deo or<lb ed="#SV"/>dinata 
-            ad omnium effectuum productionem.</p>
-        
-          <p xml:id="l132-eqpedh"><g ref="#dbslash"/>Ex quo patet quod in primo instan<lb ed="#SV"/>ti 
-            suae conceptionis humanitas habuit divinum supra astra et ad 
-            <lb ed="#SV"/>omnes causas <choice><orig>2as</orig><reg>secundas</reg></choice> concurrentes ad sui conceptionem. patet ex universali illapsu 
-            <lb ed="#SV"/>quo et omnia quae deus vult, <g ref="#slash"/>vult et omnia quae deus cognoscit, cognoscit 
-            <lb ed="#SV"/>nam deus communicavit sibi scientiam omnem quae verbum scit, <g ref="#slash"/>ideo dicit <name ref="#RichardOfStVictor">ricardus</name> 
-            <lb ed="#SV"/>quod ex hoc consurgit omnipotentia, quia eius potentia est per velle divinum im<lb ed="#SV"/>perativum 
-            et stante huiusmodi unione illud velle est infrustrabile 
-            <cb ed="#SV" n="368va"/><lb ed="#SV"/>et ex hoc salvatur quod nullus <del rend="strikethrough">stante huiusmodi unitive[?]</del> angelus quantumcumque perfectus 
-            <lb ed="#SV"/>posset ad aequalitatem beatitudinis animae christi pertingere nisi per unitionem <choice><orig>ypostaticam</orig><reg>hypostaticam</reg></choice> 
-            <lb ed="#SV"/>patet quia ille est <choice><orig>suppremus</orig><reg>supremus</reg></choice> gradus perfectionis communicabilis, <g ref="#slash"/>unde <name ref="#Augustine">augustinus</name> in re<lb ed="#SV"/>bus 
-            per tempus ortis non fuit maior gratia, scilicet, humanitatis[?] gratificatione quando 
-            <lb ed="#SV"/>homo factus est deus et deus homo.</p> 
-            
-          <p xml:id="l132-eehaee"><g ref="#slash"/>et ex hoc potest salvari quod beata virgo 
-            <lb ed="#SV"/>habeat <choice><orig>suppremum</orig><reg>supremumm</reg></choice> gradum gloriae sibi communicabilem creabilem et tamen non est ita 
-            <lb ed="#SV"/>beata sicut christus, <g ref="#slash"/>nam difficultas est inter doctores supposito[?] quod in eadem specie 
-            <lb ed="#SV"/>unum suppositum non sit alio essentialiter perfectius, <g ref="#slash"/>videtur quod virgo dicitur plena 
-            <lb ed="#SV"/>gratia et innumerabilibus bonis et donis gratuita quomodo igitur gloria eius 
-            <lb ed="#SV"/>non adaequabitur christi gloriae, <g ref="#slash"/>hic dicitur quod gloria increata est communicata animae christi 
-            <lb ed="#SV"/>et virgini gloriose est communicata beatitudo creata <g ref="#slash"/>ratione cuius super choros ange<lb ed="#SV"/>lorum 
-            est exaltata.</p>
-        </div>
+            <lb ed="#SV"/>se resolvere ad terminos clariores.
+          </p>
+          <div>
+            <head xml:id="l132-Hqhuass">Quod haec unio est similis unioni accidentis ad suum subiectum</head>
+            <p xml:id="l132-ptmsnh">
+              <g ref="#slash"/>pro tamen maiori manuductione in praesenti 
+              <lb ed="#SV"/>materia <choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod iuxta <name ref="#Scotus">doctorem subtilem</name> haec unio 
+              <lb ed="#SV"/>est similis unioni accidentis ad suum subiectum, <g ref="#slash"/>et quantum ad aliquid est dissimilitudo 
+              <lb ed="#SV"/>eo quod accidens inhaeret et informat suum subiectum et quantum ad hoc debet 
+              <lb ed="#SV"/>tolli habitudo haec comparando naturam humanam ad verbum dei, <g ref="#slash"/>eo quod natura 
+              <lb ed="#SV"/>divina non potest esse subiectum naturae humanae.
+            </p>
+            <p xml:id="l132-aehehr">
+              <g ref="#dbslash"/>alia est habitudo accidentis ad 
+              <lb ed="#SV"/><del rend="expunctuated">suum</del> subiectum quia subiectum est subsistentia accidentis et haec habitudo dicit per<lb ed="#SV" break="no"/>fectionem 
+              in subiecto quod in eo accidens conservetur dicit perfectionem subiecti quia 
+              <lb ed="#SV"/>ex hoc subiectum habet rationem finis et conservantis in quem alia res tendit 
+              <lb ed="#SV"/>ideo haec habitudo sola est ex qua consurgit denominatio concretiva quam 
+              <lb ed="#SV"/>communicat accidens suo subiecto, <g ref="#slash"/>et sic circumscribendo quidquid imperfectionis di<lb ed="#SV" break="no"/>ceret 
+              in habitudine accidentis ad subiectum, <g ref="#slash"/>diceretur consequenter quod respectu verbi 
+              <lb ed="#SV"/><choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> humanitas habere habitudinem per modum revitentis[?] et per modum 
+              <lb ed="#SV"/>subsistentiae virtute cuius humanitatis denominat verbum denominatio<lb ed="#SV" break="no"/>nibus 
+              concretivis sibi competentibus, <g ref="#slash"/>ita quod sicut substantia denominatur 
+              <lb ed="#SV"/>alba vi <del rend="strikethrough">habetnis</del> habitudinis albedinis ad substantiam ita humanitas 
+              <lb ed="#SV"/>communicat verbo denominationes concretivas, <g ref="#slash"/>ita quod humanitas se haberet per modum 
+              <lb ed="#SV"/>formae et verbum per modum subsistentiae, et sic verbum divinum esset 
+              <lb ed="#SV"/>homo, <g ref="#slash"/>licet esset res simplicissima et mori et pati attribueretur verbo 
+              <lb ed="#SV"/>et <g ref="#slash"/>per hoc facile esset dicere qualiter salvaretur communicatio <choice><orig>ydiotatum</orig><reg>idiotatum</reg></choice>, <g ref="#slash"/>et hoc est 
+              <cb ed="#SV" n="b"/><!--368rb-->
+              <lb ed="#SV"/>quando praedicamenta concretiva huiusmodi termini homo dicuntur de isto termino deus, <g ref="#slash"/>et econverso quando praedicata 
+              <lb ed="#SV"/>competentia huic termino deus dicuntur de isto termino homo ut concedatur quod ille homo est 
+              <lb ed="#SV"/>omnipotens et quod homo est aeternus et immensus et quod ille homo creavit centrum 
+              <lb ed="#SV"/>et terram et <choice><orig>eciam</orig><reg>etiam</reg></choice> conceditur quod deus est homo, <g ref="#slash"/>deus est mortuus crucifixus et 
+              <lb ed="#SV"/>resurrexit, <g ref="#slash"/>et sic praedicata convenientia huic subiecto homo conveniunt huic termino deus 
+              <lb ed="#SV"/>et econtra et tunc data ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> facile esset Respondere consequenter 
+              <lb ed="#SV"/>et habita Radice.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l132-Hnqdduc">Notanda: qualiter deus utitur creatura</head>
+            <p xml:id="l132-ptpude">
+              <g ref="#dbslash"/>Pro tamen particulari declaratione materiae est adver<lb ed="#SV" break="no"/>tendum 
+              quod deus utitur creatura generaliter tamquam instrumento et praecipue 
+              <lb ed="#SV"/>tanquam in bonis actionibus licet cum hoc servetur libertas ut dictum est.
+            </p>
+            <p xml:id="l132-snepoe">
+              <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> notandum est quod deus poterit duplici modo specialiter uti instrumento. <g ref="#slash"/>uno modo ipsum 
+              <lb ed="#SV"/>movendo ad operationes speciales facultatem instrumenti excedentis. <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod 
+              <lb ed="#SV"/>deus non potest specialiori modo uti instrumento non tamquam extrinseco, sed simpliciter 
+              <lb ed="#SV"/>intrinseco ut anima potest uti instrumento intrinseco et extrinseco, <g ref="#slash"/>intrinseco 
+              <lb ed="#SV"/>ut cognitio, <g ref="#slash"/>extrinseco ut pes vel manus <g ref="#slash"/>et istis duobus modis 
+              <lb ed="#SV"/><choice><orig>ymaginandum</orig><reg>imaginandum</reg></choice> est quod verbum utatur humanitate speciali, <g ref="#slash"/>modo <g ref="#slash"/>quantum ad primum 
+              <lb ed="#SV"/>uti humanitate ipsam elevando ad operationes suas nobiles exercendum. <g ref="#slash"/> 
+              <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo utitur deus humanitate tamquam proprio instrumento ad proprias operationes 
+              <lb ed="#SV"/>exercendum.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l132-Hocnocn">Opinio Chatton</head>
+            <p xml:id="l132-eihppu">
+              <g ref="#slash"/>Et iuxta hoc sequitur via quam tangit <name ref="#Chaton">chaton</name> in 13a<g ref="#dot"/> 
+              <lb ed="#SV"/>distinctione <choice><orig>3ii</orig><reg>tertii</reg></choice>, scilicet, quod tanta est haec benedicta unio ut verbum ita plene 
+              <lb ed="#SV"/>sit humanitati illapsum quod omnis volitio verbi et cognitio sit Realiter 
+              <lb ed="#SV"/>humanitati volitio et cognitio et sic eadem est operatio dei et humanitatis assum<lb ed="#SV" break="no"/>ptae, 
+              <g ref="#slash"/>ideo deus naturam quasi supra se Rapuit ad suum ultimum et <choice><orig>su<lb ed="#SV" break="no"/>ppremum</orig><reg>su<lb ed="#SV" break="no"/>premum</reg></choice> 
+              gradum et cum tanta intrinsece quod omnis divina operatio praeter 
+              <lb ed="#SV"/>operationem ad intra et omnis voluntas divina humanitati christi absolute 
+              <lb ed="#SV"/>competat et haec est alta <choice><orig>ymaginatio</orig><reg>imaginatio</reg></choice> <g ref="#slash"/>unde ex hoc Raptu humanitas[?] 
+              <lb ed="#SV"/>supra se et ex communicatione operationis inter se consurgit quod humanitas assumpta 
+              <lb ed="#SV"/>non subsistit, <choice><orig>ymo</orig><reg>immo</reg></choice> <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> ipsa est assumpta extra se et subsistit 
+              <lb ed="#SV"/>in verbo, <g ref="#slash"/>et hoc ponit in Radice <name ref="#Aquinas">sanctus thomas</name> in <choice><orig>4o</orig><reg>quarto</reg></choice> libro <title ref="#SummaContraGentiles">contra genti<lb ed="#SV" break="no"/>les</title>. 
+              <g ref="#slash"/>Ex ista <choice><orig>ymaginatione</orig><reg>imaginatione</reg></choice> et pro eius declaratione <g ref="#slash"/>primo infertur 
+              <lb ed="#SV"/>quod humanitas christi nullo modo potest peccare unita.
+            </p>
+            <p xml:id="l132-pedcvv">
+              <g ref="#slash"/>patet ex duplici radice 
+              <lb ed="#SV"/>quia omnis effectus operatio est supra eius naturae facultatem <g ref="#slash"/>et deus non 
+              <lb ed="#SV"/>poterit naturaliter inclinare ad malum speciali tamen inclinatione. <g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> Radix est 
+              <lb ed="#SV"/>quia omnis divina operatio est esse sibi cognitio, scilicet, humanitati et non potest 
+              <lb ed="#SV"/>esse Repugnans cognitio vel volitio.
+            </p>
+            <p xml:id="l132-siquei">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infero quod haec unio est infinita 
+              <lb ed="#SV"/>et summa Rectitudo patet quia ipsa est raptus in divinam bonitatem et hoc 
+              <lb ed="#SV"/>infinite supra quamlibet Rectitudinem igitur illa unio est infinita.
+            </p>
+            <p xml:id="l132-tsqmeb">
+              <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur quod haec 
+              <lb ed="#SV"/>benedicta unio est formaliter beatitudo <g ref="#slash"/>patet quia ipsa est <choice><orig>suppremus</orig><reg>supremus</reg></choice> gradus 
+              <lb ed="#SV"/>attingendi perfecte summum bonum, scilicet, ultimum finem igitur ipsa maxime 
+              <lb ed="#SV"/>est beatitudo.
+            </p>
+            <p xml:id="l132-qsqebs">
+              <g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sequitur quod beatitudo humanitatis christi non dependet ab anima 
+              <lb ed="#SV"/>vel humanitate, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> econverso humanitas christi dependet a beatitudine et eius 
+              <lb ed="#SV"/>subsistentia est beatifica simpliciter
+            </p>
+            <p xml:id="l132-qsqoep">
+              <g ref="#dbslash"/><choice><orig>5o</orig><reg>quinto</reg></choice> sequitur quod vi huius unionis huma<lb ed="#SV" break="no"/>nitas 
+              est potens respectu cuiuscumque effectus productionis, <g ref="#slash"/><choice><orig>ymo</orig><reg>immo</reg></choice> est de facto causa 
+              <lb ed="#SV"/>cuiuslibet effectus patet quia humanitas sic est in deum Rapta quod omnis 
+              <lb ed="#SV"/><choice><orig>volicio</orig><reg>volitio</reg></choice> dei est sibi volitio et cognitio et quidquid a verbo fit 
+              <lb ed="#SV"/>ab humanitate fit, <g ref="#slash"/>et sic apparet quod ex parte Regiminis totalis spiritualis in 
+              <lb ed="#SV"/>ecclesia militante, <g ref="#slash"/>vel in Regimine naturali et poletico[?] naturali ac orbium 
+              <lb ed="#SV"/>caelestium et alterationum ipsa est causa universaliter immediate sub deo or<lb ed="#SV" break="no"/>dinata 
+              ad omnium effectuum productionem
+            </p>
+            <p xml:id="l132-eqpedh">
+              <g ref="#dbslash"/>Ex quo patet quod in primo instan<lb ed="#SV" break="no"/>ti 
+              suae conceptionis humanitas habuit divinum supra astra et ad 
+              <lb ed="#SV"/>omnes causas <choice><orig>2as</orig><reg>secundas</reg></choice> concurrentes ad sui conceptionem. patet ex universali illapsu 
+              <lb ed="#SV"/>quo et omnia quae deus vult, <g ref="#slash"/>vult et omnia quae deus cognoscit, cognoscit 
+              <lb ed="#SV"/>nam deus communicavit sibi scientiam omnem quae verbum scit, <g ref="#slash"/>ideo dicit <name ref="#RichardOfStVictor">ricardus</name> 
+              <lb ed="#SV"/>quod ex hoc consurgit omnipotentia, quia eius potentia est per velle divinum im<lb ed="#SV" break="no"/>perativum 
+              et stante huiusmodi unione illud velle est infrustrabile 
+              <pb ed="#SV" n="368-v"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>et ex hoc salvatur quod nullus <del rend="strikethrough">stante huiusmodi unitive[?]</del> angelus quantumcumque perfectus 
+              <lb ed="#SV"/>posset ad aequalitatem beatitudinis animae christi pertingere nisi per unitionem <choice><orig>ypostaticam</orig><reg>hypostaticam</reg></choice> 
+              <lb ed="#SV"/>patet quia ille est <choice><orig>suppremus</orig><reg>supremus</reg></choice> gradus perfectionis communicabilis, <g ref="#slash"/>unde <name ref="#Augustine">augustinus</name> in re<lb ed="#SV" break="no"/>bus 
+              per tempus ortis non fuit maior gratia, scilicet, humanitatis[?] gratificatione quando 
+              <lb ed="#SV"/>homo factus est deus et deus homo.
+            </p>
+            <p xml:id="l132-eehaee">
+              <g ref="#slash"/>et ex hoc potest salvari quod beata virgo 
+              <lb ed="#SV"/>habeat <choice><orig>suppremum</orig><reg>supremumm</reg></choice> gradum gloriae sibi communicabilem creabilem et tamen non est ita 
+              <lb ed="#SV"/>beata sicut christus, <g ref="#slash"/>nam difficultas est inter doctores supposito[?] quod in eadem specie 
+              <lb ed="#SV"/>unum suppositum non sit alio essentialiter perfectius, <g ref="#slash"/>videtur quod virgo dicitur plena 
+              <lb ed="#SV"/>gratia et innumerabilibus bonis et donis gratuita quomodo igitur gloria eius 
+              <lb ed="#SV"/>non adaequabitur christi gloriae, <g ref="#slash"/>hic dicitur quod gloria increata est communicata animae christi 
+              <lb ed="#SV"/>et virgini gloriose est communicata beatitudo creata <g ref="#slash"/>ratione cuius super choros ange<lb ed="#SV" break="no"/>lorum 
+              est exaltata.
+            </p>
+          </div>
           <div>
             <head xml:id="l132-Hosiosi">Opinio Scoti</head>
-            <p xml:id="l132-cthsvs"><g ref="#dbslash"/>Contra tamen hanc positionem arguit <name ref="#Scotus">scotus</name>, <g ref="#slash"/>unde 
+            <p xml:id="l132-cthsvs">
+              <g ref="#dbslash"/>Contra tamen hanc positionem arguit <name ref="#Scotus">scotus</name>, <g ref="#slash"/>unde 
               <lb ed="#SV"/><choice><orig>oppinio</orig><reg>opinio</reg></choice> communis aliter dicit quod unio <choice><orig>ypostatica</orig><reg>hypostatica</reg></choice> est praecise subsistentia naturae eo 
               <lb ed="#SV"/>quod verbum praecise supplet vicem suppositi creati quo ad suppositationem[?] 
               <lb ed="#SV"/>et vi unionis <choice><orig>ypostatice</orig><reg>hypostatice</reg></choice> praecise natura divina nihil communicat humanitati nisi quia 
@@ -430,14 +500,16 @@
               <lb ed="#SV"/>exeat in actum, <g ref="#slash"/>et sic apparet quod si ipsa esset denudata quod sufficit operare 
               <lb ed="#SV"/>eo quod actiones sunt suppositorum et ipsa esset suppositum, <g ref="#slash"/>et cum quaelibet 
               <lb ed="#SV"/>res subsistat et possit in eius <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> videtur quod divina natura 
-              <lb ed="#SV"/>in illa unione praecise suppleat vicem suppositi.</p>
-        
-            <p xml:id="l132-airlps"><g ref="#dbslash"/>Ad illud Respondetur negando consequentiam 
+              <lb ed="#SV"/>in illa unione praecise suppleat vicem suppositi.
+            </p>
+            <p xml:id="l132-airlps">
+              <g ref="#dbslash"/>Ad illud Respondetur negando consequentiam 
               <lb ed="#SV"/>quia subsistentia aliena non potest esse nisi infinita <g ref="#slash"/>virtute cuius verbum concurrit 
               <lb ed="#SV"/>infinito, <g ref="#slash"/>modo vi huiusmodi unionis <choice><orig>ypostatice</orig><reg>hypostatice</reg></choice> verbum communicat creaturae non solum 
-              <lb ed="#SV"/><choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>, sed denominationes concretivas communicat naturae humanae licet possit separari.</p>
-        
-            <p xml:id="l132-scasnc"><lb ed="#SV"/><g ref="#dbslash"/>Sed contra arguitur quia concessi quod deus poterit esse subsistentia creaturae irrationabilis conceditur 
+              <lb ed="#SV"/><choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice>, sed denominationes concretivas communicat naturae humanae licet possit separari.
+            </p>
+            <p xml:id="l132-scasnc">
+              <lb ed="#SV"/><g ref="#dbslash"/>Sed contra arguitur quia concessi quod deus poterit esse subsistentia creaturae irrationabilis conceditur 
               <lb ed="#SV"/>igitur ipsa beatificatur nego consequentiam et causa est quia licet deus communicet se 
               <lb ed="#SV"/>uniformiter creaturae rationali et irrationali, <g ref="#slash"/>tamen naturaliter intellectus est capax beatitudinis 
               <lb ed="#SV"/>et irrationalis creatura non, <g ref="#slash"/>licet hoc non sit vi <g ref="#slash"/>nec ex parte communicationis 
@@ -445,7 +517,8 @@
               <lb ed="#SV"/>cognitio posita in intellectu immutat vitaliter potentiam intellectivam 
               <lb ed="#SV"/>et tamen si poneretur in lapide non eum immutaret vitaliter quia lapis 
               <lb ed="#SV"/>nihil per eam cognosceret, <g ref="#slash"/>nec est lapis alicuius perceptivus <g ref="#slash"/>et sic apparet 
-              <lb ed="#SV"/>quod <choice><orig>oppinio</orig><reg>opinio</reg></choice> <name ref="#Scotus">scoti</name> non concludit.</p>
+              <lb ed="#SV"/>quod <choice><orig>oppinio</orig><reg>opinio</reg></choice> <name ref="#Scotus">scoti</name> non concludit.
+            </p>
           </div>
         </div>
       </div>

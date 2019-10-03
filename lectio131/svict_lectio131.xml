@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,66 +10,80 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.04-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 131, de Incarnatione [St. Victor Transcription]</title>
           <date when="2013-04-03">April 3, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</ref></p>
         </availability>
-        <date when="2013-04-03">April 03, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV">St. Victor</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
-  </teiHeader>    <facsimile>
-  </facsimile>
+    <encodingDesc>
+      <schemaRef n="lbp-diplomatic-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/diplomatic.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a diplomatic edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-04-03" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
   <text xml:lang="la">
-      <front>
-        <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-          <xi:fallback>
-            <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-          </xi:fallback>
-        </xi:include>
-      </front>
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="365-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio131">
-      <head xml:id="l131-Hldildi" subtype="title">Lectio 131, de Incarnatione [St. Victor Transcription]</head>
+      <head xml:id="l131-Hldildi">Lectio 131, de Incarnatione [St. Victor Transcription]</head>
         <div>
           <head xml:id="l131-Hprotio">Propositio</head>
-          <p xml:id="l131-ppcmpm"><lb ed="#SV"/>Primo ponam conclusionem fidei in hac materia 
+          <p xml:id="l131-ppcmpm">
+            <lb ed="#SV"/>Primo ponam conclusionem fidei in hac materia 
             <lb ed="#SV"/>ex qua inferetur contra aliquos errores. <g ref="#slash"/>deinde 
-            <lb ed="#SV"/>veniam ad magis particularizandum[?] materiam.</p>
-          
-          <p xml:id="l131-picepg"><g ref="#slash"/>propositio 
+            <lb ed="#SV"/>veniam ad magis particularizandum[?] materiam.
+          </p>
+          <p xml:id="l131-picepg">
+            <g ref="#slash"/>propositio 
             <lb ed="#SV"/>igitur catholice tenenda est hoc sicut christus iesus 
             <lb ed="#SV"/>verus dei filius a patre per generationem procedit 
             <lb ed="#SV"/>aeternaliter sic idem filius virginis gloriose ex 
-            <lb ed="#SV"/>nostrae processit temporaliter et <choice><orig>eciam</orig><reg>etiam</reg></choice> per generationem.</p>
-        
-          <p xml:id="l131-aipdfa"><lb ed="#SV"/>Ad istam propositionem <sic>bismembrem</sic> facit se<lb ed="#SV"/>ries 
+            <lb ed="#SV"/>nostrae processit temporaliter et <choice><orig>eciam</orig><reg>etiam</reg></choice> per generationem.
+          </p>
+          <p xml:id="l131-aipdfa">
+            <lb ed="#SV"/>Ad istam propositionem <sic>bismembrem</sic> facit se<lb ed="#SV" break="no"/>ries 
             <choice><orig>euvangelica</orig><reg>evangelica</reg></choice> <title ref="#JohnGospel">Iohannes</title> primo nisi postquam ostensa 
             <lb ed="#SV"/>est aeterna generatio christi et quod omnia per ipsum facta 
             <lb ed="#SV"/>sunt ostendit euvangelica[?] temporalem generationem cum ait 
             <lb ed="#SV"/><quote xml:id="dIl128vcfcfv" type="Biblical">verbum carum factum est</quote>, <g ref="#slash"/>ubi inquam docetur temporalis 
             <lb ed="#SV"/>generatio ex nostrae virgine gloriosa, <g ref="#slash"/>quam generationem 
-            <lb ed="#SV"/>quo ad utrumque modum ostendit <title ref="#Isaiah">ysaias</title> inenar<lb ed="#SV"/>rabilem, 
-            <title ref="#Isaiah">ysa</title> <g ref="#dot"/>50 <g ref="#dot"/>53 <g ref="#dot"/> generationem eius quis enar<lb ed="#SV"/>rabit, 
+            <lb ed="#SV"/>quo ad utrumque modum ostendit <title ref="#Isaiah">ysaias</title> inenar<lb ed="#SV" break="no"/>rabilem, 
+            <title ref="#Isaiah">ysa</title> <g ref="#dot"/>50 <g ref="#dot"/>53 <g ref="#dot"/> generationem eius quis enar<lb ed="#SV" break="no"/>rabit, 
             <g ref="#slash"/>et hoc est propter difficultatem ad utrumque 
             <lb ed="#SV"/>modum emanationis ad intra et generationis ad 
             <lb ed="#SV"/>extra temporaliter, <g ref="#slash"/>quam quid non via humana, sed 
-            <lb ed="#SV"/>spiritus sanctus revelante <name ref="#Paul">apostolus</name> confessus est, scilicet, <name ref="#Petrus">petrus</name> di<lb ed="#SV"/>cens 
+            <lb ed="#SV"/>spiritus sanctus revelante <name ref="#Paul">apostolus</name> confessus est, scilicet, <name ref="#Petrus">petrus</name> di<lb ed="#SV" break="no"/>cens 
             <g ref="#slash"/>tu es christus filius dei vim[?], <g ref="#slash"/>et haec conclusio 
             <lb ed="#SV"/>ad modum emanationis aeternalem a patre, <g ref="#slash"/>sed 
             <lb ed="#SV"/>quo ad utrumque modum emanationis scribitur <title ref="#PhillipiansEpistle">ad phillipians[?]</title> 
-            <cb ed="#SV" n="366ra"/><lb ed="#SV"/>2o cum in forma dei esset non Rapinam arbitratus 
+            <pb ed="#SV" n="366-r"/>
+            <cb ed="#SV" n="a"/>
+            <lb ed="#SV"/>2o cum in forma dei esset non Rapinam arbitratus 
             <lb ed="#SV"/>est se esse aequalem deo <g ref="#slash"/>formam serni[?] accipiens 
             <lb ed="#SV"/>factum de muliere, <g ref="#slash"/>et hoc ipse salvator ostendit 
             <lb ed="#SV"/>quo ad <choice><orig>2am</orig><reg>secundam</reg></choice> generationem, <g ref="#slash"/>pater maior me est <g ref="#slash"/>et 
@@ -77,73 +91,84 @@
             <lb ed="#SV"/>et omnia ista christo conveniunt secundum naturam assumptam, <g ref="#slash"/>sed 
             <lb ed="#SV"/>quantum ad aequalitatem, <g ref="#slash"/>ait <g ref="#dot"/> ego et pater unum sumus 
             <lb ed="#SV"/>et ideo ostendit in illa consequentia <name ref="#Aristotle">philosopho</name> facta <g ref="#slash"/>cum inquit 
-            <lb ed="#SV"/><name>philippe[?]</name>, <g ref="#slash"/>qui videt me videt et patrem et illud dicit contra ali<lb ed="#SV"/>quos 
-            haereticos dicentes christum esse dei filium ado<lb ed="#SV"/>ptivum.</p>
-        
-          <p xml:id="l131-iaoaca"><g ref="#slash"/>Item ait omnia <name>ihesus[?]</name> omnia quae habet pater 
+            <lb ed="#SV"/><name>philippe[?]</name>, <g ref="#slash"/>qui videt me videt et patrem et illud dicit contra ali<lb ed="#SV" break="no"/>quos 
+            haereticos dicentes christum esse dei filium ado<lb ed="#SV" break="no"/>ptivum.
+          </p>
+          <p xml:id="l131-iaoaca">
+            <g ref="#slash"/>Item ait omnia <name>ihesus[?]</name> omnia quae habet pater 
             <lb ed="#SV"/>mea sunt. <g ref="#slash"/>Item illud apparet ex eius operatione et 
             <lb ed="#SV"/>miraculorum virtute propria et Remissione peccatorum 
             <lb ed="#SV"/>et ista numquam possunt esse a creatura pura, <g ref="#slash"/>et illud 
-            <lb ed="#SV"/>patet ex ipsius Resurrectione et ad caelos ascensione.</p>
+            <lb ed="#SV"/>patet ex ipsius Resurrectione et ad caelos ascensione.
+          </p>
         </div>
         <div>
           <head xml:id="l131-Hccecce">Corollaria: contra errores</head>
           <div>
             <head xml:id="l131-Hpceehp">Primum: contra errorem assentium christum esse hominem purum</head>
-            <p xml:id="l131-eqagap"><lb ed="#SV"/>Ex quo apparet primo error <name>ebronis[?]</name> et <name ref="#PaulOfSamosata">pauli 
+            <p xml:id="l131-eqagap">
+              <lb ed="#SV"/>Ex quo apparet primo error <name>ebronis[?]</name> et <name ref="#PaulOfSamosata">pauli 
               <lb ed="#SV"/>samositani</name> assentientium christum esse hominem purum, 
               <lb ed="#SV"/>sed participatione divinae maiestatis et gratiae denominatur 
               <lb ed="#SV"/>esse deus more antiquorum philosophorum quia nedum scriptura 
               <lb ed="#SV"/>dicit <g ref="#slash"/>ego dixi dii estis et filii excelsi omnes, 
-              <lb ed="#SV"/><g ref="#slash"/>sed <choice><orig>eciam</orig><reg>etiam</reg></choice> apud gentiles <name ref="#Homer">omerus</name> dicit <name ref="#Hector">hechorem</name>, <name ref="#Priam">pria<lb ed="#SV"/>mi</name> 
-              filium esse quasi dei filium propter virtutis <choice><orig>exce<lb ed="#SV"/>llenciam</orig><reg>exce<lb ed="#SV"/>llentiam</reg></choice>, 
+              <lb ed="#SV"/><g ref="#slash"/>sed <choice><orig>eciam</orig><reg>etiam</reg></choice> apud gentiles <name ref="#Homer">omerus</name> dicit <name ref="#Hector">hechorem</name>, <name ref="#Priam">pria<lb ed="#SV" break="no"/>mi</name> 
+              filium esse quasi dei filium propter virtutis <choice><orig>exce<lb ed="#SV" break="no"/>llenciam</orig><reg>exce<lb ed="#SV" break="no"/>llentiam</reg></choice>, 
               <choice><orig>ymo</orig><reg>immo</reg></choice> virtutem heroicam habentes deos 
               <lb ed="#SV"/>vocabant gentiles ut apparet ex decimo <name ref="#Ethics">ethicorum</name> 
               <lb ed="#SV"/>ut ponitur exemplum de <name ref="#Homer">omero</name> narrante <name ref="#Hector">hethorem</name> 
               <lb ed="#SV"/>esse deum, <g ref="#slash"/>sed ex probationibus prius <choice><orig>addutis</orig><reg>adductis</reg></choice> apparet quod 
               <lb ed="#SV"/>ille error est malus, <g ref="#slash"/>nam dicit christus, <g ref="#slash"/>exivi a 
               <lb ed="#SV"/>patre, scilicet, per aeternam generationem <g ref="#slash"/>Si dicatur quod intelligitur 
-              <lb ed="#SV"/>de temporali processione hoc est falsum cum dicit sal<lb ed="#SV"/>vator 
-              alibi <name ref="#Jews">Iudaeis</name> Respondendo antequam <name ref="#Abraham">abra<lb ed="#SV"/>ham</name> 
+              <lb ed="#SV"/>de temporali processione hoc est falsum cum dicit sal<lb ed="#SV" break="no"/>vator 
+              alibi <name ref="#Jews">Iudaeis</name> Respondendo antequam <name ref="#Abraham">abra<lb ed="#SV" break="no"/>ham</name> 
               fieret ego sum ubi <del rend="strikethrough">e</del> inevitabiliter christus 
-              <lb ed="#SV"/>dicit se fuisse ante eius incarnationem.</p> 
-            
-            <p xml:id="l131-iivgap">Item <title ref="#JohnGospel">Iohannes</title> 
+              <lb ed="#SV"/>dicit se fuisse ante eius incarnationem.
+            </p> 
+            <p xml:id="l131-iivgap">
+              Item <title ref="#JohnGospel">Iohannes</title> 
               <lb ed="#SV"/><g ref="#dot"/>16<g ref="#dot"/> vado ad eum qui me misit <g ref="#slash"/>quod intelligitur 
-              <lb ed="#SV"/>de aeterno generatione a patre.</p>
-        
-            <p xml:id="l131-ianphp"><g ref="#dbslash"/>Item ait nemo 
+              <lb ed="#SV"/>de aeterno generatione a patre.
+            </p>
+            <p xml:id="l131-ianphp">
+              <g ref="#dbslash"/>Item ait nemo 
               <lb ed="#SV"/>ascendit in caelum nisi qui descendit de caelo filius 
               <lb ed="#SV"/>hominis quidquid descensus non fuit per modum localem 
               <lb ed="#SV"/>sed per naturae inferioris assumptionem. <g ref="#slash"/>Ex quibus omnibus 
-              <lb ed="#SV"/>pellitur haeresis praedicta.</p>
+              <lb ed="#SV"/>pellitur haeresis praedicta.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hscmscm">Secundum: contra Manichaeos</head>
-            <p xml:id="l131-sicqef"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infertur contra mani<lb ed="#SV"/>chaeos 
+            <p xml:id="l131-sicqef">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> infertur contra mani<lb ed="#SV" break="no"/>chaeos 
               dicentes quod christus non assumpsit sibi 
               <lb ed="#SV"/>corpus verum, sed praecise fantasticum, id est, apparens 
               <lb ed="#SV"/>ita quod christus solum <choice><orig>aparebat</orig><reg>apparet</reg></choice> habere corpus licet 
               <lb ed="#SV"/>non haberet <g ref="#slash"/>et ideo forte ipse glosarent 
-              <lb ed="#SV"/>scripturam dicentes quod scriptura debet capi similitu<lb ed="#SV"/>dinarie 
-              <g ref="#slash"/>ut christus aliquando vocatur leo propter simili<lb ed="#SV"/>tudinem, 
+              <lb ed="#SV"/>scripturam dicentes quod scriptura debet capi similitu<lb ed="#SV" break="no"/>dinarie 
+              <g ref="#slash"/>ut christus aliquando vocatur leo propter simili<lb ed="#SV" break="no"/>tudinem, 
               sed hoc Repellitur, quia scriptura numquam 
               <lb ed="#SV"/>conformiter loquitur de similitudinibus quin statim 
-              <lb ed="#SV"/><lb ed="#SV"/>post appareat illas esse similitudines 
-              <cb ed="#SV" n="366rb"/><lb ed="#SV"/>et non secundum veritatem ut patet in figura de tribus in specie 
+              <lb ed="#SV"/>post appareat illas esse similitudines 
+              <cb ed="#SV" n="b"/><!--366rb-->
+              <lb ed="#SV"/>et non secundum veritatem ut patet in figura de tribus in specie 
               <lb ed="#SV"/>virorum apparentibus <name>abrahae</name> statim in littera sequitur 
-              <lb ed="#SV"/>quod unum adoravit <g ref="#slash"/>ex quo apparet quod licet trinitas sub simil<lb ed="#SV"/>tudine 
-              virorum apparuit, <g ref="#slash"/>tamen sequitur evidenter in littera quod erit figura.</p>
-        
-            <p xml:id="l131-schhvc"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> contra hanc haeresim scribitur luce ultimo 
+              <lb ed="#SV"/>quod unum adoravit <g ref="#slash"/>ex quo apparet quod licet trinitas sub simil<lb ed="#SV" break="no"/>tudine 
+              virorum apparuit, <g ref="#slash"/>tamen sequitur evidenter in littera quod erit figura.
+            </p>
+            <p xml:id="l131-schhvc">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> contra hanc haeresim scribitur luce ultimo 
               <lb ed="#SV"/>quod christus apparens suis discipulis expresse iussit ut 
               <lb ed="#SV"/>eum palparent dicens eis quod spiritus carnem et ossa 
               <lb ed="#SV"/>non habet, et hoc fecit ad <del rend="strikethrough">Resolvendum</del> refellendum 
-              <lb ed="#SV"/>errorem hunc ut ostenderet se habere verum corpus.</p>
+              <lb ed="#SV"/>errorem hunc ut ostenderet se habere verum corpus.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Htcecsa">Tertium: contra errorem quod christus corpus caeleste sibi assumpsit</head>
-            <p xml:id="l131-taessa"><lb ed="#SV"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> apparet error <name ref="#Valentius">valentinam[?]</name> dicentis quod <del rend="strikethrough">q</del> christus corpus 
+            <p xml:id="l131-taessa">
+              <lb ed="#SV"/><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> apparet error <name ref="#Valentius">valentinam[?]</name> dicentis quod <del rend="strikethrough">q</del> christus corpus 
               <lb ed="#SV"/>caeleste sibi assumpsit, <g ref="#slash"/>et de virgine gloriosa non, 
               <lb ed="#SV"/>et iste error et praecendum[?] qui est <name ref="#Manicheans">manicheorum</name> ex eadem 
               <lb ed="#SV"/>Radice pulularunt, <g ref="#slash"/>et tenuerunt quod sunt duo 
@@ -155,110 +180,126 @@
               expugnaret Reciperet materiam sibi subiectam, <g ref="#slash"/>sed illud 
               <lb ed="#SV"/>Repellitur a scriptura, <g ref="#slash"/>et eo quod concedebant se esse christianos 
               <lb ed="#SV"/>ideo omnes scripturas novae legis Receperunt <g ref="#slash"/>et reprobantur 
-              <lb ed="#SV"/>in hoc quod scribitur <title ref="#RomansEpistle">ad Romanos</title><g ref="#dot"/> primo christus factus est ex se<lb ed="#SV"/>mine 
+              <lb ed="#SV"/>in hoc quod scribitur <title ref="#RomansEpistle">ad Romanos</title><g ref="#dot"/> primo christus factus est ex se<lb ed="#SV" break="no"/>mine 
               <name ref="#David">david</name> secundum carnem et ergo hoc est per communicationem 
               <lb ed="#SV"/>corporis eiusdem speciei, <g ref="#slash"/><choice><orig>2o</orig><reg/></choice> <name ref="#Paul">apostolus</name> vocat christum factum ex 
               <lb ed="#SV"/>muliere igitur hoc est de virgine gloriosa. <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> <title ref="#EphesiansEpistle">ad ephesianos</title> <g ref="#dot"/> 
-              <lb ed="#SV"/><choice><orig>2o</orig><reg>IIo</reg></choice> angelum nusquam apprehendit sed semen <name ref="#Abraham">abrahae</name>.</p>
+              <lb ed="#SV"/><choice><orig>2o</orig><reg>IIo</reg></choice> angelum nusquam apprehendit sed semen <name ref="#Abraham">abrahae</name>.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hqcesva">Quartum: contra errorem antiquorum dicentium deitatem supplere vicem animae</head>
-            <p xml:id="l131-sqesgf">Sequitur quartus error antiquorum <choice><orig>dicencium</orig><reg>dicentium</reg></choice> deitatem 
+            <p xml:id="l131-sqesgf">
+              <lb ed="#SV"/>Sequitur quartus error antiquorum <choice><orig>dicencium</orig><reg>dicentium</reg></choice> deitatem 
               <lb ed="#SV"/>supplere vicem animae <g ref="#slash"/>ita quod <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> christum componi 
               <lb ed="#SV"/>ex corpore et deitate sed illud est falsum quia deus non esset 
-              <lb ed="#SV"/>homo eo quod deitas non est communicabilis secundum gradum finitum.</p>
+              <lb ed="#SV"/>homo eo quod deitas non est communicabilis secundum gradum finitum.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hqceten">Quintum: contra errorem Theodori[?] et Nestorii</head>
-            <p xml:id="l131-pqeesc"><g ref="#slash"/>patet <choice><orig>5us</orig><reg>quintus</reg></choice> error <name>teodori monesceni[?]</name> et <name ref="#Nestorius">nestorii</name> se<lb ed="#SV"/>ctatoris 
+            <p xml:id="l131-pqeesc">
+              <g ref="#slash"/>patet <choice><orig>5us</orig><reg>quintus</reg></choice> error <name>teodori monesceni[?]</name> et <name ref="#Nestorius">nestorii</name> se<lb ed="#SV" break="no"/>ctatoris 
               eius <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod christus est homo sed conceditur esse deus quia 
               <lb ed="#SV"/>est templum dei in quo singularissime habitat tota deitas, 
               <lb ed="#SV"/><g ref="#slash"/>et ideo dicunt quod virgo gloriosa <g ref="#slash"/>non dicitur proprie mater 
               <lb ed="#SV"/>dei sed hominis, <g ref="#slash"/>nam licet praedicta deo competentia attribuantur christo 
               <lb ed="#SV"/>non tamen econverso, <g ref="#slash"/>Ita quod isti concedunt quod christus est deus et 
-              <lb ed="#SV"/>dominus gloriae et sanctus sanctorum, <g ref="#slash"/>non tamen conceditur, <g ref="#slash"/>non tamen conce<lb ed="#SV"/>dunt 
+              <lb ed="#SV"/>dominus gloriae et sanctus sanctorum, <g ref="#slash"/>non tamen conceditur, <g ref="#slash"/>non tamen conce<lb ed="#SV" break="no"/>dunt 
               quod deus sit passus vel mortuus[?] vel de virgine 
-              <lb ed="#SV"/>natus <g ref="#slash"/>contra quem <name ref="#nestorius">nestorium</name> processit <name ref="#Cyril">cirilus alexan<lb ed="#SV"/>drinorum 
+              <lb ed="#SV"/>natus <g ref="#slash"/>contra quem <name ref="#nestorius">nestorium</name> processit <name ref="#Cyril">cirilus alexan<lb ed="#SV" break="no"/>drinorum 
                 episcopus</name> et fecit <seg type="subject" ana="#consiliumgenerale">consilium generale</seg> congregari 
               <lb ed="#SV"/>in quo determinatum fuit quod virgo deum genuit et realiter 
               <lb ed="#SV"/>est mater, <g ref="#slash"/>et quod persona dei et hominis sunt unica persona 
               <lb ed="#SV"/>et quod homo vere est deus, <g ref="#slash"/>et deus est homo, <g ref="#slash"/>et sic nedum ex 
               <lb ed="#SV"/>scriptura prius inducta convincitur <name ref="#Nestorius">nestorius</name>, <g ref="#slash"/>sed etiam 
-              <lb ed="#SV"/>ex ecclesiae <choice><orig>solempniter</orig><reg>solemniter</reg></choice> congregata.</p>
+              <lb ed="#SV"/>ex ecclesiae <choice><orig>solempniter</orig><reg>solemniter</reg></choice> congregata.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hscednc">Sextum: contra errorem quod christus non in duabus naturis consistit</head>
-            <p xml:id="l131-sseevh"><g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> sequitur error <name>eu<cb ed="#SV" n="366va"/><lb ed="#SV"/>ticis</name> 
+            <p xml:id="l131-sseevh">
+              <g ref="#dbslash"/><choice><orig>6o</orig><reg>sexto</reg></choice> sequitur error <name>eu<pb ed="#SV" n="366-v"/><cb ed="#SV" n="a"/><lb ed="#SV" break="no"/>ticis</name> 
               ex caracteribus litterarum ponentis quod licet christus ex duabus 
-              <lb ed="#SV"/>naturis sit una persona consistens non tamen in duabus na<lb ed="#SV"/>turis 
-              <choice><orig>consiscit</orig><reg>consistit</reg></choice>, <g ref="#slash"/>contra quod <name ref="#Boethius">boecius</name> edidit librum de dua<lb ed="#SV"/>bus 
+              <lb ed="#SV"/>naturis sit una persona consistens non tamen in duabus na<lb ed="#SV" break="no"/>turis 
+              <choice><orig>consiscit</orig><reg>consistit</reg></choice>, <g ref="#slash"/>contra quod <name ref="#Boethius">boecius</name> edidit librum de dua<lb ed="#SV" break="no"/>bus 
               naturis in persona christi, <g ref="#slash"/>unde iste error <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> 
               <lb ed="#SV"/>ad salvandum unitatem personae quod duae naturae ibi concurrunt 
-              <lb ed="#SV"/>pure <choice><orig>ydemptitace</orig><reg>identitate</reg></choice> et sic licet christus ex duabus naturis sub<lb ed="#SV"/>sistat, 
+              <lb ed="#SV"/>pure <choice><orig>ydemptitace</orig><reg>identitate</reg></choice> et sic licet christus ex duabus naturis sub<lb ed="#SV" break="no"/>sistat, 
               <g ref="#slash"/>non tamen in duabus eo quod illae duae naturae <choice><orig>ydemptice</orig><reg>identice</reg></choice> 
               concurrunt in unitatem suppositi. <g ref="#dbslash"/>contrarium tamen est verum quia nisi 
-              <lb ed="#SV"/>sic tunc christus non esset verus homo.</p>
+              <lb ed="#SV"/>sic tunc christus non esset verus homo.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hscehis">Septimum: contra errorem quod filius dei assumpsit sibi hominem identitatum sibi</head>
-            <p xml:id="l131-safems"><g ref="#dbslash"/><choice><orig>7mo</orig><reg>septimo</reg></choice> apparet falistas <choice><orig>oppinio<lb ed="#SV"/>nis</orig><reg>opinio<lb ed="#SV"/>nis</reg></choice> 
+            <p xml:id="l131-safems">
+              <g ref="#dbslash"/><choice><orig>7mo</orig><reg>septimo</reg></choice> apparet falistas <choice><orig>oppinio<lb ed="#SV" break="no"/>nis</orig><reg>opinio<lb ed="#SV" break="no"/>nis</reg></choice> 
               <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod filius dei assumpsit sibi hominem <choice><orig>ydemptitatum[?]</orig><reg>identitatum[?]</reg></choice> 
-              <lb ed="#SV"/>sibi, <g ref="#slash"/>et licet haec <choice><orig>oppinio</orig><reg>opinio</reg></choice> non ponatur inter haereses, <g ref="#slash"/>re<lb ed="#SV"/>puto 
-              tamen quod sit falsa, <g ref="#slash"/>est tamen <name ref="#Moderni">modernorum</name> quorum <choice><orig>yma<lb ed="#SV"/>ginatio</orig><reg>ima<lb ed="#SV"/>ginatio</reg></choice> 
-              est multum subtilis.</p> 
-          
-            <p xml:id="l131-ehvaee"><g ref="#slash"/>et hanc viam Recitat <name ref="#WilliamOfAuxerre">guillelmus 
+              <lb ed="#SV"/>sibi, <g ref="#slash"/>et licet haec <choice><orig>oppinio</orig><reg>opinio</reg></choice> non ponatur inter haereses, <g ref="#slash"/>re<lb ed="#SV" break="no"/>puto 
+              tamen quod sit falsa, <g ref="#slash"/>est tamen <name ref="#Moderni">modernorum</name> quorum <choice><orig>yma<lb ed="#SV" break="no"/>ginatio</orig><reg>ima<lb ed="#SV" break="no"/>ginatio</reg></choice> 
+              est multum subtilis.
+            </p> 
+            <p xml:id="l131-ehvaee">
+              <g ref="#slash"/>et hanc viam Recitat <name ref="#WilliamOfAuxerre">guillelmus 
               <lb ed="#SV"/>altissiodorensis</name> dicens illam fuisse archiepiscopi caenomen[?], <g ref="#slash"/>licet 
               <lb ed="#SV"/>videatur ad eam declinare partem, <g ref="#slash"/>unde <choice><orig>ymaginatur</orig><reg>imaginatur</reg></choice> quod <name ref="#Christ">christus 
-                <lb ed="#SV"/>ihesus[?]</name> natus de virgine est homo, <g ref="#slash"/>et videntur <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> 
-              <lb ed="#SV"/>quod humanitas christi veraciter sit homo et persona. <g ref="#slash"/>Deinde <choice><orig>yma<lb ed="#SV"/>ginatur</orig><reg>ima<lb ed="#SV"/>ginatur</reg></choice> 
+              <lb ed="#SV"/>ihesus[?]</name> natus de virgine est homo, <g ref="#slash"/>et videntur <choice><orig>ymaginari</orig><reg>imaginari</reg></choice> 
+              <lb ed="#SV"/>quod humanitas christi veraciter sit homo et persona. <g ref="#slash"/>Deinde <choice><orig>yma<lb ed="#SV" break="no"/>ginatur</orig><reg>ima<lb ed="#SV" break="no"/>ginatur</reg></choice> 
               quod verbum dei sibi univit taliter illum hominem quod 
               <lb ed="#SV"/>verbum et homo sunt Realiter eadem persona et una persona 
-              <lb ed="#SV"/>sit alia et econverso.</p>
-        
-            <p xml:id="l131-scipdc"><g ref="#dbslash"/>Sed contra istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> arguitur primo 
+              <lb ed="#SV"/>sit alia et econverso.
+            </p>
+            <p xml:id="l131-scipdc">
+              <g ref="#dbslash"/>Sed contra istam <choice><orig>oppinionem</orig><reg>opinionem</reg></choice> arguitur primo 
               <lb ed="#SV"/>nam data ista via sequitur quod quaelibet creatura mundi posset 
-              <lb ed="#SV"/>fieri deus et inciperet esse deus quia qua ratione verbum <choice><orig>ydemp<g ref="#slash"/>tificat</orig><reg>iden<lb ed="#SV"/>tificat</reg></choice> 
+              <lb ed="#SV"/>fieri deus et inciperet esse deus quia qua ratione verbum <choice><orig>ydemp<g ref="#slash"/>tificat</orig><reg>iden<lb ed="#SV" break="no"/>tificat</reg></choice> 
               sibi unam creaturam eadem ratione et quamlibet 
               <lb ed="#SV"/>posset sibi <choice><orig>ydemptificare</orig><reg>identificare</reg></choice> <g ref="#slash"/>et tunc sequitur quod quaelibet creatura 
               <lb ed="#SV"/>posset esse beata independens <g ref="#slash"/>et quod materia prima posset 
               <lb ed="#SV"/>esse beatifica et purus actus et immensus. <g ref="#slash"/>Ex quo sequitur quod omnia 
               <lb ed="#SV"/>praedicata imperfectonalia[?] cuilibet creatura communicata possent deo 
-              <lb ed="#SV"/>competere.</p>
-        
-            <p xml:id="l131-ssqdpa"><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur quod deus esset Realiter <del rend="strikethrough">al</del> <choice><orig>anihilabilis</orig><reg>annihilabilis</reg></choice>, <g ref="#slash"/>patet quia 
+              <lb ed="#SV"/>competere.
+            </p>
+            <p xml:id="l131-ssqdpa">
+              <g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> sequitur quod deus esset Realiter <del rend="strikethrough">al</del> <choice><orig>anihilabilis</orig><reg>annihilabilis</reg></choice>, <g ref="#slash"/>patet quia 
               <lb ed="#SV"/>homo christus est Realiter <choice><orig>anihilabilis</orig><reg>annihilabilis</reg></choice> eo quod potest dimitti et tamen homo 
-              <lb ed="#SV"/>est deus igitur deus potest <choice><orig>anihilari</orig><reg>annihilari</reg></choice>.</p>
-        
-            <p xml:id="l131-tsdned"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur deus posset 
+              <lb ed="#SV"/>est deus igitur deus potest <choice><orig>anihilari</orig><reg>annihilari</reg></choice>.
+            </p>
+            <p xml:id="l131-tsdned">
+              <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> sequitur deus posset 
               <lb ed="#SV"/>peccare, <g ref="#slash"/>nam homo christus qui est Realiter deus poterit dimitti, igitur 
-              <lb ed="#SV"/>posset peccare gravissime, <g ref="#slash"/>et ex consequenti deus posset <choice><orig>dampna<lb ed="#SV"/>ri</orig><reg>damna<lb ed="#SV"/>ri</reg></choice> 
-              quod non est dicendum.</p>
-        
-            <p xml:id="l131-qsidha"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> si illa positio esset vera tunc nulla esset 
+              <lb ed="#SV"/>posset peccare gravissime, <g ref="#slash"/>et ex consequenti deus posset <choice><orig>dampna<lb ed="#SV" break="no"/>ri</orig><reg>damna<lb ed="#SV" break="no"/>ri</reg></choice> 
+              quod non est dicendum.
+            </p>
+            <p xml:id="l131-qsidha">
+              <g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> si illa positio esset vera tunc nulla esset 
               <lb ed="#SV"/>differentia essentialis, <g ref="#slash"/>nec diffinitio esset essentialis <g ref="#slash"/>patet quia quaelibet 
               <lb ed="#SV"/>diffinitio cuilibet posset competere quia qua ratione deus poterit creaturae 
               <lb ed="#SV"/><choice><orig>ydemptificari</orig><reg>identificari</reg></choice> eadem ratione potest quamlibet creaturam alteri <choice><orig>ydemptificare</orig><reg>identificare</reg></choice> 
               <lb ed="#SV"/>et sic diffinitio hominis conveniet materiae primae <g ref="#slash"/>ex quo sequitur quod ars 
               <lb ed="#SV"/>demonstrativa periret, <g ref="#dbslash"/>unde haec positio pro sui declaratione 
-              <lb ed="#SV"/>concedit consequenter has propositiones, <g ref="#slash"/>prima est quod sicut deus ince<lb ed="#SV"/>pit 
+              <lb ed="#SV"/>concedit consequenter has propositiones, <g ref="#slash"/>prima est quod sicut deus ince<lb ed="#SV" break="no"/>pit 
               esse homo <g ref="#slash"/>ita homo incepit esse deus et sic consequenter concedunt 
-              <lb ed="#SV"/>quod aliqua Res potest noviter esse deus ut apparet de homine as<lb ed="#SV"/>sumpto.</p>
-          
-            <p xml:id="l131-spdrur"><g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio: dato quod ille homo praeexisteret non tamen 
+              <lb ed="#SV"/>quod aliqua Res potest noviter esse deus ut apparet de homine as<lb ed="#SV" break="no"/>sumpto.
+            </p>
+            <p xml:id="l131-spdrur">
+              <g ref="#dbslash"/><choice><orig>2a</orig><reg>secunda</reg></choice> propositio: dato quod ille homo praeexisteret non tamen 
               <lb ed="#SV"/>Repugnat quin deus ipsum assumpsisset in unitatem 
               <lb ed="#SV"/>personae, <g ref="#slash"/>et consequenter concedit haec positio quod deus assumpsit hominem 
               <lb ed="#SV"/>nec ponit differentiam inter humanam <del rend="strikethrough">non</del> naturam vel 
               <lb ed="#SV"/>hominem concedit tamen quod idem est assumens et assumptum et 
               <lb ed="#SV"/>quod homo assumpsit hominem et quod deus est assumptus quia 
               <lb ed="#SV"/>homo qui est idem cum deo est assumptus, <g ref="#slash"/>Ex ista positione sequitur 
-              <cb ed="#SV" n="366vb"/><lb ed="#SV"/><choice><orig>inconveniencia</orig><reg>inconvenientia</reg></choice> iam illata <g ref="#slash"/>tamen haec positio salvat mul<lb ed="#SV"/>tas 
-              auctoritates <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod homo factus est deus, <g ref="#slash"/>de vo<lb ed="#SV"/>cali 
+              <cb ed="#SV" n="b"/><!--366vb-->
+              <lb ed="#SV"/><choice><orig>inconveniencia</orig><reg>inconvenientia</reg></choice> iam illata <g ref="#slash"/>tamen haec positio salvat mul<lb ed="#SV" break="no"/>tas 
+              auctoritates <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod homo factus est deus, <g ref="#slash"/>de vo<lb ed="#SV" break="no"/>cali 
               non potest salvari potest nisis quia ille homo Realiter 
               <lb ed="#SV"/>cepit esse deus et quantum ad tales propositiones poterit responderi 
-              <lb ed="#SV"/>unica Responsionem.</p>
-        
-            <p xml:id="l131-pqdinc"><g ref="#slash"/>primo quando dicitur homo incepit esse deus, 
+              <lb ed="#SV"/>unica Responsionem.
+            </p>
+            <p xml:id="l131-pqdinc">
+              <g ref="#slash"/>primo quando dicitur homo incepit esse deus, 
               <lb ed="#SV"/>id est, sic incepit esse quod homo est deus <choice><orig>eciam</orig><reg>etiam</reg></choice> homo factus 
               <lb ed="#SV"/>est deus, id est, ita factum est quod homo est deus, <g ref="#slash"/>nam christus 
               <lb ed="#SV"/>ab aeterno est deus quia ab aeterno emanavit a deo 
@@ -271,7 +312,7 @@
               <lb ed="#SV"/>per Remotionem de praesenti potissime. <g ref="#slash"/>sed fallibilis est Responsio, <g ref="#slash"/>nam 
               <lb ed="#SV"/>in talibus cognoscentibus[?] providendum est dupliciter, <g ref="#slash"/>uno modo quod in propositione 
               <lb ed="#SV"/>de praesentem demonstratur absolute sine cognoscative[?] illud 
-              <lb ed="#SV"/>pro quo sumit subiectum et sic erit facilis solutio, <g ref="#slash"/>nam de<lb ed="#SV"/>monstrando 
+              <lb ed="#SV"/>pro quo sumit subiectum et sic erit facilis solutio, <g ref="#slash"/>nam de<lb ed="#SV" break="no"/>monstrando 
               verbi personam ista de praesenti erit falsa, scilicet, hoc 
               <lb ed="#SV"/>non est deus, <g ref="#slash"/>sed ratione cognoscantionis[?] ista conceditur homo non est deus. 
               <lb ed="#SV"/><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> modo providendum est quod propositio de praeterito de desinit 
@@ -279,11 +320,13 @@
               <lb ed="#SV"/>relativo <g ref="#slash"/>exemplum christus desinit esse deus, <g ref="#slash"/>exponitur christus 
               <lb ed="#SV"/>immediate ante hoc fuit deus et ille non est deus et tunc 
               <lb ed="#SV"/><choice><orig>2a</orig><reg>secunda</reg></choice> est falsa quia li <mentioned>ipse</mentioned> non refert nisi pro significato materiali, 
-              <lb ed="#SV"/><g ref="#slash"/>et sic apparet quod illa instantia non concludit.</p>
+              <lb ed="#SV"/><g ref="#slash"/>et sic apparet quod illa instantia non concludit.
+            </p>
           </div>
           <div>
             <head xml:id="l131-Hoceiup">Octavum: contra errorem quod natura divina et natura humana identice concurrunt in unam personam</head>
-            <p xml:id="l131-sofupe"><g ref="#dbslash"/>Sequitur 
+            <p xml:id="l131-sofupe">
+              <g ref="#dbslash"/>Sequitur 
               <lb ed="#SV"/><choice><orig>8vo</orig><reg>octavo</reg></choice> falsitas <choice><orig>oppinionis</orig><reg>opinionis</reg></choice> <choice><orig>dicencium</orig><reg>dicentium</reg></choice> quod licet natura divina et 
               <lb ed="#SV"/>natura humana quae est composita ex duabus naturis sicut 
               <lb ed="#SV"/><choice><orig>3es</orig><reg>tres</reg></choice> distinctae naturae tamen <choice><orig>ydemptice</orig><reg>identice</reg></choice> concurrunt in unam 
@@ -298,10 +341,11 @@
               ita proportionaliter diceretur quod illae tres naturae scilicet, divina anima 
               <lb ed="#SV"/>et corpus sunt verbum dei et sunt <choice><orig>2a</orig><reg>secunda</reg></choice> persona in divinis 
               <lb ed="#SV"/>et cum hoc verbum quod est una natura illarum trium est una 
-              <lb ed="#SV"/>persona eadem.</p>
-        
-            <p xml:id="l131-aisnea"><g ref="#dbslash"/>Aliter <choice><orig>ymaginati</orig><reg>imaginati</reg></choice> sunt quid <g ref="#slash"/>nam dato asino 
-              <lb ed="#SV"/>si anima humana informaret totum compositum asini tunc resul<lb ed="#SV"/>tans 
+              <lb ed="#SV"/>persona eadem.
+            </p>
+            <p xml:id="l131-aisnea">
+              <g ref="#dbslash"/>Aliter <choice><orig>ymaginati</orig><reg>imaginati</reg></choice> sunt quid <g ref="#slash"/>nam dato asino 
+              <lb ed="#SV"/>si anima humana informaret totum compositum asini tunc resul<lb ed="#SV" break="no"/>tans 
               ex omnibus illis esset asinus et esset homo et 
               <lb ed="#SV"/>idem homo esset asinus, <g ref="#slash"/>et sic alii plures naturae concurrunt in 
               <lb ed="#SV"/>aliquod unum suppositum, <g ref="#slash"/>licet duae praeexistentis sint unum 
@@ -311,35 +355,43 @@
               <lb ed="#SV"/>videtur tenuisse <name ref="#Bernard">beatus bernardus</name> dicens express 
               <lb ed="#SV"/>quod sicut unica natura divina est tres personae distinctae 
               <lb ed="#SV"/>quarum una non est alia, <g ref="#slash"/>ita christus est unica natura 
-              <cb ed="#SV" n="367ra"/><lb ed="#SV"/>et est Realiter <choice><orig>3es</orig><reg>tres</reg></choice> naturae simul Iunctae quarum una non est alia.</p>
-        
-            <p xml:id="l131-schqeh"><lb ed="#SV"/>Sed contra hoc arguitur quia ex hoc sequitur quod persona divina sit 
+              <pb ed="#SV" n="367-r"/>
+              <cb ed="#SV" n="a"/>
+              <lb ed="#SV"/>et est Realiter <choice><orig>3es</orig><reg>tres</reg></choice> naturae simul Iunctae quarum una non est alia.
+            </p>
+            <p xml:id="l131-schqeh">
+              <lb ed="#SV"/>Sed contra hoc arguitur quia ex hoc sequitur quod persona divina sit 
               <lb ed="#SV"/>multitudo rerum essentialiter intrinsece distinctarum patet 
               <lb ed="#SV"/>quia per istam viam christus est Realiter <choice><orig>3es</orig><reg>tres</reg></choice> naturae distinctae 
               <lb ed="#SV"/>quarum una non est alia, <g ref="#slash"/>modo huiusmodi multiplicitas videtur 
               <lb ed="#SV"/>divinae simpliciti Repugnare, <choice><orig>ymo</orig><reg>immo</reg></choice> sequitur quod deus esset 
-              <lb ed="#SV"/>compositum ex multis essentialiter distinctis quod est hereticum.</p>
-        
-            <p xml:id="l131-snphrt"><lb ed="#SV"/><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nulla pars <del rend="strikethrough">agregatarum</del> aliquorum essentialiter distinctorum 
+              <lb ed="#SV"/>compositum ex multis essentialiter distinctis quod est hereticum.
+            </p>
+            <p xml:id="l131-snphrt">
+              <lb ed="#SV"/><g ref="#dbslash"/><choice><orig>2o</orig><reg>secundo</reg></choice> nulla pars <del rend="strikethrough">agregatarum</del> aliquorum essentialiter distinctorum 
               <lb ed="#SV"/>est <choice><orig>agregatum</orig><reg>aggregatum</reg></choice> ex omnibus simul, igitur sequitur quod christus vel verbum 
               <lb ed="#SV"/>dei quod est pars huiusmodi multitudinis non est hoc <choice><orig>agregatum</orig><reg>aggregatum</reg></choice> 
               <lb ed="#SV"/>et per consequens christus qui habet rationem partis non habet 
-              <lb ed="#SV"/>rationem <choice><orig>tocius</orig><reg>totius</reg></choice>.</p>
-        
-            <p xml:id="l131-tmppna"><g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> maior pars multitudinis est creata 
+              <lb ed="#SV"/>rationem <choice><orig>tocius</orig><reg>totius</reg></choice>.
+            </p>
+            <p xml:id="l131-tmppna">
+              <g ref="#dbslash"/><choice><orig>3o</orig><reg>tertio</reg></choice> maior pars multitudinis est creata 
               <lb ed="#SV"/>et dependens, igitur cum maiori denominatione debeat fieri 
               <lb ed="#SV"/>denominatio sequitur quod christus esset pura creatura et dependens et 
-              <lb ed="#SV"/>quod haberet esse per novam acceptionem.</p>
-        
-            <p xml:id="l131-qsqefr"><g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sequitur quod creatura 
+              <lb ed="#SV"/>quod haberet esse per novam acceptionem.
+            </p>
+            <p xml:id="l131-qsqefr">
+              <g ref="#dbslash"/><choice><orig>4o</orig><reg>quarto</reg></choice> sequitur quod creatura 
               <lb ed="#SV"/>fit ab aeterno, <g ref="#slash"/>nam christus qui esset creatura fuit ab aeterno 
               <lb ed="#SV"/>igitur haec multitudo fuit ab aeterno, <g ref="#slash"/>sed anima est pars illius 
               <lb ed="#SV"/>multitudinis igitur ipsa fuit ab aeterno et ideo haec positio propter 
-              <lb ed="#SV"/>eius falsitatem Relinquatur.</p>
+              <lb ed="#SV"/>eius falsitatem Relinquatur.
+            </p>
           </div>
-            <div>
-              <head xml:id="l131-Hncefeh">Nonum: contra errorem quod natura assumpta est realiter deus et sic deus factus est homo</head>
-            <p xml:id="l131-sncaaa"><g ref="#dbslash"/>Sequitur <choice><orig>9no</orig><reg>nono</reg></choice> contra tenentes 
+          <div>
+            <head xml:id="l131-Hncefeh">Nonum: contra errorem quod natura assumpta est realiter deus et sic deus factus est homo</head>
+            <p xml:id="l131-sncaaa">
+              <g ref="#dbslash"/>Sequitur <choice><orig>9no</orig><reg>nono</reg></choice> contra tenentes 
               <lb ed="#SV"/>quod natura assumpta est Realiter deus et sic deus factus est homo, 
               <lb ed="#SV"/>sed haec via <choice><orig>defficit</orig><reg>deficit</reg></choice> in duobus primo quia supponit quod 
               <lb ed="#SV"/>deus possit per intrinsecam actuationem creaturae communicari cuius 
@@ -347,40 +399,46 @@
               <lb ed="#SV"/>quia dato quod humanitas christi Realiter esset deus non tamen 
               <lb ed="#SV"/>tollit difficultatem materiae quia licet persona divina et humana 
               <lb ed="#SV"/>sint una persona ex hoc no salvaretur unitas personae 
-              <lb ed="#SV"/>assumptae ad assumentem.</p>
-            </div>
+              <lb ed="#SV"/>assumptae ad assumentem.
+            </p>
+          </div>
           <div>
             <head xml:id="l131-Hdceeup">Decimum: contra errorem quod in christo sunt duae sumpta et unita persona</head>
-            <p xml:id="l131-dopads"><g ref="#dbslash"/><choice><orig>10ma</orig><reg>decima</reg></choice> <choice><orig>oppinio</orig><reg>opinio</reg></choice> ponit quod 
-              <lb ed="#SV"/>in christo sunt duo supposita et unica persona, <g ref="#slash"/>unde <choice><orig>yma<lb ed="#SV"/>ginatur</orig><reg>ima<lb ed="#SV"/>ginatur</reg></choice> 
+            <p xml:id="l131-dopads">
+              <g ref="#dbslash"/><choice><orig>10ma</orig><reg>decima</reg></choice> <choice><orig>oppinio</orig><reg>opinio</reg></choice> ponit quod 
+              <lb ed="#SV"/>in christo sunt duo supposita et unica persona, <g ref="#slash"/>unde <choice><orig>yma<lb ed="#SV" break="no"/>ginatur</orig><reg>ima<lb ed="#SV" break="no"/>ginatur</reg></choice> 
               quod humanitas assumpta Realiter sit suppositum 
-              <lb ed="#SV"/>distinctum a divino supposito.</p> 
-        
-            <p xml:id="l131-sqdqic"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod de ratione personae est 
-              <lb ed="#SV"/>habere <choice><orig>suppremam</orig><reg>supremam</reg></choice> dignitatem exponendo li <mentioned><choice><orig>suppremum</orig><reg>supremum</reg></choice></mentioned> ne<lb ed="#SV"/>gative 
+              <lb ed="#SV"/>distinctum a divino supposito.
+            </p> 
+            <p xml:id="l131-sqdqic">
+              <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> quod de ratione personae est 
+              <lb ed="#SV"/>habere <choice><orig>suppremam</orig><reg>supremam</reg></choice> dignitatem exponendo li <mentioned><choice><orig>suppremum</orig><reg>supremum</reg></choice></mentioned> ne<lb ed="#SV" break="no"/>gative 
               ideo quia suppositum divinum est principalius quam 
-              <lb ed="#SV"/>humanum ob hoc <choice><orig>agregatum</orig><reg>aggregatum</reg></choice> ex istis <del rend="strikethrough">exiscit</del> sub<lb ed="#SV"/>sistit 
+              <lb ed="#SV"/>humanum ob hoc <choice><orig>agregatum</orig><reg>aggregatum</reg></choice> ex istis <del rend="strikethrough">exiscit</del> sub<lb ed="#SV" break="no"/>sistit 
               una subsistentia personali, <g ref="#slash"/>eo quod de ratione 
               <lb ed="#SV"/>personae est habere <choice><orig>suppremam</orig><reg>supremam</reg></choice> denominationem illorum 
-              <lb ed="#SV"/>quae ipsam constituunt.</p> 
-            
-            <p xml:id="l131-sipcnd"><g ref="#slash"/>sed ista positio deficit, <g ref="#slash"/>nam primo 
-              <lb ed="#SV"/>coincidit cum heresibus <name ref="#Nestorius">nestorii</name> eo quod haberet conce<lb ed="#SV"/>dere 
+              <lb ed="#SV"/>quae ipsam constituunt.
+            </p> 
+            <p xml:id="l131-sipcnd">
+              <g ref="#slash"/>sed ista positio deficit, <g ref="#slash"/>nam primo 
+              <lb ed="#SV"/>coincidit cum heresibus <name ref="#Nestorius">nestorii</name> eo quod haberet conce<lb ed="#SV" break="no"/>dere 
               quod christus Realiter non sit deus quia idem est suppositum 
               <lb ed="#SV"/>humanae naturae et homo et illud non est deus, <g ref="#slash"/>nam in christo 
               <lb ed="#SV"/>est suppositum, scilicet, humanum quod non est divinum suppositum et 
-              <lb ed="#SV"/>per consequens nec deus.</p> 
-            
-            <p xml:id="l131-sieqea"><g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> idem est in homine persona et <choice><orig>ypo<lb ed="#SV"/>stasis</orig><reg>hypo<lb ed="#SV"/>stasis</reg></choice>, 
+              <lb ed="#SV"/>per consequens nec deus.
+            </p> 
+            <p xml:id="l131-sieqea">
+              <g ref="#slash"/><choice><orig>2o</orig><reg>secundo</reg></choice> idem est in homine persona et <choice><orig>ypo<lb ed="#SV" break="no"/>stasis</orig><reg>hypo<lb ed="#SV" break="no"/>stasis</reg></choice>, 
               <g ref="#slash"/>nam nihil est persona nisi per eius <choice><orig>subsistenciam</orig><reg>subsistentiam</reg></choice> et 
-              <lb ed="#SV"/>cum suppositum sit nomen generale ad omnem <choice><orig>subsi<lb ed="#SV"/>stenciam</orig><reg>subsi<lb ed="#SV"/>stentiam</reg></choice> 
-              <g ref="#slash"/>ideo subsistentia humana vocantur subsi<lb ed="#SV"/>stentia 
+              <lb ed="#SV"/>cum suppositum sit nomen generale ad omnem <choice><orig>subsi<lb ed="#SV" break="no"/>stenciam</orig><reg>subsi<lb ed="#SV" break="no"/>stentiam</reg></choice> 
+              <g ref="#slash"/>ideo subsistentia humana vocantur subsi<lb ed="#SV" break="no"/>stentia 
               <g ref="#slash"/>sed subsistentiae creaturaum vocantur personae, <g ref="#slash"/>et 
               <lb ed="#SV"/>in homine sunt duae subsistentiae, <g ref="#slash"/>ideo erunt in deo 
               <lb ed="#SV"/>tria supposita, <g ref="#slash"/>nam secundum istam viam oporteret concedere quod homo 
-              <lb ed="#SV"/>esset natus de virgine et non deus quod est absurdum.</p>
+              <lb ed="#SV"/>esset natus de virgine et non deus quod est absurdum.
+            </p>
           </div>
-      </div>
+        </div>
       </div>
     </body>
   </text>
