@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,316 +7,492 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.04-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 130, de Incarnatione</title>
           <date when="2013-04-02">April 2, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-04-02">April 02, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-04-02" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="365-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio130">
-      <head xml:id="l130-Hldildi" subtype="title">Lectio 130, de Incarnatione</head>
-        <div>
+      <head xml:id="l130-Hldildi">Lectio 130, de Incarnatione</head>
+        <div xml:id="l130-Dd1e109">
           <head xml:id="l130-Husphsu">Utrum secunda persona in divinis naturam humana hypostatice sibi univerit</head>
-          <p xml:id="l130-cimhsu"><lb ed="#SV"/>Circa incarnationis mysterium 
-          <lb ed="#SV"/>quaero utrum secunda persona in divinis naturam 
-            <lb ed="#SV"/>humanam hypostatice sibi univerit.</p>
+          <p xml:id="l130-cimhsu">
+            Circa incarnationis mysterium 
+            quaero utrum secunda persona in divinis naturam 
+            humanam hypostatice sibi univerit.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e118">
           <head xml:id="l130-Hrpsrps">Rationes principales</head>
-          <p xml:id="l130-eapaar">et arguitur primo quod non 
-            <lb ed="#SV"/>haec unio Repugnat principiis philosophiae et cuilibet 
-            <lb ed="#SV"/>alteri sectae igitur talis unio non est ponenda antecedens pro prima 
-            <lb ed="#SV"/>parte declaratur quia ex huiusmodi unione sequitur quod 
-            <lb ed="#SV"/>deus sit mutabilis possibilis <unclear>mortalis[?]</unclear> et sic de aliis quae divinae 
-            <lb ed="#SV"/>immensitati et aeternitati absolute Repugnant.</p> 
-        
-          <p xml:id="l130-spepvr">secundo probatur 
-            <lb ed="#SV"/>eadem pars antecedentis, nam ex ista positione sequitur quod homo 
-            <lb ed="#SV"/>ab aeterno fuerit, immo sequitur quod homo possit esse asinus 
-            <lb ed="#SV"/>vel lapis, nam qua ratione divina natura univit sibi 
-            <lb ed="#SV"/>unam creaturam eadem ratione et aliam ut puta asinam, 
-            <lb ed="#SV"/>et sic deus esset asinus et ex consequenti sequitur quod pater in divinis 
-            <lb ed="#SV"/>per aeternam generationem asinum produxisset, et sic de aliis inconvenientibus 
-            <lb ed="#SV"/>quae rationi et principiis philosophiae videntur Repugnare.</p>
-        
-          <p xml:id="l130-tcqcsr">tertio 
-            <lb ed="#SV"/>confirmatur quia eadem ratione qua conceditur quod aeternitas est tempora<lb ed="#SV"/>lis 
-            vel mutabilis, eadem ratione concedendum esset quod summa 
-            <lb ed="#SV"/>bonitas esset peccabilis active capiendo consequens nullus diceret. 
-            <lb ed="#SV"/>probatur consequentia quia tanta est Repugnantia divinae aeternitatis 
-            <lb ed="#SV"/>ad immutabilitatem quanta est Repugnantia divinae boni<lb ed="#SV"/>tatis 
-            ad malitiam igitur si unum conceditur et reliquum et 
-            <lb ed="#SV"/>per consequens deus posset esse pessimus et miserrimus. secunda pars 
-            <lb ed="#SV"/>antecedentis principalis patet primo de secta <name ref="#Jews">Iudaeorum</name> qui ne<lb ed="#SV"/>gant 
-            trinitatem et per consequens christum esse deum, et ad idem est 
-            <lb ed="#SV"/>doctrina vel potius fallacia <name ref="#Muhammad">mathometi</name> in traditione 
-            <lb ed="#SV"/><unclear>alcoram[?]</unclear> vel <unclear>alcoram[?]</unclear> ubi negat christum esse deum 
-            <lb ed="#SV"/>et sic videtur quod haec positio tam rationi quam cuicumque sectae Repu<lb ed="#SV"/>gnat.</p>
-        
-          <p xml:id="l130-cdinqp">Confirmatur de <name ref="#Jews">Iudaeis</name> qui messiam expe<lb ed="#SV"/>ctant 
-            tanquam Iudicem et ducem temporalem regnum <name ref="#Israel">israel</name> 
-            <lb ed="#SV"/><unclear>Restituarum[?]</unclear>, hoc enim nedum de <name ref="#Jews">Iudaeis</name> qui messiam expe<lb ed="#SV"/>ctant 
-            sed etiam de matre filiorum <name>zebedaei</name> a filiis indu<lb ed="#SV"/>cta 
-            petiit a salvatore unum filiorum suorum a dextris 
-            <lb ed="#SV"/>suis et alium a sinistris in Regno et domino temporali con<lb ed="#SV"/>stitueret. 
-            christus autem Respondit filius abstente matre 
-            <lb ed="#SV"/>nescitis quid petatis.</p>
-        
-          <p xml:id="l130-sdqrtc">secundo discipuli quibus apparuit 
-            <lb ed="#SV"/>christus eundo in emans sit loquebantur adinvicem, sperabamus 
-            <lb ed="#SV"/>quod Restitueret Regnum <name ref="#Israel">israel</name>, et sic apparet quod illi qui 
-            <lb ed="#SV"/>videbantur christi ipsum regnaturum temporaliter credebant.</p>
-        
-          <p xml:id="l130-saoefc"><lb ed="#SV"/>secundo arguitur opera trinitatis ad extra sunt indistincta semper, pater 
-            <lb ed="#SV"/>non est incarnatus, igitur nec filius. consequentia est nota ex su<lb ed="#SV"/>ppositione 
-            et antecedens est fidei catholicae.</p>
-        
-          <p xml:id="l130-cqhqeh">Confirmatur quia haec 
-            <lb ed="#SV"/>unio si daretur  terminaretur ad essentiam immediate 
-            <lb ed="#SV"/>esse quod ratio personalis ut sic non inquantum identica essentiae 
-            <lb ed="#SV"/>non est alicui <unclear>unibilis[?]</unclear> igitur unio principaliter habet essentiam 
-            <lb ed="#SV"/>pro termino et per consequens quaelibet personarum est vi huiusmodi 
-            <lb ed="#SV"/>unionis unita quod est haereticum.</p>
+          <p xml:id="l130-eapaar">
+            Et arguitur 
+            primo quod non 
+            haec unio repugnat principiis philosophiae et cuilibet 
+            alteri sectae, 
+            igitur talis unio non est ponenda. 
+            Antecedens pro prima 
+            parte declaratur 
+            quia ex huiusmodi unione 
+            sequitur quod deus sit mutabilis possibilis <unclear>mortalis</unclear>, 
+            et sic de aliis quae divinae 
+            immensitati et aeternitati 
+            absolute repugnant.
+          </p> 
+          <p xml:id="l130-spepvr">
+            Secundo, 
+            probatur eadem pars antecedentis, 
+            nam ex ista positione 
+            sequitur quod homo ab aeterno fuerit, 
+            immo sequitur quod homo possit esse 
+            asinus vel lapis, 
+            nam qua ratione divina natura univit sibi 
+            unam creaturam eadem ratione et aliam ut puta asinam, 
+            et sic deus esset asinus, 
+            et ex consequenti sequitur quod pater in divinis 
+            per aeternam generationem asinum produxisset, 
+            et sic de aliis inconvenientibus 
+            quae rationi et principiis philosophiae videntur repugnare.
+          </p>
+          <p xml:id="l130-tcqcsr">
+            Tertio, 
+            confirmatur 
+            quia eadem ratione 
+            qua conceditur 
+            quod aeternitas est temporalis vel mutabilis, 
+            eadem ratione concedendum esset quod summa 
+            bonitas esset peccabilis active capiendo consequens nullus diceret. 
+            Probatur consequentia 
+            quia tanta est repugnantia divinae aeternitatis 
+            ad immutabilitatem quanta est 
+            repugnantia divinae bonitatis ad malitiam 
+            igitur si unum conceditur et reliquum et 
+            per consequens deus posset esse pessimus et miserrimus. 
+            Secunda pars antecedentis principalis 
+            patet primo de secta <name ref="#Jews">Iudaeorum</name> 
+            qui negant trinitatem 
+            et per consequens christum esse deum, 
+            et ad idem est doctrina vel potius fallacia 
+            <name ref="#Muhammad">Mathometi</name> in traditione 
+            <unclear>alcoram[?]</unclear> vel <unclear>alcoram[?]</unclear>,
+            ubi negat christum esse deum, 
+            et sic videtur quod haec positio 
+            tam rationi 
+            quam cuicumque sectae repugnat.
+          </p>
+          <p xml:id="l130-cdinqp">
+            Confirmatur de <name ref="#Jews">Iudaeis</name> qui messiam expectant 
+            tanquam iudicem et ducem temporalem regnum <name ref="#Israel">Israel</name> 
+            <unclear>restituarum</unclear>, 
+            hoc enim nedum de <name ref="#Jews">Iudaeis</name> 
+            qui messiam expectant, 
+            sed etiam de matre filiorum <name>Zebedaei</name> 
+            a filiis inducta petiit a salvatore unum filiorum suorum a dextris 
+            suis et alium a sinistris in regno et domino temporali constitueret. 
+            Christus autem respondit filius abstente matre 
+            nescitis quid petatis.
+          </p>
+          <p xml:id="l130-sdqrtc">
+            Secundo, 
+            discipuli quibus apparuit 
+            christus eundo in emans sit loquebantur adinvicem, sperabamus 
+            quod Restitueret Regnum <name ref="#Israel">israel</name>, 
+            et sic apparet quod illi qui 
+            videbantur christi ipsum regnaturum temporaliter credebant.
+          </p>
+          <p xml:id="l130-saoefc">
+            Secundo, 
+            arguitur opera trinitatis ad extra sunt indistincta semper, pater 
+            non est incarnatus, igitur nec filius. consequentia est nota ex suppositione 
+            et antecedens est fidei catholicae.
+          </p>
+          <p xml:id="l130-cqhqeh">
+            Confirmatur quia haec 
+            unio si daretur  terminaretur ad essentiam immediate 
+            esse quod ratio personalis ut sic non inquantum identica essentiae 
+            non est alicui <unclear>unibilis[?]</unclear> igitur unio principaliter habet essentiam 
+            pro termino et per consequens quaelibet personarum est vi huiusmodi 
+            unionis unita quod est haereticum
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e182">
           <head xml:id="l130-Hscasca">Sed contra</head>
-          <p xml:id="l130-aoehfe">Ad oppositum 
-            <lb ed="#SV"/>Est enunciatum testimonium, unde <ref corresp="#l130-vcfcfe"><title ref="#io">Iohannis</title> primo</ref>,<note>Ioannes 1:14</note> <quote xml:id="l130-vcfcfe" source="http://scta.info/resource/io1_14">verbum[?] 
-              <cb ed="#SV" n="365ra"/><lb ed="#SV"/>caro factum est</quote>, et in symbolo patrum de filio dicitur quod 
-            <lb ed="#SV"/>homo factus est.</p>
+          <p xml:id="l130-aoehfe">
+            Ad oppositum 
+            est enunciatum testimonium, 
+            unde 
+            <ref xml:id="l130-Rd1e189" corresp="#l130-vcfcfe">
+              <title ref="#io">Iohannis</title> primo</ref>,
+            <quote xml:id="l130-vcfcfe" source="http://scta.info/resource/io1_14">verbum[?] 
+              <pb ed="#SV" n="365-r"/>
+              <cb ed="#SV" n="a"/>
+              caro factum est
+            </quote>, 
+            et in symbolo patrum de filio dicitur quod 
+            homo factus est.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e204">
           <head xml:id="l130-Hdqsdqs">Divisio quaestionis</head>
-          <p xml:id="l130-iimssc">In ista materia primo videbitur de prima ratione. 
-            <lb ed="#SV"/>secundo explicabitur materia et dabitur modus imaginandi 
-            <lb ed="#SV"/>et sustinendi hanc unionem et consequenter dicendum. tertio vide<lb ed="#SV"/>bitur 
+          <p xml:id="l130-iimssc">
+            In ista materia 
+            primo videbitur de prima ratione. 
+            Secundo explicabitur materia 
+            et dabitur modus imaginandi 
+            et sustinendi hanc unionem et consequenter dicendum. 
+            Tertio videbitur 
             de hanc materia in habitudine ad virginem gloriosam 
-            <lb ed="#SV"/>in cuius utero celebratum est hoc mysterium spiritus sancti cooperante.</p>
+            in cuius utero celebratum est 
+            hoc mysterium spiritus sancti cooperante.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e214">
           <head xml:id="l130-Hprones">Propositiones</head>
-          <p xml:id="l130-eppnsr"><lb ed="#SV"/>Et pro praesenti sit ista propositio ad hanc unionem nulla 
-            <lb ed="#SV"/>sequitur Repugnantia.</p>
-          
-          <p xml:id="l130-spuemd">secunda propositio unio sufficienter 
-            <lb ed="#SV"/>suadetur ex mysterii decentia.</p>
-          
-          <p xml:id="l130-tpiaer">tertia propositio insolubiliter 
-            <lb ed="#SV"/>apud bene dispositum ex <name ref="#Jews">Iudaeorum</name> et <name ref="#Muslims">sarracenorum</name> 
-            <lb ed="#SV"/>legis continentia potest haec unio deduci et concludi vo<lb ed="#SV"/>cando 
-            legem generaliter, scilicet, scripturam apud eos re<lb ed="#SV"/>ceptam.</p>
+          <p xml:id="l130-eppnsr">
+            Et pro praesenti sit ista propositio ad hanc unionem nulla 
+            sequitur repugnantia.
+          </p>
+          <p xml:id="l130-spuemd">
+            Secunda propositio unio sufficienter 
+            suadetur ex mysterii decentia.
+          </p>
+          <p xml:id="l130-tpiaer">
+            Tertia propositio insolubiliter 
+            apud bene dispositum ex 
+            <name ref="#Jews">Iudaeorum</name> 
+            et <name ref="#Muslims">Sarracenorum</name> 
+            legis continentia potest haec unio deduci et concludi vocando 
+            legem generaliter, 
+            scilicet scripturam apud eos receptam.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e235">
           <head xml:id="l130-Hpprprp">Probatio primae propositionis</head>
-          <p xml:id="l130-pppisc">prima propositio probatur quia non Repugnat ex parte 
-            <lb ed="#SV"/>divinae omnipotentiae quia respectu nullius est repugnantia et 
-            <lb ed="#SV"/>maxime et quantum ad divinam omnipotentiam, sed bene aliquando 
-            <lb ed="#SV"/>est Repugnantia ex incompossibilitate effectuum ut quod 
-            <lb ed="#SV"/>deus non possit facere lapideitatem humanitatem non est 
-            <lb ed="#SV"/>Repugnantia ex parte divinae omnipotentiae sed Repugnantia 
-            <lb ed="#SV"/>est ex incompossibilitate effectuum nec est repugnan<lb ed="#SV"/>tia 
-            ex parte effectuum in se consideratarum.</p>
-          
-          <p xml:id="l130-pscrri">primo sa<lb ed="#SV"/>tisfaciendo 
-            <lb ed="#SV"/>cuilibet philosopho et salvando hanc unionem, 
-            <lb ed="#SV"/>et Respondendo rationibus impugnantis.</p>
-          
-          <p xml:id="l130-spimem">secundo philosophi in 
-            <lb ed="#SV"/>lumine naturali posuerunt aeque difficilia ad su<lb ed="#SV"/>stinendum 
-            ut positio idearum quae bene Resoluta ponit 
-            <lb ed="#SV"/>res quidditative deo identificari licet sint mutabiles et 
-            <lb ed="#SV"/>temporales deus autem immutabilis et aeternis et sic ipsi habent 
-            <lb ed="#SV"/>concedere quod deus intrinsece immutabilis et tamen ipse est res 
-            <lb ed="#SV"/>aliqua quae est mutabilis et sicut conceditur de christo quod est 
-            <lb ed="#SV"/>Res aeterna et immutabilis ita conceditur quod fuit mortalis 
-            <lb ed="#SV"/>et mutabilis.</p>
-          
-          <p xml:id="l130-tscdpc">tertio si clauderet Repugnantia hoc 
-            <lb ed="#SV"/>esset propter infinitam distantiam extremorum eo quod 
-            <lb ed="#SV"/>persona assumens et persona assumpta in infinitum distant 
-            <lb ed="#SV"/>nec habent proportionem quae videatur inter <unclear>unibilia[?]</unclear> re<lb ed="#SV"/>quiri 
-            sed hoc non tollit nec Repugnantiam arguit 
-            <lb ed="#SV"/>ut apparet de habitudine dei ut est causa finalis ad omnes 
-            <lb ed="#SV"/>creaturas cuius ut finis ad quamlibet creaturam est 
-            <lb ed="#SV"/>quaedam unio et tamen extrema in infinitum distant et 
-            <lb ed="#SV"/>ideo ratione diversitatis et distantiae est maior unio 
-            <lb ed="#SV"/>nam per hoc primum habet rationem finis immobilis et 
-            <lb ed="#SV"/>nobilioris terminantis creaturam, et creatura habet rationem 
-            <lb ed="#SV"/>fluxibilis nam simile est de unione hypostatica 
-            <lb ed="#SV"/>quia non obstante extremorum distantia tamen quaelibet 
-            <lb ed="#SV"/>rationalis creatura est deo et immensae essentiae <unclear>unibilis[?]</unclear> 
-            <lb ed="#SV"/>beatificae quod et concesserunt philosophi qui posuerunt 
-            <lb ed="#SV"/>felicitatem humanam in deo principialiter consistere.</p>
-          
-          <p xml:id="l130-qehnhu">quarto ex hac 
-            <lb ed="#SV"/>positione non sequitur mutatio in deo quae maxime ar<lb ed="#SV"/>guerentur, 
-            et aequae salvaretur immutabilitas 
-            <cb ed="#SV" n="365vb"/><lb ed="#SV"/>in unione ypostatica in deo sicut de noviter influere sine 
-            <lb ed="#SV"/>mutatione tam obiective quam effective quam finali. Ita quod ex 
-            <lb ed="#SV"/>novo dei influxu non arguitur in deo mutatio igitur, nec ex 
-            <lb ed="#SV"/>hac habitudine qua deus noviter naturae humane unitur.</p>
+          <p xml:id="l130-pppisc">
+            Prima propositio 
+            probatur quia non repugnat ex parte 
+            divinae omnipotentiae 
+            quia respectu nullius est repugnantia et 
+            maxime et quantum ad divinam omnipotentiam, 
+            sed bene aliquando 
+            est repugnantia ex incompossibilitate effectuum 
+            ut quod deus non possit facere lapideitatem humanitatem non est 
+            repugnantia ex parte divinae omnipotentiae sed Repugnantia 
+            est ex incompossibilitate effectuum nec est repugnantia 
+            ex parte effectuum in se consideratarum.
+          </p>
+          <p xml:id="l130-pscrri">
+            Primo, 
+            satisfaciendo 
+            cuilibet philosopho et salvando hanc unionem, 
+            et respondendo rationibus impugnantis.
+          </p>
+          <p xml:id="l130-spimem">
+            Secundo, 
+            philosophi in 
+            lumine naturali posuerunt aeque difficilia ad sustinendum 
+            ut positio idearum quae bene resoluta ponit 
+            res quidditative deo identificari, 
+            licet sint mutabiles et temporales, 
+            deus autem immutabilis et aeternis, 
+            et sic ipsi habent concedere quod deus 
+            intrinsece immutabilis, 
+            et tamen ipse est res aliqua quae est mutabilis, 
+            et sicut conceditur de christo quod est 
+            res aeterna et immutabilis 
+            ita conceditur quod fuit mortalis et mutabilis.
+          </p>
+          <p xml:id="l130-tscdpc">
+            Tertio, 
+            si clauderet repugnantia hoc 
+            esset propter infinitam distantiam extremorum eo quod 
+            persona assumens et persona assumpta in infinitum distant 
+            nec habent proportionem quae videatur inter <unclear>unibilia</unclear> requiri 
+            sed hoc non tollit nec repugnantiam arguit 
+            ut apparet de habitudine dei 
+            ut est causa finalis ad omnes 
+            creaturas cuius ut finis ad quamlibet creaturam est quaedam unio, 
+            et tamen extrema in infinitum distant, 
+            et ideo ratione diversitatis et distantiae est maior unio 
+            nam per hoc primum habet rationem finis immobilis et 
+            nobilioris terminantis creaturam, 
+            et creatura habet rationem fluxibilis 
+            nam simile est de unione hypostatica 
+            quia non obstante extremorum distantia, 
+            tamen quaelibet rationalis creatura est deo 
+            et immensae essentiae <unclear>unibilis</unclear> beatificae 
+            quod et concesserunt philosophi 
+            qui posuerunt felicitatem humanam 
+            in deo principialiter consistere.
+          </p>
+          <p xml:id="l130-qehnhu">
+            Quarto 
+            ex hac positione non sequitur mutatio in deo 
+            quae maxime arguerentur, 
+            et <unclear>aequae</unclear> salvaretur immutabilitas 
+            <cb ed="#SV" n="b"/><!--365vb-->
+            in unione hypostatica in deo 
+            sicut de noviter influere sine mutatione 
+            tam obiective quam effective quam finali,
+            ita quod ex novo dei influxu 
+            non arguitur in deo mutatio, 
+            igitur nec ex hac habitudine 
+            qua deus noviter naturae humane unitur.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e269">
           <head xml:id="l130-Hpsppsp">Probatio secundae propositionis</head>
-          <p xml:id="l130-spseoc">secunda 
-            <lb ed="#SV"/>propositio suadetur ostendendo decentiam huius unionis, primo sicut 
-            <lb ed="#SV"/>in Regimine naturali deus propter suam bonitatem assumit causas 
-            <lb ed="#SV"/>secundas quibus communicat secum coefficere licet se solo posset 
-            <lb ed="#SV"/>absolute ita in Regimine gratuito oportet quod assumat sua 
-            <lb ed="#SV"/>libertas creaturam ut gratuite influat et iustificet tenet 
-            <lb ed="#SV"/>consequentia quia divina libertas quae exercetur magis in Regimine 
-            <lb ed="#SV"/>gratuito quam naturali magis debet Relucere in eodem secundo ad comple<lb ed="#SV"/>ctivam 
-            universis dispositionem congruit haec unio quod patet quia 
-            <lb ed="#SV"/>per hanc unionem quaelibet creatura in se vel in suo simili deo specia<lb ed="#SV"/>liter 
-            coniungitur et specialiter per illam coniunctionem reformatur 
-            <lb ed="#SV"/>iuxta homeliam <name ref="#GregoryGreat">Gregorii</name> praedictae euvangelium omni creaturae, 
-            <lb ed="#SV"/>nam hoc vocatur omnis creatura eo quod participat cum omni creatura, 
-            <lb ed="#SV"/>nam ratione animae cum spirituali creatura participat, ratione corporis 
-            <lb ed="#SV"/>cum omni corporali, et ideo deus non fuisset sic participans 
-            <lb ed="#SV"/>cum omni creatura angelis assumendo qui non participat in corpore 
-            <lb ed="#SV"/>nam propter rationem dictam homo vocatur omnis creatura cum dicitur 
-            <lb ed="#SV"/>praedictae evangelium omni creaturae.</p>
-          
-          <p xml:id="l130-tiuhia">tertio illa unio decuit 
-            <lb ed="#SV"/>ut divina potentia magis manifestaretur eo quod opera naturae sunt 
-            <lb ed="#SV"/>divinae potentiae et creatae potentia communia, modo incarnatio verbi et 
-            <lb ed="#SV"/>opera inde sequentia fiunt supra legem naturae tamquam deitati propria, 
-            <lb ed="#SV"/>ideo <name ref="#Jews">Iudaeis</name> interrogantibus tu es qui venturus es in mundum 
-            <lb ed="#SV"/>an alium expectamus, pro ostensione deitatis in christo Respondit 
-            <lb ed="#SV"/>caeci vident et leprosi mundantur et claudi ambulant 
-            <lb ed="#SV"/>nam aliqui prophetae et sancti fecerunt mirabilia et miracula 
-            <lb ed="#SV"/>haec non tamen virtute propria orationibus impetrando modo 
-            <lb ed="#SV"/>christus nedum fecit miracula auctoritate propria, sed aliis dedit 
-            <lb ed="#SV"/>potestatem faciendi miracula, ideo in nomine <name>ipsius apostoli</name> miracula 
-            <lb ed="#SV"/>faciebant, et nedum fecit christus miracula circa naturam corporalem 
-            <lb ed="#SV"/>sed spiritus sanctus in corda fidelium ministrando quod est altius miraculum, 
-            <lb ed="#SV"/>ex qua missione idiotae facti sunt <unclear>elevatissimi[?]</unclear> ad praedi<lb ed="#SV"/>candum 
-            evangelium creaturis sine doctrina et studio huma<lb ed="#SV"/>nis 
-            intellectibus acquisita.</p>
+          <p xml:id="l130-spseoc">
+            Secunda propositio, 
+            suadetur ostendendo decentiam huius unionis, 
+            primo sicut in regimine naturali deus 
+            propter suam bonitatem assumit causas 
+            secundas quibus communicat secum coefficere, 
+            licet se solo posset absolute, 
+            ita in regimine gratuito 
+            oportet quod assumat sua libertas creaturam 
+            ut gratuite influat et iustificet.
+            Tenet consequentia 
+            quia divina libertas 
+            quae exercetur magis in regimine gratuito quam naturali 
+            magis debet relucere in eodem 
+            secundo ad complectivam 
+            universis dispositionem congruit haec unio 
+            quod patet quia 
+            per hanc unionem 
+            quaelibet creatura in se 
+            vel in suo simili deo specialiter coniungitur 
+            et specialiter per illam coniunctionem reformatur 
+            iuxta 
+            <ref xml:id="l130-Rd1e276">
+              homeliam <name ref="#GregoryGreat">Gregorii</name>
+            </ref> 
+            praedictae evangelium omni creaturae, 
+            nam hoc vocatur omnis creatura 
+            eo quod participat cum omni creatura, 
+            nam ratione animae cum spirituali creatura participat, 
+            ratione corporis cum omni corporali, 
+            et ideo deus non fuisset sic participans 
+            cum omni creatura angelis 
+            assumendo qui non participat in corpore, 
+            nam propter rationem dictam 
+            homo vocatur omnis creatura 
+            cum dicitur praedictae evangelium omni creaturae.
+          </p>
+          <p xml:id="l130-tiuhia">
+            Tertio, 
+            illa unio decuit 
+            ut divina potentia magis manifestaretur eo quod opera naturae sunt 
+            divinae potentiae et creatae potentia communia, modo incarnatio verbi et 
+            opera inde sequentia fiunt supra legem naturae tamquam deitati propria, 
+            ideo <name ref="#Jews">Iudaeis</name> interrogantibus tu es qui venturus es in mundum 
+            an alium expectamus, pro ostensione deitatis in christo Respondit 
+            caeci vident et leprosi mundantur et claudi ambulant 
+            nam aliqui prophetae et sancti fecerunt mirabilia et miracula 
+            haec non tamen virtute propria orationibus impetrando modo 
+            christus nedum fecit miracula auctoritate propria, sed aliis dedit 
+            potestatem faciendi miracula, ideo in nomine <name>ipsius apostoli</name> miracula 
+            faciebant, et nedum fecit christus miracula circa naturam corporalem 
+            sed spiritus sanctus in corda fidelium ministrando quod est altius miraculum, 
+            ex qua missione idiotae facti sunt <unclear>elevatissimi[?]</unclear> ad praedicandum 
+            evangelium creaturis sine doctrina et studio humanis 
+            intellectibus acquisita.
+          </p>
         </div>
-        <div>
+        <div xml:id="l130-Dd1e296">
           <head xml:id="l130-Hptpptp">Probatio tertiae propositionis</head>
-          <p xml:id="l130-tppacp">tertia propositio probatur, scilicet, quod ex scripturis 
-            <lb ed="#SV"/>a <name ref="#Jews">Iudaeis</name> et <name ref="#Muslims">sarracenis</name> Receptis concluditur hoc mysterium 
-            <lb ed="#SV"/>hypostatice unionis, et circa hoc <name ref="#Bede">venerabilis beda</name> in libro 
-            <lb ed="#SV"/><title ref="#OnTimeBede">de temporibus</title> capitulo octavo deducit ex prophetia <name ref="#Daniel">danielis</name> prae<lb ed="#SV"/>teritum 
-            tempus incarnationis et passionis christi saltem sine 
-            <lb ed="#SV"/>nominali differentia. unde <title ref="#dan">daniel</title> nono scribitur septuaginta ebdoma<lb ed="#SV"/>des 
-            <unclear>abieviate[?]</unclear> sunt super populum tuum et urbem sanctam 
-            <lb ed="#SV"/>tuam ut consummetur praevaricatio et finem accipiat 
-            <lb ed="#SV"/>peccatum et deleatur Iniquitas et adducatur iustitia 
-            <lb ed="#SV"/>sempiterna et Impleatur visio et  prophetia 
-            et ungatur sanctus <unclear>sanctorum[?]</unclear>. ubi <name ref="#Bede">beda</name> non dubium 
-            <lb ed="#SV"/>dixit ipse quin haec verba ostendant christi incarnationem 
-            <lb ed="#SV"/>et passionem et unctionem, unde notat quod nar<cb ed="#SV" n="365va"/><lb ed="#SV"/>rante 
-            <name ref="#Ezra">edra</name> et <name ref="#Nehemiah">neemia</name> qui fuit <unclear>piscerna[?]</unclear> Regis personarum 
-            <lb ed="#SV"/>nomine <name><unclear>arthaxerses[?]</unclear></name> qui secundo anno sui Regni mense <unclear>visam[?]</unclear> 
-            <lb ed="#SV"/>impetravit restaurari muros <name ref="#Israel">israelem</name> quia templum erat 
-            <lb ed="#SV"/>Restaurationem <unclear>promittete[?]</unclear> ciro, sed mundum muri Reparati erant, 
-            <lb ed="#SV"/>tunc Incipiendo a vicesimo anno Regni illius Regis Reperie<lb ed="#SV"/>mus 
-            septuaginta  ebodmades usque ad christi passionem.</p>
-        
-          <p xml:id="l130-aetssv"><lb ed="#SV"/>Advertendum est tamen quod aliquantulum est diversitas propter varie<lb ed="#SV"/>tatem 
-            anni lunaris et anni solaris, sed quantum ad hoc non po<lb ed="#SV"/>nam 
-            differentiam sive sint anni lunares sive solares, non est tamen 
-            <lb ed="#SV"/>nominalis differentia, unde ante mille annos oportuit illam prophe<lb ed="#SV"/>tiam 
-            adimpleri, et sic concluditur contra <name ref="#Jews" type="group">iudaeos</name> quod sanctus sanctorum 
-            <lb ed="#SV"/>venit.</p>
-        
-          <p xml:id="l130-aetdda">Advertendum est tamen quod ebdomades in proposito capitur 
-            <lb ed="#SV"/>pro ebdomadibus anni, et ita capitur in scriptura ut alle<lb ed="#SV"/>gat 
-            <name ref="NicholasOfLyra">nicolaus de lira</name> utrum una ebdomade capiamus septem 
-            <lb ed="#SV"/>annos facile est habere numeri septuaginta ebdomades 
-            <lb ed="#SV"/>annorum multiplicentur per septem eundo habebitis quot anni 
-            <lb ed="#SV"/>sunt, reservati tamen confusione differentiae annorum lunaris et solaris 
-            <lb ed="#SV"/>secundum historias Romanorum et <name ref="#Eusebius">eusebium</name> in tempore quod ful<lb ed="#SV"/>sit 
-            a vicesimo anno Regis personarum <name><unclear>arthaxerses[?]</unclear></name> usque 
-            <lb ed="#SV"/>ad 17 annum <name ref="#Tiberius">tiberii imperatoris</name> sub cuius imperio passus 
-            <lb ed="#SV"/>est christus ubi notandum est quod ab illo vicesimo anno secundum hi<lb ed="#SV"/>storias 
-            et <name ref="#Eusebius">eusebium</name> usque ad mortem <name ref="#Darius">darii</name> ultimi 
-            <lb ed="#SV"/>Regis personarum fluxerunt centum et sexdecim anni et tunc 
-            <lb ed="#SV"/>habuit finem Regnum personarum, et tunc <name ref="#Greeks" type="group">graeci</name> habuerunt 
-            <lb ed="#SV"/>divinum super personas usque ad mortem <name ref="#Cleopatra">cleopatriae</name> et post 
-            <lb ed="#SV"/>istius mortem quando <name ref="#Octavius">octovainus</name> fuit institutus in impera<lb ed="#SV"/>torem 
-            Romanorum, tunc incepti divinum Romanorum 
-            <lb ed="#SV"/>et finiebat divinum <name type="group">graecorum</name> quod tamen duravit tricentum 
-            <lb ed="#SV"/>annis Istis combinatis cum primus sunt quadricentum et 
-            <lb ed="#SV"/>sexdecim, Deinde <name ref="#Romans" type="group">Romani</name> a morte <name ref="#Cleopatra">cleopatre</name> de<lb ed="#SV"/>structo 
-            <name ref="#Anthony">antonio</name> habuerunt monarchiam super omnes. 
-            <lb ed="#SV"/>Et tunc a morte <name ref="#Cleopatra">cleopatrae</name> usque ad 17 <name ref="#Tiberius">tiberii 
-            <lb ed="#SV"/>imperatoris</name> fluxerunt quinquaginta communem anni, et iste 
-            <lb ed="#SV"/>numerus debet correspondere numero ebdomadaris vel proprie 
-            <lb ed="#SV"/>et sic habita Romanorum concordia cum prophetia in ebdomadibus 
-            <lb ed="#SV"/>in diaboli non est differentia visa difficultate de differentia annorum.</p>
-        
-          <p xml:id="l130-sdlnss">Sed <name ref="#NicholasOfLyra">de lira</name> improbat <name ref="#Bede">bedam</name> in illo passu, sed credo 
-            <lb ed="#SV"/>quod male, quidquid sit tamen de hoc sufficit catholico quod 
-            <lb ed="#SV"/>tempus prophetiae correspondeat tempori adventus christi secundum 
-            <lb ed="#SV"/><unclear>carculationes[?]</unclear> gentilium quae non sunt suspectae.</p>
-        
-          <p xml:id="l130-sateer">secundo 
-            <lb ed="#SV"/>a tempore dationes legis in legis confirmatione <name ref="#Jews">iudaei</name> habue<lb ed="#SV"/>runt 
-            miracula, et post ea omnia miracula cessaverunt 
-            <lb ed="#SV"/>et translata sunt ad nostram fidem et ad <unclear>praedicates[?]</unclear> 
-            <lb ed="#SV"/>evangelium christi igitur apparet evidenter quod lex eorum est 
-            <lb ed="#SV"/>Reproba.</p>
-        
-          <p xml:id="l130-taartp">tertio arguitur aliunde secundum historias veteris te<lb ed="#SV"/>stamenti 
+          <p xml:id="l130-tppacp">
+            Tertia propositio probatur, 
+            scilicet quod ex scripturis 
+            a <name ref="#Jews">Iudaeis</name> 
+            et <name ref="#Muslims">Sarracenis</name> 
+            receptis concluditur hoc mysterium hypostatice unionis, 
+            et circa hoc 
+            <ref xml:id="l130-Rd1e309">
+              <name ref="#Bede">Venerabilis Beda</name>, 
+              in libro <title ref="#OnTimeBede">De temporibus</title>, 
+              capitulo octavo
+            </ref> 
+            deducit ex prophetia <name ref="#Daniel">Danielis</name> 
+            praeteritum tempus incarnationis 
+            et passionis christi saltem sine 
+            nominali differentia. 
+            Unde <title ref="#dan">Daniel</title> nono scribitur 
+            <cit>
+              <quote xml:id="l130-Qd1e327" source="http://scta.info/resource/dan9_24">
+                septuaginta hebdomades 
+                abbreviatae sunt super populum tuum 
+                et urbem sanctam tuam, 
+                ut consummetur praevaricatio et finem accipiat 
+                peccatum et deleatur iniquitas, 
+                et adducatur iustitia sempiterna, 
+                et impleatur visio et  prophetia 
+                et ungatur sanctus sanctorum
+              </quote>
+            </cit>. 
+            Ubi <name ref="#Bede">Beda</name> non dubium 
+            dixit ipse quin haec verba ostendant christi incarnationem 
+            et passionem et unctionem, unde notat quod nar<pb ed="#SV" n="365-v"/><cb ed="#SV" n="a"/>rante 
+            <name ref="#Ezra">Edra</name> et <name ref="#Nehemiah">Neemia</name> 
+            qui fuit <unclear>piscerna[?]</unclear> regis personarum 
+            nomine <name><unclear>arthaxerses[?]</unclear></name> 
+            qui secundo anno sui regni mense <unclear>visam[?]</unclear> 
+            impetravit restaurari muros <name ref="#Israel">Israelem</name> 
+            quia templum erat restaurationem <unclear>promittete[?]</unclear> ciro, 
+            sed mundum muri reparati erant, 
+            tunc incipiendo a vicesimo anno regni illius regis reperiemus 
+            septuaginta hebdomades usque ad christi passionem.
+          </p>
+          <p xml:id="l130-aetssv">
+            Advertendum est tamen 
+            quod aliquantulum est diversitas propter varietatem 
+            anni lunaris et anni solaris, 
+            sed quantum ad hoc non ponam 
+            differentiam sive sint anni lunares sive solares, 
+            non est tamen nominalis differentia, 
+            unde ante mille annos oportuit illam prophetiam adimpleri, 
+            et sic concluditur contra <name ref="#Jews" type="group">Iudaeos</name> 
+            quod sanctus sanctorum venit.
+          </p>
+          <p xml:id="l130-aetdda">
+            Advertendum est tamen quod hebdomades in proposito capitur 
+            pro hebdomadibus anni, 
+            et ita capitur in scriptura ut allegat 
+            <name ref="NicholasOfLyra">Nicolaus de Lira</name> 
+            utrum una hebdomade capiamus septem 
+            annos facile est habere numeri septuaginta hebdomades 
+            annorum multiplicentur per septem eundo habebitis quot anni sunt, 
+            reservati tamen confusione differentiae annorum lunaris et solaris 
+            secundum historias Romanorum 
+            et <name ref="#Eusebius">Eusebium</name> 
+            in tempore quod fulsit a vicesimo anno regis personarum 
+            <name><unclear>arthaxerses[?]</unclear></name> usque ad 17 annum 
+            <name ref="#Tiberius">Tiberii imperatoris</name> 
+            sub cuius imperio passus est christus, 
+            ubi notandum est quod ab illo vicesimo anno secundum historias 
+            et <name ref="#Eusebius">Eusebium</name> 
+            usque ad mortem <name ref="#Darius">Darii</name> ultimi 
+            regis personarum fluxerunt centum et sexdecim anni, 
+            et tunc habuit finem regnum personarum, 
+            et tunc <name ref="#Greeks" type="group">graeci</name> habuerunt 
+            divinum super personas usque ad mortem <name ref="#Cleopatra">Cleopatriae</name> 
+            et post istius mortem quando <name ref="#Octavius">Octovainus</name> 
+            fuit institutus in imperatorem romanorum, 
+            tunc incepti divinum romanorum 
+            et finiebat divinum <name type="group">Graecorum</name> 
+            quod tamen duravit tricentum annis istis combinatis 
+            cum primus sunt quadricentum et sexdecim, 
+            deinde <name ref="#Romans" type="group">Romani</name> 
+            a morte <name ref="#Cleopatra">Cleopatre</name> destructo 
+            <name ref="#Anthony">Antonio</name> habuerunt monarchiam super omnes. 
+            Et tunc a morte <name ref="#Cleopatra">Cleopatrae</name> 
+            usque ad 17 <name ref="#Tiberius">Tiberii imperatoris</name> 
+            fluxerunt quinquaginta communem anni, 
+            et iste numerus debet correspondere numero <unclear>hebdomadaris</unclear> vel proprie, 
+            et sic habita romanorum concordia cum prophetia in hebdomadibus 
+            in diaboli non est differentia visa difficultate de differentia annorum.
+          </p>
+          <p xml:id="l130-sdlnss">
+            Sed <name ref="#NicholasOfLyra">de Lira</name> improbat 
+            <name ref="#Bede">Bedam</name> in illo passu, 
+            sed credo quod male, 
+            quidquid sit tamen de hoc sufficit catholico quod 
+            tempus prophetiae correspondeat tempori adventus christi secundum 
+            <unclear>carculationes[?]</unclear> gentilium 
+            quae non sunt suspectae.
+          </p>
+          <p xml:id="l130-sateer">
+            Secundo 
+            a tempore dationes legis in legis 
+            confirmatione <name ref="#Jews">iudaei</name> habuerunt miracula, 
+            et post ea omnia miracula cessaverunt 
+            et translata sunt ad nostram fidem et ad <unclear>praedicates[?]</unclear> 
+            evangelium christi, 
+            igitur apparet evidenter quod lex eorum est reproba.
+          </p>
+          <p xml:id="l130-taartp">
+            Tertio, 
+            arguitur aliunde secundum historias veteris testamenti 
             numquam <name ref="#Jews">Iudaei</name> passi sunt prosecutionem gravem 
-            <lb ed="#SV"/>nisi ratione peccati per eos commissi, nunc autem patiuntur 
-            <cb ed="#SV" n="365b"/><lb ed="#SV"/>et passi sunt multa intolerabilia a tempore ad<lb ed="#SV"/>ventus 
-            christi usque nunc igitur videtur quod habeant assi<lb ed="#SV"/>gnare causam quare sic diu puniuntur et nulla 
-            <lb ed="#SV"/>est causa nisi de interfectione sui ducis et redem<lb ed="#SV"/>ptoris 
+            nisi ratione peccati per eos commissi, nunc autem patiuntur 
+            <cb ed="#SV" n="b"/><!--365b-->
+            et passi sunt multa intolerabilia a tempore adventus 
+            christi usque nunc igitur videtur quod habeant assignare causam quare sic diu puniuntur et nulla 
+            est causa nisi de interfectione sui ducis et redemptoris 
             deum nostri ihesu christi, ideo ipsis redduntur 
-            <lb ed="#SV"/><unclear>impugnabiles[?]</unclear> propter ignorantiam causae sui mor<lb ed="#SV"/>bi 
-            et quia negant causam non quaerunt Remedium, 
-            <lb ed="#SV"/>contra quod arguit <name ref="#RichardFitzRalph">almacanus</name> 19no libro capitulis 
-            <lb ed="#SV"/>multis ubi ostendit quod ex eorum scriptura christum 
-            <lb ed="#SV"/>Recipere tanquam promissum.</p>
-        
-          <p xml:id="l130-cqahic">Consequenter quantum ad 
-            <lb ed="#SV"/>legem <name ref="#Muhammad">machomaeti</name> ipse expresse approbat messiam, 
-            <lb ed="#SV"/>scilicet, christum et prophetias eius recipit et ut reci<lb ed="#SV"/>pit 
-            <name ref="#RichardFitzRalph">almacanus</name> quod christus habuit spiritum dei a 
-            <lb ed="#SV"/>quo habuit auxilium ut habetur in libro decimo 
-            <lb ed="#SV"/>8vo capitulo 11mo et in duodecimo inducit qualiter 
-            <lb ed="#SV"/><name ref="#Muhammad">machomatus</name> approbavit <name ref="#JohnTheBaptist">Iohannem baptistam</name> di<lb ed="#SV"/>cens 
-            eum esse prophetam veritatis. Sed ita est quod 
-            <lb ed="#SV"/><name ref="#JohnTheBaptist">Iohannes baptista</name> fuit <unclear>praeco[?]</unclear> nostri salvatoris 
-            <lb ed="#SV"/>qui de eo dicit, ecca agnus dei et de quo etiam 
-            <lb ed="#SV"/>dicebat, veniet post me fortior cuius 
-            <lb ed="#SV"/>non sum dignus solvere <unclear>corrigeam[?]</unclear> calciamentorum 
-            <lb ed="#SV"/>eius et clarum quod loquetur de humanitate christi, et sic 
-            <lb ed="#SV"/>apparet quod ex adversariis fidei ortodoxe conclu<lb ed="#SV"/>ditur 
-            propositum evidenter ut <unclear>goliad[?]</unclear> proprio gla<lb ed="#SV"/>dio 
+            <unclear>impugnabiles[?]</unclear> propter ignorantiam causae sui morbi 
+            et quia negant causam non quaerunt remedium, 
+            contra quod arguit 
+            <ref xml:id="l130-Rd1e454">
+              <name ref="#RichardFitzRalph">Almacanus</name>, 
+              19no libro capitulis multis
+            </ref> 
+            ubi ostendit quod ex eorum scriptura christum 
+            recipere tanquam promissum.
+          </p>
+          <p xml:id="l130-cqahic">
+            Consequenter quantum ad 
+            legem <name ref="#Muhammad">Machomaeti</name> 
+            ipse expresse approbat messiam, 
+            scilicet christum et prophetias eius recipit 
+            et ut recipit 
+            <name ref="#RichardFitzRalph">Almacanus</name> 
+            quod christus habuit spiritum dei a 
+            quo habuit auxilium ut habetur in 
+            <ref xml:id="l130-Rd1e469">libro decimo 8vo capitulo 11mo et in duodecimo</ref> 
+            inducit qualiter 
+            <name ref="#Muhammad">Machomatus</name> 
+            approbavit <name ref="#JohnTheBaptist">Iohannem baptistam</name> 
+            dicens eum esse prophetam veritatis. 
+            Sed ita est quod 
+            <name ref="#JohnTheBaptist">Iohannes Baptista</name> 
+            fuit <unclear>praeco[?]</unclear> nostri salvatoris 
+            qui de eo dicit, 
+            ecca agnus dei et de quo etiam dicebat, 
+            veniet post me fortior cuius 
+            non sum dignus solvere <unclear>corrigeam[?]</unclear> calciamentorum 
+            eius et clarum quod loquetur de humanitate christi, et sic 
+            apparet quod ex adversariis fidei ortodoxe concluditur 
+            propositum evidenter ut <unclear>goliad[?]</unclear> proprio gladio 
             occidatur, et sic hoc mysterium vere dictum esse 
-            <lb ed="#SV"/>in derisum cum omnes habeant ipsum concedere.</p>
+            in derisum cum omnes habeant ipsum concedere.
+          </p>
         </div>
       </div>
     </body>

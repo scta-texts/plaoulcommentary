@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -8,375 +7,722 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.04-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 131, de Incarnatione</title>
           <date when="2013-04-03">April 3, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-04-03">April 03, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
           <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-04-03" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
-      <front>
-        
-      </front>
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="365-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
+    </front>
     <body>
       <div xml:id="lectio131">
-      <head xml:id="l131-Hldildi" subtype="title">Lectio 131, de Incarnatione</head>
-        <div>
+        <head xml:id="l131-Hldildi">Lectio 131, de Incarnatione</head>
+        <div xml:id="l131-Dd1e109">
           <head xml:id="l131-Hprotio">Propositio</head>
-          <p xml:id="l131-ppcmpm"><lb ed="#SV"/>Primo ponam conclusionem fidei in hac materia 
-            <lb ed="#SV"/>ex qua inferetur contra aliquos errores. deinde 
-            <lb ed="#SV"/>veniam ad magis <unclear>particularizandum[?]</unclear> materiam.</p>
-          
-          <p xml:id="l131-picepg">propositio 
-            <lb ed="#SV"/>igitur catholice tenenda est hoc sicut christus iesus 
-            <lb ed="#SV"/>verus dei filius a patre per generationem procedit 
-            <lb ed="#SV"/>aeternaliter sic idem filius virginis gloriose ex 
-            <lb ed="#SV"/>nostrae processit temporaliter et etiam per generationem.</p>
-        
-          <p xml:id="l131-aipdfa"><lb ed="#SV"/>Ad istam propositionem <sic>bismembrem</sic> facit se<lb ed="#SV"/>ries 
-            evangelica <ref corresp="#l131-Qopiifs"><title ref="#io">Ioannes</title> primo</ref><note type="editorNote" subtype="citation" corresp="#l131-Qopiifs"><title>Ioannes</title> 1:3</note> nisi postquam ostensa 
-            <lb ed="#SV"/>est aeterna generatio christi et quod <quote xml:id="l131-Qopiifs" source="http://scta.info/resource/io1_3">"omnia per ipsum facta 
-            <lb ed="#SV"/>sunt"</quote> ostendit <unclear>evangelica[?]</unclear> temporalem generationem cum ait<note type="editorNote" subtype="citation" corresp="#l131-Qvcfcfv"><title>Ioannes</title> 1:14</note> 
-            <lb ed="#SV"/><quote xml:id="l131-Qvcfcfv" source="http://scta.info/resource/io1_14">verbum carum factum est</quote>, ubi inquam docetur temporalis 
-            <lb ed="#SV"/>generatio ex nostrae virgine gloriosa, quam generationem 
-            <lb ed="#SV"/>quo ad utrumque modum ostendit <title ref="#is">Isaias</title> inenar<lb ed="#SV"/>rabilem, 
-            <ref><title ref="#is">ysa</title> 50 53</ref>  generationem eius quis enar<lb ed="#SV"/>rabit, 
+          <p xml:id="l131-ppcmpm">
+            Primo ponam conclusionem fidei in hac materia 
+            ex qua inferetur contra aliquos errores, 
+            deinde veniam ad magis <unclear>particularizandum</unclear> materiam.
+          </p>
+          <p xml:id="l131-picepg">
+            Propositio 
+            igitur catholice tenenda est hoc, 
+            sicut christus iesus verus dei filius a patre 
+            per generationem procedit aeternaliter, 
+            sic idem filius virginis gloriose ex <unclear>nostrae</unclear> 
+            processit temporaliter et etiam per generationem.
+          </p>
+          <p xml:id="l131-aipdfa">
+            Ad istam propositionem <unclear>bismembrem</unclear> facit series evangelica 
+            <ref xml:id="l131-Rd1e131" corresp="#l131-Qopiifs">
+              <title ref="#io">Ioannes</title> primo
+            </ref>
+            nisi postquam ostensa 
+            est aeterna generatio christi 
+            et quod 
+            <cit>
+              <quote xml:id="l131-Qopiifs" source="http://scta.info/resource/io1_3">
+                omnia per ipsum facta sunt
+              </quote>
+            </cit> 
+            ostendit <unclear>evangelica[?]</unclear> temporalem generationem 
+            cum ait 
+            <cit>
+              <quote xml:id="l131-Qvcfcfv" source="http://scta.info/resource/io1_14">
+                verbum carum factum est
+              </quote>
+            </cit>, 
+            ubi inquam docetur temporalis 
+            generatio ex nostrae virgine gloriosa, 
+            quam generationem 
+            quo ad utrumque modum ostendit 
+            <title ref="#is">Isaias</title> inenarrabilem, 
+            <ref xml:id="l131-Rd1e156">
+              <title ref="#is">Isaiah</title> <unclear>50<!-- probably a ms mistake --></unclear> 53
+            </ref>  
+            <cit>
+              <quote xml:id="l131-Qd1e168" source="http://scta.info/resource/is53_8">
+                generationem eius quis enarrabit
+              </quote>
+            </cit>, 
             et hoc est propter difficultatem ad utrumque 
-            <lb ed="#SV"/>modum emanationis ad intra et generationis ad 
-            <lb ed="#SV"/>extra temporaliter, quam quid non via humana, sed 
-            <lb ed="#SV"/>Spiritus Sanctus revelante <name ref="#Peter">apostolus</name> confessus est, scilicet, <name ref="#Peter">Petrus</name> di<lb ed="#SV"/>cens 
-            <quote source="http://scta.info/resource/mt26_63"><!-- also in John 6:70 -->tu es Christus Filius Dei</quote> <unclear>vim[?]</unclear>, et haec conclusio 
-            <lb ed="#SV"/>ad modum emanationis aeternalem a patre, sed 
-            <lb ed="#SV"/>quo ad utrumque modum emanationis scribitur <ref corresp="#l131-Qciffdm"><title ref="#phil">Ad Philippenses</title> 
-            <cb ed="#SV" n="366ra"/><lb ed="#SV"/><num>2</num></ref><note type="editorNote" subtype="citation" corresp="#l131-Qciffdm"><title>Ad Philippenses</title> 2:6-7</note> <quote xml:id="l131-Qciffdm" source="http://scta.info/resource/phil2_6">"cum in forma dei esset non rapinam arbitratus 
-            <lb ed="#SV"/>est se esse aequalem deo formam servi accipiens 
-              <lb ed="#SV"/>factum de muliere,"</quote> et hoc ipse salvator ostendit 
-            <lb ed="#SV"/>quo ad secundam generationem, pater maior me est et 
-            <lb ed="#SV"/>alibi dicit, tristis est anima mea usque ad mortem 
-            <lb ed="#SV"/>et omnia ista christo conveniunt secundum naturam assumptam, sed 
-            <lb ed="#SV"/>quantum ad aequalitatem, ait  ego et pater unum sumus 
-            <lb ed="#SV"/>et ideo ostendit in illa consequentia <name ref="#Aristotle">philosopho</name> facta cum inquit 
-            <lb ed="#SV"/><name><unclear>philippe[?]</unclear></name>, qui videt me videt et patrem et illud dicit contra ali<lb ed="#SV"/>quos 
-            haereticos dicentes christum esse dei filium ado<lb ed="#SV"/>ptivum.</p>
-        
-          <p xml:id="l131-iaoaca">Item ait omnia <name><unclear>ihesus[?]</unclear></name> omnia quae habet pater 
-            <lb ed="#SV"/>mea sunt. Item illud apparet ex eius operatione et 
-            <lb ed="#SV"/>miraculorum virtute propria et Remissione peccatorum 
-            <lb ed="#SV"/>et ista numquam possunt esse a creatura pura, et illud 
-            <lb ed="#SV"/>patet ex ipsius Resurrectione et ad caelos ascensione.</p>
+            modum emanationis ad intra et generationis ad 
+            extra temporaliter, 
+            quam quid non via humana, 
+            sed Spiritus Sanctus revelante 
+            <name ref="#Peter">Apostolus</name> confessus est, 
+            scilicet 
+            <name ref="#Peter">Petrus</name>, 
+            dicens 
+            <cit>
+              <quote xml:id="l131-Qd1e180" source="http://scta.info/resource/mt26_63 http://scta.info/resource/io6_70">
+                <!-- also in John 6:70 -->tu es Christus Filius Dei
+              </quote>
+            </cit> 
+            <unclear>vim</unclear>, 
+            et haec conclusio 
+            ad modum emanationis aeternalem a patre, 
+            sed quo ad utrumque modum emanationis scribitur 
+            <ref xml:id="l131-Rd1e190" corresp="#l131-Qciffdm">
+              <title ref="#phil">Ad Philippenses</title>
+              <pb ed="#SV" n="366-r"/>
+              <cb ed="#SV" n="a"/>
+              <num>2</num>
+            </ref>
+            <cit>
+              <quote xml:id="l131-Qciffdm" source="http://scta.info/resource/phil2_6 http://scta.info/resource/phil2_7">
+                cum in forma dei esset non rapinam arbitratus 
+                est se esse aequalem deo formam servi accipiens 
+                factum de muliere
+              </quote>
+            </cit>, 
+            et hoc ipse salvator ostendit 
+            <unclear>quo ad<!--quoad--></unclear> secundam generationem, 
+            <cit>
+              <quote xml:id="l131-Qd1e213" source="http://scta.info/resource/io14_28">pater maior me est</quote>
+            </cit> 
+            et alibi dicit, 
+            <cit>
+              <quote xml:id="l131-Qd1e219" source="http://scta.info/resource/mt26_38 http://scta.info/resource/mc14_34">
+                tristis est anima mea usque ad mortem
+              </quote>
+            </cit>,
+            et omnia ista christo conveniunt 
+            secundum naturam assumptam, 
+            sed quantum ad aequalitatem, 
+            ait 
+            <cit>
+              <quote xml:id="l131-Qd1e226" source="http://scta.info/resource/io10_30">
+                ego et pater unum sumus
+              </quote>
+            </cit>,
+            et ideo ostendit in illa consequentia 
+            <unclear><name ref="#Aristotle">philosopho</name><!-- doesn't seem correct--></unclear> 
+            facta 
+            cum inquit, 
+            <cit>
+              <quote xml:id="l131-Qd1e237" source="http://scta.info/resource/io14_9">
+                <name>Philippe</name>, 
+                qui videt me videt et Patrem
+              </quote>
+            </cit>.
+            Et illud dicit contra aliquos 
+            haereticos dicentes 
+            christum esse dei filium adoptivum.
+          </p>
+          <!-- should this be a paragraph break? -->
+          <p xml:id="l131-iaoaca">
+            Item, 
+            ait omnia <name><unclear>ihesus</unclear></name> 
+            <cit>
+              <quote xml:id="l131-Qd1e256" source="http://scta.info/resource/io16_15">
+                omnia quae habet pater 
+                mea sunt</quote>
+            </cit>. 
+            <!-- break? -->
+            Item, 
+            illud apparet ex eius operatione et 
+            miraculorum virtute propria et remissione peccatorum 
+            et ista numquam possunt esse a creatura pura. 
+            Et illud patet ex ipsius resurrectione 
+            et ad caelos ascensione.
+          </p>
         </div>
-        <div>
+        <div xml:id="l131-Dd1e264">
           <head xml:id="l131-Hccecce">Corollaria: contra errores</head>
-          <div>
+          <div xml:id="l131-Dd1e269">
             <head xml:id="l131-Hpceehp">Primum: contra errorem assentium christum esse hominem purum</head>
-            <p xml:id="l131-eqagap"><lb ed="#SV"/>Ex quo apparet primo error <name><unclear>ebronis[?]</unclear></name> et <name ref="#PaulSamosata">pauli 
-              <lb ed="#SV"/>samositani</name> assentientium christum esse hominem purum, 
-              <lb ed="#SV"/>sed participatione divinae maiestatis et gratiae denominatur 
-              <lb ed="#SV"/>esse deus more antiquorum philosophorum quia nedum scriptura 
-              <lb ed="#SV"/>dicit ego dixi dii estis et filii excelsi omnes, 
-              <lb ed="#SV"/>sed etiam apud gentiles <name ref="#Homer">omerus</name> dicit <name ref="#Hector">hechorem</name>, <name ref="#Priam">pria<lb ed="#SV"/>mi</name> 
-              filium esse quasi dei filium propter virtutis exce<lb ed="#SV"/>llentiam, 
+            <p xml:id="l131-eqagap">
+              Ex quo apparet primo error <name><unclear>ebronis[?]</unclear></name> 
+              et <name ref="#PaulSamosata">Pauli Samositani</name>
+              assentientium christum esse hominem purum, 
+              sed participatione divinae maiestatis et gratiae denominatur 
+              esse deus more antiquorum philosophorum 
+              quia nedum scriptura 
+              dicit 
+              <cit>
+                <quote xml:id="l131-Qd1e285" source="http://scta.info/resource/81_6">
+                  ego dixi dii estis et filii excelsi omnes
+                </quote>
+              </cit>, 
+              sed etiam apud gentiles 
+              <name ref="#Homer">Homerus</name> dicit 
+              <name ref="#Hector">Hechorem</name>, <name ref="#Priam">Priami</name> 
+              filium esse quasi dei filium propter virtutis excellentiam, 
               immo virtutem heroicam habentes deos 
-              <lb ed="#SV"/>vocabant gentiles ut apparet ex decimo <title ref="#Ethics">Ethicorum</title> 
-              <lb ed="#SV"/>ut ponitur exemplum de <name ref="#Homer">omero</name> narrante <name ref="#Hector">hethorem</name> 
-              <lb ed="#SV"/>esse deum, sed ex probationibus prius adductis apparet quod 
-              <lb ed="#SV"/>ille error est malus, nam dicit christus, exivi a 
-              <lb ed="#SV"/>patre, scilicet, per aeternam generationem Si dicatur quod intelligitur 
-              <lb ed="#SV"/>de temporali processione hoc est falsum cum dicit sal<lb ed="#SV"/>vator 
-              alibi <name ref="#Jews">Iudaeis</name> Respondendo antequam <name ref="#Abraham">abra<lb ed="#SV"/>ham</name> 
-              fieret ego sum ubi  inevitabiliter christus 
-              <lb ed="#SV"/>dicit se fuisse ante eius incarnationem.</p> 
-            
-            <p xml:id="l131-iivgap">Item <ref corresp="#l131-Qvaeqmm"><title ref="#io">Ioannes</title> 
-              <lb ed="#SV"/><num>16</num></ref><note type="editorNote" subtype="citation" corresp="#l131-Qvaeqmm"><title>Ioannes</title> 16:5</note> <quote xml:id="l131-Qvaeqmm" source="http://scta.info/resource/io16_5">"vado ad eum qui me misit"</quote> quod intelligitur 
-              <lb ed="#SV"/>de aeterno generatione a patre.</p>
-        
-            <p xml:id="l131-ianphp">Item ait nemo 
-              <lb ed="#SV"/>ascendit in caelum nisi qui descendit de caelo filius 
-              <lb ed="#SV"/>hominis quidquid descensus non fuit per modum localem 
-              <lb ed="#SV"/>sed per naturae inferioris assumptionem. Ex quibus omnibus 
-              <lb ed="#SV"/>pellitur haeresis praedicta.</p>
+              vocabant gentiles, 
+              ut apparet ex 
+              <cit>
+                <ref xml:id="l131-Rd1e301" target="http://scta.info/resource/aristneth-l10">
+                  decimo 
+                  <title ref="#Ethics">Ethicorum</title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              ut ponitur exemplum de 
+              <name ref="#Homer">Homero</name> 
+              narrante <name ref="#Hector">hethorem</name> 
+              esse deum. 
+              Sed ex probationibus 
+              prius adductis apparet 
+              quod ille error est malus, 
+              nam dicit christus, 
+              <cit>
+                <quote xml:id="l131-Qd1e319" source="http://scta.info/source/io16_28">
+                  exivi a patre
+                </quote>
+              </cit>, 
+              scilicet per aeternam generationem. 
+              Si dicatur quod intelligitur 
+              de temporali processione, 
+              hoc est falsum, 
+              cum dicit salvator 
+              alibi <name ref="#Jews">Iudaeis</name> 
+              respondendo 
+              <cit>
+                <quote xml:id="l131-Qd1e329" source="http://scta.info/resource/io8_58">
+                  antequam <name ref="#Abraham">Abraham</name> 
+                  fieret ego sum
+                </quote>
+              </cit> 
+              ubi inevitabiliter christus 
+              dicit se fuisse ante eius incarnationem.
+            </p> 
+            <p xml:id="l131-iivgap">
+              Item, 
+              <ref xml:id="l131-Rd1e339" corresp="#l131-Qvaeqmm">
+                <title ref="#io">Ioannes</title> 
+                <num>16</num>
+              </ref> 
+              <cit>
+                <quote xml:id="l131-Qvaeqmm" source="http://scta.info/resource/io16_5">
+                  vado ad eum qui me misit
+                </quote>
+              </cit> 
+              quod intelligitur 
+              de aeterno generatione a patre.
+            </p>
+            <p xml:id="l131-ianphp">
+              Item, 
+              ait, 
+              <cit>
+                <quote xml:id="l131-Qd1e359" source="http://scta.info/resource/io3_13">
+                  nemo ascendit in caelum nisi 
+                  qui descendit de caelo filius hominis
+                </quote>
+              </cit>,
+              quidquid descensus non fuit per modum localem, 
+              sed per naturae inferioris assumptionem. 
+              Ex quibus omnibus pellitur haeresis praedicta.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e365">
             <head xml:id="l131-Hscmscm">Secundum: contra Manichaeos</head>
-            <p xml:id="l131-sicqef">secundo infertur contra mani<lb ed="#SV"/>chaeos 
+            <p xml:id="l131-sicqef">
+              Secundo infertur contra Manichaeos 
               dicentes quod christus non assumpsit sibi 
-              <lb ed="#SV"/>corpus verum, sed praecise fantasticum, id est, apparens 
-              <lb ed="#SV"/>ita quod christus solum apparet habere corpus licet 
-              <lb ed="#SV"/>non haberet et ideo forte ipse glosarent 
-              <lb ed="#SV"/>scripturam dicentes quod scriptura debet capi similitu<lb ed="#SV"/>dinarie 
-              ut christus aliquando vocatur leo propter simili<lb ed="#SV"/>tudinem, 
-              sed hoc Repellitur, quia scriptura numquam 
-              <lb ed="#SV"/>conformiter loquitur de similitudinibus quin statim 
-              <lb ed="#SV"/><lb ed="#SV"/>post appareat illas esse similitudines 
-              <cb ed="#SV" n="366rb"/><lb ed="#SV"/>et non secundum veritatem ut patet in figura de tribus in specie 
-              <lb ed="#SV"/>virorum apparentibus <name ref="#Abraham">abrahae</name> statim in littera sequitur 
-              <lb ed="#SV"/>quod unum adoravit ex quo apparet quod licet trinitas sub simil<lb ed="#SV"/>tudine 
-              virorum apparuit, tamen sequitur evidenter in littera quod erit figura.</p>
-        
-            <p xml:id="l131-schhvc">secundo contra hanc haeresim scribitur luce ultimo 
-              <lb ed="#SV"/>quod christus apparens suis discipulis expresse iussit ut 
-              <lb ed="#SV"/>eum palparent dicens eis quod spiritus carnem et ossa 
-              <lb ed="#SV"/>non habet, et hoc fecit ad  refellendum 
-              <lb ed="#SV"/>errorem hunc ut ostenderet se habere verum corpus.</p>
+              corpus verum, sed praecise fantasticum, 
+              id est apparens ita quod christus solum apparet habere corpus,
+              licet non haberet et ideo forte ipse glosarent 
+              scripturam dicentes quod scriptura debet capi similitudinarie 
+              ut christus aliquando vocatur leo propter similitudinem, 
+              sed hoc repellitur 
+              quia scriptura numquam 
+              conformiter loquitur de similitudinibus quin statim 
+              post appareat illas esse similitudines 
+              <cb ed="#SV" n="b"/><!--366rb-->
+              et non secundum veritatem, 
+              ut patet in figura de tribus in specie 
+              virorum apparentibus <name ref="#Abraham">Abrahae</name> statim in littera sequitur 
+              quod unum adoravit ex quo apparet quod licet trinitas sub similtudine 
+              virorum apparuit, 
+              tamen sequitur evidenter in littera quod erit figura.
+            </p>
+            <p xml:id="l131-schhvc">
+              Secundo, 
+              contra hanc haeresim scribitur 
+              <ref xml:id="l131-Rd1e381">luce ultimo</ref> 
+              quod christus apparens suis discipulis 
+              expresse iussit ut eum palparent 
+              dicens eis quod 
+              <cit>
+                <quote xml:id="l131-Qd1e386" source="http://scta.info/resource/lc24_39">
+                  spiritus carnem et ossa 
+                  non habet
+                </quote>
+              </cit>, 
+              et hoc fecit ad refellendum errorem hunc, 
+              ut ostenderet se habere verum corpus.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e392">
             <head xml:id="l131-Htcecsa">Tertium: contra errorem quod christus corpus caeleste sibi assumpsit</head>
-            <p xml:id="l131-taessa"><lb ed="#SV"/>Tertio apparet error <name ref="#Valentius"><unclear>valentinam[?]</unclear></name> dicentis quod  christus corpus 
-              <lb ed="#SV"/>caeleste sibi assumpsit, et de virgine gloriosa non, 
-              <lb ed="#SV"/>et iste error et <unclear>praecendum[?]</unclear> qui est <name ref="#Manicheans">manicheorum</name> ex eadem 
-              <lb ed="#SV"/>radice pulularunt, et tenuerunt quod sunt duo 
-              <lb ed="#SV"/>principia unum bonum et alium malum, et omnis creatura 
-              <lb ed="#SV"/>infra concavum orbis lunae est a diabolo tamquam a causa 
-              <lb ed="#SV"/>principali et ideo isti tenuerunt quod omnia corruptibilia 
-              <lb ed="#SV"/>sunt realiter et intrinsece mala eo quod sine mutuo 
-              <lb ed="#SV"/>corrumpunt, ideo non decuit quod christus qui erat diabolum 
-              expugnaret reciperet materiam sibi subiectam, sed illud 
-              <lb ed="#SV"/>repellitur a scriptura, et eo quod concedebant se esse christianos 
-              <lb ed="#SV"/>ideo omnes scripturas novae legis receperunt et reprobantur 
-              <lb ed="#SV"/>in hoc quod scribitur <ref><title ref="#rom">Ad Romanos</title> <num>primo</num></ref><note type="editorNote" subtype="citation" corresp="#l131-Qcfedsc"><title>Ad Romanos</title> 1:3</note> <quote xml:id="l131-Qcfedsc" source="http://scta.info/resource/rom1_3">"Christus factus est ex se<lb ed="#SV"/>mine 
-              <name ref="#David">David</name> secundum carnem,"</quote> et ergo hoc est per communicationem 
-              <lb ed="#SV"/>corporis eiusdem speciei; <name ref="#Paul">Apostolus</name><note type="editorNote" subtype="citation" corresp="#l131-Qfemfem"><title>Ad Galatas</title> 4:4</note> vocat christum <quote xml:id="l131-QBfemfem" source="http://scta.info/resource/gal4_4">"factum ex 
-              <lb ed="#SV"/>muliere"</quote> igitur hoc est de virgine gloriosa; <ref>tertio <title ref="#hebr">Ad Hebraeos</title>  
-              <lb ed="#SV"/><num>II</num></ref><note type="editorNote" subtype="citation" corresp="#l131-Qanassa"><title>Ad Hebraeos</title> 2:16</note> <quote xml:id="l131-Qanassa" source="http://scta.info/resource/hebr2_16">angelum nusquam apprehendit sed semen <name ref="#Abraham">abrahae</name>.</quote></p>
+            <p xml:id="l131-taessa">
+              Tertio, 
+              apparet error <name ref="#Valentius"><unclear>Valentinam</unclear></name> 
+              dicentis quod  christus corpus 
+              caeleste sibi assumpsit, 
+              et de virgine gloriosa non, 
+              et iste error et praecendum 
+              qui est <name ref="#Manicheans">Manicheorum</name> 
+              ex eadem radice <unclear>pulularunt</unclear>, 
+              et tenuerunt quod sunt duo 
+              principia unum bonum et alium malum, 
+              et omnis creatura infra concavum orbis lunae est 
+              a diabolo tamquam a causa principali, 
+              et ideo isti tenuerunt 
+              quod omnia corruptibilia 
+              sunt realiter et intrinsece mala eo quod sine mutuo corrumpunt, 
+              ideo non decuit quod christus qui erat diabolum 
+              expugnaret reciperet materiam sibi subiectam, 
+              sed illud repellitur a scriptura, 
+              et eo quod concedebant se esse christianos 
+              ideo omnes scripturas novae legis receperunt et reprobantur 
+              in hoc quod scribitur 
+              <ref xml:id="l131-Rd1e409">
+                <title ref="#rom">Ad Romanos</title> 
+                <num>primo</num>
+              </ref> 
+              <cit>
+                <quote xml:id="l131-Qcfedsc" source="http://scta.info/resource/rom1_3">
+                  Christus factus est ex semine 
+                  <name ref="#David">David</name> 
+                  secundum carnem
+                </quote>
+              </cit>, 
+              et ergo hoc est per communicationem 
+              corporis eiusdem speciei; 
+              <ref xml:id="l131-Rd1e428">
+                <name ref="#Paul">Apostolus</name>
+              </ref> 
+              vocat christum 
+              <cit>
+                <quote xml:id="l131-QBfemfem" source="http://scta.info/resource/gal4_4">
+                  factum ex muliere
+                </quote>
+              </cit> 
+              igitur hoc est de virgine gloriosa; 
+              <ref xml:id="l131-Rd1e440">
+                tertio 
+                <title ref="#hebr">Ad Hebraeos</title>  
+                <num>II</num>
+              </ref>
+              <cit>
+                <quote xml:id="l131-Qanassa" source="http://scta.info/resource/hebr2_16">
+                  angelum nusquam apprehendit sed semen 
+                  <name ref="#Abraham">Abrahae</name>
+                </quote>
+              </cit>
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e460">
             <head xml:id="l131-Hqcesva">Quartum: contra errorem antiquorum dicentium deitatem supplere vicem animae</head>
-            <p xml:id="l131-sqesgf">Sequitur quartus error antiquorum dicentium deitatem 
-              <lb ed="#SV"/>supplere vicem animae ita quod imaginatur christum componi 
-              <lb ed="#SV"/>ex corpore et deitate sed illud est falsum quia deus non esset 
-              <lb ed="#SV"/>homo eo quod deitas non est communicabilis secundum gradum finitum.</p>
+            <p xml:id="l131-sqesgf">
+              Sequitur quartus error antiquorum dicentium deitatem 
+              supplere vicem animae 
+              ita quod imaginatur christum componi 
+              ex corpore et deitate. 
+              Sed illud est falsum 
+              quia deus non esset 
+              homo eo quod deitas non est 
+              communicabilis secundum gradum finitum.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e470">
             <head xml:id="l131-Hqceten">Quintum: contra errorem <unclear>Theodori[?]</unclear> et Nestorii</head>
-            <p xml:id="l131-pqeesc">patet quintus error <name>teodori <unclear>monesceni[?]</unclear></name> et <name ref="#Nestorius">nestorii</name> se<lb ed="#SV"/>ctatoris 
-              eius dicentium quod christus est homo sed conceditur esse deus quia 
-              <lb ed="#SV"/>est templum dei in quo singularissime habitat tota deitas, 
-              <lb ed="#SV"/>et ideo dicunt quod virgo gloriosa non dicitur proprie mater 
-              <lb ed="#SV"/>dei sed hominis, nam licet praedicta deo competentia attribuantur christo 
-              <lb ed="#SV"/>non tamen econverso, Ita quod isti concedunt quod christus est deus et 
-              <lb ed="#SV"/>dominus gloriae et sanctus sanctorum, non tamen conceditur, non tamen conce<lb ed="#SV"/>dunt 
-              quod deus sit passus vel <unclear>mortuus[?]</unclear> vel de virgine 
-              <lb ed="#SV"/>natus contra quem <name ref="#Nestorius">nestorium</name> processit <name ref="#Cyril">cirilus alexan<lb ed="#SV"/>drinorum 
-                episcopus</name> et fecit <seg type="subject" ana="#consiliumgenerale">consilium generale</seg> congregari 
-              <lb ed="#SV"/>in quo determinatum fuit quod virgo deum genuit et realiter 
-              <lb ed="#SV"/>est mater, et quod persona dei et hominis sunt unica persona 
-              <lb ed="#SV"/>et quod homo vere est deus, et deus est homo, et sic nedum ex 
-              <lb ed="#SV"/>scriptura prius inducta convincitur <name ref="#Nestorius">nestorius</name>, sed etiam 
-              <lb ed="#SV"/>ex ecclesiae solemniter congregata.</p>
+            <p xml:id="l131-pqeesc">
+              Patet quintus error <name>teodori <unclear>monesceni[?]</unclear></name> 
+              et <name ref="#Nestorius">Nestorii</name> sectatoris 
+              eius dicentium 
+              quod christus est homo 
+              sed conceditur esse deus 
+              quia est templum dei in quo singularissime habitat tota deitas, 
+              et ideo dicunt quod virgo gloriosa 
+              non dicitur proprie mater dei sed hominis, 
+              nam licet praedicta deo competentia attribuantur christo 
+              non tamen econverso, 
+              ita quod isti concedunt quod christus est deus et 
+              dominus gloriae et sanctus sanctorum, 
+              non tamen conceditur, 
+              non tamen concedunt quod deus sit passus vel <unclear>mortuus[?]</unclear> vel de virgine 
+              natus contra quem <name ref="#Nestorius">nestorium</name> processit 
+              <name ref="#Cyril">cirilus alexandrinorum episcopus</name> 
+              et fecit consilium generale congregari 
+              in quo determinatum fuit 
+              quod virgo deum genuit et realiter est mater, 
+              et quod persona dei et hominis sunt unica persona 
+              et quod homo vere est deus, 
+              et deus est homo, 
+              et sic nedum ex scriptura prius inducta convincitur <name ref="#Nestorius">Nestorius</name>, 
+              sed etiam ex ecclesiae solemniter congregata.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e503">
             <head xml:id="l131-Hscednc">Sextum: contra errorem quod christus non in duabus naturis consistit</head>
-            <p xml:id="l131-sseevh">sexto sequitur error <name>eu<cb ed="#SV" n="366va"/><lb ed="#SV"/>ticis</name> 
-              ex caracteribus litterarum ponentis quod licet christus ex duabus 
-              <lb ed="#SV"/>naturis sit una persona consistens non tamen in duabus na<lb ed="#SV"/>turis 
-              consistit, contra quod <name ref="#Boethius">boecius</name> edidit librum de dua<lb ed="#SV"/>bus 
-              naturis in persona christi, unde iste error imaginatur 
-              <lb ed="#SV"/>ad salvandum unitatem personae quod duae naturae ibi concurrunt 
-              <lb ed="#SV"/>pure identitate et sic licet christus ex duabus naturis sub<lb ed="#SV"/>sistat, 
+            <p xml:id="l131-sseevh">
+              Sexto sequitur error <name>Eu<pb ed="#SV" n="366-v"/><cb ed="#SV" n="a"/>ticis</name> 
+              ex caracteribus litterarum ponentis 
+              quod licet christus ex duabus 
+              naturis sit una persona consistens, 
+              non tamen in duabus naturis consistit, 
+              contra quod <name ref="#Boethius">Boecius</name> edidit librum de duabus 
+              naturis in persona christi, 
+              unde iste error imaginatur ad salvandum unitatem personae 
+              quod duae naturae ibi concurrunt 
+              pure identitate, 
+              et sic licet christus ex duabus naturis subsistat, 
               non tamen in duabus eo quod illae duae naturae identice 
-              concurrunt in unitatem suppositi. contrarium tamen est verum quia nisi 
-              <lb ed="#SV"/>sic tunc christus non esset verus homo.</p>
+              concurrunt in unitatem suppositi, 
+              contrarium tamen est verum 
+              quia, 
+              nisi sic, 
+              tunc christus non esset verus homo.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e521">
             <head xml:id="l131-Hscehis">Septimum: contra errorem quod filius dei assumpsit sibi hominem identitatum sibi</head>
-            <p xml:id="l131-safems">septimo apparet falistas opinio<lb ed="#SV"/>nis 
-              dicentium quod filius dei assumpsit sibi hominem <unclear>identitatum[?]</unclear> 
-              <lb ed="#SV"/>sibi, et licet haec opinio non ponatur inter haereses, re<lb ed="#SV"/>puto 
-              tamen quod sit falsa, est tamen <name ref="#Moderni">modernorum</name> quorum ima<lb ed="#SV"/>ginatio 
-              est multum subtilis.</p> 
-          
-            <p xml:id="l131-ehvaee">et hanc viam Recitat <name ref="#WilliamOfAuxerre">guillelmus 
-              <lb ed="#SV"/>altissiodorensis</name> dicens illam fuisse archiepiscopi <unclear>caenomen[?]</unclear>, licet 
-              <lb ed="#SV"/>videatur ad eam declinare partem, unde imaginatur quod <name ref="#Christ">christus 
-                <lb ed="#SV"/><unclear>ihesus[?]</unclear></name> natus de virgine est homo, et videntur imaginari 
-              <lb ed="#SV"/>quod humanitas christi veraciter sit homo et persona. Deinde ima<lb ed="#SV"/>ginatur 
+            <p xml:id="l131-safems">
+              Septimo, 
+              apparet falistas opinionis 
+              dicentium quod filius dei assumpsit sibi hominem <unclear>identitatum</unclear> sibi, 
+              et licet haec opinio non ponatur inter haereses, 
+              reputo tamen quod sit falsa, 
+              est tamen <name ref="#Moderni">modernorum</name> quorum imaginatio 
+              est multum subtilis.
+            </p>
+            <p xml:id="l131-ehvaee">
+              Et hanc viam recitat 
+              <ref xml:id="l131-Rd1e537"><name ref="#WilliamOfAuxerre">Guillelmus Altissiodorensis</name></ref> 
+              dicens 
+              illam fuisse archiepiscopi <unclear>caenomen[?]</unclear>, 
+              licet videatur ad eam declinare partem. 
+              Unde imaginatur quod 
+              <name ref="#Christ">christus <unclear>ihesus</unclear></name> 
+              natus de virgine est homo, 
+              et videntur imaginari 
+              quod humanitas christi veraciter sit homo et persona. 
+              Deinde imaginatur 
               quod verbum dei sibi univit taliter illum hominem quod 
-              <lb ed="#SV"/>verbum et homo sunt Realiter eadem persona et una persona 
-              <lb ed="#SV"/>sit alia et econverso.</p>
-        
-            <p xml:id="l131-scipdc">Sed contra istam opinionem arguitur primo 
-              <lb ed="#SV"/>nam data ista via sequitur quod quaelibet creatura mundi posset 
-              <lb ed="#SV"/>fieri deus et inciperet esse deus quia qua ratione verbum iden<lb ed="#SV"/>tificat 
+              verbum et homo sunt realiter eadem persona 
+              et una persona sit alia et econverso.
+            </p>
+            <p xml:id="l131-scipdc">
+              Sed contra istam opinionem arguitur primo 
+              nam data ista via sequitur quod quaelibet creatura mundi posset 
+              fieri deus et inciperet esse deus quia qua ratione verbum identificat 
               sibi unam creaturam eadem ratione et quamlibet 
-              <lb ed="#SV"/>posset sibi identificare et tunc sequitur quod quaelibet creatura 
-              <lb ed="#SV"/>posset esse beata independens et quod materia prima posset 
-              <lb ed="#SV"/>esse beatifica et purus actus et immensus. Ex quo sequitur quod omnia 
-              <lb ed="#SV"/>praedicata <unclear>imperfectonalia[?]</unclear> cuilibet creatura communicata possent deo 
-              <lb ed="#SV"/>competere.</p>
-        
-            <p xml:id="l131-ssqdpa">secundo sequitur quod deus esset Realiter  annihilabilis, patet quia 
-              <lb ed="#SV"/>homo christus est Realiter annihilabilis eo quod potest dimitti et tamen homo 
-              <lb ed="#SV"/>est deus igitur deus potest annihilari.</p>
-        
-            <p xml:id="l131-tsdned">tertio sequitur deus posset 
-              <lb ed="#SV"/>peccare, nam homo christus qui est Realiter deus poterit dimitti, igitur 
-              <lb ed="#SV"/>posset peccare gravissime, et ex consequenti deus posset damna<lb ed="#SV"/>ri 
-              quod non est dicendum.</p>
-        
-            <p xml:id="l131-qsidha">quarto si illa positio esset vera tunc nulla esset 
-              <lb ed="#SV"/>differentia essentialis, nec diffinitio esset essentialis patet quia quaelibet 
-              <lb ed="#SV"/>diffinitio cuilibet posset competere quia qua ratione deus poterit creaturae 
-              <lb ed="#SV"/>identificari eadem ratione potest quamlibet creaturam alteri identificare 
-              <lb ed="#SV"/>et sic diffinitio hominis conveniet materiae primae ex quo sequitur quod ars 
-              <lb ed="#SV"/>demonstrativa periret, unde haec positio pro sui declaratione 
-              <lb ed="#SV"/>concedit consequenter has propositiones, prima est quod sicut deus ince<lb ed="#SV"/>pit 
-              esse homo ita homo incepit esse deus et sic consequenter concedunt 
-              <lb ed="#SV"/>quod aliqua Res potest noviter esse deus ut apparet de homine as<lb ed="#SV"/>sumpto.</p>
-          
-            <p xml:id="l131-spdrur">secunda propositio: dato quod ille homo praeexisteret non tamen 
-              <lb ed="#SV"/>Repugnat quin deus ipsum assumpsisset in unitatem 
-              <lb ed="#SV"/>personae, et consequenter concedit haec positio quod deus assumpsit hominem 
-              <lb ed="#SV"/>nec ponit differentiam inter humanam  naturam vel 
-              <lb ed="#SV"/>hominem concedit tamen quod idem est assumens et assumptum et 
-              <lb ed="#SV"/>quod homo assumpsit hominem et quod deus est assumptus quia 
-              <lb ed="#SV"/>homo qui est idem cum deo est assumptus, Ex ista positione sequitur 
-              <cb ed="#SV" n="366vb"/><lb ed="#SV"/>inconvenientia iam illata tamen haec positio salvat mul<lb ed="#SV"/>tas 
-              auctoritates dicentium quod homo factus est deus, de vo<lb ed="#SV"/>cali 
-              non potest salvari potest nisis quia ille homo Realiter 
-              <lb ed="#SV"/>cepit esse deus et quantum ad tales propositiones poterit responderi 
-              <lb ed="#SV"/>unica Responsionem.</p>
-        
-            <p xml:id="l131-pqdinc">primo quando dicitur homo incepit esse deus, 
-              <lb ed="#SV"/>id est, sic incepit esse quod homo est deus etiam homo factus 
-              <lb ed="#SV"/>est deus, id est, ita factum est quod homo est deus, nam christus 
-              <lb ed="#SV"/>ab aeterno est deus quia ab aeterno emanavit a deo 
-              <lb ed="#SV"/>patre et semper emanabit, nam ista propositio nunc est vera 
-              <lb ed="#SV"/>homo est deus et ante incarnationem non erat vera, et 
-              <lb ed="#SV"/>si arguitur quod aliquid potest desinere esse deus quia sit <c>a</c> instans 
-              <lb ed="#SV"/>definitionis humanae naturae, tunc in illo homo non est deus 
-              <lb ed="#SV"/>et immediate ante hoc erat deus igitur in instanti 
-              <lb ed="#SV"/><c>a</c> homo desinit esse deus et ita argueretur de incipit 
-              <lb ed="#SV"/>per Remotionem de praesenti potissime. sed fallibilis est Responsio, nam 
-              <lb ed="#SV"/>in talibus <unclear>cognoscentibus[?]</unclear> providendum est dupliciter, uno modo quod in propositione 
-              <lb ed="#SV"/>de praesentem demonstratur absolute sine <unclear>cognoscative[?]</unclear> illud 
-              <lb ed="#SV"/>pro quo sumit subiectum et sic erit facilis solutio, nam de<lb ed="#SV"/>monstrando 
-              verbi personam ista de praesenti erit falsa, scilicet, hoc 
-              <lb ed="#SV"/>non est deus, sed ratione <unclear>cognoscantionis[?]</unclear> ista conceditur homo non est deus. 
-              <lb ed="#SV"/>secundo modo providendum est quod propositio de praeterito de desinit 
-              <lb ed="#SV"/>debet praecedere et propositio de praesenti debet sequi cum pro nomine 
-              <lb ed="#SV"/>relativo exemplum christus desinit esse deus, exponitur christus 
-              <lb ed="#SV"/>immediate ante hoc fuit deus et ille non est deus et tunc 
-              <lb ed="#SV"/>secunda est falsa quia li <mentioned>ipse</mentioned> non refert nisi pro significato materiali, 
-              <lb ed="#SV"/>et sic apparet quod illa instantia non concludit.</p>
+              posset sibi identificare et tunc sequitur quod quaelibet creatura 
+              posset esse beata independens et quod materia prima posset 
+              esse beatifica et purus actus et immensus. Ex quo sequitur quod omnia 
+              praedicata <unclear>imperfectonalia[?]</unclear> cuilibet creatura communicata possent deo 
+              competere.
+            </p>
+            <p xml:id="l131-ssqdpa">
+              Secundo, 
+              sequitur quod deus esset realiter annihilabilis. 
+              Patet quia homo christus est realiter annihilabilis eo 
+              quod potest dimitti, 
+              et tamen homo est deus igitur deus potest annihilari.
+            </p>
+            <p xml:id="l131-tsdned">
+              Tertio, 
+              sequitur deus posset peccare, 
+              nam homo christus qui est realiter deus poterit dimitti, 
+              igitur posset peccare gravissime, 
+              et ex consequenti deus posset damnari 
+              quod non est dicendum.
+            </p>
+            <p xml:id="l131-qsidha">
+              Quarto, 
+              si illa positio esset vera, 
+              tunc nulla esset 
+              differentia essentialis, 
+              nec diffinitio esset essentialis patet quia quaelibet 
+              diffinitio cuilibet posset competere 
+              quia qua ratione deus poterit creaturae 
+              identificari eadem ratione potest quamlibet creaturam alteri identificare 
+              et sic diffinitio hominis conveniet materiae primae ex quo sequitur quod ars 
+              demonstrativa periret, 
+              unde haec positio pro sui declaratione 
+              concedit consequenter has propositiones, 
+              prima est quod sicut deus incepit 
+              esse homo ita homo incepit esse deus, 
+              et sic consequenter concedunt 
+              quod aliqua res potest noviter esse deus, 
+              ut apparet de homine assumpto.
+            </p>
+            <p xml:id="l131-spdrur">
+              Secunda propositio: 
+              dato quod ille homo praeexisteret, 
+              non tamen repugnat quin deus ipsum assumpsisset in unitatem personae, 
+              et consequenter concedit haec positio 
+              quod deus assumpsit hominem 
+              nec ponit differentiam inter humanam naturam vel hominem, 
+              concedit tamen quod idem est assumens 
+              et assumptum et quod homo assumpsit hominem 
+              et quod deus est assumptus 
+              quia homo qui est idem cum deo est assumptus. 
+              Ex ista positione sequitur 
+              <cb ed="#SV" n="b"/><!--SV366vb-->
+              inconvenientia iam illata, 
+              tamen haec positio salvat multas 
+              auctoritates dicentium quod homo factus est deus, 
+              de vocali non potest salvari potest nisi 
+              quia ille homo realiter cepit esse deus 
+              et quantum ad tales propositiones 
+              poterit responderi unica responsionem.
+            </p>
+            <p xml:id="l131-pqdinc">
+              Primo, 
+              quando dicitur homo incepit esse deus, 
+              id est, sic incepit esse 
+              quod homo est deus etiam homo factus est deus, 
+              id est ita factum est quod homo est deus, 
+              nam christus ab aeterno est deus 
+              quia ab aeterno emanavit a deo patre et semper emanabit, 
+              nam ista propositio nunc est vera homo est deus 
+              et ante incarnationem non erat vera, 
+              et si arguitur quod aliquid 
+              potest desinere esse deus quia sit <c>a</c> instans 
+              definitionis humanae naturae, 
+              tunc in illo homo non est deus 
+              et immediate ante hoc erat deus, 
+              igitur in instanti <c>a</c> homo desinit esse deus, 
+              et ita argueretur de incipit per remotionem de praesenti potissime. 
+              Sed fallibilis est responsio, 
+              nam in talibus <unclear>cognoscentibus[?]</unclear> providendum est dupliciter. 
+              Uno modo quod in propositione 
+              de praesentem demonstratur absolute sine <unclear>cognoscative</unclear> 
+              illud pro quo sumit subiectum, 
+              et sic erit facilis solutio, 
+              nam demonstrando verbi personam ista de praesenti erit falsa, 
+              scilicet hoc non est deus, 
+              sed ratione <unclear>cognoscantionis</unclear> ista conceditur 
+              homo non est deus. 
+              Secundo modo providendum est 
+              quod propositio de praeterito de desinit 
+              debet praecedere et propositio de praesenti 
+              debet sequi cum pro nomine relativo exemplum christus desinit esse deus, 
+              exponitur christus immediate ante hoc fuit deus 
+              et ille non est deus 
+              et tunc secunda est falsa 
+              quia li <mentioned>ipse</mentioned> non refert 
+              nisi pro significato materiali, 
+              et sic apparet quod illa instantia non concludit.
+            </p>
           </div>
-          <div>
+          <div xml:id="l131-Dd1e595">
             <head xml:id="l131-Hoceiup">Octavum: contra errorem quod natura divina et natura humana identice concurrunt in unam personam</head>
-            <p xml:id="l131-sofupe">Sequitur 
-              <lb ed="#SV"/>octavo falsitas opinionis dicentium quod licet natura divina et 
-              <lb ed="#SV"/>natura humana quae est composita ex duabus naturis sicut 
-              <lb ed="#SV"/>tres distinctae naturae tamen identice concurrunt in unam 
-              <lb ed="#SV"/>personam ita quod ille tres naturae simul iunctae sunt unum 
-              <lb ed="#SV"/>suppositum, et istam viam tenuerunt multi <name ref="#Moderni">modernorum</name>, 
-              <lb ed="#SV"/>unde imaginatur quod sicut anima et materia prima sunt realiter persona 
-              <lb ed="#SV"/>humana simul Iuncta, cum hoc tamen ipsa anima est eadem 
-              <lb ed="#SV"/>persona humana, et ista fuit expresse opinio <name ref="#HughOfStVictor">hugonis 
-                <lb ed="#SV"/>de sancto victore</name> dicentis quod anima sit vere homo et persona 
-              <lb ed="#SV"/>humana et cum hoc anima et corpus simul sunt in eadem 
-              <lb ed="#SV"/>persona humana, et <name ref="#WilliamOfParis">guillelmus parisiensis</name> hoc tenuit, et 
-              ita proportionaliter diceretur quod illae tres naturae scilicet, divina anima 
-              <lb ed="#SV"/>et corpus sunt verbum dei et sunt secunda persona in divinis 
-              <lb ed="#SV"/>et cum hoc verbum quod est una natura illarum trium est una 
-              <lb ed="#SV"/>persona eadem.</p>
-        
-            <p xml:id="l131-aisnea">Aliter imaginati sunt quid nam dato asino 
-              <lb ed="#SV"/>si anima humana informaret totum compositum asini tunc resul<lb ed="#SV"/>tans 
+            <p xml:id="l131-sofupe">
+              Sequitur,
+              octavo falsitas opinionis dicentium quod, 
+              licet natura divina et natura humana 
+              quae est composita ex duabus naturis, 
+              sicut tres distinctae naturae, 
+              tamen identice concurrunt in unam 
+              personam ita quod ille tres naturae 
+              simul iunctae sunt unum suppositum, 
+              et istam viam tenuerunt multi <name ref="#Moderni">modernorum</name>, 
+              unde imaginatur quod 
+              sicut anima et materia prima sunt realiter persona 
+              humana simul iuncta, 
+              cum hoc tamen ipsa anima est eadem persona humana, 
+              et ista fuit expresse 
+              <ref xml:id="l131-Rd1e605">opinio <name ref="#HughOfStVictor">Hugonis de Sancto Victore</name></ref> 
+              dicentis quod
+              <!-- possible quote here -->
+              anima sit vere homo et persona 
+              humana et cum hoc anima et corpus simul sunt in eadem 
+              persona humana, 
+              et 
+              <ref xml:id="l131-Rd1e612"><name ref="#WilliamOfParis">Guillelmus Parisiensis</name></ref> hoc tenuit, 
+              et ita proportionaliter diceretur 
+              quod illae tres naturae scilicet, 
+              divina anima et corpus sunt verbum dei 
+              et sunt secunda persona in divinis 
+              et cum hoc verbum 
+              quod est una natura illarum trium est una 
+              persona eadem.
+            </p>
+            <p xml:id="l131-aisnea">
+              Aliter imaginati sunt 
+              quid nam dato asino 
+              si anima humana informaret totum compositum asini tunc resultans 
               ex omnibus illis esset asinus et esset homo et 
-              <lb ed="#SV"/>idem homo esset asinus, et sic alii plures naturae concurrunt in 
-              <lb ed="#SV"/>aliquod unum suppositum, licet duae praeexistentis sint unum 
-              <lb ed="#SV"/>suppositum et sic natura divina et duae naturae humanae concurrunt 
-              <lb ed="#SV"/>identice in unitatem personae, et cum hoc divina essentia quae est 
-              <lb ed="#SV"/>una illarum trium naturam est eadem persona et istam viam 
-              <lb ed="#SV"/>videtur tenuisse <name ref="#Bernard">beatus bernardus</name> dicens express 
-              <lb ed="#SV"/>quod sicut unica natura divina est tres personae distinctae 
-              <lb ed="#SV"/>quarum una non est alia, ita christus est unica natura 
-              <cb ed="#SV" n="367ra"/><lb ed="#SV"/>et est Realiter tres naturae simul Iunctae quarum una non est alia.</p>
-        
-            <p xml:id="l131-schqeh"><lb ed="#SV"/>Sed contra hoc arguitur quia ex hoc sequitur quod persona divina sit 
-              <lb ed="#SV"/>multitudo rerum essentialiter intrinsece distinctarum patet 
-              <lb ed="#SV"/>quia per istam viam christus est Realiter tres naturae distinctae 
-              <lb ed="#SV"/>quarum una non est alia, modo huiusmodi multiplicitas videtur 
-              <lb ed="#SV"/>divinae simpliciti Repugnare, immo sequitur quod deus esset 
-              <lb ed="#SV"/>compositum ex multis essentialiter distinctis quod est hereticum.</p>
-        
-            <p xml:id="l131-snphrt"><lb ed="#SV"/>secundo nulla pars  aliquorum essentialiter distinctorum 
-              <lb ed="#SV"/>est aggregatum ex omnibus simul, igitur sequitur quod christus vel verbum 
-              <lb ed="#SV"/>dei quod est pars huiusmodi multitudinis non est hoc aggregatum 
-              <lb ed="#SV"/>et per consequens christus qui habet rationem partis non habet 
-              <lb ed="#SV"/>rationem totius.</p>
-        
-            <p xml:id="l131-tmppna">tertio maior pars multitudinis est creata 
-              <lb ed="#SV"/>et dependens, igitur cum maiori denominatione debeat fieri 
-              <lb ed="#SV"/>denominatio sequitur quod christus esset pura creatura et dependens et 
-              <lb ed="#SV"/>quod haberet esse per novam acceptionem.</p>
-        
-            <p xml:id="l131-qsqefr">quarto sequitur quod creatura 
-              <lb ed="#SV"/>fit ab aeterno, nam christus qui esset creatura fuit ab aeterno 
-              <lb ed="#SV"/>igitur haec multitudo fuit ab aeterno, sed anima est pars illius 
-              <lb ed="#SV"/>multitudinis igitur ipsa fuit ab aeterno et ideo haec positio propter 
-              <lb ed="#SV"/>eius falsitatem Relinquatur.</p>
+              idem homo esset asinus, et sic alii plures naturae concurrunt in 
+              aliquod unum suppositum, 
+              licet duae praeexistentis sint unum 
+              suppositum et sic natura divina et duae naturae humanae concurrunt 
+              identice in unitatem personae, 
+              et cum hoc divina essentia quae est 
+              una illarum trium naturam est eadem persona et istam viam 
+              videtur tenuisse 
+              <ref xml:id="l131-Rd1e619"><name ref="#Bernard">Beatus Bernardus</name></ref> 
+              dicens expresse<!-- dbcheck addition of final "e"; correction from "express" to "expresse" --> 
+              quod, 
+              sicut unica natura divina est tres personae distinctae, 
+              quarum una non est alia, 
+              ita christus est unica natura 
+              <pb ed="#SV" n="367-r"/>
+              <cb ed="#SV" n="a"/>
+              et est realiter tres naturae 
+              simul iunctae quarum una non est alia.
+            </p>
+            <p xml:id="l131-schqeh">
+              Sed contra hoc arguitur 
+              quia ex hoc sequitur 
+              quod persona divina sit 
+              multitudo rerum essentialiter intrinsece distinctarum. 
+              Patet 
+              quia per istam viam christus est realiter tres naturae distinctae 
+              quarum una non est alia, 
+              modo huiusmodi multiplicitas videtur 
+              divinae simpliciti repugnare, 
+              immo sequitur quod deus esset 
+              compositum ex multis essentialiter distinctis, 
+              quod est hereticum.
+            </p>
+            <p xml:id="l131-snphrt">
+              Secundo, 
+              nulla pars aliquorum essentialiter distinctorum 
+              est aggregatum ex omnibus simul, igitur sequitur quod christus vel verbum 
+              dei quod est pars huiusmodi multitudinis non est hoc aggregatum 
+              et per consequens christus qui habet rationem partis non habet 
+              rationem totius.
+            </p>
+            <p xml:id="l131-tmppna">
+              Tertio, 
+              maior pars multitudinis est creata 
+              et dependens, igitur cum maiori denominatione debeat fieri 
+              denominatio sequitur quod christus esset pura creatura et dependens et 
+              quod haberet esse per novam acceptionem.
+            </p>
+            <p xml:id="l131-qsqefr">
+              Quarto, 
+              sequitur quod creatura 
+              fit ab aeterno, nam christus qui esset creatura fuit ab aeterno 
+              igitur haec multitudo fuit ab aeterno, sed anima est pars illius 
+              multitudinis igitur ipsa fuit ab aeterno et ideo haec positio propter 
+              eius falsitatem Relinquatur.
+            </p>
           </div>
-            <div>
-              <head xml:id="l131-Hncefeh">Nonum: contra errorem quod natura assumpta est realiter deus et sic deus factus est homo</head>
-            <p xml:id="l131-sncaaa">Sequitur nono contra tenentes 
-              <lb ed="#SV"/>quod natura assumpta est Realiter deus et sic deus factus est homo, 
-              <lb ed="#SV"/>sed haec via deficit in duobus primo quia supponit quod 
-              <lb ed="#SV"/>deus possit per intrinsecam actuationem creaturae communicari cuius 
-              <lb ed="#SV"/>contrarium fuit in praecedentibus deductum secundo deficit 
-              <lb ed="#SV"/>quia dato quod humanitas christi Realiter esset deus non tamen 
-              <lb ed="#SV"/>tollit difficultatem materiae quia licet persona divina et humana 
-              <lb ed="#SV"/>sint una persona ex hoc no salvaretur unitas personae 
-              <lb ed="#SV"/>assumptae ad assumentem.</p>
-            </div>
-          <div>
+          <div xml:id="l131-Dd1e642">
+            <head xml:id="l131-Hncefeh">Nonum: contra errorem quod natura assumpta est realiter deus et sic deus factus est homo</head>
+            <p xml:id="l131-sncaaa">
+              Sequitur nono contra tenentes 
+              quod natura assumpta est realiter deus 
+              et sic deus factus est homo, 
+              sed haec via deficit in duobus. 
+              Primo quia supponit quod 
+              deus possit per intrinsecam actuationem creaturae communicari, 
+              cuius contrarium fuit in praecedentibus deductum. 
+              Secundo deficit 
+              quia dato quod humanitas christi realiter esset deus, 
+              non tamen tollit difficultatem materiae 
+              quia, 
+              licet persona divina et humana sint una persona 
+              ex hoc no salvaretur unitas personae assumptae ad assumentem.
+            </p>
+          </div>
+          <div xml:id="l131-Dd1e651">
             <head xml:id="l131-Hdceeup">Decimum: contra errorem quod in christo sunt duae sumpta et unita persona</head>
-            <p xml:id="l131-dopads">decima opinio ponit quod 
-              <lb ed="#SV"/>in christo sunt duo supposita et unica persona, unde ima<lb ed="#SV"/>ginatur 
-              quod humanitas assumpta Realiter sit suppositum 
-              <lb ed="#SV"/>distinctum a divino supposito.</p> 
-        
-            <p xml:id="l131-sqdqic">secundo quod de ratione personae est 
-              <lb ed="#SV"/>habere supremam dignitatem exponendo li <mentioned>supremum</mentioned> ne<lb ed="#SV"/>gative 
+            <p xml:id="l131-dopads">
+              Decima opinio ponit 
+              quod in christo sunt duo supposita 
+              et unica persona, 
+              unde imaginatur 
+              quod humanitas assumpta realiter sit suppositum 
+              distinctum a divino supposito.
+            </p>
+            <p xml:id="l131-sqdqic">
+              Secundo quod de ratione personae est 
+              habere supremam dignitatem exponendo li <mentioned>supremum</mentioned> negative 
               ideo quia suppositum divinum est principalius quam 
-              <lb ed="#SV"/>humanum ob hoc aggregatum ex istis  sub<lb ed="#SV"/>sistit 
+              humanum ob hoc aggregatum ex istis  subsistit 
               una subsistentia personali, eo quod de ratione 
-              <lb ed="#SV"/>personae est habere supremam denominationem illorum 
-              <lb ed="#SV"/>quae ipsam constituunt.</p> 
+              personae est habere supremam denominationem illorum 
+              quae ipsam constituunt.
+            </p> 
             
-            <p xml:id="l131-sipcnd">sed ista positio deficit, nam primo 
-              <lb ed="#SV"/>coincidit cum heresibus <name ref="#Nestorius">nestorii</name> eo quod haberet conce<lb ed="#SV"/>dere 
-              quod christus Realiter non sit deus quia idem est suppositum 
-              <lb ed="#SV"/>humanae naturae et homo et illud non est deus, nam in christo 
-              <lb ed="#SV"/>est suppositum, scilicet, humanum quod non est divinum suppositum et 
-              <lb ed="#SV"/>per consequens nec deus.</p> 
-            
-            <p xml:id="l131-sieqea">secundo idem est in homine persona et hypo<lb ed="#SV"/>stasis, 
+            <p xml:id="l131-sipcnd">
+              Sed ista positio deficit, 
+              nam primo coincidit cum heresibus <name ref="#Nestorius">Nestorii</name> e
+              o quod haberet concedere 
+              quod christus realiter non sit deus 
+              quia idem est suppositum 
+              humanae naturae et homo et illud non est deus, 
+              nam in christo est suppositum, 
+              scilicet humanum quod non est divinum suppositum, 
+              et per consequens nec deus.
+            </p> 
+            <p xml:id="l131-sieqea">
+              Secundo idem est in homine persona et hypostasis, 
               nam nihil est persona nisi per eius subsistentiam et 
-              <lb ed="#SV"/>cum suppositum sit nomen generale ad omnem subsi<lb ed="#SV"/>stentiam 
-              ideo subsistentia humana vocantur subsi<lb ed="#SV"/>stentia 
-              sed subsistentiae creaturaum vocantur personae, et 
-              <lb ed="#SV"/>in homine sunt duae subsistentiae, ideo erunt in deo 
-              <lb ed="#SV"/>tria supposita, nam secundum istam viam oporteret concedere quod homo 
-              <lb ed="#SV"/>esset natus de virgine et non deus quod est absurdum.</p>
+              cum suppositum sit nomen generale ad omnem subsistentiam 
+              ideo subsistentia humana vocantur subsistentia 
+              sed subsistentiae creaturaum vocantur personae, 
+              et in homine sunt duae subsistentiae, 
+              ideo erunt in deo tria supposita, 
+              nam secundum istam viam oporteret concedere 
+              quod homo esset natus de virgine et non deus, 
+              quod est absurdum.
+            </p>
           </div>
-      </div>
+        </div>
       </div>
     </body>
   </text>
