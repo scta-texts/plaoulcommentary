@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,335 +7,561 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 127, de Libertate</title>
           <date when="2013-03-28">March 28, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-28">March 28, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
-          <witness xml:id="S">St. Victor</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-28" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="362-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio127">
-      <head xml:id="dL125Hldlldl" subtype="title">Lectio 127, de Libertate</head>
-        <div>
-          <head xml:id="dL125Hdlaais">De liber arbitrio in se</head>
-          <div>
-            <head xml:id="dL125Hqapdee">Quod a parte rei eadem est potentia adaequate quae est consiliativa discursiva et electiva</head>
-          
-            <p xml:id="dL125radops"><lb ed="#SV"/><hi rend="twoLineDropCap">R</hi>estat aliquid dicendum de libero arbitrio 
-              <lb ed="#SV"/>considerato in se. ubi est advertendum 
-              <lb ed="#SV"/>quod a parte Rei eadem est potentia adaequate quae est consilia<lb ed="#SV"/>tiva 
-              discursiva et electiva. Ita quod potentia volitiva 
-              <lb ed="#SV"/>et intellectiva sunt idem adaequate, quod probatur quia 
-              <lb ed="#SV"/>frustra multipliciter entia ubi per unicam rem simplicem 
-              <lb ed="#SV"/>omnia possunt salvari.</p>
-        
-            <p xml:id="dL125sseapd">secundo si essent potentiae distinctae 
-              <lb ed="#SV"/>inter se et ab anima quo dato anima non erit rationalis 
-              <lb ed="#SV"/>quia non habebit potentiam rationalem, nec intelligibilis, quia non 
-              <lb ed="#SV"/>habebit potentiam intellectivam et sic de aliis potentiis diceretur.</p>
-        
-            <p xml:id="dL125tiprnv"><lb ed="#SV"/>tertio illae potentiae separatae sic se haberent quod una esset 
-              <lb ed="#SV"/>rationalis alia electiva, igitur illae essent substantiae nobiles, 
-              <lb ed="#SV"/>et sic <unclear>beatibiles[?]</unclear> et damnabiles <unclear>copulativae[?]</unclear> et intellectivae, 
-              <lb ed="#SV"/>immo essent nobiliores substantiae quam ipsa anima, quia omne 
-              <lb ed="#SV"/>volitivum est nobilius, et etiam omne rationabile est no<lb ed="#SV"/>bilius 
-              non rationali modo anima non est rationabilis nec volitiva.</p>
-        
-            <p xml:id="dL125qhpqef"><lb ed="#SV"/>quarto huiusmodi potentiae distinctae ponerentur apud 
-              <lb ed="#SV"/>taliter opinantes accidentia, modo quod accidens sit rationale 
-              <lb ed="#SV"/>vel volitivum est inconveniens quia esse volitivum esse 
-              <lb ed="#SV"/>rationale sunt denominationes perfectionis simpliciter igitur 
-              <lb ed="#SV"/>non possunt convenire accidentibus <unclear>quoniam[?]</unclear> accidentia essent inferioris 
-              <lb ed="#SV"/>speciei quam materia prima, sed quaecumque denominatio perfectionis 
-              <lb ed="#SV"/>simpliciter conveniens speciei inferiori convenit et superiori 
-              <lb ed="#SV"/>et cum materia prima sit species superior accidentibus videtur 
-              <lb ed="#SV"/>quod ipsa esset rationalis volitiva quod est falsum.</p>
+        <head xml:id="l127-Hldlldl">Lectio 127, de Libertate</head>
+        <div xml:id="l127-Dd1e109">
+          <head xml:id="l127-Hdlaais">De liber arbitrio in se</head>
+          <div xml:id="l127-Dd1e114">
+            <head xml:id="l127-Hqapdee">Quod a parte rei eadem est potentia adaequate quae est consiliativa discursiva et electiva</head>
+            <p xml:id="l127-radops">
+              Restat aliquid dicendum de libero arbitrio 
+              considerato in se, 
+              ubi est advertendum 
+              quod a parte rei eadem 
+              est potentia adaequate 
+              quae est consiliativa 
+              discursiva et electiva, 
+              ita quod potentia volitiva 
+              et intellectiva sunt idem adaequate, 
+              quod probatur 
+              quia frustra multipliciter entia 
+              ubi per unicam rem simplicem 
+              omnia possunt salvari.
+            </p>
+            <p xml:id="l127-sseapd">
+              Secundo,
+              si essent potentiae distinctae 
+              inter se et ab anima 
+              quo dato anima non erit rationalis 
+              quia non habebit potentiam rationalem nec intelligibilis 
+              quia non habebit potentiam intellectivam, 
+              et sic de aliis potentiis diceretur.
+            </p>
+            <p xml:id="l127-tiprnv">
+              Tertio, 
+              illae potentiae separatae sic se haberent 
+              quod una esset rationalis alia electiva, 
+              igitur illae essent substantiae nobiles, 
+              et sic <unclear>beatibiles</unclear> et damnabiles <unclear>copulativae</unclear> et intellectivae, 
+              immo essent nobiliores substantiae quam ipsa anima 
+              quia omne volitivum est nobilius, 
+              et etiam omne rationabile est nobilius non rationali, 
+              modo anima non est rationabilis nec volitiva
+            </p>
+            <p xml:id="l127-qhpqef">
+              Quarto, 
+              huiusmodi potentiae distinctae ponerentur 
+              apud taliter opinantes accidentia, 
+              modo quod accidens sit rationale vel volitivum 
+              est inconveniens 
+              quia esse volitivum esse rationale sunt 
+              denominationes perfectionis simpliciter, 
+              igitur non possunt convenire accidentibus 
+              quoniam accidentia essent inferioris speciei 
+              quam materia prima, 
+              sed quaecumque denominatio perfectionis 
+              simpliciter conveniens speciei inferiori 
+              convenit et superiori, 
+              et cum materia prima sit species superior accidentibus, 
+              videtur quod ipsa esset rationalis volitiva, 
+              quod est falsum.
+            </p>
           </div>
-        <div>
-          <head xml:id="dL125Hcorria">Corollaria</head>
-          <p xml:id="dL125svfnev">Sequitur 
-            <lb ed="#SV"/>vanitas fingentium liberum arbitrium esse compositum 
-            <lb ed="#SV"/>ex intellectu voluntate. unde imaginatur <unclear>a[?]</unclear> sic quod 
-            <lb ed="#SV"/>liberum arbitrium exprimitur per duo vocabula ideo 
-            <lb ed="#SV"/>debet dici arbitrium liberum ut sit potentia composita 
-            <lb ed="#SV"/>vel Resultans ex ratione et volitiva, sed ista positio 
-            <lb ed="#SV"/>est vana quia praesumit a parte Rei esse potentiarum distinctionem 
-            <lb ed="#SV"/>quod non est verum.</p>
-        
-          <p xml:id="dL125sqriaa">secundo qua ratione ex intellectu et 
-            <lb ed="#SV"/>voluntate componeretur tertia potentia, ex eadem ratione ex illa 
-            <lb ed="#SV"/>tertia est una alia componere quarta et sic in infinitum procederetur 
-            <lb ed="#SV"/>et ita arguit <name ref="#WilliamOfAuxerre">altissiodorensis</name>.</p>
-        
-          <p xml:id="dL125eqscdi">Ex quo sequitur 
-            <lb ed="#SV"/>quod proprie loquendo quod nihil est quaerere utrum intellectus sit 
-            <lb ed="#SV"/>liber vel voluntas, et hoc a parte potentiarum, et 
-            <lb ed="#SV"/>quaerere etiam in quo consistat libertas quia adaequate 
-            <lb ed="#SV"/>eadem est potentia intellectus et voluntas, debet ergo difficultas 
-            <lb ed="#SV"/>Resolvi ad actus animae qui quid actus producitur 
-            <lb ed="#SV"/>libere vel per modum naturae et necessario, nam non est 
-            <lb ed="#SV"/>alia quaestio quia intellectus et voluntas sunt eadem anima quae 
-            <cb ed="#SV" n="357ra"/><lb ed="#SV"/>est diversarum actuum productiva, et sic debet quaeri qui 
-            <lb ed="#SV"/>sunt actus liberi et qui sunt naturaliter producti. Et 
-            <lb ed="#SV"/>circa hoc primo est opinio <name ref="#WilliamOfAuxerre">altissiodorensis</name> qui tenet quod 
-            <lb ed="#SV"/>actus electivus vel electio est iudicium <unclear>diffusivum[?]</unclear> 
-            <lb ed="#SV"/>ultimatum et ex consequenti ponit libertatem esse in 
-            <lb ed="#SV"/>intellectu vel ratione, unde ipse imaginatur 
-            <lb ed="#SV"/>quod in operationibus moralibus et meritoriis concurrit duplex 
-            <lb ed="#SV"/>iudicium.</p>
-        
-          <p xml:id="dL125uedefm">unum est deliberationum consiliationum quo intellectus 
-            <lb ed="#SV"/>iudicat quod hoc est faciendum vel quod hoc non est 
-            <lb ed="#SV"/>faciendum, et hoc dicit ipse non est meritorium 
-            <lb ed="#SV"/>nec demeritorium excepto quando procedit ex 
-            <lb ed="#SV"/>fide vel actu fidei igitur iudicandum quia illud est 
-            <lb ed="#SV"/>formaliter meritum.</p>
-        
-          <p xml:id="dL125aeicmt">Aliud est iudicium <unclear>fundamentum[?]</unclear> 
-            <lb ed="#SV"/><unclear>diffinitionum[?]</unclear> et imperativum et <unclear>excecutivam[?]</unclear> et illud 
-            <lb ed="#SV"/>ipsa electio vel assensus quo assensu acceptatur 
-            <lb ed="#SV"/>et iudicatur ultimate esse consequendum illud quod primo 
-            <lb ed="#SV"/>iudicat, et hoc Iudicium ponit esse liberum, et 
-            <lb ed="#SV"/>ideo potentia huiusmodi actus iudicativa et ultimate 
-            <lb ed="#SV"/>productiva vocatur liberum arbitrium causando pro potentia 
-            <lb ed="#SV"/>et vocatur arbitrium, id est, <unclear>iudicativum[?]</unclear> quia iudicat 
-            <lb ed="#SV"/>et vocatur liberum quia libere huiusmodi actum 
-            <lb ed="#SV"/>producit et secundum hoc apparet quod libertas sit in ratione 
-            <lb ed="#SV"/>quia rationis est iudicare et non proprie in appeti<lb ed="#SV"/>tu, 
-            et licet dicit ipse ethicus contrarium dixerit pro<lb ed="#SV"/>fundius 
-            tamen considerant materiam theologi.</p>
-        </div>
-        <div>
-          <head xml:id="dL125Hnotlia">Notabilia</head>
-          <p xml:id="dL125aecdee">Adver<lb ed="#SV"/>tendum 
-            est circa praesentem materiam quod Resolutio ultima 
-            <lb ed="#SV"/>stat in hoc utrum electio sit magis appetendi 
-            <lb ed="#SV"/>vel cognoscendi vel econtra quia pluries dictum est, quod 
-            <lb ed="#SV"/>actus et habitus multi stant in anima <unclear>cognotivi[?]</unclear> et 
-            <lb ed="#SV"/>appetitivi seu affectivi ut de fide, ideo data ele<lb ed="#SV"/>ctione 
-            praecedente dictamen ipsa vocatur iudicium 
-            <lb ed="#SV"/>electionis et ultimum iudicium dicitur esse executionis.</p>
-        
-          <p xml:id="dL125ediuch">Et de isto iudicio executionis est difficultas 
-            <lb ed="#SV"/>utrum ipse sit actus cognoscendi vel appetendi 
-            <lb ed="#SV"/>et iste doctor videtur dicere quod ille actus est ma<lb ed="#SV"/>gis 
-            cognitivus quam appetitivus licet utrumque ei conveniat 
-            <lb ed="#SV"/>et sit satis rationabiliter potest eum vocare actum 
-            <lb ed="#SV"/>rationis. Sed quia communis opinio est ad contrarium 
-            <lb ed="#SV"/>quia ille actus vocatur magis electivus quam cognitivus 
-            <lb ed="#SV"/>licet utraque conditionem habeat.</p>
-        
-          <p xml:id="dL125senges">secundo est notandum quod 
-            <lb ed="#SV"/>aliqui doctores aequivocant de libertate. unde aliqui 
-            <lb ed="#SV"/>dicunt esse liberum quod est gratia sui in ordine actuum, 
-            <lb ed="#SV"/>et quia in contemplatione primae veritatis consistit 
-            <lb ed="#SV"/>perfectissima animae felicitas, ideo omnis actus animae 
-            <lb ed="#SV"/>ordinantur in actum intellectus tanquam in nobilissimum 
-            <lb ed="#SV"/>actum, ideo actus intellectus est gratia cuius sunt omnis 
-            <cb ed="#SV" n="357rb"/><lb ed="#SV"/>actus tam in potentiis appetetivis seu discursivis et sic 
-            <lb ed="#SV"/>in actu intellectus consistit libertas et est sic liber 
-            <lb ed="#SV"/>quod omnes alii actus gratia eius sunt.</p>
-        
-          <p xml:id="dL125siqirl">secundo ima<lb ed="#SV"/>ginatur 
-            quod intellectus ex eo est principalis quia nedum in 
-            <lb ed="#SV"/>Regno animae se habet per modum resilietis, sed se 
-            <lb ed="#SV"/>habet per modum imperantis et diffinientis, et vo<lb ed="#SV"/>luntas 
-            se habet per modum exequentis et familantis 
-            <lb ed="#SV"/>ideo intellectus gratia sui imperat et ad hoc iste re<lb ed="#SV"/>solvit 
-            libertatem.</p>
-        
-          <p xml:id="dL125tendma">tertio est notandum quod si ista opinio 
-            <lb ed="#SV"/>bene intelligatur non discrepat ab opinione communi 
-            <lb ed="#SV"/>quantum ad libertatem contradictionis quae consistit in hoc 
-            <lb ed="#SV"/>principaliter quod concurrentibus quibuscumque causis requisitis 
-            <lb ed="#SV"/>ad actus electivi productionem in potestate animae est exire 
-            <lb ed="#SV"/>in actum vel non exire et ita praesentato obiecto 
-            <lb ed="#SV"/>et sic de aliis causis Requisitis ad actus productionem 
-            <lb ed="#SV"/>in facultate voluntatis est producere actum vel 
-            <lb ed="#SV"/>non producere sine adiutorio alterius etiam, et 
-            <lb ed="#SV"/>in hoc consistit libertas contradictionis quia pro tunc 
-            <lb ed="#SV"/>actio voluntatis non dependet ab aliqua causa 
-            <lb ed="#SV"/>particulari, sed in suo pleno divino  est quod 
-            <lb ed="#SV"/>exeat in actum vel ne, et ut in particulari 
-            <lb ed="#SV"/>materia discutiatur introducam difficultates materiae apperi<lb ed="#SV"/>tivas.</p>
-        </div>
-          <div>
-            <head xml:id="dL125Hqvnnsl">Quod voluntas non sit libera</head>
-            <p xml:id="dL125eipoea">Et ideo primo arguitur quod voluntas non sit 
-              <lb ed="#SV"/>libera proposito quocumque obiecto voluntatis respectu illius 
-              <lb ed="#SV"/>habet necessario aliquem actum igitur ipsa non est libera 
-              <lb ed="#SV"/>antecedens apparet quia proposito obiecto sub ratione boni, 
-              <lb ed="#SV"/>ipsum movet voluntatem ipsius ad prosecutionem 
-              <lb ed="#SV"/>vel fugat, ita quod voluntas elicit nolle 
-              <lb ed="#SV"/>vel velle, vel Resistit motioni, si primum habeo 
-              <lb ed="#SV"/>intentum pro utraque parte, si secundum, scilicet, quod Resistit 
-              <lb ed="#SV"/>cum ipsa non Resistat nisi per actum positivum 
-              <lb ed="#SV"/>sequitur quod circa obiectum elicit actum.</p>
+          <div xml:id="l127-Dd1e138">
+            <head xml:id="l127-Hcorria">Corollaria</head>
+            <p xml:id="l127-svfnev">
+              Sequitur 
+              vanitas fingentium liberum arbitrium esse compositum 
+              ex intellectu voluntate. unde imaginatur <unclear>a[?]</unclear> sic quod 
+              liberum arbitrium exprimitur per duo vocabula ideo 
+              debet dici arbitrium liberum ut sit potentia composita 
+              vel Resultans ex ratione et volitiva, sed ista positio 
+              est vana quia praesumit a parte Rei esse potentiarum distinctionem 
+              quod non est verum.
+            </p>
+            <p xml:id="l127-sqriaa">
+              Secundo, 
+              qua ratione ex intellectu et 
+              voluntate componeretur tertia potentia, 
+              ex eadem ratione ex illa tertia est una alia componere quarta, 
+              et sic in infinitum procederetur, 
+              et ita arguit 
+              <cit>
+                <ref xml:id="l127-Rd1e153">
+                  <name ref="#WilliamOfAuxerre">Altissiodorensis</name>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit>.
+            </p>
+            <p xml:id="l127-eqscdi">
+              Ex quo sequitur 
+              quod proprie loquendo 
+              quod nihil est quaerere 
+              utrum intellectus sit liber vel voluntas, 
+              et hoc a parte potentiarum, 
+              et quaerere etiam in quo consistat libertas 
+              quia adaequate eadem est potentia intellectus et voluntas, 
+              debet ergo difficultas resolvi ad actus animae 
+              qui quid actus producitur libere 
+              vel per modum naturae et necessario, 
+              nam non est alia quaestio 
+              quia intellectus et voluntas sunt eadem anima 
+              quae 
+              <pb ed="#SV" n="357-r"/>
+              <cb ed="#SV" n="a"/>
+              est diversarum actuum productiva, 
+              et sic debet quaeri 
+              qui sunt actus liberi 
+              et qui sunt naturaliter producti.
+              Et circa hoc primo est opinio 
+              <cit>
+                <ref xml:id="l127-Rd1e172">
+                  <name ref="#WilliamOfAuxerre">Altissiodorensis</name>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              qui tenet quod actus electivus vel electio 
+              est iudicium <unclear>diffusivum</unclear> ultimatum, 
+              et ex consequenti ponit libertatem esse in intellectu vel ratione,
+              <!--should this start new paragraph connecting to the two following -->
+              unde ipse imaginatur quod in operationibus moralibus et meritoriis 
+              concurrit duplex iudicium.
+            </p>
+            <p xml:id="l127-uedefm">
+              Unum est deliberationum consiliationum 
+              quo intellectus 
+              iudicat quod hoc est faciendum 
+              vel quod hoc non est faciendum, 
+              et hoc dicit ipse non est meritorium 
+              nec demeritorium excepto 
+              quando procedit ex fide vel actu fidei, 
+              igitur iudicandum 
+              quia illud est formaliter meritum.
+            </p>
+            <p xml:id="l127-aeicmt">
+              Aliud est iudicium <unclear>fundamentum</unclear> <unclear>diffinitionum</unclear> 
+              et imperativum et <unclear>excecutivam</unclear> et 
+              <unclear>illud ipsa</unclear> electio vel assensus 
+              quo assensu acceptatur et iudicatur 
+              ultimate esse consequendum illud 
+              quod primo iudicat, 
+              et hoc iudicium ponit esse liberum, 
+              et ideo potentia huiusmodi actus iudicativa 
+              et ultimate productiva vocatur liberum arbitrium causando pro potentia 
+              et vocatur arbitrium, id est <unclear>iudicativum</unclear> 
+              quia iudicat et vocatur liberum 
+              quia libere huiusmodi actum producit 
+              et secundum hoc 
+              apparet quod libertas sit in ratione 
+              quia rationis est iudicare et non proprie in appetitu, 
+              et licet dicit ipse ethicus contrarium dixerit profundius,
+              tamen considerant materiam theologi.
+            </p>
           </div>
-          <div>
-            <head xml:id="dL125obitio">Obiectio</head>
-            <p xml:id="dL125sfdsom">Sed forte 
-              <lb ed="#SV"/>diceretur quod ipsa Resistit se sola et sine actu, 
-              <lb ed="#SV"/>scilicet, per simpliciter stare, scilicet, negative non sequendo 
-              <lb ed="#SV"/>obiecti motionem.</p>
+          <div xml:id="l127-Dd1e211">
+            <head xml:id="l127-Hnotlia">Notabilia</head>
+            <p xml:id="l127-aecdee">
+              Advertendum 
+              est circa praesentem materiam 
+              quod resolutio ultima stat in hoc 
+              utrum electio sit magis appetendi 
+              vel cognoscendi vel econtra 
+              quia pluries dictum est, 
+              quod actus et habitus multi stant in anima <unclear>cognotivi</unclear> et 
+              appetitivi seu affectivi ut de fide, 
+              ideo data electione 
+              praecedente dictamen ipsa vocatur iudicium 
+              electionis et ultimum iudicium dicitur esse executionis.
+            </p>
+            <p xml:id="l127-ediuch">
+              Et de isto iudicio executionis est difficultas, 
+              utrum ipse sit actus cognoscendi vel appetendi,
+              et iste doctor videtur dicere quod ille actus est magis 
+              cognitivus quam appetitivus, 
+              licet utrumque ei conveniat 
+              et sit satis rationabiliter potest eum vocare actum 
+              rationis. Sed quia communis opinio est ad contrarium 
+              quia ille actus vocatur magis electivus quam cognitivus 
+              licet utraque conditionem habeat.
+            </p>
+            <p xml:id="l127-senges">
+              Secundo, 
+              est notandum quod 
+              aliqui doctores aequivocant de libertate. 
+              Unde aliqui dicunt esse liberum 
+              quod est gratia sui in ordine actuum, 
+              et quia in contemplatione primae veritatis consistit 
+              perfectissima animae felicitas, 
+              ideo omnis actus animae ordinantur in actum intellectus 
+              tanquam in nobilissimum actum, 
+              ideo actus intellectus est gratia cuius sunt omnis 
+              <cb ed="#SV" n="357rb"/><!--357rb-->
+              actus tam in potentiis appetetivis seu discursivis, 
+              et sic in actu intellectus consistit libertas, 
+              et est sic liber quod omnes alii actus gratia eius sunt.
+            </p>
+            <p xml:id="l127-siqirl">
+              Secundo, 
+              imaginatur quod intellectus 
+              ex eo est principalis 
+              quia nedum in regno animae se habet per modum resilietis, 
+              sed se habet per modum imperantis et diffinientis, 
+              et voluntas se habet per modum exequentis et familantis, 
+              ideo intellectus gratia sui imperat, 
+              et ad hoc iste resolvit libertatem.
+            </p>
+            <p xml:id="l127-tendma">
+              Tertio, 
+              est notandum quod 
+              si ista opinio bene intelligatur, 
+              non discrepat ab opinione communi 
+              quantum ad libertatem contradictionis 
+              quae consistit in hoc principaliter, 
+              quod concurrentibus quibuscumque causis requisitis 
+              ad actus electivi productionem in potestate animae 
+              est exire in actum vel non exire 
+              et ita praesentato obiecto, 
+              et sic de aliis causis requisitis ad actus productionem 
+              in facultate voluntatis est producere actum vel 
+              non producere sine adiutorio alterius etiam, 
+              et in hoc consistit libertas contradictionis 
+              quia pro tunc actio voluntatis non dependet 
+              ab aliqua causa particulari, 
+              sed in suo pleno divino est quod 
+              exeat in actum vel <unclear>ne</unclear>, 
+              et ut in particulari materia discutiatur, 
+              introducam difficultates materiae apperitivas.
+            </p>
           </div>
-        <div>
-          <head xml:id="dL125Hraorao">Responsio ad obiectionem</head>
-          <p xml:id="dL125caqhaa">contra arguitur, quia voluntas ex 
-            <lb ed="#SV"/>Resistentiis iteratis facilitatur ad magis 
-            <lb ed="#SV"/>et magis Resistendum, igitur in ea acquiritur habitus 
-            <lb ed="#SV"/>Resistendi igitur hoc est ex actibus et per consequens 
-            <lb ed="#SV"/>necessario habet aliquos actus.</p>
-        
-          <p xml:id="dL125eqappc">Ex quo apparet quod 
-            <lb ed="#SV"/>per actus Realiter Resistit, et sic concluditur quod vo<lb ed="#SV"/>luntas 
-            respectu obiecti necessario elicit velle vel nolle 
-            <lb ed="#SV"/>vel actum <unclear>Resistitivum[?]</unclear>, et ita argui <name ref="#Ripa">de 
-              <lb ed="#SV"/>Rippa</name>, et probat per hoc quod nullus potest peccare omissive.</p> 
-          
-          <p xml:id="dL125sqsnvv">secundo quia si voluntas esset libera, vel ipsa produceret 
-            <lb ed="#SV"/>actum suum subito vel successive, non primum quia 
-            <lb ed="#SV"/>sequitur quod in aliquo tempore dato parvo quantumcumque sit 
-            <cb ed="#SV" n="357va"/><lb ed="#SV"/>illud quod in illo voluntas intenderet gradum vel actum 
-            <lb ed="#SV"/>usque in infinitum consequens est falsum patet consequentia quia qua ratione producit 
-            <lb ed="#SV"/>actum ut quattuor in primo instanti illius temporis pari ratione in 
-            <lb ed="#SV"/>quolibet alio instanti illius temporis produceret tantum actum quia 
-            <lb ed="#SV"/>non est minus potens in aliis instantibus producere tantum 
-            <lb ed="#SV"/>actum, immo ipsa est potentior esse facilitatur per Reitera<lb ed="#SV"/>tionem 
-            productionis ad producendum actum, nec poterit 
-            <lb ed="#SV"/>dici secundum eo quod voluntas non habet Resistentiam respectu produ<lb ed="#SV"/>ctionis 
-            sui actus, igitur ipsa non agit successive, tenet consequentia 
-            <lb ed="#SV"/>quia successivo videtur esse ratione Resistentiae, antecedens apparet 
-            <lb ed="#SV"/>quia illa Resistentia posset augeri ad aequalitatem <unclear>activitatis[?]</unclear> 
-            <lb ed="#SV"/>voluntatis vel ad maiorem quo dato voluntas impossi<lb ed="#SV"/>bilitaretur 
-            et impediretur totaliter ad sui actus produ<lb ed="#SV"/>ctionem, 
-            et sic non esset intrinsece et essentialiter libera, 
-            <lb ed="#SV"/>quod non videtur verum.</p>
-        
-          <p xml:id="dL125taeiea">tertio arguitur ex processu <name ref="#Aristotle">philosophi</name> septimo 
-            <lb ed="#SV"/><title ref="#Ethics">ethicorum</title> capitulo tertio ubi ipse comparat syllogismum speculativum 
-            <lb ed="#SV"/>ad practicum ponendo quo ad aliquid differentiam et quo 
-            <lb ed="#SV"/>ad aliquid convenientiam. differentia est <unclear>quin[?]</unclear> conclusio syllogismi spe<lb ed="#SV"/>culativi 
-            praecise scitur, ita quod finis eius est tantum sciri 
-            <lb ed="#SV"/>modo sic de conclusione syllogismi practici quia per ipsam et per 
-            <lb ed="#SV"/>sic esse sicut per eam significatur anima necessario operatur, 
-            <lb ed="#SV"/>ita quod quanta necessitate intellectus conclusio speculativa facit sci<lb ed="#SV"/>re 
-            praecise vel scitur tantummodo necessitate operatur 
-            <lb ed="#SV"/>intellectus ex conclusione practica ut si intellectus sciat istam 
-            <lb ed="#SV"/>omnem dulce est gustandum necessario sequitur operatio. 
-            <lb ed="#SV"/>Sed in conclusione speculativa si scit intellectus ei assentiendo.</p>
-        
-          <p xml:id="dL125qahhss"><lb ed="#SV"/>quarto arguitur habitus exit in actum absque concursu 
-            <lb ed="#SV"/>libero potentiae ut apparet de habitibus scientiis igitur habitus in 
-            <lb ed="#SV"/>voluntate qui non erit minoris potentiae exit in actum 
-            <lb ed="#SV"/>naturaliter igitur voluntatis per habitum necessitabitur ad actus 
-            <lb ed="#SV"/>productionem. patet consequentia quia ipsa non est activitas habitus 
-            <lb ed="#SV"/> <unclear>subspensiva[?]</unclear>.</p>
-        
-          <p xml:id="dL125chnah">Confirmatur habitus in aliquo 
-            <lb ed="#SV"/>gradu movet voluntatem ad actus productionem 
-            <lb ed="#SV"/>et in maiori gradu magis movet eam 
-            <lb ed="#SV"/>igitur dabitur gradus habitus tantae intentionis quod nedum non 
-            <lb ed="#SV"/>sufficiet tantum movere voluntatem ad actus produ<lb ed="#SV"/>ctionem 
-            sed etiam eam necessitabit ad hoc.</p> 
-          
-          <p xml:id="dL125qvcctn">quinto vo<lb ed="#SV"/>luntas 
-            carens gratia necessatur a temptationibus 
-            <lb ed="#SV"/>illicitis, igitur ipsa non est libera. antecedens probatur quia ipsa non 
-            <lb ed="#SV"/>potest Resistere temptationibus igitur necessario subcumbit. 
-            <lb ed="#SV"/>antecedens apparet per <name ref="#Augustine">augustinum</name> <title ref="#AgainstThePelagians">contra <unclear>pellagium[?]</unclear></title> arguentem 
-            <lb ed="#SV"/>nam si voluntas se sola sufficeret Resistere tempta<lb ed="#SV"/>tionibus 
-            Reverteretur error <name ref="#Pelagius">pellagii</name> saepissime 
-            <lb ed="#SV"/>condemnatus et Reprobatus. Ex quo videtur 
-            <lb ed="#SV"/>quod voluntas carens gratia respectu cuiuscumque tem<cb ed="#SV" n="357vb"/><lb ed="#SV"/>ptationis 
-            necessitatur.</p>
-        
-          <p xml:id="dL125svvpac">sexto vel voluntas respectu 
-            <lb ed="#SV"/>suorum actuum se habet passive vel active non primum 
-            <lb ed="#SV"/>quia non esset libera eo quod actus producibilis in potentia 
-            <lb ed="#SV"/>passiva non est in potentia passi, sed agentis praecise, igitur 
-            <lb ed="#SV"/>agentia naturalia pure naturaliter agent, quia quodlibet obiectum 
-            <lb ed="#SV"/>movens voluntatem concurrit naturaliter, et per consequens eam 
-            <lb ed="#SV"/>necessitabit ad actus sui productionem, nec potest dici 
-            <lb ed="#SV"/>secundum, scilicet, quod voluntas se habeat active et praecipue respectu 
-            <lb ed="#SV"/>actuum meritoriorum quia ipsa non se habet active respectu 
-            <lb ed="#SV"/>habitus meritorii, igitur nec respectu actus tenet consequentia quia 
-            <lb ed="#SV"/>actus est maioris dignitatis quam habitus quia creaturam 
-            <lb ed="#SV"/>magis <unclear>dignificat[?]</unclear>, quia ipsa dignior est cum ac<lb ed="#SV"/>tualiter 
-            meretur quam cum habet tantum merendi habitum, ideo 
-            <lb ed="#SV"/>dicit <name ref="#Aristotle">aristoteles</name> quod praecipue agonizantes coronantur.</p>
-        
-          <p xml:id="dL125cqraab"><lb ed="#SV"/>Confirmatur quia respectu actus beatifici se habet voluntas 
-            <lb ed="#SV"/>passive quia talis actus totam naturae facultatem exce<lb ed="#SV"/>dit, 
-            igitur <unclear>ipsa[?]</unclear> se habet passive praecise. antecedens apparet quia vo<lb ed="#SV"/>luntas 
-            non potest producere caritatem eo quod caritas est 
-            <lb ed="#SV"/>simpliciter et immediate a deo tanquam donum dei et 
-            <lb ed="#SV"/>excedit naturales vires humanae voluntatis, si 
-            <lb ed="#SV"/>ergo voluntas non potest producere caritatem tanto 
-            <lb ed="#SV"/>minus concurret ad actum beatificum.</p>
-        
-          <p xml:id="dL125svnpie">septimo voluntas 
-            <lb ed="#SV"/>numquam libere vult, igitur ipsa non est libera, probatur 
-            <lb ed="#SV"/>antecedens quia quandocumque vult necessario suum actum per tempus 
-            <lb ed="#SV"/>continuat, igitur ipsa necessitatur ad volendum. antecedens apparet 
-            <lb ed="#SV"/>quia non daretur ultimum instans Rei naturae perma<lb ed="#SV"/>nentis 
-            in esse.</p>
-        
-          <p xml:id="dL125cqsvsn">confirmatur, quia si voluntas libere produ<lb ed="#SV"/>ceret 
-            actum vel hoc esset antequam actus produceretur 
-            <lb ed="#SV"/>et hoc implicat, vel quando productus est in esse et hoc 
-            <lb ed="#SV"/>quia omne quod est quando est necesse est esse et per consequens vo<lb ed="#SV"/>lendo 
-            semper necessitatur.</p>
-        
-          <p xml:id="dL125oeusis">octavo et ultimo arguitur inquiren<lb ed="#SV"/>do 
-            de determinatione voluntatis vel ipsa determinatur 
-            <lb ed="#SV"/>ad <c>a</c> actum producendum vel agit indeterminata,  
-            <lb ed="#SV"/>si primum vel determinatur per aliquem actum liberum vel 
-            <lb ed="#SV"/>naturalem, si secundum igitur necessitatur ad agendum, si primum 
-            <lb ed="#SV"/>iterum de illo quaeretur utrum voluntas fuerit determina<lb ed="#SV"/>ta 
-            ad illius productionem si sic vel per actum naturalem 
-            <lb ed="#SV"/>vel liberum. Si primum tunc adhuc voluntas necessi<lb ed="#SV"/>tatur 
-            respectu sui actus, si secundum iterum quaeretur de illo et sic 
-            <lb ed="#SV"/>procederetur in infinitum. Si dicatur quod voluntas 
-            <lb ed="#SV"/>agit indeterminata non videtur quomodo posset 
-            <lb ed="#SV"/>salvari positis omnibus causis sufficientibus ad 
-            <lb ed="#SV"/>producendum <c>a</c> actum et sufficienter dispositis 
-            <lb ed="#SV"/>quare voluntas produceret <c>a</c> actum citius 
-            <cb ed="#SV" n="358ra"/><lb ed="#SV"/>in una parte temporis illius quam in alia in quo quid tempore tunc 
-            <lb ed="#SV"/>erant sufficienter applicatae. Ita quod non esset ratio quare 
-            <lb ed="#SV"/>voluntas citius produceret in una parte quam in illa et 
-            <lb ed="#SV"/>si non producit in prima parte non videtur causa quare pro<lb ed="#SV"/>duceret 
-            in secunda et non econverso. et sic apparet ex istis 
-            <lb ed="#SV"/>rationibus quod voluntas nullo modo est libera. Aliae ratio<lb ed="#SV"/>nes 
-            possent fieri sed istae sufficiunt, et cetera.</p>
+          <div xml:id="l127-Dd1e242">
+            <head xml:id="l127-Hqvnnsl">Quod voluntas non sit libera</head>
+            <p xml:id="l127-eipoea">
+              Et ideo primo 
+              arguitur quod voluntas non sit 
+              libera proposito quocumque obiecto voluntatis 
+              respectu illius habet necessario aliquem actum, 
+              igitur ipsa non est libera. 
+              Antecedens apparet 
+              quia proposito obiecto sub ratione boni 
+              ipsum movet voluntatem ipsius ad prosecutionem vel fugat, 
+              ita quod voluntas elicit nolle vel velle vel resistit motioni. 
+              Si primum, habeo intentum pro utraque parte. 
+              Si secundum, scilicet quod resistit, 
+              cum ipsa non resistat 
+              nisi per actum positivum, 
+              sequitur quod circa obiectum 
+              elicit actum.
+            </p>
+          </div>
+          <div xml:id="l127-Dd1e252">
+            <head xml:id="l127-obitio">Obiectio</head>
+            <p xml:id="l127-sfdsom">
+              Sed forte diceretur 
+              quod ipsa resistit se sola et sine actu, 
+              scilicet per simpliciter stare, 
+              scilicet negative non sequendo 
+              obiecti motionem.
+            </p>
+          </div>
+          <div xml:id="l127-Dd1e261">
+          <head xml:id="l127-Hraorao">Responsio ad obiectionem</head>
+            <p xml:id="l127-caqhaa">
+              Contra arguitur 
+              quia voluntas ex resistentiis iteratis 
+              facilitatur ad magis et magis resistendum, 
+              igitur in ea acquiritur habitus resistendi, 
+              igitur hoc est ex actibus, 
+              et per consequens necessario habet aliquos actus.
+            </p>
+            <p xml:id="l127-eqappc">
+              Ex quo apparet quod 
+              per actus realiter resistit, 
+              et sic concluditur 
+              quod voluntas respectu obiecti necessario 
+              elicit velle vel nolle vel actum <unclear>resistitivum</unclear>, 
+              et ita <unclear>argui<!--arguit--></unclear> 
+              <cit>
+                <ref xml:id="l127-Rd1e280"><name ref="#Ripa">de Rippa</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              et probat per hoc quod nullus potest peccare omissive.
+            </p>
+            <p xml:id="l127-sqsnvv">
+              Secundo, 
+              quia si voluntas esset libera, 
+              vel ipsa produceret 
+              actum suum subito vel successive. 
+              Non primum 
+              quia sequitur quod in aliquo tempore
+              dato parvo quantumcumque sit 
+              <pb ed="#SV" n="357-v"/>
+              <cb ed="#SV" n="a"/>
+              illud quod in illo voluntas intenderet gradum vel actum 
+              usque in infinitum. 
+              Consequens est falsum. 
+              Patet consequentia 
+              quia qua ratione producit actum 
+              ut quattuor in primo instanti illius temporis 
+              pari ratione in quolibet alio instanti illius temporis 
+              produceret tantum actum 
+              quia non est minus potens 
+              in aliis instantibus producere tantum actum, 
+              immo ipsa est potentior esse facilitatur per reiterationem 
+              productionis ad producendum actum, 
+              nec poterit dici secundum eo 
+              quod voluntas non habet resistentiam 
+              respectu productionis sui actus, 
+              igitur ipsa non agit successive. 
+              Tenet consequentia 
+              quia successivo 
+              videtur esse ratione resistentiae. 
+              Antecedens apparet 
+              quia illa resistentia posset augeri 
+              ad aequalitatem <unclear>activitatis</unclear> voluntatis 
+              vel ad maiorem 
+              quo dato voluntas impossibilitaretur et impediretur totaliter 
+              ad sui actus productionem, 
+              et sic non esset intrinsece et essentialiter libera, 
+              quod non videtur verum.
+            </p>
+            <p xml:id="l127-taeiea">
+              Tertio, 
+              arguitur ex processu 
+              <cit>
+                <ref xml:id="l127-Rd1e303" target="http://scta.info/resource/aristneth-l7">
+                  <name ref="#Aristotle">Philosophi</name> 
+                  septimo <title ref="#Ethics">Ethicorum</title>, 
+                  capitulo tertio
+                </ref>
+              </cit>, 
+              ubi ipse comparat syllogismum speculativum 
+              ad practicum ponendo 
+              quo ad aliquid differentiam et 
+              quo ad aliquid convenientiam. 
+              Differentia est <unclear>quin</unclear> 
+              conclusio syllogismi speculativi praecise scitur, 
+              ita quod finis eius est tantum sciri 
+              modo sic de conclusione syllogismi practici 
+              quia per ipsam et per sic esse 
+              sicut per eam significatur anima necessario operatur, 
+              ita quod quanta necessitate intellectus conclusio speculativa facit scire 
+              praecise vel scitur tantummodo necessitate operatur 
+              intellectus ex conclusione practica, 
+              ut si intellectus sciat istam 
+              <unclear>omnem</unclear> dulce est gustandum, 
+              necessario sequitur operatio. 
+              Sed in conclusione speculativa, 
+              si scit intellectus ei assentiendo.
+            </p>
+            <p xml:id="l127-qahhss">
+              Quarto, 
+              arguitur habitus exit in actum absque concursu libero potentiae 
+              ut apparet de habitibus scientiis, 
+              igitur habitus in voluntate 
+              qui non erit minoris potentiae exit in actum naturaliter, 
+              igitur voluntatis per habitum necessitabitur ad actus productionem. 
+              Patet consequentia 
+              quia ipsa non est activitas habitus 
+             <unclear>subspensiva</unclear>.
+            </p>
+            <p xml:id="l127-chnah">
+              Confirmatur habitus in aliquo 
+              gradu movet voluntatem ad actus productionem 
+              et in maiori gradu magis movet eam 
+              igitur dabitur gradus habitus tantae intentionis quod nedum non 
+              sufficiet tantum movere voluntatem ad actus productionem 
+              sed etiam eam necessitabit ad hoc.
+            </p> 
+            <p xml:id="l127-qvcctn">
+              Quinto, 
+              voluntas carens gratia necessatur a temptationibus 
+              illicitis, igitur ipsa non est libera. 
+              Antecedens probatur 
+              quia ipsa non 
+              potest resistere temptationibus, 
+              igitur necessario subcumbit. 
+              Antecedens apparet per 
+              <cit>
+                <ref xml:id="l127-Rd1e334">
+                  <name ref="#Augustine">Augustinum</name>, 
+                  <title ref="#AgainstThePelagians">Contra <unclear>Pelagium</unclear></title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              arguentem 
+              <!--possible beginning of quote or quote@type=paraphrase -->
+              nam si voluntas se sola sufficeret resistere temptationibus, 
+              reverteretur error <name ref="#Pelagius">Pelagii</name> saepissime 
+              condemnatus et reprobatus. <!-- end of possible quote -->
+              Ex quo videtur 
+              quod voluntas carens gratia 
+              respectu cuiuscumque tem<cb ed="#SV" n="b"/><!--357vb-->ptationis 
+              necessitatur.
+            </p>
+            <p xml:id="l127-svvpac">
+              Sexto, 
+              vel voluntas respectu suorum actuum se habet passive 
+              vel active. 
+              Non primum 
+              quia non esset libera eo quod actus producibilis in potentia 
+              passiva non est in potentia passi, 
+              sed agentis praecise, 
+              igitur agentia naturalia pure naturaliter agent 
+              quia quodlibet obiectum movens voluntatem concurrit naturaliter, 
+              et per consequens eam necessitabit ad actus sui productionem. 
+              Nec potest dici secundum, 
+              scilicet quod voluntas se habeat 
+              active et praecipue respectu actuum meritoriorum, 
+              quia ipsa non se habet active respectu habitus meritorii, 
+              igitur nec respectu actus. 
+              Tenet consequentia 
+              quia actus est maioris dignitatis 
+              quam habitus 
+              quia creaturam magis <unclear>dignificat</unclear> 
+              quia ipsa dignior est 
+              cum actualiter meretur quam 
+              cum habet tantum merendi habitum, 
+              ideo 
+              dicit 
+              <ref xml:id="l127-Rd1e365">
+                <name ref="#Aristotle">Aristoteles</name>
+              </ref> 
+              quod 
+              <cit>
+                <quote xml:id="l127-Qd1e373" source="http://scta.info/resource/aristneth-l1" type="paraphrase">
+                  praecipue agonizantes coronantur
+                </quote>
+                <bibl>
+                  XXX
+                  <!-- see https://books.google.com/books?id=VMMIAAAAQAAJ&pg=PA163&lpg=PA163&dq=praecipue+agonizantes+coronantur&source=bl&ots=Ru4VGQcpGS&sig=ACfU3U08nolC60iznZp06_tLnGAs34nwHg&hl=en&sa=X&ved=2ahUKEwiNmprtqoblAhVFdt8KHSi1AN8Q6AEwDXoECAYQAQ#v=onepage&q=praecipue%20agonizantes%20coronantur&f=false -->
+                </bibl>
+              </cit>.
+            </p>
+            <p xml:id="l127-cqraab">
+              Confirmatur 
+              quia respectu actus beatifici se habet voluntas passive 
+              quia talis actus totam naturae facultatem excedit, 
+              igitur <unclear>ipsa</unclear> se habet passive praecise. 
+              Antecedens apparet 
+              quia voluntas non potest producere caritatem 
+              eo quod caritas est simpliciter 
+              et immediate a deo tanquam donum dei 
+              et excedit naturales vires humanae voluntatis, 
+              si ergo voluntas non potest producere caritatem 
+              tanto minus concurret ad actum beatificum.
+            </p>
+            <p xml:id="l127-svnpie">
+              Septimo voluntas 
+              numquam libere vult, 
+              igitur ipsa non est libera. 
+              Probatur antecedens 
+              quia quandocumque vult necessario 
+              suum actum per tempus continuat, 
+              igitur ipsa necessitatur ad volendum. 
+              Antecedens apparet 
+              quia non daretur ultimum instans 
+              rei naturae permanentis in esse.
+            </p>
+            <p xml:id="l127-cqsvsn">
+              Confirmatur 
+              quia si voluntas libere produceret 
+              actum vel hoc esset antequam actus produceretur 
+              et hoc implicat, 
+              vel quando productus est in esse et hoc 
+              quia omne quod est quando est necesse est esse, 
+              et per consequens volendo semper necessitatur.
+            </p>
+            <p xml:id="l127-oeusis">
+              Octavo et ultimo, 
+              arguitur inquirendo 
+              de determinatione voluntatis 
+              vel ipsa determinatur ad <c>a</c> actum producendum 
+              vel agit indeterminata.  
+              Si primum 
+              vel determinatur per aliquem actum liberum 
+              vel naturalem. 
+              Si secundum, 
+              igitur necessitatur ad agendum. 
+              Si primum iterum de illo quaeretur 
+              utrum voluntas fuerit determinata 
+              ad illius productionem. 
+              Si sic 
+              vel per actum naturalem 
+              vel liberum. 
+              Si primum, 
+              tunc adhuc voluntas necessitatur 
+              respectu sui actus. 
+              Si secundum iterum quaeretur 
+              de illo, 
+              et sic procederetur in infinitum. 
+              Si dicatur quod voluntas 
+              agit indeterminata, 
+              non videtur quomodo posset 
+              salvari positis omnibus causis sufficientibus ad 
+              producendum <c>a</c> actum et sufficienter dispositis 
+              quare voluntas produceret <c>a</c> actum citius 
+              <pb ed="#SV" n="358-r"/>
+              <cb ed="#SV" n="a"/>
+              in una parte temporis illius 
+              quam in alia in quo quid tempore, 
+              tunc erant sufficienter applicatae, 
+              ita quod non esset ratio 
+              quare voluntas citius produceret 
+              in una parte quam in illa, 
+              et si non producit in prima parte, 
+              non videtur causa quare produceret 
+              in secunda et non econverso. 
+              Et sic apparet ex istis rationibus 
+              quod voluntas nullo modo est libera. 
+              Aliae rationes possent fieri, 
+              sed istae sufficiunt, 
+              et cetera.
+            </p>
+          </div>
         </div>
       </div>
-        </div>
     </body>
   </text>
 </TEI>
