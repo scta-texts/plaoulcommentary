@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,414 +7,666 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 118, de Libertate</title>
-          <date when="2013-03-19">March 19, 2013</date>
+          <date when="2013-03-20">March 20, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-19">March 19, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-20" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="344-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio118">
-      <head xml:id="l118-Hldlldl">Lectio 118, de Libertate</head>
-        <div>
+        <head xml:id="l118-Hldlldl">Lectio 118, de Libertate</head>
+        <div xml:id="l118-Dd1e109">
           <head xml:id="l118-Hridafc">Rationes illorum dicentium non esse concordiam praescientiae ad futura contingentia</head>
-          
-          <p xml:id="l118-avaafc"><lb ed="#SV"/>Antequam veniam ad materiam propositam 
-            <lb ed="#SV"/>inducuntur rationes pro parte Repugnan<lb ed="#SV"/>tiae scilicet illorum dicentium nullo modo 
-            <lb ed="#SV"/>posse esse concordiam praescientiae divinae ad futura 
-            <lb ed="#SV"/>contingentia.</p>
-        
-          <p xml:id="l118-epafep">et primo ad hoc arguit <name ref="#Boethius">boecius</name> 
-          <lb ed="#SV"/>Vo <title ref="#Consolation">de consolatione</title> prosa tertia si cuncta prospicit 
-            <lb ed="#SV"/>deus nec falli nullo modo potest evenire necesse 
-            <lb ed="#SV"/>est quod providentia futurum esse praeviderit.</p>
-        
-          <p xml:id="l118-ssassd">secundo sic 
-            <lb ed="#SV"/><rs ref="#Boethius">arguit</rs> si ea sunt futura ut esse decreverit 
-            <lb ed="#SV"/>ut aeque fieri vel non fieri posse non cogno<lb ed="#SV"/>scat 
-            quae est haec praescientia cui nihil <unclear>constabile[?]</unclear> apparebit 
-            <lb ed="#SV"/>aut quod hoc Referat ab illo ridiculo <name ref="#Tiresias">tiresiae</name> <!-- this seems like a quote or an allusion --> 
-            <lb ed="#SV"/>qui fuit sacerdos <name ref="#Apollo">appollinis</name> et dabat Responsa 
-            <lb ed="#SV"/>quidquid erit aut non erit ita quod Responsa 
-            <lb ed="#SV"/>dabat sed sub <unclear>divisione[?]</unclear>.</p>
-        
-          <p xml:id="l118-tagene">tertio arguit 
-            <lb ed="#SV"/><name ref="#WilliamOfAuxerre">guillelmus altissioderensis</name> deus infallibiliter cognoscit futura 
-            <lb ed="#SV"/>ergo necessario evenient.</p>
-        
-          <p xml:id="l118-qidine">quarto idem deus immutabiliter 
-            <cb ed="#SV" n="344rb"/><lb ed="#SV"/>cognoscit futura igitur necessario evenient.</p>
-        
-          <p xml:id="l118-iatnts">Idem arguit tertio et quinto in oratione hoc praescit <c>a</c> fore, igitur 
-            <lb ed="#SV"/>necesse est homines <c>a</c> praescivisse. modo scientia 
-            <lb ed="#SV"/>dei non est magis mutabilis quam scientia hominis, et 
-            <lb ed="#SV"/>ergo ista consequentia est bona, deus scivit aliqualiter 
-            <lb ed="#SV"/>fore igitur deus necessario taliter scivit.</p>
-        
-          <p xml:id="l118-siaemi">sexto idem arguit 
-            <lb ed="#SV"/>numerus praedestinatarum est inchoatus et implicat 
-            <lb ed="#SV"/>contradictionem quod in perpetuo Remaneat incomple<lb ed="#SV"/>tus 
-            igitur necessarium est quod aliqui sint futuri ad salvandum. 
-            <lb ed="#SV"/>prima pars antecedentis est nota, et sumitur verisimiliter, aliqualiter 
-            <lb ed="#SV"/><unclear>modum[?]</unclear> non esse in statu salutis nec essent 
-            <lb ed="#SV"/>aliqui praedestinati quod est contra ecclesiae decretum, 
-            <lb ed="#SV"/>secunda pars antecedentis apparet quia sequitur evidenter numerus 
-            <lb ed="#SV"/>electorum est incompletus igitur aliquis salvabitur quia non 
-            <lb ed="#SV"/>est dicendum quod in perpetuo numerus electorum maneat incompletus.</p>
-        
-          <p xml:id="l118-saerso">septimo arguit <name ref="#RichardFitzRalph">ybernitus</name> 
-            <lb ed="#SV"/>essentia divina concepti antichristum fore naturaliter, 
-            <lb ed="#SV"/>igitur necessario cognovit antichristum fore consequentia est nota 
-            <lb ed="#SV"/>antecedens apparet quia divina essentia non est minus naturaliter 
-            <lb ed="#SV"/>suorum obiectorum Repraesentativa quam notitia creata sed 
-            <lb ed="#SV"/>notitia creata est naturaliter Repraesentativa sui obiecti 
-            <lb ed="#SV"/>igitur et essentia divina naturaliter Repraesentabit suum 
-            <lb ed="#SV"/>obiectum.</p>
-        
-          <p xml:id="l118-oaicnf">octavo arguit iste qui vocatur <name ref="#JohnOfRodington">roditum</name> 
-            <lb ed="#SV"/>deus non aliter novit facta quam ista quae sunt <unclear>fi?da[?]</unclear> 
-            <lb ed="#SV"/>sed necessario noverit facta igitur necessario novit futura, 
-            <lb ed="#SV"/>prima pars est <name ref="#Augustine">augustini</name> in locis numerabilibus nisi ponit 
-            <lb ed="#SV"/>expresse idem. secunda pars apparet quia facta novit sic 
-            <lb ed="#SV"/>quod necessario scivit illa esse vel fuisse et per consequens 
-            <lb ed="#SV"/>futura cognovit necessario fore.</p>
-        
-          <p xml:id="l118-naiaoh">nono arguit <rs ref="#JohnOfRodington">iste 
-            <lb ed="#SV"/>doctor</rs> et causatur praescitus tunc de ipso quaeritur utrum 
-            <lb ed="#SV"/>ipse potest salvari vel non, si primum, igitur ipse potest 
-            <lb ed="#SV"/>mereri praedestinationem consequens est falsum, quia praedestinatio 
-            <lb ed="#SV"/>nedum praecedit merita creaturae sed etiam eius existen<lb ed="#SV"/>tiam 
+          <p xml:id="l118-avaafc">
+            Antequam veniam ad materiam propositam 
+            inducuntur rationes pro parte Repugnantiae scilicet illorum dicentium nullo modo 
+            posse esse concordiam praescientiae divinae ad futura 
+            contingentia.
+          </p>
+          <p xml:id="l118-epafep">
+            Et primo ad hoc arguit 
+            <cit>
+              <ref xml:id="l118-Rd1e121">
+                <name ref="#Boethius">Boecius</name>, 
+                V <title ref="#Consolation">de consolatione</title>, 
+                prosa tertia
+              </ref>
+            </cit> 
+            <!-- quote -->
+            si cuncta prospicit 
+            deus nec falli nullo modo potest evenire necesse 
+            est quod providentia futurum esse praeviderit.
+          </p>
+          <p xml:id="l118-ssassd">
+            Secundo, 
+            sic arguit,
+            si ea sunt futura ut esse decreverit,
+            ut aeque fieri vel non fieri posse non cognoscat,
+            quae est haec praescientia 
+            cui nihil <unclear>constabile</unclear> apparebit 
+            aut quod hoc referat ab illo ridiculo <name ref="#Tiresias">Tiresiae</name> <!-- this seems like a quote or an allusion --> 
+            qui fuit sacerdos <name ref="#Apollo">Appollinis</name> 
+            et dabat responsa quidquid erit 
+            aut non erit ita quod responsa 
+            dabat sed sub <unclear>divisione</unclear>.
+          </p>
+          <p xml:id="l118-tagene">
+            Tertio, 
+            arguit 
+            <cit>
+              <ref xml:id="l118-Rd1e155">
+                <name ref="#WilliamOfAuxerre">Guillelmus Altissioderensis</name>
+              </ref>
+            </cit> 
+            deus infallibiliter cognoscit futura, 
+            ergo necessario evenient.
+          </p>
+          <p xml:id="l118-qidine">
+            Quarto idem deus immutabiliter 
+            <cb ed="#SV" n="344rb"/><!--SV344rb-->
+            cognoscit futura igitur necessario evenient.
+          </p>
+          <p xml:id="l118-iatnts">
+            Idem arguit tertio et quinto, 
+            in oratione hoc praescit <c>a</c> fore, igitur 
+            necesse est homines <c>a</c> praescivisse. modo scientia 
+            dei non est magis mutabilis quam scientia hominis, et 
+            ergo ista consequentia est bona, deus scivit aliqualiter 
+            fore igitur deus necessario taliter scivit.
+          </p>
+          <p xml:id="l118-siaemi">
+            Sexto, 
+            idem arguit 
+            numerus praedestinatarum est inchoatus 
+            et implicat contradictionem 
+            quod in perpetuo remaneat incompletus, 
+            igitur necessarium est 
+            quod aliqui sint futuri ad salvandum. 
+            Prima pars antecedentis est nota, 
+            et sumitur verisimiliter, 
+            aliqualiter <unclear>modum</unclear> non esse 
+            in statu salutis nec essent 
+            aliqui praedestinati 
+            quod est contra ecclesiae decretum. 
+            Secunda pars antecedentis apparet 
+            quia sequitur evidenter numerus electorum est incompletus, 
+            igitur aliquis salvabitur 
+            quia non est dicendum 
+            quod in perpetuo numerus electorum maneat incompletus.
+          </p>
+          <p xml:id="l118-saerso">
+            Septimo arguit 
+            <cit>
+              <ref xml:id="l118-Rd1e189"><name ref="#RichardFitzRalph">ybernitus</name></ref>
+            </cit> 
+            essentia divina concepti antichristum fore naturaliter, 
+            igitur necessario cognovit antichristum fore. 
+            Consequentia est nota. 
+            Antecedens apparet 
+            quia divina essentia non est minus naturaliter 
+            suorum obiectorum repraesentativa quam notitia creata, 
+            sed notitia creata est naturaliter repraesentativa sui obiecti, 
+            igitur et essentia divina naturaliter repraesentabit suum obiectum.
+          </p>
+          <p xml:id="l118-oaicnf">
+            Octavo, 
+            arguit iste 
+            qui vocatur 
+            <cit>
+              <ref xml:id="l118-Rd1e199">
+                <name ref="#JohnOfRodington">Roditum</name>
+              </ref>
+            </cit> 
+            deus non aliter novit facta quam ista quae sunt <unclear>fi?da[?]</unclear> 
+            sed necessario noverit facta igitur necessario novit futura.
+            Prima pars est <name ref="#Augustine">Augustini</name> 
+            in locis numerabilibus 
+            nisi ponit expresse idem. 
+            Secunda pars apparet 
+            quia facta novit 
+            sic quod necessario scivit illa esse vel fuisse, 
+            et per consequens futura cognovit necessario fore.
+          </p>
+          <p xml:id="l118-naiaoh">
+            Nono arguit <rs ref="#JohnOfRodington">iste doctor</rs> 
+            et causatur praescitus, 
+            tunc de ipso quaeritur utrum 
+            ipse potest salvari vel non. 
+            Si primum, 
+            igitur ipse potest mereri praedestinationem. 
+            Consequens est falsum 
+            quia praedestinatio 
+            nedum praecedit merita creaturae 
+            sed etiam eius existentiam 
             ut apparet ex testimonio scripturae in veteri et 
-            <lb ed="#SV"/>novo testamentis ut de <name ref="#Jacob">Iacob</name> et <name ref="#Esau">esau</name>, nam 
-            <lb ed="#SV"/>antequam ipsi aliquid boni vel mali agerent <name ref="#Jacob">Iacob</name> 
-            <lb ed="#SV"/>dilexit <name ref="#Esau">esau</name> autem odio habuit.</p>
-        
-          <p xml:id="l118-dadenp">decimo arguit 
-            <lb ed="#SV"/>divina voluntatis respectu cuiuslibet effectus producibilis 
-            <lb ed="#SV"/>qui producetur ab aeterno est determinata ad ipsius produ<lb ed="#SV"/>ctionem <!-- double check reims I (or scribe) may have repeated line here -->
-           modo haec consequentia est bona voluntas dei 
-            <lb ed="#SV"/>absoluta est determinata ab aeterno ad cuiuslibet 
-            <lb ed="#SV"/>effectus futuri productionem igitur necessario est 
-            <cb ed="#SV" n="344va"/><lb ed="#SV"/>determinata nam ista consequentia est bona apud <name ref="#Aureoli">aureolum</name> 
-            <lb ed="#SV"/>quia non potest cadere mutabilitas in divina voluntate 
-            <lb ed="#SV"/>nec potest fieri indeterminata si fuerit determinata, ergo 
-            <lb ed="#SV"/>effectus erit necessario, ideo bene sequitur necesse est 
-            <lb ed="#SV"/>voluntatem divinam esse determinatam respectu <c>a</c> futuri igitur 
-            <lb ed="#SV"/>necesse est futurum, futurum fore quia aliter sequitur quod 
-            <lb ed="#SV"/>voluntas esset determinata ad productionem alicuius 
-            <lb ed="#SV"/>effectus et tamen effectus non produceretur.</p>
-        
-          <p xml:id="l118-uasqef">Ultimo 
-            <lb ed="#SV"/>arguitur si aliquod sit futurum contingens sit igitur 
-            <lb ed="#SV"/>gratia exempli antichristus, tunc sit vel est dare 
-            <lb ed="#SV"/>maximum tempus per quod poterit esse futurus vel 
-            <lb ed="#SV"/>minimum per quod non potest esse futurus. Si detur primum 
-            <lb ed="#SV"/>contra quia signato instanti terminante tempus ultra illud 
-            <lb ed="#SV"/>instans potest divina libertas differentiae productionem an<lb ed="#SV"/>tichristi 
+            novo testamentis ut de 
+            <name ref="#Jacob">Iacob</name> et <name ref="#Esau">Esau</name>, 
+            nam antequam ipsi aliquid boni vel mali agerent 
+            <name ref="#Jacob">Iacob</name> dilexit <name ref="#Esau">Esau</name>, 
+            autem odio habuit.
+          </p>
+          <p xml:id="l118-dadenp">
+            Decimo arguit 
+            divina voluntatis 
+            respectu cuiuslibet effectus producibilis 
+            qui producetur ab aeterno est determinata 
+            ad ipsius productionem. <!-- double check reims I (or scribe) may have repeated line here -->
+            Modo haec consequentia est bona voluntas dei 
+            absoluta est determinata ab aeterno ad cuiuslibet 
+            effectus futuri productionem, 
+            igitur necessario est 
+            <pb ed="#SV" n="344-v"/>
+            <cb ed="#SV" n="a"/>
+            determinata, 
+            nam ista consequentia est bona 
+            apud <name ref="#Aureoli">Aureolum</name> 
+            quia non potest cadere mutabilitas in divina voluntate 
+            nec potest fieri indeterminata si fuerit determinata, 
+            ergo effectus erit necessario, 
+            ideo bene sequitur necesse est 
+            voluntatem divinam esse determinatam respectu <c>a</c> futuri, 
+            igitur necesse est futurum, 
+            futurum fore 
+            quia aliter sequitur quod 
+            voluntas esset determinata ad productionem alicuius effectus, 
+            et tamen effectus non produceretur.
+          </p>
+          <p xml:id="l118-uasqef">
+            Ultimo, 
+            arguitur, 
+            si aliquod sit futurum contingens, 
+            sit igitur gratia exempli antichristus, 
+            tunc sit vel est dare 
+            maximum tempus per quod 
+            poterit esse futurus vel 
+            minimum per quod non potest esse futurus. 
+            Si detur primum 
+            contra quia 
+            signato instanti terminante tempus ultra illud instans 
+            potest divina libertas differentiae productionem antichristi,
             igitur illud tempus non fuit maximum per quod 
-            <lb ed="#SV"/>poterat antichristus esse futurus nisi dicatur quod illud instans 
-            <lb ed="#SV"/>temporis est de integritate rationis individualis et tunc 
-            <lb ed="#SV"/>sequitur quod nulla Res posset produci in alio instanti 
-            <lb ed="#SV"/>quam in illo in quo producitur quod est falsum.</p>
-        
-          <p xml:id="l118-ssqtef">secundo sequitur quod nullum corrumptum potest Reparari patet consequentia quia 
-            <lb ed="#SV"/>si de integritate individuali sit instans temporis 
-            <lb ed="#SV"/>tunc sequitur quod ad verificationem instantium argueretur 
-            <lb ed="#SV"/>diversitas individualis quod est falsum, quia si detur 
-            <lb ed="#SV"/>nullum tempus per quod antichristus non poterit esse fu<lb ed="#SV"/>turus, 
-            contra quia quocum tempore dato oporteret quod esset in<lb ed="#SV"/>finitum 
-            et interminatum a parte post. Sed contra quia 
-            <lb ed="#SV"/>quocumque tali daretur minus infinito non Remota parte 
-            <lb ed="#SV"/>individui Residuum esset minus, unde bene sequitur 
-            <lb ed="#SV"/><c>a</c> est minimum tempus per quod antichristus non potest esse 
-            <lb ed="#SV"/>futurus igitur ipso potest esse minus, scilicet, eius pars cum sumitur 
-            <lb ed="#SV"/>esse divisibile in partes et etiam per duplum tempus 
-            <lb ed="#SV"/>antichristus potest esse futurus et per triplum et sic infinitum 
-            <lb ed="#SV"/>igitur antichristus per infinitum tempus est futurus.</p>
+            poterat antichristus esse futurus 
+            nisi dicatur quod illud instans 
+            temporis est de integritate rationis individualis, 
+            et tunc sequitur quod nulla res posset produci 
+            in alio instanti 
+            quam in illo in quo producitur, 
+            quod est falsum.
+          </p>
+          <p xml:id="l118-ssqtef">
+            Secundo, 
+            sequitur quod nullum corrumptum potest reparari. 
+            Patet consequentia 
+            quia 
+            si de integritate individuali sit instans temporis, 
+            tunc sequitur quod ad verificationem instantium argueretur 
+            diversitas individualis, 
+            quod est falsum 
+            quia, 
+            si detur nullum tempus per quod antichristus 
+            non poterit esse futurus, 
+            contra quia quocum tempore 
+            dato oporteret quod esset infinitum 
+            et interminatum a parte post. 
+            Sed contra quia 
+            quocumque tali daretur minus infinito non remota parte 
+            individui residuum esset minus, 
+            unde bene sequitur 
+            <c>a</c> est minimum tempus 
+            per quod antichristus non potest esse futurus, 
+            igitur ipso potest esse minus, 
+            scilicet eius pars cum sumitur 
+            esse divisibile in partes 
+            et etiam per duplum tempus 
+            antichristus potest esse futurus 
+            et per triplum et sic infinitum 
+            igitur antichristus per infinitum tempus est futurus.
+          </p>
         </div>
-        <div>
+        <div xml:id="l118-Dd1e257">
           <head xml:id="l118-Hscasca">Sed contra</head>
-          <p xml:id="l118-icaaeeh">In contrarium 
-            <lb ed="#SV"/>arguitur quia concordia praescientiae divinae respectu futurorum 
-            <lb ed="#SV"/>contingentium sequitur ex fide evidenter ex 
-            <lb ed="#SV"/>multiplici deductione et etiam ista deus est liber 
-            <lb ed="#SV"/>libertate contradictionis ad extra, igitur futura contingenter 
-            <lb ed="#SV"/>eveniunt, nam signato instanti in quo deus pro<lb ed="#SV"/>ducit 
+          <p xml:id="l118-icaaeeh">
+            In contrarium arguitur 
+            quia concordia praescientiae divinae respectu futurorum,
+            contingentium sequitur ex fide evidenter 
+            ex multiplici deductione, 
+            et etiam ista deus est liber libertate contradictionis ad extra, 
+            igitur futura contingenter eveniunt, 
+            nam signato instanti in quo deus producit 
             effectum quaeritur utrum libertas contradictionis 
-            <lb ed="#SV"/>sit respectu huiusmodi effectus vel non, si primum sequitur 
-            <lb ed="#SV"/>quod deus potest illum effectum non producere et per consequens si 
-            <lb ed="#SV"/>effectus producitur taliter tunc hoc erit ad utrumlibet quod 
-            <lb ed="#SV"/>est propositum, si non, tunc sequitur contra fidem, scilicet, quod deus 
-            <lb ed="#SV"/>necessitate naturae agit ad extra et est hypothesim.</p> 
+            sit respectu huiusmodi effectus vel non. 
+            Si primum, 
+            sequitur quod deus potest illum effectum non producere, 
+            et per consequens, 
+            si effectus producitur taliter, 
+            tunc hoc erit ad utrumlibet quod est propositum. 
+            Si non, 
+            tunc sequitur contra fidem, 
+            scilicet quod deus necessitate naturae 
+            agit ad extra et est hypothesim.
+          </p> 
         </div>
-        <div>
+        <div xml:id="l118-Dd1e266">
           <head xml:id="l118-Hvsdafc">Via solvendi difficultatem de concordia praescientiae ad futura contingentia</head>
-          <p xml:id="l118-cpmaha"><lb ed="#SV"/>Circa praesentem materiam sciendum est quod licet 
-            <lb ed="#SV"/>deus sit Res simplicissima secundum philosophiam et veram 
-            <cb ed="#SV" n="344vb"/><lb ed="#SV"/>et quod in eo idem sit vivere et intelligere, scire, velle 
-            <lb ed="#SV"/>et quidquid est intrinsece est idem, propter tamen infirmitatem 
-            <lb ed="#SV"/>nostrae cognitionis et incomplete deum cognoscimus 
-            <lb ed="#SV"/>ideo vocabula varia eum significantia imponimus propter 
-            <lb ed="#SV"/>necessitatem imperfectionis nostrae naturae, quia non est no<lb ed="#SV"/>bis 
-            possibilis conceptus Repraesentans deum secundum omnem 
-            <lb ed="#SV"/>suum modum et omnes eius perfectiones et ideo 
-            <lb ed="#SV"/>ut ponentem effectum in esse eum vocamus volentem 
-            <lb ed="#SV"/>et secundum quod experimur omnia ordinatissime agere et gubernare, 
-            <lb ed="#SV"/>ideo dicimus eum sapientem et sic de aliis 
-            <lb ed="#SV"/>vocabulis eis attributis, unde secundum quod consideramus 
-            <lb ed="#SV"/>eum in ordine ad dispositionem creaturam, ideo vocamus eum 
-            <lb ed="#SV"/>>notitiam iudicativam et sic de aliis vocabulis quorum 
-            <lb ed="#SV"/>distinctio apparet distinctione 39a primi in qua diversitate est aequivocatio ut 
-            <lb ed="#SV"/>praescientia aliquando Restringit ad notitiam futurorum malorum 
-            <lb ed="#SV"/>et in talibus non debet esse difficultas inter litteratos, quia 
-            <lb ed="#SV"/>debet semper distingui tale vocabulum et resolvi ad 
-            <lb ed="#SV"/>suos conceptus prout ad materiam sua aliquis habuerit agere.</p>
-        <div>
-          <head xml:id="l118-Hpvapva">Prima via</head>
-          <p xml:id="l118-pgreqp"><lb ed="#SV"/>Pro generali Responsione ad difficultatem sit prima 
-            <lb ed="#SV"/>via ista quod articulus de libertate contradictionis est 
-            <lb ed="#SV"/>articulus fidei ideo est aenigmaticus et non habet 
-            <lb ed="#SV"/>evidentiam, ideo haec veritas quod deus sit contradictoriae 
-            <lb ed="#SV"/>liber ad quem natura humana quantumcumque naturaliter bene dis<lb ed="#SV"/>posita 
-            non sufficit in puris naturalibus nisi ducta vel 
-            <lb ed="#SV"/>fide vel longa exercitatione, et ex consequenti propositiones 
-            <lb ed="#SV"/>particulariter deductae ex huiusmodi articulo nulla evidentia 
-            <lb ed="#SV"/>extrinseca sunt eiusdem generis,  quia sunt aenigmatice 
-            <lb ed="#SV"/>et nedum aenigmatice, sed quantum est de se minus evi<lb ed="#SV"/>dentes 
-            quam articulus ex quo deducitur ita quod ex 
-            <lb ed="#SV"/>processu doctrinali in unaquaque doctrinam semper 
-            <lb ed="#SV"/>propositiones priores sunt posterioribus evidentiores 
-            <lb ed="#SV"/>nisi posterioribus superveniat alia extrinseca evi<lb ed="#SV"/>dentia 
-            <space extent="oneWordLength"/> oportet principia esse magis nota 
-            <lb ed="#SV"/>quam conclusiones et quantumcumque est maior distantia alicuius 
-            <lb ed="#SV"/>veritatis a suis principis tanto est minor evi<lb ed="#SV"/>dentia 
-            illius veritatis seu conclusionis et sic diceretur quod concor<lb ed="#SV"/>dantia 
-            praescientiae divinae respectu futurorum contingentium 
-            <lb ed="#SV"/>est <unclear>particularum[?]</unclear> conclusio sequens ex libertate divina et 
-            <lb ed="#SV"/>ex fide et ideo debet esse minus evidens quam principium.</p>
-        
-          <p xml:id="l118-Heqsicc"><lb ed="#SV"/>Ex quo sequitur nam illa concordia debet Recipi 
-            <lb ed="#SV"/>tanquam propositio fidei sequens ex fide non habens maiorem 
-            <lb ed="#SV"/>evidentiam quam fides, immo minorem habet evidentiam 
-            <lb ed="#SV"/>quam fides et ista instructio sufficit simplicibus 
-            <lb ed="#SV"/>quibus fides traditur, quia nullo modo est ab eis 
-            <cb ed="#SV" n="345ra"/><lb ed="#SV"/>ista concordia cognoscibilis.</p>
-        
-          <p xml:id="l118-eqssug">Ex quo sequitur error 
-            <lb ed="#SV"/>volentium Resolvere ad evidentiam naturalem praesentis 
-            <lb ed="#SV"/>difficultatem et hoc procedit ex ignorantia tertii 
-            <lb ed="#SV"/>principii positi in quod dicitur quod veritas inquirenda 
-            <lb ed="#SV"/>est secundum unumquodque genus.</p>
-        </div>
-          <div>
+          <p xml:id="l118-cpmaha">
+            Circa praesentem materiam, 
+            sciendum est quod, 
+            licet deus sit res simplicissima 
+            secundum philosophiam et veram 
+            <cb ed="#SV" n="b"/><!--SV344vb-->
+            et quod in eo idem sit vivere, et intelligere, scire, velle 
+            et quidquid est intrinsece est idem, 
+            propter tamen infirmitatem 
+            nostrae cognitionis 
+            et incomplete deum cognoscimus, 
+            ideo vocabula varia eum significantia imponimus propter 
+            necessitatem imperfectionis nostrae naturae 
+            quia non est nobis possibilis conceptus repraesentans deum secundum omnem 
+            suum modum et omnes eius perfectiones, 
+            et ideo ut ponentem effectum in esse eum vocamus volentem 
+            et secundum quod experimur omnia ordinatissime agere et gubernare, 
+            ideo dicimus eum sapientem, 
+            et sic de aliis vocabulis eis attributis, 
+            unde secundum quod consideramus 
+            eum in ordine ad dispositionem creaturam, 
+            ideo vocamus eum notitiam iudicativam, 
+            et sic de aliis vocabulis 
+            quorum distinctio apparet 
+            <cit>
+              <ref xml:id="l118-Rd1e278">distinctione 39a primi</ref>
+            </cit> 
+            in qua diversitate est aequivocatio 
+            ut praescientia aliquando restringit 
+            ad notitiam futurorum malorum 
+            et in talibus non debet esse difficultas inter litteratos, 
+            quia debet semper distingui tale vocabulum 
+            et resolvi ad suos conceptus 
+            prout ad materiam sua aliquis habuerit agere.
+          </p>
+          <div xml:id="l118-Dd1e283">
+            <head xml:id="l118-Hpvapva">Prima via</head>
+            <p xml:id="l118-pgreqp">
+              Pro generali responsione ad difficultatem 
+              sit prima via ista 
+              quod articulus de libertate contradictionis est articulus fidei 
+              ideo est aenigmaticus et non habet evidentiam, 
+              ideo haec veritas 
+              quod deus sit contradictoriae liber 
+              ad quem natura humana quantumcumque naturaliter bene disposita 
+              non sufficit in puris naturalibus 
+              nisi ducta vel fide vel longa exercitatione, 
+              et ex consequenti propositiones 
+              particulariter deductae ex huiusmodi articulo nulla evidentia 
+              extrinseca sunt eiusdem generis 
+              quia sunt aenigmatice et nedum aenigmatice, 
+              sed quantum est de se minus evidentes 
+              quam articulus ex quo deducitur,
+              ita quod ex processu doctrinali in unaquaque doctrinam semper 
+              propositiones priores sunt posterioribus evidentiores 
+              nisi posterioribus superveniat alia extrinseca evidentia 
+              oportet principia esse magis nota 
+              quam conclusiones et quantumcumque est maior distantia alicuius 
+              veritatis a suis principis tanto est minor evidentia 
+              illius veritatis seu conclusionis et sic diceretur quod concordantia 
+              praescientiae divinae respectu futurorum contingentium 
+              est <unclear>particularum</unclear> conclusio sequens ex libertate divina et 
+              ex fide et ideo debet esse minus evidens quam principium.
+            </p>
+            <p xml:id="l118-Heqsicc">
+              Ex quo sequitur 
+              nam illa concordia debet recipi 
+              tanquam propositio fidei 
+              sequens ex fide non habens maiorem 
+              evidentiam quam fides, 
+              immo minorem habet evidentiam quam fides 
+              et ista instructio sufficit simplicibus 
+              quibus fides traditur 
+              quia nullo modo est ab eis 
+              <pb ed="#SV" n="345-r"/>
+              <cb ed="#SV" n="a"/>
+              ista concordia cognoscibilis.
+            </p>
+            <p xml:id="l118-eqssug">
+              Ex quo sequitur 
+              error volentium resolvere 
+              ad evidentiam naturalem praesentis difficultatem 
+              et hoc procedit ex ignorantia tertii principii positi in quod dicitur 
+              quod veritas inquirenda est secundum unumquodque genus.
+            </p>
+          </div>
+          <div xml:id="l118-Dd1e305">
             <head xml:id="l118-Hsvasva">Secunda via</head>
-            <p xml:id="l118-svqurc">secunda via quod aliquan<lb ed="#SV"/>tulum 
-              magis eruditi quod Rei infinite competunt 
-              <lb ed="#SV"/>proprietates oppositae ut <unclear>late[?]</unclear> deductum est, et 
-              <lb ed="#SV"/>ubi de proprietatibus dei  agitur debet semper Reiterari ut 
-              <lb ed="#SV"/>videtur differentia inter deum et creaturas quo ad eorum 
-              <lb ed="#SV"/>proprietates, Et ideo in <title ref="#is">ysaia</title> scribitur ad propositum 
-              <lb ed="#SV"/>non enim cogitationes meae ut cogitationes verae, unde 
-              <lb ed="#SV"/>scientiae finitae et naturaliter causatae Repugnat contin<lb ed="#SV"/>gentia 
+            <p xml:id="l118-svqurc">
+              Secunda via quod aliquantulum 
+              magis eruditi quod rei infinite competunt 
+              proprietates oppositae ut <unclear>late</unclear> deductum est, 
+              et ubi de proprietatibus dei agitur, 
+              debet semper reiterari, 
+              ut videtur differentia inter deum et creaturas 
+              quo ad eorum proprietates, 
+              Et ideo in 
+              <title ref="#is">Isaia</title> scribitur ad propositum 
+              non enim cogitationes meae ut cogitationes verae, 
+              unde scientiae finitae et naturaliter causatae repugnat contingentia 
               ita quod de ipsa naturaliter causata bene sequitur 
-              <lb ed="#SV"/><name ref="#Sortes">sortes</name> scit <c>a</c> igitur <c>a</c> est necessarium et haec secundum <name ref="#Aristotle">philosophi</name> 
-              <lb ed="#SV"/>doctrinam de scientia traditam. In deo vero non sequitur 
-              <lb ed="#SV"/>deus scit hanc antichristus est igitur necessaria, et ideo 
-              <lb ed="#SV"/>hoc Resolvendum est ad proprietates et conditiones 
-              <lb ed="#SV"/>alias quae sunt divinae notitiae quae non competunt 
-              <lb ed="#SV"/>nostrae cognitioni limitatae vel notitiae finitae et 
-              <lb ed="#SV"/>illo attento debet intellectus quietari quod haec <unclear>copulativa[?]</unclear> 
-              <lb ed="#SV"/>sit possibilis <mentioned>deus scit <c>a</c> fore</mentioned> et immutabiliter 
-              <lb ed="#SV"/>quantum in ipso est et tamen <c>a</c> potest non fore 
-              <lb ed="#SV"/>et illa copulativa numquam de creatura conceditur nec est illa copulativa de deo formata aurium 
-              <lb ed="#SV"/>bene dispositarum offensiva consideratis proprietatibus 
-              <lb ed="#SV"/>dei quae sunt alterius modi a proprietatibus nostris unde 
-              <lb ed="#SV"/><name ref="#Dionysius">beatus dyonisius</name> <title ref="#deDivinisNominibus">de divinis nominibus</title> capitulo septimo dicit 
-              <lb ed="#SV"/>quod deus immutabiliter cognoscit mutabilia et 
-              <lb ed="#SV"/>distinctissime omnia quae sunt et indivisibiliter divi<lb ed="#SV"/>sibilia 
+              <name ref="#Sortes">Sortes</name> scit <c>a</c>, 
+              igitur <c>a</c> est necessarium 
+              et haec secundum <name ref="#Aristotle">Philosophi</name> 
+              doctrinam de scientia traditam. 
+              In deo vero non sequitur 
+              deus scit hanc antichristus est igitur necessaria, 
+              et ideo hoc resolvendum est ad proprietates et conditiones 
+              alias quae sunt divinae notitiae quae non competunt 
+              nostrae cognitioni limitatae vel notitiae finitae et 
+              illo attento debet intellectus quietari quod haec <unclear>copulativa[?]</unclear> 
+              sit possibilis <mentioned>deus scit <c>a</c> fore</mentioned> et immutabiliter 
+              quantum in ipso est, 
+              et tamen <c>a</c> potest non fore 
+              et illa copulativa numquam de creatura conceditur 
+              nec est illa copulativa de deo formata aurium 
+              bene dispositarum offensiva consideratis proprietatibus 
+              dei quae sunt alterius modi a proprietatibus nostris, 
+              unde 
+              <ref xml:id="l118-Rd1e343">
+                <name ref="#Dionysius">Beatus Dyonisius</name> 
+                <title ref="#deDivinisNominibus">De divinis nominibus</title> 
+                capitulo septimo
+              </ref> 
+              dicit
+              <!--quote -->
+              quod deus immutabiliter cognoscit mutabilia et 
+              distinctissime omnia quae sunt et indivisibiliter divisibilia, 
               et sic de aliis proprietatibus quae prima facie 
-              <lb ed="#SV"/>respectu humanae scientiae non capiuntur, iuxta quam 
-              <lb ed="#SV"/>viam debet unusquisque rationabiliter contentari. </p>
+              respectu humanae scientiae non capiuntur, 
+              iuxta quam viam debet unusquisque rationabiliter contentari.
+            </p>
           </div>
-          <div>
+          <div xml:id="l118-Dd1e356">
             <head xml:id="l118-Htvatva">Tertia via</head>
-            <p xml:id="l118-tvipac"><lb ed="#SV"/>tertia via in hac materia notat quod compositio et divino 
-              <lb ed="#SV"/>sunt in nobis ratione imperfectionis, quia partialiter 
-              <lb ed="#SV"/>res cognoscimus licet creaturas non partiales assensus 
-              <lb ed="#SV"/>formamus secundum quos ex apparentiis simplicibus 
-              <lb ed="#SV"/>seu compositivis possumus concludere in deo quod 
-              <lb ed="#SV"/>in deo non est divisio nec compositio et ex consequenti 
-              <lb ed="#SV"/>nulla imperfectio, sed eius notitia est immense 
-              <lb ed="#SV"/>perfecta, ideo est simplicissima nec est compositiva nec 
-              <lb ed="#SV"/>divisiva sed simplicissima omnium quae sunt et 
-              <lb ed="#SV"/>possibilia sunt etiam et fuerunt notitia et iusta 
-              <cb ed="#SV" n="345rb"/><lb ed="#SV"/>hanc Radicem facile est dicere quod scientia dei non 
-              <lb ed="#SV"/>est compositiva nec divisiva, sed omnium entium 
-              <lb ed="#SV"/>cognitiva nedum existentium sed possibilium vel contingentium 
-              <lb ed="#SV"/>et tunc si illam simplicem Rerum notitiam voce<lb ed="#SV"/>mus 
+            <p xml:id="l118-tvipac">
+              Tertia via in hac materia 
+              notat quod compositio et divino 
+              sunt in nobis ratione imperfectionis 
+              quia partialiter res cognoscimus, 
+              licet creaturas non partiales assensus 
+              formamus secundum quos ex apparentiis simplicibus 
+              seu compositivis possumus concludere in deo 
+              quod in deo non est divisio nec compositio 
+              et ex consequenti nulla imperfectio, 
+              sed eius notitia est immense perfecta, 
+              ideo est simplicissima nec est compositiva nec 
+              divisiva sed simplicissima omnium quae sunt et 
+              possibilia sunt etiam et fuerunt notitia et iusta 
+              <cb ed="#SV" n="b"/><!--SV345rb-->
+              hanc radicem facile est dicere quod scientia dei non 
+              est compositiva nec divisiva, 
+              sed omnium entium 
+              cognitiva nedum existentium sed possibilium vel contingentium 
+              et tunc si illam simplicem Rerum notitiam vocemus 
               scientiam  tunc deus necessario est scientia huiusmodi 
-              <lb ed="#SV"/>propositionis antichristus erit. unde si illa scientia consideretur 
-              <lb ed="#SV"/>in se deus est cognitio et scientia huiusmodi propositionis 
-              <lb ed="#SV"/><mentioned>antichristus erit</mentioned> ita quod termini nihil efficiunt nec im<lb ed="#SV"/>portant 
-              nisi divinam cognitionem ad intra et 
-              <lb ed="#SV"/>a parte Rei nihil ponunt aliud nec ponunt 
-              <lb ed="#SV"/>sic esse et sic deus necessario scit antichristum fore 
-              <lb ed="#SV"/>quia ipse est illius veritatis eminentissima intuitivo 
-              <lb ed="#SV"/>et posset concedi iuxta hoc quod scientia divina 
-              <lb ed="#SV"/>sit illius contradictorii notitia ac cognitio et scientia 
-              <lb ed="#SV"/>prout li <mentioned>scientiam</mentioned> Refertur ad divinum intuitum 
-              <lb ed="#SV"/>prout deus intuetur omnes Rerum habitudines 
-              <lb ed="#SV"/>modos et successiones ac possibilitates ad 
-              <lb ed="#SV"/>contrarium.</p>
-        
-            <p xml:id="l118-pmiprp">Pro maiori igitur intellectu materiae 
-              <lb ed="#SV"/>in scolis saniori Responsione sciendum est quod tales 
-              <lb ed="#SV"/>propositiones <mentioned>deus scit antichristum fore debent</mentioned> distin<lb ed="#SV"/>gui 
+              propositionis antichristus erit. 
+              Unde si illa scientia consideretur 
+              in se deus est cognitio et scientia huiusmodi propositionis 
+              <mentioned>antichristus erit</mentioned> 
+              ita quod termini nihil efficiunt 
+              nec important nisi divinam cognitionem ad intra et 
+              a parte rei nihil ponunt aliud nec ponunt 
+              sic esse et sic deus necessario scit antichristum fore 
+              quia ipse est illius veritatis eminentissima intuitivo 
+              et posset concedi iuxta hoc quod scientia divina 
+              sit illius contradictorii notitia ac cognitio 
+              et scientia prout li <mentioned>scientiam</mentioned> 
+              refertur ad divinum intuitum 
+              prout deus intuetur omnes rerum habitudines 
+              modos et successiones ac possibilitates ad contrarium.
+            </p>
+            <p xml:id="l118-pmiprp">
+              Pro maiori igitur intellectu materiae 
+              in scolis saniori responsione, 
+              sciendum est quod tales propositiones 
+              <mentioned>deus scit antichristum fore debent</mentioned> 
+              distingui, 
               nam si per eas intelligitur divina <sic>divina</sic> 
-              <lb ed="#SV"/>scientia in se considerata tunc haec est necessaria <mentioned>deus 
-              <lb ed="#SV"/>scit antichristum fore</mentioned> id est deus habet perfectissimam 
-              <lb ed="#SV"/>scientiam circa hoc complexum antichristus erit et 
-              <lb ed="#SV"/>cum hoc antichristus erit  
+              scientia in se considerata, 
+              tunc haec est necessaria 
+              <mentioned>deus scit antichristum fore</mentioned> 
+              id est deus habet perfectissimam 
+              scientiam circa hoc complexum antichristus erit et 
+              cum hoc antichristus erit  
               modo ista propositio copulativa est contingens 
-              <lb ed="#SV"/>ratione secundae partis quae ponit quod antichristus erit 
-              <lb ed="#SV"/>et sic Remanet in contingentia in secunda parte copulativae 
-              <lb ed="#SV"/>et immobilis dei veritas in prima nam eadem  
-              <lb ed="#SV"/>scientia dei ad intra stat cum utroque contradictorum 
-              <lb ed="#SV"/>et secundum hoc non sequitur deus scit antichristum 
-              <lb ed="#SV"/>fore igitur antichristus erit capiendo scientiam primo modo 
-              <lb ed="#SV"/>quia antecedens est necessarium et consequens contingens tamen 
-              <lb ed="#SV"/>communis modus loquendi habet quod propositio Recipiatur 
-              <lb ed="#SV"/>secundo modo ut ipsa includit perfectionem scientiae 
-              <lb ed="#SV"/>divinae circa hoc enuntiabile antichristus erit vel 
-              <lb ed="#SV"/>eius contradictorium, et cum hoc includit a parte 
-              <lb ed="#SV"/>Rei quod antichristus erit, et ideo conceditur communiter quod 
-              <lb ed="#SV"/>est contingens sed hoc est ratione ultimae partis 
-              <lb ed="#SV"/>posset tamen dici circa primum modum probabiliori 
-              <lb ed="#SV"/>modo apud me, nam haec propositio deus scit antichristum 
-              <lb ed="#SV"/>fore primo modo capiendo scire est vera, et ista deus 
-              <lb ed="#SV"/>scit antichristum non fore est neganda ad divinam 
-              <lb ed="#SV"/>praescientiam Relata praecise.</p> 
-            
-            <p xml:id="l118-eohvep">et oritur hic difficultas, 
-              <cb ed="#SV" n="345va"/><lb ed="#SV"/>quia propositio non Refertur ad obiectum sed praecise ad 
-              <lb ed="#SV"/>divinum intuitum curtam variae cum aequaliter utrumlibet 
-              <lb ed="#SV"/>deus intuetur quaeritur ergo quare deus scit unum et 
-              <lb ed="#SV"/>contrarium, hoc enim Resolvitur ad rationem divinae 
-              <lb ed="#SV"/>immensitatis qui eodem modo et adaequate se habet produ<lb ed="#SV"/>cendo 
-              <name ref="#Sortes">sortes</name> et non producendo. Ita quod divina essentia 
-              <lb ed="#SV"/>non cognoscit nec compositive nec iudiciative proprie loquendo 
-              <lb ed="#SV"/>sed suo simplicissimo intuitu cui non Repugnat 
-              <lb ed="#SV"/>falsitas quo intuitu ipse videt omnes Rerum habitudines 
-              <lb ed="#SV"/>in infinitum certiori modo quam <unclear>assertive[?]</unclear> et tamen non potest ei sub<lb ed="#SV"/>esse 
-              falsum et istam viam tenet <name ref="#HenryOfGhent">doctor sollempnis</name> 
-              <lb ed="#SV"/>prima parte <title ref="#SummaeQuaestionumOrdinariarum">summae</title> suae et <name ref="#Chatton">Chaton</name> licet hoc non a parte 
-              <lb ed="#SV"/>explicet tamen materiam de praescientia isto modo Resolvit 
-              <lb ed="#SV"/>nam hanc propositionem <mentioned>deus scit antichristum fore</mentioned> 
-              <lb ed="#SV"/>si intelligitur quod deus habet notitiam universalem et universaliter perfe<lb ed="#SV"/>ctam 
-              de antichristo et intelligitur quod antichristus erit 
-              <lb ed="#SV"/>tunc ratione secundae partis tota propositio est contingens prima pars 
-              <lb ed="#SV"/>est necessaria et stat cum utraque parte contradictionis 
-              <lb ed="#SV"/>quia non est <unclear>assertiva[?]</unclear> eo quod non est limitata immo illimitata 
-              <lb ed="#SV"/>nam divina scientia se extendit cum simplicitate sine 
-              <lb ed="#SV"/>compositione et divisione ad utramque partem contradictionis et 
-              <lb ed="#SV"/>ista via est probabilis.</p>
-        
+              ratione secundae partis 
+              quae ponit quod antichristus erit 
+              et sic remanet in contingentia in secunda parte copulativae 
+              et immobilis dei veritas in prima 
+              nam eadem scientia dei ad intra 
+              stat cum utroque contradictorum 
+              et secundum hoc 
+              non sequitur deus scit antichristum fore, 
+              igitur antichristus erit capiendo scientiam, 
+              primo modo 
+              quia antecedens est necessarium 
+              et consequens contingens, 
+              tamen communis modus loquendi 
+              habet quod propositio recipiatur, 
+              secundo modo 
+              ut ipsa includit perfectionem scientiae divinae 
+              circa hoc enuntiabile antichristus erit 
+              vel eius contradictorium, 
+              et cum hoc includit a parte 
+              rei quod antichristus erit, 
+              et ideo conceditur communiter quod est contingens 
+              sed hoc est ratione ultimae partis 
+              posset tamen dici circa primum modum probabiliori modo apud me, 
+              nam haec propositio deus scit antichristum 
+              fore primo modo capiendo scire est vera, 
+              et ista deus scit antichristum non fore 
+              est neganda ad divinam 
+              praescientiam relata praecise.
+            </p> 
+            <p xml:id="l118-eohvep">
+              Et oritur hic difficultas, 
+              <pb ed="#SV" n="345-v"/>
+              <cb ed="#SV" n="a"/>
+              quia propositio non refertur ad obiectum, 
+              sed praecise ad divinum intuitum curtam variae 
+              cum aequaliter utrumlibet deus intuetur quaeritur, 
+              ergo quare deus scit unum et contrarium, 
+              hoc enim resolvitur ad rationem divinae 
+              immensitatis qui eodem modo 
+              et adaequate se habet producendo 
+              <name ref="#Sortes">Sortes</name> et non producendo, 
+              ita quod divina essentia non cognoscit 
+              nec compositive nec iudiciative proprie loquendo 
+              sed suo simplicissimo intuitu cui non repugnat 
+              falsitas quo intuitu ipse videt omnes rerum habitudines 
+              in infinitum certiori modo quam <unclear>assertive</unclear>, 
+              et tamen non potest ei subesse 
+              falsum et istam viam tenet 
+              <cit>
+                <ref xml:id="l118-Rd1e399">
+                  <name ref="#HenryOfGhent">Doctor Sollempnis</name>, 
+                  prima parte 
+                  <title ref="#SummaeQuaestionumOrdinariarum">summae</title> 
+                  suae
+                </ref>
+              </cit> 
+              et 
+              <cit>
+                <ref xml:id="l118-Rd1e412">
+                  <name ref="#Chatton">Chaton</name>
+                </ref>
+              </cit> 
+              licet hoc non a parte 
+              explicet tamen materiam de praescientia isto modo Resolvit 
+              nam hanc propositionem 
+              <mentioned>deus scit antichristum fore</mentioned>,
+              si intelligitur 
+              quod deus habet notitiam universalem 
+              et universaliter perfectam de antichristo 
+              et intelligitur quod antichristus erit,
+              tunc ratione secundae partis 
+              tota propositio est contingens. 
+              Prima pars est necessaria 
+              et stat cum utraque parte contradictionis 
+              quia non est <unclear>assertiva</unclear> eo quod non est limitata, 
+              immo illimitata, 
+              nam divina scientia se extendit 
+              cum simplicitate sine compositione et divisione 
+              ad utramque partem contradictionis 
+              et ista via est probabilis.
+            </p>
           </div>
-          <div>
+          <div xml:id="l118-Dd1e428">
             <head xml:id="l118-Hqvaqva">Quarta via</head>
-        <p xml:id="l118-qvscdc">quarta via sicut intellectus noster 
-          <lb ed="#SV"/>circa singularia et contingentia Reperit modum habendi 
-          <lb ed="#SV"/>scientiam infallibiliter vel per universaliter concipere vel 
-          <lb ed="#SV"/>demonstrative, vel secundum alios modos secundum quos contingit 
-          <lb ed="#SV"/>intellectum, sibi procurare scientiam immutabilem, et 
-          <lb ed="#SV"/>ita imaginando hanc conditionem in intelle<lb ed="#SV"/>ctu 
-          divino concurrere circumscripto quod in nobis dicit 
-          <lb ed="#SV"/>imperfectionem, unde sicut intellectus noster potest invenire 
-          <lb ed="#SV"/>modos intelligendi singularia contingentia certi<lb ed="#SV"/>tudinaliter, 
-          ita quod solum tollatur confusio a divina 
-          <lb ed="#SV"/>notitia quae Reperitur in nobis et abstrahatur 
-          <lb ed="#SV"/> divina notitia ab imperfectionibus tunc 
-          <lb ed="#SV"/>immutabiliter et distinctive cognoscet contin<lb ed="#SV"/>gentia 
-          et mutabilia, nam cum hoc sit possibile in<lb ed="#SV"/>tellectui 
-          nostro non oportet nisi abstrahere et tollere 
-          <lb ed="#SV"/>huiusmodi confusionem et sic salvatur quod divina 
-          <lb ed="#SV"/>notitia est simplex et distinctissima et immediata 
-          <lb ed="#SV"/>notitia et ex intrinseca ratione suae perfectionis 
-          <lb ed="#SV"/>habet illum modum cognoscendi ad intra et ad extra 
-          <lb ed="#SV"/>omnia quae sunt singulariter et simplicissime 
-          <lb ed="#SV"/>seclusa tamen imperfectione quae Reperitur in nobis 
-          <cb ed="#SV" n="345vb"/><lb ed="#SV"/>et istam sequitur <name ref="#WilliamOfParis">Gillelmus parisiensis</name> secunda parte libro 
-          <lb ed="#SV"/><title ref="#deUniverso">de universo</title>, ubi ponit exemplum, nam haec propositio de<lb ed="#SV"/>monstrando 
-          duo contradictoria et alterum illorum 
-          <lb ed="#SV"/>est verum et haec scit intellectus noster sed cum confusione 
-          <lb ed="#SV"/>nam deus distinctissime scit quod illorum est verum, et quid<lb ed="#SV"/>quid 
-          eveniet deus scit, nam sive eveniat 
-          <lb ed="#SV"/>sive non nihilominus alterum illorum erit verum, et tamen in 
-          <lb ed="#SV"/>nobis quidquid sit subiectum tamen illius alterum illorum 
-          <lb ed="#SV"/>est verum sumit pro aliquo contingente demonstratis contradictoris.</p>
+            <p xml:id="l118-qvscdc">
+              Quarta via sicut intellectus noster 
+              circa singularia et contingentia 
+              reperit modum habendi 
+              scientiam infallibiliter 
+              vel per universaliter concipere 
+              vel demonstrative, 
+              vel secundum alios modos 
+              secundum quos contingit intellectum, 
+              sibi procurare scientiam immutabilem, 
+              et ita imaginando hanc conditionem in intellectu 
+              divino concurrere circumscripto 
+              quod in nobis dicit imperfectionem, 
+              unde sicut intellectus noster potest invenire 
+              modos intelligendi singularia 
+              contingentia certitudinaliter, 
+              ita quod solum tollatur 
+              confusio a divina notitia 
+              quae reperitur in nobis 
+              et abstrahatur divina notitia ab imperfectionibus, 
+              tunc immutabiliter et distinctive cognoscet 
+              contingentia et mutabilia, 
+              nam cum hoc sit possibile intellectui 
+              nostro non oportet nisi abstrahere et tollere 
+              huiusmodi confusionem et sic salvatur 
+              quod divina notitia est simplex et distinctissima 
+              et immediata notitia 
+              et ex intrinseca ratione suae perfectionis 
+              habet illum modum cognoscendi ad intra 
+              et ad extra omnia 
+              quae sunt singulariter et simplicissime 
+              seclusa, 
+              tamen imperfectione 
+              quae reperitur in nobis 
+              <cb ed="#SV" n="345vb"/><!--SV345vb-->
+              et istam sequitur 
+              <cit>
+                <ref xml:id="l118-Rd1e440">
+                  <name ref="#WilliamOfParis">Gillelmus Parisiensis</name>, 
+                  secunda parte libro <title ref="#deUniverso">De universo</title>
+                </ref>
+              </cit>, 
+              ubi ponit exemplum, nam haec propositio demonstrando 
+              duo contradictoria et alterum illorum 
+              est verum et haec scit intellectus noster sed cum confusione 
+              nam deus distinctissime scit quod illorum est verum, et quidquid 
+              eveniet deus scit, nam sive eveniat 
+              sive non nihilominus alterum illorum erit verum, 
+              et tamen in nobis quidquid sit subiectum, 
+              tamen illius alterum illorum 
+              est verum sumit pro aliquo contingente demonstratis contradictoris.
+            </p>
           </div>
-          <div>
+          <div xml:id="l118-Dd1e452">
             <head xml:id="l118-Hqnvqnv">Quinta via</head>
-            <p xml:id="l118-qvqrcf"><lb ed="#SV"/>quinta via quod notitia vel scientia divina respectu futurorum 
-              <lb ed="#SV"/>contingentium est scientia practica mere libera, unde ima<lb ed="#SV"/>ginandum 
-              quod sicut voluntas divina est mere libera 
-              <lb ed="#SV"/>respectu effectus  producibilis ista scientia practica divina 
-              <lb ed="#SV"/>respectu eiusdem effectus est omnino libera nec est mirabile, 
-              <lb ed="#SV"/>quia formaliter et adaequate idem est intellectus et voluntas 
-              <lb ed="#SV"/>in deo. Sed miramur ex infirmitate cognitionis 
-              <lb ed="#SV"/>nostrae et notitiae, sed non est mirandum visa immensitate 
-              <lb ed="#SV"/>libere cognitionis divinae quae uniformiter vult anti<lb ed="#SV"/>christum 
-              fore et per eandem cognitionem uniformiter et 
-              <lb ed="#SV"/>omnino adaequate se habens vult ipsum non fore si 
-              <lb ed="#SV"/>non sit futurus, vult eum esse si sit et destruere 
-              <lb ed="#SV"/>quando <unclear>corrumpitur[?]</unclear>, et hoc fit per eandem cognitionem simpliciter 
-              <lb ed="#SV"/>et adaequate et uniformiter se habens respectu oppositorum 
-              <lb ed="#SV"/>et ideo voluntas divina apud nos vocatur libera, 
-              <lb ed="#SV"/>licet non sit proprie electiva vocatur tamen libera quia  
-              eadem volitio adaequate est qua vult antichristum 
-              <lb ed="#SV"/>fore, et qua potest velle antichristum non fore, et 
-              <lb ed="#SV"/>ita est eadem scientia est qua deus scit antichristum fore 
-              <lb ed="#SV"/>antequam producitur et qua scit ipsum esse quando est et 
-              <lb ed="#SV"/>qua scit ipsum esse destructum ipso annihilato, et nullo 
-              <lb ed="#SV"/>modo mutabitur divina scientia, nam magna est 
-              <lb ed="#SV"/>difficultas salvare quod deus uniformiter se habeat 
-              <lb ed="#SV"/>producendo <c>a</c> et antequam producitur et igitur maior est difficultas 
-              <lb ed="#SV"/>salvare quod ibi non mutetur quam salvare praescientiam 
-              <lb ed="#SV"/>cum futuris contingentibus quia deus habet talem habitu<lb ed="#SV"/>dinem 
-              ad Res quod praescit et contingenter eas producit, 
-              <lb ed="#SV"/>ideo eius voluntas vocatur libera et sic ista consequentia 
-              <lb ed="#SV"/>non valet voluntas divina vult modo quod <c>a</c> fiat 
-              <lb ed="#SV"/>et ante non volebat igitur mutatur etiam non 
-              <lb ed="#SV"/>sequitur deus modo praescit <c>a</c> futurum et ante non praescie<lb ed="#SV"/>bat, 
-              igitur deus mutatur, et ideo scientia respectu futurorum 
-              <lb ed="#SV"/>contingentium potest salvari sicut volitio respectu producibilium 
-              <lb ed="#SV"/>et sic salvatur immutabilitas divinae voluntatis 
-              <cb ed="#SV" n="346ra"/><lb ed="#SV"/>respectu contingentium futurorum.</p>
+            <p xml:id="l118-qvqrcf">
+              Quinta via 
+              quod notitia vel scientia divina respectu futurorum contingentium 
+              est scientia practica mere libera, 
+              unde imaginandum quod sicut voluntas divina est mere libera 
+              respectu effectus producibilis 
+              ista scientia practica divina respectu eiusdem effectus 
+              est omnino libera nec est mirabile 
+              quia formaliter et adaequate idem est intellectus et voluntas in deo. 
+              Sed miramur ex infirmitate cognitionis nostrae et notitiae, 
+              sed non est mirandum visa immensitate 
+              libere cognitionis divinae 
+              quae uniformiter vult antichristum fore 
+              et per eandem cognitionem uniformiter 
+              et omnino adaequate se habens vult ipsum non fore 
+              si non sit futurus, 
+              vult eum esse 
+              si sit et destruere 
+              quando <unclear>corrumpitur</unclear>, 
+              et hoc fit per eandem cognitionem simpliciter 
+              et adaequate et uniformiter se habens respectu oppositorum 
+              et ideo voluntas divina apud nos vocatur libera, 
+              licet non sit proprie electiva vocatur tamen libera 
+              quia eadem volitio adaequate est qua vult antichristum fore, 
+              et qua potest velle antichristum non fore, 
+              et ita est eadem scientia est 
+              qua deus scit antichristum fore 
+              antequam producitur 
+              et qua scit ipsum esse quando est 
+              et qua scit ipsum esse destructum ipso annihilato, 
+              et nullo modo mutabitur divina scientia, 
+              nam magna est difficultas salvare 
+              quod deus uniformiter se habeat 
+              producendo <c>a</c> 
+              et antequam producitur 
+              et igitur maior est difficultas salvare 
+              quod ibi non mutetur 
+              quam salvare praescientiam 
+              cum futuris contingentibus 
+              quia deus habet talem habitudinem 
+              ad res quod praescit 
+              et contingenter eas producit, 
+              ideo eius voluntas vocatur libera, 
+              et sic ista consequentia 
+              non valet voluntas divina vult modo quod <c>a</c> fiat 
+              et ante non volebat, 
+              igitur mutatur, 
+              etiam non sequitur deus modo praescit <c>a</c> futurum 
+              et ante non praesciebat, 
+              igitur deus mutatur, 
+              et ideo scientia respectu futurorum contingentium 
+              potest salvari 
+              sicut volitio respectu producibilium 
+              et sic salvatur immutabilitas divinae voluntatis 
+              <pb ed="#SV" n="346-r"/>
+              <cb ed="#SV" n="a"/>
+              respectu contingentium futurorum.
+            </p>
           </div>
         </div>
       </div>
