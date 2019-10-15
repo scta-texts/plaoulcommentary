@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,440 +7,751 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 117, de Libertate</title>
           <date when="2013-03-18">March 18, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-18">March 18, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
+          <witness xml:id="R" n="reims">Reims</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-20" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="344-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio117">
-      <head xml:id="l117-Hldlldl" subtype="title">Lectio 117, de Libertate</head>
-        <div>
+        <head xml:id="l117-Hldlldl">Lectio 117, de Libertate</head>
+        <div xml:id="l117-Dd1e109">
           <head xml:id="l117-Htpotpo">Tertio propositio</head>
           <!-- add cross reference note to previous two propositions -->
-        <p xml:id="l117-tpndne">tertia propositio non est possibile futura 
-          <lb ed="#SV"/>intrinsece esse contingentia et necessaria ad divinum rela<lb ed="#SV"/>ta 
-          intuitum. unde aliqui dixerunt futura contingentia 
-          <lb ed="#SV"/>in se considerata esse contingentia Relata tamen ad deum 
-          <lb ed="#SV"/>necessario eveniunt.</p> 
-          
-          <p xml:id="l117-eivibf">et istam viam tenuit doctor 
-            <lb ed="#SV"/>sanctus, scilicet, <name ref="#Aquinas">beatus thomas</name> qui pro sua opinione videtur 
-            <lb ed="#SV"/>esse <sic>fulcitus</sic> auctoritate <name ref="#Boethius">boecii</name> Vo <title ref="#Consolation">de consolatione</title> 
-            <lb ed="#SV"/>dicentis fatebor rem quamdam solidissime veritatis, 
-            <lb ed="#SV"/>sed tibi vix animus nisi cui divini speculator  
-            <lb ed="#SV"/>accesserit, Respondebo nam quod idem futurum ad divinam 
-            <lb ed="#SV"/>notionem refertur necessariam consui iam in parte fatetur 
-            <lb ed="#SV"/>esse liberam prorsus ita quod conclusio <name ref="#Aquinas">sancti thomae</name> videtur 
-            <lb ed="#SV"/>contineri in <name ref="#Boethius">boecio</name> formaliter.</p>
-        <div>
+          <p xml:id="l117-tpndne">
+            Tertia propositio, 
+            non est possibile futura 
+            intrinsece esse contingentia et necessaria ad divinum relata 
+            intuitum. unde aliqui dixerunt futura contingentia 
+            in se considerata esse contingentia relata tamen ad deum 
+            necessario eveniunt.
+          </p> 
+          <p xml:id="l117-eivibf">
+            Et istam viam tenuit doctor sanctus, 
+            scilicet <name ref="#Aquinas">Beatus Thomas</name> 
+            qui pro sua opinione videtur esse <sic>fulcitus</sic> 
+            auctoritate 
+            <ref xml:id="l117-Rd1e127">
+              <name ref="#Boethius">Boetii</name> 
+              V 
+              <title ref="#Consolation">De consolatione</title>
+            </ref> 
+            dicentis 
+            <cit>
+              <quote xml:id="l117-Qd1e138" source="http://scta.info/resource/hy7y6y-d1e83"> <!-- reference to book 5 -->
+                fatebor rem quamdam solidissimae veritatis, 
+                sed tibi vix animus nisi cui divini speculator  
+                accesserit, Respondebo nam quod idem futurum ad divinam 
+                notionem refertur necessariam
+              </quote>
+              <bibl>
+                XXX
+                <!-- 
+                  fatebor rem quidem solidissimae veritatis 
+                  sed cui vix aliquis nisi divini speculator 
+                  accesserit. 
+                  Respondebo namque idem futurum, cum ad divinam notionem refertur, 
+                  necessarium 
+                -->
+              </bibl>
+            </cit> 
+            consui iam in parte fatetur 
+            esse liberam prorsus, 
+            ita quod conclusio <name ref="#Aquinas">Sancti Thomae</name> videtur 
+            contineri in <name ref="#Boethius">Boecio</name> formaliter.
+          </p>
+        <div xml:id="l117-Dd1e157">
           <head xml:id="l117-Hrpcost">Rationes pro conclusione et contra opinionem Sancti Thomae</head>
-          <p xml:id="l117-pcpeii">pro conclusione posita et 
-            <lb ed="#SV"/>contra istam conclusione adducuntur rationes, nam si 
-            <lb ed="#SV"/>positio <name ref="#Aquinas">sancti thomae</name> esset vera sequitur quod deus necessario pro<lb ed="#SV"/>duxisset 
-            <seg>mundum<desc>something weird here -- looks like "i" at end though perhaps crossed out</desc></seg> consequens est falsum probatur consequentia nam 
-            <lb ed="#SV"/>ante constitutionem mundi mundus erat producibilis 
-            <lb ed="#SV"/>in relatione ad divinam voluntatem praecise vel ergo 
-            <lb ed="#SV"/>in relatione ad divinam voluntatem poterat contingenter produci et tunc hoc esset contra ipsam, vel necessario 
-            <lb ed="#SV"/>produceretur mundus quod est inconveniens <unclear>illatum[?]</unclear>.</p>
-        
-          <p xml:id="l117-sahenc"><lb ed="#SV"/>secundo arguitur haec consequentia est bona <c>b</c> effectus habet 
-            <lb ed="#SV"/>necessitatem ab aliquo igitur <c>b</c> habet necessitatem tenet consequentia 
-            <lb ed="#SV"/>quia undecumque Recipit necessitatem eo ipso Recipit 
-            <lb ed="#SV"/>necessitatem habet necessitatem ergo si <c>b</c> habet necessitatem 
-            <lb ed="#SV"/>a prima causa igitur habet necessitatem et per consequens <c>b</c> 
-            <lb ed="#SV"/>est necessarium et non contingens.</p> 
-          
-          <p xml:id="l117-tapqac">tertio <title ref="#ArticlesOfParis">articulus parisiensis</title> 
-            <lb ed="#SV"/>est dicere quod nihil contingenter eveniat considerandum 
-            <lb ed="#SV"/>omnes eius causas est error igitur considerando quod 
-            <lb ed="#SV"/>effectus in ordine ad divinam providentiam eve<lb ed="#SV"/>niant 
+          <p xml:id="l117-pcpeii">
+            Pro conclusione posita 
+            et contra istam conclusione 
+            adducuntur rationes, 
+            nam si positio <name ref="#Aquinas">Sancti Thomae</name> esset vera, 
+            sequitur quod deus necessario produxisset mundum. 
+            Consequens est falsum. 
+            Probatur consequentia, 
+            nam ante constitutionem mundi 
+            mundus erat producibilis 
+            in relatione ad divinam voluntatem praecise 
+            vel ergo in relatione ad divinam voluntatem poterat contingenter produci, 
+            et tunc hoc esset contra ipsam, 
+            vel necessario produceretur mundus 
+            quod est inconveniens <unclear>illatum</unclear>.
+          </p>
+          <p xml:id="l117-sahenc">
+            Secundo, 
+            arguitur, 
+            haec consequentia est bona, 
+            <c>b</c> effectus habet necessitatem ab aliquo, 
+            igitur <c>b</c> habet necessitatem. 
+            Tenet consequentia 
+            quia undecumque recipit necessitatem 
+            eo ipso recipit necessitatem habet necessitatem, 
+            ergo si <c>b</c> habet necessitatem a prima causa, 
+            igitur habet necessitatem, 
+            et per consequens <c>b</c> est necessarium 
+            et non contingens.
+          </p> 
+          <p xml:id="l117-tapqac">
+            Tertio, 
+            <ref xml:id="l117-Rd1e188"><title ref="#ArticlesOfParis">Articulus Parisiensis</title></ref>
+            <!-- begin error quote -->
+            est dicere quod 
+            <cit>
+              <quote xml:id="l117-Qd1e196">
+                nihil contingenter eveniat considerandum <!-- considerando -->
+                omnes eius causas est error
+              </quote>
+              <bibl>
+                XXXX
+                <!-- 1277 condemnations are here: but I can't find it: https://books.google.com/books?id=VmrMTNvijekC&pg=PA205&dq=chartularium+universitatis+parisiens+tom+1&hl=en&sa=X&ved=2ahUKEwin0MHNy5zlAhVQx1kKHRuTDAYQ6AEwAXoECAYQAg#v=onepage&q=chartularium%20universitatis%20parisiens%20tom%201&f=false -->
+              <!-- also seen in wodeham bk 2, d. 14, q. 3 Paris 1512, fol. 120vb --> 
+              <!--https://books.google.com/books?id=ffNrGbs-TpkC&pg=PA436&dq=%22nihil+contingenter+eveniat%22&hl=en&sa=X&ved=2ahUKEwj054qVzpzlAhWOjlkKHccuANIQ6AEwAHoECAQQAg#v=onepage&q=%22nihil%20contingenter%20eveniat%22&f=false-->
+              <!-- also seems to be have a connection to melancthon: https://books.google.com/books?id=WCteAAAAcAAJ&pg=PA242&dq=%22nihil+contingenter+eveniat%22&hl=en&sa=X&ved=2ahUKEwj054qVzpzlAhWOjlkKHccuANIQ6AEwAXoECAEQAg#v=onepage&q=%22nihil%20contingenter%20eveniat%22&f=false -->
+              </bibl>
+            </cit>, 
+            igitur considerando quod 
+            effectus in ordine ad divinam providentiam eveniant 
             necessario et non contingenter est quasi 
-            <lb ed="#SV"/>articulus condemnatus.</p>
-        
-          <p xml:id="l117-qapqap">quarto arguitur vel deus in 
-            <lb ed="#SV"/>se est sic determinatus ad effectus productionem 
-            <lb ed="#SV"/>quod in nullius potestate est quin producitur et si sic 
-            <lb ed="#SV"/>tunc effectus de necessitate et inevitabiliter eveniet 
-            <lb ed="#SV"/>vel non est sic determinatus quod ab eo necessario 
-            <lb ed="#SV"/>producatur et si sic contingenter producitur 
-            <lb ed="#SV"/>effectus producibilis licet Relatus sit ad divinam praescientiam.</p>
-        
-          <p xml:id="l117-qaascc"><cb ed="#SV" n="342va"/><lb ed="#SV"/>quinto arguitur <c>a</c> praescitur a deo a fore igitur <c>a</c> erit antecedens est 
-            <lb ed="#SV"/>necessariam per istum doctorem met quia per eum antecedens signatur 
-            <lb ed="#SV"/><c>a</c> Referri praecise ad praescientiam divinam et consequentia 
-            <lb ed="#SV"/>est necessaria, tunc arguitur sic antecedens est necessariam eo quod 
-            <lb ed="#SV"/><c>a</c> Refertur praecise ad divinam praescientiam igitur consequens est 
-            <lb ed="#SV"/>necessariam tenet consequentia quia ex antecedente necessario non sequitur 
-            <lb ed="#SV"/>consequens contingens.</p>
-            </div>
-        <div>
+            articulus condemnatus.
+          </p>
+          <p xml:id="l117-qapqap">
+            Quarto, 
+            arguitur, 
+            vel deus in se est sic determinatus ad effectus productionem 
+            quod in nullius potestate est quin producitur, 
+            et, si sic, 
+            tunc effectus de necessitate et inevitabiliter eveniet,
+            vel non est sic determinatus 
+            quod ab eo necessario producatur, 
+            et si sic, 
+            contingenter producitur effectus producibilis, 
+            licet relatus sit ad divinam praescientiam.
+          </p>
+          <p xml:id="l117-qaascc">
+            <pb ed="#SV" n="342-v"/>
+            <cb ed="#SV" n="a"/>
+            Quinto arguitur <c>a</c> praescitur a deo a fore, 
+            igitur <c>a</c> erit. 
+            Antecedens est necessariam per istum doctorem met 
+            quia per eum antecedens signatur 
+            <c>a</c> referri praecise 
+            ad praescientiam divinam. 
+            Et consequentia est necessaria, 
+            tunc arguitur, 
+            sic antecedens est necessariam eo quod 
+            <c>a</c> refertur praecise 
+            ad divinam praescientiam, 
+            igitur consequens est necessariam. 
+            Tenet consequentia 
+            quia ex antecedente necessario,
+            non sequitur consequens contingens.
+          </p>
+        </div>
+        <div xml:id="l117-Dd1e240">
           <head xml:id="l117-Hraoaob">Responsio ad opinionem Boetii</head>
-          <p xml:id="l117-eqahme">Ex quo apparet quod positio non sit sustinibilis, 
-            <lb ed="#SV"/>et sic solum Restat Respondere ad auctoritatem <name ref="#Boethius">boecii</name>, 
-            <lb ed="#SV"/>nam dicitur quod <name ref="#Boethius">boecius</name> in illo loco expressissime distin<lb ed="#SV"/>guit 
-            duplicem necessitatem unam scilicet absolutam. aliam 
-            <lb ed="#SV"/>conditionatam, unde inquit duae sunt necessitates una 
-            <lb ed="#SV"/>simplex veluti quod necesse est omnes homines mor<lb ed="#SV"/>tales 
-            esse.</p>
-        
-          <p xml:id="l117-dnnemg">De necessitate naturali intelligit altera 
-            <lb ed="#SV"/>conditionata ut si qui ambulare scientias ipsum am<lb ed="#SV"/>bulare 
-            necesse est, et licet in istis verbis non servet 
-            <lb ed="#SV"/><name ref="#Boethius">boecius</name> formam communem quia modus debet praecedere totam 
-            <lb ed="#SV"/>conditionalem tamen ipse intelligit ac si praecederet et sic 
-            <lb ed="#SV"/>distinguit in proposito necessitatem absolutam et conditio<lb ed="#SV"/>natam. 
+          <p xml:id="l117-eqahme">
+            Ex quo apparet 
+            quod positio non sit sustinibilis, 
+            et sic solum restat respondere ad auctoritatem 
+            <name ref="#Boethius">Boetii</name>, 
+            nam dicitur quod 
+            <name ref="#Boethius">Boetius</name> 
+            in illo loco expressissime distinguit 
+            duplicem necessitatem, 
+            unam, scilicet absolutam, 
+            aliam conditionatam. 
+            Unde inquit 
+            <cit>
+              <quote xml:id="l117-Qd1e255" source="http://scta.info/resource/hy7y6y-d1e83">
+                duae sunt necessitates una 
+                simplex veluti quod necesse est omnes homines mortales 
+                esse
+              </quote>
+              <bibl>V.6
+                <!-- Duae sunt etenim necessitates, simplex una,
+                ueluti quod necesse est omnes homines <milestone unit="loebline" n="105"/> esse
+                mortales-->
+              </bibl>
+            </cit>.
+          </p>
+          <!-- why break here -->
+          <p xml:id="l117-dnnemg">
+            De necessitate naturali, 
+            intelligit, 
+            <cit>
+              <quote xml:id="l117-Qd1e271" source="http://scta.info/resource/hy7y6y-d1e83">
+                altera conditionata 
+                ut si qui ambulare scientias ipsum ambulare necesse est
+              </quote>
+              <bibl>V.6</bibl>
+            </cit>.
+            Et licet in istis verbis non servet 
+            <name ref="#Boethius">Boecius</name> formam communem 
+            quia modus debet praecedere totam 
+            conditionalem tamen ipse intelligit ac si praecederet 
+            et sic distinguit in proposito necessitatem absolutam et conditionatam. 
             Ita quod ipse vult dicere quod effectus relati 
-            <lb ed="#SV"/>ad divinam praescientiam necessario eveniunt necessitatem conditio<lb ed="#SV"/>nata 
-            si formetur ista consequentia vel similis deus prae<lb ed="#SV"/>scit 
-            <c>a</c> futurum, ergo <c>a</c> erit, in se tamen considerati effe<lb ed="#SV"/>ctus 
-            propositio eos signans esset simpliciter contingens. Si 
-            <lb ed="#SV"/>autem istam intentionem habuit <name rend="#Aquinas">sanctus thomas</name> eo<lb ed="#SV"/>dem 
-            modo glosatur.</p> 
-        
-          <p xml:id="l117-chcfif">Circa hoc tamen est advertendum quod 
-            <lb ed="#SV"/><name ref="#Augustine">augustinus</name> <name ref="#Anselm">anselmus</name> et doctores dicunt quod necesse 
-            <lb ed="#SV"/>est futurum esse futurum et multa talia dicta quae omnia 
-            <lb ed="#SV"/>glosanda sunt de necessitate conditionali si <c>a</c> est 
-            <lb ed="#SV"/>futurum <c>a</c> erit et causa est quia de necessitate absoluta 
-            <lb ed="#SV"/>nullum futurum est contingens est necessarium immo Iudicium fu<lb ed="#SV"/>turum 
-            erit, sed contingenter erit quia deus posset oppositum 
-            <lb ed="#SV"/>velle, nam ipse etiam posset suspendere influentiam 
-            <lb ed="#SV"/>conservativam creaturarum et tunc nulla esset creatura 
-            <lb ed="#SV"/>nec in mundo inferiori, nec in paradiso esset aliquis 
-            <lb ed="#SV"/>beatus quia eo ipso quod sic faceret iustissimae faceret.</p>
-        
-          <p xml:id="l117-snefef"><lb ed="#SV"/>secundo notandum est quia <name ref="Anselm">anselmus</name> concedit istam quod necesse 
-            esse omne futurum esse futurum, et tamen negat omne 
-            <lb ed="#SV"/>praeteritum posse non esse praeteritum. Et circa hoc Respondet 
-            <name ref="#Wodeham">adam</name> quod <name ref="#Anselm">anselmus</name> ponit differentiam inter propositiones 
-            <lb ed="#SV"/>nisi idem praedicatur de seipso et alias ubi praedicatur termini sumentes 
-            <lb ed="#SV"/>pro eisdem Rebus, ubi tamen idem non praedicatur de seipso et 
-            <lb ed="#SV"/>quia non subicitur vel praedicantur idem de seipso ideo tales 
-            <lb ed="#SV"/>negat, ubi vero praedicatur vel subicitur idem de se 
-            <lb ed="#SV"/>ipso concedit nam omnes propositiones de futuro contin<lb ed="#SV"/>genti 
+            ad divinam praescientiam necessario eveniunt necessitatem conditionata 
+            si formetur ista consequentia vel similis deus praescit 
+            <c>a</c> futurum, ergo <c>a</c> erit, 
+            in se tamen considerati effectus 
+            propositio eos signans esset simpliciter contingens. 
+            Si autem istam intentionem habuit 
+            <name rend="#Aquinas">Sanctus Thomas</name> eodem modo glosatur.
+          </p> 
+          <p xml:id="l117-chcfif">
+            Circa hoc tamen est advertendum 
+            quod 
+            <name ref="#Augustine">Augustinus</name>, 
+            <name ref="#Anselm">Anselmus</name>, 
+            et doctores dicunt quod necesse est futurum esse futurum 
+            et multa talia dicta 
+            quae omnia glosanda sunt de necessitate conditionali, 
+            si <c>a</c> est futurum <c>a</c> erit 
+            et causa est quia de necessitate absoluta 
+            nullum futurum est contingens est necessarium, 
+            immo iudicium futurum erit, 
+            sed contingenter erit 
+            quia deus posset oppositum velle, 
+            nam ipse etiam posset suspendere influentiam 
+            conservativam creaturarum 
+            et tunc nulla esset creatura nec in mundo inferiori, 
+            nec in paradiso esset aliquis beatus 
+            quia eo ipso quod sic faceret iustissimae faceret.
+          </p>
+          <p xml:id="l117-snefef">
+            Secundo notandum est 
+            quia <name ref="Anselm">Anselmus</name> concedit istam quod necesse 
+            esse omne futurum esse futurum, 
+            et tamen negat omne 
+            praeteritum posse non esse praeteritum. 
+            Et circa hoc respondet 
+            <name ref="#Wodeham">Adam</name> 
+            quod <name ref="#Anselm">Anselmus</name> 
+            ponit differentiam inter propositiones 
+            nisi idem praedicatur de seipso et alias 
+            ubi praedicatur termini sumentes 
+            pro eisdem rebus, 
+            ubi tamen idem non praedicatur de seipso et 
+            quia non subicitur vel praedicantur 
+            idem de seipso ideo tales negat, 
+            ubi vero praedicatur vel subicitur idem de se 
+            ipso concedit nam omnes propositiones de futuro contingenti 
             in quibus non praedicatur idem de se ipso negat et 
-            <lb ed="#SV"/>illam nisi idem praedicatur de seipso recipit necessarias ex 
-            <lb ed="#SV"/>conditione ut necesse est hoc futurum esse futurum si 
-            <lb ed="#SV"/>hoc erit demonstrando antichristum, et isto modo 
-            <lb ed="#SV"/>melius Resolveretur <name ref="#Anselm">anselmus</name> quia antiqui doctores 
-            <lb ed="#SV"/>Reputaverunt propositiones necessarias in quibus praedicatur 
-            <lb ed="#SV"/>idem de seipso, immo dicunt quod ista propositio homo est animalis 
-            <lb ed="#SV"/>est necessaria dato quod nullus esset homo necessitate conditio<lb ed="#SV"/>nata, 
-            quia si hoc est homo est animal verum est tamen quod 
-            <lb ed="#SV"/>in scolis non debet concedi ista necesse est omen futurum 
-            <lb ed="#SV"/>esse futurum.</p>
+            illam nisi idem praedicatur de seipso recipit necessarias ex 
+            conditione ut necesse est hoc futurum esse futurum, 
+            si hoc erit demonstrando antichristum, 
+            et isto modo melius resolveretur <name ref="#Anselm">Anselmus</name> 
+            quia antiqui doctores 
+            reputaverunt propositiones necessarias in quibus praedicatur 
+            idem de seipso, 
+            immo dicunt quod ista propositio homo est animalis 
+            est necessaria dato 
+            quod nullus esset homo necessitate conditionata, 
+            quia, 
+            si hoc est, 
+            homo est animal, 
+            verum est tamen quod in scolis 
+            non debet concedi ista necesse est omen futurum 
+            esse futurum.
+          </p>
         </div>
         </div>
-        <div>
+        <div xml:id="l117-Dd1e324">
           <head xml:id="l117-Hqpoqpo">Quarta propositio</head>
-          <p xml:id="l117-qpeido">quarta propositio est ista contra <name ref="#HenryOfGhent">doctorem solemenem</name>, 
-            <lb ed="#SV"/>scilicet, <name ref="#HenryOfGhent">henricum de gandavo</name>, et contra <name ref="#Scotus">doctorem 
-              <lb ed="#SV"/>subtilem</name>, scilicet, <name ref="#Scotus">scotum</name> deus non cognovit futura contin<lb ed="#SV"/>gentia 
-            per determinationem suae voluntatis cuius contrarium 
-            <lb ed="#SV"/>tenuerunt praedicti doctores nam ipsi imaginatur 
-            <lb ed="#SV"/>quod divina essentia primo compraehendit res apprehensive 
-            <lb ed="#SV"/>secundum omnes modus Rerum seu omnes earum habitudines 
-            <lb ed="#SV"/>et hoc facto intellectus divinus praesentat eas sub omni habitudine 
-            <lb ed="#SV"/>possibili voluntati divinae quam apprehensive facta non adhae<lb ed="#SV"/>siva, 
-            tamen licet ipsa sit composita intellectus praesentat Res 
-            <lb ed="#SV"/>futuras contingentes voluntati. deinde voluntas libera 
-            vlibere determinat intellectum divinum ad exequendum hoc 
-            <lb ed="#SV"/>vel illud quasi eliciendum quod pro intellectum sibi putatur 
-            <lb ed="#SV"/>apprehensive et sic intellectus  divinus 
-            <lb ed="#SV"/>sequens determinationem voluntatis divinae cedit 
-            <lb ed="#SV"/>in assensum futurorum contingentium et elicit iudicium 
-            <lb ed="#SV"/><unclear>assensivum[?]</unclear> de isto possibili quod erit et alio quod non erit. 
-            <lb ed="#SV"/>Ex quo apparet quod intellectus dei quantum ad scientiam vel 
-            <lb ed="#SV"/>assensum sequitur determinationem voluntatis divinae et sic re<lb ed="#SV"/>manet 
-            scientia quae est contingens ad producendum 
-            <lb ed="#SV"/><c>a</c> vel <c>b</c> quia assensus scientificus dei intellectus 
-            <lb ed="#SV"/>sequitur determinationem voluntatis  et quantum ad Res nullam imponit necessitatem 
-            <lb ed="#SV"/>et ista est grata imaginatio, sed hoc non est 
-            <lb ed="#SV"/>intelligendum quod inter intellectum divinum et 
-            <lb ed="#SV"/>voluntatem sit aliqua successio, sed aliqualis prio<lb ed="#SV"/>ritas 
-            ut alias dicebatur de prioritate naturae.</p>
-          
-            <p xml:id="l117-ptaido"><lb ed="#SV"/>propter tamen aliquas rationes tenetur oppositum quae pro<lb ed="#SV"/>bat 
-            istam quartam conclusionem et improbant illorum 
-            <lb ed="#SV"/>doctorum opinionem.</p>
-        
-          <p xml:id="l117-prnprn">Prima ratio nam intelle<lb ed="#SV"/>ctus 
+          <p xml:id="l117-qpeido">
+            Quarta propositio, 
+            est ista contra 
+            <cit>
+              <ref xml:id="l117-Rd1e333">
+                <name ref="#HenryOfGhent">Doctorem Solemnem</name>, 
+                scilicet <name ref="#HenryOfGhent">Henricum de Gandavo</name>
+              </ref>
+            </cit>, 
+            et contra 
+            <cit>
+              <ref xml:id="l117-Rd1e345">
+                <name ref="#Scotus">Doctorem Subtilem</name>, 
+                scilicet <name ref="#Scotus">Scotum</name>
+              </ref>
+            </cit> 
+            deus non cognovit futura contingentia 
+            per determinationem suae voluntatis 
+            cuius contrarium tenuerunt praedicti doctores, 
+            nam ipsi imaginatur quod divina essentia 
+            primo compraehendit res apprehensive 
+            secundum omnes modus rerum 
+            seu omnes earum habitudines 
+            et hoc facto intellectus divinus praesentat eas 
+            sub omni habitudine possibili voluntati divinae 
+            quam apprehensive facta non adhaesiva, 
+            tamen, licet ipsa sit composita, 
+            intellectus praesentat res futuras contingentes voluntati, 
+            deinde voluntas libera libere 
+            determinat intellectum divinum ad exequendum hoc 
+            vel illud quasi eliciendum 
+            quod pro intellectum sibi putatur 
+            apprehensive et sic intellectus divinus 
+            sequens determinationem voluntatis divinae cedit 
+            in assensum futurorum contingentium et elicit iudicium 
+            <unclear>assensivum[?]</unclear> de isto possibili 
+            quod erit et alio quod non erit. 
+            Ex quo apparet quod intellectus dei quantum ad scientiam vel 
+            assensum sequitur determinationem voluntatis divinae, 
+            et sic remanet scientia quae est contingens ad producendum 
+            <c>a</c> vel <c>b</c> 
+            quia assensus scientificus dei intellectus 
+            sequitur determinationem voluntatis 
+            et quantum ad res nullam imponit necessitatem 
+            et ista est grata imaginatio, 
+            sed hoc non est intelligendum 
+            quod inter intellectum divinum et 
+            voluntatem sit aliqua successio, 
+            sed aliqualis prioritas 
+            ut alias dicebatur de prioritate naturae.
+          </p>
+          <p xml:id="l117-ptaido">
+            Propter tamen aliquas rationes tenetur oppositum 
+            quae probat istam quartam conclusionem 
+            et improbant illorum 
+            doctorum opinionem.
+          </p>
+          <p xml:id="l117-prnprn">
+            Prima ratio nam intellectus 
             divinus ordine naturali est prior quam voluntas 
-            <lb ed="#SV"/>quo ad omnes suos actus igitur ordine naturae 
-            <cb ed="#SV" n="343ra"/><lb ed="#SV"/>actus intelligendi dei intellectus non sequitur determinationem 
-            <lb ed="#SV"/>suae voluntatis, sed praecederet ratione naturali.</p>
-        
-          <p xml:id="l117-ssieec">secundo sic inte<lb ed="#SV"/>llectus 
-            divinus habet aliquorum scientiam ad quae non prae<lb ed="#SV"/>cedit 
+            quo ad omnes suos actus igitur ordine naturae 
+            <pb ed="#SV" n="343-r"/>
+            <cb ed="#SV" n="a"/>
+            actus intelligendi dei intellectus non sequitur determinationem 
+            suae voluntatis, sed praecederet ratione naturali.
+          </p>
+          <p xml:id="l117-ssieec">
+            Secundo, 
+            sic intellectus 
+            divinus habet aliquorum scientiam ad quae non praecedit 
             determinatio divinae voluntatis igitur imaginatio 
-            <lb ed="#SV"/>falsa antecedens probatur de formidinibus et culpis et defe<lb ed="#SV"/>ctibus 
+            falsa antecedens probatur de formidinibus et culpis et defectibus 
             moralibus de quibus intellectus divinus habet iudicium 
-            <lb ed="#SV"/>quod evenient fient et futura sunt et tamen eum non 
-            <lb ed="#SV"/>praecedit determinatio voluntatis, quia voluntas divina 
-            <lb ed="#SV"/>non elicit culpam nec deformitates nec est 
-            <lb ed="#SV"/>earum causa.</p>
-        
-          <p xml:id="l117-tsqqic">tertio sic quia isti non evadunt difficultatem 
-            <lb ed="#SV"/>qui aequalis difficultas esset determinationem divinae vo<lb ed="#SV"/>luntatis 
-            concordare ad effectus contingentes sicut 
-            <lb ed="#SV"/>de praescientia igitur frustra ponunt illam imaginationem. 
-            <lb ed="#SV"/>antecedens apparet quia determinatio divinae voluntatis est aeque 
-            <lb ed="#SV"/>aeterna respectu producibilium et aeque immutabilis sicut divina 
-            <lb ed="#SV"/>praescientia vel assensus quo producitur effectus aequaliter 
-            <lb ed="#SV"/>est immutabilis igitur aequalem includit necessitatem futurorum 
-            <lb ed="#SV"/>contingentium sicut praescientia, nam si ex immutabilitate 
-            <lb ed="#SV"/>divinae praescientiae isti moveantur ad concludendum necessitatem 
-            <lb ed="#SV"/>futurorum contingentium ita ex immutabilitate 
-            <lb ed="#SV"/>determinationis divinae voluntatis quia essentia divina 
-            <lb ed="#SV"/>non potest plus mutari in voluntate quam in co<lb ed="#SV"/>gnitione.</p>
-        
-          <p xml:id="l117-qaddfc">quarto arguitur determinatio divinae voluntatis 
-            <lb ed="#SV"/>si aliquis debeat suffragari ponetur libera, nam 
-            <lb ed="#SV"/>divina voluntas est ibi indifferens ad eius productionem 
-            <lb ed="#SV"/>quia ex absoluta determinatione divinae voluntatis aequaliter 
-            <lb ed="#SV"/>arguitur necessitas respectu futurorum contingentium sicut ex 
-            <lb ed="#SV"/>praescientia, igitur si aliquis debeant suffragari hoc erit indi<lb ed="#SV"/>fferenter 
-            a voluntate divina, et si sit, sequitur quod intellectus 
-            <lb ed="#SV"/>divinus non poterit a voluntate divina determinari respectu 
-            <lb ed="#SV"/>producibilium nec elicere Iudicium assertivum propositionis 
-            <lb ed="#SV"/>de futuro contingenti.</p>
-        
-          <p xml:id="l117-qavnam">quinto arguitur voluntas divina 
-            <lb ed="#SV"/>est summae rationalis, igitur ipsa non est nata exire in 
-            <lb ed="#SV"/>actum nisi praecedentem dictamen dei intellectus vel saltem 
-            <lb ed="#SV"/>coeno sibi <unclear><c>B[?]</c></unclear> quod hoc est agendum vel non agendum, 
-            <lb ed="#SV"/>igitur iudicium dei intellectus vel assensus de Rebus produ<lb ed="#SV"/>cibilibus 
+            quod evenient fient et futura sunt et tamen eum non 
+            praecedit determinatio voluntatis, quia voluntas divina 
+            non elicit culpam nec deformitates nec est 
+            earum causa.
+          </p>
+          <p xml:id="l117-tsqqic">
+            Tertio, 
+            sic quia isti non evadunt difficultatem 
+            qui aequalis difficultas esset determinationem divinae voluntatis 
+            concordare ad effectus contingentes 
+            sicut de praescientia, 
+            igitur frustra ponunt illam imaginationem. 
+            Antecedens apparet 
+            quia determinatio divinae voluntatis est aeque 
+            aeterna respectu producibilium et aeque immutabilis 
+            sicut divina praescientia vel assensus 
+            quo producitur effectus aequaliter 
+            est immutabilis igitur aequalem includit necessitatem futurorum 
+            contingentium sicut praescientia, 
+            nam si ex immutabilitate divinae praescientiae 
+            isti moveantur ad concludendum necessitatem 
+            futurorum contingentium ita ex immutabilitate 
+            determinationis divinae voluntatis quia essentia divina 
+            non potest plus mutari in voluntate quam in cognitione.
+          </p>
+          <p xml:id="l117-qaddfc">
+            Quarto, 
+            arguitur determinatio divinae voluntatis 
+            si aliquis debeat suffragari ponetur libera, 
+            nam divina voluntas est ibi indifferens ad eius productionem 
+            quia ex absoluta determinatione divinae voluntatis aequaliter 
+            arguitur necessitas respectu futurorum contingentium 
+            sicut ex praescientia, 
+            igitur, 
+            si aliquis debeant suffragari, 
+            hoc erit indifferenter a voluntate divina, 
+            et si sit, 
+            sequitur quod intellectus 
+            divinus non poterit a voluntate divina determinari respectu 
+            producibilium nec elicere Iudicium assertivum propositionis 
+            de futuro contingenti.
+          </p>
+          <p xml:id="l117-qavnam">
+            Quinto, 
+            arguitur voluntas divina 
+            est summae rationalis, 
+            igitur ipsa non est nata exire in 
+            actum nisi praecedentem dictamen dei intellectus vel saltem 
+            coeno sibi <unclear><c>B[?]</c></unclear> 
+            quod hoc est agendum vel non agendum, 
+            igitur iudicium dei intellectus vel assensus de rebus producibilibus 
             non sequitur determinationem voluntatis divinae 
-            <lb ed="#SV"/>nec ipsa praecedit naturaliter nec alio modo.</p>
-        
-          <p xml:id="l117-svdiip">sexto 
-            <lb ed="#SV"/>voluntas divina determinata ad effectum producendum 
-            <lb ed="#SV"/>est summe actuata et in ultima perfectione 
-            <lb ed="#SV"/>ad effectus productionem, igitur in illo priori ipsa potest 
-            <lb ed="#SV"/>exire in actum et per consequens cum ipsa sit perfectissima 
-            <lb ed="#SV"/>sequitur alterum duorum inconvenientium vel quod agit 
-            <lb ed="#SV"/>non assentive, quia non Inducit hoc agendum 
-            <cb ed="#SV" n="343rb"/><lb ed="#SV"/>vel non agendum, vel sequitur quod iudicium intellectus 
-            <lb ed="#SV"/>praecedit.</p>
+            nec ipsa praecedit naturaliter nec alio modo.
+          </p>
+          <p xml:id="l117-svdiip">
+            Sexto, 
+            voluntas divina determinata ad effectum producendum 
+            est summe actuata et in ultima perfectione 
+            ad effectus productionem, 
+            igitur in illo priori ipsa potest 
+            exire in actum, 
+            et per consequens cum ipsa sit perfectissima 
+            sequitur alterum duorum inconvenientium vel quod agit 
+            non assentive 
+            quia non inducit hoc agendum 
+            <cb ed="#SV" n="b"/><!--SV343rb -->
+            vel non agendum, 
+            vel sequitur 
+            quod iudicium intellectus praecedit.
+          </p>
         </div>
-        <div>
+        <div xml:id="l117-Dd1e399">
           <head xml:id="l117-Hqnoqno">Quinta propositio</head>
-          <p xml:id="l117-qpnvvf">quinta propositio negativa futurum contingens non 
-            <lb ed="#SV"/>esse determinate verum nihil confert ad concordiam divinae 
-            <lb ed="#SV"/>praescientiae cum futurorum contingentia, nam ad salvandum 
-            <lb ed="#SV"/>istam concordiam dixerunt aliqui quod propositiones 
-            <lb ed="#SV"/>de futuro contingenti non sunt vere nec falsae, 
-            <lb ed="#SV"/>et ista via nihil confert ad praesentem materiam. primo 
-            <lb ed="#SV"/>non negatur quin deus praevideat evidenter et 
-            <lb ed="#SV"/>iudicaverit quod antichristus erit vel non erit. unde 
-            <lb ed="#SV"/>contra istam positionem sit prima ratio et signetur 
-            <lb ed="#SV"/>haec propositio antichristus erit, nam ex descriptione propositio<lb ed="#SV"/>nis 
-            atque cuilibet quod sequitur evidenter quod ipsa 
-            <lb ed="#SV"/>est vera vel falsa.</p>
-        
-          <p xml:id="l117-ssevsf">secundo sequitur ex descriptione 
-            <lb ed="#SV"/>propositionis vere quod est vera, quia significat aliqualiter fore 
-            <lb ed="#SV"/>qualiter erit, et hoc concludit propositionem veram, 
-            <lb ed="#SV"/>nam dato opposito propositio non esset vera, sed falsa.</p>
-        
-          <p xml:id="l117-tsqcui"><lb ed="#SV"/>tertio sequitur quod ultimum Iudicium fore non sit verum 
-            <lb ed="#SV"/>quia per hanc positionem nulla talis propositio esset vera 
-            <lb ed="#SV"/>et per consequens Iudicium futurum fore non est verum 
-            <lb ed="#SV"/>et ex consequenti sequitur quod fides nos obligat 
-            <lb ed="#SV"/>ad assentiendum falso, vel quod non obligat nos 
-            <lb ed="#SV"/>ad credendum ultimum iudicium.</p>
-        
-          <p xml:id="l117-qqnrec">quarto quia nullus de<lb ed="#SV"/>beret 
-            sperare beatitudinem futuram per merita 
-            <lb ed="#SV"/>sua. nam secundum istam positionem hoc non est verum, 
-            <lb ed="#SV"/>quia hoc est de futuro et ex consequenti sequitur quod non 
-            <lb ed="#SV"/>debemus timere poenam peccatorum nec credere 
-            <lb ed="#SV"/>Resurgere quia ista sunt de futuro quae non sunt 
-            <lb ed="#SV"/>vera secundum istam positionem. alios modos ponit <name ref="#Bradwardine">bra<lb ed="#SV"/>douardin</name> 
-            in tertia parte <title ref="#CausaDei">summae</title> suae a duodecimo capitulo 
-            <lb ed="#SV"/>usque ad 27m inclusive sed illi sunt de se re<lb ed="#SV"/>probabiles 
-            ideo nihil de ipsis oportet dicere, unde aliqui di<lb ed="#SV"/>cunt 
-            quod nihil est futurum et istam opinionem dicit esse 
-            <lb ed="#SV"/><unclear>sophisticarum[?]</unclear> quia dicunt illi si aliquid est futurum tunc 
-            <lb ed="#SV"/>illud est modo hoc est falsum, nam isti negant 
-            <lb ed="#SV"/>istam antichristus est futurus. Sed ista difficultas stat 
-            <lb ed="#SV"/>in terminis, ideo pro nunc studentibus Relinquitur etc .</p>
-        <div>
-          <head xml:id="l117-Hobines">Obiectiones</head>
-          <p xml:id="l117-ctprps"><lb ed="#SV"/>Circa tamen positionem negantem propositiones de 
-            <lb ed="#SV"/>futuro contingenti esse veras vel falsas, notandum est quod 
-            <lb ed="#SV"/>illa de illa opinione habent duas rationes pro se.</p> 
-          
-          <p xml:id="l117-peqcnc"><lb ed="#SV"/>prima est quia si propositiones de futuro contingenti essent 
-            <lb ed="#SV"/>vere vel falsae, sequitur quod huiusmodi veritas vel 
-            <lb ed="#SV"/>falsitas esset immutabilis non signata 
-            <lb ed="#SV"/>veritate huiusmodi antichristus erit in toto tempore aeterno 
-            <cb ed="#SV" n="343va"/><lb ed="#SV"/>ante instans productionis antichristi illa veritas fuit 
-            <lb ed="#SV"/>vera et in illo toto tempore non potuit esse falsa, nec 
-            <lb ed="#SV"/>potuit mutari de veritate in falsitatem igitur 
-            <lb ed="#SV"/>illa veritas est immutabilis et per consequens non contingens.</p>
-        
-          <p xml:id="l117-sreuin"><lb ed="#SV"/>secunda Ratio est philosophi in Io <title ref="#Perihermenias">peryarmenias</title> dicentis quod in 
-            <lb ed="#SV"/>propositionibus de praesenti et in propositionibus de praeterito necesse est 
-            <lb ed="#SV"/>quod sic sit sicut per illas significatur sine illae sint <unclear>singulares[?]</unclear> 
-            <lb ed="#SV"/>sive universales, in propositionibus vero de futuro saltim sin<lb ed="#SV"/>gularibus 
-            non sic, nam data ista propositione <name ref="#Sortes">sortes</name> 
-            <lb ed="#SV"/>erit <name ref="#Sortes">sortes</name> non est in Rerum natura quia nondum producitur, et 
-            <lb ed="#SV"/>per consequens non est ita sicut per illam significatur et hoc probat 
-            <lb ed="#SV"/><name ref="#Aristotle">philosophus</name> quod nulla propositio de praeterito est vera, quia quaecumque 
-            <lb ed="#SV"/>sit illa si esset vera oportet quod determinate haberet correspondentiam 
-            <lb ed="#SV"/>in Re et per consequens apparet quod homo non est contingens ad utrumque 
-            <lb ed="#SV"/>immo necessarius.</p>
-        
-          <p xml:id="l117-sapsis">secundo arguitur <name ref="#Aristotle">philosophus</name>, quia si aliqua propositio 
-            <lb ed="#SV"/>de futuro esset vera vel falsa, tunc ab aeterno fuisset 
-            <lb ed="#SV"/>vera si sit vera patet quia fuisset sicut ipsa significat 
-            <lb ed="#SV"/>igitur veritas eius fuit immutabilis et per consequens necesse 
-            <lb ed="#SV"/>fuit ita esse sicut ipsa significat.</p>
-        
-          <p xml:id="l117-soefne">secundo orationes et 
-            <lb ed="#SV"/>significata per eas se habent proportionaliter quia ab eo quod 
-            <lb ed="#SV"/>res est vel non est dicitur oratio vera vel falsa, sed significata 
-            <lb ed="#SV"/>sunt ad utrum licet ergo orationes nec sunt plus verae quam 
-            <lb ed="#SV"/>falsae nec econverso.</p>
-        </div>
-        <div>
-          <head xml:id="l117-Hresnes">Responsiones</head>
-          <div>
-            <head xml:id="l117-Hardrdi">Ad rationes de immutabilitate</head>
-        
-            <p xml:id="l117-airpsc">Ad istas rationes respondetur 
-              <lb ed="#SV"/>primo ad rationes de immutabilitate. circa cuius solutionem 
-              <lb ed="#SV"/>dicuntur aliqua primo quod veritas non debet dici immutabilis 
-              <lb ed="#SV"/>quae est de futuro, licet ab aeterno veritas fuerit.</p> 
-            
-            <p xml:id="l117-sdqrie">secundo dicitur 
-              <lb ed="#SV"/>quod licet talis veritas fuerit ab aeterno veritas tamen potest 
-              <lb ed="#SV"/>transire de veritate in falsitatem paret Remotionem 
-              <lb ed="#SV"/>vel positionem Rei in esse, nam per remotionem futuro 
-              <lb ed="#SV"/>ipsa veritas desinit esse veritas in instanti positionis 
-              <lb ed="#SV"/>Rei in esse.</p> 
-            
-            <p xml:id="l117-tdqpsc">tertio dicitur quod ante positionem Rei in esse potest 
-              <lb ed="#SV"/>esse falsitas, patet quia in quolibet instanti ipsa potuit 
-              <lb ed="#SV"/>esse falsa, quia semper ita fuit ante instans productionis 
-              <lb ed="#SV"/>Rei in esse quod illud futurum non fore et sic tales 
-              <lb ed="#SV"/>propositiones sunt concedendae.</p> 
-            
-            <p xml:id="l117-potaff">prima omnis talis propositio ante 
-              <lb ed="#SV"/>instans positionis Rei in esse potuit esse falsa et tamen 
-              <lb ed="#SV"/>non est possibile quod fiat falsa in illo instanti ante, patet si sit 
-              <lb ed="#SV"/>falsa in illo instanti priori ab aeterno fuisset falsa.</p>
-        
-            <p xml:id="l117-sphief"><lb ed="#SV"/>secunda propositio haec est concedenda talis veritas non est 
-              <lb ed="#SV"/>falsa et potest esse falsa in quolibet instanti ante productionem 
-              <lb ed="#SV"/>Rei in esse et tamen non potest in aliquo instanti incipere 
-              <lb ed="#SV"/>esse falsa.</p>
-        
-            <p xml:id="l117-tphpfc">tertia propositio haec est concedenda talis propositio 
-              <cb ed="#SV" n="343vb"/><lb ed="#SV"/>potest esse vera et potest esse falsa in illo tempore ante instans 
-              <lb ed="#SV"/>productionis Rei in esse et tamen nec simul potest esse falsa 
-              <lb ed="#SV"/>nec successive in illo instanti licet bene in alio ubi 
-              <lb ed="#SV"/>notandum est quod illud consurgit praecise ex modo enun<lb ed="#SV"/>ciandi 
-              et non ex aliqua necessitate quae sit a parte Rei 
-              <lb ed="#SV"/>sed  praecise ex modo <sic>modo</sic> enunciandi quia conci<lb ed="#SV"/>pimus 
-              ab aeterno Ita erit quod futurum erit, et ista 
-              <lb ed="#SV"/>materia confert ad intellectum praesentis materiae quia impertinens 
-              <lb ed="#SV"/>est ad necessitare effectum quod aliqua veritas fuerit 
-              <lb ed="#SV"/>veritas ab aeterno et tamen potest non esse veritas sine sui 
-              <lb ed="#SV"/>mutatione et illud videtur bene mirabile et applicatur 
-              <lb ed="#SV"/>faciliter ad divinam praescientiam respectum futurorum contingentium. 
-              <lb ed="#SV"/>Et ad hoc intelligendum positum est exemplum si deus 
-              <lb ed="#SV"/>ad extra cognosceret per impossibile etc. Et etiam illud 
-              <lb ed="#SV"/>posset Resolvi ad modum enunciandi, nam deus continet 
-              <lb ed="#SV"/>evidenter omnem modum enunciandi, et 
-              <lb ed="#SV"/>ideo non est difficile eius praescientiam cum hiis quae contin<lb ed="#SV"/>genter 
-              producuntur faciliter concordare.</p>
+          <p xml:id="l117-qpnvvf">
+            Quinta propositio, 
+            negativa futurum contingens non esse determinate 
+            verum nihil confert ad concordiam divinae 
+            praescientiae cum futurorum contingentia, 
+            nam ad salvandum istam concordiam 
+            dixerunt aliqui quod propositiones 
+            de futuro contingenti non sunt vere nec falsae, 
+            et ista via nihil confert ad praesentem materiam. primo 
+            non negatur quin deus praevideat evidenter et 
+            iudicaverit quod antichristus erit vel non erit. unde 
+            contra istam positionem sit prima ratio et signetur 
+            haec propositio antichristus erit, 
+            nam ex descriptione propositionis 
+            atque cuilibet quod sequitur evidenter 
+            quod ipsa est vera vel falsa.
+          </p>
+          <p xml:id="l117-ssevsf">
+            Secundo, 
+            sequitur ex descriptione 
+            propositionis vere quod est vera 
+            quia significat aliqualiter fore qualiter erit, 
+            et hoc concludit propositionem veram, 
+            nam dato opposito propositio non esset vera, 
+            sed falsa.
+          </p>
+          <p xml:id="l117-tsqcui">
+            Tertio, 
+            sequitur quod ultimum iudicium fore non sit verum 
+            quia per hanc positionem nulla talis propositio esset vera, 
+            et per consequens iudicium futurum fore non est verum, 
+            et ex consequenti sequitur quod fides nos obligat 
+            ad assentiendum falso, vel quod non obligat nos 
+            ad credendum ultimum iudicium.
+          </p>
+          <p xml:id="l117-qqnrec">
+            Quarto, 
+            quia nullus deberet 
+            sperare beatitudinem futuram per merita sua. 
+            Nam secundum istam positionem, 
+            hoc non est verum, 
+            quia hoc est de futuro, 
+            et ex consequenti, 
+            sequitur quod 
+            non debemus timere poenam peccatorum 
+            nec credere resurgere 
+            quia ista sunt de futuro 
+            quae non sunt vera secundum istam positionem. 
+            Alios modos ponit 
+            <cit>
+              <ref xml:id="l117-Rd1e417">
+                <name ref="#Bradwardine">Bradouardin</name> 
+                in tertia parte 
+                <title ref="#CausaDei">Summae</title> suae, 
+                a duodecimo capitulo 
+                usque ad 27m inclusive
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            sed illi sunt de se reprobabiles 
+            ideo nihil de ipsis oportet dicere, 
+            unde aliqui dicunt 
+            quod nihil est futurum, 
+            et istam opinionem dicit esse 
+            <unclear>sophisticarum</unclear> 
+            quia dicunt illi si aliquid est futurum tunc 
+            illud est modo hoc est falsum, 
+            nam isti negant 
+            istam antichristus est futurus. 
+            Sed ista difficultas stat 
+            in terminis, 
+            ideo pro nunc studentibus relinquitur, 
+            etc.
+          </p>
+          <div xml:id="l117-Dd1e435">
+            <head xml:id="l117-Hobines">Obiectiones</head>
+            <p xml:id="l117-ctprps">
+              Circa tamen positionem negantem propositiones de 
+              futuro contingenti esse veras vel falsas, 
+              notandum est quod 
+              illa de illa opinione habent duas rationes pro se.
+            </p>
+            <p xml:id="l117-peqcnc">
+              Prima est quia si propositiones de futuro contingenti essent 
+              vere vel falsae, sequitur quod huiusmodi veritas vel 
+              falsitas esset immutabilis non signata 
+              veritate huiusmodi antichristus erit in toto tempore aeterno 
+              <pb ed="#SV" n="343va"/>
+              <cb ed="#SV" n="a"/>
+              ante instans productionis antichristi illa veritas fuit 
+              vera et in illo toto tempore non potuit esse falsa, nec 
+              potuit mutari de veritate in falsitatem igitur 
+              illa veritas est immutabilis et per consequens non contingens.
+            </p>
+            <p xml:id="l117-sreuin">
+              Secunda ratio est 
+              <cit>
+                <ref xml:id="l117-Rd1e454">
+                  <name ref="#Aristotle">Philosophi</name> 
+                  in I 
+                  <title ref="#Perihermenias">Peryarmenias</title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              dicentis quod in 
+              propositionibus de praesenti 
+              et in propositionibus de praeterito necesse est 
+              quod sic sit sicut per illas significatur 
+              sine illae sint <unclear>singulares</unclear> 
+              sive universales. 
+              In propositionibus vero de futuro saltim singularibus 
+              non sic, 
+              nam data ista propositione <name ref="#Sortes">Sortes</name> 
+              erit <name ref="#Sortes">Sortes</name> 
+              non est in rerum natura quia nondum producitur, 
+              et per consequens non est ita sicut per illam significatur, 
+              et hoc probat 
+              <name ref="#Aristotle">Philosophus</name> 
+              quod nulla propositio de praeterito est vera 
+              quia quaecumque sit illa, 
+              si esset vera, 
+              oportet quod determinate haberet correspondentiam in re, 
+              et per consequens apparet 
+              quod homo non est contingens ad utrumque immo necessarius.
+            </p>
+            <p xml:id="l117-sapsis">
+              Secundo, 
+              arguitur <name ref="#Aristotle">Philosophus</name> 
+              quia si aliqua propositio 
+              de futuro esset vera vel falsa, 
+              tunc ab aeterno fuisset 
+              vera si sit vera. 
+              Patet quia fuisset 
+              sicut ipsa significat 
+              igitur veritas eius fuit immutabilis, 
+              et per consequens necesse 
+              fuit ita esse sicut ipsa significat.
+            </p>
+            <p xml:id="l117-soefne">
+              Secundo, 
+              orationes et significata per eas se habent proportionaliter 
+              quia ab eo quod 
+              res est vel non est 
+              dicitur oratio vera vel falsa, 
+              sed significata sunt ad <unclear>utrum licet<!--utrumlibet--></unclear>, 
+              ergo orationes nec sunt plus verae 
+              quam falsae nec econverso.
+            </p>
           </div>
-          <div>
-            <head xml:id="l117-Haraara">Ad rationes aristotelis</head>
-            <p xml:id="l117-arapqp">Ad 
-              <lb ed="#SV"/>rationes <name ref="#Aristotle">aristotelis</name>, nam aliqui doctores dubitant 
-              <lb ed="#SV"/>an ipse fuerit illius opinionis, scilicet, quod de futuris contin<lb ed="#SV"/>gentibus 
-              non sint veritas nec falsitas, tamen <name ref="#Rimini">gregorius</name> 
-              <lb ed="#SV"/>et <name ref="#Scotus">scotus</name> dicunt quod non et bene, unde dicit <name ref="#Scotus">scotus</name> 
-              <lb ed="#SV"/>quod <name ref="#Aristotle">aristotles</name> intellexit quod magna est differentia 
-              <lb ed="#SV"/>inter propositiones de praesenti et de praeterito ex una parte 
-              <lb ed="#SV"/>et propositiones de futuro ex alia, nam propositiones de 
-              <lb ed="#SV"/>praesenti et de praeterito habent iam a parte Rei actum <unclear>causam[?]</unclear> 
-              <lb ed="#SV"/>sine verificationis positam in esse Realiter, et intelli<lb ed="#SV"/>git 
-              notabiliter maxime de illis de praeterito quia 
-              <lb ed="#SV"/>eo ipso quod res posita est in esse necesse causam suae 
-              <lb ed="#SV"/>verificationis fuisse positam determinate quia non est 
-              <lb ed="#SV"/>in potestate alicuius quin fuerit causa huiusmodi veritatis, 
-              <lb ed="#SV"/>nam <name ref="#Adam">adam</name> non potest non fuisse per quamcumque potentiam.</p>
-        
-            <p xml:id="l117-sdpnsp">Sed de propositionibus de praesenti tenendo viam quod omne quod 
-              <lb ed="#SV"/>est quando est necesse est esse, dicitur quod haec consequentia est bona 
-              <lb ed="#SV"/>igitur <c>a</c> est igitur necesse  <c>a</c> esse vel fuisse et per consequens 
-              <lb ed="#SV"/>propositiones de praesenti si sint vere habent causam suae veritatis 
-              <lb ed="#SV"/>in esse, sed de propositionibus de futuro non sic, nam licet ista 
-              <lb ed="#SV"/>sit vera antichristus erit, tamen absolute effectus potest 
-              <lb ed="#SV"/>non poni in esse, etiam aliqua creatura posset effectum 
-              <lb ed="#SV"/>futurum non ponere in esse quidquid tamen sit de hoc 
-              <lb ed="#SV"/>effectus erit ubi non erit, licet tamen causa verificationis 
-              <lb ed="#SV"/>propositionis de futuro quae est de terminis suppositionibus pro effectu pro<lb ed="#SV"/>ducendo 
-              nondum sit posita.</p>
-          
-            <p xml:id="l117-etaaev">Et tunc ad rationes <name ref="#Aristotle">aristotlis</name> 
-              <cb ed="#SV" n="344ra"/><lb ed="#SV"/>in forma dicitur quod si propositio de futuro contingenti esset 
-              <lb ed="#SV"/>determinate veritatis sic quod esset vera in futurum secludendo 
-              <lb ed="#SV"/>necessitatem ratio bene concluderet tamen dicitur quod futura contin<lb ed="#SV"/>gentia 
-              erunt, licet contingenter oportet tamen Respondere ad rationem 
-              <lb ed="#SV"/>dividendo quod sufficit quod propositio de futuro contingenti ad hoc 
-              <lb ed="#SV"/>quod sit vera quod ipsa habeat correspondenter suum modum 
-              <lb ed="#SV"/>enunciandi et non oportet quod causa suae veritatis 
-              <lb ed="#SV"/>sit Realiter posita in esse sed sufficit quod sit <unclear>positibilis[?]</unclear> 
-              <lb ed="#SV"/>in esse et quod ponatur et hoc sufficit ad eius veri<lb ed="#SV"/>ficationem.</p>
-        
-            <p xml:id="l117-asrsde">Ad secundam rationem negatur consequentia et de 
-              <lb ed="#SV"/>illa satis dictum est.</p>
-        
-            <p xml:id="l117-atqeas">Ad tertiam quia sicut a parte 
-              <lb ed="#SV"/>Rei ita est quod Res contingenter est igitur propositiones 
-              <lb ed="#SV"/>de terminis supponentibus pro talibus Rebus sunt contingentes 
-              <lb ed="#SV"/><unclear>conceditur[?]</unclear> nam sicut contingenter ponitur Res in esse ita 
-              <lb ed="#SV"/>contingenter propositiones sunt verae et tamen quidquid erit a parte 
-              <lb ed="#SV"/>Rei erit et determinatum est in mente divina, et 
-              <lb ed="#SV"/>ista distinctio de determinatione veritatis propositionis de 
-              <lb ed="#SV"/>futuro contingenti confert ad materiam praesentem nam 
-              <lb ed="#SV"/>homines aliquando decipiuntur considerando veritatem de 
-              <lb ed="#SV"/>futuro ac si veritas et causa veritatis lapsae erunt 
-              <lb ed="#SV"/>in praeteritum, et imaginatur in divina essentia iu<lb ed="#SV"/>dicium 
-              divinum esse lapsum in praeteritum et sic dece<lb ed="#SV"/>ptio 
-              provenit aliquando ex defectu locutae vel mala 
-              <lb ed="#SV"/>consideratione vel ex ambobus simul, et cetera.</p>
+          <div xml:id="l117-Dd1e495">
+            <head xml:id="l117-Hresnes">Responsiones</head>
+            <div xml:id="l117-Dd1e500">
+              <head xml:id="l117-Hardrdi">Ad rationes de immutabilitate</head>
+              <p xml:id="l117-airpsc">
+                Ad istas rationes respondetur 
+                primo ad rationes de immutabilitate. circa cuius solutionem 
+                dicuntur aliqua primo quod veritas non debet dici immutabilis 
+                quae est de futuro, licet ab aeterno veritas fuerit.
+              </p> 
+              <p xml:id="l117-sdqrie">
+                Secundo, 
+                dicitur 
+                quod licet talis veritas fuerit ab aeterno veritas tamen potest 
+                transire de veritate in falsitatem paret Remotionem 
+                vel positionem Rei in esse, nam per remotionem futuro 
+                ipsa veritas desinit esse veritas in instanti positionis 
+                Rei in esse.
+              </p> 
+              <p xml:id="l117-tdqpsc">
+                Tertio, 
+                dicitur quod ante positionem Rei in esse potest 
+                esse falsitas, patet quia in quolibet instanti ipsa potuit 
+                esse falsa, quia semper ita fuit ante instans productionis 
+                Rei in esse quod illud futurum non fore et sic tales 
+                propositiones sunt concedendae.
+              </p> 
+              <p xml:id="l117-potaff">
+                Prima omnis talis propositio ante 
+                instans positionis Rei in esse potuit esse falsa et tamen 
+                non est possibile quod fiat falsa in illo instanti ante, patet si sit 
+                falsa in illo instanti priori ab aeterno fuisset falsa.
+              </p>
+              <p xml:id="l117-sphief">
+                Secunda propositio, 
+                haec est concedenda talis veritas non est 
+                falsa et potest esse falsa in quolibet instanti 
+                ante productionem rei in esse, 
+                et tamen non potest in aliquo instanti incipere esse falsa.
+              </p>
+              <p xml:id="l117-tphpfc">
+                tertia propositio haec est concedenda talis propositio 
+                <cb ed="#SV" n="b"/><!--343vb-->
+                potest esse vera et potest esse falsa in illo tempore ante instans 
+                productionis Rei in esse et tamen nec simul potest esse falsa 
+                nec successive in illo instanti licet bene in alio ubi 
+                notandum est quod illud consurgit praecise ex modo enunciandi 
+                et non ex aliqua necessitate quae sit a parte Rei 
+                sed  praecise ex modo <sic>modo</sic> enunciandi quia concipimus 
+                ab aeterno Ita erit quod futurum erit, et ista 
+                materia confert ad intellectum praesentis materiae quia impertinens 
+                est ad necessitare effectum quod aliqua veritas fuerit 
+                veritas ab aeterno et tamen potest non esse veritas sine sui 
+                mutatione et illud videtur bene mirabile et applicatur 
+                faciliter ad divinam praescientiam respectum futurorum contingentium. 
+                Et ad hoc intelligendum positum est exemplum si deus 
+                ad extra cognosceret per impossibile etc. Et etiam illud 
+                posset Resolvi ad modum enunciandi, nam deus continet 
+                evidenter omnem modum enunciandi, et 
+                ideo non est difficile eius praescientiam cum hiis quae contingenter 
+                producuntur faciliter concordare.
+              </p>
+            </div>
+            <div xml:id="l117-Dd1e531">
+              <head xml:id="l117-Haraara">Ad rationes aristotelis</head>
+              <p xml:id="l117-arapqp">
+                Ad rationes <name ref="#Aristotle">Aristotelis</name>, 
+                nam aliqui doctores 
+                dubitant an ipse fuerit illius opinionis, 
+                scilicet 
+                quod de futuris contingentibus 
+                non sint veritas nec falsitas, 
+                tamen <name ref="#Rimini">Gregorius</name> 
+                et <name ref="#Scotus">Scotus</name> dicunt 
+                quod non et bene, unde dicit <name ref="#Scotus">Scotus</name> 
+                quod <name ref="#Aristotle">Aristotles</name> intellexit 
+                quod magna est differentia 
+                inter propositiones de praesenti 
+                et de praeterito ex una parte 
+                et propositiones de futuro ex alia, 
+                nam propositiones de 
+                praesenti et de praeterito habent iam a parte rei actum <unclear>causam</unclear> 
+                sine verificationis positam in esse realiter, 
+                et intelligit notabiliter maxime de illis de praeterito 
+                quia eo ipso quod res posita est in esse necesse causam suae 
+                verificationis fuisse positam determinate 
+                quia non est in potestate alicuius 
+                quin fuerit causa huiusmodi veritatis, 
+                nam <name ref="#Adam">Adam</name> non potest 
+                non fuisse per quamcumque potentiam.
+              </p>
+              <p xml:id="l117-sdpnsp">
+                Sed de propositionibus de praesenti, 
+                tenendo viam quod omne quod 
+                est quando est necesse est esse, 
+                dicitur quod haec consequentia est bona,
+                igitur <c>a</c> est, igitur necesse <c>a</c> esse vel fuisse, 
+                et per consequens 
+                propositiones de praesenti, 
+                si sint verae, 
+                habent causam suae veritatis in esse, 
+                sed de propositionibus de futuro non sic, 
+                nam licet ista sit vera, 
+                antichristus erit, 
+                tamen absolute effectus potest non poni in esse, 
+                etiam aliqua creatura posset effectum 
+                futurum non ponere in esse quidquid, 
+                tamen sit de hoc effectus erit ubi non erit, 
+                licet tamen causa verificationis 
+                propositionis de futuro 
+                quae est de terminis suppositionibus 
+                pro effectu producendo nondum sit posita.
+              </p>
+              <p xml:id="l117-etaaev">
+                Et tunc ad rationes <name ref="#Aristotle">Aristotelis</name> 
+                <pb ed="#SV" n="344-r"/>
+                <cb ed="#SV" n="a"/>
+                in forma dicitur quod si propositio de futuro contingenti esset 
+                determinate veritatis sic quod esset vera in futurum secludendo 
+                necessitatem ratio bene concluderet tamen dicitur quod futura contingentia 
+                erunt, licet contingenter oportet tamen Respondere ad rationem 
+                dividendo quod sufficit quod propositio de futuro contingenti ad hoc 
+                quod sit vera quod ipsa habeat correspondenter suum modum 
+                enunciandi et non oportet quod causa suae veritatis 
+                sit Realiter posita in esse sed sufficit quod sit <unclear>positibilis[?]</unclear> 
+                in esse et quod ponatur et hoc sufficit ad eius verificationem.
+              </p>
+              <p xml:id="l117-asrsde">
+                <cit>
+                  <ref xml:id="l117-Rd1e587">Ad secundam rationem</ref>
+                  <bibl>XXX</bibl>
+                </cit>, 
+                negatur consequentia et de 
+                illa satis dictum est.
+              </p>
+              <p xml:id="l117-atqeas">
+                <cit>
+                  <ref xml:id="l117-Rd1e600">Ad tertiam</ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                quia sicut a parte 
+                Rei ita est quod res contingenter est igitur propositiones 
+                de terminis supponentibus pro talibus rebus sunt contingentes 
+                <unclear>conceditur</unclear>, 
+                nam sicut contingenter ponitur res in esse, 
+                ita contingenter propositiones sunt verae, 
+                et tamen quidquid erit a parte 
+                rei erit et determinatum est in mente divina, 
+                et ista distinctio de determinatione veritatis propositionis de 
+                futuro contingenti confert ad materiam praesentem, 
+                nam homines aliquando decipiuntur considerando veritatem de futuro, 
+                ac si veritas et causa veritatis lapsae erunt in praeteritum, 
+                et imaginatur in divina essentia iudicium 
+                divinum esse lapsum in praeteritum, 
+                et sic deceptio provenit 
+                aliquando ex defectu locutae vel mala 
+                consideratione vel ex ambobus simul, 
+                et cetera.
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </body>
