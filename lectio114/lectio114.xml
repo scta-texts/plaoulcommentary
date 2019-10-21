@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,434 +7,586 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 114, de Libertate</title>
           <date when="2013-03-13">March 13, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-13">March 13, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
           <witness xml:id="R" n="reims">Reims</witness>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-13" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="337-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio114">
       <head xml:id="l114-Hldlldl">Lectio 114, de Libertate</head>
         <div>
           <head xml:id="l114-Hpbdbdc">Propositiones Bradwardini de contingentibus</head>
-       <p xml:id="l114-arappp"><lb ed="#SV"/><hi rend="dropCapTwoLines">A</hi>ntequam Respondeatur ad rationes praedictas sciendum 
-         <lb ed="#SV"/>est quod <seg ana="#Bradwardine">praedictus doctor</seg> capitulo quarto tertiae partis <title ref="#CausaDei">summae</title> 
-         <lb ed="#SV"/>suae describit contingens ad utrumlibet quod est actus agen<lb ed="#SV"/>di 
-         libere per se et primo quo posito cum omnibus dispositioni<lb ed="#SV"/>bus 
-         naturaliter primus non necessario sequitur ipsum produci sed 
-         <lb ed="#SV"/>utralibet partium poterit stare aequaliter et in alio capitulo quinto se<lb ed="#SV"/>quenti 
-         ponit propositiones plures.</p>
-        
-        <p xml:id="l114-peqcmq">Prima est quod propositiones 
-          <lb ed="#SV"/>de contingenti ad utrumlibet aequaliter convertuntur in oppositam qualitatem.</p>
-        
-        <p xml:id="l114-spasec">secunda propositio aliqua consequentia est bona quae non est 
-          <lb ed="#SV"/>necessaria simpliciter nec ut nunc, sed est contingens.</p> 
-        
-        <p xml:id="l114-tacaae">tertia 
-          <lb ed="#SV"/>aliqua causa indeterminata ad agendum agit aliquem effectum.</p>
-        
-        <p xml:id="l114-qoellc">quarta omnis et solus actus liber libertatem contradictionis est 
-          <lb ed="#SV"/>contingens aequaliter</p>
-    
-        <p xml:id="l114-qnellc">quinta omne et solum contingens est actus 
-          <lb ed="#SV"/>liber libertate contradictionis.</p>
-        
-        <p xml:id="l114-scannr">sexta contingentia ad utrumlibet 
-          <lb ed="#SV"/>et necessitas non Repugnat.</p>
-        
-        <p xml:id="l114-scdprp">septima contingentia dicitur 
-          <lb ed="#SV"/>proprie respectu praesentis.</p>
-        
-        <p xml:id="l114-oldprp">octava libertas dicitur proprie respectu praesentis.</p>
-        
-        <p xml:id="l114-nacrci">nona nullus actus creaturae dicitur simpliciter esse contingens 
-          <lb ed="#SV"/>aequaliter sed tantum in determinato genere, puta respectu causarum 
-          inferiorum.</p>
-        
-        <p xml:id="l114-dnarcs">decima nullus actus creaturae est liber simpliciter 
-          <lb ed="#SV"/>libertate contradictionis sed secundum quid, scilicet, respectu causarum secundarum.</p>
-        
-          <p xml:id="l114-usacea"><lb ed="#SV"/>undecima solus actus voluntatis divinae ad extra est simpliciter 
-            <lb ed="#SV"/>ad extra contingens et aequaliter.</p>
-        
-        <p xml:id="l114-dsallc">duodecima solus actus divinae 
-          <lb ed="#SV"/>voluntatis  est simpliciter liber liberate contradictio<lb ed="#SV"/>nis.</p>
-        
-          <p xml:id="l114-tdpivd">tres decima propositio prima et summa libertas contradictionis simul<lb ed="#SV"/>que 
-            contingentia ad utrumlibet est in voluntate divina.</p>
+          <p xml:id="l114-arappp">
+            Antequam respondeatur ad rationes praedictas sciendum 
+            est quod 
+            <ref>
+              praedictus doctor capitulo quarto tertiae partis 
+              <title ref="#CausaDei">summae</title>
+            </ref> 
+            suae describit contingens ad utrumlibet quod est actus agendi 
+            libere per se et primo quo posito cum omnibus dispositionibus 
+            naturaliter primus non necessario sequitur ipsum produci sed 
+            utralibet partium poterit stare aequaliter 
+            et in alio capitulo quinto sequenti 
+            ponit propositiones plures.
+          </p>
+          <p xml:id="l114-peqcmq">
+            Prima est quod propositiones 
+            de contingenti ad utrumlibet aequaliter 
+            convertuntur in oppositam qualitatem.
+          </p>
+          <p xml:id="l114-spasec">
+            Secunda propositio aliqua consequentia est bona quae non est 
+            necessaria simpliciter nec ut nunc, 
+            sed est contingens.
+          </p>
+          <p xml:id="l114-tacaae">
+            Tertia aliqua causa indeterminata 
+            ad agendum agit aliquem effectum.
+          </p>
+          <p xml:id="l114-qoellc">
+            Quarta omnis et solus actus liber 
+            libertatem contradictionis est 
+            contingens aequaliter
+          </p>
+          <p xml:id="l114-qnellc">
+            Quinta omne et solum contingens est actus 
+            liber libertate contradictionis.
+          </p>
+          <p xml:id="l114-scannr">
+            Sexta contingentia ad utrumlibet 
+            et necessitas non repugnat.
+          </p>
+          <p xml:id="l114-scdprp">
+            Septima contingentia dicitur 
+            proprie respectu praesentis.
+          </p>
+          <p xml:id="l114-oldprp">
+            Octava libertas dicitur proprie respectu praesentis.
+          </p>
+          <p xml:id="l114-nacrci">
+            Nona nullus actus creaturae dicitur simpliciter esse contingens 
+            aequaliter sed tantum in determinato genere, 
+            puta respectu causarum inferiorum.
+          </p>
+          <p xml:id="l114-dnarcs">
+            Decima nullus actus creaturae est liber simpliciter 
+            libertate contradictionis sed secundum quid, 
+            scilicet respectu causarum secundarum.
+          </p>
+          <p xml:id="l114-usacea">
+            Undecima solus actus voluntatis divinae ad extra est simpliciter 
+            ad extra contingens et aequaliter.
+          </p>
+          <p xml:id="l114-dsallc">
+            Duodecima solus actus divinae 
+            voluntatis est simpliciter liber liberate contradictionis.
+          </p>
+          <p xml:id="l114-tdpivd">
+            Tres decima propositio prima 
+            et summa libertas contradictionis simulque 
+            contingentia ad utrumlibet est in voluntate divina.
+          </p>
         </div>
         <div>
           <head xml:id="l114-Hrobrob">Resolutio opinionis Bradwardini</head>
-      
-          <p xml:id="l114-ipsrsp"><lb ed="#SV"/>Istae propositiones sunt valde mirabiles, quia nunc videtur 
-            <lb ed="#SV"/>concedere contingentiam, nunc negare, et ideo oportet re<lb ed="#SV"/>solvere 
-            suam positionem.</p> 
-          
-          <p xml:id="l114-resevt">Resolutio eius stat in hoc 
-            <lb ed="#SV"/>primo videtur dicere quod qualitercumque deus ab aeterno dispo<lb ed="#SV"/>suit 
-            taliter erit, et quantum ad hoc ipse communicat 
-            <lb ed="#SV"/>cum fide catholica et veritate theologica.</p>
-        
-        <p xml:id="l114-svdane">secundo videtur dicere 
-          <lb ed="#SV"/>quod non poterit aliter esse vel non poterit non esse quocumque 
-          <lb ed="#SV"/>sit provisum, immo necesse et fore, et quantum ad istam 
-          <lb ed="#SV"/>partem ipse ponit haeresim quod non oportet quod si deus ordinavit 
-          <lb ed="#SV"/>antichristum fore quod ita erit necessario et inevitabiliter 
-          <cb ed="#SV" n="338ra"/><lb ed="#SV"/>nam credit illam consequentiam esse bonam deus vult antichristum 
-          <lb ed="#SV"/>fore igitur antichristus necessario erit.</p>
-        
-          <p xml:id="l114-tvdvqa">tertio vocat divinam volun<lb ed="#SV"/>tatem 
-            liberam quia agit volendo quidquid agit.</p>
-        
-          <p xml:id="l114-qiqssc">quarto inten<lb ed="#SV"/>dit 
-            quod quantum est ex parte Rerum illae possunt contingenter et 
-            <lb ed="#SV"/>ad utrumlibet disponi, unde <seg>et<desc>appears added/squeezed inline</desc></seg> lapis ad utrumlibet ut quiescat 
-            <lb ed="#SV"/>vel moveatur a potentia motiva ita dicit ipse et actus nostri sunt 
-            <lb ed="#SV"/>indifferentes et Res obiective quantum est de se sunt contingentes.</p>
-        
-          <p xml:id="l114-qpqvna"><lb ed="#SV"/>quinto ponit quod voluntas humana quantum est de se habet libertatem 
-            <lb ed="#SV"/>contradictionis, ita quod positis omnibus causis Requisitis ad 
-            <lb ed="#SV"/>actus voluntatis productionem voluntas quantum est de se 
-            <lb ed="#SV"/>haberet naturalem facultatem exeundi in oppositum. Ita 
-            <lb ed="#SV"/>quod illa est intrinsece libera libertate contradictionis quantum est 
-            <lb ed="#SV"/>de se et maxime positis causis inferioribus praeter primam 
-            <lb ed="#SV"/>nam signata tota multitudine causarum secundarum Requisitarum 
-            <lb ed="#SV"/>ad actus voluntatis productionem voluntatis humana adhuc 
-            <lb ed="#SV"/>posset conformiter agere vel non agere.</p>
-        
-        <p xml:id="l114-sdqden">sextum dictum 
-          <lb ed="#SV"/>quod istis non obstantibus voluntas in omni suo actu 
-          <lb ed="#SV"/>necessitatur non quid a causis secundis non quin sit libera 
-          <lb ed="#SV"/>intrinsece et non quin effectus sint contingentes, sed 
-          <lb ed="#SV"/>aliunde accidit necessitas, scilicet, ex parte praeventionis 
-          <lb ed="#SV"/>primae causae quae non permittit voluntatem humanam ad utrumlibet flecti seu exequi, et eam limitant 
-          <lb ed="#SV"/>ad agendum determinant et necessitant.</p>
-        
-        <p xml:id="l114-sdqefv">septimum dictum quod 
-          <lb ed="#SV"/>eius libertas salvatur sufficienter quia intrinsece est libera 
-          <lb ed="#SV"/>nec potest necessitare a causis secundis. tertio dicitur libera ex eo 
-          <lb ed="#SV"/>quod numquam agit nisi volens ita quod potentia est libera 
-          <lb ed="#SV"/>quae facit quidquid vult et numquam facit quod non 
-          <lb ed="#SV"/>vult, nam primi actus voluntatis sunt volitiones, ideo 
-          <lb ed="#SV"/>vocatur libera quia volendo agit, et ex consequenti opera<lb ed="#SV"/>tiones 
-          voluntatis sunt in eius potestate quia eas 
-          <lb ed="#SV"/>facit volens.</p>
-        
-        <p xml:id="l114-cpqvba">Consequenter ponit quod libertas et necessitas 
-          <lb ed="#SV"/>non Repugnant quia operatio voluntatis est necessaria 
-          <lb ed="#SV"/>necessitate primae causae concursus et tamen ipsa est libera, 
-          <lb ed="#SV"/>quia sic agendo voluntas facit quod vult quia qui fa<lb ed="#SV"/>cit 
-          <c>a</c> quando vult facere <c>a</c> videtur quod <c>a</c> sit in 
-          <lb ed="#SV"/>sua potestate, et in ista positione sunt meritum et 
-          <lb ed="#SV"/>demeritum nam voluntas male agens vult male 
-          <lb ed="#SV"/>agere licet necessitata et bene agens vult bene agere.</p>
-        
-          <p xml:id="l114-epscsv"><lb ed="#SV"/>Exemplum ponit sic: <name ref="#Sortes">sortes</name> qui vadat ad ecclesiam 
-            <lb ed="#SV"/>et velit dare <unclear>elemosinam[?]</unclear>, deinde superve<lb ed="#SV"/>niat 
-            virtus ipsum necessitans ad hoc nihilominus <name ref="#Sortes">sortes</name> 
-            <lb ed="#SV"/>aeque sponte et libere exequetur suum actum et 
-            veque merebitur, ergo necessitatio quae non est coactio 
-            <lb ed="#SV"/>nec violentia non Reddit voluntatem invictam. 
-            <lb ed="#SV"/>Ideo tollit meritum nec excusat culpam. unde 
-            <cb ed="#SV" n="338rb"/><lb ed="#SV"/> unde si <name ref="#Sortes">sortes</name> velit occidere 
-            <lb ed="#SV"/><name ref="#Plato">platonem</name> veniat causa necessitans huiusmodi vo<lb ed="#SV"/>litionem 
-            non Reperietur ibi coactio et igitur coactio non to<lb ed="#SV"/>lleret 
-            rationem demeriti, et sic omnes auctoritates scri<lb ed="#SV"/>pturae <name ref="#Augustine">augustini</name> et aliorum doctorum quas ipse 
-            <lb ed="#SV"/>inducit contra se, scilicet, quod homo non obligatur ad impossibile 
-            <lb ed="#SV"/>et huiusmodi auctoritates dicit quod intelligendae 
-            <lb ed="#SV"/>sunt quod voluntas numquam agit coacta seu vio<lb ed="#SV"/>lenta.</p> 
-          
-          <p xml:id="l114-vtqvvp">videtur tamen quod dicta sua non sint vera, 
-            <lb ed="#SV"/>quia per talem necessitatem quis excusaretur a culpa et 
-            <lb ed="#SV"/>tolleretur in eo meritum et sine dubio sophistice 
-            <lb ed="#SV"/>loquitur et subtiliter in hac materia, nam positio eius est 
-            <lb ed="#SV"/>haeretica et est bene mirandum de tam bono docto<lb ed="#SV"/>re, tamen dictum est mihi ab <seg>alio doctore de anglia</seg> 
-            <lb ed="#SV"/>quod cum iste esset in quadam disputatione semel con<lb ed="#SV"/>cessit 
+          <p xml:id="l114-ipsrsp">
+            Istae propositiones sunt valde mirabiles, 
+            quia nunc videtur 
+            concedere contingentiam, nunc negare, 
+            et ideo oportet resolvere 
+            suam positionem.
+          </p> 
+          <p xml:id="l114-resevt">
+            Resolutio eius stat in hoc 
+            primo videtur dicere 
+            quod qualitercumque deus 
+            ab aeterno disposuit taliter erit, 
+            et quantum ad hoc ipse communicat 
+            cum fide catholica et veritate theologica.
+          </p>
+          <p xml:id="l114-svdane">
+            Secundo, 
+            videtur dicere 
+            quod non poterit aliter esse 
+            vel non poterit non esse quocumque sit provisum, 
+            immo necesse et fore, 
+            et quantum ad istam 
+            partem ipse ponit haeresim quod non oportet 
+            quod si deus ordinavit antichristum fore 
+            quod ita erit necessario et inevitabiliter 
+            <pb ed="#SV" n="338-r"/>
+            <cb ed="#SV" n="a"/>
+            nam credit illam consequentiam esse bonam deus vult antichristum 
+            fore igitur antichristus necessario erit.
+          </p>
+          <p xml:id="l114-tvdvqa">
+            Tertio, 
+            vocat divinam voluntatem 
+            liberam quia agit volendo quidquid agit.
+          </p>
+          <p xml:id="l114-qiqssc">
+            Quarto, 
+            intendit quod quantum est ex parte rerum illae possunt contingenter 
+            et ad utrumlibet disponi, 
+            unde et lapis ad utrumlibet ut quiescat 
+            vel moveatur a potentia motiva ita dicit ipse 
+            et actus nostri sunt indifferentes et res obiective 
+            quantum est de se sunt contingentes.
+          </p>
+          <p xml:id="l114-qpqvna">
+            Quinto ponit quod voluntas humana quantum est de se habet libertatem contradictionis, 
+            ita quod positis omnibus causis requisitis ad 
+            actus voluntatis productionem voluntas quantum est de se 
+            haberet naturalem facultatem exeundi in oppositum. 
+            Ita quod illa est intrinsece libera libertate contradictionis quantum est 
+            de se et maxime positis causis inferioribus praeter primam 
+            nam signata tota multitudine causarum secundarum requisitarum 
+            ad actus voluntatis productionem voluntatis humana adhuc 
+            posset conformiter agere vel non agere.
+          </p>
+          <p xml:id="l114-sdqden">
+            Sextum dictum 
+            quod istis non obstantibus voluntas in omni suo actu 
+            necessitatur non quid a causis secundis non quin sit libera 
+            intrinsece et non quin effectus sint contingentes, 
+            sed aliunde accidit necessitas, scilicet, ex parte praeventionis 
+            primae causae quae non permittit voluntatem humanam 
+            ad utrumlibet flecti seu exequi, 
+            et eam limitant 
+            ad agendum determinant et necessitant.
+          </p>
+          <p xml:id="l114-sdqefv">
+            Septimum dictum quod 
+            eius libertas salvatur sufficienter quia intrinsece est libera 
+            nec potest necessitare a causis secundis. tertio dicitur libera ex eo 
+            quod numquam agit nisi volens ita quod potentia est libera 
+            quae facit quidquid vult et numquam facit quod non vult, 
+            nam primi actus voluntatis sunt volitiones, 
+            ideo vocatur libera quia volendo agit, 
+            et ex consequenti operationes 
+            voluntatis sunt in eius potestate quia eas 
+            facit volens.
+          </p>
+          <p xml:id="l114-cpqvba">
+            Consequenter ponit quod libertas et necessitas non repugnant 
+            quia operatio voluntatis est necessaria 
+            necessitate primae causae concursus et tamen ipsa est libera, 
+            quia sic agendo voluntas facit quod vult quia qui facit 
+            <c>a</c> quando vult facere <c>a</c> videtur quod <c>a</c> sit in sua potestate, 
+            et in ista positione sunt meritum et 
+            demeritum nam voluntas male agens vult male 
+            agere licet necessitata et bene agens vult bene agere.
+          </p>
+          <p xml:id="l114-epscsv">
+            Exemplum ponit sic: 
+            <name ref="#Sortes">Sortes</name> qui vadat ad ecclesiam 
+            et velit dare <unclear>elemosinam[?]</unclear>, 
+            deinde superveniat 
+            virtus ipsum necessitans ad hoc nihilominus <name ref="#Sortes">Sortes</name> 
+            aeque sponte et libere exequetur suum actum et veque merebitur, 
+            ergo necessitatio quae non est coactio 
+            nec violentia non Reddit voluntatem invictam. 
+            Ideo tollit meritum nec excusat culpam. 
+            Unde 
+            <cb ed="#SV" n="b"/><!--338rb--> 
+            unde si <name ref="#Sortes">Sortes</name> velit occidere 
+            <name ref="#Plato">Platonem</name> veniat causa necessitans huiusmodi volitionem 
+            non reperietur ibi coactio 
+            et igitur coactio non tolleret rationem demeriti, 
+            et sic omnes auctoritates scripturae <name ref="#Augustine">Augustini</name> 
+            et aliorum doctorum quas ipse 
+            inducit contra se, 
+            scilicet quod homo non obligatur ad impossibile 
+            et huiusmodi auctoritates dicit quod intelligendae 
+            sunt quod voluntas numquam agit coacta seu violenta.
+          </p> 
+          <p xml:id="l114-vtqvvp">
+            Videtur tamen quod dicta sua non sint vera, 
+            quia per talem necessitatem quis excusaretur a culpa et 
+            tolleretur in eo meritum et sine dubio sophistice 
+            loquitur et subtiliter in hac materia, nam positio eius est 
+            haeretica et est bene mirandum de tam bono doctore, 
+            tamen dictum est mihi ab <seg>alio doctore de anglia</seg> 
+            quod cum iste esset in quadam disputatione semel concessit 
             de necessitate evenire vi argumentorum 
-            <lb ed="#SV"/>sed per superbiam motus illam viam voluit prosequi.</p>
+            sed per superbiam motus illam viam voluit prosequi.
+          </p>
         </div>
         <div>
           <head xml:id="l114-Hacbacb">Argumenta contra Bradwardini</head>
-        
-          <p xml:id="l114-elsapl"><lb ed="#SV"/>Et licet suae rationes et responsiones sint sophisticae 
-            <lb ed="#SV"/>tamen videtur quodammodo illo coloratae, sed non habent fun<lb ed="#SV"/>damentum 
+          <p xml:id="l114-elsapl">
+            Et licet suae rationes et responsiones sint sophisticae 
+            tamen videtur quodammodo illo coloratae, 
+            sed non habent fundamentum 
             quia nullo modo posset evitare quin deus 
-            <lb ed="#SV"/>necessitet creaturam ad peccandum secundum dicta sua 
-            <lb ed="#SV"/>cum dicit quod necessitas antecedens non cogit voluntatem 
-            <lb ed="#SV"/>humanam quin suos actus producat libere.</p>
-        
-        <p xml:id="l114-scapna">Sed contra 
-          <lb ed="#SV"/>arguitur significando volitionem malam <name ref="#Sortes">sortis</name> nundum 
-          <lb ed="#SV"/>productam quia quaereretur utrum <name ref="#Sortes">sortes</name> qui cras eliciet 
-          <lb ed="#SV"/>illam malam volitionem poterit per quamcumque potentiam 
-          <lb ed="#SV"/>evitare productionem volitionis prohibitae, si non 
-          <lb ed="#SV"/>potest evitare, tunc inevitabiliter <name ref="#Sortes">sortes</name> peccabit 
-          <lb ed="#SV"/>et iniuste a deo obligatur quia ad impossibile sibi, et 
-          <lb ed="#SV"/>nedum iste tantum necessitatem posuit in voluntate 
-          <lb ed="#SV"/>humana, sed etiam in divina, nam posuit necessitatem 
-          <lb ed="#SV"/>in divina praeordinatione, quia non potest aliter esse per quam<lb ed="#SV"/>cumque 
-          potentiam quin, ita sit sicut deus praeordinavit 
-          <lb ed="#SV"/>si <name ref="#Sortes">sortes</name> potest evitare ergo sequitur contra eum, scilicet, quod deus po<lb ed="#SV"/>terit 
-          non concurrere cum <name ref="#Sortes">sorte</name> ad mali actus pro<lb ed="#SV"/>ductionem 
-          cuius oppositum ipse ponit dicens quod 
-          <lb ed="#SV"/>quidquid deus praescivit et ab aeterno ordinavit 
-          <lb ed="#SV"/>per nullam potentiam potest non fieri. Sed Retorquetur 
-          <lb ed="#SV"/>argumentum contra eum et signetur actus producendus 
-          <lb ed="#SV"/>quaeritur utrum <name ref="#Sortes">sortes</name> posset evitare illum actum 
-          <lb ed="#SV"/>vel non. si non, igitur obligatur ad impossibile. Si potest 
-          <lb ed="#SV"/>evitare, tunc non est ponenda necessitas antecedens.</p>
-        
-        <p xml:id="l114-sflvfa">secundo 
-          <lb ed="#SV"/>frustra loquitur de contingentia quia per eum nulla pe<lb ed="#SV"/>nitus 
-          est contingentia. Etiam frustra dicit quod potentia 
-          <lb ed="#SV"/>est intrinsece libera, quia numquam in actum exibit nec 
-          <lb ed="#SV"/>unquam exercuit, nec potest exercere et ideo suae 
-          <lb ed="#SV"/><sic>discipulines</sic> sunt sophisticae ne videantur fidei adversari.</p>
-        
-          <p xml:id="l114-eipade"><lb ed="#SV"/>Etiam ipse ponit quod causae secundae ab aeterno determinatae 
-            <cb ed="#SV" n="338va"/><lb ed="#SV"/>sunt igitur ex determinatione trahent necessitatem in effe<lb ed="#SV"/>ctum 
-            quod est falsum patet igitur quia Radix sua <unclear>difficultatis[?]</unclear> <seg>Reducitur<desc>smudged</desc></seg> ad duos errores.</p>
-        
-        <p xml:id="l114-peqmdi">Primus est 
-          <lb ed="#SV"/>quod ex divina providentia et ex divino proposito omnia 
-          <lb ed="#SV"/>futura evenient eodem modo quo sunt praeconcepta in mente 
-          <lb ed="#SV"/>divina et de ista materia dicetur inferius.</p>
-        
-        <p xml:id="l114-seeivh">secundus error 
-          <lb ed="#SV"/>est quod voluntas divina <unclear>necessitat[?]</unclear> voluntatem humanam 
-          <lb ed="#SV"/>in omni suo actu praeveniendo, et quantum ad hoc 
-          <lb ed="#SV"/>apparuit clare contraria veritas quia voluntas divina 
-          <lb ed="#SV"/>praevenit voluntatem humanam ratione nobilitatis et aliorum 
-          <lb ed="#SV"/>modorum prius tactorum non tamen praevenit durative nec 
-          <lb ed="#SV"/>successive <unclear>quaque[?]</unclear>. Ista tamen positio non indiget re<lb ed="#SV"/>probatione 
-          quia maxime est contra fidem, nam philosophi 
-          <lb ed="#SV"/>voluerunt incidere in illum errorem nam <name ref="#Cicero">tulius</name> 
-          <lb ed="#SV"/>maluit negare providenciam divinam quam libertatem 
-          <lb ed="#SV"/>in voluntate humana.</p>
+            necessitet creaturam ad peccandum secundum dicta sua 
+            cum dicit quod necessitas antecedens non cogit voluntatem 
+            humanam quin suos actus producat libere.
+          </p>
+          <p xml:id="l114-scapna">
+            Sed contra 
+            arguitur significando volitionem malam <name ref="#Sortes">Sortis</name> nundum 
+            productam quia quaereretur utrum <name ref="#Sortes">Sortes</name> 
+            qui cras eliciet illam malam volitionem poterit 
+            per quamcumque potentiam 
+            evitare productionem volitionis prohibitae, 
+            si non potest evitare, 
+            tunc inevitabiliter <name ref="#Sortes">sortes</name> peccabit 
+            et iniuste a deo obligatur quia ad impossibile sibi, 
+            et nedum iste tantum necessitatem posuit in voluntate 
+            humana, sed etiam in divina, 
+            nam posuit necessitatem in divina praeordinatione 
+            quia non potest aliter esse per quamcumque potentiam quin, 
+            ita sit sicut deus praeordinavit 
+            si <name ref="#Sortes">sortes</name> potest evitare ergo sequitur contra eum, 
+            scilicet quod deus poterit 
+            non concurrere cum <name ref="#Sortes">Sorte</name> 
+            ad mali actus productionem 
+            cuius oppositum ipse ponit dicens quod 
+            quidquid deus praescivit et ab aeterno ordinavit 
+            per nullam potentiam potest non fieri. 
+            Sed retorquetur argumentum contra eum 
+            et signetur actus producendus 
+            quaeritur utrum <name ref="#Sortes">sortes</name> posset evitare illum actum 
+            vel non. si non, igitur obligatur ad impossibile. 
+            Si potest evitare, 
+            tunc non est ponenda necessitas antecedens.
+          </p>
+          <p xml:id="l114-sflvfa">
+            Secundo 
+            frustra loquitur de contingentia 
+            quia per eum nulla penitus 
+            est contingentia. 
+            Etiam frustra dicit quod potentia 
+            est intrinsece libera 
+            quia numquam in actum exibit nec 
+            unquam exercuit, 
+            nec potest exercere et ideo suae 
+            <sic>discipulines</sic> sunt sophisticae 
+            ne videantur fidei adversari.
+          </p>
+          <p xml:id="l114-eipade">
+            Etiam ipse ponit quod causae secundae ab aeterno determinatae 
+            <pb ed="#SV" n="338-v"/>
+            <cb ed="#SV" n="a"/>
+            sunt igitur ex determinatione trahent necessitatem in effectum, 
+            quod est falsum. 
+            Patet igitur 
+            quia radix sua difficultatis reducitur ad duos errores.
+          </p>
+          <p xml:id="l114-peqmdi">
+            Primus est 
+            quod ex divina providentia et ex divino proposito omnia 
+            futura evenient eodem modo quo sunt praeconcepta in mente 
+            divina et de ista materia dicetur inferius.
+          </p>
+          <p xml:id="l114-seeivh">
+            Secundus error 
+            est quod voluntas divina <unclear>necessitat</unclear> voluntatem humanam 
+            in omni suo actu praeveniendo, et quantum ad hoc 
+            apparuit clare contraria veritas quia voluntas divina 
+            praevenit voluntatem humanam ratione nobilitatis et aliorum 
+            modorum prius tactorum non tamen praevenit durative nec 
+            successive <unclear>quaque</unclear>. 
+            Ista tamen positio non indiget reprobatione 
+            quia maxime est contra fidem, nam philosophi 
+            voluerunt incidere in illum errorem nam <name ref="#Cicero">tulius</name> 
+            maluit negare providenciam divinam quam libertatem 
+            in voluntate humana.
+          </p>
         </div>
         <div>
           <head xml:id="l114-Hrararb">Responsiones ad rationes Bradwardini</head>
-        <div>
-          <head xml:id="l114-Hapmapm">Ad primam</head>
-          <p xml:id="l114-arivbd">Ad rationes igitur Respondendum est 
-            <lb ed="#SV"/>primo iste videtur se fulcire quia nisi opinio sua esset 
-            <lb ed="#SV"/>vera tunc Rediret error <name ref="#Pelagius">pellagii</name>, nam ut dicit 
-            <lb ed="#SV"/>haec esset attribuere voluntati creatae concursus divinae 
-            <lb ed="#SV"/>voluntatis et libertatem et potestatem dei attribuere 
-            <lb ed="#SV"/>pure creaturae et negare subiectionem debitam 
-            <lb ed="#SV"/>creaturae ad creaturam quod non videtur bene dictum.</p> 
-        
-          <p xml:id="l114-hdaipd"><lb ed="#SV"/>hic dicuntur aliqua. primo quod <name ref="#Pelagius">pellagius</name> et <name ref="#Augustine">augustinus</name> 
-            <lb ed="#SV"/>contendunt de praeventione divina per gratiam et 
-            <lb ed="#SV"/>per dona gratuita et non de praeventione primae 
-            <lb ed="#SV"/>causae respectu causarum secundarum. De qua quid praeven<lb ed="#SV"/>tione 
-            loquitur potissime iste doctor et non de 
-            <lb ed="#SV"/>gratuita, Ex quo clare apparet quod ratio non est 
-            <lb ed="#SV"/>ad propositum cum <name ref="#Pelagius">pellagius</name> negaret praeventionem 
-            <lb ed="#SV"/>gratuitam.</p>
-          
-          <p xml:id="l114-sdqipd">secundo dicitur quod voluntas humana circa prae<lb ed="#SV"/>ventionem 
-            non specialiter praeventa sed generali modo 
-            <lb ed="#SV"/>non sufficit in actum dilectionis dei super omnia 
-            <lb ed="#SV"/>ista probata est in prima distinctione.</p>
-        
-          <p xml:id="l114-tdqass">tertio dicitur quod vo<lb ed="#SV"/>luntas 
-            informata caritate sive specialis spiritus sancti vi<lb ed="#SV"/>vificatoine 
-            <lb ed="#SV"/>non sufficit in actum dilectionis 
-            <lb ed="#SV"/>dei super omnia, nam ut dictum est caritas non 
-            <lb ed="#SV"/>exit plenarie in actum nisi ducta et praeventa 
-            <lb ed="#SV"/>a spiritu sancto.</p>
-        
-        <p xml:id="l114-qdqdso">quarto dicitur quod voluntas informata 
-          <lb ed="#SV"/>caritate et vivificata spiritus sancti assistentia suffi<lb ed="#SV"/>ceret 
-          in actus meritorios et diligere deum super 
-          <lb ed="#SV"/>omnia.</p>
-        
-        <p xml:id="l114-qdqmpd">quinto dicitur quod cum istis adiutoriis positis 
-          <lb ed="#SV"/>voluntas sufficeret naturaliter in actum exire qui 
-          <lb ed="#SV"/>est meritorius nec hoc faciet errori <name ref="#Pelagius">pellagii</name> 
-          <lb ed="#SV"/>quia voluntas humana non ob hoc arguitur 
-          <lb ed="#SV"/>esse est sua potentia naturali potentia elevativa ut 
-          <lb ed="#SV"/>non est inconveniens activitatis ut duo levet 
-          <lb ed="#SV"/>gradus mille Iuncta tamen per aliam potentiam ita 
-          <lb ed="#SV"/>quod voluntas creata iuncta caritate et spiritus sancti 
-          <lb ed="#SV"/>assistentia sufficeret in actum meritorium et ex 
-          <lb ed="#SV"/>hoc arguitur quod specialis dei praeventio per caritatem 
-          <cb ed="#SV" n="338vb"/><lb ed="#SV"/>et assistentiam spiritus sancti specialem auget voluntas liber<lb ed="#SV"/>tatem 
-          quantum ad executionem. patet quia stantibus huius<lb ed="#SV"/>modi 
-          adiutoriis voluntas habet in sua libertate pro<lb ed="#SV"/>ducere 
-          actum vel potestatem producendi actum quem 
-          <lb ed="#SV"/>non haberet cessantibus huiusmodi adiutoriis, ex 
-          <lb ed="#SV"/>quo sequitur quod praeventio naturalis auget libertatem 
-          <lb ed="#SV"/>voluntatis quantum ad executionem ita praeventio 
-          <lb ed="#SV"/>per dona gratuita elevat libertatem voluntatis ma<lb ed="#SV"/>gis 
-          quam esset sine tali praeventione, et sic tam praeven<lb ed="#SV"/>tio 
-          naturalis Requisita quam gratuita non impediunt 
-          <lb ed="#SV"/>executionem libertatis voluntatis, sed ipsa libertas 
-          <lb ed="#SV"/>praemovetur et augetur. Et ideo non est imaginandum 
-          <lb ed="#SV"/>quod creatura necessitetur et impossibilitetur sed totum 
-          <lb ed="#SV"/>contrarium de naturali dictum est. Sed de gratuita cla<lb ed="#SV"/>rum 
-          est quod voluntas elevatur ad hoc ut possit 
-          <lb ed="#SV"/>libere committere actum bonum vel malum immo posset 
-          <lb ed="#SV"/>poni quod intenditur executio libertatis secundum maiorem 
-          <lb ed="#SV"/>praeventionem divinam.</p>
-        </div>
-        <div>
-          <head xml:id="l114-HHasrasr">Ad secundum rationem</head>
-        <p xml:id="l114-asrvnp">Ad secundum rationem cum dicit 
-          <lb ed="#SV"/>deus vult a voluntate producere <c>p</c> actum, ergo vo<lb ed="#SV"/>luntas 
-          producet <c>p</c> antecedens non est in potestate 
-          <lb ed="#SV"/>voluntatis creatae ergo nec consequens. ista ratio est mo<lb ed="#SV"/>dici 
-          ponderis, quia difficultas est propter modum loquendi nam distinguendum est quid vocatur aliquid esse in potestate 
-          <lb ed="#SV"/>voluntatis creatae nam si aliquid dicatur in potestate 
-          <lb ed="#SV"/>voluntatis creatae sic quod voluntas creata habeant ple<lb ed="#SV"/>num 
-          divinum supra illud ad ordinandum de huius<lb ed="#SV"/>modi 
-          Re ad libitum et sic nihil est in potestate vo<lb ed="#SV"/>luntatis 
-          sed solus deus habet in potestate quamcumque creaturam 
-          <lb ed="#SV"/>de qua potuit facere ad libitum, si ante aliquid dicatur 
-          <lb ed="#SV"/>esse in potestate voluntatis humanae, quia in libertate 
-          <lb ed="#SV"/>eius est illud ponere vel non ponere.</p> 
-          
-          <p xml:id="l114-poavic">positis omnibus 
-            <lb ed="#SV"/>aliis causis requisitis, ita quod si omnis causae secundae 
-            <lb ed="#SV"/>ad hoc Requisitae applicarentur voluntas posset 
-            <lb ed="#SV"/>ponere illud vel non ponere et sic concedendum est quod 
-            <lb ed="#SV"/>actus voluntatis sunt in potestate voluntatis sed 
-            <lb ed="#SV"/>alio modo aliquid dicitur esse in potestate voluntatis quia 
-            <lb ed="#SV"/>ponitur ad positionem actus existentis in voluntate et non ponitur ad non positionem illius actus et isto modo vo<lb ed="#SV"/>luntas 
-            humana dicitur praeveniri a voluntate divina, vel 
-            <lb ed="#SV"/>deum velle voluntatem creatam agere dicitur esse in potestate 
-            <lb ed="#SV"/>voluntatis creatae qui actus est in potestate voluntatis 
-            <lb ed="#SV"/>qui si ponatur ponitur concursus divinus et ista distinctio est valde 
-            <lb ed="#SV"/>facilis et solvit difficultatem materiae, aliter potuit distin<lb ed="#SV"/>gui 
-            sic cum dicitur antecedens non est in potestate voluntatis 
-            <lb ed="#SV"/>dupliciter potest intelligi. uno modo quod sit in potesta<lb ed="#SV"/>te 
-            voluntatis auctoritative, alio modo illative. primo modo 
-            <lb ed="#SV"/>concedendum est. Sed illative dicitur quod antecedens est in potesta<lb ed="#SV"/>te 
-            voluntatis, et quia sic est in potestate voluntatis 
-            <cb ed="#SV" n="339ra"/><lb ed="#SV"/>sequitur quod voluntas ibi concurrit.</p>
-        
-        <p xml:id="l114-scaiic">Sed contra antecedens non est 
-          <lb ed="#SV"/>in potestate voluntatis auctoritative igitur nec consequens negatur 
-          <lb ed="#SV"/>consequentia quia consequens est in potestate voluntatis auctoritative 
-          <lb ed="#SV"/>quia voluntas est divina suorum actuum et habet potestatem 
-          <lb ed="#SV"/>non ponendi actum. Sed causa quare consequentia non valet 
-          <lb ed="#SV"/>est quia aliquid includitur in antecedente, scilicet, sub auctoritas quae tamen 
-          <lb ed="#SV"/>non includitur in consequente.</p>
-        </div>
+          <div>
+            <head xml:id="l114-Hapmapm">Ad primam</head>
+            <p xml:id="l114-arivbd">
+              Ad rationes igitur respondendum est 
+              primo iste videtur se fulcire quia nisi opinio sua esset 
+              vera tunc rediret error <name ref="#Pelagius">Pellagii</name>, 
+              nam ut dicit haec esset attribuere voluntati creatae concursus divinae 
+              voluntatis et libertatem et potestatem dei attribuere 
+              pure creaturae et negare subiectionem debitam 
+              creaturae ad creaturam quod non videtur bene dictum.
+            </p> 
+            <p xml:id="l114-hdaipd">
+              Hic dicuntur aliqua. 
+              Primo, 
+              quod <name ref="#Pelagius">Pellagius</name> 
+              et 
+              <name ref="#Augustine">Augustinus</name> 
+              contendunt de praeventione divina per gratiam et 
+              per dona gratuita et non de praeventione primae 
+              causae respectu causarum secundarum. 
+              De qua quid praeventione 
+              loquitur potissime iste doctor et non de gratuita. 
+              Ex quo clare apparet 
+              quod ratio non est 
+              ad propositum cum 
+              <name ref="#Pelagius">Pellagius</name> 
+              negaret praeventionem gratuitam.
+            </p>
+            <p xml:id="l114-sdqipd">
+              Secundo, 
+              dicitur quod voluntas humana circa praeventionem 
+              non specialiter praeventa sed generali modo 
+              non sufficit in actum dilectionis dei super omnia 
+              ista probata est in prima distinctione.
+            </p>
+            <p xml:id="l114-tdqass">
+              Tertio, 
+              dicitur quod voluntas 
+              informata caritate sive specialis spiritus sancti vivificatoine 
+              non sufficit in actum dilectionis 
+              dei super omnia, nam ut dictum est caritas non 
+              exit plenarie in actum nisi ducta et praeventa 
+              a spiritu sancto.
+            </p>
+            <p xml:id="l114-qdqdso">
+              Quarto, 
+              dicitur quod voluntas informata 
+              caritate et vivificata spiritus sancti assistentia sufficeret 
+              in actus meritorios et diligere deum super 
+              omnia.
+            </p>
+            <p xml:id="l114-qdqmpd">
+              Quinto, 
+              dicitur quod cum istis adiutoriis positis 
+              voluntas sufficeret naturaliter in actum exire qui 
+              est meritorius nec hoc faciet errori <name ref="#Pelagius">Pellagii</name> 
+              quia voluntas humana non ob hoc arguitur 
+              esse est sua potentia naturali potentia elevativa ut 
+              non est inconveniens activitatis ut duo levet 
+              gradus mille iuncta tamen per aliam potentiam ita 
+              quod voluntas creata iuncta caritate et spiritus sancti 
+              assistentia sufficeret in actum meritorium et ex 
+              hoc arguitur quod specialis dei praeventio per caritatem 
+              <cb ed="#SV" n="b"/><!--338vb-->
+              et assistentiam spiritus sancti specialem auget voluntas libertatem 
+              quantum ad executionem. 
+              Patet quia stantibus huiusmodi 
+              adiutoriis voluntas habet in sua libertate producere 
+              actum vel potestatem producendi actum quem 
+              non haberet cessantibus huiusmodi adiutoriis, 
+              ex quo sequitur quod praeventio naturalis auget libertatem 
+              voluntatis quantum ad executionem ita praeventio 
+              per dona gratuita elevat libertatem voluntatis magis 
+              quam esset sine tali praeventione, 
+              et sic tam praeventio 
+              naturalis requisita quam gratuita non impediunt 
+              executionem libertatis voluntatis, 
+              sed ipsa libertas praemovetur et augetur. 
+              Et ideo non est imaginandum 
+              quod creatura necessitetur et impossibilitetur sed totum 
+              contrarium de naturali dictum est. 
+              Sed de gratuita clarum est 
+              quod voluntas elevatur ad hoc 
+              ut possit libere committere actum bonum 
+              vel malum immo posset poni 
+              quod intenditur executio libertatis 
+              secundum maiorem praeventionem divinam.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l114-HHasrasr">Ad secundum rationem</head>
+            <p xml:id="l114-asrvnp">
+              Ad secundum rationem cum dicit 
+              deus vult a voluntate producere <c>p</c> actum, ergo voluntas 
+              producet <c>p</c> antecedens non est in potestate 
+              voluntatis creatae ergo nec consequens. ista ratio est modici 
+              ponderis, quia difficultas est propter modum loquendi 
+              nam distinguendum est quid vocatur aliquid esse in potestate 
+              voluntatis creatae nam si aliquid dicatur in potestate 
+              voluntatis creatae sic quod voluntas creata habeant plenum 
+              divinum supra illud ad ordinandum de huiusmodi 
+              Re ad libitum et sic nihil est in potestate voluntatis 
+              sed solus deus habet in potestate quamcumque creaturam 
+              de qua potuit facere ad libitum, si ante aliquid dicatur 
+              esse in potestate voluntatis humanae, quia in libertate 
+              eius est illud ponere vel non ponere.
+            </p> 
+            <p xml:id="l114-poavic">
+              positis omnibus 
+              aliis causis requisitis, 
+              ita quod si omnis causae secundae 
+              ad hoc requisitae applicarentur voluntas posset 
+              ponere illud vel non ponere, 
+              et sic concedendum est quod 
+              actus voluntatis sunt in potestate voluntatis, 
+              sed alio modo aliquid dicitur esse in potestate voluntatis 
+              quia ponitur ad positionem actus existentis in voluntate 
+              et non ponitur ad non positionem illius actus 
+              et isto modo voluntas humana dicitur praeveniri a voluntate divina, 
+              vel deum velle voluntatem creatam agere dicitur esse in potestate 
+              voluntatis creatae 
+              qui actus est in potestate voluntatis 
+              qui si ponatur ponitur concursus divinus et ista distinctio est valde 
+              facilis et solvit difficultatem materiae, 
+              aliter potuit distingui, 
+              sic cum dicitur 
+              antecedens non est in potestate voluntatis, 
+              dupliciter potest intelligi, 
+              uno modo quod sit in potestate 
+              voluntatis auctoritative, 
+              alio modo illative. 
+              Primo modo concedendum est, 
+              sed illative dicitur 
+              quod antecedens est in potestate voluntatis, 
+              et quia sic est in potestate voluntatis 
+              <pb ed="#SV" n="339-r"/>
+              <cb ed="#SV" n="a"/>
+              sequitur quod voluntas ibi concurrit.
+            </p>
+            <p xml:id="l114-scaiic">
+              Sed contra antecedens, 
+              non est in potestate voluntatis auctoritative, 
+              igitur nec consequens. 
+              Negatur consequentia 
+              quia consequens est in potestate voluntatis auctoritative 
+              quia voluntas est divina suorum actuum 
+              et habet potestatem non ponendi actum. 
+              Sed causa 
+              quare consequentia non valet 
+              est quia aliquid includitur in antecedente, 
+              scilicet sub auctoritas, 
+              quae tamen non includitur in consequente.
+            </p>
+          </div>
           <div>
             <head xml:id="l114-Hatratr">Ad tertiam rationem</head>
-        <p xml:id="l114-trnpin">tertia ratio nisi deus praeveniret 
-          <lb ed="#SV"/>voluntatem creatam sequitur quod voluntas posset facere deum 
-          <lb ed="#SV"/>periurum et mendacem ut arguebatur heri, hic 
-          <lb ed="#SV"/>dicitur quod si deus aliquid Revelaverit semper erit verum nec potest 
-          <lb ed="#SV"/>esse falsum et quando dicitur potest non sic evenire, igitur hoc 
-          <lb ed="#SV"/>potest esse falsum, immo est falsum negatur consequentia, et causa est 
-          <lb ed="#SV"/>quia Revelationes divinae, fides, et prophetiae notitiae 
-          <lb ed="#SV"/>beatificae sunt de ista latitudine quod quaelibet talis notitia 
-          <lb ed="#SV"/>sequitur in Repugnando conditionem intrinsecam  dei iudi<lb ed="#SV"/>cii, 
-          et sicut deus fallitur nec potest falli ad 
-          <lb ed="#SV"/>extra ita nec Revelatio potest esse falsa quia sequitur 
-          <lb ed="#SV"/>conformiter de natura sua partem veram et ista est 
-          <lb ed="#SV"/>mobilis perfectio infinitae nobilitatis.</p>
+            <p xml:id="l114-trnpin">
+              Tertia ratio nisi deus praeveniret 
+              voluntatem creatam sequitur quod voluntas posset facere deum 
+              periurum et mendacem ut arguebatur heri, hic 
+              dicitur quod si deus aliquid Revelaverit semper erit verum nec potest 
+              esse falsum et quando dicitur potest non sic evenire, igitur hoc 
+              potest esse falsum, immo est falsum negatur consequentia, et causa est 
+              quia Revelationes divinae, fides, et prophetiae notitiae 
+              beatificae sunt de ista latitudine quod quaelibet talis notitia 
+              sequitur in Repugnando conditionem intrinsecam  dei iudicii, 
+              et sicut deus fallitur nec potest falli ad 
+              extra ita nec Revelatio potest esse falsa quia sequitur 
+              conformiter de natura sua partem veram et ista est 
+              mobilis perfectio infinitae nobilitatis.
+            </p>
           </div>
           <div>
             <head xml:id="l114-Haqraqr">Ad quartam rationem</head>
-        <p xml:id="l114-qrqird">quarta ratio quaelibet 
-          <lb ed="#SV"/>potentia fortior potest debiliorem necessitare igitur divina vo<lb ed="#SV"/>luntas 
-          quae est in infinitum perfectior quam humana necessitabit 
-          <lb ed="#SV"/>voluntatem humanam ista ratio deficit.</p> 
-            
-            <p xml:id="l114-pqanaa">primo quia assu<lb ed="#SV"/>mit 
+            <p xml:id="l114-qrqird">
+              Quarta ratio quaelibet 
+              potentia fortior potest debiliorem necessitare igitur divina voluntas 
+              quae est in infinitum perfectior quam humana necessitabit 
+              voluntatem humanam ista ratio deficit.
+            </p>
+            <p xml:id="l114-pqanaa">
+              Primo quia assumit 
               unum falsum dividendo generatur quod quaelibet potentia fortior 
-              <lb ed="#SV"/>possit necessitare inferiorem ad agendum, nam ignis 
-              <lb ed="#SV"/>est fortior activitas quam aeque et tamen non posset 
-              <lb ed="#SV"/>eam necessitare ad agendum.</p>
-            
-        <p xml:id="l114-sdqcsn">secundo dicitur quod argumentum 
-          <lb ed="#SV"/>non est ad propositum, quia iste dicit de facto quod quaelibet 
-          <lb ed="#SV"/>voluntas creata semper necessitatur et tamen assumit utrum 
-          <lb ed="#SV"/>deus posset necessitare eam.</p>
-          
-        <p xml:id="l114-tdqqnn">tertio dicitur quod dato quod in 
-          <lb ed="#SV"/>quolibet actu divina praeventio necessitaret voluntatem 
-          <lb ed="#SV"/>creatam, dicitur tamen quod contingenter necessitaret, nam iste 
-          <lb ed="#SV"/>habet probare quod necessario necessitet.</p>
-        
-        <p xml:id="l114-qdqlvc">quarto dicitur quod de possibili 
-          <lb ed="#SV"/>implicat contradictionem causam prima necessitare volun<lb ed="#SV"/>tatem 
-          creatam respectu sui actus liberi concurrendo active 
-          <lb ed="#SV"/>per modum autem obiecti vel finis, si aliter necessitaret non 
-          <lb ed="#SV"/>est ad propositum, quia hic agitur de concursu activo 
-          <lb ed="#SV"/>quando aliqua conditio est intrinseca alicui naturae deus 
-          <lb ed="#SV"/>non potest illam tollere, sicut deus non potest facere quin 
-          <lb ed="#SV"/>homo esse Risibilis, nec posset facere quod asinus 
-          <lb ed="#SV"/>Responderet ita diceretur quod deum facere voluntatem 
-          <lb ed="#SV"/>agere naturaliter implicat contradictionem sicut si diceretur 
-          <lb ed="#SV"/>quod non intelligens intelligeret quod implicat, 
-          <lb ed="#SV"/>nam deus non posset facere naturam lapidis 
-          <lb ed="#SV"/>intelligere et sic nedum de facto sed eciam de possibili 
-          <lb ed="#SV"/>implicat contradictionem causam primam necessitare liber<lb ed="#SV"/>tatem 
-          voluntatis creatae.</p>
-        
-        <p xml:id="l114-qdqpen">quinto dicitur quod dato quod 
-          <lb ed="#SV"/>divina voluntas cum concurreret cum humana, nec posset 
-          <cb ed="#SV" n="339rb"/><lb ed="#SV"/>humana Resilire voluntati divinae nihilominus volun<lb ed="#SV"/>tas 
-          divina non posset eam necessitare.</p>
-        
-        <p xml:id="l114-sdqfob">sexto dicitur quod licet 
-          <lb ed="#SV"/>voluntas divina faceret voluntatem humanam necessitari, 
-          <lb ed="#SV"/>tunc ipsa non concurreret cum divina voluntate secundum causa<lb ed="#SV"/>litatem 
-          liberam, sed naturalem, unde eadem anima est naturaliter 
-          <lb ed="#SV"/>operativa et libere voluntas primos actus naturaliter 
-          <lb ed="#SV"/>operatur et alios libere modo non implicat quod causalitas 
-          <lb ed="#SV"/>quae concurreret ad actum naturalem concurreret ad actum 
-          <lb ed="#SV"/>liberum et ei applicaret, et ista est grata ima<lb ed="#SV"/>ginatio 
-          quae haberet forte locum in voluntate beatifica 
-          <lb ed="#SV"/>creaturae. Unde imaginandum est quod qui vellet sic 
-          <lb ed="#SV"/>imaginari quod causalitas naturalis haberet duos gradus 
-          <lb ed="#SV"/>unus est infimus quantum ad effectivos actus, et 
-          <lb ed="#SV"/>iste est infimus gradus secundum quem generantur primi mo<lb ed="#SV"/>tus 
-          in voluntate secundus gradus esset secundum supremam 
-          <lb ed="#SV"/>portionem secundum quod voluntas fertur in ultimum finem necessario, et sic activitas naturalis in supremo 
-          <lb ed="#SV"/>gradu nobilior quam sit  activitas libere contradictae, 
-          <lb ed="#SV"/>nam personae divinae ad intra prius agunt operationem 
-          <lb ed="#SV"/>naturalem et necessitate quam libere, nam pater primo producit 
-          <lb ed="#SV"/>verbum, deinde pater et verbum producunt spiritum sanctum 
-          <lb ed="#SV"/>et tandem deus ad extra producit libere modo activi<lb ed="#SV"/>tas 
-          productionis ad intra est nobilior quam productio 
-          <lb ed="#SV"/>ad extra. Et ita imaginandum est quod supremus 
-          <lb ed="#SV"/>gradus activitatis voluntatis creatae est nobilior quam 
-          <lb ed="#SV"/>activitas libera. Unde nihilominus valde bene staret 
-          <lb ed="#SV"/>nec esset inconveniens quod deus necessitaret creaturas in pa<lb ed="#SV"/>tria 
-          in fruitione obiecti beatifici.</p>
+              possit necessitare inferiorem ad agendum, nam ignis 
+              est fortior activitas quam aeque et tamen non posset 
+              eam necessitare ad agendum.
+            </p>
+            <p xml:id="l114-sdqcsn">
+              Secundo dicitur quod argumentum 
+              non est ad propositum, quia iste dicit de facto quod quaelibet 
+              voluntas creata semper necessitatur et tamen assumit utrum 
+              deus posset necessitare eam.
+            </p>
+            <p xml:id="l114-tdqqnn">
+              tertio dicitur quod dato quod in 
+              quolibet actu divina praeventio necessitaret voluntatem 
+              creatam, dicitur tamen quod contingenter necessitaret, nam iste 
+              habet probare quod necessario necessitet.
+            </p>
+            <p xml:id="l114-qdqlvc">
+              Quarto dicitur quod de possibili 
+              implicat contradictionem causam prima necessitare voluntatem 
+              creatam respectu sui actus liberi concurrendo active 
+              per modum autem obiecti vel finis, si aliter necessitaret non 
+              est ad propositum, quia hic agitur de concursu activo 
+              quando aliqua conditio est intrinseca alicui naturae deus 
+              non potest illam tollere, sicut deus non potest facere quin 
+              homo esse Risibilis, nec posset facere quod asinus 
+              Responderet ita diceretur quod deum facere voluntatem 
+              agere naturaliter implicat contradictionem sicut si diceretur 
+              quod non intelligens intelligeret quod implicat, 
+              nam deus non posset facere naturam lapidis 
+              intelligere et sic nedum de facto sed eciam de possibili 
+              implicat contradictionem causam primam necessitare libertatem 
+              voluntatis creatae.
+            </p>
+            <p xml:id="l114-qdqpen">
+              Quinto dicitur quod dato quod 
+              divina voluntas cum concurreret cum humana, nec posset 
+              <cb ed="#SV" n="b"/><!--339rb-->
+              humana resilire voluntati divinae nihilominus voluntas 
+              divina non posset eam necessitare.
+            </p>
+            <p xml:id="l114-sdqfob">
+              Sexto dicitur quod licet 
+              voluntas divina faceret voluntatem humanam necessitari, 
+              tunc ipsa non concurreret cum divina voluntate secundum causalitatem 
+              liberam, sed naturalem, unde eadem anima est naturaliter 
+              operativa et libere voluntas primos actus naturaliter 
+              operatur et alios libere modo non implicat quod causalitas 
+              quae concurreret ad actum naturalem concurreret ad actum 
+              liberum et ei applicaret, et ista est grata imaginatio 
+              quae haberet forte locum in voluntate beatifica 
+              creaturae. Unde imaginandum est quod qui vellet sic 
+              imaginari quod causalitas naturalis haberet duos gradus 
+              unus est infimus quantum ad effectivos actus, et 
+              iste est infimus gradus secundum quem generantur primi motus 
+              in voluntate secundus gradus esset secundum supremam 
+              portionem secundum quod voluntas fertur in ultimum finem necessario, 
+              et sic activitas naturalis in supremo 
+              gradu nobilior quam sit  activitas libere contradictae, 
+              nam personae divinae ad intra prius agunt operationem 
+              naturalem et necessitate quam libere, nam pater primo producit 
+              verbum, deinde pater et verbum producunt spiritum sanctum 
+              et tandem deus ad extra producit libere modo activitas 
+              productionis ad intra est nobilior quam productio 
+              ad extra. Et ita imaginandum est quod supremus 
+              gradus activitatis voluntatis creatae est nobilior quam 
+              activitas libera. Unde nihilominus valde bene staret 
+              nec esset inconveniens quod deus necessitaret creaturas in patria 
+              in fruitione obiecti beatifici.
+            </p>
           </div>
         </div>
       </div>

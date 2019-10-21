@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,361 +7,435 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 112, de Libertate</title>
           <date when="2013-03-12">March 12, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-12">March 12, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
-          <witness xml:id="V" n="vat">Vatican</witness>
           <witness xml:id="R" n="reims">Reims</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-13" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="337-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio112">
-      <head xml:id="l112-Hldlldl" subtype="title">Lectio 112, de Libertate</head>
-        <div>
+        <head xml:id="l112-Hldlldl">Lectio 112, de Libertate</head>
+        <div xml:id="l112-Dd1e109">
           <head xml:id="l112-Hdlvlvc">De libertate voluntatis creatae</head>
-          <p xml:id="l112-saaapn"><note type="marginalNote" place="marginLeft">2us articulus principalis</note>secundum argumentum alias factam faciebat 
-            <lb ed="#SV"/>mentionem de proventione divina respectu volun<lb ed="#SV"/>tatis 
+          <p xml:id="l112-saaapn">
+            Secundum argumentum alias factam faciebat 
+            mentionem de proventione divina respectu voluntatis 
             creatae ad suos effectus libere producendos, 
-            <lb ed="#SV"/>nam arguebatur sit deus vult concurrere cum vo<lb ed="#SV"/>luntate 
+            nam arguebatur sit deus vult concurrere cum voluntate 
             ad producendum <c>a</c> actum ergo voluntas 
-            <lb ed="#SV"/>producit <c>a</c> et antecedens non est in potestate voluntatis 
-            <lb ed="#SV"/>creatae, igitur nec consequens et per consequens non est in potestate 
-            <lb ed="#SV"/>voluntatis creatae quin producat <c>a</c>, igitur ad <c>a</c> pro<lb ed="#SV"/>ducendum 
-            necessitabitur.</p>
+            producit <c>a</c> et antecedens non est in potestate voluntatis 
+            creatae, igitur nec consequens et per consequens non est in potestate 
+            voluntatis creatae quin producat <c>a</c>, 
+            igitur ad <c>a</c> producendum 
+            necessitabitur.
+          </p>
         </div>
-          <div>
+        <div xml:id="l112-Dd1e130">
           <head xml:id="l112-Hprones">Propositiones</head>
-        <p xml:id="l112-pdpppp">Pro declaratione materiae 
-          <lb ed="#SV"/>praesentis sunt ponendae <del rend="expunctuated">duae</del> propositiones plures.</p> 
-        <div>
-          <head xml:id="l112-Hppo">Prima propositio: prioritas concursus primae causae non est aliquo modo durationis</head>
-        <p xml:id="l112-peiqvc">Prima 
-          <lb ed="#SV"/>est ista prioritas concursus primae causae respectu creatae 
-          <lb ed="#SV"/>voluntatis non est aliquo modo durationis. probatur nam aliter 
-          <lb ed="#SV"/>effectus esset productus et non concursu voluntatis 
-          <lb ed="#SV"/>creatae quod patet et signetur instans in quo divina vo<lb ed="#SV"/>luntas 
-          concurrit prius quam voluntas creata.</p>
-        
-        <p xml:id="l112-tiimnd">tunc in illo 
-          <lb ed="#SV"/>priori divina voluntas producit effectum quia pro se suffi<lb ed="#SV"/>ceret igitur voluntas creata non concurreret respectu illius actus 
-          <lb ed="#SV"/>et sic consequenter ipsa se haberet passive respectu actuum suorum 
-          <lb ed="#SV"/>et per consequens nihil mali ageret, nec mereretur nec de<lb ed="#SV"/>mereretur.</p>
-        
-      </div>
-      <div>
-        <head xml:id="l112-Hsptciv">Secunda propositio: talis prioritas concursus primae causae non necessario includit praeter effectum aliquid causarum in voluntate</head>
-        <p xml:id="l112-spenia">secunda propositio est haec, talis prioritas concursus 
-          <lb ed="#SV"/>primae causae non necessario includit praeter effectum aliquid 
-          <lb ed="#SV"/>causarum in voluntate patet nam si ad causandum effectum 
-          <lb ed="#SV"/>oporteret aliquid influere in voluntate pari ratione requireretur 
-          <lb ed="#SV"/>aliqua dispositio prima, et sic esset processus in infinitum igitur 
-          <lb ed="#SV"/>tenendum est quod deo concurrere cum voluntate ad actus pro<lb ed="#SV"/>ductionem 
-          nihil producit deus nisi ipsum actum.</p>
-      </div>
-            <div>
-              <head xml:id="l112-Htpotpo">Tertia propositio: respectu actus boni deus voluntatem primam et inclinat ad agendum</head>
-              <p xml:id="l112-tprrbo">Tertia 
-                <lb ed="#SV"/>propositio respectu actus boni deus voluntatem primam et incli<lb ed="#SV"/>nat 
-                ad agendum illud apparet nam ita est in iustificatione 
-                <lb ed="#SV"/>impii quod deus specialiter <unclear>primam[?]</unclear> voluntatem eius ut convertatur. 
-                <lb ed="#SV"/>Ideo <title ref="#ap">Apocalypsis</title> <num>III</num><note type="editorNote" subtype="citation" corresp="#l112-QBefsaop"><title>Apocalypsis</title> 3:20</note> dicit christus vel spiritus sanctus <quote xml:id="l112-QBefsaop" source="http://scta.info/resource/ap3_20">ego foris 
-                <lb ed="#SV"/>stans ad ostium pulso"</quote> ita quod deus peccatores pulsat 
-                <lb ed="#SV"/>ut convertantur et praeventi specialiter in iustificatione impii 
-                <lb ed="#SV"/>caritatem infudendo in actum bonum dirigendo et 
-                <lb ed="#SV"/>stante caritate specialiter movet ad actum meritorium 
-                <lb ed="#SV"/>in constitutionem gratiae, ideo est <unclear>praeventio[?]</unclear> divina respectu bo<lb ed="#SV"/>norum 
-                operum.</p>
-            </div>
-            <div>
-              <head xml:id="l112-Hqpoqpo">Quarta propositio: respectu actus prohibiti concurrit deus secundum minimum gradum possibilem</head>
-              <p xml:id="l112-qprsip">quarta propositio respectu actus prohibiti concurrit deus 
-                <lb ed="#SV"/>secundum minimum gradum possibilem et extensive indivisibilem 
-                <lb ed="#SV"/>ubi pro declaratione aliquali est advertendum quod concur<lb ed="#SV"/>sus 
-                divinis cuiuscumque effectus est simpliciter infinitus 
-                <lb ed="#SV"/>vel extensive potest dici minimus respectu mali prohi<lb ed="#SV"/>biti 
-                <seg>nisi<desc>possibly scratched out</desc></seg> quia deus non concurrit respectu actus prohi<cb ed="#SV" n="335vb"/><lb ed="#SV"/>biti 
-                nisi quantum necessitas Requirit Ita quod creatura ad sui pro<lb ed="#SV"/>ductionem 
-                Requirit immensum concursum dei sed quantum ad 
-                <lb ed="#SV"/>multitudinem motuum deus non inclinat specialibus inclinationi<lb ed="#SV"/>bus 
-                primis.</p>
-            </div>
-            <div>
-              <head xml:id="l112-Hqnpqnp">Quinta propositio: prioritas dei concursus est sufficientiae <unclear>necessitatis[?]</unclear> et excellentiae</head>
-              <p xml:id="l112-qpprcs">quinta propositio prioritas dei concursus est sufficien<lb ed="#SV"/>tiae 
-                necessitas et excellentiae, patet nam dictum est quod prioritas 
-                <lb ed="#SV"/>dei concursus non est durationis temporalis quia deus non concurrit 
-                <lb ed="#SV"/>prius tempore durationis quam voluntas creata ad actus producendos 
-                <lb ed="#SV"/>ubi tamen imaginandum est quod deus concurrit prius ad actum. 
-                <lb ed="#SV"/>deinde voluntas creata. Sed prioritas dei respectu voluntatis 
-                <lb ed="#SV"/>creatae est triplex quantum ad concursum respectu <c>a</c> actus.</p> 
-              
-              <p xml:id="l112-pereqp">prima est 
-                <lb ed="#SV"/>ratione sufficientiae quantum ad illud membrum sit intelligitur quia 
-                <lb ed="#SV"/>causalitas prima non indiget secunda ad ponendum effectum in<lb ed="#SV"/>esse 
-                et sic est <unclear>praevienitas[?]</unclear> sufficientiae quia prima causa est 
-                <lb ed="#SV"/>sufficientissima et habet huiusmodi <unclear>praevenitatem[?]</unclear> respectu cuiuscumque 
-                <lb ed="#SV"/>effectus qui producitur.</p> 
-              
-              <p xml:id="l112-seircs">secundo est ibi <unclear>praevenitatem[?]</unclear> necessitatis quia 
-                <lb ed="#SV"/>quilibet effectus qui producitur Requirit prima causam necessario 
-                <lb ed="#SV"/>concurrentem ad eius productionem id est, si debeat produci oportet ut 
-                <lb ed="#SV"/>prima causa ad hoc concurrit. Ex quo apparet quod prima causa 
-                <lb ed="#SV"/>habet prioritatem necessitatis quod non convenit secundae causae quia effectus 
-                <lb ed="#SV"/>potest produci in esse sine concursu cuiuscumque causae secundae, sed 
-                <lb ed="#SV"/>etiam prima causa ratione excellentiae habet <unclear>privienitatem[?]</unclear> 
-                <lb ed="#SV"/>quia ipsa est <del rend="expunctuated">prima</del> causa suprema et in primo gradu 
-                <lb ed="#SV"/>a qua omnis causa secunda in ese derivatur igitur ipsa habet <unclear>praeme<lb ed="#SV"/>nitatem[?]</unclear> 
-                dignitatis et excellentiae respectu causarum secundarum.</p>
-            <div>
+          <p xml:id="l112-pdpppp">
+            Pro declaratione materiae 
+            praesentis sunt ponendae <del rend="expunctuated">duae</del> propositiones plures.
+          </p>
+          <div xml:id="l112-Dd1e141">
+            <head xml:id="l112-Hppo">Prima propositio</head>
+            <head xml:id="l112-Hd1e146" type="question-title">Prioritas concursus primae causae non est aliquo modo durationis</head>
+            <p xml:id="l112-peiqvc">
+              Prima 
+              est ista prioritas concursus primae causae respectu creatae 
+              voluntatis non est aliquo modo durationis. probatur nam aliter 
+              effectus esset productus et non concursu voluntatis 
+              creatae quod patet et signetur instans in quo divina voluntas 
+              concurrit prius quam voluntas creata.
+            </p>
+            <p xml:id="l112-tiimnd">
+              Tunc in illo 
+              priori divina voluntas producit effectum quia pro se sufficeret,
+              igitur voluntas creata non concurreret respectu illius actus 
+              et sic consequenter ipsa se haberet passive respectu actuum suorum 
+              et per consequens nihil mali ageret, nec mereretur nec demereretur.
+            </p>
+          </div>
+          <div xml:id="l112-Dd1e156">
+            <head xml:id="l112-Hsptciv">Secunda propositio</head>
+            <head xml:id="l112-Hd1e161" type="question-title">Talis prioritas concursus primae causae non necessario includit praeter effectum aliquid causarum in voluntate</head>
+            <p xml:id="l112-spenia">
+              Secunda propositio est haec, 
+              talis prioritas concursus 
+              primae causae non necessario includit praeter effectum aliquid 
+              causarum in voluntate patet nam si ad causandum effectum 
+              oporteret aliquid influere in voluntate pari ratione requireretur 
+              aliqua dispositio prima, et sic esset processus in infinitum igitur 
+              tenendum est quod deo concurrere cum voluntate ad actus productionem 
+              nihil producit deus nisi ipsum actum.
+            </p>
+          </div>
+          <div xml:id="l112-Dd1e168">
+            <head xml:id="l112-Htpotpo">Tertia propositio</head> 
+            <head xml:id="l112-Hd1e173" type="question-title">Respectu actus boni deus voluntatem primam et inclinat ad agendum</head>
+            <p xml:id="l112-tprrbo">
+              Tertia 
+              propositio respectu actus boni deus voluntatem primam et inclinat 
+              ad agendum illud apparet nam ita est in iustificatione 
+              impii quod deus specialiter <unclear>primam[?]</unclear> voluntatem eius ut convertatur. 
+              Ideo <title ref="#ap">Apocalypsis</title> <num>III</num><note type="editorNote" subtype="citation" corresp="#l112-QBefsaop"><title>Apocalypsis</title> 3:20</note> dicit christus vel spiritus sanctus <quote xml:id="l112-QBefsaop" source="http://scta.info/resource/ap3_20">ego foris 
+              stans ad ostium pulso"</quote> ita quod deus peccatores pulsat 
+              ut convertantur et praeventi specialiter in iustificatione impii 
+              caritatem infudendo in actum bonum dirigendo et 
+              stante caritate specialiter movet ad actum meritorium 
+              in constitutionem gratiae, ideo est <unclear>praeventio[?]</unclear> divina respectu bonorum 
+              operum.
+            </p>
+          </div>
+          <div xml:id="l112-Dd1e200">
+            <head xml:id="l112-Hqpoqpo">Quarta propositio</head>
+            <head xml:id="l112-Hd1e205" type="question-title">Respectu actus prohibiti concurrit deus secundum minimum gradum possibilem</head>
+            <p xml:id="l112-qprsip">
+              Quarta propositio respectu actus prohibiti concurrit deus 
+              secundum minimum gradum possibilem et extensive indivisibilem 
+              ubi pro declaratione aliquali est advertendum quod concursus 
+              divinis cuiuscumque effectus est simpliciter infinitus 
+              vel extensive potest dici minimus respectu mali prohibiti 
+              <seg>nisi<desc>possibly scratched out</desc></seg> quia deus non concurrit respectu actus prohi<cb ed="#SV" n="335vb"/>biti 
+              nisi quantum necessitas Requirit Ita quod creatura ad sui productionem 
+              Requirit immensum concursum dei sed quantum ad 
+              multitudinem motuum deus non inclinat specialibus inclinationibus 
+              primis.
+            </p>
+          </div>
+          <div xml:id="l112-Dd1e219">
+            <head xml:id="l112-Hqnpqnp">Quinta propositio</head> 
+            <head xml:id="l112-Hd1e224" type="question-title">Prioritas dei concursus est sufficientiae <unclear>necessitatis</unclear> et excellentiae</head>
+            <p xml:id="l112-qpprcs">
+              Quinta propositio prioritas dei concursus est sufficientiae 
+              necessitas et excellentiae, patet nam dictum est quod prioritas 
+              dei concursus non est durationis temporalis quia deus non concurrit 
+              prius tempore durationis quam voluntas creata ad actus producendos 
+              ubi tamen imaginandum est quod deus concurrit prius ad actum. 
+              deinde voluntas creata. Sed prioritas dei respectu voluntatis 
+              creatae est triplex quantum ad concursum respectu <c>a</c> actus.
+            </p> 
+            <p xml:id="l112-pereqp">
+              prima est 
+              ratione sufficientiae quantum ad illud membrum sit intelligitur quia 
+              causalitas prima non indiget secunda ad ponendum effectum inesse 
+              et sic est <unclear>praevienitas[?]</unclear> sufficientiae quia prima causa est 
+              sufficientissima et habet huiusmodi <unclear>praevenitatem[?]</unclear> respectu cuiuscumque 
+              effectus qui producitur.
+            </p>
+            <p xml:id="l112-seircs">
+              secundo est ibi <unclear>praevenitatem</unclear> necessitatis quia 
+              quilibet effectus qui producitur Requirit prima causam necessario 
+              concurrentem ad eius productionem id est, si debeat produci oportet ut 
+              prima causa ad hoc concurrit. Ex quo apparet quod prima causa 
+              habet prioritatem necessitatis quod non convenit secundae causae quia effectus 
+              potest produci in esse sine concursu cuiuscumque causae secundae, sed 
+              etiam prima causa ratione excellentiae habet <unclear>privienitatem[?]</unclear> 
+              quia ipsa est <del rend="expunctuated">prima</del> causa suprema et in primo gradu 
+              a qua omnis causa secunda in ese derivatur igitur ipsa habet <unclear>praemenitatem[?]</unclear> 
+              dignitatis et excellentiae respectu causarum secundarum.
+            </p>
+            <div xml:id="l112-Dd1e261">
               <head xml:id="l112-Hdcddcd">De causalitate divina</head>
-              <p xml:id="l112-uaecep"><lb ed="#SV"/>Ubi advertendum est quod sicut aeternitas habet quamdam prio<lb ed="#SV"/>ritatem 
+              <p xml:id="l112-uaecep">
+                Ubi advertendum est quod sicut aeternitas habet quamdam prioritatem 
                 respectu temporis et <unclear>praemenitatem[?]</unclear> priorem et posteriorem 
-                <lb ed="#SV"/>quia ipsa aeternitas continet modo perfectiori excellentia 
-                <lb ed="#SV"/>quia ipsa continet totam infinitam imaginationem temporalem vel 
-                <lb ed="#SV"/>temporis infinitam durationem et licet aeternitas sit individualis 
-                <lb ed="#SV"/>ipsa tamen habet respectum ante et post, et ita licet divina essentia 
-                <lb ed="#SV"/>sit individualis quantum ad situm, omnis tamen situs ipsa continet 
-                <lb ed="#SV"/>et praevenit.</p>
-              
-                <p xml:id="l112-eidmai">et ideo divina causalitas respectu causalitas 
-                  <lb ed="#SV"/>creatae habet eminentiam et excellentiam et prioritatem 
-                  <lb ed="#SV"/>continendum ante et post et isto modo causalitas divina dicitur 
-                  <lb ed="#SV"/>esse prior in communi cursu respectu productionis creatae in hiis 
-                  <lb ed="#SV"/>tribus principaliter consistit prioritas causalitatis divinae pro 
-                  <lb ed="#SV"/>quibus tribus magis particularizando est notandum quod prima 
-                  <lb ed="#SV"/>causalitas continet secundam et producit eam tanquam umbram 
-                  <lb ed="#SV"/>causalitas divinae et eius tenuissimum vestigium, nam 
-                  <lb ed="#SV"/>causa secunda est habitudo primae ad suos effectus ut si quid 
-                  <lb ed="#SV"/>prima causa producit ad extra illud contineat nobiliori modo 
-                  <lb ed="#SV"/>ad intra.</p> 
-              
-              <p xml:id="l112-sdchrp">secundo divina causalitas dat mensuram et 
-                <lb ed="#SV"/>limitationem causalitati creatae, secundum beneplacitum suae 
-                <lb ed="#SV"/>voluntatis, et ista est una, ideo quomodo prima causa 
-                <lb ed="#SV"/>habet rationem prioritatis.</p> 
-              
-              <p xml:id="l112-tqdccc">tertio quia divina causalitatis conservat 
-                <cb ed="#SV" n="336ra"/><lb ed="#SV"/>causalitatem creatam.</p> 
-              
-              <p xml:id="l112-qdccpc">quarto divina causalitas 
-                <lb ed="#SV"/>creatam actuat et vivificat plusquam anima corpus et ideo 
-                <lb ed="#SV"/>creatura producta in esse nedum a deo conservatur sed ratione in<lb ed="#SV"/>timationis 
-                dei ad eam ipsa <unclear>vivificatur[?]</unclear> et elevatur ac 
-                <lb ed="#SV"/>Redditur in actum ut possit suos effectus producere et opera<lb ed="#SV"/>tiones 
-                exercere cum concursu primae causae.</p>
-              
-              <p xml:id="l112-eqahpr">Ex quo 
-                <lb ed="#SV"/>apparet quod causalitas divinae habet prioritatem respectu causalitatis 
-                <lb ed="#SV"/>creatae eo quod oportet quod actuet eam et vivificet et re<lb ed="#SV"/>ddat 
-                eam expeditam ut possit ad operationes <del rend="expunctuated">ex</del><lb ed="#SV"/><add place="aboveLine">concurrere</add><del rend="expunctuated">cere</del>concurrere 
-                proprias. unde ad imaginationem si deus conserva<lb ed="#SV"/>ret 
+                quia ipsa aeternitas continet modo perfectiori excellentia 
+                quia ipsa continet totam infinitam imaginationem temporalem vel 
+                temporis infinitam durationem et licet aeternitas sit individualis 
+                ipsa tamen habet respectum ante et post, et ita licet divina essentia 
+                sit individualis quantum ad situm, omnis tamen situs ipsa continet 
+                et praevenit.
+              </p>
+              <p xml:id="l112-eidmai">
+                Et ideo divina causalitas respectu causalitas 
+                creatae habet eminentiam et excellentiam et prioritatem 
+                continendum ante et post et isto modo causalitas divina dicitur 
+                esse prior in communi cursu respectu productionis creatae in hiis 
+                tribus principaliter consistit prioritas causalitatis divinae pro 
+                quibus tribus magis particularizando est notandum quod prima 
+                causalitas continet secundam et producit eam tanquam umbram 
+                causalitas divinae et eius tenuissimum vestigium, nam 
+                causa secunda est habitudo primae ad suos effectus ut si quid 
+                prima causa producit ad extra illud contineat nobiliori modo 
+                ad intra.
+              </p> 
+              <p xml:id="l112-sdchrp">
+                Secundo divina causalitas dat mensuram et 
+                limitationem causalitati creatae, secundum beneplacitum suae 
+                voluntatis, et ista est una, ideo quomodo prima causa 
+                habet rationem prioritatis.
+              </p> 
+              <p xml:id="l112-tqdccc">
+                Tertio quia divina causalitatis conservat 
+                <pb ed="#SV" n="336-r"/>
+                <cb ed="#SV" n="a"/>
+                causalitatem creatam.
+              </p>
+              <p xml:id="l112-qdccpc">
+                Quarto divina causalitas 
+                creatam actuat et vivificat plusquam anima corpus et ideo 
+                creatura producta in esse nedum a deo conservatur sed ratione intimationis 
+                dei ad eam ipsa <unclear>vivificatur</unclear> et elevatur ac 
+                Redditur in actum ut possit suos effectus producere et operationes 
+                exercere cum concursu primae causae.
+              </p>
+              <p xml:id="l112-eqahpr">
+                Ex quo 
+                apparet quod causalitas divinae habet prioritatem respectu causalitatis 
+                creatae eo quod oportet quod actuet eam et vivificet et reddat 
+                eam expeditam ut possit ad operationes concurrere
+                proprias. unde ad imaginationem si deus conservaret 
                 creaturam in esse subtrahendo sibi vivificationem 
-                <lb ed="#SV"/>et actuationem ipsa causalitas creata non esset in potentia 
-                <lb ed="#SV"/>propinqua ad producendum suos effectus et Redderetur ita 
-                <lb ed="#SV"/>impotens sicut in formis materia prima quia divina causalitas 
-                <lb ed="#SV"/>est origo omnium producibilium et quantum ad hoc ipsa habet prior<lb ed="#SV"/>itatis 
-                rationem.</p>
-              
-              <p xml:id="l112-qdcpes">quinto divina causalitas est summa libertas 
-                <lb ed="#SV"/>et summus gradus libertatis ad extra, et ideo in genere po<lb ed="#SV"/>tentiarum 
-                liberarum ipsa est prima et summa.</p> 
-              
-              <p xml:id="l112-eqssre">Ex quo 
-                <lb ed="#SV"/>sequitur quod de prioritate praedicta non de prioritate temporis 
-                <lb ed="#SV"/>concedendum est quod prima causa prius influat quam secunda respectu 
-                <lb ed="#SV"/>effectus.</p>
-              
+                et actuationem ipsa causalitas creata non esset in potentia 
+                propinqua ad producendum suos effectus et redderetur ita 
+                impotens sicut in formis materia prima quia divina causalitas 
+                est origo omnium producibilium et quantum ad hoc ipsa habet prioritatis 
+                rationem.
+              </p>
+              <p xml:id="l112-qdcpes">
+                Quinto divina causalitas est summa libertas 
+                et summus gradus libertatis ad extra, et ideo in genere potentiarum 
+                liberarum ipsa est prima et summa.
+              </p> 
+              <p xml:id="l112-eqssre">
+                Ex quo 
+                sequitur quod de prioritate praedicta non de prioritate temporis 
+                concedendum est quod prima causa prius influat quam secunda respectu 
+                effectus.
+              </p>
               <p xml:id="l112-ssqapa">secundo sequitur quod prima causa posterius desinit 
-                <lb ed="#SV"/>influere respectu effectus quam causa secunda. patet quia ipsa habet rationem 
-                <lb ed="#SV"/>continentiae virtualis, ergo prima causa prior est tempore. 
-                <lb ed="#SV"/>Ita quod si esse spatium infinitum contineretur in divina immen<lb ed="#SV"/>sitate, 
+                influere respectu effectus quam causa secunda. patet quia ipsa habet rationem 
+                continentiae virtualis, ergo prima causa prior est tempore. 
+                Ita quod si esse spatium infinitum contineretur in divina immensitate, 
                 modo dicitur quod prius influere dicit perfectionem. patet 
-                <lb ed="#SV"/>qui dicit excellentiam activitatis et <unclear>independentis[?]</unclear> et 
-                <lb ed="#SV"/>immensi et sic deo competit, et posterius influere dicit 
-                <lb ed="#SV"/>perfectionem ratione continentiae a parte post et licet 
-                <lb ed="#SV"/>sit infinita duratio imaginaria seu aeternitas ipsa 
-                <lb ed="#SV"/><sic>ipsa</sic> tamen continet quamcumque durationem temporalem infinitam, sed 
-                <lb ed="#SV"/>ad imaginationem a parte post vel a parte ante.</p>
-            </div>
-            </div>
-            <div>
-              <head xml:id="l112-Hsxpsxp">Sexta propositio: desinere prius influere <unclear>dicitur[?]</unclear> imperfectionem</head>
-              
-              <p xml:id="l112-spdidi">sexta propositio 
-                <lb ed="#SV"/>desinere prius influere dicit imperfectionem.</p> 
-              
-              <p xml:id="l112-eqsatd">Ex quo 
-                <lb ed="#SV"/>sequitur quod divina causalitas respectu causalitatis creatae in in<lb ed="#SV"/>finitum 
-                est prior et infinitum est posterior paret proportionalem modum 
-                <lb ed="#SV"/>comparandi huiusmodi causalitatem ad creatam causalitatem 
-                <lb ed="#SV"/>sicut comparetur aeternitas ad temporalem durationem.</p>
-              
-              <p xml:id="l112-ssadte">secundo sequitur 
-                <lb ed="#SV"/>aeque quod prima causalitas est aeque prior sicut posterior patet quia 
-                <lb ed="#SV"/>absolute ex omnium parte continet durationem temporalem ex<lb ed="#SV"/>tendo.</p>
-              
-              <p xml:id="l112-tsqaap">tertio sequitur quod haec prioritas altitudo est totaliter 
-                <lb ed="#SV"/>impertinens ad necessitatem liberi arbitrii patet quia ibi 
-                <lb ed="#SV"/>non est prioritas nisi ratione dignitatis et excellentiae 
-                <lb ed="#SV"/>quae Relata ad voluntatem increatam ipsa non con<lb ed="#SV"/>currit 
-                prius prioritate temporis ad effectum quam causalitas 
-                <lb ed="#SV"/>secunda, immo prima causa formaliter includeret volun<cb ed="#SV" n="336rb"/><lb ed="#SV"/>tatis 
-                creatae libertatem, quia prima causa concurrit 
-                <lb ed="#SV"/>libere volendo secunduam causam libere concurrere ad 
-                <lb ed="#SV"/>actus productionem.</p>
-              
+                qui dicit excellentiam activitatis et <unclear>independentis[?]</unclear> et 
+                immensi et sic deo competit, et posterius influere dicit 
+                perfectionem ratione continentiae a parte post et licet 
+                sit infinita duratio imaginaria seu aeternitas ipsa 
+                <sic>ipsa</sic> tamen continet quamcumque durationem temporalem infinitam, sed 
+                ad imaginationem a parte post vel a parte ante.
+              </p>
             </div>
           </div>
-            <div>
-              <head xml:id="l112-Hcorria">Corollaria</head>
-              <p xml:id="l112-pcdcre">Pro cuius declaratione 
-                <lb ed="#SV"/>supponitur quod talis influxus quo deus influit cum 
-                <lb ed="#SV"/>voluntate creata ad actus productionem nihil aliud 
-                <lb ed="#SV"/>est quam volitio divina qua deus vult actum libere a 
-                <lb ed="#SV"/>causalitate secunda produci. patet quia sola voluntate 
-                <lb ed="#SV"/>deus agit ad extra et non indiget instrumento 
-                <lb ed="#SV"/>ad effectus productionem nam se solo et sua volun<lb ed="#SV"/>tate 
-                efficaci posset effectum producere in esse di<lb ed="#SV"/>cente 
-                <name ref="#Paul">Apsotolo</name> <quote source="http://scta.info/resource/rom4_17">vocasti ea quae non sunt tanquam ea 
-                <lb ed="#SV"/>quae sunt</quote> ex ita imperio voluntatis omnia facta sunt 
-                <lb ed="#SV"/>nam ipse dicit et facta sunt ipse mandavit et 
-                <lb ed="#SV"/>creata sunt. Sed quia divina causalitas respectu crea<lb ed="#SV"/>turae 
-                est circumstantionata quia vult effectum pro<lb ed="#SV"/>duci 
-                volitio talis est quod ipsa includit formaliter 
-                <lb ed="#SV"/>creatura concurrere cum ipsa ad effectum, nam ipsa vo<lb ed="#SV"/>litio 
-                habet pro obiecto effectum libere produci a voluntate 
-                <lb ed="#SV"/>creata, ergo illa influentia includit voluntatem creatam 
-                <lb ed="#SV"/>libere concurrere respectu effectus.</p>
-              
-                <p xml:id="l112-usqvgp">unde sequitur quod licet illa volitio 
-                  <lb ed="#SV"/>sit absolute in se immensa ut sic tamen circumstan<lb ed="#SV"/>tionata 
-                  non stat quod divina causalitas <del rend="strikethrough">in se immensa</del> 
-                  <lb ed="#SV"/>producit effectum ad extra nisi concurrit cum voluntate 
-                  <lb ed="#SV"/>creata. unde ad imaginationem si illa volitio esset 
-                  <lb ed="#SV"/>separata a causalitate divina ipsa causalitas divina 
-                  <lb ed="#SV"/>non poneret effectum secundum eius formalem rationem quia 
-                  <lb ed="#SV"/>sua volitio includit hoc, scilicet, quod causa secunda concurrit libere 
-                  <lb ed="#SV"/>ad huiusmodi actus productionem et per consequens causalitas 
-                  <lb ed="#SV"/>divina nedum non tollit libertatem immo formaliter 
-                  <lb ed="#SV"/>eam ponit. exemplum de effectu quem deus vellet pro<lb ed="#SV"/>ducere 
-                  ab <c>a</c> causa tali tempore tali gradu tali loco 
-                  <lb ed="#SV"/>cum qua volitione non staret effectum ab alio produci 
-                  <lb ed="#SV"/>nec a se solo, tamen illa volitione nec staret quod 
-                  <lb ed="#SV"/>producitur intensiori gradu vel alio loco, quia influentia 
-                  <lb ed="#SV"/>concludit quod tali loco vel tempore vel gradu producatur.</p>
-              
-              <p xml:id="l112-eqsias"><lb ed="#SV"/>Ex quo sequitur quod magis censendum libera est 
-                <lb ed="#SV"/>voluntas creata ex divina praevenitione quam si prima 
-                <lb ed="#SV"/>causa concurreret in genere finis praecise vel praecise conser<lb ed="#SV"/>varet, 
-                et nedum praeventio non tollit libertatem, immo 
-                <lb ed="#SV"/>magis per eam voluntas creata suum effectum libere 
-                <lb ed="#SV"/>producit quam si deus communicaret ei potentiam libere producendi 
-                <lb ed="#SV"/>ad imaginationem patet quia sicut deus influit volun<lb ed="#SV"/>tati 
-                coagenti secum ita influit ei modum libere 
-                <lb ed="#SV"/>agendum, quia est ordo ambarum causarum respectu liberi actus 
-                <lb ed="#SV"/>igitur deus reddidit voluntatem efficacem ad libere 
-                <lb ed="#SV"/>exeundum in actus suos.</p>
-              
-              <p xml:id="l112-ssqpmn">secundo sequitur quod non solum 
-                <cb ed="#SV" n="336va"/><lb ed="#SV"/>ex intrinseca libertatis conditione voluntas non necessi<lb ed="#SV"/>tatur 
-                ad elevationem per divinam praeventionem immo 
-                <lb ed="#SV"/>magis consurgit ex divina praevetione quod creata 
-                <lb ed="#SV"/>voluntas est libera, et in hoc consideranda sunt duo 
-                <lb ed="#SV"/>quae tollunt necessitatem libertatis creatae respectu effe<lb ed="#SV"/>ctus 
-                unum intrinsecam causalitas ratione cuius Repu<lb ed="#SV"/>gnat 
-                ei concurrere per modum naturae.</p>
-              
-              <p xml:id="dL1110seqeir">secundum est quod ma<lb ed="#SV"/>gis 
-                ei Repugnat concurrere non libere ex praeventione 
-                <lb ed="#SV"/>divina quam ex intrinseca causalitate et libertate 
-                <lb ed="#SV"/>nam ratione influxus divinae praeventionis Repugnat ei 
-                <lb ed="#SV"/>exire in actum non libere magis quam ex intrinseca 
-                <lb ed="#SV"/>ratione.</p>
-              
-              <p xml:id="l112-svdsda">Sed voluntas divina determinat creatam vo<lb ed="#SV"/>luntatem 
-                multipliciter primo vivificandum et actuandum 
-                <lb ed="#SV"/>eius libertatem quia creata voluntas non sufficeret ex<lb ed="#SV"/>ire 
-                in actum nisi a divina voluntate et causalitate 
-                <lb ed="#SV"/>actuetur. secundo divina voluntas limitat eam tanquam 
-                <lb ed="#SV"/>individualem actum, quia quaelibet causa creata est indeterminata 
-                <lb ed="#SV"/>omnino respectu effectus eiusdem speciei quis illorum debeat 
-                <lb ed="#SV"/>producere <add place="aboveLine">ut ignis si</add> duos gradus <add place="aboveLine">caliditatis</add> debeat producere non est 
-                <lb ed="#SV"/>determinatus de se utrum producat unum citius quam alter 
-                <lb ed="#SV"/>vel unum et non alium. Sed oportet quod determinetur a divina 
-                <lb ed="#SV"/>voluntate. Ex quo apparet quod voluntas creata per divinam 
-                <lb ed="#SV"/>determinatur ad producendum hanc volitionem et non aliam 
-                <lb ed="#SV"/>licet sint eiusdem speciei et sic tota determinatio voluntatis divinae 
-                <lb ed="#SV"/>respectu creatae est quod eam vivificat et Reddit potentio<lb ed="#SV"/>rem 
-                ut possit exire ad actus suos, et determinat 
-                <lb ed="#SV"/>eam ut producat hoc gradu vel alio, hoc loco vel 
-                <lb ed="#SV"/>alio et sic de aliis.</p>
-              
-              <p xml:id="l112-tsqedp">tertio sequitur quod nullatenus im<lb ed="#SV"/>putandum 
-                est deo quod concurrit ad actum prohibitum patet 
-                <lb ed="#SV"/>quia nullo modo necessitant voluntatem ad ipsius pro<lb ed="#SV"/>ductionem 
-                immo concurrit Remississimo gradu quam imper<lb ed="#SV"/>fectio 
-                creaturae Requirit nam quod actuet eam est eius 
-                <lb ed="#SV"/>perfectio quod male eligat est imperfectio, nam deus 
-                <lb ed="#SV"/>ad huiusmodi actum concurrit minimo gradu possibili. 
-                <lb ed="#SV"/>secundo quia talis actio non est deo prohibita.</p> 
-              
-              <p xml:id="l112-qsesqr">quarto sequitur 
-                <lb ed="#SV"/>error negantium voluntatis actum propter peccatum comi<lb ed="#SV"/>ssionem 
-                et vel error fingentium respectum nam aliqui 
-                <lb ed="#SV"/>dicunt quod non staret cum concursu dei quod actus vo<lb ed="#SV"/>luntatis 
-                malus essent quid positivum, quia deus concurrit 
-                <lb ed="#SV"/>praecise ad productionem actuum positivorum, et sic 
-                <lb ed="#SV"/>decebant quod actus voluntatis malus nihil est nisi 
-                <lb ed="#SV"/>voluntatis se habens sic, Sed ista prioritas seu po<lb ed="#SV"/>sitio 
-                non imponit necessitatem, nec oportet fin<lb ed="#SV"/>gere 
-                huiusmodi Respectus nec ponere consequenter quod peccata 
-                <cb ed="#SV" n="336vb"/><lb ed="#SV"/>sint quid Respectus.</p>
-              
-              <p xml:id="l112-qsepce">quinto sequitur error negantium 
-                <lb ed="#SV"/>divinum concursum respectu talium actuum et dixerunt quod licet 
-                <lb ed="#SV"/>deus concurrit effective ad elevationes bonas, ad ele<lb ed="#SV"/>vationes 
-                tamen malas solum concurrit permissive, sed hoc 
-                <lb ed="#SV"/>est falsum, quia impossibile est esse aliquam entitatem quin sit a prima 
-                <lb ed="#SV"/>causa effective.</p> 
-              
-              <p xml:id="l112-sseosn"> sexto sequitur error dicentium li<lb ed="#SV"/>berum 
-                arbitrium plus agere in actionibus bonis vel 
-                <lb ed="#SV"/>malis quam deus patet quia deus agit <unclear>concomitive[?]</unclear> quia propter 
-                <lb ed="#SV"/>priortatem dei concursus oportet sequi necessitatem.</p>
-              
-              <p xml:id="l112-sseeil">septimo sequitur 
-                <lb ed="#SV"/>error <name ref="#Bradwardine">ebrouardin</name> in tertia parte summae suae <title ref="#CausaDei">de causa dei</title> 
-                capitulo primo secundo et tertio et quarto et aliis dicentis quod ex praeven<lb ed="#SV"/>tione 
-                primae causae respectu causalitatis secundae voluntas huma<lb ed="#SV"/>na 
-                necessitatur ad quemcumque effectum sine bonum sive ma<lb ed="#SV"/>lum 
-                et hoc est falsum et sapit haeresim quia hoc est tollere 
-                <lb ed="#SV"/>quamdam nedum a voluntate increata, sed a creata maxime tamen 
-                <lb ed="#SV"/>ipsa ponit ad probandum hoc rationes fortes quae videbun<lb ed="#SV"/>tur 
-                in lectione sequenti et sic est finis istius lectionis.</p>
+          <div xml:id="l112-Dd1e312">
+            <head xml:id="l112-Hsxpsxp">Sexta propositio</head> 
+            <head xml:id="l112-Hd1e317" type="qusestion-title">Desinere prius influere <unclear>dicitur[?]</unclear> imperfectionem</head>
+            <p xml:id="l112-spdidi">
+              Sexta propositio 
+              desinere prius influere dicit imperfectionem.
+            </p> 
+            <p xml:id="l112-eqsatd">
+              Ex quo 
+              sequitur quod divina causalitas respectu causalitatis creatae in infinitum 
+              est prior et infinitum est posterior paret proportionalem modum 
+              comparandi huiusmodi causalitatem ad creatam causalitatem 
+              sicut comparetur aeternitas ad temporalem durationem.
+            </p>
+            <p xml:id="l112-ssadte">
+              Secundo sequitur 
+              aeque quod prima causalitas est aeque prior sicut posterior patet quia 
+              absolute ex omnium parte continet durationem temporalem extendo.
+            </p>
+            <p xml:id="l112-tsqaap">
+              Tertio sequitur quod haec prioritas altitudo est totaliter 
+              impertinens ad necessitatem liberi arbitrii patet quia ibi 
+              non est prioritas nisi ratione dignitatis et excellentiae 
+              quae Relata ad voluntatem increatam ipsa non concurrit 
+              prius prioritate temporis ad effectum quam causalitas 
+              secunda, immo prima causa formaliter includeret volun<cb ed="#SV" n="336rb"/>tatis 
+              creatae libertatem, quia prima causa concurrit 
+              libere volendo secunduam causam libere concurrere ad 
+              actus productionem.
+            </p>
+          </div>
+        </div>
+        <div xml:id="l112-Dd1e340">
+          <head xml:id="l112-Hcorria">Corollaria</head>
+          <p xml:id="l112-pcdcre">
+            Pro cuius declaratione 
+            supponitur quod talis influxus quo deus influit cum 
+            voluntate creata ad actus productionem nihil aliud 
+            est quam volitio divina qua deus vult actum libere a 
+            causalitate secunda produci. patet quia sola voluntate 
+            deus agit ad extra et non indiget instrumento 
+            ad effectus productionem nam se solo et sua voluntate 
+            efficaci posset effectum producere in esse dicente 
+            <name ref="#Paul">Apsotolo</name> <quote xml:id="l112-Qd1e350" source="http://scta.info/resource/rom4_17">vocasti ea quae non sunt tanquam ea 
+            quae sunt</quote> ex ita imperio voluntatis omnia facta sunt 
+            nam ipse dicit et facta sunt ipse mandavit et 
+            creata sunt. Sed quia divina causalitas respectu creaturae 
+            est circumstantionata quia vult effectum produci 
+            volitio talis est quod ipsa includit formaliter 
+            creatura concurrere cum ipsa ad effectum, nam ipsa volitio 
+            habet pro obiecto effectum libere produci a voluntate 
+            creata, ergo illa influentia includit voluntatem creatam 
+            libere concurrere respectu effectus.
+          </p>
+          <p xml:id="l112-usqvgp">
+            Unde sequitur quod licet illa volitio 
+            sit absolute in se immensa ut sic tamen circumstantionata 
+            non stat quod divina causalitas <del rend="strikethrough">in se immensa</del> 
+            producit effectum ad extra nisi concurrit cum voluntate 
+            creata. unde ad imaginationem si illa volitio esset 
+            separata a causalitate divina ipsa causalitas divina 
+            non poneret effectum secundum eius formalem rationem quia 
+            sua volitio includit hoc, scilicet, quod causa secunda concurrit libere 
+            ad huiusmodi actus productionem et per consequens causalitas 
+            divina nedum non tollit libertatem immo formaliter 
+            eam ponit. exemplum de effectu quem deus vellet producere 
+            ab <c>a</c> causa tali tempore tali gradu tali loco 
+            cum qua volitione non staret effectum ab alio produci 
+            nec a se solo, tamen illa volitione nec staret quod 
+            producitur intensiori gradu vel alio loco, quia influentia 
+            concludit quod tali loco vel tempore vel gradu producatur.
+          </p>
+          <p xml:id="l112-eqsias">
+            Ex quo sequitur quod magis censendum libera est 
+            voluntas creata ex divina praevenitione quam si prima 
+            causa concurreret in genere finis praecise vel praecise conservaret, 
+            et nedum praeventio non tollit libertatem, immo 
+            magis per eam voluntas creata suum effectum libere 
+            producit quam si deus communicaret ei potentiam libere producendi 
+            ad imaginationem patet quia sicut deus influit voluntati 
+            coagenti secum ita influit ei modum libere 
+            agendum, quia est ordo ambarum causarum respectu liberi actus 
+            igitur deus reddidit voluntatem efficacem ad libere 
+            exeundum in actus suos.
+          </p>
+          <p xml:id="l112-ssqpmn">
+            Secundo sequitur quod non solum 
+            <pb ed="#SV" n="336-v"/>
+            <cb ed="#SV" n="a"/>
+            ex intrinseca libertatis conditione voluntas non necessitatur 
+            ad elevationem per divinam praeventionem immo 
+            magis consurgit ex divina praevetione quod creata 
+            voluntas est libera, et in hoc consideranda sunt duo 
+            quae tollunt necessitatem libertatis creatae respectu effectus 
+            unum intrinsecam causalitas ratione cuius repugnat 
+            ei concurrere per modum naturae.
+          </p>
+          <p xml:id="dL1110seqeir"><!--needs id change -->
+            secundum est quod magis 
+            ei Repugnat concurrere non libere ex praeventione 
+            divina quam ex intrinseca causalitate et libertate 
+            nam ratione influxus divinae praeventionis Repugnat ei 
+            exire in actum non libere magis quam ex intrinseca 
+            ratione.
+          </p>
+          <p xml:id="l112-svdsda">
+            Sed voluntas divina determinat creatam voluntatem 
+            multipliciter primo vivificandum et actuandum 
+            eius libertatem quia creata voluntas non sufficeret exire 
+            in actum nisi a divina voluntate et causalitate 
+            actuetur. secundo divina voluntas limitat eam tanquam 
+            individualem actum, quia quaelibet causa creata est indeterminata 
+            omnino respectu effectus eiusdem speciei quis illorum debeat 
+            producere <add place="aboveLine">ut ignis si</add> duos gradus <add place="aboveLine">caliditatis</add> debeat producere non est 
+            determinatus de se utrum producat unum citius quam alter 
+            vel unum et non alium. Sed oportet quod determinetur a divina 
+            voluntate. Ex quo apparet quod voluntas creata per divinam 
+            determinatur ad producendum hanc volitionem et non aliam 
+            licet sint eiusdem speciei et sic tota determinatio voluntatis divinae 
+            respectu creatae est quod eam vivificat et Reddit potentiorem 
+            ut possit exire ad actus suos, et determinat 
+            eam ut producat hoc gradu vel alio, hoc loco vel 
+            alio et sic de aliis.
+          </p>
+          <p xml:id="l112-tsqedp">
+            Tertio sequitur quod nullatenus imputandum 
+            est deo quod concurrit ad actum prohibitum patet 
+            quia nullo modo necessitant voluntatem ad ipsius productionem 
+            immo concurrit Remississimo gradu quam imperfectio 
+            creaturae Requirit nam quod actuet eam est eius 
+            perfectio quod male eligat est imperfectio, nam deus 
+            ad huiusmodi actum concurrit minimo gradu possibili. 
+            secundo quia talis actio non est deo prohibita.
+          </p> 
+          <p xml:id="l112-qsesqr">
+            Quarto, sequitur 
+            error negantium voluntatis actum propter peccatum comissionem 
+            et vel error fingentium respectum nam aliqui 
+            dicunt quod non staret cum concursu dei quod actus voluntatis 
+            malus essent quid positivum, quia deus concurrit 
+            praecise ad productionem actuum positivorum, et sic 
+            decebant quod actus voluntatis malus nihil est nisi 
+            voluntatis se habens sic, Sed ista prioritas seu positio 
+            non imponit necessitatem, nec oportet fingere 
+            huiusmodi Respectus nec ponere consequenter quod peccata 
+            <cb ed="#SV" n="b"/><!--SV336vb-->
+            sint quid respectus.
+          </p>
+          <p xml:id="l112-qsepce">
+            Quinto, 
+            sequitur error negantium 
+            divinum concursum respectu talium actuum et dixerunt quod licet 
+            deus concurrit effective ad elevationes bonas, ad elevationes 
+            tamen malas solum concurrit permissive, sed hoc 
+            est falsum, quia impossibile est esse aliquam entitatem quin sit a prima 
+            causa effective.
+          </p> 
+          <p xml:id="l112-sseosn">
+            Sexto, 
+            sequitur error dicentium liberum 
+            arbitrium plus agere in actionibus bonis vel 
+            malis quam deus patet quia deus agit <unclear>concomitive</unclear> quia propter 
+            priortatem dei concursus oportet sequi necessitatem.
+          </p>
+          <p xml:id="l112-sseeil">
+            Septimo sequitur 
+            error 
+            <cit>
+              <ref xml:id="l112-Rd1e410">
+                <name ref="#Bradwardine">Brouardin</name> 
+                in tertia parte summae suae 
+                <title ref="#CausaDei">de causa dei</title>
+                capitulo primo secundo et tertio et quarto et aliis
+              </ref>
+            </cit> 
+            dicentis quod ex praeventione 
+            primae causae respectu causalitatis secundae voluntas humana 
+            necessitatur ad quemcumque effectum sine bonum sive malum 
+            et hoc est falsum et sapit haeresim quia hoc est tollere 
+            quamdam nedum a voluntate increata, sed a creata maxime tamen 
+            ipsa ponit ad probandum hoc rationes fortes quae videbuntur 
+            in lectione sequenti et sic est finis istius lectionis.
+          </p>
         </div>
       </div>
     </body>

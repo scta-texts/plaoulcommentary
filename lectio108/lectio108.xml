@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,223 +7,341 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.03-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 108, de Libertate</title>
           <date when="2013-03-05">March 5, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-03-05">March 5, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-03-05" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="330-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio108">
-      <head xml:id="l108-Hldlldl" subtype="title">Lectio 108, de Libertate</head>
-        <div>
+        <head xml:id="l108-Hldlldl">Lectio 108, de Libertate</head>
+        <div xml:id="l108-Dd1e109">
           <head xml:id="l108-Hqeiqpc">Quod esse in homine liberum arbitrium est nedum a catholico fideli et a quolibet philosopho concedendum</head>
-          <p xml:id="l108-eqpqdp">Et quia plures gentilium dixerunt fatum 
-            <lb ed="#SV"/>imponere necessitatem et tollere libertatem arbitrii,  
-            <lb ed="#SV"/>ideo ponitur ista conclusio esse in homine liberum arbitrium 
-            <lb ed="#SV"/>est nedum a catholico fideli, sed etiam a quolibet philosopho 
-            <cb ed="#SV" n="330rb"/><lb ed="#SV"/>concedendum vel confitendum, illud apparet primo experientia actuum 
-            <lb ed="#SV"/>nostrorum nam quilibet potest se experiri digitum ex libertate 
-            <lb ed="#SV"/>ad quamlibet differentiam positionis.</p>
-        
-            <p xml:id="l108-snssla">secundo nisi sic, <seg ana="#politica">tota subverteretur 
-              <lb ed="#SV"/>moralis politia</seg> et alia  plura inconvenientia sequitur, 
-              <lb ed="#SV"/>nam dicit <name ref="#Aristotle">philosophus</name> in IIIo <title ref="#Ethics">ethicorum</title> quod ad virtuose operandum 
-              <lb ed="#SV"/>oportet quod aliquid concurrat voluntarium et <name ref="#Cicero">tullius</name> ut nar<lb ed="#SV"/>rat 
-              <name ref="#Augustine">augustinus</name> in libro quinto <title ref="#CityOfGod">de civitate dei</title> considerans quod oportet alterum 
-              <lb ed="#SV"/>duorum concedere vel quod omnia eveniant de necessitate et omnino 
-              <lb ed="#SV"/>tolleretur liberum arbitrium, vel quod tolleretur quod divina 
-              <lb ed="#SV"/>cognitio sit respectu futurorum. Ita quod deus nullo modo provi<lb ed="#SV"/>deret 
-              entibus universi, sed secundum Reputavit <name ref="#Cicero">tullius</name> maius 
-              <lb ed="#SV"/>inconveniens, ideo incidit in primum et substulit liberum ar<lb ed="#SV"/>bitrium, 
-              immo posuit omnia de necessitate evenire. Ex quo 
-              <lb ed="#SV"/>apparet quod quasi omnes philosophi horruerunt tollere liberum arbi<lb ed="#SV"/>trium 
-              seu libertatem arbitrii.</p>
-        
-          <p xml:id="l108-taeela">tertio arguitur ex auctoritate <name ref="#RichardFitzRalph">ar<lb ed="#SV"/>macani</name> 
-            in libro <title ref="#deQuaestionibusArmenorum">de quaestionibus armenorum</title> nisi expresse ponit 
-            <lb ed="#SV"/>in nobis esse libertatem arbitrii.</p>
-        
-        <p xml:id="l108-qeaper">Quarto ex auctoritate scripturae. 
-          <lb ed="#SV"/>nam salvator ait <ref><title ref="#mt">Matthaei</title> 26</ref><note type="editorNote" subtype="citation" corresp="#l108-QBapqdla"><title>Matthaeus</title> 26:53</note> <quote xml:id="l108-Qapqdla" source="http://scta.info/resource/mt26_53">"an putatis quod 
-          <lb ed="#SV"/>non possum rogare patrem meum et exhibebit mihi 
-          <lb ed="#SV"/>plus quam duodecim legiones angelorum,"</quote> igitur christus habuit 
-          <lb ed="#SV"/>libertatem arbitrii rogandi patrem vel non rogandi 
-          <lb ed="#SV"/>licet ipse ob passionem evitandam rogaverit.</p>
-        
-        <p xml:id="l108-eqppdp">Ex quo apparet 
-          <lb ed="#SV"/>Radix errorum negantium libertatem arbitrii ex 
-          <lb ed="#SV"/>parte divinae providentiae.</p>
-        
-          <p xml:id="l108-iinqla">Isti igitur negant esse in quolibet li<lb ed="#SV"/>bertatem 
-            arbitrii.</p>
-        
-        <p xml:id="l108-eqaetp">Ex quo apparet quod ex divina provisione 
-          <lb ed="#SV"/>sequitur necessitans ita quod sequitur quod non posset non 
-          <lb ed="#SV"/>producere effectum tempore praefixo.</p>
-        
-        <p xml:id="l108-qaeela">quinto arguitur ex salvatoris 
-          <lb ed="#SV"/>auctoritate dicentis <name ref="#Apostles">apostolis</name> non potestis una hora 
-          <lb ed="#SV"/>vigilare mecum, quasi vellet dicere quod erat in libertate 
-          <lb ed="#SV"/>arbitrii eorum vigilare vel non vigilare. ex quo 
-          <lb ed="#SV"/>denotatur eorum libertas, et de sanctis legitur qui potuit 
-          <lb ed="#SV"/>transgredi, et non est transgressus. Et sic in veteri 
-          <lb ed="#SV"/>testamento et novo apparet quod in nobis est liberum ar<lb ed="#SV"/>bitrium.</p> 
+          <p xml:id="l108-eqpqdp">
+            Et quia plures gentilium dixerunt fatum 
+            imponere necessitatem et tollere libertatem arbitrii,  
+            ideo ponitur ista conclusio esse in homine liberum arbitrium 
+            est nedum a catholico fideli, sed etiam a quolibet philosopho 
+            <cb ed="#SV" n="330rb"/><!--330rb-->
+            concedendum vel confitendum, illud apparet primo experientia actuum 
+            nostrorum nam quilibet potest se experiri digitum ex libertate 
+            ad quamlibet differentiam positionis.
+          </p>
+          <p xml:id="l108-snssla">
+            Secundo nisi sic, 
+            tota subverteretur 
+            moralis politia et alia  plura inconvenientia sequitur, 
+            nam dicit 
+            <cit>
+              <ref xml:id="l108-Rd1e124">
+                <name ref="#Aristotle">Philosophus</name> 
+                in III 
+                <title ref="#Ethics">Ethicorum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            quod ad virtuose operandum 
+            oportet quod aliquid concurrat voluntarium 
+            et 
+            <name ref="#Cicero">Tullius</name> 
+            ut narrat 
+            <cit>
+              <ref xml:id="l108-Rd1e142">
+                <name ref="#Augustine">Augustinus</name> 
+                in libro quinto 
+                <title ref="#CityOfGod">De civitate Dei</title>
+              </ref>
+            </cit> 
+            considerans quod oportet alterum 
+            duorum concedere vel quod omnia eveniant de necessitate et omnino 
+            tolleretur liberum arbitrium, vel quod tolleretur quod divina 
+            cognitio sit respectu futurorum. 
+            Ita quod deus nullo modo provideret 
+            entibus universi, sed secundum reputavit 
+            <name ref="#Cicero">Tullius</name> maius 
+            inconveniens, ideo incidit in primum et substulit liberum arbitrium, 
+            immo posuit omnia de necessitate evenire. 
+            Ex quo apparet quod quasi omnes philosophi horruerunt tollere liberum arbitrium 
+            seu libertatem arbitrii.
+          </p>
+          <p xml:id="l108-taeela">
+            Tertio arguitur ex auctoritate 
+            <cit>
+              <ref xml:id="l108-Rd1e160">
+                <name ref="#RichardFitzRalph">Armacani</name> 
+                in libro 
+                <title ref="#deQuaestionibusArmenorum">De quaestionibus Armenorum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            nisi expresse ponit 
+            in nobis esse libertatem arbitrii.
+          </p>
+          <p xml:id="l108-qeaper">
+            Quarto ex auctoritate scripturae. 
+            nam salvator ait 
+            <ref xml:id="l108-Rd1e176">
+              <title ref="#mt">Matthaei</title> 26
+            </ref>
+            <cit>
+              <quote xml:id="l108-Qapqdla" source="http://scta.info/resource/mt26_53">
+                an putatis quod 
+                non possum rogare patrem meum et exhibebit mihi 
+                plus quam duodecim legiones angelorum
+              </quote>
+            </cit>, 
+            igitur christus habuit 
+            libertatem arbitrii rogandi patrem vel non rogandi 
+            licet ipse ob passionem evitandam rogaverit.
+          </p>
+          <p xml:id="l108-eqppdp">
+            Ex quo apparet 
+            radix errorum negantium libertatem arbitrii ex 
+            parte divinae providentiae.
+          </p>
+          <p xml:id="l108-iinqla">
+            Isti igitur negant esse in quolibet libertatem 
+            arbitrii.
+          </p>
+          <p xml:id="l108-eqaetp">
+            Ex quo apparet quod ex divina provisione 
+            sequitur necessitans ita quod sequitur quod non posset non 
+            producere effectum tempore praefixo.
+          </p>
+          <p xml:id="l108-qaeela">
+            Quinto arguitur ex salvatoris 
+            auctoritate dicentis 
+            <name ref="#Apostles">Apostolis</name> non potestis una hora 
+            vigilare mecum, quasi vellet dicere quod erat in libertate 
+            arbitrii eorum vigilare vel non vigilare. ex quo 
+            denotatur eorum libertas, et de sanctis legitur qui potuit 
+            transgredi, et non est transgressus. Et sic in veteri 
+            testamento et novo apparet quod in nobis est liberum arbitrium.
+          </p> 
         </div>
-        <div>
+        <div xml:id="l108-Dd1e206">
           <head xml:id="l108-Heifeif">Error Iulii Firmici</head>
-          <p xml:id="l108-eqaece">Ex quo apparet error <name ref="#JuliusFirmicus">Iullii firmici</name> qui in principio 
-            <lb ed="#SV"/>suae <title ref="#AstrologyFirmicus">astrologiae</title> ponit quod constellatio est dispositio syderum 
-            <lb ed="#SV"/>est fatum absolute necessitas respectu cuiuscumque operationis, nam 
-            <lb ed="#SV"/>iste error apparet clare, quia tollit libertatem arbitrii cuiuscumque 
-            <lb ed="#SV"/>causae respectu effectus sui quod est contra experientiam.</p>
-        
-        <p xml:id="l108-sqacim">secundo quia 
-          <lb ed="#SV"/>actiones liberas voluntatis Reducit in causas caelestes 
-          <lb ed="#SV"/>et hoc est falsum quia tales actus non dependent a causis 
-          <lb ed="#SV"/>in materialibus.</p>
+          <p xml:id="l108-eqaece">
+            Ex quo apparet error 
+            <cit>
+              <ref xml:id="l108-Rd1e215">
+                <name ref="#JuliusFirmicus">Iullii firmici</name> 
+                qui in principio suae <title ref="#AstrologyFirmicus">Astrologiae</title>
+              </ref>
+            </cit> 
+            ponit quod constellatio est dispositio syderum 
+            est fatum absolute necessitas respectu cuiuscumque operationis, nam 
+            iste error apparet clare, quia tollit libertatem arbitrii cuiuscumque 
+            causae respectu effectus sui quod est contra experientiam.
+          </p>
+          <p xml:id="l108-sqacim">
+            Secundo quia 
+            actiones liberas voluntatis reducit in causas caelestes 
+            et hoc est falsum quia tales actus non dependent a causis 
+            in materialibus.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e230">
           <head xml:id="l108-Heraera">Error Alkindi</head>
-        <p xml:id="l108-saimni">Sequitur <name ref="#Alkindi">aliquindi</name> in libro suo <title ref="#deRadiisStellicis">de Radiis 
-          <lb ed="#SV"/>stellicis</title> qui ponit in caelesti armonia Relucere omnes 
-          <lb ed="#SV"/>effectus in istis inferioribus maxima necessitate inevita<lb ed="#SV"/>bilitatis.</p>
-        
-        <p xml:id="l108-eqdnan">Ex quibus duo infert. primum quod non est 
-          <lb ed="#SV"/>differentia inter possibile et necessariam quia quidquid poterit esse necessario 
-          <lb ed="#SV"/>erit sed solum est differentia quo ad nos quia non apparet nobis. </p>
-        
-        <p xml:id="l108-siqcpa">secundo infert quod qui caelestem armoniam cognosceret perfecte 
-          <lb ed="#SV"/>tam praesentia praeterita et futura distincte videret et co<lb ed="#SV"/>gnosceret, 
-          sed ista opinio est falsa quia tollit libertatem 
-          <cb ed="#SV" n="330va"/><lb ed="#SV"/>arbitrii et ponit caelum influere respectu cuiuslibet actus 
-          <lb ed="#SV"/>voluntatis quae est contra astrologiam, nam <name ref="#Ptolemy">tholomeus</name> qui 
-          <lb ed="#SV"/>fuit expertissimus <name ref="#Astrologers" type="group">astrologorum</name> dicit in prima propositione <title ref="#Centiloquium">cen<lb ed="#SV"/>toquii</title> 
-          quod <unclear>iudicia[?]</unclear> astrorum sunt inter necessariam et impossibile, 
-          <lb ed="#SV"/>id est, non sunt impossibilia nec necessaria quia possunt eveni<lb ed="#SV"/>re 
-          vel non evenire. Et in prima propositione praedicti li<lb ed="#SV"/>bri 
-          ponit quod bonus astrologus poterit Iuvare opera 
-          <lb ed="#SV"/>humana ut bonus cultor Iuvaret agrum ut esset 
-          <lb ed="#SV"/>fertilis, nam visa dispositione aeris calidum qui disponit 
-          <lb ed="#SV"/>ad infirmitatem homo posset tantum corpus alterare et ei a<lb ed="#SV"/>pplicare 
-          frigida in tantum influentia caelestis nullo modo 
-          <lb ed="#SV"/>noceret corpori nam aliqui dicunt quod ipse ponit 
-          <lb ed="#SV"/>in praedicto libro istam propositionem, scilicet, sapiens dominabitur astris, 
-          <lb ed="#SV"/>sed illam non ponit expresse, licet illa posset elici a praedicta 
-          <lb ed="#SV"/>propositione, et ex hoc habetur quod executio operationum in istis 
-          <lb ed="#SV"/>inferioribus contingenter potest adimpleri.</p>
+          <p xml:id="l108-saimni">
+            Sequitur 
+            <cit>
+              <ref xml:id="l108-Rd1e239">
+                <name ref="#Alkindi">Aliquindi</name> 
+                in libro suo 
+                <title ref="#deRadiisStellicis">De radiis stellicis</title>
+              </ref>
+            </cit> 
+            qui ponit in caelesti armonia Relucere omnes 
+            effectus in istis inferioribus maxima necessitate inevitabilitatis.
+          </p>
+          <p xml:id="l108-eqdnan">
+            Ex quibus duo infert. primum quod non est 
+            differentia inter possibile et necessariam quia quidquid poterit esse necessario 
+            erit sed solum est differentia quo ad nos quia non apparet nobis.
+          </p>
+          <p xml:id="l108-siqcpa">
+            Secundo infert quod qui caelestem armoniam cognosceret perfecte 
+            tam praesentia praeterita et futura distincte videret et cognosceret, 
+            sed ista opinio est falsa quia tollit libertatem 
+            <pb ed="#SV" n="330-v"/>
+            <cb ed="#SV" n="a"/>
+            arbitrii et ponit caelum influere respectu cuiuslibet actus 
+            voluntatis quae est contra astrologiam, 
+            nam 
+            <cit>
+              <ref xml:id="l108-Rd1e261">
+                <name ref="#Ptolemy">tholomeus</name> qui fuit expertissimus 
+                <name ref="#Astrologers" type="group">astrologorum</name> 
+                dicit in prima propositione <title ref="#Centiloquium">centoquii</title>
+              </ref>
+            </cit> 
+            quod <unclear>iudicia[?]</unclear> astrorum sunt inter necessariam et impossibile, 
+            id est, non sunt impossibilia nec necessaria quia possunt evenire 
+            vel non evenire. Et in prima propositione praedicti libri 
+            ponit quod bonus astrologus poterit Iuvare opera 
+            humana ut bonus cultor Iuvaret agrum ut esset 
+            fertilis, nam visa dispositione aeris calidum qui disponit 
+            ad infirmitatem homo posset tantum corpus alterare et ei applicare 
+            frigida in tantum influentia caelestis nullo modo 
+            noceret corpori nam aliqui dicunt quod ipse ponit 
+            in praedicto libro istam propositionem, scilicet, sapiens dominabitur astris, 
+            sed illam non ponit expresse, licet illa posset elici a praedicta 
+            propositione, et ex hoc habetur quod executio operationum in istis 
+            inferioribus contingenter potest adimpleri.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e279">
           <head xml:id="l108-Hecsecs">Error Ciceronis</head>
-        <p xml:id="l108-sctcao">Sequitur 
-          <lb ed="#SV"/>contra <name ref="#Cicero">tullium</name> et sui sequaces quod cum immutabilitate divinae potentiae 
-          <lb ed="#SV"/>et providentiae stat executionis contingentia, nam ista <unclear>copulativa[?]</unclear> 
-          <lb ed="#SV"/>est concedenda deus incommunicabiliter omnibus providet et 
-          <lb ed="#SV"/>contingenter evenit illud quod accidit, prima pars est concessa 
-          <lb ed="#SV"/>et deducta et conceditur ab omnibus.</p>
+          <p xml:id="l108-sctcao">
+            Sequitur 
+            contra <name ref="#Cicero">Tullium</name> et sui sequaces quod cum immutabilitate divinae potentiae 
+            et providentiae stat executionis contingentia, nam ista <unclear>copulativa</unclear> 
+            est concedenda deus incommunicabiliter omnibus providet et 
+            contingenter evenit illud quod accidit, prima pars est concessa 
+            et deducta et conceditur ab omnibus.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e295">
           <head xml:id="l108-Haeraer">Alia error</head>
-        <p xml:id="l108-eqpier">Ex quo patet error 
-          <lb ed="#SV"/>illorum qui ex hac Radice fatum necessario assentiunt res 
-          <lb ed="#SV"/><unclear>necessitative[?]</unclear>. unde imaginatio aliquorum fuit quod divina providentia 
-          <lb ed="#SV"/>ab aeterno vidit et disposuit de futuris et illud eis 
-          <lb ed="#SV"/>conceditur. Sed ipsi addunt aliud quod non conceditur, scilicet, quod non 
-          <lb ed="#SV"/>stat deum aliqualiter facere quam disposuerit. primo quia ipse mu<lb ed="#SV"/>taretur 
-          ex suo consilio. secundo quia ipse eligeret peius et 
-          <lb ed="#SV"/>deordinationem universi quod est malum modo utrumque istorum 
-          <lb ed="#SV"/>ei Repugnat.</p>
-        
-        <p xml:id="l108-eehssm">Ex ex hoc ista imaginatio infert 
-          <lb ed="#SV"/>quod series causarum et effectuum est absolute necessaria, nam 
-          <lb ed="#SV"/>vocat fatum executionem divinae providentiae, sed patet quod iste sit 
-          <lb ed="#SV"/>error, nam quamquam divina providentia sit immutabilis nihilominus 
-          <lb ed="#SV"/>cum libertatem arbitrii quidquid praevidit futurum potest non fore 
-          <lb ed="#SV"/>sine sui mutatione.</p>
+          <p xml:id="l108-eqpier">
+            Ex quo patet error 
+            illorum qui ex hac radice fatum necessario assentiunt res 
+            <unclear>necessitative</unclear>. unde imaginatio aliquorum fuit quod divina providentia 
+            ab aeterno vidit et disposuit de futuris et illud eis 
+            conceditur. Sed ipsi addunt aliud quod non conceditur, scilicet, quod non 
+            stat deum aliqualiter facere quam disposuerit. primo quia ipse mutaretur 
+            ex suo consilio. secundo quia ipse eligeret peius et 
+            deordinationem universi quod est malum modo utrumque istorum 
+            ei repugnat.
+          </p>
+          <p xml:id="l108-eehssm">
+            Ex ex hoc ista imaginatio infert 
+            quod series causarum et effectuum est absolute necessaria, nam 
+            vocat fatum executionem divinae providentiae, sed patet quod iste sit 
+            error, nam quamquam divina providentia sit immutabilis nihilominus 
+            cum libertatem arbitrii quidquid praevidit futurum potest non fore 
+            sine sui mutatione.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e310">
           <head xml:id="l108-Haaeaae">Alia error</head>
-        <p xml:id="l108-sedeaf">Sequitur error dicentiium ex infallibili 
-          <lb ed="#SV"/>deorum suam fati necessitatem contingere vel esse, nam dictum 
-          <lb ed="#SV"/>est a vetulis de nativitate puerorum <unclear>apparent[?]</unclear> fatales deae 
-          <lb ed="#SV"/>dicentes futuros ac prosperos effectus evenire qui vocantur 
-          <lb ed="#SV"/>fata, id est, dicta et <unclear>suanta[?]</unclear> a deis de quibus visum est 
-          <lb ed="#SV"/>quod hoc habuit originem ex mendacio vel potest dici quod 
-          <lb ed="#SV"/>earum demeritis exigentibus consueverunt daemones 
-          <lb ed="#SV"/>eis apparere. Sed ex hoc non sequitur necessitas quia 
-          <lb ed="#SV"/>diabolus est mendax, immo secundum scripturam pater menda<lb ed="#SV"/>cii, 
-          ideo eius dicto non est adhibenda fides.</p>
-        
-        <p xml:id="l108-sddudp">secundo dictum 
-          <lb ed="#SV"/>dicti non imponit necessitatem, et per consequens nec daemones 
-          <lb ed="#SV"/>dictum ut apparet de Revelatione nec ex hoc arguitur falsitas 
-          <lb ed="#SV"/>seu deceptio in deo ut dicetur post.</p>
+          <p xml:id="l108-sedeaf">
+            Sequitur error dicentiium ex infallibili 
+            deorum suam fati necessitatem contingere vel esse, nam dictum 
+            est a vetulis de nativitate puerorum <unclear>apparent</unclear> fatales deae 
+            dicentes futuros ac prosperos effectus evenire qui vocantur 
+            fata, id est, dicta et <unclear>suanta[?]</unclear> a deis de quibus visum est 
+            quod hoc habuit originem ex mendacio vel potest dici quod 
+            earum demeritis exigentibus consueverunt daemones 
+            eis apparere. Sed ex hoc non sequitur necessitas quia 
+            diabolus est mendax, immo secundum scripturam pater mendacii, 
+            ideo eius dicto non est adhibenda fides.
+          </p>
+          <p xml:id="l108-sddudp">
+            Secundo dictum 
+            dicti non imponit necessitatem, et per consequens nec daemones 
+            dictum ut apparet de Revelatione nec ex hoc arguitur falsitas 
+            seu deceptio in deo ut dicetur post.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e328">
           <head xml:id="l108-Hepmepm">Error philosophorum</head>
-        <p xml:id="l108-eqspmi">Ex quo sequitur 
-          <lb ed="#SV"/>error philosophorum in materia fati dicentium quod <name>ypermanes</name> se 
-          <lb ed="#SV"/>habet per modum seminis, necesssitatis ut germinis et ordo 
-          <cb ed="#SV" n="330vb"/><lb ed="#SV"/>per modum influxus et illud habetur in <name ref="#Trismegistus">hermete</name> in libro 
-          <lb ed="#SV"/><title ref="#Trismegistus">de verbo aeterno</title>, nam per illud vocabulum graecum <sic>ypermenes</sic> 
-          <lb ed="#SV"/>intelligitur causa immutabilis. et per necessitatem intelligitur causa 
-          <lb ed="#SV"/>necessitans et per ordinem intelligitur ultima executio, 
-          <lb ed="#SV"/>nam in producibus effectuum hic inferiis tria concurrunt. 
-          <lb ed="#SV"/>primo <sic>ypermenes</sic> se habet per modum seminis, neccisstatis 
-          <lb ed="#SV"/>per modum germinis, ordo per modum fluxus, id est, per pro<lb ed="#SV"/>ductionem 
-          Rei in esse nam ista positio dicitur fuisse <name ref="#Aristotle">aristotelis</name>, 
-          <lb ed="#SV"/>cuius imaginatio stat in hoc quod aliquae sunt causae 
-          <lb ed="#SV"/>immutabiles ut deus et forte intelligentiae et aliae 
-          <lb ed="#SV"/>sunt immutabiles quantum ad aliquid ut corpora caelestia. 
-          <lb ed="#SV"/>aliae sunt causae mutabiles magis propter materiam quae non 
-          <lb ed="#SV"/>sic necessario operatur et nisi esset defectus materiae flui<lb ed="#SV"/>tantis 
-          omnes effectus in istis inferioribus evenirent 
-          <lb ed="#SV"/>de necessitate, et hic est error maximus qui tollit li<lb ed="#SV"/>bertatem 
-          a supremis causis, et videtur quod hoc sit eis 
-          <lb ed="#SV"/>per modum imperfectionis.</p>
-        
-        <p xml:id="l108-sqpiii">secundo quia ponit necessitatem omnium 
-          <lb ed="#SV"/>agentium ad effectum et tantum ponit contingentiam ratione 
-          <lb ed="#SV"/>fluxibilitatis materiae quo secluso omnia evenirent de 
-          <lb ed="#SV"/>necessitate, sed in hoc deficit quia tollit libertatem a 
-          <lb ed="#SV"/>prima causa et libertatem in aliquibus causis liberis in 
-          <lb ed="#SV"/>istis inferioribus.</p> 
+          <p xml:id="l108-eqspmi">
+            Ex quo sequitur 
+            error philosophorum in materia fati dicentium quod <name>ypermanes</name> se 
+            habet per modum seminis, necesssitatis ut germinis et ordo 
+            <cb ed="#SV" n="b"/><!--SV330vb-->
+            per modum influxus et illud habetur in 
+            <cit>
+              <ref xml:id="l108-Rd1e343">
+                <name ref="#Trismegistus">Hermete</name> in libro 
+                <title>de verbo aeterno</title></ref>
+            </cit>, 
+            nam per illud vocabulum graecum <sic>ypermenes</sic> 
+            intelligitur causa immutabilis. et per necessitatem intelligitur causa 
+            necessitans et per ordinem intelligitur ultima executio, 
+            nam in producibus effectuum hic inferiis tria concurrunt. 
+            primo <sic>ypermenes</sic> se habet per modum seminis, necessitatis 
+            per modum germinis, ordo per modum fluxus, id est, per productionem 
+            Rei in esse nam ista positio dicitur fuisse <name ref="#Aristotle">Aristotelis</name>, 
+            cuius imaginatio stat in hoc quod aliquae sunt causae 
+            immutabiles ut deus et forte intelligentiae et aliae 
+            sunt immutabiles quantum ad aliquid ut corpora caelestia. 
+            aliae sunt causae mutabiles magis propter materiam quae non 
+            sic necessario operatur et nisi esset defectus materiae fluitantis 
+            omnes effectus in istis inferioribus evenirent 
+            de necessitate, et hic est error maximus qui tollit libertatem 
+            a supremis causis, et videtur quod hoc sit eis 
+            per modum imperfectionis.
+          </p>
+          <p xml:id="l108-sqpiii">
+            Secundo quia ponit necessitatem omnium 
+            agentium ad effectum et tantum ponit contingentiam ratione 
+            fluxibilitatis materiae quo secluso omnia evenirent de 
+            necessitate, sed in hoc deficit quia tollit libertatem a 
+            prima causa et libertatem in aliquibus causis liberis in 
+            istis inferioribus.
+          </p>
         </div>
-        <div>
+        <div xml:id="l108-Dd1e367">
           <head xml:id="l108-Hcnocno">Conclusio</head>
-        <p xml:id="l108-eehede">Et ex hoc apparet quod omnibus praedictis 
-          <lb ed="#SV"/>modis fatum nihil est immo oppositum ponere est ima<lb ed="#SV"/>ginatio 
-          haeretica et deceptio erronea.</p>
-        
-        <p xml:id="l108-netpeb">notandum est 
-          <lb ed="#SV"/>tamen quod fatum potest capi multipliciter quia ut ait <name ref="#Anselm">anselmus</name> 
-          <lb ed="#SV"/>licet nomen sit abominabile, tamen sententia potest esse bona.</p>
-        </div>  
+          <p xml:id="l108-eehede">
+            Et ex hoc apparet quod omnibus praedictis 
+            modis fatum nihil est immo oppositum ponere est imaginatio 
+            haeretica et deceptio erronea.
+          </p>
+          <p xml:id="l108-netpeb">
+            Notandum est 
+            tamen quod fatum potest capi multipliciter 
+            quia 
+            ut ait 
+            <cit>
+              <ref xml:id="l108-Rd1e379">
+                <name ref="#Anselm">Anselmus</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            licet nomen sit abominabile, 
+            tamen sententia potest esse bona.
+          </p>
+        </div>
       </div>
     </body>
   </text>
