@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -8,62 +7,82 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 100, de Libertate</title>
           <date when="2013-02-18">February 18, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-18">February 18, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-18" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="320-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio100">
-      <head xml:id="l100-Hldlldl">Lectio 100, de Libertate</head>
-        <div>
+        <head xml:id="l100-Hldlldl">Lectio 100, de Libertate</head>
+        <div xml:id="l100-Dd1e109">
           <head xml:id="l100-Hccpccp">Circa corruptelam peccati</head>
-        <p xml:id="l100-apmitd">Antequam prosequatur materia proposita aliqualiter oportet 
-          insistere circa corruptelam peccati, quae est Radix haeresum 
-          et malarum morum et malarum cogitationum praeter 
-          rationes inductas, quia aliquibus non videtur quod ex peccati 
-          corruptela creatura incidat in tot errores pravos 
-          mores ac malas cogitationes et in toti defectus.</p> 
-          <div>
+          <p xml:id="l100-apmitd">
+            Antequam prosequatur materia proposita aliqualiter oportet 
+            insistere circa corruptelam peccati, quae est Radix haeresum 
+            et malarum morum et malarum cogitationum praeter 
+            rationes inductas, quia aliquibus non videtur quod ex peccati 
+            corruptela creatura incidat in tot errores pravos 
+            mores ac malas cogitationes et in toti defectus.
+          </p> 
+          <div xml:id="l100-Dd1e117">
             <head xml:id="l100-Hrqeepc">Rationes quod errores mores ac malas cogitationes ex peccati corruptela</head>
-            <div>
+            <div xml:id="l100-Dd1e122">
             <head xml:id="l100-Hpropro">Prima ratio</head>
-              <p xml:id="l100-eiapep">et Ideo arguitur primo auctoritate scripturae sacrae ubi dicitur 
+              <p xml:id="l100-eiapep">
+                Et ideo arguitur 
+                primo auctoritate scripturae sacrae ubi dicitur 
                 corpus aggravat animam et depravat sensum multa cogitantem, 
                 per corpus quod aggravat animam intelligitur corpus infectum 
                 corruptela peccati originalis et poenae sequentis nam 
                 ipsum aggravat animam quia sicut sunt quantitates motivae in corporibus 
                 ita in spiritualibus, ideo dicit 
                 <ref xml:id="l100-Rzdv3e3" corresp="#l100-Qa3ve3e">
-                  <name ref="#Augustine">augustinus</name> in libro <title ref="#Confessions">confessionum</title>
+                  <name ref="#Augustine">Augustinus</name> 
+                  in libro <title ref="#Confessions">Confessionum</title>
                 </ref>, 
                 <cit>
                   <quote xml:id="l100-Qa3ve3e" source="http://scta.info/resource/aconf-l13-d1e150">
                     amor meus pondus meum
                   </quote>
-                </cit>, nam sicut levitas 
+                </cit>, 
+                nam sicut levitas 
                 corpus sursum et gravitas deorsum, ita caritas 
                 movet mentem sursum erigendo in deum, et cupiditas 
                 quae est vitiosa qualitas aggravat animam et movet eam 
@@ -71,285 +90,428 @@
                 ad quem caritas ducit, ideo bene dicitur quod cupiditas aggravat 
                 animam id est deprimit vires quantum ad potentiam rationalem 
                 eam detrudendo in tenebras, et deprimit 
-                anima quantum ad peccatum et poenam.</p>
+                anima quantum ad peccatum et poenam.
+              </p>
+            </div>
+            <div xml:id="l100-Dd1e146">
+              <head xml:id="l100-Hsrosro">Secunda ratio</head>
+              <p xml:id="l100-saeoli">
+                Secundo, 
+                arguitur ex imaginatione 
+                doctorum antiquorum nam anima rationalis creata 
+                est in horizonte distinguente lucem a tenebris vel in hemisphaerium 
+                lucis distinguens eam a regione tenebrarum, 
+                et virtutes tam morales quam gratuite movent eam 
+                ad regionem lucis in qua regione <name ref="#Adam">adam</name> fuisset 
+                semper in statu innocentiae si cupiditas eum non movisset 
+                ad regionem tenebrarum inferius et per consequens quantum ad 
+                lumen cognoscendae veritatis obtenebratur rationalis potentia 
+                in regione tenebrarum, imaginandum est tamen  quod anima de 
+                se creata est in horizonte distinguente lucem a tenebris, 
+                et ipsa per virtutes monetur in regionem lucis et hemisphaerium 
+                rerum spiritualium, et viceversa ipsa movetur per cupiditatem 
+                in tenebras ubi obfuscatur lumen intelligentiae.
+              </p>
+            </div>
+            <div xml:id="l100-Dd1e158">
+              <head xml:id="l100-Htrotro">Tertia ratio</head>
+              <p xml:id="l100-taaefc">
+                Tertio arguitur 
+                auctoritate <name ref="#Paul">apostoli</name> dicentis quod <quote xml:id="l100-Qd1e168" source="http://scta.info/resource/IIcor3_5">nihil est nobis tamquam ex nobis</quote> 
+                et quantum ad unum rationalem loquitur quia ipse intelligit 
+                cognitione, igitur quantum ad veritatem caritas perficit intellectum 
+                non sufficientem ex nobis eam acquirere sed 
+                sufficientia nostra ex deo est igitur anima cupiditati substantia tendit 
+                in errores, nec sufficit in veritates cognoscendas 
+                de sua felicitate aliquid cogitare, unde <name ref="#Augustine">augustinus</name> contra 
+                <name ref="#Julian">iulianum</name> et <name ref="#Pelagius">pellagium</name> plura scripsit ad istam, tamen 
+                imaginationem consonat, nam ipse ait quod oportet anima cupiditate 
+                vel caritate dirigi nec anima sufficit 
+                quantum ad intellectum practicum habere intellectum Rectum de 
+                agibilibus, nec bonum affectum in volitionibus Rectis 
+                sed quidquid elicit deficiendo vult, quia semper fruitur 
+                creatura et habet creaturam pro obiecto, nam omnis actio 
+                <cb ed="#SV" n="320ra"/>
+                deliberata extra caritatem est mala et peccatum et fruitio 
+                creaturae.
+              </p>
+              <p xml:id="l100-echded">
+                Et circa hoc sunt multae auctoritates 
+                <cit>
+                  <ref xml:id="l100-Rd1e188">
+                    <name ref="#Rimini">Gregorii</name> 
+                    in secundo <title>Sententiarum</title>
+                  </ref>
+                </cit> 
+                ad propositum inductae et 
+                <cit>
+                  <ref xml:id="l100-Rd1e200"><name ref="#Bradwardine">Brovardin</name></ref>
+                </cit> 
+                hoc determinat et dicit.
+              </p>
+            </div>
+            <div xml:id="l100-Dd1e207">
+              <head xml:id="l100-Hqroqro">Quarta ratio</head>
+              <p xml:id="l100-qaapvs">
+                Quarto, 
+                arguitur auctoritate 
+                <cit>
+                  <ref xml:id="l100-Rd1e216" target="http://scta.info/resource/aristneth-l1">
+                    <name ref="#Aristotle">Aristotelis</name> in primo 
+                    <title ref="#Ethics">Ethicorum</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                qui licet sub terminis nostris et theologicis hoc non 
+                dicat aequivalenter, 
+                tamen dicit quod in nobis est aliquid quod adversatur rationi, 
+                et est quaedam infirmitas naturalis existens 
+                in nobis cuius cura sanatur per virtutes et componitur creatura 
+                talis quod in ea vires inferiores obediunt rationi, 
+                sed semper intellectus obedit sensui nisi per virtutes sanetur.
+              </p>
+              <p xml:id="l100-eceppi">
+                et 
+                confirmatur ex auctoritate 
+                <cit>
+                  <ref xml:id="l100-Rd1e234">
+                    <name ref="#Cicero">Tullii</name> in libro 
+                    <title ref="#TuscanDisputations">De tusculanis quaestionibus</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                dicentis quod a nativitate hoc habet quod natura eius sit Recta quantum ad 
+                primaeva institutionem, et tamen contrariae pravis opinionibus et erroribus 
+                inevitabiliter inducitur anima. 
+                Et ideo consequenter dicit evidenter 
+                fabulas <unclear>poeticas</unclear> esse periculosas iuvenibus 
+                et esse expellendas a civitatibus 
+                sed forte ipse capit nomen poetae 
+                vel poetarum pro ioculatoribus.
+              </p>
+            </div>
+            <div xml:id="l100-Dd1e253">
+              <head xml:id="l100-Hqnrqnr">Quinta ratio</head>
+              <p xml:id="l100-qaalsp">
+                Quinto arguitur auctoritate 
+                secundum quod recitat 
+                <cit>
+                  <ref xml:id="l100-Rd1e262">
+                    <name ref="#Macrobius">Macrobius</name> 
+                    in <title>De sompno scipionis</title>
+                  </ref>
+                </cit> 
+                qui 
+                ponit quod anima inhaerendo corpori et coniunctio eius cum ipso 
+                est quaedam cuius mortificatio non quod anima desinat esse, 
+                sed per unionem ipsius cum corpore privatur a suis operationibus vitalibus, 
+                nam illa unio imponit laesionem animae cum unitur 
+                cum corpore quia ipsa coniuncta corpori indisponitur ad 
+                veritatis contemplationem et inclinatur ad falsitatem nam 
+                corpus vocatur animae sepulchrum et infernum animae et 
+                animam vocat mortuam, et nedum scriptura concedit 
+                corruptelam, sed etiam philosophi, 
+                unde secundum <name ref="#Macrobius">Macrobium</name> anima 
+                ex communicatione eius cum corpore inebriatur letheo fluvio 
+                qui fingitur esse fluvius infernalis per cuius potationem 
+                potantes obliviscuntur suae felicitatis, modo letheus 
+                fluvius est in corpore, quia per communicationem animae cum corpore 
+                ipsa anima redditur in humilis ad summi finis consecutionem 
+                et caeca atque prona est ad assentiendum falsitatibus 
+                et variis erroribus, et ponit infernales fluvios 
+                anima laedentes secundum potentias.
+              </p>
+            </div>
+            <div xml:id="l100-Dd1e277">
+              <head xml:id="l100-Hsxrsxr">Sexta ratio</head>
+              <p xml:id="l100-seuepo">
+                Sexto et ultimo, 
+                arguitur quia quilibet experitur pravas operationes.
+              </p> 
+              <p xml:id="l100-sedrae">
+                Secundo,
+                experitur difficultatem et violentiam a principio 
+                ad bene operandum quia doctrina est contra eorum inclinationem, 
+                ideo verberibus et terroribus inducuntur pueri ad doctrinam 
+                quia magis refugiunt eam et refutant frequentare 
+                scolas et tendunt ad contrarium ad quod deberent tendere 
+                modo doctrina est dispositio convenientissima quae Refugitur ab 
+                eis.
+              </p>
+              <p xml:id="l100-tedehn">
+                Tertio, 
+                experimur defectus maiores circa individua 
+                humanae speciei, 
+                nam alia animalia statim nata vitari sibi 
+                procurant et homo non.
+              </p>
+              <p xml:id="l100-iihaid">
+                Item, 
+                illa habent prudentiam 
+                sufficientem pro vita conservanda et homo derelictus non haberet 
+                aequalem prudentiam bestiis, immoymo minorem quia adveniente 
+                mala consuetudine creatura efficeretur peior 
+                tamen si nutriretur inter aliam esset peior animalibus, 
+                et ideo homo sine virtutibus est alias sceleratissimum secundum 
+                <cit>
+                  <ref xml:id="l100-Rd1e295">
+                    <name ref="#Aristotle">Philosophum</name> 
+                    in libro 
+                    <title ref="#Politics">Politicarum</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit>, 
+                et sic natura humana derelicta  
+                <cb ed="#SV" n="b"/><!--320rb-->
+                tendit de directo in malum, sed de primaria iustitione non 
+                quia tendit in bonum directa ab infallibili dirigente.
+              </p>
+            </div>
           </div>
-        <div>
-          <head xml:id="l100-Hsrosro">Secunda ratio</head>
-          <p xml:id="l100-saeoli">secundo arguitur ex imaginatione 
-            doctorum antiquorum nam anima rationalis creata 
-            est in horizonte distinguente lucem a tenebris vel in hemisphaerium 
-            lucis distinguens eam a Regione tenebrarum, 
-            et virtutes tam morales quam gratuite movent eam 
-            ad Regionem lucis in qua Regione <name ref="#Adam">adam</name> fuisset 
-            semper in statu innocentiae si cupiditas eum non movisset 
-            ad Regionem tenebrarum inferius et per consequens quantum ad 
-            lumen cognoscendae veritatis obtenebratur rationalis potentia 
-            in Regione tenebrarum, imaginandum est tamen  quod anima de 
-            se creata est in horizonte distinguente lucem a tenebris, 
-            et ipsa per virtutes monetur in Regionem lucis et hemisphaerium 
-            Rerum spiritualium, et viceversa ipsa movetur per cupiditatem 
-            in tenebras ubi obfuscatur lumen intelligentiae.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Htrotro">Tertia ratio</head>
-        <p xml:id="l100-taaefc">tertio arguitur 
-          auctoritate <name ref="#Paul">apostoli</name> dicentis quod <quote source="http://scta.info/resource/IIcor3_5">nihil est nobis tamquam ex nobis</quote> 
-          et quantum ad unum rationalem loquitur quia ipse intelligit 
-          cognitione, igitur quantum ad veritatem caritas perficit intellectum 
-          non sufficientem ex nobis eam acquirere sed 
-          sufficientia nostra ex deo est igitur anima cupiditati substantia tendit 
-          in errores, nec sufficit in veritates cognoscendas 
-          de sua felicitate aliquid cogitare, unde <name ref="#Augustine">augustinus</name> contra 
-          <name ref="#Julian">iulianum</name> et <name ref="#Pelagius">pellagium</name> plura scripsit ad istam, tamen 
-          imaginationem consonat, nam ipse ait quod oportet anima cupiditate 
-          vel caritate dirigi nec anima sufficit 
-          quantum ad intellectum practicum habere intellectum Rectum de 
-          agibilibus, nec bonum affectum in volitionibus Rectis 
-          sed quidquid elicit deficiendo vult, quia semper fruitur 
-          creatura et habet creaturam pro obiecto, nam omnis actio 
-          <cb ed="#SV" n="320ra"/>deliberata extra caritatem est mala et peccatum et fruitio 
-          creaturae.</p>
-        
-        <p xml:id="l100-echded">Et circa hoc sunt multae auctoritates 
-          <name ref="#Rimini">gregorii</name> in secundo <title>sententiarum</title> ad propositum inductae et <name ref="#Bradwardine">brovardin</name> 
-          hoc determinat et dicit.</p>
-        
-        </div>
-        <div>
-          <head xml:id="l100-Hqroqro">Quarta ratio</head>
-        <p xml:id="l100-qaapvs">Quarto arguitur auctoritate <ref type="citation"><name ref="#Aristotle">aristotelis</name> in primo 
-          <title ref="#Ethics">ethicorum</title></ref> qui licet sub terminis nostris et theologicis hoc non 
-          dicat aequivalenter tamen dicit quod in nobis est aliquid quod 
-          adversatur rationi, et est quaedam infirmitas naturalis existens 
-          in nobis cuius cura sanatur per virtutes et componitur creatura 
-          talis quod in ea vires inferiores obediunt rationi, sed 
-          semper intellectus obedit sensui nisi per virtutes sanetur.</p>
-        
-          <p xml:id="l100-eceppi">et 
-            confirmatur ex auctoritate <name ref="#Cicero">tullii</name> in libro <title ref="#TuscanDisputations">de tusculanis quaestionibus</title> 
-            dicentis quod a nativitate hoc habet quod natura eius sit Recta quantum ad 
-            primaeva institutionem, et tamen contrariae pravis opinionibus et erroribus 
-            inevitabiliter inducitur anima. Et ideo consequenter dicit evidenter 
-            fabulas <unclear>poetitas[?]</unclear> esse periculosas Iuvenibus et esse expellendas 
-            a civitatibus sed forte ipse capit nomen poetae 
-            vel poetarum pro Ioculatoribus.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Hqnrqnr">Quinta ratio</head>
-        <p xml:id="l100-qaalsp">quinto arguitur auctoritate 
-          secundum quod Recitat <name ref="#Macrobius">macrobius</name> in <title>de sompno scipionis</title> qui 
-          ponit quod anima inhaerendo corpori et coniunctio eius cum ipso 
-          est quaedam cuius mortificatio non quod anima desinat esse, 
-          sed per unionem ipsius cum corpore privatur a suis operationibus vitalibus, 
-          nam illa unio Imponit laesionem animae cum unitur 
-          cum corpore quia ipsa coniuncta corpori indisponitur ad 
-          veritatis contemplationem et inclinatur ad falsitatem nam 
-          corpus vocatur animae sepulchrum et infernum animae et 
-          animam vocat mortuam, et nedum scriptura concedit 
-          corruptelam, sed etiam philosophi, unde secundum <name ref="#Macrobius">macrobium</name> anima 
-          ex communicatione eius cum corpore inebriatur letheo fluvio 
-          qui fingitur esse fluvius infernalis per cuius potationem 
-          potantes obliviscuntur suae felicitatis, modo letheus 
-          fluvius est in corpore, quia per communicationem animae cum corpore 
-          ipsa anima Redditur in humilis ad summi finis consecutionem 
-          et caeca atque prona est ad assentiendum falsitatibus 
-          et variis erroribus, et ponit infernales fluvios 
-          anima laedentes secundum potentias.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Hsxrsxr">Sexta ratio</head>
-        <p xml:id="l100-seuepo">
-          sexto et ultimo 
-          arguitur quia quilibet experitur pravas operationes.</p> 
-        
-        <p xml:id="l100-sedrae">secundo 
-          experitur difficultatem et violentiam a principio 
-          ad bene operandum quia doctrina est contra eorum inclinationem, 
-          ideo verberibus et terroribus inducuntur pueri ad doctrinam 
-          quia magis Refugiunt eam et Refutant frequentare 
-          scolas et tendunt ad contrarium ad quod deberent tendere 
-          modo doctrina est dispositio convenientissima quae Refugitur ab 
-          eis.</p>
-        
-        <p xml:id="l100-tedehn">tertio experimur defectus maiores circa individua 
-          humanae speciei, nam alia animalia statim nata vitari sibi 
-          procurant et homo non.</p>
-        
-        <p xml:id="l100-iihaid">Item illa habent prudentiam 
-          sufficientem pro vita conservanda et homo derelictus non haberet 
-          aequalem prudentiam bestiis, immoymo minorem quia adveniente 
-          mala consuetudine creatura efficeretur peior 
-          tamen si nutriretur inter aliam esset peior animalibus, 
-          et ideo homo sine virtutibus est alias sceleratissimum secundum 
-          <ref type="citation"><name ref="#Aristotle">philosophum</name> in libro <title ref="#Politics">politicarum</title></ref> et sic natura humana derelicta  
-          <cb ed="#SV" n="320rb"/>tendit de directo in malum, sed de primaria iustitione non 
-          quia tendit in bonum directa ab infallibili dirigente.</p>
-        </div>
-        </div>
-        
-        <div>
-          <head xml:id="l100-Hormorm">opino Rabbi Moyses</head>
-        
-          <p xml:id="l100-eirsho">Ex istis Radicibus sequitur vel verisimilitudo illius quod dicit 
-            <name ref="#Maimonides">Rabbi moyses</name> in IIIo libro <title ref="#GuideForThePerplexed">de duce dubiorum</title> de gente 
-            <unclear>casede[?]</unclear> quae est gens sabiorum credente deum esse creaturam 
-            puram corporalem, quia caelum vel ignem poterit esse deum, 
-            et ibi dicit aliqua quae sunt incredibilia, sed attenta peccati 
-            corruptela bene est credibile quod dicit quod gens huiusmodi 
-            concessit <name ref="#Adam">adam</name> fuisse et esse prophetam lunae et colere lunam 
-            quae de terra promissionis veniens attulit arborem auri 
-            cum frondibus quae faciunt hominum depravationes ex peccati corruptela 
-            et ibi idolatriam artem imaginum et divinationum 
-            et artes sacrilegas habuisse originem.</p>
-        
-        <p xml:id="l100-ssqmis">secundo 
-          sequitur quod difficultas Resistendi diabolo non oritur ex 
-          poteste et magnitudine illius sed ex pronitate Resistentiae, 
-          quia tanta facilitas humanae naturae est ad malum quod minimus 
-          impulsus sufficeret.</p>
-        
-          <p xml:id="l100-tscmie">tertio sequitur contra Impugnantis <name ref="#Bradwardine">brovardin</name> 
-            dicentem quod idolatriae adorabant rem pure corporalem 
-            tanquam deum, nam aliqui contra hoc dicunt quod numquam fuit 
-            tanta deliratio humanae mentis quod Iudicaret creaturam 
-            corporalem esse deum nam oppositum dicitur quod ex corruptela 
-            peccati est inclinatio ad sacrilegas falsitates et tanto 
-            determinores quanto vehementius mens movetur in eas.</p>
-        
-        <p xml:id="l100-qspouc">quarto sequitur probabile dicere amarum diligere denarium 
-          absque relatione in aliud <seg ana="#politica">nam secundum institutionem politicam denarius 
-          est constitutus</seg> ad procurandum necessaria modo constat 
-          aliquem tantum delicare quod denarium ad usum non diligit 
-          ut apparet in experimento quod quis <unclear>habundet[?]</unclear> denariis 
-          non propter usum sed tantum diligat propter formam, et sic avaritia 
-          est idolorum servitus quia stat quod aliquis tanquam 
-          pro fine ultimo prostituat sibi divitias omni usu circumscripto.</p>
-        
-        <p xml:id="l100-qspscc">quinto sequitur possibilitas adorationis ignis per 
-          <name ref="#Chaldeans">caldeos</name> unde <name ref="#Abraham">abraham</name> deus liberavit de vi <name ref="#Chaldeans">caldeorum</name> 
-          nam <name ref="#Abraham">abraham</name> natus est in <name type="place">caldea</name> nisi colebatur ignis 
-          tanquam deus sed quia Reprobavit hoc ponendo differentiam inter 
-          agens principalem et eius instrumentum, ideo fuit in igne 
-          positus et deus eum liberavit et hoc est quod ait <name ref="#Ezra">esdras</name> 
-          <name ref="#Nehemiah">neemiae</name> quarto capitulo faciens suam orationem ait  <unclear>tudinem[?]</unclear> 
-          deus qui eripuisti <name ref="#Abraham">abraham</name> de igne <name ref="#Chaldeans">caldeorum</name> 
-          et tanta potest esse deliratio creaturae quod ipsa adoret 
-          corporale tanquam deum. unde sapientiae 13mo scribitur 
-          nec operibus attendentes cognoverunt quis esset 
-          artifex aut ignem aut lunam aut caelum aut elementum 
-          et tales rectores deos putaverunt et sic creaturam 
-          coluerunt.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Hocecer">Obiecto <unclear>caldaeis[?]</unclear> et responsio</head>
-          
-        <p xml:id="l100-scaavc">Sed contra arguitur de <name ref="#Chaldeans">caldeis</name> quia gens 
-          <name ref="#Chaldeans">caldesim</name> est gens <name ref="#Chaldeans">caldeica</name> et tamen adoraverunt 
-          solem pro deo principali, et lunam pro deo minus principali 
-          ex eo quod experiebantur nobiles operationes solis et 
-          lunae, et tamen scriptura dicit quod <name rend="#Abraham">abraham</name> est deliberatus 
-          <cb ed="#SV" n="320va"/>ab vi <name ref="#Chaldeans">caldeorum</name>.</p>
-        
-          <p xml:id="l100-rqcien">Respondetur quod <name ref="#Chaldeans">caldeorum</name> opinio fuit quod caelum 
-            sit de natura ignis, probatio quod sit ignis, nam dicit 
-            <name rend="#Cicero">tulius</name> in VIo <title>de republica</title> hoc sententialiter nam 
-            ipse vocat stellas sempiternos ignes scilicet, in textu 
-            quem exponit <name rend="#Macrobius">macrobius</name> et sic non est discrepantia 
-            quod <name ref="#Chaldeans">caldei</name> colant solem et ignem tanquam deum summum 
-            et inter omnes effectus existentes infra concavum orbis 
-            lunae ignis est nobilior.</p>
-        
-        <p xml:id="l100-siccol">secundo ipsi colebant ignem, 
-          id est, nobiliorem creaturam existentem in concavo orbis lunae.</p>
-        
-          <p xml:id="l100-eehhfv">Et ex hac peste Remanserunt vestigia usque 
-            nunc inter christianos. Unde vetulae faciunt ignem superstitiose 
-            in certis noctibus et ibi faciunt invocationes 
-            superstitiosas et sacrilegas ut evitent mala 
-            et maxime laesiones ab igne pro toto anno, et tunc 
-            faciunt de ossibus nunc de lignis <unclear>cicuiendo[?]</unclear> ignem 
-            saltando infra et supra. et ex hoc ars quae pyromantia 
-            vocatur originem sumpsit ubi de occultis superstitiosi 
-            volunt Iudicare de omnibus secundum sonum factum ab igne 
-            praecipue ad hoc facta et in certis temporibus anni, et tunc 
-            sunt Regulae secundum sanos varios ad eliciendum Iudicia 
-            diversa. et etiam secundum quod flammae variae figurantur, et hoc 
-            omnia sunt vestigia idolatriae antiquissime. Ita quod per fidem 
-            christianam non possunt evelli, et ex hoc habuit originem 
-            ciromantia hydromantia et geomantia maxime 
-            viget quia multi sunt qui ea utuntur loco vere astrologiae vel medicinae quaequid ars nullo colore 
-            veritatis firmatur sed pure gratuite acceptatur ab anima 
-            corrupta ex peccato originali, vel dicitur quod geomantia 
-            in proiectione punctorum Reducitur ad causas per se, nam 
-            stat quod si sint diversi proicientes quod faciunt iudicia 
-            de omnibus, et faciant figuras secundum peritatem et imperitatem, 
-            et tamen non Reducitur secundum eas ad causa per se, scilicet, caelum 
-            et motus caelestes, licet appareat, sed Reducitur ad malum 
-            nam stat quod duo proiciant in eadem hora et tamen habebunt 
-            figuras varias.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Haoeoer">Alia obiectio et responsio</head>
-        <p xml:id="l100-cdival">Contra dicta inquiritur de dubio praecipue 
-          quantum ad corruptelam, nam vel corruptela est habitus intellectus 
-          vel voluntatis, si intellectus igitur non immutat potentias concupiscibiles 
-          et irascibiles, si voluntatis tunc non immutat 
-          immediate potentiam cognitivam et sic nulla est corruptela omnium 
-          virium animae laesiva.</p>
-          
-        <p xml:id="l100-rqnneo">Respondetur quod nec iustitia originalis 
-          est qualitas positiva, nec eius privatio, sed imaginandum 
-          est sic quod iustitia originalis dicetur esse pro tanto in aliquo 
-          quod talis habitudo est in eo quod vires inferiores obediunt 
-          viribus superioribus et paratae sunt semper obedire ut exteriora 
-          elementa vel membra obediant animae et 
-          rationi in statu innocentiae, et nunc non obediunt et 
-          ideo subtractio originalis iustitiae non erit positiva qualitas 
-          nec ipsa iustitia maxime, sed iustitia originalis et habi<cb ed="#SV" n="320vb"/>tudo 
-          potentiarum talis quod vires inferiores obediebant rationi 
-          in illo statu, vel natae erant obedire.</p>
-        </div>
-        <div>
-          <head xml:id="l100-Haoraor">Alia obiectio et responsio</head>
-       <p xml:id="l100-scoesi">Sed consequenter oportet 
-         dicere quod privatio iustitiae originalis est dispositio talis quod 
-         potentiae sensitivae non obediunt rationi, immo econverso ratio est 
-         subiecta viribus sensitivis et sic potentia rationalis esset 
-         nunc laesa non quia perdidit aliquam qualitatem boni et 
-         acquisivit malam, sed quia ordo alius est quam erat in 
-         statu innocentiae.</p> 
-          
-          <p xml:id="l100-sdaape">Sed diceret aliquis quod ex hoc non 
-            sequitur caecitas intellectus nec sequitur nisi difficultas in 
-            exercendo vim imperativam seu exsequendo, et ideo 
-            praeter hoc additur quod nedum propter culpam originalem 
-            sublata est obedientia virium inferiorum ad rationem 
-            sed etiam sublata est specialis dei assistentia quantum ad 
-            potentiae elevationem.</p>
-        
-        <p xml:id="l100-svrrci">secunda via Respondendi quod cupiditas 
-          est qualitas inficiens totum animae Regimen et caecans 
-          intellectum et perturbans potentias rationalem concupiscibilem 
-          irascibilem.</p>
-        
-        <p xml:id="l100-unebpe">Unde notandum est quod sicut anima est unica potentia 
-          rationalis concupiscibilis irascibilis sed secundum varios actus 
-          vocatur diversis nominibus et sic anima quae est unica tripliciter 
-          operatur et ita qualitas unica est tripliciter animae immutativa 
-          quod dupliciter sic aliqua talis apparet de fide ut dicunt <name ref="#WilliamOfParis">Guillelmus 
-            parisiensis</name>, <name ref="#WilliamOfAuxerre">guillelmus altissiodorensis</name>, quia nedum ipsa fides est 
-          primae veritatis cognitio sed amor et tenet <name ref="#Wodeham">adam</name> quod omnis amor est cognitio et sic non Repugnat 
-          quod cupiditas sit qualitas prava caecans intellectum et 
-          se habet per modum habitus continentis totam latitudinem omnium 
-          habituum pravorum ut caritas continet omnis habitus virtuosos 
-          et omnem latitudinem omnium virtutum, et 
-          ita de cupiditate dicitur quod ipsa est <unclear>immutativa[?]</unclear> vitiose et 
-          erroneae immutat intellectum, nam sive apparentia 
-          laesus in natura inclinatur ad assentiendum falso, et iste 
-          modus Respondendi secundus est bene probabilis, etc.</p>
+          <div xml:id="l100-Dd1e314">
+            <head xml:id="l100-Hormorm">Opinio Rabbi Moyses</head>
+            <p xml:id="l100-eirsho">
+              Ex istis radicibus 
+              sequitur vel verisimilitudo illius 
+              quod dicit 
+              <cit>
+                <ref xml:id="l100-Rd1e323">
+                  <name ref="#Maimonides">Rabbi moyses</name> 
+                  in IIIo libro 
+                  <title ref="#GuideForThePerplexed">De duce dubiorum</title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              de gente 
+              <unclear>casede</unclear> quae est gens sabiorum credente deum esse creaturam 
+              puram corporalem, quia caelum vel ignem poterit esse deum, 
+              et ibi dicit aliqua quae sunt incredibilia, sed attenta peccati 
+              corruptela bene est credibile quod dicit quod gens huiusmodi 
+              concessit <name ref="#Adam">Adam</name> fuisse et esse prophetam lunae et colere lunam 
+              quae de terra promissionis veniens attulit arborem auri 
+              cum frondibus quae faciunt hominum depravationes ex peccati corruptela 
+              et ibi idolatriam artem imaginum et divinationum 
+              et artes sacrilegas habuisse originem.
+            </p>
+            <p xml:id="l100-ssqmis">
+              Secundo 
+              sequitur quod difficultas resistendi diabolo non oritur ex 
+              poteste et magnitudine illius sed ex pronitate resistentiae, 
+              quia tanta facilitas humanae naturae est ad malum quod minimus 
+              impulsus sufficeret.
+            </p>
+            <p xml:id="l100-tscmie">
+              Tertio sequitur contra impugnantis <name ref="#Bradwardine">Brovardin</name> 
+              dicentem quod idolatriae adorabant rem pure corporalem 
+              tanquam deum, nam aliqui contra hoc dicunt quod numquam fuit 
+              tanta deliratio humanae mentis quod iudicaret creaturam 
+              corporalem esse deum nam oppositum dicitur quod ex corruptela 
+              peccati est inclinatio ad sacrilegas falsitates et tanto 
+              determinores quanto vehementius mens movetur in eas.
+            </p>
+            <p xml:id="l100-qspouc">
+              Quarto sequitur probabile dicere amarum diligere denarium 
+              absque relatione in aliud, 
+              nam secundum institutionem politicam denarius 
+              est constitutus ad procurandum necessaria modo constat 
+              aliquem tantum delicare quod denarium ad usum non diligit 
+              ut apparet in experimento quod quis <unclear>habundet</unclear> denariis 
+              non propter usum sed tantum diligat propter formam, 
+              et sic avaritia est idolorum servitus quia stat quod aliquis tanquam 
+              pro fine ultimo prostituat sibi divitias omni usu circumscripto.
+            </p>
+            <p xml:id="l100-qspscc">
+              Quinto sequitur possibilitas adorationis ignis per 
+              <name ref="#Chaldeans">caldeos</name> 
+              unde <name ref="#Abraham">Abraham</name> 
+              deus liberavit de vi <name ref="#Chaldeans">Caldeorum</name> 
+              nam <name ref="#Abraham">Abraham</name> natus est in 
+              <name type="place">caldea</name> nisi colebatur ignis 
+              tanquam deus sed quia reprobavit hoc ponendo differentiam inter 
+              agens principalem et eius instrumentum, 
+              ideo fuit in igne positus et deus eum liberavit 
+              et hoc est quod ait <name ref="#Ezra">Esdras</name> 
+              <name ref="#Nehemiah">Neemiae</name> 
+              quarto capitulo faciens suam orationem ait 
+              <unclear>tudinem[?]</unclear> deus qui eripuisti 
+              <name ref="#Abraham">abraham</name> de igne <name ref="#Chaldeans">caldeorum</name> 
+              et tanta potest esse deliratio creaturae quod ipsa adoret 
+              corporale tanquam deum. 
+              Unde sapientiae 13mo scribitur 
+              <cit>
+                <quote xml:id="l100-Qd1e394" source="http://scta.info/resource/sap13_1">
+                  nec operibus attendentes cognoverunt quis esset 
+                  artifex aut ignem aut lunam aut caelum aut elementum 
+                  et tales rectores deos putaverunt
+                </quote>
+              </cit> 
+              et sic creaturam 
+              coluerunt.
+            </p>
           </div>
+          <div xml:id="l100-Dd1e400">
+            <head xml:id="l100-Hocecer">Obiecto <unclear>caldaeis[?]</unclear> et responsio</head>
+            <p xml:id="l100-scaavc">
+              Sed contra arguitur 
+              de <name ref="#Chaldeans">caldeis</name> quia gens 
+              <name ref="#Chaldeans">caldesim</name> est gens 
+              <name ref="#Chaldeans">caldeica</name> 
+              et tamen adoraverunt 
+              solem pro deo principali, et lunam pro deo minus principali 
+              ex eo quod experiebantur nobiles operationes solis et lunae, 
+              et tamen scriptura dicit
+              quod <name rend="#Abraham">Abraham</name> est deliberatus 
+              <pb ed="#SV" n="320-v"/>
+              <cb ed="#SV" n="a"/>
+              ab vi <name ref="#Chaldeans">caldeorum</name>.
+            </p>
+            <p xml:id="l100-rqcien">
+              Respondetur quod 
+              <name ref="#Chaldeans">caldeorum</name> opinio fuit 
+              quod caelum sit de natura ignis, 
+              probatio quod sit ignis, 
+              nam dicit 
+              <cit>
+                <ref xml:id="l100-Rd1e438"><name rend="#Cicero">Tulius</name> in VI <title>De republica</title></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              hoc sententialiter nam 
+              ipse vocat stellas sempiternos ignes scilicet, in textu 
+              quem exponit <name rend="#Macrobius">macrobius</name> et sic non est discrepantia 
+              quod <name ref="#Chaldeans">caldei</name> colant solem et ignem tanquam deum summum 
+              et inter omnes effectus existentes infra concavum orbis 
+              lunae ignis est nobilior.
+            </p>
+            <p xml:id="l100-siccol">
+              Secundo ipsi colebant ignem, 
+              id est, nobiliorem creaturam existentem in concavo orbis lunae.
+            </p>
+            <p xml:id="l100-eehhfv">
+              Et ex hac peste remanserunt vestigia usque 
+              nunc inter christianos. Unde vetulae faciunt ignem superstitiose 
+              in certis noctibus et ibi faciunt invocationes 
+              superstitiosas et sacrilegas ut evitent mala 
+              et maxime laesiones ab igne pro toto anno, et tunc 
+              faciunt de ossibus nunc de lignis <unclear>cicuiendo[?]</unclear> ignem 
+              saltando infra et supra. et ex hoc ars quae pyromantia 
+              vocatur originem sumpsit ubi de occultis superstitiosi 
+              volunt Iudicare de omnibus secundum sonum factum ab igne 
+              praecipue ad hoc facta et in certis temporibus anni, et tunc 
+              sunt Regulae secundum sanos varios ad eliciendum Iudicia 
+              diversa. et etiam secundum quod flammae variae figurantur, et hoc 
+              omnia sunt vestigia idolatriae antiquissime. Ita quod per fidem 
+              christianam non possunt evelli, et ex hoc habuit originem 
+              ciromantia hydromantia et geomantia maxime 
+              viget quia multi sunt qui ea utuntur loco vere astrologiae 
+              vel medicinae quaequid ars nullo colore 
+              veritatis firmatur sed pure gratuite acceptatur ab anima 
+              corrupta ex peccato originali, vel dicitur quod geomantia 
+              in proiectione punctorum Reducitur ad causas per se, nam 
+              stat quod si sint diversi proicientes quod faciunt iudicia 
+              de omnibus, et faciant figuras secundum peritatem et imperitatem, 
+              et tamen non Reducitur secundum eas ad causa per se, scilicet, caelum 
+              et motus caelestes, licet appareat, sed reducitur ad malum 
+              nam stat quod duo proiciant in eadem hora et tamen habebunt 
+              figuras varias.
+            </p>
+          </div>
+          <div xml:id="l100-Dd1e467">
+            <head xml:id="l100-Haoeoer">Alia obiectio et responsio</head>
+            <p xml:id="l100-cdival">
+              Contra dicta inquiritur de dubio praecipue 
+              quantum ad corruptelam, 
+              nam vel corruptela est habitus intellectus 
+              vel voluntatis, 
+              si intellectus, 
+              igitur non immutat potentias concupiscibiles 
+              et irascibiles, 
+              si voluntatis, tunc non immutat 
+              immediate potentiam cognitivam, 
+              et sic nulla est corruptela omnium 
+              virium animae laesiva.
+            </p>
+            <p xml:id="l100-rqnneo">
+              Respondetur quod nec iustitia originalis 
+              est qualitas positiva, nec eius privatio, sed imaginandum 
+              est sic quod iustitia originalis dicetur esse pro tanto in aliquo 
+              quod talis habitudo est in eo quod vires inferiores obediunt 
+              viribus superioribus et paratae sunt semper obedire ut exteriora 
+              elementa vel membra obediant animae et 
+              rationi in statu innocentiae, 
+              et nunc non obediunt et 
+              ideo subtractio originalis iustitiae non erit positiva qualitas 
+              nec ipsa iustitia maxime, 
+              sed iustitia originalis et habi<cb ed="#SV" n="b"/><!--SV320vb-->tudo 
+              potentiarum talis quod vires inferiores obediebant rationi 
+              in illo statu, vel natae erant obedire.
+            </p>
+          </div>
+          <div xml:id="l100-Dd1e482">
+            <head xml:id="l100-Haoraor">Alia obiectio et responsio</head>
+            <p xml:id="l100-scoesi">
+              Sed consequenter oportet 
+              dicere quod privatio iustitiae originalis 
+              est dispositio talis quod 
+              potentiae sensitivae non obediunt rationi, 
+              immo econverso ratio est 
+              subiecta viribus sensitivis, 
+              et sic potentia rationalis esset 
+              nunc laesa non 
+              quia perdidit aliquam qualitatem boni et 
+              acquisivit malam, 
+              sed quia ordo alius est quam erat in 
+              statu innocentiae.
+            </p> 
+            <p xml:id="l100-sdaape">
+              Sed diceret aliquis quod ex hoc non 
+              sequitur caecitas intellectus nec sequitur nisi difficultas in 
+              exercendo vim imperativam seu exsequendo, 
+              et ideo praeter hoc additur 
+              quod nedum propter culpam originalem 
+              sublata est obedientia virium inferiorum ad rationem 
+              sed etiam sublata est specialis dei assistentia quantum ad 
+              potentiae elevationem.
+            </p>
+            <p xml:id="l100-svrrci">
+              Secunda via respondendi quod cupiditas 
+              est qualitas inficiens totum animae regimen et caecans 
+              intellectum et perturbans potentias rationalem concupiscibilem 
+              irascibilem.
+            </p>
+            <p xml:id="l100-unebpe">
+              Unde notandum est quod sicut anima est unica potentia 
+              rationalis concupiscibilis irascibilis sed secundum varios actus 
+              vocatur diversis nominibus et sic anima quae est unica tripliciter 
+              operatur et ita qualitas unica est tripliciter animae immutativa 
+              quod dupliciter sic aliqua talis apparet de fide 
+              ut dicunt 
+              <name ref="#WilliamOfParis">Guillelmus Parisiensis</name>, 
+              <name ref="#WilliamOfAuxerre">Guillelmus Altissiodorensis</name>  
+              quia nedum ipsa fides est 
+              primae veritatis cognitio sed amor, 
+              et tenet 
+              <cit>
+                <ref xml:id="l100-Rd1e506"><name ref="#Wodeham">Adam</name></ref>
+                <bibl>XXX</bibl>
+              </cit>
+              <!-- possible quote here -->
+              quod omnis amor est cognitio, 
+              et sic non repugnat 
+              quod cupiditas sit qualitas prava caecans intellectum et 
+              se habet per modum habitus continentis totam latitudinem omnium 
+              habituum pravorum ut caritas continet omnis habitus virtuosos 
+              et omnem latitudinem omnium virtutum, 
+              et ita de cupiditate dicitur 
+              quod ipsa est <unclear>immutativa</unclear> vitiose et 
+              erroneae immutat intellectum, 
+              nam sive apparentia 
+              laesus in natura inclinatur ad assentiendum falso, 
+              et iste modus respondendi 
+              secundus est bene probabilis, etc.
+            </p>
           </div>
         </div>
+      </div>
     </body>
   </text>
 </TEI>

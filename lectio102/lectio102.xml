@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,341 +7,489 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 102, de Libertate</title>
-          <date when="2013-02-18">February 20, 2013</date>
+          <date when="2013-02-18">February 18, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-18">February 20, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-18" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="323-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio102">
-      <head xml:id="l102-Hldlldl" subtype="title">Lectio 102, de Libertate</head>
-        <div>
+        <head xml:id="l102-Hldlldl">Lectio 102, de Libertate</head>
+        <div xml:id="l102-Dd1e109">
           <head xml:id="l102-Hoasasa">Opinio Avicennae secundum Albertum</head>
           
-          <p xml:id="l102-cmince"><lb ed="#SV"/>Circa materiam in alia lectione tacta quantum 
-           <lb ed="#SV"/>ad opinionem <name ref="#Avicenna">avicennae</name> <name ref="#Albert">albertus</name> Recitat eam 
-            <lb ed="#SV"/>in libro <title ref="#deSomnoEtVigilia">de somno et vigilia</title> libro tertio 
-            <lb ed="#SV"/>quem vocat a divinatione et capitulo VIo quod incipit 
-            <lb ed="#SV"/>"si neque certa", etc.</p> 
-        
-          <p xml:id="l102-uiaudi">Unde iste <name ref="#Albert">albertus</name> Recitat opinionem 
-            <lb ed="#SV"/><name ref="Avicenna">avicennae</name> et <name ref="#Algasar">algazar</name> qui fuerunt concordes in materia 
-            <lb ed="#SV"/>praesenti. et primo Recitat eorum unum fundamentum, 
-            <lb ed="#SV"/>scilicet, quod intellectus humanus non est in corpore. verum est tamen quod intentio 
-            <lb ed="#SV"/>eorum non est quin intellectus sit corpori praesens, sed inten<lb ed="#SV"/>dunt 
-            dicere quod ille non inhaeret Realiter corpori, vel 
-            <lb ed="#SV"/>non educitur de potentia materiae sicut aliae formae materiales, 
-            <lb ed="#SV"/>et in ista suppositione ipsi fundant suam rationem, unde 
-            <lb ed="#SV"/>dicunt duo quod intellectus humanus potest tantum coniungi cum 
-            <lb ed="#SV"/>intellectu agente et separari tantum a corpore quod 
-            <lb ed="#SV"/>absolute omnia intelligeret, et tunc dicit <name ref="#Avicenna">avicenna</name> 
-            <cb ed="#SV" n="322ra"/><lb ed="#SV"/>quod erit quasi deus incarnatus et iste est supremus gra<lb ed="#SV"/>dus 
+          <p xml:id="l102-cmince">
+            Circa materiam in alia lectione tacta 
+            quantum 
+            ad opinionem <name ref="#Avicenna">avicennae</name> 
+            <cit>
+              <ref xml:id="l102-Rd1e121">
+                <name ref="#Albert">Albertus</name> 
+                recitat eam in libro <title ref="#deSomnoEtVigilia">De somno et vigilia</title>, 
+                libro tertio, 
+                quem vocat a divinatione 
+                et capitulo VIo 
+                quod incipit,
+                si neque certa<!-- incipt, how to mark in ref? <seg type="incipit">??? -->
+              </ref>
+              <bibl><!-- are there two references here or one?? --></bibl>
+            </cit>, 
+            etc.
+          </p> 
+          <p xml:id="l102-uiaudi">
+            Unde iste 
+            <name ref="#Albert">albertus</name> recitat opinionem 
+            <name ref="Avicenna">Avicennae</name> et 
+            <name ref="#Algasar">Algazar</name> 
+            qui fuerunt concordes in materia praesenti. 
+            Et primo recitat eorum unum fundamentum, 
+            scilicet quod intellectus humanus non est in corpore, 
+            verum est tamen quod intentio 
+            eorum non est quin intellectus sit corpori praesens, 
+            sed intendunt dicere quod ille non inhaeret realiter corpori, 
+            vel non educitur de potentia materiae 
+            sicut aliae formae materiales, 
+            et in ista suppositione ipsi fundant suam rationem, 
+            unde dicunt duo quod intellectus 
+            humanus potest tantum coniungi cum 
+            intellectu agente et separari tantum a corpore quod 
+            absolute omnia intelligeret, 
+            et tunc dicit 
+            <name ref="#Avicenna">Avicenna</name> 
+            <pb ed="#SV" n="322-r"/>
+            <cb ed="#SV" n="a"/>
+            quod erit quasi deus incarnatus et iste est supremus gradus 
             perfectionis summae et infimus gradus esset intellectus 
-            <lb ed="#SV"/>sic corpori immersus qui nihil intelligeret vel usu 
-            <lb ed="#SV"/>rationis careret et hoc est possibile per experientiam 
-            <lb ed="#SV"/>nam experientia docet nos aliquos esse carentes 
-            <lb ed="#SV"/>usu rationis ratione indispositionis materiae ut de infan<lb ed="#SV"/>tibus.</p>
-          
-          <p xml:id="l102-darfpp">secundo de aliis ratione disgradationis et laesio<lb ed="#SV"/>nis 
-            organorum et inter infimum gradum et supre<lb ed="#SV"/>mum 
+            sic corpori immersus qui nihil intelligeret vel usu 
+            rationis careret et hoc est possibile per experientiam 
+            nam experientia docet nos aliquos esse carentes 
+            usu rationis ratione indispositionis materiae ut de infantibus.
+          </p>
+          <p xml:id="l102-darfpp">
+            Secundo de aliis ratione disgradationis et laesionis 
+            organorum et inter infimum gradum et supremum 
             sunt infiniti gradus possibiles, unde etiam aliqui 
-            <lb ed="#SV"/>habent intellectum, ita elevatum ad speculabilia considerandum, 
-            <lb ed="#SV"/>alii elevantur ad futura praevidenda, et sic sunt infiniti 
-            <lb ed="#SV"/>gradus et alii possunt plura futura praevidere. alii 
-            <lb ed="#SV"/>minus vel pauciora praevident. nam in primo gradu 
-            <lb ed="#SV"/>constitutus omnia futura potest providere.</p> 
-          
-        <p xml:id="l102-tdeeme">tertium dictum est quia 
-          <lb ed="#SV"/>sicut dicitur de notitia, imaginatur ita de potentia activa 
-          <lb ed="#SV"/>nam intellectus in supremo gradu constitutus habet tantam 
-          <lb ed="#SV"/>virtutem activam quod proprium corpus ad nutum ei obe<lb ed="#SV"/>dit, 
-          et nedum proprium corpus sed tota generalium et corporalium 
-          <lb ed="#SV"/>existens infra concavum orbis lunae ei obedit, et consequenter 
-          <lb ed="#SV"/>datur infimus gradus quantum ad genus ubi intellectus 
-          <lb ed="#SV"/>est tantum depressus quod non potest movere corpus proprium nec 
-          <lb ed="#SV"/>a fortior potest in extrinsecum, ita alienum nullatenus 
-          <lb ed="#SV"/>ei obedire, et sic sequitur quod non poterit ma<lb ed="#SV"/>num 
-          localiter movere et per consequens non habebit posse 
-          <lb ed="#SV"/>in materiam extrinsecam et inter illos duos gradus 
-          <lb ed="#SV"/>sunt infiniti possibiles secundum quod una creatura potest esse maioris 
-          <lb ed="#SV"/>activitatis quam alia, et sic fascinationes et sortilegia 
-          <lb ed="#SV"/>consurgunt ex hoc quod anima nobilior potest Impedire 
-          <lb ed="#SV"/>depressioris operationes animae, et ex eo quod depressior ei 
-          <lb ed="#SV"/>obedit, ideo potest Impedire operationes, unde anima no<lb ed="#SV"/>bilior 
-          potest in alium imprimere aegritudines et infirmitates 
-          <lb ed="#SV"/>magicas et sortilegia et omnia talia mirabilia 
-          <lb ed="#SV"/>ad huiusmodi animam nobiliorem et magis elevatam.</p>
-      </div>
-      <div>
-        <head xml:id="l102-Hcoacoa">Contra opinio Avicennae</head>
-        <div>
-          <head xml:id="l102-Hpriima">Prima</head>
-          <p xml:id="l102-scianc"><lb ed="#SV"/>Sed contra istam positionem arguitur quia ipsa est contraria sa<lb ed="#SV"/>crae 
-            scripturae et fidei catholicae et determinationibus 
-            <lb ed="#SV"/>articulorum parisiensis, nam sacra scriptura et fides 
-            <lb ed="#SV"/>ponunt mirabilia naturae facultatem excedentia et 
-            <lb ed="#SV"/>isti hoc negant immo dicunt omnia evenire naturaliter 
-            <lb ed="#SV"/>quia omnes operationes Resolvunt ad naturae cursum.</p>
+            habent intellectum, ita elevatum ad speculabilia considerandum, 
+            alii elevantur ad futura praevidenda, et sic sunt infiniti 
+            gradus et alii possunt plura futura praevidere. alii 
+            minus vel pauciora praevident. nam in primo gradu 
+            constitutus omnia futura potest providere.
+          </p>
+          <p xml:id="l102-tdeeme">
+            Tertium dictum est quia 
+            sicut dicitur de notitia, imaginatur ita de potentia activa 
+            nam intellectus in supremo gradu constitutus habet tantam 
+            virtutem activam quod proprium corpus ad nutum ei obedit, 
+            et nedum proprium corpus sed tota generalium et corporalium 
+            existens infra concavum orbis lunae ei obedit, et consequenter 
+            datur infimus gradus quantum ad genus ubi intellectus 
+            est tantum depressus quod non potest movere corpus proprium nec 
+            a fortior potest in extrinsecum, ita alienum nullatenus 
+            ei obedire, et sic sequitur quod non poterit manum 
+            localiter movere et per consequens non habebit posse 
+            in materiam extrinsecam et inter illos duos gradus 
+            sunt infiniti possibiles secundum quod una creatura potest esse maioris 
+            activitatis quam alia, et sic fascinationes et sortilegia 
+            consurgunt ex hoc quod anima nobilior potest Impedire 
+            depressioris operationes animae, et ex eo quod depressior ei 
+            obedit, ideo potest Impedire operationes, unde anima nobilior 
+            potest in alium imprimere aegritudines et infirmitates 
+            magicas et sortilegia et omnia talia mirabilia 
+            ad huiusmodi animam nobiliorem et magis elevatam.
+          </p>
         </div>
-        <div>
-          <head xml:id="l102-Hsecnda">Secunda</head>
-        <p xml:id="l102-sqiqhp">secundo 
-          <lb ed="#SV"/>quia ipsi negant anima esse formam hominis, sed praecise 
-          <lb ed="#SV"/>se habet ad hominem ut intelligentia ad orbem, et hoc 
-          <lb ed="#SV"/>est contra articulum parisiensis, nam veritati consonum est quod intellectus 
-          <lb ed="#SV"/>inhaereat materiae et quod sit forma humana et quod sit 
-          <lb ed="#SV"/>constitutiva specifice, et ideo in hac materia magis credendum 
-          <lb ed="#SV"/>est fidei et scripturae sacrae et determinationibus 
-          <lb ed="#SV"/>magistrorum ac patrum parisiensis quam huiusmodi philosophis.</p>
-      <div>
-          <head xml:id="l102-Hoacefh">Opinio Alberti contra propositionem quod anima non esse formam hominis </head>
-        <p xml:id="l102-ctiusi">Contra tamen istam opinionem arguit <name ref="#Albert">albertus</name> 
-          <cb ed="#SV" n="322rb"/><lb ed="#SV"/>quia secundum dicta diversitas animarum non provenit ex diver<lb ed="#SV"/>sitate 
-          suorum corporum patet quia intellectus non est in corpore 
-          <lb ed="#SV"/>nec dependet ab ipso nec inhaeret ei igitur diversitas 
-          <lb ed="#SV"/>graduum quantum ad activitatem intellectus non potest Reduci 
-          <lb ed="#SV"/>ad dispositionem corporum ex eo quod intellectus non est in 
-          <lb ed="#SV"/>corpore nec dependet a corporali dispositione corporis, 
-          <lb ed="#SV"/>et per consequens etiam quia non immergitur corpori nec 
-          <lb ed="#SV"/>impeditur a corpore in sua dispositione nobili, igitur oportet quod 
-          <lb ed="#SV"/>huiusmodi diversitas reducatur in causas agentes et 
-          <lb ed="#SV"/>per consequens oportet dicere alterum duorum, vel quod diversitas proce<lb ed="#SV"/>dit 
-          ab eadem intelligentia vel a diversis, non ab eadem secundum 
-          <lb ed="#SV"/>illos quia <name ref="#Avicenna">Avicenna</name> supponit in sua <title ref="#AvicennaMetaphysics">metaphysica</title> quod ab eodem 
-          <lb ed="#SV"/>principio non possunt produci immediate diversa et super isto 
-          <lb ed="#SV"/>principio fundavit multas errores et alii philosophi similiter 
-          <lb ed="#SV"/>ergo diversi intellectus sunt tantum differentes quod possunt producere 
-          <lb ed="#SV"/>diversa Relinquitur, igitur quod a diversis, vel intellectus sunt 
-          <lb ed="#SV"/>diversarum specierum et sic sequitur inconveniens quod homines non sunt 
-          <lb ed="#SV"/>eiusdem speciei, si dicatur quod ab intelligentibus eiusdem speci diversitas 
-          proveniat tunc sequitur quod eius eiusdem speciei procedunt 
-          <lb ed="#SV"/>a causis differentibus specie quod est contra unam suppositionum illorum.</p>
-        
-        <p xml:id="l102-saaids"><lb ed="#SV"/>secundo <name ref="#Albert">albertus</name> arguit introducendo opinionem <name ref="#Averroes">averrois</name> 
-          <lb ed="#SV"/>quia datis duabus animalibus quarum una habet potentiam supra 
-          <lb ed="#SV"/>totam naturam et corruptibilium, et alia habet potesta<lb ed="#SV"/>tem 
-          secundum movendum corpus in quo est tunc sequitur quod illi 
-          <lb ed="#SV"/>homines sunt diversarum specierum, nam per tam differentes opera<lb ed="#SV"/>tiones 
-          arguitur differentia specifica inter res, quia intellectus in su<lb ed="#SV"/>premo 
-          gradu posset producere asinum, et alius existens 
-          <lb ed="#SV"/>in infimo gradu non, igitur differunt specie.</p>
-        
-        <p xml:id="l102-tiacsd">tertio ipse ar<lb ed="#SV"/>guit 
-          per <name ref="#Aristotle">Aristotelem</name> in Xmo <title ref="#Ethics">Ethicorum</title> ponentem intellectum 
-          <lb ed="#SV"/>nedum esse formam hominis immo ponit hominem esse intellectum 
-          <lb ed="#SV"/>nam ut ipse ait ibidem, homo est maxime intellectus, nam 
-          <lb ed="#SV"/>ut hoc intelligeretur <name ref="#WilliamOfParis">guillelmus parisiensis</name> et <name ref="#HughOfStVictor">hugo de sancto 
-            <lb ed="#SV"/>victore</name> dicunt quod forma concurrit identice cum composito, 
-          <lb ed="#SV"/>et hoc modo imaginatur plures de unione hypostatica 
-          <lb ed="#SV"/>quod tres naturae concurrant idemptice ad constitutione suppositi 
-          <lb ed="#SV"/>dei.</p>
-        
-        <p xml:id="l102-suicih">Sed ultra istas rationes adduntur aliae duae 
-          <lb ed="#SV"/>nam secundum istam positionem non est forma hominis constitutiva quia 
-          <lb ed="#SV"/>de ratione formae constitutivae est quod ipsa sit pars compositi, sed 
-          <lb ed="#SV"/>huiusmodi intellectus non potest esse pars compositi nisi sit in 
-          <lb ed="#SV"/>composito et nisi informet illud et ei inhaereat et 
-          <lb ed="#SV"/>igitur alia erit forma humana specialiter constitutiva ipsius hominis.</p>
-        
-        <p xml:id="l102-cqespb"><lb ed="#SV"/>Confirmatur quia ex quo intellectus non est in corpore 
-          <lb ed="#SV"/>nec immersus Remanente forma alia constitutiva tunc illud 
-          <lb ed="#SV"/>quod Remanabit erit iustitiam et compositum nec erit 
-          <lb ed="#SV"/>rationale quia illa forma non est intellectus igitur non erit rationalis 
-          <lb ed="#SV"/>natura, sed praecise brutalis.</p>
-        
-        <p xml:id="l102-shipam">secundo huiusmodi intellectus ex 
-          <lb ed="#SV"/>quo non esset pars constitutiva quaeritur qualiter denominatur 
-          <lb ed="#SV"/>homo intelligens quia intellectio nec inhaeret homini 
-          <cb ed="#SV" n="322va"/><lb ed="#SV"/>nec parti eius nec immutat vitaliter hominem nec eius 
-          <lb ed="#SV"/>partem igitur illa non denominabit hominem concretive intelligentem 
-          <lb ed="#SV"/>nec cognoscentem sed solum intellectum qui nec est homo nec pars eius 
-          <lb ed="#SV"/>et eodem modo arguitur de agendo quia illa activitas non communicaretur 
-          <lb ed="#SV"/>homini nec parti eius nec esset pars hominis sed solum intellectui 
-          <lb ed="#SV"/>communicaretur qui est distinctus et extrinsecus homini nam quantumcumque 
-          <lb ed="#SV"/>magna activitas communicaretur intelligentiae orbis lunae denominatio 
-          <lb ed="#SV"/>activitatis non augeretur in <name ref="#Sortes">sorte</name> pater quia illa intelligentia 
-          <lb ed="#SV"/>est ei extrinseca, et sic diceretur quod gradus activitatis correspondens 
-          <lb ed="#SV"/>intellectui est impertinens homini qui non est pars eius. et in fine 
-          <lb ed="#SV"/>capituli <name ref="#Albert">albertus</name> concludit quod positio <name ref="#Avicenna">avicennae</name> non habetur per eius 
-          <lb ed="#SV"/>philosophiam quia omne agens communiter agit in passum distans 
-          <lb ed="#SV"/>per aliquod medium.</p>
-        
-        <p xml:id="l102-ueaiam">Unde et anima prius agit in medium  
-          <lb ed="#SV"/>agat in lapidem extrinsecum. deinde etiam antequam agat 
-          <lb ed="#SV"/>in organa quibus motis movetur corpus mobile et sic volun<lb ed="#SV"/>tas 
-          non agit immediate per solum imperium sine hoc quod agat 
-          <lb ed="#SV"/>in aliquod medium.</p>
-        
-        <p xml:id="l102-ufcsvc">unde finaliter concludit <name rend="#Albert">albertus</name> dicendo sic 
-          <lb ed="#SV"/>fabula videtur dictum <name rend="#Avicenna">avicennae</name> et <name>algaseri</name> quia nec consonat 
-          <lb ed="#SV"/>philosophiae per <name ref="#Avicenna">avicennam</name> traditae, nec veritati. Ex quo apparet 
-          <lb ed="#SV"/>quod <name ref="#Avicenna">avicenna</name> et <name>algasar</name> non sunt secuti in hac parte 
-          <lb ed="#SV"/>philosophiam, sed vulgi corruptelam.</p> 
-        
-        <p xml:id="l102-unqacp">ubi notandum quod principalis 
-          <lb ed="#SV"/>causa motiva illius fuit ad salvandum mirabilia quae fiebant 
-          <lb ed="#SV"/>tempore suo et ante per apostolus et christum facta, et illa credidit 
-          <lb ed="#SV"/>Resolvere ad fatum, nam secundum eum causa prima non agit libere 
-          <lb ed="#SV"/>sed naturaliter, et ideo non potest aliter agere quam agat secundum naturae 
-          <lb ed="#SV"/>cursum institutum, et ideo omnia quae contingebant secundum ipsum con<lb ed="#SV"/>tingebant 
-          naturaliter, et sic credes miranda quae facta sunt 
-          <lb ed="#SV"/>resolvit ad excellentiam perfecti et separati a corporibus 
-          <lb ed="#SV"/>passionibus.</p>
-        
-        <p xml:id="l102-ehpioa">Ex hoc potest consurgere potestas faciendi 
-          <lb ed="#SV"/>miracula quae fecerunt christus et apostoli sui sancti, tamen si bene 
-          <lb ed="#SV"/>fuisset materia Resoluta <name ref="#Avicenna">avicenna</name> facilius cecidisset in lumen 
-          <lb ed="#SV"/>fidei. nam probabilius est ponere primam causam liberam nec indigere 
-          <lb ed="#SV"/>concursu alicuius causae secundae ad alicuius effectus productionem 
-          <lb ed="#SV"/>sed illam habere puram, quia hoc dicit eius summam perfectionem 
-          <lb ed="#SV"/>nam ex hoc fuisset consecuta possibilitas incarnationis 
-          <lb ed="#SV"/>christi et creationis mundi et aliorum miraculorum et 
-          <lb ed="#SV"/>in hoc esset maior veritas quam in opinionem <name ref="#Avicenna">avicennae</name>.</p>
-        </div>
-        </div>
-        <div>
-        <head xml:id="l102-Htertia">Tertia</head>
-        <p xml:id="l102-tpaish">tertio principaliter 
-          <lb ed="#SV"/>arguitur contra eum quia opera magica et sacrilegia fiunt 
-          <lb ed="#SV"/>per animas <unclear>vili??mas[?]</unclear> et depressimas, igitur non fiunt per 
-          <lb ed="#SV"/>excellentiam activitatis intellectus. antecedens semper docuit experientia 
-          <lb ed="#SV"/>quia phitonixa invocavit diabolum ad sustinendum <unclear>samuelem[?]</unclear>, 
-          tamen <name ref="#Augustine">augustinus</name> videtur magis dicere quod fuit 
-          <lb ed="#SV"/>diabolus in specie humana.</p>
-        </div>
-          <div>
+        <div xml:id="l102-Dd1e164">
+          <head xml:id="l102-Hcoacoa">Contra opinio Avicennae</head>
+          <div xml:id="l102-Dd1e169">
+            <head xml:id="l102-Hpriima">Prima</head>
+            <p xml:id="l102-scianc">
+              Sed contra istam positionem arguitur quia ipsa est contraria sacrae 
+              scripturae et fidei catholicae et determinationibus 
+              articulorum parisiensis, nam sacra scriptura et fides 
+              ponunt mirabilia naturae facultatem excedentia et 
+              isti hoc negant immo dicunt omnia evenire naturaliter 
+              quia omnes operationes Resolvunt ad naturae cursum.
+            </p>
+          </div>
+          <div xml:id="l102-Dd1e178">
+            <head xml:id="l102-Hsecnda">Secunda</head>
+            <p xml:id="l102-sqiqhp">
+              Secundo 
+              quia ipsi negant anima esse formam hominis, sed praecise 
+              se habet ad hominem ut intelligentia ad orbem, 
+              et hoc est contra articulum parisiensis, <!-- possible ref?? --> 
+              nam veritati consonum est quod intellectus 
+              inhaereat materiae et quod sit forma humana et quod sit 
+              constitutiva specifice, et ideo in hac materia magis credendum 
+              est fidei et scripturae sacrae et determinationibus 
+              magistrorum ac patrum parisiensis quam huiusmodi philosophis.
+            </p>
+            <div xml:id="l102-Dd1e188">
+              <head xml:id="l102-Hoacefh">Opinio Alberti contra propositionem quod anima non esse formam hominis </head>
+              <p xml:id="l102-ctiusi">
+                Contra tamen istam opinionem arguit 
+                <name ref="#Albert">Albertus</name> 
+                <cb ed="#SV" n="322rb"/>
+                quia secundum dicta diversitas animarum non provenit ex diversitate 
+                suorum corporum patet quia intellectus non est in corpore 
+                nec dependet ab ipso nec inhaeret ei igitur diversitas 
+                graduum quantum ad activitatem intellectus non potest Reduci 
+                ad dispositionem corporum ex eo quod intellectus non est in 
+                corpore nec dependet a corporali dispositione corporis, 
+                et per consequens etiam quia non immergitur corpori nec 
+                impeditur a corpore in sua dispositione nobili, igitur oportet quod 
+                huiusmodi diversitas reducatur in causas agentes et 
+                per consequens oportet dicere alterum duorum, vel quod diversitas procedit 
+                ab eadem intelligentia vel a diversis, non ab eadem secundum 
+                illos quia 
+                <cit>
+                  <ref xml:id="l102-Rd1e202">
+                    <name ref="#Avicenna">Avicenna</name> supponit in sua 
+                    <title ref="#AvicennaMetaphysics">metaphysica</title>
+                  </ref>
+                </cit> 
+                quod ab eodem 
+                principio non possunt produci immediate diversa et super isto 
+                principio fundavit multas errores et alii philosophi similiter 
+                ergo diversi intellectus sunt tantum differentes quod possunt producere 
+                diversa Relinquitur, igitur quod a diversis, vel intellectus sunt 
+                diversarum specierum et sic sequitur inconveniens quod homines non sunt 
+                eiusdem speciei, si dicatur quod ab intelligentibus eiusdem speci diversitas 
+                proveniat tunc sequitur quod eius eiusdem speciei procedunt 
+                a causis differentibus specie quod est contra unam suppositionum illorum.
+              </p>
+              <p xml:id="l102-saaids">
+                Secundo, 
+                <name ref="#Albert">Albertus</name> 
+                arguit introducendo opinionem 
+                <name ref="#Averroes">Averrois</name> 
+                quia datis duabus animalibus 
+                quarum una habet potentiam supra 
+                totam naturam et corruptibilium, 
+                et alia habet potestatem 
+                secundum movendum corpus in quo est, 
+                tunc sequitur quod illi 
+                homines sunt diversarum specierum, nam per tam differentes operationes 
+                arguitur differentia specifica inter res 
+                quia intellectus in supremo 
+                gradu posset producere asinum, et alius existens 
+                in infimo gradu non, 
+                igitur differunt specie.
+              </p>
+              <p xml:id="l102-tiacsd">
+                Tertio ipse arguit 
+                per 
+                <cit>
+                  <ref xml:id="l102-Rd1e226">
+                    <name ref="#Aristotle">Aristotelem</name> in Xmo 
+                    <title ref="#Ethics">Ethicorum</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                ponentem intellectum 
+                nedum esse formam hominis, 
+                immo ponit hominem esse intellectum 
+                nam ut ipse ait ibidem, homo est maxime intellectus, 
+                nam 
+                ut hoc intelligeretur 
+                <cit>
+                  <ref xml:id="l102-Rd1e241"><name ref="#WilliamOfParis">Guillelmus Parisiensis</name></ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                et 
+                <cit>
+                  <ref xml:id="l102-Rd1e251"><name ref="#HughOfStVictor">Hugo de Sancto Victore</name></ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                dicunt quod forma concurrit identice cum composito, 
+                et hoc modo imaginatur plures de unione hypostatica 
+                quod tres naturae concurrant idemptice ad constitutione suppositi 
+                dei.
+              </p>
+              <p xml:id="l102-suicih">
+                Sed ultra istas rationes adduntur aliae duae 
+                nam secundum istam positionem non est forma hominis constitutiva quia 
+                de ratione formae constitutivae est quod ipsa sit pars compositi, sed 
+                huiusmodi intellectus non potest esse pars compositi nisi sit in 
+                composito et nisi informet illud et ei inhaereat et 
+                igitur alia erit forma humana specialiter constitutiva ipsius hominis.
+              </p>
+              <p xml:id="l102-cqespb">
+                Confirmatur 
+                quia ex quo intellectus non est in corpore 
+                nec immersus remanente forma alia constitutiva tunc illud 
+                quod remanabit erit iustitiam et compositum nec erit 
+                rationale quia illa forma non est intellectus, 
+                igitur non erit rationalis natura, 
+                sed praecise brutalis.
+              </p>
+              <p xml:id="l102-shipam">
+                Secundo huiusmodi intellectus ex 
+                quo non esset pars constitutiva quaeritur qualiter denominatur 
+                homo intelligens quia intellectio nec inhaeret homini 
+                <pb ed="#SV" n="322-v"/>
+                <cb ed="#SV" n="a"/>
+                nec parti eius nec immutat vitaliter hominem nec eius 
+                partem igitur illa non denominabit hominem concretive intelligentem 
+                nec cognoscentem sed solum intellectum qui nec est homo nec pars eius 
+                et eodem modo arguitur de agendo quia illa activitas non communicaretur 
+                homini nec parti eius nec esset pars hominis sed solum intellectui 
+                communicaretur qui est distinctus et extrinsecus homini nam quantumcumque 
+                magna activitas communicaretur intelligentiae orbis lunae denominatio 
+                activitatis non augeretur in <name ref="#Sortes">Sorte</name> pater 
+                quia illa intelligentia est ei extrinseca, 
+                et sic diceretur quod gradus activitatis correspondens 
+                intellectui est impertinens homini qui non est pars eius. et in fine 
+                capituli <name ref="#Albert">Albertus</name> concludit 
+                quod positio <name ref="#Avicenna">Avicennae</name> non habetur per eius 
+                philosophiam quia omne agens communiter agit in passum distans 
+                per aliquod medium.
+              </p>
+              <p xml:id="l102-ueaiam">
+                Unde et anima prius agit in medium  
+                agat in lapidem extrinsecum, 
+                deinde etiam antequam agat 
+                in organa quibus motis movetur corpus mobile et sic voluntas 
+                non agit immediate per solum imperium sine hoc quod agat 
+                in aliquod medium.
+              </p>
+              <p xml:id="l102-ufcsvc">
+                Unde finaliter concludit 
+                <name rend="#Albert">Albertus</name> dicendo sic 
+                fabula videtur dictum 
+                <name rend="#Avicenna">Avicennae</name> et 
+                <name>Algaseri</name> 
+                quia 
+                nec consonat philosophiae 
+                per <name ref="#Avicenna">Avicennam</name> traditae, 
+                nec veritati. 
+                Ex quo apparet quod <name ref="#Avicenna">Avicenna</name> 
+                et <name>Algasar</name> 
+                non sunt secuti in hac parte philosophiam, 
+                sed vulgi corruptelam.
+              </p> 
+              <p xml:id="l102-unqacp">
+                Ubi notandum quod principalis 
+                causa motiva illius fuit ad salvandum mirabilia quae fiebant 
+                tempore suo et ante per apostolus et christum facta, 
+                et illa credidit resolvere ad fatum, 
+                nam secundum eum causa prima non agit libere sed naturaliter, 
+                et ideo non potest aliter agere quam agat secundum naturae cursum institutum, 
+                et ideo omnia quae contingebant secundum ipsum contingebant naturaliter, 
+                et sic credes miranda 
+                quae facta sunt resolvit ad excellentiam perfecti 
+                et separati a corporibus passionibus.
+              </p>
+              <p xml:id="l102-ehpioa">
+                Ex hoc potest consurgere potestas faciendi 
+                miracula quae fecerunt christus et apostoli sui sancti, 
+                tamen si bene fuisset materia resoluta 
+                <name ref="#Avicenna">Avicenna</name> facilius cecidisset in lumen fidei. 
+                Nam probabilius est ponere primam causam liberam nec indigere 
+                concursu alicuius causae secundae ad alicuius effectus productionem sed illam habere puram
+                quia hoc dicit eius summam perfectionem 
+                nam ex hoc fuisset consecuta possibilitas incarnationis 
+                christi et creationis mundi et aliorum miraculorum et 
+                in hoc esset maior veritas quam in opinionem <name ref="#Avicenna">avicennae</name>.
+              </p>
+            </div>
+          </div>
+          <div xml:id="l102-Dd1e322">
+            <head xml:id="l102-Htertia">Tertia</head>
+            <p xml:id="l102-tpaish">
+              Tertio principaliter 
+              arguitur contra eum quia opera magica et sacrilegia fiunt 
+              per animas <unclear>vili??mas[?]</unclear> et depressimas, igitur non fiunt per 
+              excellentiam activitatis intellectus. antecedens semper docuit experientia 
+              quia phitonixa invocavit diabolum ad sustinendum <unclear>samuelem[?]</unclear>, 
+              tamen <name ref="#Augustine">Augustinus</name> videtur magis dicere quod fuit 
+              diabolus in specie humana.
+            </p>
+          </div>
+          <div xml:id="l102-Dd1e340">
             <head xml:id="l102-Hquarta">Quarta</head>
-          <p xml:id="l102-qatcmv">quarto aliqua talia opera sunt de 
-            <lb ed="#SV"/>se pessima igitur non fiunt ab intellectu elevato, sed 
-            <lb ed="#SV"/>magis a depresso per affectiones pravas ex quo consurgunt 
-            <lb ed="#SV"/>mala vitia.</p>
+            <p xml:id="l102-qatcmv">
+              Quarto aliqua talia opera sunt de 
+              se pessima igitur non fiunt ab intellectu elevato, 
+              sed magis a depresso per affectiones pravas ex quo consurgunt 
+              mala vitia.
+            </p>
           </div>
-          <div>
+          <div xml:id="l102-Dd1e350">
             <head xml:id="l102-Hquinta">Quinta</head>
-        <p xml:id="l102-qaihpm">quinto arguitur iste <name ref="#Avicenna">avicenna</name> non posset 
-          <lb ed="#SV"/>hoc salvare de resurrectione mortuorum quia 
-          <lb ed="#SV"/>anima distincta a corpore non est subiecta animae coniunctae 
-          <cb ed="#SV" n="322va"/><lb ed="#SV"/>ergo illa non potest Regredi in corpore per imperium animae 
-          <lb ed="#SV"/>coniunctae cum corpore, et per consequens sua nec est funda<lb ed="#SV"/>ta 
-          nec <unclear>sustinibilis[?]</unclear> sed magis incidit in inconveniens 
-          <lb ed="#SV"/>commune credidit igitur contra philosophiae viam vere asserendo propositiones 
-          <lb ed="#SV"/>dubias quod non potest fieri nisi via peccati igitur <name ref="#Avicenna">avicenna</name> se<lb ed="#SV"/>quens 
-          viam vetularum est Repellendus in hac praesenti materia.</p>
+            <p xml:id="l102-qaihpm">
+              Quinto arguitur iste 
+              <name ref="#Avicenna">Avicenna</name> non posset 
+              hoc salvare de resurrectione mortuorum quia 
+              anima distincta a corpore non est subiecta animae coniunctae 
+              <cb ed="#SV" n="322-v"/>
+              <cb ed="#SV" n="a"/>
+              ergo illa non potest regredi in corpore per imperium animae 
+              coniunctae cum corpore, et per consequens sua nec est fundata 
+              nec <unclear>sustinibilis[?]</unclear> sed magis incidit in inconveniens 
+              commune credidit igitur contra philosophiae viam vere asserendo propositiones 
+              dubias quod non potest fieri nisi via peccati, 
+              igitur <name ref="#Avicenna">Avicenna</name> sequens 
+              viam vetularum est repellendus in hac praesenti materia.
+            </p>
           </div>
         </div>
-        <div>
+        <div xml:id="l102-Dd1e373">
           <head xml:id="l102-Hpdadac">Propositiones de activitate causarum</head>
-          <p xml:id="l102-cimcpp"><lb ed="#SV"/>Circa istam materiam de activitate causarum ponuntur 
-            <lb ed="#SV"/>propositiones.</p>
-          <div>
+          <p xml:id="l102-cimcpp">
+            Circa istam materiam de activitate causarum ponuntur 
+            propositiones.
+          </p>
+          <div xml:id="l102-Dd1e381">
             <head xml:id="l102-Hqncend">Quod nulla causa potest libere producere omnes suos effectus nisi deus</head>
-          <p xml:id="l102-pspend">prima sola prima causa est cuiuslibet effectus 
-            <lb ed="#SV"/>ad extra seipsa libere productiva, id est, nulla causa potest libere pro<lb ed="#SV"/>ducere 
-            omnes suos effectus nisi deus.</p>
-            
-          <p xml:id="l102-ppaifn">prima pars apparet de se 
-            <lb ed="#SV"/>et est et est principium in theologia scilicet, quod deus potest omnes suos effectus 
-            <lb ed="#SV"/>ad extra libere producere, quia hoc dicit perfectionem in causalitate 
-            <lb ed="#SV"/>divina quia ipsa non indiget alia causa secunda ad productionem 
-            <lb ed="#SV"/>effectus et eius causalitatis est causa sufficiens quae non prae<lb ed="#SV"/>requirit 
-            causalitatem alicuius causae secundae ergo hoc debet deo 
-            <lb ed="#SV"/>attribui et adhuc secundum philosophiam, quia ipse est in fine 
-            <lb ed="#SV"/>nobilitatis.</p>
-        
-            <p xml:id="l102-spasdc">secunda pars apparet, quia omnis forma substantialis indi<lb ed="#SV"/>get 
+            <p xml:id="l102-pspend">
+              Prima sola prima causa est cuiuslibet effectus 
+              ad extra seipsa libere productiva, id est, 
+              nulla causa potest libere producere 
+              omnes suos effectus nisi deus.
+            </p>
+            <p xml:id="l102-ppaifn">
+              Prima pars apparet de se 
+              et est et est principium in theologia scilicet, 
+              quod deus potest omnes suos effectus 
+              ad extra libere producere 
+              quia hoc dicit perfectionem in causalitate divina 
+              quia ipsa non indiget alia causa secunda ad productionem 
+              effectus et eius causalitatis est causa sufficiens quae non praerequirit 
+              causalitatem alicuius causae secundae ergo hoc debet deo 
+              attribui et adhuc secundum philosophiam 
+              quia ipse est in fine nobilitatis.
+            </p>
+            <p xml:id="l102-spasdc">
+              Secunda pars apparet 
+              quia omnis forma substantialis indiget 
               instrumento ad suam operationem exercendam et sic est 
-              <lb ed="#SV"/>a minima causa usque ad maximam, nam terra sine gravi<lb ed="#SV"/>tate 
+              a minima causa usque ad maximam, 
+              nam terra sine gravitate 
               non moveret deorsum et aqua non frigefaceret 
-              <lb ed="#SV"/>sine frigiditate, nec intelligentia movens orbem agit 
-              <lb ed="#SV"/>inferius nisi per modum et lumen suum, et omnis creatura 
-              <lb ed="#SV"/>ad suos effectus producendos indiget instrumento 
-              <lb ed="#SV"/>et sic non libere producit, et licet quaelibet anima rationalis 
-              <lb ed="#SV"/>sit libera respectu aliquorum effectuum, non tamen est libera 
-              <lb ed="#SV"/>respectu omnium ut inhaesio formae ad materiam non est libera 
-              <lb ed="#SV"/>nec nutritio et aliae operationes quae sunt potentiae animae vegetetivae 
-              <lb ed="#SV"/>ut sic, nec est in libertate animae applicato cibo quin 
-              <lb ed="#SV"/>fiat digno, et ita proportionaliter pura libertas dicit perfe<lb ed="#SV"/>ctionem 
-              immensam ideo soli deo competit.</p> 
+              sine frigiditate, 
+              nec intelligentia movens orbem agit 
+              inferius nisi per modum et lumen suum, 
+              et omnis creatura 
+              ad suos effectus producendos indiget instrumento 
+              et sic non libere producit, 
+              et licet quaelibet anima rationalis 
+              sit libera respectu aliquorum effectuum, non tamen est libera 
+              respectu omnium ut inhaesio formae ad materiam non est libera 
+              nec nutritio et aliae operationes quae sunt potentiae animae vegetetivae 
+              ut sic, nec est in libertate animae applicato cibo quin 
+              fiat digno, et ita proportionaliter pura libertas dicit perfectionem 
+              immensam ideo soli deo competit.
+            </p>
           </div>
-          <div>
+          <div xml:id="l102-Dd1e396">
             <head xml:id="l102-Hqhiovn">Quod habitudo intelligentiae ad orbem vocatur naturalis</head>
-          <p xml:id="l102-eoiahi">eodem modo 
-            <lb ed="#SV"/>imaginatur de intelligentia quodlibet sit libera quantum ad aliquos 
-            <lb ed="#SV"/>actus tamen habitudo eius ad orbem vocatur simpliciter natura<lb ed="#SV"/>lis, 
-            nec est libera ut habitudo animae ad suum corpus 
-            <lb ed="#SV"/>ideo intelligentia nec libere nec sine instrumento poterit alterare 
-            <lb ed="#SV"/>elementa vel agere hic inferius.</p>
+            <p xml:id="l102-eoiahi">
+              Eodem modo 
+              imaginatur de intelligentia quodlibet sit libera quantum ad aliquos 
+              actus tamen habitudo eius ad orbem vocatur simpliciter naturalis, 
+              nec est libera ut habitudo animae ad suum corpus 
+              ideo intelligentia nec libere nec sine instrumento poterit alterare 
+              elementa vel agere hic inferius.
+            </p>
           </div>
-          <div>
+          <div xml:id="l102-Dd1e405">
             <head xml:id="l102-Hqisisl">Qualiter intelligentia sint libera</head>
-          <p xml:id="l102-ehpmii">Ex hoc potest 
-            <lb ed="#SV"/>inferri quod licet intelligentia sic libera tamen ipsa potest ex 
-            <lb ed="#SV"/>voluntatis Imperio movere naturaliter orbem et inferio<lb ed="#SV"/>ra, probatur quia nisi sic sequeretur quod intelligentia posset retar<lb ed="#SV"/>dare 
-            modum orbis vel <unclear>veloci?ie[?]</unclear> quod est inconveniens 
-            <lb ed="#SV"/>sed licet ista conclusio sit vera tamen haec ratio nulla est quia 
-            <lb ed="#SV"/>ex libertate intelligentiae non potest argui quin determina<lb ed="#SV"/>ta velocitate moveat unde licet agat per intellectum 
-            <lb ed="#SV"/>et voluntatem, diceretur tamen quod ratione congruitatis 
-            <lb ed="#SV"/>determinata velocitate moveret nec potest velocius vel 
-            <lb ed="#SV"/>tardius movere orbem quia ad motum tardiorem 
-            <lb ed="#SV"/>vel velociorem sequitur deordinatio universi quae 
-            <lb ed="#SV"/>haberet rationem mali in intelligentia.</p> 
-            
-           <p xml:id="l102-eidqae">et ideo dicitur 
-             <lb ed="#SV"/>quod licet intelligentiae sint libere non tamen possunt aliter mo<cb ed="#SV" n="323ra"/><lb ed="#SV"/>vere 
-             nec tardius nec velocius, nam alii sunt modi 
-             <lb ed="#SV"/>dicendi et salvandi libertatem cum necessitate, unius esset 
-             <lb ed="#SV"/>quod staret quod <name ref="#Sortes">sortes</name> eliceret velle <c>a</c> deinde eli<lb ed="#SV"/>ceret 
-             efficienter alia volitione velle <c>a</c>, si ergo voluntas 
-             <lb ed="#SV"/>non impediatur et vult <c>a</c> sequitur quod <c>a</c> erit.</p>
-        
-        <p xml:id="l102-sdqoql">secundo dicere quod intelligentia solo voluntatis Imperio 
-          <lb ed="#SV"/>moveat est error igitur intelligentia magis movet 
-          <lb ed="#SV"/>naturaliter orbem quam libere.</p>
+            <p xml:id="l102-ehpmii">
+              Ex hoc potest inferri quod, 
+              licet intelligentia sic libera, 
+              tamen ipsa potest ex 
+              voluntatis imperio movere naturaliter orbem et inferiora. 
+              Probatur 
+              quia nisi sic sequeretur 
+              quod intelligentia posset retardare 
+              modum orbis vel <unclear>veloci?ie[?]</unclear>, 
+              quod est inconveniens, 
+              sed licet ista conclusio sit vera, 
+              tamen haec ratio nulla est 
+              quia ex libertate intelligentiae non potest argui 
+              quin determinata velocitate moveat. 
+              Unde licet agat per intellectum et voluntatem, 
+              diceretur tamen quod ratione congruitatis 
+              determinata velocitate moveret nec potest velocius vel tardius movere orbem 
+              quia ad motum tardiorem 
+              vel velociorem sequitur deordinatio universi 
+              quae haberet rationem mali in intelligentia.
+            </p>
+            <p xml:id="l102-eidqae">
+              Et ideo dicitur 
+              quod licet intelligentiae sint libere non tamen possunt aliter mo<cb ed="#SV" n="323-r"/><cb ed="#SV" n="a"/>vere 
+              nec tardius nec velocius, nam alii sunt modi 
+              dicendi et salvandi libertatem cum necessitate, unius esset 
+              quod staret quod <name ref="#Sortes">Sortes</name> eliceret velle <c>a</c> deinde eliceret 
+              efficienter alia volitione velle <c>a</c>, si ergo voluntas 
+              non impediatur et vult <c>a</c> sequitur quod <c>a</c> erit.
+            </p>
+            <p xml:id="l102-sdqoql">
+              Secundo, 
+              dicere quod intelligentia solo voluntatis imperio 
+              moveat est error igitur intelligentia magis movet 
+              naturaliter orbem quam libere.
+            </p>
           </div>
-          <div>
+          <div xml:id="l102-Dd1e443">
             <head xml:id="l102-Hqdsdsl">Qualiter daemones sunt liberi</head>
-        <p xml:id="l102-eqsaml">Ex quo sequitur quod motio 
-          <lb ed="#SV"/>lapidum per daemones potest dici quod non fit naturaliter 
-          <lb ed="#SV"/>solo voluntatis imperio sed sit qualiter prius modus deo 
-          <lb ed="#SV"/>specialius concurrente ultra naturalem daemonum causalitatem 
-          <lb ed="#SV"/>ad lapidum motionem, ut contingit aliquando quod deus influ<lb ed="#SV"/>at 
-          modo speciali ad motionem lapidis.</p>
-        
-        <p xml:id="l102-spdscr">secundo poterit dici 
-          <lb ed="#SV"/>quod voluntatis imperium non sufficeret ad motionem 
-          <lb ed="#SV"/>lapidis, sed Requiritur quod sit <unclear>intimitas[?]</unclear> daemonis ad 
-          <lb ed="#SV"/>lapidum et gradus <unclear>intimitatis[?]</unclear> sunt plurimi, et 
-          <lb ed="#SV"/>potest instrumentum medium imaginari, scilicet, influentia a volun<lb ed="#SV"/>tate 
-          in lapidem, et sic producitur aliqua dispositio media 
-          <lb ed="#SV"/>instrumentalis ad salvandum causalitatem Rerum.</p>
+            <p xml:id="l102-eqsaml">
+              Ex quo sequitur quod motio 
+              lapidum per daemones potest dici quod non fit naturaliter 
+              solo voluntatis imperio sed sit qualiter prius modus deo 
+              specialius concurrente ultra naturalem daemonum causalitatem 
+              ad lapidum motionem, ut contingit aliquando quod deus influat 
+              modo speciali ad motionem lapidis.
+            </p>
+            <p xml:id="l102-spdscr">
+              Secundo poterit dici 
+              quod voluntatis imperium non sufficeret ad motionem lapidis, 
+              sed requiritur quod sit <unclear>intimitas</unclear> daemonis ad 
+              lapidum et gradus <unclear>intimitatis</unclear> sunt plurimi, 
+              et potest instrumentum medium imaginari, 
+              scilicet influentia a voluntate 
+              in lapidem, et sic producitur aliqua dispositio media 
+              instrumentalis ad salvandum causalitatem rerum.
+            </p>
           </div>
-          </div>
+        </div>
       </div>
     </body>
   </text>

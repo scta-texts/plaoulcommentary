@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,337 +7,474 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 105, de Libertate</title>
           <date when="2013-02-27">February 27, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-27">February 27, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
           <witness xml:id="R" n="reims">Reims</witness>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-27" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="325-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio105">
-      <head xml:id="l105-Hldlldl" subtype="title">Lectio 105, de Libertate</head>
-        <div>
-          <head xml:id="l105-Hcodcod">Circa operationem daemonum</head>
-        <p xml:id="l105-sqhatr"><lb ed="#SV"/>Secundum quod heri tangebatur omnia operabilia quae 
-          <lb ed="#SV"/>fiunt in isto mundo perceptibiliter Reducuntur 
-          <lb ed="#SV"/>ad tres modos.<note type="editorialNote">See above <ref target="lectio104.xml#l104-ptmpsa" type="crossReference">Lectio 104, n. </ref></note></p>
-        
-        <p xml:id="l105-ueoilp">unus est operationum mirabiliorum 
-          <lb ed="#SV"/>de quibus dictum est in lectione praecedenti.</p>
-        
-        <div>
-         <head xml:id="l105-Hppoppo">Prima propositio</head>
-        <p xml:id="l105-aeopeo">Alius est 
-          <lb ed="#SV"/>operationum daemonum. et ideo circa praesentem materiam est notandum 
-          <lb ed="#SV"/>quod ex scriptura novi et veteris testamentorum habetur 
-          <lb ed="#SV"/>quod sunt spiritus maligni et multa opera exercuerunt 
-          <lb ed="#SV"/>circa  certas personas seu creaturas ut apparet de dae<lb ed="#SV"/>monum 
-          eiectione a quibusdam hominibus per eos obse<lb ed="#SV"/>ssis.</p> 
-          
-          <p xml:id="l105-ehcanc">et huic concordant philosophi, nam <name ref="#Plato">plato</name> substantias 
-            <lb ed="#SV"/>spirituales divisit in duo genera. unum bonorum spiritum 
-            <lb ed="#SV"/>quos vocavit <sic>calodaemones</sic>, nam <sic>calo<desc>this is the spelling for the greek workd "kalos"</desc></sic> graece 
-            <lb ed="#SV"/>est bonum latine. secundum genus est aliquorum spirituum 
-            <lb ed="#SV"/>quos vocavit <sic>cacodaemones</sic>, et <sic>caco</sic> graece 
-            <lb ed="#SV"/>malum latine dicitur, nam ex doctrina eius in <title ref="#Timaeus">thimeo</title> 
-            <lb ed="#SV"/>secundum expositionem calsidum[?] posuit malos spiritus in 
-            <lb ed="#SV"/>aere nobiscum, conversari.</p>
-        
-        <p xml:id="l105-dadmsf">De <name ref="#Aristotle">aristotele</name> dubium est, nam 
-          <lb ed="#SV"/>quod posuerit spiritus malignos non apparet, sed dicit <ref type="citation"><name ref="#WilliamOfParis">Guillelmus 
-            <lb ed="#SV"/>parisiensis</name> in libro <title ref="#deUniverso">de universo</title></ref> quod <name ref="#Aristotle">aristoteles</name> habuit 
-          <lb ed="#SV"/>spiritum familiarem quem credidit bonum esse spiritum vel 
-          <lb ed="#SV"/>angelum missum de caelo, scilicet, de orbe <name ref="#Venus">veneris</name>. ubi 
-          <lb ed="#SV"/>notat praefatus doctor quod Realiter fuit daemon qui 
-          <lb ed="#SV"/>sub titulo sanctitatis decepit <name ref="#Aristotle">aristotelem</name> in punctis tan<lb ed="#SV"/>gentibus 
-          fidem, quia ille spiritus dicebat se esse de 
-          <lb ed="#SV"/>caelo missum et instruxit illum in aliquibus contra 
-          <lb ed="#SV"/>fidem, credebat tamen <name ref="#Aristotle">aristoteles</name> <sic>calodaemon</sic> sed utulo[?] 
-          <lb ed="#SV"/>in libro <title ref="#deNaturaDeorum">de natura deorum</title> dicit <name ref="#Aristotle">aristoteles</name> fecisse librum 
-          <lb ed="#SV"/><title>de genealogia deorum</title> quem dicit fuisse bonum librum, 
-          <lb ed="#SV"/>licet non reperiatur. tamen in hoc sufficit quod scriptura 
-          <lb ed="#SV"/>sacra doceat quod spiritus maligni sunt fugiendi.</p>
-        </div>
-          <div>
-            <head xml:id="l105-Hspospo">Secunda propositio</head>
-        <p xml:id="l105-sdqpcn">Secundo dicitur quod huiusmodi spiritus maligni divina 
-          <lb ed="#SV"/>permissione quaedam operantur quod apparet quia extremo 
-          <cb ed="#SV" n="326ra"/><lb ed="#SV"/>odio odiunt genus humanum, igitur si relinquerentur suae 
-          <lb ed="#SV"/>potentiae infinita nocumenta nobis inferret nam ipsi 
-          <lb ed="#SV"/>refrenantur intantum quod nihil possunt sine deo specialiter permi<lb ed="#SV"/>ttente, 
-          nam ut ait <ref><name ref="#Peter">Petrus</name> in sua <title ref="#Ipetr">canonica</title></ref>,<note type="editorNote" subtype="citation" corresp="#l105-Qavtqqd"><title>I Petri</title> 5:8</note> ipse est 
-          <lb ed="#SV"/><quote xml:id="l105-Qavtqqd" source="http://scta.info/resource/Ipetr5_8">adversarius vester tamquam leo rugiens et quaerens quem devoret</quote>, et sic in eo non deest affectus nocendi, nam 
-          <lb ed="#SV"/>ipsorum potestas est taliter Restricta quod nisi deo permitten<lb ed="#SV"/>te 
-          nihil possunt contra nos.</p>
+        <head xml:id="l105-Hldlldl">Lectio 105, de Libertate</head>
+          <div xml:id="l105-Dd1e109">
+            <head xml:id="l105-Hcodcod">Circa operationem daemonum</head>
+            <p xml:id="l105-sqhatr">
+              Secundum quod heri tangebatur omnia operabilia quae 
+              fiunt in isto mundo perceptibiliter reducuntur 
+              ad tres modos.
+              <!--<note type="editorialNote">See above <ref target="lectio104.xml#l104-ptmpsa" type="crossReference">Lectio 104, n. </ref></note>-->
+            </p>
+            <p xml:id="l105-ueoilp">
+              Unus est operationum mirabiliorum 
+              de quibus dictum est in lectione praecedenti.
+            </p>
+            <div xml:id="l105-Dd1e122">
+              <head xml:id="l105-Hppoppo">Prima propositio</head>
+              <p xml:id="l105-aeopeo">
+                Alius est 
+                operationum daemonum. et ideo circa praesentem materiam est notandum 
+                quod ex scriptura novi et veteris testamentorum habetur 
+                quod sunt spiritus maligni et multa opera exercuerunt 
+                circa  certas personas seu creaturas ut apparet de daemonum 
+                eiectione a quibusdam hominibus per eos obsessis.
+              </p>
+              <p xml:id="l105-ehcanc">
+                et huic concordant philosophi, nam <name ref="#Plato">plato</name> substantias 
+                spirituales divisit in duo genera. unum bonorum spiritum 
+                quos vocavit <sic>calodaemones</sic>, nam <sic>calo<!--<desc>this is the spelling for the greek workd "kalos"</desc>--></sic> graece 
+                est bonum latine. secundum genus est aliquorum spirituum 
+                quos vocavit <sic>cacodaemones</sic>, et <sic>caco</sic> graece 
+                malum latine dicitur, nam ex doctrina eius in <title ref="#Timaeus">thimeo</title> 
+                secundum expositionem calsidum[?] posuit malos spiritus in 
+                aere nobiscum, conversari.
+              </p>
+              <p xml:id="l105-dadmsf">
+                De <name ref="#Aristotle">Aristotele</name> dubium est, nam 
+                quod posuerit spiritus malignos non apparet, sed dicit 
+                <cit>
+                  <ref xml:id="l105-Rd1e160" type="citation">
+                    <name ref="#WilliamOfParis">Guillelmus Parisiensis</name> in libro 
+                    <title ref="#deUniverso">De universo</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                quod 
+                <name ref="#Aristotle">Aristoteles</name> habuit 
+                spiritum familiarem quem credidit bonum esse spiritum vel 
+                angelum missum de caelo, 
+                scilicet de orbe <name ref="#Venus">veneris</name>. ubi 
+                notat praefatus doctor quod realiter fuit daemon qui 
+                sub titulo sanctitatis decepit <name ref="#Aristotle">Aristotelem</name> in punctis tangentibus 
+                fidem, quia ille spiritus dicebat se esse de 
+                caelo missum et instruxit illum in aliquibus contra 
+                fidem, credebat tamen <name ref="#Aristotle">Aristoteles</name> <sic>calodaemon</sic>, 
+                sed 
+                <cit>
+                  <ref xml:id="l105-Rd1e191">utulo[?] 
+                  in libro <title ref="#deNaturaDeorum">De natura deorum</title>
+                  </ref>
+                  <bibl>XXX</bibl>
+                </cit> 
+                dicit 
+                <name ref="#Aristotle">Aristoteles</name> fecisse librum 
+                <title>De genealogia deorum</title> 
+                quem dicit fuisse bonum librum, 
+                licet non reperiatur, 
+                tamen in hoc sufficit quod scriptura 
+                sacra doceat quod spiritus maligni sunt fugiendi.
+              </p>
+            </div>
+            <div xml:id="l105-Dd1e209">
+              <head xml:id="l105-Hspospo">Secunda propositio</head>
+              <p xml:id="l105-sdqpcn">
+                Secundo dicitur quod huiusmodi spiritus maligni divina 
+                permissione quaedam operantur quod apparet quia extremo 
+                <pb ed="#SV" n="326-r"/>
+                <cb ed="#SV" n="a"/>
+                odio odiunt genus humanum, igitur si relinquerentur suae 
+                potentiae infinita nocumenta nobis inferret nam ipsi 
+                refrenantur intantum quod nihil possunt sine deo specialiter permittente, 
+                nam ut ait 
+                <ref xml:id="l105-Rd1e220">
+                  <name ref="#Peter">Petrus</name> in sua 
+                  <title ref="#Ipetr">canonica</title>
+                </ref>,
+                ipse est 
+                <cit>
+                  <quote xml:id="l105-Qavtqqd" source="http://scta.info/resource/Ipetr5_8">
+                    adversarius vester tamquam leo rugiens et quaerens quem devoret
+                  </quote>
+                </cit>, 
+                et sic in eo non deest affectus nocendi, nam 
+                ipsorum potestas est taliter restricta quod nisi deo permittente 
+                nihil possunt contra nos.
+              </p>
+            </div>
           </div>
-        </div>
-          <div>
+          <div xml:id="l105-Dd1e238">
             <head xml:id="l105-Hcorria">Corollaria</head>
-            <div>
+            <div xml:id="l105-Dd1e243">
               <head xml:id="l105-Hpqfoon">Primum: quod familiaritas daemonum est summe fugienda quia extremo odio odiunt nos</head>
-              
-        <p xml:id="l105-eqsmnn">Ex quo sequitur quod eorum 
-          <lb ed="#SV"/>familiaritas est summe fugienda quia extremo odio 
-          <lb ed="#SV"/>odiunt nos et ideo ait <ref><name ref="#Boethius">boecius</name> in IIIo <title ref="#Consolation">de consolatione</title></ref> 
-          <lb ed="#SV"/>quod <quote xml:id="l105-Qnepqfi" source="http://scta.info/resource/aa-consolatio-37">"nulla est pestis efficacior ad nocendum quod fa<lb ed="#SV"/>miliaris inimicus"</quote> nam si daemones permitterentur 
-          <lb ed="#SV"/>multipliciter nobis nocerent.</p>
+              <p xml:id="l105-eqsmnn">
+                Ex quo sequitur quod eorum 
+                familiaritas est summe fugienda quia extremo odio 
+                odiunt nos et ideo ait 
+                <ref xml:id="l105-Rd1e250">
+                  <name ref="#Boethius">Boecius</name> 
+                  in III 
+                  <title ref="#Consolation">De consolatione</title>
+                </ref> 
+                quod 
+                <cit>
+                  <quote xml:id="l105-Qnepqfi" source="http://scta.info/resource/hy7y6y-d1e67">
+                    nulla est pestis efficacior ad nocendum quod familiaris inimicus
+                  </quote>
+                  <bibl>Boethius, Consolatio, III, P. 5</bibl>
+                  <!-- also in auctoritates: aa-consolatio-37 -->
+                </cit> 
+                nam si daemones permitterentur 
+                multipliciter nobis nocerent.
+              </p>
             </div>
-            <div>
+            <div xml:id="l105-Dd1e272">
               <head xml:id="l105-Hsqamne">Secundum: quod ars magica nihil est</head>
-              <p xml:id="l105-ssqsoc">secundo sequitur quod ars ma<lb ed="#SV"/>gica 
+              <p xml:id="l105-ssqsoc">
+                Secundo, 
+                sequitur quod ars magica 
                 nihil est, quia daemones et eorum operationes 
-                <lb ed="#SV"/>subiacent divinae providentiae. Ex quo patet quod eorum opera<lb ed="#SV"/>tiones 
+                subiacent divinae providentiae. Ex quo patet quod eorum operationes 
                 non subiacent arti nec regulis artis nec 
-                <lb ed="#SV"/>verbis nec cogitationibus nec industriis humanitus 
-                <lb ed="#SV"/>adinventis, immo quod fortius est nulli creaturae subia<lb ed="#SV"/>cent 
+                verbis nec cogitationibus nec industriis humanitus 
+                adinventis, immo quod fortius est nulli creaturae subiacent 
                 nisi forte sanctis propter vitae excellentiam qui 
-                <lb ed="#SV"/>habuerunt potestatem eos cohercendi et eiciendi 
-                <lb ed="#SV"/>a creaturis ut tangit <name>Apostolus <!-- unclear what apostle; either John 17:2 or Acts 2:17 --></name> <quote>dedit nobis 
-                <lb ed="#SV"/>potestatem supra omnem carnem.</quote></p>
-            
-        <p xml:id="l105-saqrap">secundo arguitur quia 
-          <lb ed="#SV"/>invocatores daemonum sunt homines bestiales fi<lb ed="#SV"/>de 
-          et virtutibus carentes igitur non sub arte cadit 
-          <lb ed="#SV"/>fatuitas magica. antecedens est notum discurrendo 
-          <lb ed="#SV"/>per historias quia malifici fuerunt semper pessimi 
-          <lb ed="#SV"/>et villes creaturae, et hoc de illis qui morantur 
-          <lb ed="#SV"/>in vallibus ubi Reperiuntur invocationes daemonum 
-          <lb ed="#SV"/>et tamen illi carent omni arte et fide saltem bona  
-          <lb ed="#SV"/>et ex alio unusquisque simplicium alio et alio modo invo<lb ed="#SV"/>cat 
-          igitur ars magica non cadit sub arte nec 
-          <lb ed="#SV"/>per modum Regularum artis procedit.</p>
+                habuerunt potestatem eos cohercendi et eiciendi 
+                a creaturis ut tangit 
+                <ref xml:id="l105-Rd1e279"><name>Apostolus</name></ref> 
+                <cit>
+                  <quote xml:id="l105-Qd1e285" source="http://scta.info/resource/io17_2">
+                    dedit nobis potestatem supra omnem carnem.
+                  </quote>
+                  <!-- john 17:2 seems like the best match; but the ref to the Apostle is a bit weird. 
+                  Acts 2:17 is another possible candidate -->
+                </cit>
+              </p>
+              <p xml:id="l105-saqrap">
+                Secundo, 
+                arguitur quia 
+                invocatores daemonum sunt homines bestiales fide 
+                et virtutibus carentes igitur non sub arte cadit 
+                fatuitas magica. antecedens est notum discurrendo 
+                per historias quia malifici fuerunt semper pessimi 
+                et villes creaturae, 
+                et hoc de illis qui morantur 
+                in vallibus ubi reperiuntur invocationes daemonum 
+                et tamen illi carent omni arte et fide saltem bona  
+                et ex alio unusquisque simplicium alio et alio modo invocat 
+                igitur ars magica non cadit sub arte nec 
+                per modum regularum artis procedit.
+              </p>
             </div>
-            <div>
+            <div xml:id="l105-Dd1e296">
               <head xml:id="l105-Htqmiqd">Tertium: quod malefici vi artis magicae nihil aliud operantur nisi deceptiones potentiarum in illis quos decipiunt</head>
-        <p xml:id="l105-stqiqd">Sequitur tertio quod 
-          <lb ed="#SV"/>malefici vi artis magicae nihil aliud operantur nisi 
-          <lb ed="#SV"/>deceptiones et laesiones potentiarum in illis quos de<lb ed="#SV"/>cipiunt.</p>
+              <p xml:id="l105-stqiqd">
+                Sequitur tertio quod 
+                malefici vi artis magicae nihil aliud operantur nisi 
+                deceptiones et laesiones potentiarum in illis quos decipiunt.
+              </p>
+            </div>
           </div>
-        </div>
-        <div>
+        <div xml:id="l105-Dd1e306">
           <head xml:id="l105-Hmmdmmd">Multiplex modi deceptionis</head>
-          
-          <p xml:id="l105-ueasde">ubi est advertendum quod prout ad materiam spec<lb ed="#SV"/>tat 
+          <p xml:id="l105-ueasde">
+            Ubi est advertendum quod prout ad materiam spectat 
             multiplex est deceptio apud tales qui quid habent 
-            <lb ed="#SV"/>pro fine quaestum vel inanem gloriam sicut dictum est.</p>
-        
-          <div>
-          <head xml:id="l105-Hpmdpmd">Primus modus deceptionis</head>
-        
-            <p xml:id="l105-pgenvl"><lb ed="#SV"/>Primus gradus est quorumdam ex industria naturali vel 
-              <lb ed="#SV"/>alias loquentium interius absque motu aliorum et 
-              <lb ed="#SV"/>ad facilius decipiendum observatis coniurationibus 
-              <lb ed="#SV"/>et verbis, ipsi dant Responsa decipiendo assistentis 
-              <lb ed="#SV"/>quia loquitur et non videntur loqui.</p>
-        </div>
-          <div>
+            pro fine quaestum vel inanem gloriam sicut dictum est.
+          </p>
+          <div xml:id="l105-Dd1e314">
+            <head xml:id="l105-Hpmdpmd">Primus modus deceptionis</head>
+            <p xml:id="l105-pgenvl">
+              Primus gradus est quorumdam ex industria naturali vel 
+              alias loquentium interius absque motu aliorum et 
+              ad facilius decipiendum observatis coniurationibus 
+              et verbis, ipsi dant Responsa decipiendo assistentis 
+              quia loquitur et non videntur loqui.
+            </p>
+          </div>
+          <div xml:id="l105-Dd1e323">
             <head xml:id="l105-Hsmdsmd">Secundus modus deceptionis</head>
-        <p xml:id="l105-smseda">secundus modus secundum quod 
-          <lb ed="#SV"/>tangit <name>baccum</name> est per conventionem ipsorum quia 
-          <lb ed="#SV"/>aptatis quibusdam canalibus ipsis habent latentes 
-          <lb ed="#SV"/>socios qui per canas loquuntur et decipiunt audientes.</p>
-        
-            <p xml:id="l105-tmdsti"><lb ed="#SV"/>tertius modus decipiendi est per terrores <sic>passionare</sic> interius 
-              <lb ed="#SV"/>hominem et taliter deturbare potentias interiores ut 
-              <cb ed="#SV" n="326rb"/><lb ed="#SV"/>non sit distinctio inter phantasma et obiectum quo casu stan<lb ed="#SV"/>te 
+            <p xml:id="l105-smseda">
+              Secundus modus secundum quod 
+              tangit <name>baccum</name> est per conventionem ipsorum quia 
+              aptatis quibusdam canalibus ipsis habent latentes 
+              socios qui per canas loquuntur et decipiunt audientes.
+            </p>
+            <p xml:id="l105-tmdsti">
+              Tertius modus decipiendi 
+              est per terrores <sic>passionare</sic> interius 
+              hominem et taliter deturbare potentias interiores ut 
+              <cb ed="#SV" n="b"/><!--326rb-->
+              non sit distinctio inter phantasma et obiectum quo casu stante 
               quidquid interius occurrit per modum phantasmatis 
-              <lb ed="#SV"/>indicatur ad extra obiectum praesens quidquid terro[?] inducitur 
-              <lb ed="#SV"/>ab eis ex causa multiplici, primo ex parte loci quia 
-              <lb ed="#SV"/>tales magici eligunt loca solitaria quae sunt terrorum 
-              <lb ed="#SV"/>inductiva.</p>
-        
-            <p xml:id="l105-sephdf">secundo ex parte temporis quia tempore nocturno et te<lb ed="#SV"/>nebroso 
-              ipsi consueverunt homines de fraudare.</p>
-        
-        <p xml:id="l105-teplpa">tertio ex 
-          <lb ed="#SV"/>parte verborum tamen quia illa verba sunt audientibus ignota tamen 
-          <lb ed="#SV"/>quia ex vi suae prolationis sunt terribilia et laesiva potentia 
-          <lb ed="#SV"/>audientis.</p>
-        
-            <p xml:id="l105-qefpsp">quarto ex figura nam in praesentia assistentium 
-              <lb ed="#SV"/>multa adinvicem applicant quae omnia simul iuncta ter<lb ed="#SV"/>rent 
-              existentem et Reducunt ad talem statum quod vi turbationis et terroris interioris spuum[?] ad intra 
-              <lb ed="#SV"/>non distinguunt inter phantasma et obiectum et quidquid 
-              <lb ed="#SV"/>est ante ea impressum, et imaginatum in potentia interiori obicitur 
-              <lb ed="#SV"/>per modum Rei ad extra in tantum quod sic territi non sciunt di<lb ed="#SV"/>stinguere 
+              indicatur ad extra obiectum praesens quidquid <unclear>terro</unclear> inducitur 
+              ab eis ex causa multiplici,
+              <!-- break here?? -->
+              primo ex parte loci quia 
+              tales magici eligunt loca solitaria quae sunt terrorum 
+              inductiva.
+            </p>
+            <p xml:id="l105-sephdf">
+              Secundo, 
+              ex parte temporis quia tempore nocturno et tenebroso 
+              ipsi consueverunt homines de fraudare.
+            </p>
+            <p xml:id="l105-teplpa">
+              Tertio ex 
+              parte verborum tamen quia illa verba sunt audientibus ignota tamen 
+              quia ex vi suae prolationis sunt terribilia et laesiva potentia 
+              audientis.
+            </p>
+            <p xml:id="l105-qefpsp">
+              Quarto, 
+              ex figura nam in praesentia assistentium 
+              multa adinvicem applicant quae omnia simul iuncta terrent 
+              existentem et reducunt ad talem statum quod vi turbationis 
+              et terroris interioris <unclear>spuum</unclear> ad intra 
+              non distinguunt inter phantasma et obiectum et quidquid 
+              est ante ea impressum, et imaginatum in potentia interiori obicitur 
+              per modum rei ad extra in tantum quod sic territi non sciunt distinguere 
               inter phantasma et obiectum, et quicquid concurrit 
-              <lb ed="#SV"/>per modum phantasmatis apparet esse obiectum ad extra potentiae sensitivae 
-              <lb ed="#SV"/>praesentatum.</p> 
-          
-        <p xml:id="l105-efaemi">Et forte aliqui magici ex suis  operationibus fuerunt decepti, nam aliqui credi<lb ed="#SV"/>derunt 
-          loqui daemonibus qui Realiter non loquebantur 
-          <lb ed="#SV"/>eis, Et in signum huiusmodi narrant aliqui quod huiusmodi 
-          <lb ed="#SV"/>assentientes aliquando manent in perpetuum laesi, et ratione 
-          <lb ed="#SV"/>mutationum et turbationum interiorum quae sunt nimis ex<lb ed="#SV"/>cessive 
-          illi manent imprudentes male dispositi 
-          <lb ed="#SV"/>et male inclinati.</p>
+              per modum phantasmatis apparet esse obiectum ad extra potentiae sensitivae 
+              praesentatum.
+            </p>
+            <p xml:id="l105-efaemi">
+              Et forte aliqui magici ex suis  operationibus fuerunt decepti, nam aliqui crediderunt 
+              loqui daemonibus qui Realiter non loquebantur 
+              eis, Et in signum huiusmodi narrant aliqui quod huiusmodi 
+              assentientes aliquando manent in perpetuum laesi, et ratione 
+              mutationum et turbationum interiorum quae sunt nimis excessive 
+              illi manent imprudentes male dispositi 
+              et male inclinati.
+            </p>
           </div>
-          <div>
+          <div xml:id="l105-Dd1e365">
             <head xml:id="l105-Htmdtmd">Tertius modus deceptionis</head>
-        <p xml:id="l105-aemefm">Alius est modus deceptionis eorum 
-          <lb ed="#SV"/>per naturam et per causas naturales applicatas fraudulenter 
-          tertius est ex densitate aeris vel quod ipsi eligant loca 
-          <lb ed="#SV"/>quibus sciat[?] aerem esse densum qui Reflectit species 
-          <lb ed="#SV"/>aliqualiter et invalescente frigiditate noctis aer magis 
-          <lb ed="#SV"/>densatur et ideo magis Reflectit species in tantum quod 
-          <lb ed="#SV"/>homines indicant se videre aliqua corpora in aere 
-          <lb ed="#SV"/>ubi non vident nisi se tantum, et illud habetur IIIo <title ref="#Meteorology">metheologicarum</title> de 
-          <lb ed="#SV"/>antiphonte[?] qui videbat se in aere et hoc erat per re<lb ed="#SV"/>flectionem 
-          specierum, et ideo videbat se quasi in speculo, 
-          <lb ed="#SV"/>vel potest esse deceptio per applicationem condensantis, per hunc 
-          <lb ed="#SV"/>modum salvantur multae apparentiae daemonum, ubi <name ref="#Sortes">sortes</name> 
-          <lb ed="#SV"/>vidit seipsum de nocte et credidit se videre daemonem, 
-          <lb ed="#SV"/>et ex hoc sequitur turbatio mirabilis, et ex consequenti de<lb ed="#SV"/>nigratio 
-          faciei, et aliae infirmitatis mirabiles, et potest 
-          <lb ed="#SV"/>ex hoc esse turbatio in tanto gradu quod inferret crea<lb ed="#SV"/>turae 
-          dementiam et forte mortem.</p>
+            <p xml:id="l105-aemefm">
+              Alius est modus deceptionis eorum 
+              per naturam et per causas naturales applicatas fraudulenter 
+              tertius est ex densitate aeris vel quod ipsi eligant loca 
+              quibus sciat[?] aerem esse densum qui Reflectit species 
+              aliqualiter et invalescente frigiditate noctis aer magis 
+              densatur et ideo magis Reflectit species in tantum quod 
+              homines indicant se videre aliqua corpora in aere 
+              ubi non vident nisi se tantum, et illud habetur IIIo <title ref="#Meteorology">metheologicarum</title> de 
+              antiphonte[?] qui videbat se in aere et hoc erat per reflectionem 
+              specierum, et ideo videbat se quasi in speculo, 
+              vel potest esse deceptio per applicationem condensantis, per hunc 
+              modum salvantur multae apparentiae daemonum, ubi <name ref="#Sortes">sortes</name> 
+              vidit seipsum de nocte et credidit se videre daemonem, 
+              et ex hoc sequitur turbatio mirabilis, et ex consequenti denigratio 
+              faciei, et aliae infirmitatis mirabiles, et potest 
+              ex hoc esse turbatio in tanto gradu quod inferret creaturae 
+              dementiam et forte mortem.
+            </p>
           </div>
-          <div>
+          <div xml:id="l105-Dd1e381">
             <head xml:id="l105-Hqmdqmd">Quartus modus deceptionis</head>
-            
-            <p xml:id="l105-qmdrar">quartus modus dece<lb ed="#SV"/>ptionis 
+            <p xml:id="l105-qmdrar">
+              Quartus modus deceptionis 
               ratione defectus considerationis distantiae Rei 
-              <lb ed="#SV"/>a Re.</p> 
-            
-            <p xml:id="l105-uneoce">ubi notandum est quod secundum quod Res videtur sub maiori 
-              <lb ed="#SV"/>angelo secundum hoc iudicatur esse maior ceteris paribus,  
-              <lb ed="#SV"/>et similiter sub minori minor, et sub aequali aequalis 
-              <lb ed="#SV"/>et hoc est demonstratum in quarto libro <title ref="#Perspectiva">perspectivae</title>, nam visio 
-              <lb ed="#SV"/> 
-              <cb ed="#SV" n="326va"/><lb ed="#SV"/>fit per pyramidem Radiosam cuius conus est in oculo 
-              <lb ed="#SV"/>et basis in Re visa. et secundum quod Res videtur maiori an<lb ed="#SV"/>gulo 
-              secundum hoc Res est maior iudicando secundum quod apparet, et sic 
-              <lb ed="#SV"/><c>a</c> obiectum parvae quantitatis vel hoc potest apparere aeque ma<lb ed="#SV"/>gnus 
+              a re.
+            </p>
+            <p xml:id="l105-uneoce">
+              Ubi notandum est quod secundum quod Res videtur sub maiori 
+              angelo secundum hoc iudicatur esse maior ceteris paribus,  
+              et similiter sub minori minor, et sub aequali aequalis 
+              et hoc est demonstratum in quarto libro <title ref="#Perspectiva">perspectivae</title>, 
+              nam visio 
+              <pb ed="#SV" n="326-v"/>
+              <cb ed="#SV" n="a"/>
+              fit per pyramidem radiosam cuius conus est in oculo 
+              et basis in re visa. et secundum quod res videtur maiori angulo 
+              secundum hoc res est maior iudicando secundum quod apparet, et sic 
+              <c>a</c> obiectum parvae quantitatis vel hoc potest apparere aeque magnus 
               sicut terris altissima ut posito casu quod homo et 
-              <lb ed="#SV"/>terris elevata videantur sub eodem angelo adaequate 
-              <lb ed="#SV"/>et non discernatur de distantia sine dubio Iudica<lb ed="#SV"/>bit 
+              terris elevata videantur sub eodem angelo adaequate 
+              et non discernatur de distantia sine dubio Iudicabit 
               hominem esse aequalem turri. Et in isto casu qui 
-              <lb ed="#SV"/>frequenter accidit potest occurrere Iudicium quod homo est aeque 
-              <lb ed="#SV"/>magnus sicut turris, et ex consequenti Iudicatur esse daemo<lb ed="#SV"/>nem, 
+              frequenter accidit potest occurrere Iudicium quod homo est aeque 
+              magnus sicut turris, et ex consequenti Iudicatur esse daemonem, 
               quia sub illa quantitate qua iudicatur ita magna hoc 
-              <lb ed="#SV"/>non poterit bene naturaliter existere nec suas operationes 
-              <lb ed="#SV"/>convenienter exercere.</p>
-            
-            <p xml:id="l105-eivadn">Et ideo vitulo narrat de lu<lb ed="#SV"/>po 
+              non poterit bene naturaliter existere nec suas operationes 
+              convenienter exercere.
+            </p>
+            <p xml:id="l105-eivadn">
+              Et ideo vitulo narrat de lupo 
               qui iudicabatur nemori a principio adaequari et secundum 
-              <lb ed="#SV"/>quod variatur angelus per appropinquationem secundum hoc lupus apparet 
-              <lb ed="#SV"/>alterius et alterius quantitatis. Et iste est bonus modus 
-              <lb ed="#SV"/>salvandi apparentias daemonum naturaliter.</p>
-            
-            <p xml:id="l105-ueacid">ubi est adver<lb ed="#SV"/>tendum 
+              quod variatur angelus per appropinquationem secundum hoc lupus apparet 
+              alterius et alterius quantitatis. Et iste est bonus modus 
+              salvandi apparentias daemonum naturaliter.
+            </p>
+            <p xml:id="l105-ueacid">
+              Ubi est advertendum 
               quod ad debite aliquid percipiendum per visum Requiruntur 
-              <lb ed="#SV"/> octo concurrentia, scilicet, lux  debita distantia  situs  magnitudo 
-              <lb ed="#SV"/>soliditas  dyamphanitas[?]  tempus conveniens  debita 
-              <lb ed="#SV"/>organi disposito  et ista possunt in infinitum variari quia 
-              <lb ed="#SV"/>ad variationem unius sequitur deceptio infinita vel possunt 
-              <lb ed="#SV"/>contingere infinite deceptiones.</p>
+               octo concurrentia, scilicet, lux  debita distantia  situs  magnitudo 
+              soliditas  dyamphanitas[?]  tempus conveniens  debita 
+              organi disposito  et ista possunt in infinitum variari quia 
+              ad variationem unius sequitur deceptio infinita vel possunt 
+              contingere infinite deceptiones.
+            </p>
           </div>
-          <div>
+          <div xml:id="l105-Dd1e409">
             <head xml:id="l105-qnmqnm">Quintus modus deceptionis</head>
-            <p xml:id="l105-qmiaes">quintus modus illusionis 
-              <lb ed="#SV"/>potest esse pertinenter ad praedicta laedendo organi dispositio<lb ed="#SV"/>nem 
+            <p xml:id="l105-qmiaes">
+              Quintus modus illusionis 
+              potest esse pertinenter ad praedicta laedendo organi dispositionem 
               assistentis, nam sicut torpedo solo tactu 
-              <lb ed="#SV"/>stupefacit membra in tantum quod membrum Redditur im<lb ed="#SV"/>potens 
+              stupefacit membra in tantum quod membrum redditur impotens 
               ad sentiendum, et adhuc tangendo ipsum cum 
-              <lb ed="#SV"/>baculo laedit membra et omnino perturbat et ita 
-              <lb ed="#SV"/>per applicationem aliquorum potest visus alterari cuius appli<lb ed="#SV"/>cationis 
+              baculo laedit membra et omnino perturbat et ita 
+              per applicationem aliquorum potest visus alterari cuius applicationis 
               sunt apparentiae variae, ubi nullo modo erit 
-              <lb ed="#SV"/>daemon et ideo ad videndum Requiritur conveniens 
-              <lb ed="#SV"/>tempus nam propter velocitatem motus punctus circu<lb ed="#SV"/>lariter 
+              daemon et ideo ad videndum Requiritur conveniens 
+              tempus nam propter velocitatem motus punctus circulariter 
               revolutus videtur esse circumferentia circuli immo 
-              <lb ed="#SV"/>Realiter circulus ut apparet de baculo inflammato 
-              <lb ed="#SV"/>nam propter brevitatem temporis existentis inter instans in 
-              <lb ed="#SV"/>quo punctus est sursum et inter instans in quo 
-              <lb ed="#SV"/>est deorsum punctus Iudicatur esse ubique, et ita ratione 
-              <lb ed="#SV"/>parvitatis temporis res non Iudicatur esse ubi est, et 
-              <lb ed="#SV"/>per istum modum salvantur omnes traiectus. unde si 
-              <lb ed="#SV"/><name ref="#Sortes">sortes</name> teneat denarium in una manu propter bre<lb ed="#SV"/>vitatem 
-              temporis sensus non sufficiet Iudicare in qua 
-              <lb ed="#SV"/>manu denarius sit si una manus aliam tetigerit 
-              <lb ed="#SV"/>inperceptibiliter quia credit mutationem non esse facta 
-              <lb ed="#SV"/>de loco ad locum, et sic in aliis tragediis possunt 
-              <lb ed="#SV"/>esse plures deceptiones quibus utuntur magici ad 
-              <lb ed="#SV"/>extorquendum simplicium.</p>
+              Realiter circulus ut apparet de baculo inflammato 
+              nam propter brevitatem temporis existentis inter instans in 
+              quo punctus est sursum et inter instans in quo 
+              est deorsum punctus iudicatur esse ubique, et ita ratione 
+              parvitatis temporis res non iudicatur esse ubi est, et 
+              per istum modum salvantur omnes traiectus. 
+              Unde si 
+              <name ref="#Sortes">Sortes</name> teneat denarium in una manu propter brevitatem 
+              temporis sensus non sufficiet iudicare in qua 
+              manu denarius sit si una manus aliam tetigerit 
+              inperceptibiliter quia credit mutationem non esse facta 
+              de loco ad locum, et sic in aliis tragediis possunt 
+              esse plures deceptiones quibus utuntur magici ad 
+              extorquendum simplicium.
+            </p>
           </div>
-          <div>
+          <div xml:id="l105-Dd1e421">
             <head xml:id="l105-Hsxmsxm">Sextus modus deceptionis</head>
-            <p xml:id="l105-smesna">sextus modus est per naturalium causarum 
-              <lb ed="#SV"/>applicationem quae tamen ignorantur causae naturales et simplices 
-              <lb ed="#SV"/>credunt quod arte diabolica talia fiant, nam <name ref="#WilliamOfParis">Guillelmus 
-                <lb ed="#SV"/>parisiensis</name> dicit quod si ex cera et puluere corii serpentis 
-              <cb ed="#SV" n="326vb"/><lb ed="#SV"/>adusti fiat candela de nocte ardens de nocte fa<lb ed="#SV"/>ciet 
+            <p xml:id="l105-smesna">
+              Sextus modus est per naturalium causarum 
+              applicationem quae tamen ignorantur causae naturales et simplices 
+              credunt quod arte diabolica talia fiant, nam 
+              <cit>
+                <ref xml:id="l105-Rd1e430"><name ref="#WilliamOfParis">Guillelmus Parisiensis</name></ref>
+              </cit> 
+              dicit quod si ex cera et puluere corii serpentis 
+              <cb ed="#SV" n="b"/><!--SV326vb-->
+              adusti fiat candela de nocte ardens de nocte faciet 
               apparere festucas esse serpentes vel Iuncos, similiter 
-              <lb ed="#SV"/>nam ratione colorum corii admisci cum cora variatur 
-              <lb ed="#SV"/>color obiecti visibilis, et iudicatur proportionalis color 
-              <lb ed="#SV"/>sicut color corii, et ratione luminis apparebunt moveri 
-              <lb ed="#SV"/>ut serpentes, et etiam ratione defectus lucis folium 
-              <lb ed="#SV"/>quercuum apparet esse bufonem et quantum ad hoc possent 
-              <lb ed="#SV"/>infinita exponi et experiri quae fiunt per causas naturales 
-              <lb ed="#SV"/>et tamen de simplicibus non apparet.</p>
+              nam ratione colorum corii admisci cum cora variatur 
+              color obiecti visibilis, et iudicatur proportionalis color 
+              sicut color corii, et ratione luminis apparebunt moveri 
+              ut serpentes, et etiam ratione defectus lucis folium 
+              quercuum apparet esse bufonem et quantum ad hoc possent 
+              infinita exponi et experiri quae fiunt per causas naturales 
+              et tamen de simplicibus non apparet.
+            </p>
           </div>
         </div>
-            <div>
-              <head xml:id="l105-Hqtmmsp">Quod tales magici nullo modo sunt permittendi</head>
-              
-            <p xml:id="l105-eqqqvc">Ex quibus quod tales 
-              <lb ed="#SV"/>magici nullo modo sunt impossibilia permittendi, quia 
-              <lb ed="#SV"/>laedunt et impediunt potentiam ad vere <sic>poletisandum</sic> 
-              <lb ed="#SV"/>ex eo quod vexant creaturas.</p> 
+        <div xml:id="l105-Dd1e441">
+          <head xml:id="l105-Hqtmmsp">Quod tales magici nullo modo sunt permittendi</head>
+          <p xml:id="l105-eqqqvc">
+            Ex quibus quod tales 
+            magici nullo modo sunt impossibilia permittendi, quia 
+            laedunt et impediunt potentiam ad vere <sic>poletisandum</sic> 
+            ex eo quod vexant creaturas.
+          </p>
+          <p xml:id="l105-sfiasd">
+            Secundo faciunt idolatriae 
+            et ducunt homines ad sacrificandum daemonibus.
+          </p>
+          <p xml:id="l105-tqntcd">
+            Tertio quia 
+            nihil afferunt nisi phantasticum quia apparentiae in 
+            illo casu non sunt nisi secundum quod obicitur phantasma 
+            ad intra potentiis interioribus et in illis nihil 
+            veritatis Reperitur. potest tamen altero duorum modorum contingere 
+            quod aliquid veritatis in tali casu dicat.
+          </p>
+          <p xml:id="l105-umedhi">
+            Unus modus 
+            ex culpa et non arte, 
+            scilicet quando creatura a deo totaliter 
+            deseritur et diaboli divino subicitur in poenam peccati 
+            permisit deus ut cum daemone conversetur, 
+            non tamen vi alicuius artis, 
+            sed propter culpam sic demerentes, 
+            contingit tamen providentia divina 
+            quod deus non permittit quod diabolus habeat intentum.
+          </p>
+          <p xml:id="l105-amedfq">
+            Alius modus est de Reprobatione malorum 
+            et huiusmodi inquirentibus, 
+            et hoc determinat 
+            <cit>
+              <ref xml:id="l105-Rd1e466">
+                <name ref="#JohnOfSalisbury">sabiensis[?]</name> 
+                in <title>Summa</title> sua, 
+                libro IIo, 
+                capitulo 17mo
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
             
-            <p xml:id="l105-sfiasd">secundo faciunt idolatriae 
-              <lb ed="#SV"/>et ducunt homines ad sacrificandum daemonibus.</p>
-            
-            <p xml:id="l105-tqntcd">tertio quia 
-              <lb ed="#SV"/>nihil afferunt nisi phantasticum quia apparentiae in 
-              <lb ed="#SV"/>illo casu non sunt nisi secundum quod obicitur phantasma 
-              <lb ed="#SV"/>ad intra potentiis interioribus et in illis nihil 
-              <lb ed="#SV"/>veritatis Reperitur. potest tamen altero duorum modorum contingere 
-              <lb ed="#SV"/>quod aliquid veritatis in tali casu dicat.</p>
-            
-            <p xml:id="l105-umedhi">Unus modus 
-              <lb ed="#SV"/>ex culpa et non arte, scilicet, quando creatura a deo totaliter 
-              <lb ed="#SV"/>deseritur et diaboli divino subicitur in poenam peccati 
-              <lb ed="#SV"/>permisit deus ut cum daemone conversetur, non tamen vi 
-              <lb ed="#SV"/>alicuius artis, sed propter culpam sic demerentes, contingit 
-              <lb ed="#SV"/>tamen providentia divina quod deus non permittit quod diabolus 
-              habeat intentum.</p>            
-            
-              <p xml:id="l105-amedfq">Alius modus est de Reprobatione ma<lb ed="#SV"/>lorum 
-                et huiusmodi inquirentibus, et hoc determinat <name ref="#JohnOfSalisbury">sabiensis[?]</name> in <title>summa</title> sua libro IIo capitulo 17mo et 
-                <lb ed="#SV"/><name ref="#NicholasOresme">magister nicholaus oresme</name> in tertio libro de figura<lb ed="#SV"/>tionibus 
-                qualitatum.</p>
-            
-             <p xml:id="l105-ismtne">Item sunt multae illuminationes 
-               <lb ed="#SV"/>quae fiunt sine daemonibus ut apparet de igne qui aliquando apparet 
-               <lb ed="#SV"/>in cimiteriis vel proprie patibula, et aliquando homines 
-               <lb ed="#SV"/>Iudicant ibi esse spiritus quod tamen non est, et cetera.</p> 
-          
-          </div>
+            et 
+            <cit>
+              <ref xml:id="l105-Rd1e481">
+                <name ref="#NicholasOresme">Magister Nicholaus Oresme</name> 
+                in tertio libro de figurationibus 
+                qualitatum
+              </ref>
+              <bibl>XXX</bibl>
+            </cit>.
+          </p>
+          <p xml:id="l105-ismtne">
+            Item, 
+            sunt multae illuminationes 
+            quae fiunt sine daemonibus ut apparet de igne qui aliquando apparet 
+            in cimiteriis vel proprie patibula, et aliquando homines 
+            Iudicant ibi esse spiritus quod tamen non est, et cetera.
+          </p>
+        </div>
       </div>
     </body>
   </text>

@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,371 +7,492 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 104, de Libertate</title>
           <date when="2013-02-24">February 24, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-24">February 24, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-24" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="324-r"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio104">
-      <head xml:id="l104-Hldlldl" subtype="title">Lectio 104, de Libertate</head>
-        <div>
+        <head xml:id="l104-Hldlldl">Lectio 104, de Libertate</head>
+        <div xml:id="l104-Dd1e109">
           <head xml:id="l104-Hppepet">Providentia producit effectos tripliciter</head>
-        <p xml:id="l104-veqvfc">Visum est qualiter 
-          <lb ed="#SV"/>ad causas pure naturales non possunt philosophi reducere 
-          <lb ed="#SV"/>effectus qui apparuerunt in istis inferioribus et vi<lb ed="#SV"/>sum 
-          est quae inconvenientia ipsi philosophi incidunt qui non conce<lb ed="#SV"/>dunt 
-          veritatem fidei catholicae.</p>
-        
-        <p xml:id="l104-ptmpsa">Pro declaratione 
-          <lb ed="#SV"/>tamen materiae, et reductione effectuum contingentium 
-          <lb ed="#SV"/>in suas causas notandum quod licet omnes effectus qui contingunt re<lb ed="#SV"/>ducantur 
-          in divinam providentiam in generali tamen in speciali 
-          <lb ed="#SV"/>triplices Reperiuntur effectus. primus est miracularum, secundus 
-          <lb ed="#SV"/>est operationum diabolicarum tertius est operationis naturae per se 
-          <lb ed="#SV"/>agentis.</p>
+          <p xml:id="l104-veqvfc">
+            Visum est qualiter 
+            ad causas pure naturales non possunt philosophi reducere 
+            effectus qui apparuerunt in istis inferioribus et visum 
+            est quae inconvenientia ipsi philosophi incidunt qui non concedunt 
+            veritatem fidei catholicae.
+          </p>
+          <p xml:id="l104-ptmpsa">
+            Pro declaratione 
+            tamen materiae, et reductione effectuum contingentium 
+            in suas causas notandum quod licet omnes effectus qui contingunt reducantur 
+            in divinam providentiam in generali tamen in speciali 
+            triplices Reperiuntur effectus. primus est miracularum, secundus 
+            est operationum diabolicarum tertius est operationis naturae per se 
+            agentis.
+          </p>
         </div>
-        <div>
+        <div xml:id="l104-Dd1e121">
           <head xml:id="l104-Hcpggem">Propositio: quod miracula non evidens in lumine naturali, sed quod miracula sunt possibilia est probabile</head>
-        <p xml:id="l104-cpslep">Circa primum sit ista propositio: quamvis non sit 
-          <lb ed="#SV"/>evidens in puro lumine naturali aliquod esse miraculum, 
-          <lb ed="#SV"/>deum tamen agere praeter naturae cursum in perfecto lumine est 
-          <lb ed="#SV"/>probabile.</p> 
-          <div>
+          <p xml:id="l104-cpslep">
+            Circa primum sit ista propositio: quamvis non sit 
+            evidens in puro lumine naturali aliquod esse miraculum, 
+            deum tamen agere praeter naturae cursum in perfecto lumine est 
+            probabile.
+          </p> 
+          <div xml:id="l104-Dd1e129">
             <head xml:id="l104-Hppprra">Probatio primae partis</head>
-          <p xml:id="l104-ppprae">prima pars probatur quia non est evidens in lumine 
-            <lb ed="#SV"/>naturali quod deus agat praeter naturae cursum nec etiam 
-            <lb ed="#SV"/>quod ipse aliqualiter agat quam secundum institutionem naturalem quam 
-            <lb ed="#SV"/>experimur nunc ad modum et necessitatem naturae, quia si 
-            <lb ed="#SV"/>contrarium esset evidens, philosophi non tenuissent hanc viam 
-            <lb ed="#SV"/>quod deus agat necessario respectu aliquorum effectuum.</p>
-        
-        <p xml:id="l104-spihem">secundo probatur 
-          <lb ed="#SV"/>ista pars ex hac Radice quia naturae facultas est ignota nobis igitur de nullo effectu constat 
-          <lb ed="#SV"/>vel constare poterit quin ille fiat potestate naturae, quia 
-          <lb ed="#SV"/>ex quo potestas naturae est ignota dato aliquo effe<lb ed="#SV"/>ctu 
-          non est scitum quod tota facultas naturae se ad hoc 
-          <lb ed="#SV"/>se extendat cuius ignorantia patet ex combinationibus 
-          <lb ed="#SV"/>infinitis possibilis quae non scibiles a nobis. patet hoc 
-          <cb ed="#SV" n="324va"/><lb ed="#SV"/>primo per applicationem agentium ad sua passa nam 
-              <lb ed="#SV"/>sicut magnes quando applicatur ferro trahit ipsum, ita 
-              <lb ed="#SV"/>quaelibet Res habet passum ad quod haberet notabilem effectum 
-              <lb ed="#SV"/>modo impossibile est quodlibet agens ad quodlibet passum 
-              <lb ed="#SV"/>applicari, quia ita forte magnes respectu alterius passi 
-              <lb ed="#SV"/>haberet effectum <unclear>mirabiliorem[?]</unclear>.</p>
-        
-        <p xml:id="l104-eidpsp">Et ita de planta posset 
-          <lb ed="#SV"/>argui igitur ex parte passorum impossibilis est applicatio et 
-          <lb ed="#SV"/>per consequens nullius agentis naturalis scitur omnimoda possibilitas 
-          <lb ed="#SV"/>seu potestas.</p>
-        
-        <p xml:id="l104-taassl">tertio aliquod agens est productivum effectus 
-          <lb ed="#SV"/>cum alio et non posset illum effectum pro se producere sed impossibile 
-          <lb ed="#SV"/>est omnia agentia simul combinari igitur latent nos effectus qui 
-          <lb ed="#SV"/>ex combinatione agentium provenirent exemplum ponitur communiter 
-          <lb ed="#SV"/>ut color non poterit multiplicare suas species sine lumine.</p>
-        
-            <p xml:id="l104-eqaacm"><lb ed="#SV"/>Ex quo apparet quod impossibile est scire naturae potestatem, unde combina<lb ed="#SV"/>tio 
+            <p xml:id="l104-ppprae">
+              Prima pars probatur quia non est evidens in lumine 
+              naturali quod deus agat praeter naturae cursum nec etiam 
+              quod ipse aliqualiter agat quam secundum institutionem naturalem quam 
+              experimur nunc ad modum et necessitatem naturae, quia si 
+              contrarium esset evidens, philosophi non tenuissent hanc viam 
+              quod deus agat necessario respectu aliquorum effectuum.
+            </p>
+            <p xml:id="l104-spihem">
+              Secundo probatur 
+              ista pars ex hac Radice quia naturae facultas est ignota nobis igitur de nullo effectu constat 
+              vel constare poterit quin ille fiat potestate naturae, quia 
+              ex quo potestas naturae est ignota dato aliquo effectu 
+              non est scitum quod tota facultas naturae se ad hoc 
+              se extendat cuius ignorantia patet ex combinationibus 
+              infinitis possibilis quae non scibiles a nobis. patet hoc 
+              <pb ed="#SV" n="324-v"/>
+              <cb ed="#SV" n="a"/>
+              primo per applicationem agentium ad sua passa nam 
+              sicut magnes quando applicatur ferro trahit ipsum, ita 
+              quaelibet Res habet passum ad quod haberet notabilem effectum 
+              modo impossibile est quodlibet agens ad quodlibet passum 
+              applicari, quia ita forte magnes respectu alterius passi 
+              haberet effectum <unclear>mirabiliorem[?]</unclear>.
+            </p>
+            <p xml:id="l104-eidpsp">
+              Et ita de planta posset 
+              argui igitur ex parte passorum impossibilis est applicatio et 
+              per consequens nullius agentis naturalis scitur omnimoda possibilitas 
+              seu potestas.
+            </p>
+            <p xml:id="l104-taassl">
+              Tertio aliquod agens est productivum effectus 
+              cum alio et non posset illum effectum pro se producere sed impossibile 
+              est omnia agentia simul combinari igitur latent nos effectus qui 
+              ex combinatione agentium provenirent exemplum ponitur communiter 
+              ut color non poterit multiplicare suas species sine lumine.
+            </p>
+            <p xml:id="l104-eqaacm">
+              Ex quo apparet quod impossibile est scire naturae potestatem, unde combinatio 
               diversarum causarum diversitatem effectuum facit, et 
-              <lb ed="#SV"/>hoc apparet in <unclear>tiriaca[?]</unclear> ad cuius confectionem ponitur venenum 
-              <lb ed="#SV"/>et tamen praeservat a veneno, et hoc provenit ex com<lb ed="#SV"/>binatione 
+              hoc apparet in <unclear>tiriaca[?]</unclear> ad cuius confectionem ponitur venenum 
+              et tamen praeservat a veneno, et hoc provenit ex combinatione 
               aliorum agentium cum veneno combinatorum, et 
-              <lb ed="#SV"/>ita posset poni exemplum in aliis confectionibus <unclear>me?ne[?]</unclear>.</p>
-        
-        <p xml:id="l104-qeaavn">quarto ex applicatione distantiae, nam si agens applicetur 
-          <lb ed="#SV"/>passo in certa distantia produceret effectum, si autem 
-          <lb ed="#SV"/>in maiori vel minori distantia applicatur passo non 
-          <lb ed="#SV"/>illum effectum producet sed alium vel nullum.</p>
-        
-            <p xml:id="l104-qsqcon">quinto secundum qua<lb ed="#SV"/>litatem 
-              et quantitatem agentium possunt in infinitum effectus diver<lb ed="#SV"/>sificari 
-              et sic infinita Restat latitudo inquisitio<lb ed="#SV"/>nis 
-              circa operationes naturales.</p>
-        
-        <p xml:id="l104-eqaicn">Ex quo apparet quod naturae 
-          <lb ed="#SV"/>facultas est ignota igitur quocumque effectu dato non 
-          <lb ed="#SV"/>est evidens quin possit fieri per naturam. Et iuxta 
-          <lb ed="#SV"/>hanc imaginatione liber qui intitulatur <title>liber de mira<lb ed="#SV"/>bilibus 
-            sacrae scripturae</title> qui ascribitur <name ref="#Augustine">augustino</name> omnia 
-          <lb ed="#SV"/>miracula a principio creationis mundi usque ad adventum 
-          <lb ed="#SV"/>christi isti Resolvunt in causas naturales.</p>
-        
-        <p xml:id="l104-ermihm">Et <name ref="#Maimonides">Rabbi 
-          <lb ed="#SV"/>moyses</name> Recitat opinionem aliquorum dicentium quod natura 
-          <lb ed="#SV"/>non fuit ab initio ab unicum opus instituta, sed 
-          <lb ed="#SV"/>prima institutione fuit instituta ad omnes effectus 
-          <lb ed="#SV"/>qui percipiuntur in hoc mundo. unde ex lege indita 
-          <lb ed="#SV"/>mari ab initio mundi ipsum stetit et divisum 
-          <lb ed="#SV"/>fuit in transitu <name>egiptorum</name> et hoc fuit naturale ma<lb ed="#SV"/>ri 
-          secundum eos. secundo naturale fuit igni in canino existenti 
-          <lb ed="#SV"/>quando non adurebat pueros illos tres constat enim 
-          <lb ed="#SV"/>quod agens erat applicatum et passum dispositum.</p>
-        
-            <p xml:id="l104-unecpn"><lb ed="#SV"/>ubi notandum est quod hoc posset fideles aliqualiter scan<lb ed="#SV"/>dalizare, 
-              licet tamen millum generet scandalum secundum inten<lb ed="#SV"/>tionem illorum, nam eorum imaginatio fuit quod 
-              <lb ed="#SV"/>deus ratione suae sublimitatis est taliter naturae dicens 
-              <cb ed="#SV" n="324vb"/><lb ed="#SV"/>quod natura ei obedit et suae voluntati taliter quod ipsa 
-              <lb ed="#SV"/>facit ex inclinatione omne quod praecipit ei deus 
-              <lb ed="#SV"/>et quidquid facit est sibi naturale. Ista positio sit in<lb ed="#SV"/>tellecta 
-              non Recederet a fide catholica quia natura 
-              <lb ed="#SV"/>producit effectum insolitum ex divino imperio et naturali<lb ed="#SV"/>ssimum 
+              ita posset poni exemplum in aliis confectionibus <unclear>me?ne[?]</unclear>.
+            </p>
+            <p xml:id="l104-qeaavn">
+              Quarto ex applicatione distantiae, nam si agens applicetur 
+              passo in certa distantia produceret effectum, si autem 
+              in maiori vel minori distantia applicatur passo non 
+              illum effectum producet sed alium vel nullum.
+            </p>
+            <p xml:id="l104-qsqcon">
+              Quinto secundum qualitatem 
+              et quantitatem agentium possunt in infinitum effectus diversificari 
+              et sic infinita Restat latitudo inquisitionis 
+              circa operationes naturales.
+            </p>
+            <p xml:id="l104-eqaicn">
+              Ex quo apparet quod naturae 
+              facultas est ignota igitur quocumque effectu dato non 
+              est evidens quin possit fieri per naturam. 
+              Et iuxta 
+              hanc imaginatione 
+              <cit>
+                <ref xml:id="l104-Rd1e173">
+                  liber qui intitulatur 
+                  <title>liber de mirabilibus 
+                  sacrae scripturae</title> 
+                  qui ascribitur 
+                  <name ref="#Augustine">Augustino</name>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit>
+              omnia 
+              miracula a principio creationis mundi usque ad adventum 
+              christi isti resolvunt in causas naturales.
+            </p>
+            <p xml:id="l104-ermihm">
+              Et <name ref="#Maimonides">Rabbi 
+              moyses</name> Recitat opinionem aliquorum dicentium quod natura 
+              non fuit ab initio ab unicum opus instituta, sed 
+              prima institutione fuit instituta ad omnes effectus 
+              qui percipiuntur in hoc mundo. unde ex lege indita 
+              mari ab initio mundi ipsum stetit et divisum 
+              fuit in transitu <name>egiptorum</name> et hoc fuit naturale mari 
+              secundum eos. secundo naturale fuit igni in canino existenti 
+              quando non adurebat pueros illos tres constat enim 
+              quod agens erat applicatum et passum dispositum.
+            </p>
+            <p xml:id="l104-unecpn">
+              Ubi notandum est quod hoc posset fideles aliqualiter scandalizare, 
+              licet tamen millum generet scandalum secundum intentionem illorum, nam eorum imaginatio fuit quod 
+              deus ratione suae sublimitatis est taliter naturae dicens 
+              <cb ed="#SV" n="b"/><!--SV 324vb-->
+              quod natura ei obedit et suae voluntati taliter quod ipsa 
+              facit ex inclinatione omne quod praecipit ei deus 
+              et quidquid facit est sibi naturale. 
+              Ista positio sit intellecta 
+              non recederet a fide catholica quia natura 
+              producit effectum insolitum ex divino imperio et naturalissimum 
               est ei deo sic obedire, nam omnis operatio 
-              <lb ed="#SV"/>conveniens agenti dicitur naturalis, nam operationes secundum eos 
-              <lb ed="#SV"/>vocantur naturales quia fiunt secundum communem cursum naturae. 
-              <lb ed="#SV"/>patet igitur prima pars conclusionis quod non est evidens lumine naturali 
-              <lb ed="#SV"/>quod aliquod opus sit miraculosum, quia multi effe<lb ed="#SV"/>ctus 
-              naturales latent nos, nam non sequitur <name ref="#Sortes">sortes</name> 
-              <lb ed="#SV"/>nescit Resolvere <c>a</c> effectum in causas naturales igitur 
-              <lb ed="#SV"/>ille effectus non est naturalis, sicut dicitur de Rustico 
-              <lb ed="#SV"/>qui nescit Resolvere lumine eclipsim in naturalem causam 
-              <lb ed="#SV"/>licet ille effectus sit ut constat pure naturalis.</p>
+              conveniens agenti dicitur naturalis, nam operationes secundum eos 
+              vocantur naturales quia fiunt secundum communem cursum naturae. 
+              patet igitur prima pars conclusionis quod non est evidens lumine naturali 
+              quod aliquod opus sit miraculosum, quia multi effectus 
+              naturales latent nos, nam non sequitur <name ref="#Sortes">Sortes</name> 
+              nescit resolvere <c>a</c> effectum in causas naturales igitur 
+              ille effectus non est naturalis, sicut dicitur de rustico 
+              qui nescit Resolvere lumine eclipsim in naturalem causam 
+              licet ille effectus sit ut constat pure naturalis.
+            </p>
           </div>
-          <div>
+          <div xml:id="l104-Dd1e209">
             <head xml:id="l104-Hpsppsp">Probatio secundae partis</head>
-        <p xml:id="l104-spcifn">secunda 
-          <lb ed="#SV"/>pars conclusionis probatur, scilicet, quod deum posse agere supra naturae cur<lb ed="#SV"/>sum 
-          est in lumine naturali probabile probatur quia deus est liberum 
-          <lb ed="#SV"/>agens ad extra ad contingentes effectus et habet infinitam 
-          <lb ed="#SV"/>potentiam respectu illorum igitur potest se solo effectum producere. 
-          <lb ed="#SV"/>consequentia est nota in lumine naturali et antecedens est probabile in eodem 
-          <lb ed="#SV"/>lumine igitur et consequens, quod antecedens sit in illo lumine probabile 
-          <lb ed="#SV"/>patet quia in lumine naturali probabile est quod deus est summe perfe<lb ed="#SV"/>ctus 
-          et dicit <ref><name ref="#Aristotle">aristoteles</name> in XIIo <title ref="#Metaphysics">metaphysicae</title></ref> quod deus est 
-          <lb ed="#SV"/>infinitae nobilitatis igitur nulla est nec potest esse denotatio 
-          <lb ed="#SV"/>perfectionis simpliciter quin competat ei, alias non esset 
-          <lb ed="#SV"/>in fine nobilitatis.</p>
-        
-            <p xml:id="l104-selaml">secundo esse liberum dicit summam perfe<lb ed="#SV"/>ctionem 
+            <p xml:id="l104-spcifn">
+              Secunda 
+              pars conclusionis probatur, scilicet, quod deum posse agere supra naturae cursum 
+              est in lumine naturali probabile probatur quia deus est liberum 
+              agens ad extra ad contingentes effectus et habet infinitam 
+              potentiam respectu illorum igitur potest se solo effectum producere. 
+              consequentia est nota in lumine naturali et antecedens est probabile in eodem 
+              lumine igitur et consequens, quod antecedens sit in illo lumine probabile 
+              patet quia in lumine naturali probabile est quod deus est summe perfectus 
+              et dicit 
+              <cit>
+                <ref xml:id="l104-Rd1e218" target="http://scta.info/resource/aristmet-l12">
+                  <name ref="#Aristotle">Aristoteles</name> in XIIo 
+                  <title ref="#Metaphysics">Metaphysicae</title>
+                </ref>
+              </cit> 
+              quod deus est 
+              infinitae nobilitatis, 
+              igitur nulla est nec potest esse denotatio 
+              perfectionis simpliciter quin competat ei, 
+              alias non esset 
+              in fine nobilitatis.
+            </p>
+            <p xml:id="l104-selaml">
+              Secundo esse liberum dicit summam perfectionem 
               et adhuc in lumine naturali, modo deo attribuitur 
-              <lb ed="#SV"/>maxime libertas.</p>
-        
-        <p xml:id="l104-tpaqtc">Tertio <name ref="#Aristotle">philosophus</name> attribuit istam perfectionem 
-          <lb ed="#SV"/>in <ref type="citation">IVo <title ref="#Physics">physicarum</title></ref> quia ipse ponit quod aer potest subtiliari 
-          <lb ed="#SV"/>in infinitum, et non esset nisi per infinitam dei potentiam et 
-          <lb ed="#SV"/>liberalitatem, et cum <name ref="#Aristotle">aristoteles</name> loquatur naturaliter ibi 
-          <lb ed="#SV"/>et ex activitatem speciali agentis sequitur secunda pars conclusionis 
-          <lb ed="#SV"/>vera, unde verisimile cum <name ref="#Aristotle">aristoteles</name> concessisset creationem 
-          <lb ed="#SV"/>mundi et alios effectus mirabiles licet secutus 
-          <lb ed="#SV"/>sit apparentiam tamen ex inclinatione sui intellectus ad 
-          <lb ed="#SV"/>veritatem videtur quod tenuerit contrarium.</p>
-          
-            <p xml:id="l104-pdmmae">Pro de<lb ed="#SV"/>claratione 
+              maxime libertas.
+            </p>
+            <p xml:id="l104-tpaqtc">
+              Tertio, 
+              <name ref="#Aristotle">Philosophus</name> attribuit istam perfectionem 
+              in 
+              <cit>
+                <ref xml:id="l104-Rd1e239">
+                  IVo <title ref="#Physics">Physicarum</title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              quia ipse ponit quod aer potest subtiliari 
+              in infinitum, et non esset nisi per infinitam dei potentiam et 
+              liberalitatem, 
+              et cum <name ref="#Aristotle">Aristoteles</name> loquatur naturaliter ibi 
+              et ex activitatem speciali agentis sequitur secunda pars conclusionis vera, 
+              unde verisimile cum <name ref="#Aristotle">Aristoteles</name> concessisset creationem 
+              mundi et alios effectus mirabiles licet secutus 
+              sit apparentiam tamen ex inclinatione sui intellectus ad 
+              veritatem videtur quod tenuerit contrarium.
+            </p>
+            <p xml:id="l104-pdmmae">
+              Pro declaratione 
               materiae est advertendum quod triplex est 
-              <lb ed="#SV"/>modus agendi effectus.</p>
-        
-          <p xml:id="l104-pesndd">primus est secundum naturam propriam 
-            <lb ed="#SV"/>et specificam vel individualem, et illo modo res 
-            <lb ed="#SV"/>operantur per operationes proprias suae speciei ut de terra 
-            <lb ed="#SV"/>naturaliter collocatur in centro terrae et grave naturaliter 
-            <lb ed="#SV"/>descendit deorsum.</p>
-        
-        <p xml:id="l104-smaosn">secundus modus agendi effectus 
-          <lb ed="#SV"/>est secundum naturam communem, et non vocatur ibi secundum naturam 
-          <cb ed="#SV" n="325ra"/><lb ed="#SV"/>communem quod sit una natura universalis distincta a particulari, sed 
-          <lb ed="#SV"/>vocatur communis propter institutum communem omnibus Rebus, etiam 
-          <lb ed="#SV"/>dicitur communis respectu operationis quam omnis eam intenderet, quia 
-          <lb ed="#SV"/>quaelibet causa creata inclinaretur ad hoc ut faceret 
-          <lb ed="#SV"/>illum effectum, et secundum istam institutionem quaelibet Res appetit 
-          <lb ed="#SV"/>decorem universi ut nulla res pateretur vacuum, nam 
-          <lb ed="#SV"/>quaelibet Res existens in concavo orbis lunae aequaliter concur<lb ed="#SV"/>reret 
-          ad Replendum vacuum ceteris paribus et huius<lb ed="#SV"/>modi 
-          operationes sunt naturales.</p>
-        
-        <p xml:id="l104-temsus">tertius est modus agendi 
-          <lb ed="#SV"/>effectus secundum obedientiam supremi principis extra duos 
-          <lb ed="#SV"/>modos praedictos cuius voluntas vel mandatum potest 
-          <lb ed="#SV"/>esse  novum igitur deus potest velle agere 
-          <lb ed="#SV"/>aliquem effectum cuius causa non erat antequam vellet 
-          <lb ed="#SV"/>productiva nec secundum rationem suam specificam nec 
-          <lb ed="#SV"/>communem et sic de omnibus effectibus miraculosis ut de 
-          <lb ed="#SV"/>statione solis tempore <name ref="#Joshua">Iosue</name> quia ex praecepto divino 
-          <lb ed="#SV"/>solo stetit ad preces <name ref="#Joshua">Iosue</name> et non ad suam 
-          <lb ed="#SV"/>vocem vel ex suo praecepto quia non habuit talem 
-          <lb ed="#SV"/>sed deus praecepti soli creaturae sua ut staret.</p>
-        
-        <p xml:id="l104-eimpcr">Et 
-          <lb ed="#SV"/>iste modus agendi effectus est alterius speciei ab aliis 
-          <lb ed="#SV"/>sub quo omnia miracula continentur ut de supsen<lb ed="#SV"/>tione 
-          activitatis ignis in camino ubi erant 
-          <lb ed="#SV"/>illi tres pueri quia licet agens esset sufficienter 
-          <lb ed="#SV"/>dispositum et passum applicatum nihilominus illi pueri 
-          <lb ed="#SV"/>ex voluntate divina nullum passi <unclear>sunt[?]</unclear> malum sed 
-          <lb ed="#SV"/>utrum talis statio solis fuerit naturalis et influentia 
-          <lb ed="#SV"/>ignis tantam dulcedinem pueris influentis etiam 
-          <lb ed="#SV"/>fuerint naturalis quia nedum ignis non laedebat 
-          <lb ed="#SV"/>sed supra pueros causabat rorem.</p>
-        
-        <p xml:id="l104-dsivsm">Difficultas stat 
-          <lb ed="#SV"/>in vocabulo, Dicitur tamen quod illi effectus non sunt 
-          <lb ed="#SV"/>naturales primo modo quia non sunt ex propria inclinatione 
-          <lb ed="#SV"/>naturali indicta a principio nec ex inclinatione naturae 
-          <lb ed="#SV"/>communis, sed dicatur naturale illud quod est conveniens Rei 
-          <lb ed="#SV"/>ut obedienti voluntate divinae tunc naturale et 
-          <lb ed="#SV"/>miraculosum non multum discrepant et sic naturale 
-          <lb ed="#SV"/>est conveniens Rei nam illud magnificat divinam potentiam 
-          <lb ed="#SV"/>et habitudinem creaturae ad deum, nam scribitur quod res 
-          <lb ed="#SV"/>quae non sunt ei obediunt vocastis inquam autem omnia 
-          <lb ed="#SV"/>quae non sunt tanquam ea quae sunt, et sic hoc totum re<lb ed="#SV"/>solvitur 
-          in immensitatem divinae voluntatis et 
-          <lb ed="#SV"/>sufficeret dicere quod miracula sunt supra naturam  
-          <lb ed="#SV"/>primo vel secundo modo.</p>
-        
-        <p xml:id="l104-unetem">ubi notandum est quia loquitur 
-          <lb ed="#SV"/>ibi de mirabilibus effectibus quod effectus in tertio modo 
-          <lb ed="#SV"/>Repositi sunt plurium specierum, id est, multae sunt 
-          <lb ed="#SV"/>species miraculorum. prima species quando aliqua 
-          <lb ed="#SV"/>causa producit aliquem effectum supra causalitatem 
-          <cb ed="#SV" n="325rb"/><lb ed="#SV"/>sibi a principio institutam vel quantum ad speciem vel quantum 
-          <lb ed="#SV"/>ad gradum vel quantum ad medium vel quantum ad tempus 
-          <lb ed="#SV"/>vel quantum ad locum vel quantum ad quantitatem, quantum ad 
-          <lb ed="#SV"/>speciem primo ut si deus faceret lapidem concurrere ad 
-          <lb ed="#SV"/>productionem asini eius esse miraculum nam huius causa 
-          <lb ed="#SV"/>inferioris speciei producens effectum superioris speciei ageret 
-          <lb ed="#SV"/>supra causalitatem ab initio ei constitutam et inditam, sed 
-          <lb ed="#SV"/>absolute deus posset tantum lapidem elevare quod produ<lb ed="#SV"/>ceret 
-          asinum quantum ad gradum ut si calliditas ut duo 
-          <lb ed="#SV"/>produceret causalitatem ut centum, quantum ad speciem non esset 
-          <lb ed="#SV"/>miraculum si calliditas ut duo produceret calliditatem ut 
-          <lb ed="#SV"/>centum, quia ambae calliditates sunt eiusdem speciei, sed est 
-          <lb ed="#SV"/>miraculum quantum ad gradum quia talis calliditas non posset 
-          <lb ed="#SV"/>producere maiorem calliditatem nec aequalem nec visum 
-          <lb ed="#SV"/>quod huiusmodi species taliter agat, ideo miraculum quia 
-          <lb ed="#SV"/>agens agit supra gradum suae causalitatis, quantum ad medium 
-          <lb ed="#SV"/>ut si causa nata agere effectum naturalem ad certam di<lb ed="#SV"/>stantiam 
-          ad maiorem ageret, ut si activitas causae 
-          <lb ed="#SV"/><c>b</c> terminetur ad <c>a</c> si illa causa agat ultra <c>a</c> 
-          <lb ed="#SV"/>tunc effectus erit miraculum quantum ad tempus ut si causa 
-          <lb ed="#SV"/>sit productiva effectus in una hora et non in minori 
-          <lb ed="#SV"/>tempore si effectus producitur dividia hora, tunc erit miraculum.</p>
-        
-        <p xml:id="l104-qaless">Quantum ad locum multipliciter, vel quia una res 
-          <lb ed="#SV"/>potest esse in diversis locis et tunc est miraculum, quia una 
-          <lb ed="#SV"/>res naturaliter unicum locum sibi determinat, vel quia una 
-          <lb ed="#SV"/>res collocatur in eodem situ praeter modum quem Requireret 
-          <lb ed="#SV"/>naturaliter ut situatio corporis christi in sacramento 
-          <lb ed="#SV"/>altaris est miraculosa, quia est in alio loco quod non 
-          <lb ed="#SV"/>praerequirit naturaliter ex quo consurgit miraculum. secundo 
-          <lb ed="#SV"/>situaliter praeter naturalem modum situandi, quia in qualibet parte 
-          <lb ed="#SV"/>hostiae est totum corpus christi, quantum ad quantitatem quia quaelibet 
-          <lb ed="#SV"/>Res determinat sibi certos terminos et certam quantitatem et si 
-          <lb ed="#SV"/>habeat maiorem vel minorem miraculum est, et sicut 
-          <lb ed="#SV"/>dicitur hoc de excessu ita posset dici de sub et esset 
-          <lb ed="#SV"/>secunda species, unde quantum ad hoc si homo produceret lapidem 
-          <lb ed="#SV"/>esset miraculum, quia sub sua naturali causalitate ageret, et 
-          <lb ed="#SV"/>si calliditas ut decem omni impedimento Remoto non pro<lb ed="#SV"/>duceret 
-          nisi duos gradus calliditas et passum esset 
-          <lb ed="#SV"/>sufficienter dispositum esset miraculum, et ita arguitur 
-          <lb ed="#SV"/>de medio et de aliis singulis, et secundum hoc esset 
-          <lb ed="#SV"/>secunda species.</p>
-        
-        <p xml:id="l104-tseccn">tertia species est quando effectus producitur non 
-          <lb ed="#SV"/>tamen a causis secundum communem cursum naturae solutis producere 
-          <lb ed="#SV"/>ut si deus se solo crearet ignem quamvis ipse sit 
-          <lb ed="#SV"/>naturaliter producibilis a causis secundis effectus tamen est 
-          <lb ed="#SV"/>miraculosus vel quantum alium effectum consuetum 
-          <lb ed="#SV"/>produci a causis secundis effectus tamen est naturalis in 
-          <cb ed="#SV" n="325va"/><lb ed="#SV"/>ordine ad causas sine quibus non producitur secundum communem 
-          <lb ed="#SV"/>cursum naturae.</p>
-        
-        <p xml:id="l104-qsqomm">quarta species quando effectus non producitur positis 
-          <lb ed="#SV"/>causis secundum communem cursum naturae sufficientibus omni impedimento 
-          <lb ed="#SV"/>secluso praeter voluntatem divinam ut in camino ignis 
-          <lb ed="#SV"/>passum erat sufficienter applicatum et agens bene dispositum 
-          <lb ed="#SV"/>ad agendum et tamen ignis non egit, et secundum quod dicitur 
-          <lb ed="#SV"/>respectu causarum efficientium ita posset dici respectu causarum  
-          <lb ed="#SV"/>passivarum, et ad has tres species Reducuntur omnia mun<lb ed="#SV"/>di 
-          miracula.</p>
+              modus agendi effectus.
+            </p>
+            <p xml:id="l104-pesndd">
+              Primus est secundum naturam propriam 
+              et specificam vel individualem, et illo modo res 
+              operantur per operationes proprias suae speciei ut de terra 
+              naturaliter collocatur in centro terrae et grave naturaliter 
+              descendit deorsum.
+            </p>
+            <p xml:id="l104-smaosn">
+              secundus modus agendi effectus 
+              est secundum naturam communem, et non vocatur ibi secundum naturam 
+              <pb ed="#SV" n="325-r"/>
+              <cb ed="#SV" n="a"/>
+              communem quod sit una natura universalis distincta a particulari, sed 
+              vocatur communis propter institutum communem omnibus rebus, 
+              etiam dicitur communis respectu operationis quam omnis eam intenderet, quia 
+              quaelibet causa creata inclinaretur ad hoc ut faceret 
+              illum effectum, et secundum istam institutionem quaelibet Res appetit 
+              decorem universi ut nulla res pateretur vacuum, nam 
+              quaelibet Res existens in concavo orbis lunae aequaliter concurreret 
+              ad Replendum vacuum ceteris paribus et huiusmodi 
+              operationes sunt naturales.
+            </p>
+            <p xml:id="l104-temsus">
+              Tertius est modus agendi 
+              effectus secundum obedientiam supremi principis extra duos 
+              modos praedictos cuius voluntas vel mandatum potest 
+              esse  novum igitur deus potest velle agere 
+              aliquem effectum cuius causa non erat antequam vellet 
+              productiva nec secundum rationem suam specificam nec 
+              communem et sic de omnibus effectibus miraculosis ut de 
+              statione solis tempore <name ref="#Joshua">Iosue</name> quia ex praecepto divino 
+              solo stetit ad preces <name ref="#Joshua">Iosue</name> et non ad suam 
+              vocem vel ex suo praecepto quia non habuit talem 
+              sed deus praecepti soli creaturae sua ut staret.
+            </p>
+            <p xml:id="l104-eimpcr">
+              Et iste modus agendi effectus est alterius speciei ab aliis 
+              sub quo omnia miracula continentur ut de supsentione 
+              activitatis ignis in camino ubi erant 
+              illi tres pueri quia licet agens esset sufficienter 
+              dispositum et passum applicatum nihilominus illi pueri 
+              ex voluntate divina nullum passi <unclear>sunt</unclear> malum sed 
+              utrum talis statio solis fuerit naturalis et influentia 
+              ignis tantam dulcedinem pueris influentis etiam 
+              fuerint naturalis quia nedum ignis non laedebat 
+              sed supra pueros causabat rorem.
+            </p>
+            
+            <p xml:id="l104-dsivsm">
+              Difficultas stat in vocabulo, 
+              dicitur tamen quod illi effectus non sunt 
+              naturales primo modo quia non sunt ex propria inclinatione 
+              naturali indicta a principio nec ex inclinatione naturae communis, 
+              sed dicatur naturale illud quod est conveniens Rei 
+              ut obedienti voluntate divinae tunc naturale et 
+              miraculosum non multum discrepant et sic naturale 
+              est conveniens Rei nam illud magnificat divinam potentiam 
+              et habitudinem creaturae ad deum, nam scribitur quod res 
+              quae non sunt ei obediunt vocastis inquam autem omnia 
+              quae non sunt tanquam ea quae sunt, et sic hoc totum resolvitur 
+              in immensitatem divinae voluntatis et 
+              sufficeret dicere quod miracula sunt supra naturam  
+              primo vel secundo modo.
+            </p>
+            <p xml:id="l104-unetem">
+              Ubi notandum est quia loquitur 
+              ibi de mirabilibus effectibus quod effectus in tertio modo 
+              Repositi sunt plurium specierum, id est, multae sunt 
+              species miraculorum. prima species quando aliqua 
+              causa producit aliquem effectum supra causalitatem 
+              <cb ed="#SV" n="b"/><!-- SV325rb-->
+              sibi a principio institutam vel quantum ad speciem vel quantum 
+              ad gradum vel quantum ad medium vel quantum ad tempus 
+              vel quantum ad locum vel quantum ad quantitatem, quantum ad 
+              speciem primo ut si deus faceret lapidem concurrere ad 
+              productionem asini eius esse miraculum nam huius causa 
+              inferioris speciei producens effectum superioris speciei ageret 
+              supra causalitatem ab initio ei constitutam et inditam, sed 
+              absolute deus posset tantum lapidem elevare quod produceret 
+              asinum quantum ad gradum ut si calliditas ut duo 
+              produceret causalitatem ut centum, quantum ad speciem non esset 
+              miraculum si calliditas ut duo produceret calliditatem ut centum 
+              quia ambae calliditates sunt eiusdem speciei, sed est 
+              miraculum quantum ad gradum quia talis calliditas non posset 
+              producere maiorem calliditatem nec aequalem nec visum 
+              quod huiusmodi species taliter agat, ideo miraculum quia 
+              agens agit supra gradum suae causalitatis, quantum ad medium 
+              ut si causa nata agere effectum naturalem ad certam distantiam 
+              ad maiorem ageret, ut si activitas causae 
+              <c>b</c> terminetur ad <c>a</c> si illa causa agat ultra <c>a</c> 
+              tunc effectus erit miraculum quantum ad tempus ut si causa 
+              sit productiva effectus in una hora et non in minori 
+              tempore si effectus producitur dividia hora, tunc erit miraculum.
+            </p>
+            <p xml:id="l104-qaless">
+              Quantum ad locum multipliciter, vel quia una res 
+              potest esse in diversis locis et tunc est miraculum, quia una 
+              res naturaliter unicum locum sibi determinat, vel quia una 
+              res collocatur in eodem situ praeter modum quem requireret 
+              naturaliter ut situatio corporis christi in sacramento 
+              altaris est miraculosa, quia est in alio loco quod non 
+              praerequirit naturaliter ex quo consurgit miraculum. secundo 
+              situaliter praeter naturalem modum situandi
+              quia in qualibet parte hostiae est totum corpus christi, 
+              quantum ad quantitatem quia quaelibet 
+              Res determinat sibi certos terminos et certam quantitatem et si 
+              habeat maiorem vel minorem miraculum est, et sicut 
+              dicitur hoc de excessu ita posset dici de sub et esset 
+              secunda species, unde quantum ad hoc si homo produceret lapidem 
+              esset miraculum, quia sub sua naturali causalitate ageret, 
+              et si calliditas ut decem omni impedimento remoto non produceret 
+              nisi duos gradus calliditas et passum esset 
+              sufficienter dispositum esset miraculum, 
+              et ita arguitur de medio et de aliis singulis, 
+              et secundum hoc esset secunda species.
+            </p>
+            <p xml:id="l104-tseccn">
+              Tertia species est quando effectus producitur non 
+              tamen a causis secundum communem cursum naturae solutis producere 
+              ut si deus se solo crearet ignem quamvis ipse sit 
+              naturaliter producibilis a causis secundis effectus, 
+              tamen est 
+              miraculosus vel quantum alium effectum consuetum 
+              produci a causis secundis effectus tamen est naturalis in 
+              <pb ed="#SV" n="325-v"/>
+              <cb ed="#SV" n="a"/>
+              ordine ad causas sine quibus non producitur secundum communem 
+              cursum naturae.
+            </p>
+            <p xml:id="l104-qsqomm">
+              Quarta species quando effectus non producitur positis 
+              causis secundum communem cursum naturae sufficientibus omni impedimento 
+              secluso praeter voluntatem divinam ut in camino ignis 
+              passum erat sufficienter applicatum et agens bene dispositum 
+              ad agendum et tamen ignis non egit, 
+              et secundum quod dicitur 
+              respectu causarum efficientium ita posset dici respectu causarum passivarum, 
+              et ad has tres species reducuntur omnia mundi miracula.
+            </p>
           </div>
         </div>
-          <div>
-            <head xml:id="l104-Hcorria">Corollaria</head>
-        <p xml:id="l104-pcepnm">Primum corollarium ex ignorantia cursus 
-          <lb ed="#SV"/>naturalis negaverunt philosophi miracula quia si potestas naturae 
-          <lb ed="#SV"/>fuisset eis nota scivissent evidenter aliqua fuisse 
-          <lb ed="#SV"/>facta quae excesserunt naturalem causalitatem Rerum eis indi<lb ed="#SV"/>tam 
-          igitur ex ignorantia philosophi negaverunt  mi<lb ed="#SV"/>racula.</p>
-        
-        <p xml:id="l104-scapfr">secundum corollarium ad complecte philosophandum Requiritur 
-          <lb ed="#SV"/>fidei cognitio et ad hoc concedat <name ref="#Aristotle">aristoteles</name> in libro 
-          <lb ed="#SV"/><title>de secretis secretorum</title> quod philosophia fuerit Revelata.</p>
-        
-            <p xml:id="l104-tclacs"><lb ed="#SV"/>tertium corollarium licet creatio animae intellectivae sit supra naturae 
-              <lb ed="#SV"/>facultatem non est tamen proprie miraculum. patet quia non est 
-              <lb ed="#SV"/>miraculum respectu divinae potentiae, quia ipsa non potest agere supra 
-              <lb ed="#SV"/>suam facultatem quae est simpliciter immensa et in infinitum 
-              <lb ed="#SV"/>excedit quemlibet effectum producibilem nec miraculum 
-              <lb ed="#SV"/>respectu causarum secundarum quia ipsa non est nata produci a causis 
-              <lb ed="#SV"/>secundis, et ideo proprie non debet dici miraculum sed est operatio 
-              <lb ed="#SV"/>supernaturalis excedens totam naturae facultatem, et ita 
-              <lb ed="#SV"/>diceretur de fide et de donis supernaturalibus quia licet ipsa sint 
-              <lb ed="#SV"/>supernaturalia non sunt tamen miraculosa opera quia nullam 
-              <lb ed="#SV"/>nec possunt habere dependentiam a causis secundis.</p>
-        
-        <p xml:id="l104-qcqacs">quartum 
-          <lb ed="#SV"/>corollarium quod deus producens animam intellectivam se solo non 
-          <lb ed="#SV"/>agit miraculose producendo tamen animam asini ageret 
-          <lb ed="#SV"/>miraculum. primum est satis deductum. secundum patet quia ageret 
-          <lb ed="#SV"/>ultra cursum institutum et produceret effectum producibilem 
-          <lb ed="#SV"/>a causis secundis.</p>
-        
-        <p xml:id="l104-qcscep">quintum corollarium si sacramenta novae 
-          <lb ed="#SV"/>legis efficiant quod figurant concedendum est quod faciant 
-          <lb ed="#SV"/>miracula, ubi notandum est quod aliquorum fuit opinio quod 
-          <lb ed="#SV"/>sacramenta novae legis attingunt productive gratiam 
-          <lb ed="#SV"/>et non solum figurant gratiam sed Realiter eam producunt 
-          <lb ed="#SV"/>et efficiunt, et per hoc differunt sacramenta novae 
-          <lb ed="#SV"/>legis a sacramentis veteris legis et sic miraculose a<lb ed="#SV"/>gunt, 
-          quia agunt supra naturae facultatem. utrum tamen 
-          <lb ed="#SV"/>haec positio sit possibilis dico quod sic quia ex divina omnipotentia 
-          <lb ed="#SV"/>et habitudine creaturae ad deum, et ex obedientia quam 
-          <lb ed="#SV"/>habet creatura ad deum concederetur quod festuca posset 
-          <lb ed="#SV"/>concurrere ad cuiuslibet effectus productionem.</p>
-        
-        <p xml:id="l104-scsvtm">secundum corollarium 
-          <lb ed="#SV"/>sequitur ex dictis quod possibilitas faciendi miracula est 
-          <lb ed="#SV"/>creaturae communicabilis, et hanc potestatem videntur accepisse 
-          <cb ed="#SV" n="325bv"/><lb ed="#SV"/><name rend="#Paul">Apostoli</name> cum christus dedit eis potestatem eiciendi daemo<lb ed="#SV"/>nia 
-          et faciendi miracula quod notat <name ref="#GregoryGreat">Beatus Gregorius</name> 
-          <lb ed="#SV"/>dicens in libro <title>dyalogorum</title> quod potestate creata contingit 
-          <lb ed="#SV"/>facere miracula dum aliqua causalitas creata se exten<lb ed="#SV"/>dit 
-          extra limites proprios a natura in principio sibi inditos 
-          <lb ed="#SV"/>et sic fides est in <unclear>praemitia[?]</unclear> ecclesia in tanto gradu erat 
-          <lb ed="#SV"/>potens faciendi miracula, et per hoc salvantur 
-          <lb ed="#SV"/>auctoritates salvatorum et apostoli dicentium quod fides est 
-          <lb ed="#SV"/>vigor transferendi montes.</p>
-        
-        <p xml:id="l104-acpasm">Alia corollaria possent 
-          <lb ed="#SV"/>inferri quod alii sunt effectus producibiles naturaliter et 
-          <lb ed="#SV"/>tamen fiunt miraculose ut de sanatione febris quia 
-          <lb ed="#SV"/>licet aliquando naturaliter producatur aliquando tamen miraculose eicitur 
-          <lb ed="#SV"/>aliquorum sanctorum meritis.</p>
-          </div>
+        <div xml:id="l104-Dd1e319">
+          <head xml:id="l104-Hcorria">Corollaria</head>
+          <p xml:id="l104-pcepnm">
+            Primum corollarium, 
+            ex ignorantia cursus 
+            naturalis negaverunt philosophi miracula 
+            quia si potestas naturae 
+            fuisset eis nota scivissent evidenter aliqua fuisse facta 
+            quae excesserunt naturalem causalitatem rerum eis inditam, 
+            igitur ex ignorantia philosophi negaverunt miracula.
+          </p>
+          <p xml:id="l104-scapfr">
+            Secundum corollarium ad complecte philosophandum Requiritur 
+            fidei cognitio et ad hoc concedat 
+            <cit>
+              <ref xml:id="l104-Rd1e331">
+                <name ref="#Aristotle">Aristoteles</name> 
+                in libro 
+                <title>De secretis secretorum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            quod philosophia fuerit revelata.
+          </p>
+          <p xml:id="l104-tclacs">
+            Tertium corollarium, 
+            licet creatio animae intellectivae sit supra naturae 
+            facultatem non est tamen proprie miraculum. 
+            Patet quia non est 
+            miraculum respectu divinae potentiae 
+            quia ipsa non potest agere supra 
+            suam facultatem quae est simpliciter immensa et in infinitum 
+            excedit quemlibet effectum producibilem nec miraculum 
+            respectu causarum secundarum 
+            quia ipsa non est nata produci a causis secundis, 
+            et ideo proprie non debet dici miraculum sed est operatio 
+            supernaturalis excedens totam naturae facultatem, 
+            et ita diceretur de fide et de donis supernaturalibus 
+            quia licet ipsa sint 
+            supernaturalia non sunt tamen miraculosa opera 
+            quia nullam 
+            nec possunt habere dependentiam a causis secundis.
+          </p>
+          <p xml:id="l104-qcqacs">
+            Quartum corollarium, 
+            quod deus producens animam intellectivam se solo non 
+            agit miraculose producendo, 
+            tamen animam asini ageret 
+            miraculum. 
+            Primum est satis deductum. 
+            Secundum patet 
+            quia ageret 
+            ultra cursum institutum et produceret effectum producibilem 
+            a causis secundis.
+          </p>
+          <p xml:id="l104-qcscep">
+            Quintum corollarium, 
+            si sacramenta novae 
+            legis efficiant quod figurant concedendum est quod faciant 
+            miracula, ubi notandum est quod aliquorum fuit opinio quod 
+            sacramenta novae legis attingunt productive gratiam 
+            et non solum figurant gratiam 
+            sed realiter eam producunt 
+            et efficiunt, et per hoc differunt sacramenta novae 
+            legis a sacramentis veteris legis et sic miraculose agunt, 
+            quia agunt supra naturae facultatem. utrum tamen 
+            haec positio sit possibilis dico 
+            quod sic quia ex divina omnipotentia 
+            et habitudine creaturae ad deum, et ex obedientia quam 
+            habet creatura ad deum concederetur quod festuca posset 
+            concurrere ad cuiuslibet effectus productionem.
+          </p>
+          <p xml:id="l104-scsvtm">
+            Secundum corollarium,
+            sequitur ex dictis quod possibilitas faciendi miracula est 
+            creaturae communicabilis, 
+            et hanc potestatem videntur accepisse 
+            <cb ed="#SV" n="b"/><!--SV 325vb-->
+            <name rend="#Paul">Apostoli</name> 
+            cum christus dedit eis potestatem eiciendi daemonia 
+            et faciendi miracula quod notat 
+            <cit>
+              <ref xml:id="l104-Rd1e365">
+                <name ref="#GregoryGreat">Beatus Gregorius</name> 
+                dicens in libro 
+                <title>Dyalogorum</title>
+              </ref>
+            </cit> 
+            quod potestate creata contingit 
+            facere miracula dum aliqua causalitas creata se extendit 
+            extra limites proprios a natura in principio sibi inditos 
+            et sic fides est in <unclear>praemitia</unclear> ecclesia in tanto gradu erat 
+            potens faciendi miracula, et per hoc salvantur 
+            auctoritates salvatorum et apostoli dicentium quod fides est 
+            vigor transferendi montes.
+          </p>
+          <p xml:id="l104-acpasm">
+            Alia corollaria possent 
+            inferri quod alii sunt effectus producibiles naturaliter et 
+            tamen fiunt miraculose ut de sanatione febris quia 
+            licet aliquando naturaliter producatur aliquando tamen miraculose eicitur 
+            aliquorum sanctorum meritis.
+          </p>
+        </div>
       </div>
     </body>
   </text>

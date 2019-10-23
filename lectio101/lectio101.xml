@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,298 +7,367 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 101, de Libertate</title>
           <date when="2013-02-18">February 18, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-18">February 18, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
-          <witness xml:id="S" n="sorb">Sorbonne</witness>
-          <witness xml:id="SV" n="svict">St. Victor</witness>
           <witness xml:id="R" n="reims">Reims</witness>
           <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-18" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="320-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio101">
-        <head xml:id="l101-Hldlldl" subtype="title">Lectio 101, de Libertate</head>
-        <div>
-          <head>Quod corruptela peccati originalis est originem omnis artis superstitiosae</head>
-          <p xml:id="l101-sdeiac">Sicut dictum est ex corruptela peccati 
-          <lb ed="#SV"/>originalis habuerunt originem omnis artis 
-          <lb ed="#SV"/>superstitiosae et sacrilegae et secundum quod 
-          <lb ed="#SV"/>varii varia coluerunt elementa secundum hoc va<lb ed="#SV"/>rias 
-          artes constituerunt unde geomantia dicitur a <sic>ge</sic> 
-          <lb ed="#SV"/>quod est terra, quia in terra a principio fuit ars introducta 
-          <lb ed="#SV"/>sed post ea supervenientes cautiores considerantes 
-          <lb ed="#SV"/>ad nullam radicem scientificam huiusmodi artes posse 
-          <lb ed="#SV"/>Reducere Resolvunt in armoniam caelestem.</p> 
-          
-          <p xml:id="l101-usidvq">unde 
-          <lb ed="#SV"/>secundum istos suspensa omni deliberatione in particulari et secundum 
-          <lb ed="#SV"/>primos motus a caelo provenientes manus directa 
-          in punctorum proiectione Recte proicit secundum 
-          <lb ed="#SV"/>figuras et post ea secundum Regulas in illa arte 
-          <lb ed="#SV"/>constitutas quia ars docet constituere figuras 
-          <lb ed="#SV"/>secundum puncta quae Repraesentant figuras secundum quod influit 
-          <cb ed="#SV" n="321ra"/><lb ed="#SV"/>armonia caeli pro illa hora et sic omnes effectus Relu<lb ed="#SV"/>cent 
-          in caelesti armonia facta proiectione impulsu 
-          <lb ed="#SV"/>a corporibus caelestibus evenient effectus et secundum 
-          <lb ed="#SV"/>illas artes regulas iudicatur de veritate quaesita. <lb ed="#SV"/>et ista est imaginatio illorum qui volunt tenere istam 
-          <lb ed="#SV"/>superstitiosam artem.</p> 
-          
-          <p xml:id="l101-unqcnh">ubi notandum quod tota superstitio magi<lb ed="#SV"/>ca 
-          vel etiam ars vel fraus ubi diabolus nihil confert 
-          <lb ed="#SV"/>sed per consensum plures operantur. voco autem per assensum 
-          <lb ed="#SV"/>quando deceptores plures inter se conveniunt ut patet con<lb ed="#SV"/>tingit 
-          enim quod <name ref="#Sortes">sortes</name> furetur equum et <name ref="#Plato">plato</name> magicus 
-          <lb ed="#SV"/>habens consensum alterius optime dicet de furto et fin<lb ed="#SV"/>get 
-          se habere artem istam et tamen non habebit.</p>
-        
-          <p xml:id="l101-eiaicr">Et 
-          <lb ed="#SV"/>ita autem inquirunt de statibus hominum secretae et ad partem 
-          <lb ed="#SV"/>et ignorante populo unus informabit alium in tantum quod 
-          <lb ed="#SV"/>iudicabit de occultissimus ut apud vulgus maior 
-          <lb ed="#SV"/>fides gueretur[?] fingunt circa verba et coniurationes 
-          <lb ed="#SV"/>et fingunt observationem alicuius horae vel certae constella<lb ed="#SV"/>tionis 
-          ut animi[?] simplicium in admirationem provocentur 
-          <lb ed="#SV"/>considerantium qualiter de tam occultis Rebus dant responsa. 
-          <lb ed="#SV"/>ideo dicit <name ref="#Albert">albertus</name> quod tales superstitiones infamaverunt 
-          <lb ed="#SV"/>veram astrologiam, nam fraudulenti et superstitiosi 
-          <lb ed="#SV"/>ab ipsa ceperunt apparentiam et fraudem ex ea colo<lb ed="#SV"/>rantes, 
-          nam quod geomantia Resolvitur in caelestem 
-          <lb ed="#SV"/>armoniam nulla est apparentia, et apparet clare impossibilitas 
-          <lb ed="#SV"/>considerantibus quod gemanti[?] praesumunt dare responsionem 
-          <lb ed="#SV"/>suae actus dependentis ex libero arbitrio sive de rebus 
-          <lb ed="#SV"/>omnino spiritualibus ut utrum talis sit propria sed constat 
-          <lb ed="#SV"/>quod tales actus et effectus dependentes a divina ordina<lb ed="#SV"/>tione 
-          vel humana voluntate non possunt particulariter in caelo 
-          <lb ed="#SV"/>relucere.</p> 
-          
-          <p xml:id="l101-sseiac">secundo sub eadem constellatione et eadem hora 
-          <lb ed="#SV"/>adaequate expertum est varias figuras provenire 
-          <lb ed="#SV"/>apud aliquod et hoc secundum illam artem, et tamen fi<lb ed="#SV"/>gura 
-          caeli est eadem adaequate igitur talis effectus non 
-          <lb ed="#SV"/>proventi ex influentia armoniae caelestis.</p>
-        
-          <p xml:id="l101-tqusvd">tertio quia 
-          <lb ed="#SV"/>ut dictum est cessatio a proiectione punctorum est 
-          <lb ed="#SV"/>secundum dispositionem corporalem manus motae igitur stat quod secundae 
-          <lb ed="#SV"/>sunt variae dispositi, et unus proiciat puncta paria 
-          <lb ed="#SV"/>et alius proiciat puncta imperia.</p> 
-          
-          <p xml:id="l101-spasda">sed post auctoritatem 
-          <lb ed="#SV"/>fidei et scripturae ac veritatis reprobantium hanc 
-          <lb ed="#SV"/>artem est sufficiens improbatio quia tales artes sunt 
-          <lb ed="#SV"/>sine Radice et fundamento alicuius rationis et 
-          <lb ed="#SV"/>pure voluntariae ductae[?], et in qualibus tali arte 
-          <lb ed="#SV"/>quantum ad effectum non apparet veritatis experientia et ideo talibus tota Resolutio est 
-          <lb ed="#SV"/>ut sic pro ratione voluntatis, id est, habitus contrarius iustitiae 
-          <lb ed="#SV"/>originali quae est respectu omnium malorum quaedam apparentia 
-          <lb ed="#SV"/>nam habitus pravus est quaedam apparentia habitus voluntatis 
-          <cb ed="#SV" n="321rb"/><lb ed="#SV"/>est apparentia et cognitio respectu sui obiecti et sic tota appa<lb ed="#SV"/>rentia 
-          artium sacrilegarum Resolvitur ad habitum contrarium 
-          <lb ed="#SV"/>iustitiae originalis nec fundatur in alia Radice et quantum ad 
-          <lb ed="#SV"/>intellectum est apparentia et quantum ad voluntatem est inclinatio 
-          <lb ed="#SV"/>et corruptela humanae mentis Ita quod per modum apparentiae 
-          <lb ed="#SV"/>quantum ad potentiam cognitivam et per modum inclinationis specialis 
-          <lb ed="#SV"/>quantum ad potentiam volitivam et cum hoc particularibus causis 
-          <lb ed="#SV"/>concurrentibus ut quaestu et vana gloria et sic de aliis.</p>
-        
-          <p xml:id="l101-eqccfm">Ex quo 
-          <lb ed="#SV"/>consurgit quod voluntas circa moralem vitam multis falsitatibus 
-          <lb ed="#SV"/>quantum est de se obfuscatur.</p> 
-          
-          <p xml:id="l101-eehcfm">Et ex hoc etiam apparet Radix 
-          <lb ed="#SV"/>causa variae inquirentium de felicitate humana quam quid veritas 
-          <lb ed="#SV"/>christianae fidei verae docet. Sed fuit Impedita per sacri<lb ed="#SV"/>legium 
-          vel huiusmodi artes sacrilegas, nam de <name ref="#Moses">moyse</name> 
-          <lb ed="#SV"/>qui legem asserebat legitur quod <name ref="#MagiOfPharaoh">magi pharaonis</name> fecerunt 
-          <lb ed="#SV"/>similia mirabilia unde veritas fidei orthodoxae quasi in <sic>aequilibra</sic> 
-          <lb ed="#SV"/>tunc ponebatur et miracula <name ref="#Apostles">apostolorum</name> confundebantur per artem 
-          <lb ed="#SV"/>magicam <name ref="#SimonMagician">simionis magi</name> ideo tempore <name ref="#Apostles">apostolorum</name> quando lex nostra 
-          <lb ed="#SV"/>divulgabatur non defuit ars magica cum <name ref="#SimonMagician">simon magus</name> 
-          <lb ed="#SV"/>erat consimili faciens miracula.</p>
+        <head xml:id="l101-Hldlldl">Lectio 101, de Libertate</head>
+        <div xml:id="l101-Dd1e109">
+          <head xml:id="l101-Hd1e111">Quod corruptela peccati originalis est originem omnis artis superstitiosae</head>
+          <p xml:id="l101-sdeiac">
+            Sicut dictum est ex corruptela peccati 
+            originalis habuerunt originem omnis artis 
+            superstitiosae et sacrilegae et secundum quod 
+            varii varia coluerunt elementa secundum hoc varias 
+            artes constituerunt unde geomantia dicitur a <unclear><sic>ge</sic></unclear> quod est terra 
+            quia in terra a principio fuit ars introducta 
+            sed post ea supervenientes cautiores considerantes 
+            ad nullam radicem scientificam huiusmodi artes posse 
+            reducere resolvunt in armoniam caelestem.
+          </p> 
+          <p xml:id="l101-usidvq">
+            Unde 
+            secundum istos suspensa omni deliberatione in particulari et secundum 
+            primos motus a caelo provenientes manus directa 
+            in punctorum proiectione recte proicit secundum 
+            figuras et post ea secundum Regulas in illa arte 
+            constitutas quia ars docet constituere figuras 
+            secundum puncta quae repraesentant figuras secundum quod influit 
+            <cb ed="#SV" n="321-r"/>
+            <cb ed="#SV" n="a"/>
+            armonia caeli pro illa hora et sic omnes effectus Relucent 
+            in caelesti armonia facta proiectione impulsu 
+            a corporibus caelestibus evenient effectus et secundum 
+            illas artes regulas iudicatur de veritate quaesita. 
+            Et ista est imaginatio illorum qui volunt tenere istam 
+            superstitiosam artem.
+          </p> 
+          <p xml:id="l101-unqcnh">
+            Ubi notandum quod tota superstitio magica 
+            vel etiam ars vel fraus ubi diabolus nihil confert 
+            sed per consensum plures operantur. voco autem per assensum 
+            quando deceptores plures inter se conveniunt ut patet contingit 
+            enim quod <name ref="#Sortes">Sortes</name> furetur equum 
+            et <name ref="#Plato">Plato</name> magicus 
+            habens consensum alterius optime dicet de furto et finget 
+            se habere artem istam et tamen non habebit.
+          </p>
+          <p xml:id="l101-eiaicr">
+            Et 
+            ita autem inquirunt de statibus hominum secretae et ad partem 
+            et ignorante populo unus informabit alium in tantum quod 
+            iudicabit de occultissimus ut apud vulgus maior 
+            fides gueretur[?] fingunt circa verba et coniurationes 
+            et fingunt observationem alicuius horae vel certae constellationis 
+            ut animi[?] simplicium in admirationem provocentur 
+            considerantium qualiter de tam occultis Rebus dant responsa. 
+            ideo dicit <name ref="#Albert">albertus</name> quod tales superstitiones infamaverunt 
+            veram astrologiam, nam fraudulenti et superstitiosi 
+            ab ipsa ceperunt apparentiam et fraudem ex ea colorantes, 
+            nam quod geomantia Resolvitur in caelestem 
+            armoniam nulla est apparentia, et apparet clare impossibilitas 
+            considerantibus quod gemanti[?] praesumunt dare responsionem 
+            suae actus dependentis ex libero arbitrio sive de rebus 
+            omnino spiritualibus ut utrum talis sit propria sed constat 
+            quod tales actus et effectus dependentes a divina ordinatione 
+            vel humana voluntate non possunt particulariter in caelo 
+            relucere.
+          </p> 
+          <p xml:id="l101-sseiac">
+            Secundo sub eadem constellatione et eadem hora 
+            adaequate expertum est varias figuras provenire 
+            apud aliquod et hoc secundum illam artem, et tamen figura 
+            caeli est eadem adaequate igitur talis effectus non 
+            proventi ex influentia armoniae caelestis.
+          </p>
+          <p xml:id="l101-tqusvd">
+            Tertio quia 
+            ut dictum est cessatio a proiectione punctorum est 
+            secundum dispositionem corporalem manus motae igitur stat quod secundae 
+            sunt variae dispositi, et unus proiciat puncta paria 
+            et alius proiciat puncta imperia.
+          </p> 
+          <p xml:id="l101-spasda">
+            Sed post auctoritatem 
+            fidei et scripturae ac veritatis reprobantium hanc 
+            artem est sufficiens improbatio quia tales artes sunt 
+            sine Radice et fundamento alicuius rationis et 
+            pure voluntariae ductae[?], et in qualibus tali arte 
+            quantum ad effectum non apparet veritatis experientia et ideo talibus tota Resolutio est 
+            ut sic pro ratione voluntatis, id est, habitus contrarius iustitiae 
+            originali quae est respectu omnium malorum quaedam apparentia 
+            nam habitus pravus est quaedam apparentia habitus voluntatis 
+            <cb ed="#SV" n="b"/><!--SV321rb-->
+            est apparentia et cognitio respectu sui obiecti et sic tota apparentia 
+            artium sacrilegarum Resolvitur ad habitum contrarium 
+            iustitiae originalis nec fundatur in alia Radice et quantum ad 
+            intellectum est apparentia et quantum ad voluntatem est inclinatio 
+            et corruptela humanae mentis Ita quod per modum apparentiae 
+            quantum ad potentiam cognitivam et per modum inclinationis specialis 
+            quantum ad potentiam volitivam et cum hoc particularibus causis 
+            concurrentibus ut quaestu et vana gloria et sic de aliis.
+          </p>
+          <p xml:id="l101-eqccfm">
+            Ex quo consurgit quod voluntas 
+            circa moralem vitam multis falsitatibus 
+            quantum est de se obfuscatur.
+          </p> 
+          <p xml:id="l101-eehcfm">
+            Et ex hoc etiam apparet radix 
+            causa variae inquirentium de felicitate humana 
+            quam quid veritas christianae fidei verae docet. 
+            Sed fuit impedita per sacrilegium 
+            vel huiusmodi artes sacrilegas, 
+            nam de <name ref="#Moses">Moyse</name> 
+            qui legem asserebat legitur quod 
+            <name ref="#MagiOfPharaoh">magi pharaonis</name> fecerunt 
+            similia mirabilia unde veritas fidei orthodoxae quasi in <sic>aequilibra</sic> 
+            tunc ponebatur et miracula <name ref="#Apostles">apostolorum</name> 
+            confundebantur per artem 
+            magicam <name ref="#SimonMagician">simionis magi</name> 
+            ideo tempore <name ref="#Apostles">apostolorum</name> 
+            quando lex nostra divulgabatur non defuit ars magica 
+            cum <name ref="#SimonMagician">simon magus</name> 
+            erat consimili faciens miracula.
+          </p>
         </div>
-        <div>
+        <div xml:id="l101-Dd1e185">
           <head xml:id="l101-Hnotlia">Notabilia</head>
-          <div>
+          <div xml:id="l101-Dd1e190">
             <head xml:id="l101-Hpqssvv">Primum: quod semper vincit veritas</head>
-        <p xml:id="l101-cpdism">Circa praedicta duo notanda 
-          <lb ed="#SV"/>sunt. primum quod hoc non obstante semper vincit veritas, nam 
-          <lb ed="#SV"/><name ref="#MagiOfPharaoh">magi pharaonis</name> deferunt in tertio signo et hoc fuit 
-          <lb ed="#SV"/>ad sufficientem differentiam verorum miraculorum a falsis. et tempore intro<lb ed="#SV"/>ductionis 
-          christianae legis in detestationem sacrilegi cultus interiit[?] <name ref="#SimonMagician">simon magus</name>.</p>
+            <p xml:id="l101-cpdism">
+              Circa praedicta duo notanda 
+              sunt. primum quod hoc non obstante semper vincit veritas, nam 
+              <name ref="#MagiOfPharaoh">magi pharaonis</name> deferunt in tertio signo et hoc fuit 
+              ad sufficientem differentiam verorum miraculorum a falsis. et tempore introductionis 
+              christianae legis in detestationem sacrilegi cultus interiit[?] 
+              <name ref="#SimonMagician">simon magus</name>.
+            </p>
           </div>
-        <div>
-          <head xml:id="l101-Hsqphla">Secundum: quod providentia praemissus est artes magicae ut mens humiliter legem acceptaret</head>
-          <p xml:id="l101-pqsefn">Pro quo secundo notandum est quod ex 
-          <lb ed="#SV"/>divina providentia praemissus est ut artes magicae tempore mi<lb ed="#SV"/>raculorum 
-          verorum etiam vigerent. et causa est quia Religio fi<lb ed="#SV"/>dei 
-          tantae dignitatis est ut solum pro humilibus et dispo<lb ed="#SV"/>nentibus 
-          se ad vitae aeternae prosecutionem sit data.</p> 
-        
-          <p>ex 
-          <lb ed="#SV"/>hoc concluditur quod decuit quod fides non introduceretur 
-          <lb ed="#SV"/>per evidentiam summam, quia et superbi et elati ad eum 
-          <lb ed="#SV"/>accessissent, et privaretur dispositio humilitatis et devotionis 
-          <lb ed="#SV"/>et sic absque apparentia concludente propter Reverentia 
-          <lb ed="#SV"/>dei promulgata est fides nostra.</p> 
-          
-          <p xml:id="l101-ehehif">et haec est causa 
-          <lb ed="#SV"/>quare species sub quibus corpus christi continetur habent omnes 
-          <lb ed="#SV"/>operationes et actiones quas haberet verus panis quod 
-          <lb ed="#SV"/>illae species sapiunt nutriunt Reficiunt et calefierent 
-          <lb ed="#SV"/>si applicarentur igni sicut hostia non consecrata, nam sicut 
-          <lb ed="#SV"/>ex pane alterato generatur vermis, ita ex speciebus sub 
-          <lb ed="#SV"/>quibus corpus christi continetur generatur vermis, sed si species 
-          <lb ed="#SV"/>illae non caleficent et generarent <sic>vermen</sic> sicut panis, tunc 
-          <lb ed="#SV"/>in hoc appare vera probatio fidei nostrae, et hoc decuit Removeri 
-          <lb ed="#SV"/>a mentibus homini ut humiles intrarent fidem.</p>
-        
-        <p xml:id="l101-eehhla">Et 
-          <lb ed="#SV"/>ex hoc apparet quod deus voluit ab initio mundi[?] quod non esset 
-          <lb ed="#SV"/>evidens probatio fidei nostrae ut mens humiliter legem 
-          <lb ed="#SV"/>acceptaret.</p>
+          <div xml:id="l101-Dd1e205">
+            <head xml:id="l101-Hsqphla">Secundum: quod providentia praemissus est artes magicae ut mens humiliter legem acceptaret</head>
+            <p xml:id="l101-pqsefn">
+              Pro quo secundo notandum est quod ex 
+              divina providentia praemissus est ut artes magicae tempore miraculorum 
+              verorum etiam vigerent. et causa est quia Religio fidei 
+              tantae dignitatis est ut solum pro humilibus et disponentibus 
+              se ad vitae aeternae prosecutionem sit data.
+            </p> 
+            <p xml:id="l101-d1e213">
+              ex 
+              hoc concluditur quod decuit 
+              quod fides non introduceretur 
+              per evidentiam summam 
+              quia et superbi et elati ad eum accessissent, 
+              et privaretur dispositio humilitatis et devotionis 
+              et sic absque apparentia concludente propter reverentia 
+              dei promulgata est fides nostra.
+            </p> 
+            <p xml:id="l101-ehehif">
+              Et haec est causa 
+              quare species sub quibus corpus christi continetur habent omnes 
+              operationes et actiones quas haberet verus panis quod 
+              illae species sapiunt nutriunt reficiunt et calefierent 
+              si applicarentur igni sicut hostia non consecrata, nam sicut 
+              ex pane alterato generatur vermis, 
+              ita ex speciebus sub quibus corpus christi continetur generatur vermis, 
+              sed si species illae non caleficent et generarent <sic>vermen</sic> sicut panis, 
+              tunc in hoc appare vera probatio fidei nostrae, 
+              et hoc decuit removeri 
+              a mentibus homini ut humiles intrarent fidem.
+            </p>
+            <p xml:id="l101-eehhla">
+              Et ex hoc apparet quod deus voluit ab initio mundi[?] 
+              quod non esset evidens probatio fidei nostrae 
+              ut mens humiliter legem acceptaret.
+            </p>
+          </div>
         </div>
-          </div>
-        <div>
+        <div xml:id="l101-Dd1e227">
           <head xml:id="l101-Hceccec">Circa effectus contingentes</head>
-          <div>
+          <div xml:id="l101-Dd1e232">
             <head xml:id="l101-Hoaaoaa">Opinio Avicenna</head>
-        <p xml:id="l101-nethup">notandum est tamen quod omnes effectus contingentes 
-          <lb ed="#SV"/>quid philosophi voluerunt Reducere ad causas pure naturales 
-          <lb ed="#SV"/>et non propter hoc concedendi sunt daemones operare, licet 
-          <lb ed="#SV"/>autem dicant hoc ut <name ref="#Platonists">platonici</name>.</p>
-          
-          <p xml:id="l101-echpns">Et circa hoc <name ref="#Avicenna">avicenna</name> 
-          <cb ed="#SV" n="321va"/><lb ed="#SV"/>in VIo <title>naturalium</title> et <name ref="#Albert">albertus</name> hoc Recitat in <title>parvis naturalibus</title> 
-          <lb ed="#SV"/><name ref="#Avicenna">avicennae</name> imaginatur ipse <name ref="#Avicenna">avicenna</name> quod anima est 
-          <lb ed="#SV"/>ultima intelligentiarum si sit multiplicata vel una ad 
-          <lb ed="#SV"/>propositum non spectat.</p>
-        
-        <p xml:id="l101-siioei">secundo ipse imaginatur quod anima 
-          <lb ed="#SV"/>non Impedita vel per malam complexionem vel per 
-          <lb ed="#SV"/>malos actus vel habitus ipsam depravantes vel affi<lb ed="#SV"/>cientes 
-          ad Res villes corporaliter sed magis econverso 
-          <lb ed="#SV"/>habita cognitione causarum superiorum amore et desi<lb ed="#SV"/>derio 
-          efficitur tantae virtutis et activitatis quod tota materia 
-          <lb ed="#SV"/>elementorum existentium infra concavum orbis lunae et omnia 
-          <lb ed="#SV"/>corruptela mixta efficiebantur ei obedientia et obe<lb ed="#SV"/>diebant 
-          eius Imperio.</p>
-        
-        <p xml:id="l101-ucicol">unde consequenter ipse dicit quod secundum 
-          <lb ed="#SV"/>opinionem <name ref="#Avicenna">avicennae</name> anima potest esse ita nobilis quod quasi 
-          <lb ed="#SV"/>videatur quod verbum incarnatum et posse inferius 
-          <lb ed="#SV"/>agere quidquid deus agit, et plene obedit 
-          <lb ed="#SV"/>ei tota massa corporalium existentium infra concavum 
-          <lb ed="#SV"/>orbis lunae.</p>
-        
-        <p xml:id="l101-ihaahc">Iuxta hoc <name ref="#Avicenna">avicenna</name> concedit in libro 
-          <lb ed="#SV"/>praefato quod anima potest facere plure et facere tempestates 
-          <lb ed="#SV"/>iniungere[?] et sic de huiusmodi operationibus, ita quod omnia cor<lb ed="#SV"/>pora 
-          ei plene obediunt et ex consequenti operationes 
-          <lb ed="#SV"/>mirabiles ipse Reduceret ad animam nobilem sic operan<lb ed="#SV"/>tem 
-          et imperantem cui tota materia corporalis existens in<lb ed="#SV"/>fra 
-          spheram generalium et corporalium plene obedit et sic 
-          <lb ed="#SV"/>istae salvat fastitudines[?] scilicet, quod anima una Impedit 
-          <lb ed="#SV"/>opera alterius animae non habens nobilem anima poterit alium 
-          <lb ed="#SV"/>cuius anima est depressa et corpori demersa alterare 
-          <lb ed="#SV"/>et impedire a suis operationibus et quia talis obe<lb ed="#SV"/>diet 
-          animae nobili sequitur quod unus poterit alium facere 
-          <lb ed="#SV"/>infirmum laesum impotenter et sanum, et sic ex Ra<lb ed="#SV"/>dice 
-          tacta apparet quod anima nobilis est tantae activitatis quod 
-          <lb ed="#SV"/>materia exterior ei obedit et sic omnia sortilegia 
-          <lb ed="#SV"/>Reducit ad <sic>hac</sic> causam.</p> 
+            <p xml:id="l101-nethup">
+              Notandum est tamen quod omnes effectus contingentes 
+              quid philosophi voluerunt reducere ad causas pure naturales 
+              et non propter hoc concedendi sunt daemones operare, 
+              licet autem dicant hoc ut <name ref="#Platonists">Platonici</name>.
+            </p>
+            <p xml:id="l101-echpns">
+              Et circa hoc <name ref="#Avicenna">Avicenna</name> 
+              <pb ed="#SV" n="321-v"/>
+              <cb ed="#SV" n="a"/>
+              in VIo <title>naturalium</title> 
+              et <name ref="#Albert">albertus</name> 
+              hoc recitat in <title>parvis naturalibus</title> 
+              <name ref="#Avicenna">Avicennae</name> imaginatur 
+              ipse <name ref="#Avicenna">Avicenna</name> quod anima est 
+              ultima intelligentiarum si sit multiplicata vel una ad 
+              propositum non spectat.
+            </p>
+            <p xml:id="l101-siioei">
+              Secundo ipse imaginatur quod anima 
+              non Impedita vel per malam complexionem vel per 
+              malos actus vel habitus ipsam depravantes vel afficientes 
+              ad Res villes corporaliter sed magis econverso 
+              habita cognitione causarum superiorum amore et desiderio 
+              efficitur tantae virtutis et activitatis quod tota materia 
+              elementorum existentium infra concavum orbis lunae et omnia 
+              corruptela mixta efficiebantur ei obedientia et obediebant 
+              eius imperio.
+            </p>
+            <p xml:id="l101-ucicol">
+              Unde consequenter ipse dicit quod secundum 
+              opinionem <name ref="#Avicenna">Avicennae</name> 
+              anima potest esse ita nobilis quod quasi 
+              videatur quod verbum incarnatum et posse inferius 
+              agere quidquid deus agit, 
+              et plene obedit ei tota massa corporalium existentium 
+              infra concavum orbis lunae.
+            </p>
+            <p xml:id="l101-ihaahc">
+              Iuxta hoc <name ref="#Avicenna">Avicenna</name> concedit in libro 
+              praefato quod anima potest facere plure et facere tempestates 
+              iniungere[?] et sic de huiusmodi operationibus, ita quod omnia corpora 
+              ei plene obediunt et ex consequenti operationes 
+              mirabiles ipse Reduceret ad animam nobilem sic operantem 
+              et imperantem cui tota materia corporalis existens infra 
+              spheram generalium et corporalium plene obedit et sic 
+              istae salvat fastitudines[?] scilicet, quod anima una Impedit 
+              opera alterius animae non habens nobilem anima poterit alium 
+              cuius anima est depressa et corpori demersa alterare 
+              et impedire a suis operationibus et quia talis obediet 
+              animae nobili sequitur quod unus poterit alium facere 
+              infirmum laesum impotenter et sanum, et sic ex Radice 
+              tacta apparet quod anima nobilis est tantae activitatis quod 
+              materia exterior ei obedit et sic omnia sortilegia 
+              reducit ad <sic>hac</sic> causam.
+            </p>
           </div>
-        <div>
-          <head xml:id="l101-Hasoaso">alia (secunda) opinio</head>
-          <p xml:id="l101-ariepf">Alii Reducunt in caelestis 
-          <lb ed="#SV"/>influentias et armonias et dicunt quod 
-          <lb ed="#SV"/>caelum est tantae efficientiae quod omnia opera quae experimur poterit fa<lb ed="#SV"/>cere.</p>
-        
-          <p xml:id="l101-ncieme"><sic>Rotant</sic> tamen isti quod diversa sunt signa in caelo 
-          <lb ed="#SV"/>et stellae ac planetae quae sunt diversarum proprietatum 
-          <lb ed="#SV"/>et causalitatum et una portio caeli est respectu unius speciei 
-          <lb ed="#SV"/>et alia respectu alterius et sic omnes effectus sunt con<lb ed="#SV"/>tingentes 
-          Reducuntur in caelestes armonias tanquam in 
-          <lb ed="#SV"/>suas causas et fortitudo caeli est quod si applicetur 
-          <lb ed="#SV"/>materia eveniet mirabilis effectus.</p>
-        
-          <p xml:id="l101-uicaec">Unde isti concedunt 
-          <lb ed="#SV"/>de capite <name ref="#Saturn">saturni</name> quod imprimeret fabricato in constella<lb ed="#SV"/>tione 
-          circa virtutem loquendi et dandi Responsa 
-          <lb ed="#SV"/>cognoscendum futura et praedicendi et sic omnes effectus mi<lb ed="#SV"/>rabiles 
-          qui contingunt possunt salvari per influentiam 
-          <lb ed="#SV"/>corporum caelestium, vel quod sunt imaginationes fabricatae 
-          <cb ed="#SV" n="321vb"/><lb ed="#SV"/>in certis constellationibus quae habent vim alterandi ele<lb ed="#SV"/>menta, 
-          vel ex operante talem imaginationem vis talis 
-          <lb ed="#SV"/>procedit et virtus movendi elementa, vel diceretur quod non 
-          <lb ed="#SV"/>quilibet deberet materiam applicare ad tales effectus 
-          <lb ed="#SV"/>producendos quod multum Refert applicantes[?] eligere con<lb ed="#SV"/>venienter.</p>
-        </div>
-        <div>
-          <head xml:id="l101-Hatoato">Alia (tertia) opinio</head>
-          <p xml:id="l101-toeser">tertia opinio est aliquem[?] in libro suo de ra<lb ed="#SV"/>diis 
-            stellicis cuius imaginatio aliqualiter coinci<lb ed="#SV"/>dit 
-            cum prioribus, nam iste dicit quod omnes Res mundi 
-            <lb ed="#SV"/>habent Radium, et quaelibet res multiplicat undique 
-            <lb ed="#SV"/>suas species et Radios.</p> 
-          
-          <p xml:id="l101-siieaa">secundo iste imaginatur quod caelum 
-            <lb ed="#SV"/>continet aequaliter omnes Res inferiores producibiles 
-            <lb ed="#SV"/>et unum signum Respicit aliam Rem et aliud aliam.</p>
-        
-          <p xml:id="l101-tiitme">tertio ipse imaginatur quod homo est minor mundus quia 
-          <lb ed="#SV"/>ipse continet totum mundum aequivalenter.</p>
-        
-          <p xml:id="l101-qiqsis">quarto imaginatur 
-          <lb ed="#SV"/>quod homo operetur mediante imaginatione et desiderio et 
-          <lb ed="#SV"/>quod operatur mediante voce expressa, et voces prolatae 
-          <lb ed="#SV"/>mediante desiderio et imaginatione habent Radios 
-          <lb ed="#SV"/>et efficientiam proportionalem ad Radios caelestes.</p> 
-          
-          <p xml:id="l101-iqasis">Ita 
-          <lb ed="#SV"/>quod aliquae sunt voces proportionales signo arietis et habent 
-          <lb ed="#SV"/>effectus proportionales sicut illud signum.</p>
-        
-        <p xml:id="l101-asvnpp">Aliae sunt 
-          <lb ed="#SV"/>voces sicut signum cauri et sic de aliis signis, et ulterius 
-          <lb ed="#SV"/>dicit aliquis[?] quod aliquae voces semel prolatae habent 
-          <lb ed="#SV"/>efficientiam et aliae voces non nisi pluries proferantur.</p>
-        
-        <p xml:id="l101-asvqhe">aliae 
-          <lb ed="#SV"/>sunt voces quae prolatae pro quocumque tempore vel in quocumque 
-          <lb ed="#SV"/>habent efficientiam.</p>
-        
-          <p xml:id="l101-annicc">aliae non nisi proferantur in certa constellatione 
-            <lb ed="#SV"/>scilicet, in signis formatis in caelo correspondentibus vocibus factis, 
-            <lb ed="#SV"/>et ex hoc salvantur sortilegia et omnia mirabilia 
-            <lb ed="#SV"/>Resolvuntur ad triplicem causalitatem, scilicet, ad caelestem 
-            <lb ed="#SV"/>armoniam ad hominem ad instrumenta eius per imaginationem 
-            <lb ed="#SV"/>et desiderium applicata tamen secundum diversas constellationes 
-            <lb ed="#SV"/>ars magica nihil est nisi applicatio aliquarum 
-            <lb ed="#SV"/>Rerum in certis constellationibus.</p>
-        </div>
+          <div xml:id="l101-Dd1e289">
+            <head xml:id="l101-Hasoaso">alia (secunda) opinio</head>
+            <p xml:id="l101-ariepf">
+              Alii reducunt in caelestis 
+              influentias et armonias et dicunt quod 
+              caelum est tantae efficientiae 
+              quod omnia opera quae experimur poterit facere.
+            </p>
+            <p xml:id="l101-ncieme">
+              <sic>Rotant</sic> tamen isti quod diversa sunt signa in caelo 
+              et stellae ac planetae quae sunt diversarum proprietatum 
+              et causalitatum et una portio caeli est respectu unius speciei 
+              et alia respectu alterius et sic omnes effectus sunt contingentes 
+              Reducuntur in caelestes armonias tanquam in 
+              suas causas et fortitudo caeli est quod si applicetur 
+              materia eveniet mirabilis effectus.
+            </p>
+            <p xml:id="l101-uicaec">
+              Unde isti concedunt 
+              de capite <name ref="#Saturn">Saturni</name> 
+              quod imprimeret fabricato in constellatione 
+              circa virtutem loquendi et dandi responsa 
+              cognoscendum futura et praedicendi et sic omnes effectus mirabiles 
+              qui contingunt possunt salvari per influentiam 
+              corporum caelestium, vel quod sunt imaginationes fabricatae 
+              <cb ed="#SV" n="b"/><!--SV321vb-->
+              in certis constellationibus quae habent vim alterandi elementa, 
+              vel ex operante talem imaginationem vis talis 
+              procedit et virtus movendi elementa, vel diceretur quod non 
+              quilibet deberet materiam applicare ad tales effectus 
+              producendos quod multum refert applicantes[?] eligere convenienter.
+            </p>
+          </div>
+          <div xml:id="l101-Dd1e313">
+            <head xml:id="l101-Hatoato">Alia (tertia) opinio</head>
+            <p xml:id="l101-toeser">
+              Tertia opinio est aliquem[?] in libro suo de radiis 
+              stellicis cuius imaginatio aliqualiter coincidit 
+              cum prioribus, nam iste dicit quod omnes Res mundi 
+              habent radium, et quaelibet res multiplicat undique 
+              suas species et radios.
+            </p> 
+            <p xml:id="l101-siieaa">
+              Secundo iste imaginatur quod caelum 
+              continet aequaliter omnes res inferiores producibiles 
+              et unum signum Respicit aliam Rem et aliud aliam.
+            </p>
+            <p xml:id="l101-tiitme">
+              Tertio ipse imaginatur quod homo est minor mundus quia 
+              ipse continet totum mundum aequivalenter.
+            </p>
+            <p xml:id="l101-qiqsis">
+              Quarto imaginatur 
+              quod homo operetur mediante imaginatione et desiderio et 
+              quod operatur mediante voce expressa, et voces prolatae 
+              mediante desiderio et imaginatione habent radios 
+              et efficientiam proportionalem ad radios caelestes.
+            </p> 
+            <p xml:id="l101-iqasis">
+              Ita 
+              quod aliquae sunt voces proportionales signo arietis et habent 
+              effectus proportionales sicut illud signum.
+            </p>
+            <p xml:id="l101-asvnpp">
+              Aliae sunt 
+              voces sicut signum cauri et sic de aliis signis, et ulterius 
+              dicit aliquis[?] quod aliquae voces semel prolatae habent 
+              efficientiam et aliae voces non nisi pluries proferantur.
+            </p>
+            <p xml:id="l101-asvqhe">
+              Aliae 
+              sunt voces quae prolatae pro quocumque tempore vel in quocumque 
+              habent efficientiam.
+            </p>
+            <p xml:id="l101-annicc">
+              Aliae non nisi proferantur in certa constellatione 
+              scilicet, in signis formatis in caelo correspondentibus vocibus factis, 
+              et ex hoc salvantur sortilegia et omnia mirabilia 
+              Resolvuntur ad triplicem causalitatem, scilicet, ad caelestem 
+              armoniam ad hominem ad instrumenta eius per imaginationem 
+              et desiderium applicata tamen secundum diversas constellationes 
+              ars magica nihil est nisi applicatio aliquarum 
+              rerum in certis constellationibus.
+            </p>
+          </div>
         </div>
       </div>
     </body>
