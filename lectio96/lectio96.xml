@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -7,400 +7,575 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.02-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 96, de Libertate</title>
           <date when="2013-02-15">February 15, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-02-15">February 15, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
+          <witness xml:id="R" n="reims">Reims</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
           <witness xml:id="S" n="sorb">Sorbonne</witness>
           <witness xml:id="SV" n="svict">St. Victor</witness>
-          <witness xml:id="V" n="vat">Vatican</witness>
-          <witness xml:id="R" n="reims">Reims</witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-02-15" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="314-r"/>
+        <cb ed="#SV" n="b"/>
+        <pb ed="#S" n="164-v"/>
+        <cb ed="#S" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio96">
-        <head xml:id="l96-Hldlldl" subtype="title">Lectio 96, de Libertate</head>
+        <head xml:id="l96-Hldlldl">Lectio 96, de Libertate</head>
         <div xml:id="l96-Dd1e85">
           <head xml:id="l96-Hdnfedp">De necessitate fidei defendere contra errores de fato, fortuna, et divina providentia</head>
-          <p xml:id="l96-admqfp">Ad declarationem materiae 
-            <lb ed="#SV"/>sciendum est primo quod scutum fidei catholicae sufficit 
-            <lb ed="#SV"/>liberare animam et defendere contra errores gentilium 
-            <lb ed="#SV"/>in materia de fato et fortuna et divina providentia 
-            <lb ed="#SV"/>et de aliis ubi intellectus carens fide mirabili ve<lb ed="#SV"/>ssatur. 
-            unde et mens humana fide destituta pro<lb ed="#SV"/>stituitur 
+          <p xml:id="l96-admqfp">
+            Ad declarationem materiae 
+            sciendum est primo quod scutum fidei catholicae sufficit 
+            liberare animam et defendere contra errores gentilium 
+            in materia de fato et fortuna et divina providentia 
+            et de aliis ubi intellectus carens fide mirabili vessatur. 
+            unde et mens humana fide destituta prostituitur 
             erroribus et sicut affectus sine caritate 
-            <lb ed="#SV"/>magis afficitur contrario sui finis quam fini proprio.</p>
-          
-          <p xml:id="l96-iieeev">Ita i<lb ed="#SV"/>maginadum 
+            magis afficitur contrario sui finis quam fini proprio.
+          </p>
+          <p xml:id="l96-iieeev">
+            Ita imaginadum 
             est de intellectu non ducto lumine fidei quod 
-            <lb ed="#SV"/>ipse magis prostituitur erroribus et falsis apparentiis quam 
-            <lb ed="#SV"/>veris. et sic potior via est firma fides quae intellectum liberat 
-            <lb ed="#SV"/>ab erroribus et vessationibus.</p>
-          
-          <p xml:id="l96-sseqcs">secundo sciendum est quod ex carentia 
-            <lb ed="#SV"/>fidei <unclear>perm?to?mi[?]</unclear> errores habuerunt originem apud vulgus 
-            <lb ed="#SV"/>gentilium et ex ignorantia philosophiae simul, nam simplices 
-            <lb ed="#SV"/>videntes mirabiles effectus confinxerunt sibi infinitos 
-            <lb ed="#SV"/>errores, et pro causis huius modi effectuum philosophi admi<lb ed="#SV"/>rantes 
+            ipse magis prostituitur erroribus et falsis apparentiis quam 
+            veris. et sic potior via est firma fides quae intellectum liberat 
+            ab erroribus et vessationibus.
+          </p>
+          <p xml:id="l96-sseqcs">
+            Secundo sciendum est quod ex carentia 
+            fidei <unclear>perm?to?mi[?]</unclear> errores habuerunt originem apud vulgus 
+            gentilium et ex ignorantia philosophiae simul, nam simplices 
+            videntes mirabiles effectus confinxerunt sibi infinitos 
+            errores, et pro causis huius modi effectuum philosophi admirantes 
             inceperunt philosophari. Et ex prima Radice habuit 
-            <lb ed="#SV"/>idolatria originem ut homines colerent creaturam pro crea<lb ed="#SV"/>tore 
+            idolatria originem ut homines colerent creaturam pro creatore 
             et effectus mirabiles attribuerent vel soli vel lumine 
-            <lb ed="#SV"/>vel alicui elementorum vel fato vel fortunae secundum varios modos 
-            <lb ed="#SV"/>imaginandi vias diversas apud indoctos.</p>
-          
-          <p xml:id="l96-usqcsv">unde secundum 
-            <lb ed="#SV"/>quod legitur in <title>itinerario elementis</title> ubi introducitur 
-            <lb ed="#SV"/>disputatio <name ref="#Peter">petri</name> contra <name ref="#SimonMagician">simonem magum</name> narratur 
-            <lb ed="#SV"/>ibi quosdam coluisse <unclear>stepitum[?]</unclear> ventris.</p>
-          
-          <p xml:id="l96-ircrcf">Item <name ref="#Romans">Romani</name> colebant 
-            febrem deum.</p> 
-          
-          <p xml:id="l96-igpaes">Item <name rend="#WilliamOfParis">Guillelmus Parisiensis</name> in libro 
-            <lb ed="#SV"/><title ref="#OnFaithAndLaws">De fide et legibus</title> dicit quosdam barbaros <unclear>aquilonares[?]</unclear> 
-            <lb ed="#SV"/>tanquam deum tonitruum colere propter mirabilitatem effectus 
-            <lb ed="#SV"/>illius apud eos immo et omnis species idolatriae et 
-            <lb ed="#SV"/>superstitionum a vulgo indocto fide et philosophia carente videtur 
-            <lb ed="#SV"/>sumpsisse <cb ed="#S" n="165ra"/>originem. Et ideo scribitur in <ref xml:id="l96-Rd1e196"><title ref="#ps">psalmo</title></ref><note type="editorNote" subtype="citation" corresp="#l96-Qmgdvcf"><title>Psalmi</title> 105:20</note> <quote xml:id="l96-Qmgdvcf" source="http://scta.info/resource/ps105_20">"mutaverunt 
-            <lb ed="#SV"/>gloriam Dei in similitudinem vituli comedentes faenum"</quote> 
-            <lb ed="#SV"/>et <ref xml:id="l96-Rd1e212"><title ref="#rom">Ad Romanos</title> <num>primo</num> capitulo</ref> scribitur <quote xml:id="l96-Qmgiqes" source="http://scta.info/resource/rom1_23">"mutaverunt gloriam 
-            <lb ed="#SV"/>incorruptibilem Dei in similitudinem imaginis corruptibilis 
-            <lb ed="#SV"/>hominis et <sic>volucrum</sic> et quadrupedum et serpentum"</quote>.</p>
-          
-            <p xml:id="l96-enesec">Ubi 
-              <lb ed="#SV"/>notandum est quod nedum vulgus indoctus sed in philosophi ratione 
-              <lb ed="#SV"/>depressionis ingenii non fuerunt concordes in ponendo 
-              <lb ed="#SV"/>deum. Quid negaverunt aliquem esse deum nisi praecise 
-              <lb ed="#SV"/>sensibilem et corporalem.</p>
-          
-          <p xml:id="l96-apdiep">Alii posuerunt deum sed variae. 
-            <lb ed="#SV"/>Et ideo radix omni errorum propter laesionem intellectus 
-            <lb ed="#SV"/>ratione culpae originalis. et ideo ipse intellectus non sufficit 
-            <lb ed="#SV"/>elevari in illa quae concernunt ultimum finem. ubi est 
-            <lb ed="#SV"/>ulterius advertendum quod subtilius philosophantes posuerunt 
-            <lb ed="#SV"/>unum principium et unum deum. sed ipsi non convenirent in 
-            <lb ed="#SV"/>eius proprietatibus.</p>
-          
-          <p xml:id="l96-uneupc">Ubi notandum est quod iuxta fictiones vulga<lb ed="#SV"/>rium 
+            vel alicui elementorum vel fato vel fortunae secundum varios modos 
+            imaginandi vias diversas apud indoctos.
+          </p>
+          <p xml:id="l96-usqcsv">
+            Unde secundum 
+            quod legitur in <title>itinerario elementis</title> ubi introducitur 
+            disputatio <name ref="#Peter">petri</name> contra <name ref="#SimonMagician">simonem magum</name> narratur 
+            ibi quosdam coluisse <unclear>stepitum[?]</unclear> ventris.
+          </p>
+          <p xml:id="l96-ircrcf">
+            Item <name ref="#Romans">Romani</name> colebant 
+            febrem deum.
+          </p> 
+          <p xml:id="l96-igpaes">
+            Item 
+            <cit>
+              <ref xml:id="l96-Rd1e156">
+                <name rend="#WilliamOfParis">Guillelmus Parisiensis</name> in libro 
+                <title ref="#OnFaithAndLaws">De fide et legibus</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            <!-- possible quot ehere -->
+            dicit quosdam barbaros <unclear>aquilonares[?]</unclear> 
+            tanquam deum tonitruum colere propter mirabilitatem effectus 
+            illius apud eos immo et omnis species idolatriae et 
+            superstitionum a vulgo indocto fide et philosophia carente videtur 
+            sumpsisse 
+            <pb ed="#S" n="165-r"/>
+            <cb ed="#S" n="a"/>
+            originem. 
+            Et ideo scribitur in 
+            <ref xml:id="l96-Rd1e196">
+              <title ref="#ps">Psalmo</title>
+            </ref>
+            <cit>
+              <quote xml:id="l96-Qmgdvcf" source="http://scta.info/resource/ps105_20">
+                mutaverunt 
+                gloriam Dei in similitudinem vituli comedentes faenum
+              </quote>
+            </cit> 
+            et 
+            <ref xml:id="l96-Rd1e212">
+              <title ref="#rom">Ad Romanos</title> 
+              <num>primo</num> capitulo
+            </ref> 
+            scribitur 
+            <cit>
+              <quote xml:id="l96-Qmgiqes" source="http://scta.info/resource/rom1_23">
+                mutaverunt gloriam incorruptibilem Dei in similitudinem imaginis corruptibilis 
+                hominis et <sic>volucrum</sic> et quadrupedum et serpentum
+              </quote>
+            </cit>.
+          </p>
+          <p xml:id="l96-enesec">Ubi 
+            Notandum est quod nedum vulgus indoctus sed in philosophi ratione 
+            depressionis ingenii non fuerunt concordes in ponendo 
+            deum. Quid negaverunt aliquem esse deum nisi praecise 
+            sensibilem et corporalem.
+          </p>
+          <p xml:id="l96-apdiep">
+            Alii posuerunt deum sed variae. 
+            Et ideo radix omni errorum propter laesionem intellectus 
+            ratione culpae originalis. et ideo ipse intellectus non sufficit 
+            elevari in illa quae concernunt ultimum finem. ubi est 
+            ulterius advertendum quod subtilius philosophantes posuerunt 
+            unum principium et unum deum. sed ipsi non convenirent in 
+            eius proprietatibus.
+          </p>
+          <p xml:id="l96-uneupc">
+            Ubi notandum est quod iuxta fictiones vulgarium 
             et philosophorum inventiones poetae supervenientes 
-            <lb ed="#SV"/>delectationibus carminibus humanas descripserunt proprie<lb ed="#SV"/>tates. 
+            delectationibus carminibus humanas descripserunt proprietates. 
             ubi est notandum quod ex hoc magnus error 
-            <lb ed="#SV"/>insurrexit apud multos vulgares et literatos. 
-            <lb ed="#SV"/>nam ea quae poetae seu poetice scripta sunt plures re<lb ed="#SV"/>ceperunt 
+            insurrexit apud multos vulgares et literatos. 
+            nam ea quae poetae seu poetice scripta sunt plures receperunt 
             ad litteram et sic de varietate et pluralitate 
-            <lb ed="#SV"/>deorum varii varia scripserunt poetae. Ideo alii 
-            <lb ed="#SV"/>posuerunt unum deum esse primum sequentes doctrinam 
-            <lb ed="#SV"/><name ref="#Parmenides">parmenidis</name> qui posuit aquam esse deum. Et alii 
-            <lb ed="#SV"/>posuerunt unum deum sequendo viam <name ref="#Aristotle">aristotelis</name> ponentis 
-            <lb ed="#SV"/>unam prima causam.</p>
-          
-          <p xml:id="l96-cqeppd">Circa quod est advertendum quod 
-            <lb ed="#SV"/>secundum opinionem vocarii apud probabiliores poetae nominaverunt 
-            <cb ed="#SV" n="314va"/><lb ed="#SV"/>primum principium demorgogon. Consequenter dixerunt quod habet 
-            <lb ed="#SV"/>chaos sibi coaeternum et secundum veritatem philosophiae non est aliud 
-            <lb ed="#SV"/>dicere nisi quod deus est simpliciter aeternus et est potentia rerum producibilium 
-            <lb ed="#SV"/>obiectiva et coaeterna, ita quod per chaos confusum poetae 
-            <lb ed="#SV"/>nihil aliud intellexerunt nisi potentiam obiectivam rerum 
-            <lb ed="#SV"/>producibilium.</p>
-          
-          <p xml:id="l96-dipeqc">Deinde ipsi ponunt quod demogorgon primo 
-            <lb ed="#SV"/>genuit litigium, id est posuit ordinem et distinctionem Rerum 
-            <lb ed="#SV"/>et differentiam essentialem ipsarum. unde per litigium intelligitur 
-            <lb ed="#SV"/>quaedam Rerum imperitas cum actionibus distinctis et quandoque 
-            <lb ed="#SV"/>contrariis. Consequenter posuerunt quod demogorgon seu 
-            <lb ed="#SV"/>prima causa generat pau sororem litigii per quod intelligitur 
-            <lb ed="#SV"/>naturalis Rerum <unclear>inscuitus[?]</unclear> ad suas operationes exercendas.</p>
-          
-          <p xml:id="l96-tpqecn">tertia posuerunt quod demogorgon generat iterum tres filias 
-            <lb ed="#SV"/>quas poetae vocant per eas. et <name ref="#Cicero">tullius</name> vocat eas 
-            <lb ed="#SV"/>fata per quas intelligitur naturae creatae proprietas et conditio natura<lb ed="#SV"/>lis.</p>
-          
-            <p xml:id="l96-npcqva">nam prima conditio Rei est quod producatur de non ese 
-            <lb ed="#SV"/>ad esse quod prima parta significat quae vocatur <name ref="#Clotho">cloto</name>. deinde 
-              <lb ed="#SV"/>natura Res est quod non potest stare nec esse nisi conservetur 
-              <lb ed="#SV"/>saltem de <del rend="strikethrough/expunctuated">natura</del> creatura. et illud significat alia parta 
-            <lb ed="#SV"/>quae vocatur <name ref="#Lachesis">lacesis</name>. deinde illae res quae generantur tandem 
-            <lb ed="#SV"/>corrumpuntur saltem vita naturali. et ideo ratio corruptionis 
-            <lb ed="#SV"/>Rerum significatur per aliam partam quae vocatur <name ref="#Atropos">atropos</name>.</p> 
-          
-          <p xml:id="l96-eqafvp">ex 
-            <lb ed="#SV"/>quo apparet quod per fatum secundum veram philosophiam non intelligitur 
-            <lb ed="#SV"/>aliquid nisi proprietatis Rei creatae quibus Reducuntur in suas causas 
-            <lb ed="#SV"/>vel magis proprie per fatum intelliguntur proprietates 
-            <lb ed="#SV"/>Requisitae ad Rei creatae productionem conservationem ac <unclear>pyro<lb ed="#SV"/>dicatione[?]</unclear> 
-            et sic Resolvendo fatum nullum est inconveniens conce<lb ed="#SV"/>dere 
+            deorum varii varia scripserunt poetae. Ideo alii 
+            posuerunt unum deum esse primum sequentes doctrinam 
+            <name ref="#Parmenides">parmenidis</name> qui posuit aquam esse deum. Et alii 
+            posuerunt unum deum sequendo viam <name ref="#Aristotle">aristotelis</name> ponentis 
+            unam prima causam.
+          </p>
+          <p xml:id="l96-cqeppd">
+            Circa quod est advertendum quod 
+            secundum opinionem vocarii apud probabiliores poetae nominaverunt 
+            <pb ed="#SV" n="314-v"/>
+            <cb ed="#SV" n="a"/>
+            primum principium demorgogon. Consequenter dixerunt quod habet 
+            chaos sibi coaeternum et secundum veritatem philosophiae non est aliud 
+            dicere nisi quod deus est simpliciter aeternus et est potentia rerum producibilium 
+            obiectiva et coaeterna, ita quod per chaos confusum poetae 
+            nihil aliud intellexerunt nisi potentiam obiectivam rerum 
+            producibilium.
+          </p>
+          <p xml:id="l96-dipeqc">
+            Deinde ipsi ponunt quod demogorgon primo genuit litigium, 
+            id est posuit ordinem et distinctionem Rerum 
+            et differentiam essentialem ipsarum. unde per litigium intelligitur 
+            quaedam rerum imperitas cum actionibus distinctis et quandoque 
+            contrariis. Consequenter posuerunt quod demogorgon seu 
+            prima causa generat pau sororem litigii per quod intelligitur 
+            naturalis rerum <unclear>inscuitus</unclear> ad suas operationes exercendas.
+          </p>
+          <p xml:id="l96-tpqecn">
+            Tertia posuerunt quod demogorgon generat iterum tres filias 
+            quas poetae vocant per eas. 
+            Et <name ref="#Cicero">Tullius</name> vocat eas 
+            fata per quas intelligitur naturae creatae proprietas et conditio naturalis.
+          </p>
+          <p xml:id="l96-npcqva">
+            Nam prima conditio rei est quod producatur de non ese 
+            ad esse quod prima parta significat quae vocatur <name ref="#Clotho">cloto</name>. deinde 
+            natura res est quod non potest stare nec esse nisi conservetur 
+            saltem de <!--<del rend="strikethrough/expunctuated">natura</del>--> creatura. 
+            Et illud significat alia parta 
+            quae vocatur <name ref="#Lachesis">lacesis</name>. deinde illae res quae generantur tandem 
+            corrumpuntur saltem vita naturali. et ideo ratio corruptionis 
+            Rerum significatur per aliam partam quae vocatur <name ref="#Atropos">atropos</name>.
+          </p> 
+          <p xml:id="l96-eqafvp">
+            Ex 
+            quo apparet quod per fatum secundum veram philosophiam non intelligitur 
+            aliquid nisi proprietatis Rei creatae quibus Reducuntur in suas causas 
+            vel magis proprie per fatum intelliguntur proprietates 
+            Requisitae ad Rei creatae productionem conservationem ac <unclear>pyrodicatione[?]</unclear> 
+            et sic Resolvendo fatum nullum est inconveniens concedere 
             fatum inter litteratos. ubi simplicibus non 
-            <lb ed="#SV"/>praeberetur occasio cum gentilibus deficiendi et errandi 
-            <lb ed="#SV"/>et sic fatum nedum Resolvitur ad causam finalem, sed Reducitur 
-            <lb ed="#SV"/>ad aliquod genus causae efficientis et ad conca<lb ed="#SV"/>tenationem 
-            causarum efficientium, sed de modo concate<lb ed="#SV"/>nationis 
-            sunt variae opiniones secundum quas fatum va<lb ed="#SV"/>riae 
+            praeberetur occasio cum gentilibus deficiendi et errandi 
+            et sic fatum nedum Resolvitur ad causam finalem, sed Reducitur 
+            ad aliquod genus causae efficientis et ad concatenationem 
+            causarum efficientium, sed de modo concatenationis 
+            sunt variae opiniones secundum quas fatum variae 
             acciperetur, nam aliqui Resolvunt se ad divina 
-            <lb ed="#SV"/>providentiam tamquam ad causam principalem quae aliquo modo <unclear>fatum[?]</unclear> vo<lb ed="#SV"/>cari 
-            potest.</p> 
-          
-          <p xml:id="l96-arssec">Alii Resolvunt se ad causa secundas divinae 
-            <lb ed="#SV"/>providentiae subordinatas et concatenatas.</p>
-          
-          <p xml:id="l96-arsapn">Alii 
-            <lb ed="#SV"/>Resolvunt se mixti ad divinam providentiam cum con<lb ed="#SV"/>catenatione 
+            providentiam tamquam ad causam principalem quae aliquo modo <unclear>fatum</unclear> vocari 
+            potest.
+          </p> 
+          <p xml:id="l96-arssec">
+            Alii resolvunt se ad causa secundas divinae 
+            providentiae subordinatas et concatenatas.
+          </p>
+          <p xml:id="l96-arsapn">
+            Alii resolvunt se mixti ad divinam providentiam cum concatenatione 
             causarum secondarium, et sic secundum varios modos 
-            <lb ed="#SV"/>est intentio dicere de fato iuxta opinionem <name ref="#Aristotle">philosophi</name> et <name ref="#Avicenna">avicennae</name> 
-            et aliorum philosophorum notabiliorum.</p>
+            est intentio dicere de fato iuxta opinionem 
+            <name ref="#Aristotle">Philosophi</name> 
+            et <name ref="#Avicenna">Avicennae</name> 
+            et aliorum philosophorum notabiliorum.
+          </p>
         </div>
         <div xml:id="l96-Dd1e429">
           <head xml:id="l96-Hsodsrm">Sex opiniones de divina providentiae secundum Rabi Moyses</head>
-          <p xml:id="l96-cmddcs">circa 
-            <lb ed="#SV"/>materiam divinae providentiae. notandum<note type="marginalNote" place="margin">Circa divinam providentiam sex fuerit opiniones</note><add type="marginalNote" place="margin">nota</add> est quod circa divinam 
-            <lb ed="#SV"/>providentiam sex fuerunt opiniones quas Reci<lb ed="#SV"/>tat 
-            <name ref="#Maimonides">Rabbi moyses</name> in IIIo libro de <title ref="#GuideForThePerplexed">duce dubiorum</title> 
-            <lb ed="#SV"/>capitulo 17mo.</p>           
+          <p xml:id="l96-cmddcs">
+            Circa 
+            materiam divinae providentiae. notandum
+            est quod circa divinam 
+            providentiam sex fuerunt opiniones quas Recitat 
+            <cit>
+              <ref xml:id="l96-Rd1e290">
+                <name ref="#Maimonides">Rabbi Moyses</name>,
+                in III libro  
+                <title ref="#GuideForThePerplexed">De duce dubiorum</title>, 
+                capitulo 17
+              </ref>
+            </cit>.
+          </p>
           <div xml:id="l96-Dd1e457">
             <head xml:id="l96-Hpoapoa">Prima opinio antiquorum</head>
-            <p xml:id="l96-upoidb">unde prima opinio fuit antiquorum in<lb ed="#SV"/>cipiens 
+            <p xml:id="l96-upoidb">
+              Unde prima opinio fuit antiquorum incipiens 
               a tempore prophetarum dicentium quod a summo caelorum 
-              <lb ed="#SV"/>usque ad terram quidquid contingit in universo mundo 
-              <lb ed="#SV"/>contingit simpliciter a casu. Ita quod isti imaginati 
-              <lb ed="#SV"/>sunt quod deus in seipso et de seipso sufficienter de<lb ed="#SV"/>lectatur, 
+              usque ad terram quidquid contingit in universo mundo 
+              contingit simpliciter a casu. Ita quod isti imaginati 
+              sunt quod deus in seipso et de seipso sufficienter delectatur, 
               nec habet curam de Rebus extrinsecis sed 
-              <cb ed="#SV" n="314vb"/><lb ed="#SV"/>effectus omnis qui fiunt sunt a casu et secundum 
-              <lb ed="#SV"/>causales applicationes Rerum. Et isti se Resolvunt 
-              <lb ed="#SV"/>ad atomalia quae diverso modo combinata constituunt 
-              <lb ed="#SV"/>diversas species Rerum. et istam viam dicit <name ref="#Maimonides">Rabbi 
-                <lb ed="#SV"/>moyses</name> secuti sunt multi de populo <name ref="#Israel">israel</name>. deinde 
-              <lb ed="#SV"/>blasphemantes.</p>
-        
-            <p xml:id="l96-siodid">Sed ista opinio nedum est contra sa<lb ed="#SV"/>cram 
+              <cb ed="#SV" n="b"/><!--SV314vb-->
+              effectus omnis qui fiunt sunt a casu et secundum 
+              causales applicationes rerum. 
+              Et isti se resolvunt 
+              ad atomalia quae diverso modo combinata constituunt 
+              diversas species rerum. 
+              Et istam viam dicit <name ref="#Maimonides">Rabbi Moyses</name> 
+              secuti sunt multi de populo <name ref="#Israel">Israel</name>, 
+              deinde blasphemantes.
+            </p>
+            <p xml:id="l96-siodid">
+              Sed ista opinio nedum est contra sacram 
               scripturam seu doctrinam et fidem orthodoxam, 
-              <lb ed="#SV"/>sed etiam contra philosophiam. <seg ana="#politica">nam quod sit supremus princeps 
-              <lb ed="#SV"/>et non curet de regimine politiae est veritati atque 
-                <lb ed="#SV"/>sapientiae dissonum</seg>. ideo dicebat <name ref="#Aristotle">Aristoteles</name> <quote xml:id="l96-Qd1e512" source="http://scta.info/resource/aristmet-l12">entia no<lb ed="#SV"/>lo 
-              male Regi unus, ergo princeps,</quote> et ista via 
-              <lb ed="#SV"/>secutus est <unclear>epiculus[?]</unclear> et sui sequaces sed, quia posuit 
-              <lb ed="#SV"/>felicitatem consistere in voluptatibus ideo ut volu<lb ed="#SV"/>ptatibus 
+              sed etiam contra philosophiam. 
+              Nam quod sit supremus princeps 
+              et non curet de regimine politiae est veritati atque sapientiae dissonum. 
+              Ideo dicebat 
+              <ref xml:id="l96-Rd1e320">
+                <name ref="#Aristotle">Aristoteles</name>
+              </ref> 
+              <cit>
+                <quote xml:id="l96-Qd1e512" source="http://scta.info/resource/aristmet-l12">
+                  entia nolo male regi unus, 
+                  ergo princeps
+                </quote>
+                <bibl>XXX</bibl>
+              </cit> 
+              et ista via 
+              secutus est <unclear>epiculus</unclear> et sui sequaces sed, quia posuit 
+              felicitatem consistere in voluptatibus ideo ut voluptatibus 
               locum daret dicit deum non curare de 
-              <lb ed="#SV"/>Rebus quam opinionem impugnat <name ref="#Lactantius">Lactantius</name> in libro 
-              <lb ed="#SV"/>super hoc editus qui intitulatur <title ref="#OnTheAngerOfGod">liber de Ira dei</title>.</p>
+              rebus quam opinionem impugnat 
+              <cit>
+                <ref xml:id="l96-Rd1e340">
+                  <name ref="#Lactantius">Lactantius</name>, 
+                  in libro super hoc editus 
+                  qui intitulatur <title ref="#OnTheAngerOfGod">liber de Ira dei</title>
+                </ref>
+                <bibl>XXX</bibl>
+              </cit>.
+            </p>
           </div>
           <div xml:id="l96-Dd1e540">
             <head xml:id="l96-Hsoasoa">Secunda opinio Aristotelis</head>
-            <p xml:id="l96-soprup"><lb ed="#SV"/>secundam opinionem ponit <name ref="#Maimonides">Rabbyi moises</name> fuisse 
-              <lb ed="#SV"/><name ref="#Aristotle">aristotelis</name> quod multi non credunt quod deus habet 
-              <lb ed="#SV"/>providentiam et curam singularem de totali caelesti 
-              <lb ed="#SV"/>essentia vel de quinta essentia. unde deus habet singularem 
-              <lb ed="#SV"/>curam de corporibus caelestibus a summo caelo usque 
-              <lb ed="#SV"/>ad orbem lunae quantum ad species et individua 
-              <lb ed="#SV"/>operationes et motus ideo illa sunt incorporalia, sed 
-              <lb ed="#SV"/>infra concavum orbum lunae, scilicet, in sphera activorum et 
-              <lb ed="#SV"/>passivorum deus non habet curam nisi de speciebus quod conserventur 
-              <lb ed="#SV"/>et quod fiat <unclear>continuatio[?]</unclear> non curat tamen utrum per hoc 
-              <lb ed="#SV"/>vel hoc individuum. et propter curam quam habet 
-              <lb ed="#SV"/>respectu corporum caelestium quantum ad species et indivi<lb ed="#SV"/>dua, 
+            <p xml:id="l96-soprup">
+              Secundam opinionem ponit 
+              <name ref="#Maimonides">Rabbyi Moises</name> fuisse 
+              <name ref="#Aristotle">Aristotelis</name> quod multi non credunt quod deus habet 
+              providentiam et curam singularem de totali caelesti 
+              essentia vel de quinta essentia. unde deus habet singularem 
+              curam de corporibus caelestibus a summo caelo usque 
+              ad orbem lunae quantum ad species et individua 
+              operationes et motus ideo illa sunt incorporalia, sed 
+              infra concavum orbum lunae, scilicet, in sphera activorum et 
+              passivorum deus non habet curam nisi de speciebus quod conserventur 
+              et quod fiat <unclear>continuatio</unclear> non curat, 
+              tamen utrum per hoc 
+              vel hoc individuum. et propter curam quam habet 
+              respectu corporum caelestium quantum ad species et individua, 
               ideo sunt aeterna, et cum hoc propter immediatam 
-              <lb ed="#SV"/>curam dei, et quia habet singularem curam in spheram activorum 
-              <lb ed="#SV"/>et passivorum circa species ideo dicentur aeternae, sed 
-              <lb ed="#SV"/>quia non habet curam individuorum specialem, ideo corporalia 
-              <lb ed="#SV"/>sunt et hoc est <unclear>Ramus[?]</unclear> Radicis de antiquitate 
-              <lb ed="#SV"/>mundi apud <name ref="#Aristotle">aristotelem</name> quia de quocumque deus habuit 
-              <lb ed="#SV"/>curam in particulari illud semper fuit, est, et erit, nec 
-              <lb ed="#SV"/>permitteret deus illud interire.</p>
-            
-            <p xml:id="l96-seprup">sed ex processu 
-              <lb ed="#SV"/><name ref="#Aristotle">aristoteles</name> apparet quod non est verum quod ipse hanc opinionem 
-              <lb ed="#SV"/>tenuerit. et probatur ratione, quia ut allegatum est in XIIo 
-              <lb ed="#SV"/><title ref="#Metaphysics">metaphysicae</title> <name ref="#Aristotle">aristoteles</name> loquitur decens <quote xml:id="l96-Qd1e621" source="http://scta.info/resource/aristmet-l12">entia nolo ma<lb ed="#SV"/>le 
-              Regi unus ergo princeps</quote>, igitur deus est Rector 
-              <lb ed="#SV"/><unclear>unibilis[?]</unclear> politiae.</p>
-            
-            <p xml:id="l96-sacsei">secundo arguitur confirmando si ima<lb ed="#SV"/>ginetur 
+              curam dei, et quia habet singularem curam in spheram activorum 
+              et passivorum circa species ideo dicentur aeternae, sed 
+              quia non habet curam individuorum specialem, ideo corporalia 
+              sunt et hoc est <unclear>ramus</unclear> radicis de antiquitate 
+              mundi apud <name ref="#Aristotle">Aristotelem</name> 
+              quia de quocumque deus habuit 
+              curam in particulari illud semper fuit, est, et erit, nec 
+              permitteret deus illud interire.
+            </p>
+            <p xml:id="l96-seprup">
+              Sed ex processu 
+              <name ref="#Aristotle">Aristoteles</name> apparet 
+              quod non est verum quod ipse hanc opinionem tenuerit. 
+              Et probatur ratione
+              quia ut allegatum est 
+              in 
+              <ref xml:id="l96-Rd1e383">
+                XIIo <title ref="#Metaphysics">Metaphysicae</title> 
+                <name ref="#Aristotle">Aristoteles</name>
+              </ref> 
+              loquitur decens 
+              <cit>
+                <quote xml:id="l96-Qd1e621" source="http://scta.info/resource/aristmet-l12">
+                  entia nolo male regi unus ergo princeps
+                </quote>
+                <bibl>XXX</bibl>
+              </cit>, 
+              igitur deus est rector 
+              <unclear>unibilis</unclear> 
+              politiae.
+            </p>
+            <p xml:id="l96-sacsei">
+              Secundo arguitur confirmando si imaginetur 
               quod maior mundus sit ad modum animalis 
-              <lb ed="#SV"/>et species sint membra et deus habet curam universi 
-              <lb ed="#SV"/>totius igitur habet curam partium specierum et individuorum.</p>
-            
-            <p xml:id="l96-tdpeop"><lb ed="#SV"/>tertio deus principaliter agit respectu cuiuscumque individui 
-              <lb ed="#SV"/>ad eius productionem et conservationem, igitur cognoscit 
-              <lb ed="#SV"/>eum. antecedens apparet quia prima causa respectu cuiuscumque effectus 
-              <lb ed="#SV"/>prius influit, et cum <name ref="#Aristotle">aristoteles</name> ponat primam 
-              <lb ed="#SV"/>causam in genere causae efficientis tunc cognoscit indi<lb ed="#SV"/>vidua 
+              et species sint membra et deus habet curam universi totius, 
+              igitur habet curam partium specierum et individuorum.
+            </p>
+            <p xml:id="l96-tdpeop">
+              Tertio, 
+              deus principaliter agit respectu cuiuscumque individui 
+              ad eius productionem et conservationem, igitur cognoscit 
+              eum. antecedens apparet quia prima causa respectu cuiuscumque effectus 
+              prius influit, et cum <name ref="#Aristotle">aristoteles</name> ponat primam 
+              causam in genere causae efficientis tunc cognoscit individua 
               et non agit a casu qui agit ut 
-              <lb ed="#SV"/>artifex summus igitur individua producit et ordinat 
-              <cb ed="#SV" n="315ra"/><lb ed="#SV"/>principalissime.</p>
-            
-            <p xml:id="l96-qacfnc">quarto arguitur confirmando, quia secundum 
-              <lb ed="#SV"/><name ref="#Aristotle">philosophum</name> instrumentalia dei Regunt mundum inferio<lb ed="#SV"/>rem 
+              artifex summus igitur individua producit et ordinat 
+              <pb ed="#SV" n="315-r"/>
+              <cb ed="#SV" n="a"/>
+              principalissime.
+            </p>
+            <p xml:id="l96-qacfnc">
+              Quarto arguitur confirmando
+              quia secundum <name ref="#Aristotle">Philosophum</name> 
+              instrumentalia dei regunt mundum inferiorem 
               scilicet, caelum intelligentiae et corpora caelestia 
               et cum instrumentum non agit nisi virtute causae cuius est 
-              <lb ed="#SV"/>instrumentum sequitur quod deus principaliter dirigit caelum 
-              <lb ed="#SV"/>quod influit particulariter in ista inferiora et per consequens 
-              <lb ed="#SV"/>tollendo providentiam divinam respectu individuorum 
-              <lb ed="#SV"/>secundum opinionem <name ref="#Aristotle">aristotelis</name> est contra ipsummet quia videtur 
-              <lb ed="#SV"/>magis fidei nostrae consonare.</p>
+              instrumentum sequitur quod deus principaliter dirigit caelum 
+              quod influit particulariter in ista inferiora et per consequens 
+              tollendo providentiam divinam respectu individuorum 
+              secundum opinionem <name ref="#Aristotle">Aristotelis</name> 
+              est contra ipsummet quia videtur 
+              magis fidei nostrae consonare.
+            </p>
           </div>
           <div xml:id="l96-Dd1e688">
             <head xml:id="l96-Htoptop">Tertio opinio</head>
-            <p xml:id="l96-toercs">tertia opinio est 
-              <lb ed="#SV"/>quam ponit <name ref="#Maimonides">Rabi moyses</name> dicit esse mantorum 
-              <lb ed="#SV"/>quos ipse vocat <unclear>seutientes[?]</unclear>, scilicet, quod nihil contingit 
-              <lb ed="#SV"/>a casu in isto universo nec quantum ad universalia, 
-              <lb ed="#SV"/>nec quantum ad individua. et ista positio coincidit 
-              <lb ed="#SV"/>cum positione fidei, quia nihil fit a casu respectu primae 
-              <lb ed="#SV"/>causae sed tantummodo respectu causarum secundarium.</p>
-            
-            <p xml:id="l96-sciiep">Sed contra illam 
-              <lb ed="#SV"/>opinionem arguit <name ref="#Maimonides">rabbi moyses</name> quia si esset 
-              <lb ed="#SV"/>vera non esset differentia inter causam foliorum ab arbore 
-              <lb ed="#SV"/>et nativitatem alicuius et breviter non esset 
-              <lb ed="#SV"/>differentia inter effectum parvum et notabilem vel magnum 
-              <lb ed="#SV"/>effectum et illud est inconveniens. dicitur quod positio habet concedere 
-              <lb ed="#SV"/>consequens et optime quia quantumcumque effectus sit magnus 
-              <lb ed="#SV"/>vel parvus Requirit dictum concursum. et ille effectus 
-              <lb ed="#SV"/>qui ab aeterno evenit ab aeterno ordinabatur et 
-              <lb ed="#SV"/>in mente divina providebatur et ista positio est fidei 
-              <lb ed="#SV"/>consona et forte fuit a fide catholica derivata, 
-              <lb ed="#SV"/>nam iste qui Recitat has opiniones fuit <name ref="#Jews">Iudaeus</name> 
-              <lb ed="#SV"/>et Regnavit post christum incarnatum et passum.</p>
-            
-            <p xml:id="l96-saiqne"><lb ed="#SV"/>secundo arguit iste <name ref="#Maimonides">rabbi moyses</name> quia si illa positio esset 
-              <lb ed="#SV"/>vera, tunc omnia futura de necessitate evenient patet consequentia 
-              <lb ed="#SV"/>quia si deus ab aeterno praeordinavit casum folii, oportet 
-              <lb ed="#SV"/>quod necessario eveniat.</p>
-            
-            <p xml:id="l96-sirccf">Sed iste Respondet et Recitat 
-              <lb ed="#SV"/>opinionem illorum in Respondendo quod omnis effectus in deum 
-              <lb ed="#SV"/>Relati necessario evenient quantum tamen ad causas particulares 
-              <lb ed="#SV"/>contingenter evenient et sine dubio videtur quod 
-              <lb ed="#SV"/>Responsio sit <name ref="#Boethius">boecii</name> in Vo <title ref="#Consolation">de consolatione</title>, et etiam <name ref="#Aquinas">sancti 
-                <lb ed="#SV"/>thomae</name> in <title ref="#SummaTheologica">summa</title> sua, ita quod consequentia est necessaria deus 
-              <lb ed="#SV"/>praescit quod ita erit igitur ita erit et tamen est contingentia 
-              <lb ed="#SV"/>respectu nostri, ita quod hoc consequentia est necessaria '<name ref="#Sortes">sortes</name> curret', igitur 
-              <lb ed="#SV"/>ipse movebitur, et quantum ad hoc positio est catholica 
-              <lb ed="#SV"/>si sit intellecta ad sensum bonum.</p> 
-            
-            <p xml:id="l96-sifccf">secundo iste facit 
-              <lb ed="#SV"/>unam consequentiam qua videtur ignorare qualiter praescientiae dei 
-              <lb ed="#SV"/>concordetur cum contingentia futurorum.</p>
-        
-            <p xml:id="l96-iirqit">Item ista ratio 
-              <lb ed="#SV"/>fieret evidenter contra eum in sexta opinionem quam ipse 
-              <lb ed="#SV"/>tenebit.</p>
+            <p xml:id="l96-toercs">
+              Tertia opinio est 
+              quam ponit <name ref="#Maimonides">Rabi Moyses</name> 
+              dicit esse mantorum quos ipse vocat <unclear>sentientes</unclear>, 
+              scilicet, quod nihil contingit 
+              a casu in isto universo nec quantum ad universalia, 
+              nec quantum ad individua. et ista positio coincidit 
+              cum positione fidei, quia nihil fit a casu respectu primae 
+              causae sed tantummodo respectu causarum secundarium.
+            </p>
+            <p xml:id="l96-sciiep">
+              Sed contra illam 
+              opinionem arguit <name ref="#Maimonides">Rabbi Moyses</name> 
+              quia si esset 
+              vera non esset differentia inter causam foliorum ab arbore 
+              et nativitatem alicuius et breviter non esset 
+              differentia inter effectum parvum et notabilem vel magnum 
+              effectum et illud est inconveniens. dicitur quod positio habet concedere 
+              consequens et optime quia quantumcumque effectus sit magnus 
+              vel parvus Requirit dictum concursum. et ille effectus 
+              qui ab aeterno evenit ab aeterno ordinabatur et 
+              in mente divina providebatur et ista positio est fidei 
+              consona et forte fuit a fide catholica derivata, 
+              nam iste qui Recitat has opiniones fuit <name ref="#Jews">Iudaeus</name> 
+              et Regnavit post christum incarnatum et passum.
+            </p>
+            <p xml:id="l96-saiqne">
+              Secundo arguit iste 
+              <name ref="#Maimonides">Rabbi Moyses</name> 
+              quia, 
+              si illa positio esset vera, 
+              tunc omnia futura de necessitate evenient patet consequentia 
+              quia si deus ab aeterno praeordinavit casum folii, oportet 
+              quod necessario eveniat.
+            </p>
+            <p xml:id="l96-sirccf">
+              Sed iste respondet et recitat 
+              opinionem illorum in respondendo 
+              quod omnis effectus in deum 
+              relati necessario evenient 
+              quantum tamen ad causas particulares 
+              contingenter evenient et sine dubio 
+              videtur quod responsio sit 
+              <cit>
+                <ref xml:id="l96-Rd1e462">
+                  <name ref="#Boethius">boecii</name> in Vo 
+                  <title ref="#Consolation">de consolatione</title>
+                </ref>
+              </cit>, 
+              et etiam 
+              <cit>
+                <ref xml:id="l96-Rd1e474"><name ref="#Aquinas">Sancti Thomae</name> 
+                in 
+                <title ref="#SummaTheologica">Summa</title> sua
+                </ref>
+              </cit>, 
+              ita quod consequentia est necessaria deus 
+              praescit quod ita erit,
+              igitur ita erit et tamen est contingentia respectu nostri, 
+              ita quod hoc consequentia est necessaria 
+              <mentioned><name ref="#Sortes">sortes</name> curret</mentioned>, 
+              igitur ipse movebitur, 
+              et quantum ad hoc positio est catholica 
+              si sit intellecta ad sensum bonum.
+            </p> 
+            <p xml:id="l96-sifccf">
+              Secundo iste facit 
+              unam consequentiam qua videtur ignorare qualiter praescientiae dei 
+              concordetur cum contingentia futurorum.
+            </p>
+            <p xml:id="l96-iirqit">
+              Item ista ratio 
+              fieret evidenter contra eum in sexta opinionem quam ipse 
+              tenebit.
+            </p>
           </div>
           <div xml:id="l96-Dd1e818">
             <head xml:id="l96-Hqopquop">Quarta opinio</head>
-            <p xml:id="l96-qopmac">quarta opinio ponit <name ref="#Maimonides">Rabi moyses</name> 
-              <lb ed="#SV"/>quam vocat separatorum, scilicet, quod omnia quae fiunt generaliter 
-              <lb ed="#SV"/>fiunt per sapientia creatoris summi sive in caele<lb ed="#SV"/>stibus 
+            <p xml:id="l96-qopmac">
+              Quarta opinio ponit <name ref="#Maimonides">Rabi moyses</name> 
+              quam vocat separatorum, scilicet, quod omnia quae fiunt generaliter 
+              fiunt per sapientia creatoris summi sive in caelestibus 
               sive in concavo orbis lunae et haec loquendo 
-              <lb ed="#SV"/>de effectibus positivis et non de privativis ut 
-              <lb ed="#SV"/>peccatum quia non fit per sapientiam creatoris nec 
-              <cb ed="#SV" n="315rb"/><lb ed="#SV"/>aliquo modo a creatore.</p>
-            
-            <p xml:id="l96-sdiili">secundo dicit ista opinio quod quidquid fit 
-              <lb ed="#SV"/>melius fit quam si non fieret. patet quia fit a summa sapientia, 
-              <lb ed="#SV"/>igitur optime fit. et ad illud reduceretur illud quod gentiles 
-              <lb ed="#SV"/>mirantur, scilicet, quod bonos mala <unclear>praemiunt[?]</unclear> praemia virtutum 
-              <lb ed="#SV"/>mali quae Rapiunt, unde diceretur quod eo ipso quod fit a summa 
-              <lb ed="#SV"/>sapientia optime et iuste fit nam isti dicunt quod si iustus 
-              <lb ed="#SV"/>laedatur et malus exaltetur quod melius fit quam si non fieret 
-              <lb ed="#SV"/>et totum Resolvitur ad divinam sapientiam omnia iuste et debite 
-              <lb ed="#SV"/>ordinantem, dicitur tamen quod Regula boni et iustitiae non debet 
-              <lb ed="#SV"/>Resolvi ad nostram rationem sed ad immensam dei rationem 
-              <lb ed="#SV"/>et iustitiam quae est Regula infallibilis, et ideo qualiter deus 
-              <lb ed="#SV"/>agat non debemus dicere quod sit contra rationem nec debemus 
-              <lb ed="#SV"/>arguere non apparet bonum quod iste patiatur igitur non debet pati, ita non 
-              <lb ed="#SV"/>apparet nobis iustum quod puer decedens sine baptismo dampnetur, 
-              <lb ed="#SV"/>ergo non debet dampnari. exemplum habemus de viliore servitore 
-              <lb ed="#SV"/>Regis si deberet Iudicare aliquid in consilio apparet sibi quod Rex male 
-              <lb ed="#SV"/>ageret in multis in quibus iustificatione iudicaret. et haec est quia 
-              <lb ed="#SV"/>causa talis Iudicii latet ipsum.</p> 
-            
-            <p xml:id="l96-sorcdm">secundo opposita Radix est mala, 
-              <lb ed="#SV"/>scilicet, Resolvere Rerum bonam dispositionem propter habitudinem quam 
-              <lb ed="#SV"/>habent inter se, et non ad divinam rationem et ordinationem 
-              <lb ed="#SV"/>unde debemus imaginari quod bonum est aliquid fieri, quia deus sic ordinat 
-              <lb ed="#SV"/>et causa est quia si ordo Rerum haberet rationem prioritatis respectu 
-              <lb ed="#SV"/>dei sequeretur quod deus necessitaretur sequi ordinem Rerum. patet quia ordo 
-              <lb ed="#SV"/>de se bonus est igitur deus non deberet aliter ordinare vel aliquid deor<lb ed="#SV"/>dinare, 
+              de effectibus positivis et non de privativis ut 
+              peccatum quia non fit per sapientiam creatoris nec 
+              <cb ed="#SV" n="315rb"/><!--SV315rb-->
+              aliquo modo a creatore.
+            </p>
+            <p xml:id="l96-sdiili">
+              Secundo dicit ista opinio quod quidquid fit 
+              melius fit quam si non fieret. 
+              Patet quia fit a summa sapientia, 
+              igitur optime fit. et ad illud reduceretur illud quod gentiles 
+              mirantur, scilicet, quod bonos mala <unclear>praemiunt[?]</unclear> praemia virtutum 
+              mali quae Rapiunt, unde diceretur quod eo ipso quod fit a summa 
+              sapientia optime et iuste fit nam isti dicunt quod si iustus 
+              laedatur et malus exaltetur quod melius fit quam si non fieret 
+              et totum Resolvitur ad divinam sapientiam omnia iuste et debite 
+              ordinantem, dicitur tamen quod Regula boni et iustitiae non debet 
+              Resolvi ad nostram rationem sed ad immensam dei rationem 
+              et iustitiam quae est Regula infallibilis, et ideo qualiter deus 
+              agat non debemus dicere quod sit contra rationem nec debemus 
+              arguere non apparet bonum quod iste patiatur igitur non debet pati, ita non 
+              apparet nobis iustum quod puer decedens sine baptismo dampnetur, 
+              ergo non debet dampnari. exemplum habemus de viliore servitore 
+              Regis si deberet Iudicare aliquid in consilio apparet sibi quod Rex male 
+              ageret in multis in quibus iustificatione iudicaret. et haec est quia 
+              causa talis Iudicii latet ipsum.
+            </p> 
+            <p xml:id="l96-sorcdm">
+              Secundo opposita radix est mala, 
+              scilicet, resolvere rerum bonam dispositionem propter habitudinem quam 
+              habent inter se, et non ad divinam rationem et ordinationem 
+              unde debemus imaginari quod bonum est aliquid fieri, quia deus sic ordinat 
+              et causa est quia si ordo Rerum haberet rationem prioritatis respectu 
+              dei sequeretur quod deus necessitaretur sequi ordinem Rerum. patet quia ordo 
+              de se bonus est igitur deus non deberet aliter ordinare vel aliquid deordinare, 
               nam hoc esset incidere in fatum, et quia non poneretur 
-              <lb ed="#SV"/>prioritas in sapientia divina oporteret concedere quod deus non posset or<lb ed="#SV"/>dinare 
+              prioritas in sapientia divina oporteret concedere quod deus non posset ordinare 
               aliter quam sit ordinatum, nunc autem dicunt alii quod 
-              <lb ed="#SV"/>deus ab aeterno ordinavit creaturas. alias insipienter egisset, et 
-              <lb ed="#SV"/>hoc opinantes audivi ore vino, sed haec non videtur verum quia 
-              <lb ed="#SV"/>bonitas Rerum sequitur divinam sapientiam et non econverso nam 
-              <lb ed="#SV"/>posset salvari quod innocens perpetuo <sic>ornaaretur</sic> nec haec esset 
-              <lb ed="#SV"/>contra divinam misericordiam.</p> 
-            
-            <p xml:id="l96-iqpsnp">Item quod parvuli nascantur in peccato originali 
-              <lb ed="#SV"/>et sine baptismo decedentes dampnantur, mirantur quia 
-              <lb ed="#SV"/>non videmus dispositionem esse bonam tanta bonitate quanta bona 
-              <lb ed="#SV"/>est, et in haec iustitia dei latet nos et ideo ista opinio quarta 
-              <lb ed="#SV"/>Realiter concordat cum vera theologia et fide catholica. unde dicunt 
-              <lb ed="#SV"/>isti quod melius est innocens pati quam si non pateretur.</p>
-            
-            <p xml:id="l96-tmefdp">tertio me<lb ed="#SV"/>lius 
-              est ei quia patitur ad maius praemium Recipiendum et sic sal<lb ed="#SV"/>vatur 
-              cum fide divina providentia.</p>
+              deus ab aeterno ordinavit creaturas. alias insipienter egisset, et 
+              hoc opinantes audivi ore vino, sed haec non videtur verum quia 
+              bonitas Rerum sequitur divinam sapientiam et non econverso nam 
+              posset salvari quod innocens perpetuo <sic>ornaaretur</sic> nec haec esset 
+              contra divinam misericordiam.
+            </p> 
+            <p xml:id="l96-iqpsnp">
+              Item, quod parvuli nascantur in peccato originali 
+              et sine baptismo decedentes dampnantur, mirantur quia 
+              non videmus dispositionem esse bonam tanta bonitate quanta bona 
+              est, et in haec iustitia dei latet nos et ideo ista opinio quarta 
+              Realiter concordat cum vera theologia et fide catholica. unde dicunt 
+              isti quod melius est innocens pati quam si non pateretur.
+            </p>
+            <p xml:id="l96-tmefdp">
+              Tertio, melius est ei 
+              quia patitur ad maius praemium recipiendum et sic salvatur 
+              cum fide divina providentia.
+            </p>
           </div>
           <div xml:id="l96-Dd1e944">
             <head xml:id="l96-Hqoiquoi">Quinta opinio Iudaeorum</head>
-            <p xml:id="l96-qoesqm">quinta opinio est <name ref="#Jews">iudaeorum</name> 
-              <lb ed="#SV"/>quae Resolvit se ad naturalia cuiuslibet speciei ita quod sicut homo exercet 
-              <lb ed="#SV"/>suas operationes ita aliae species alium. et videtur dicere ista opinio 
-              <lb ed="#SV"/>quod generaliter providentia omnium est in haec quod deus Reddet unicuique 
-              <lb ed="#SV"/>secundum quod meruerit. et allegatur in scriptura universe <unclear>viae[?]</unclear> 
-              <lb ed="#SV"/><unclear>deum[?]</unclear> iudicia, et ex hoc dicunt quod deus Reddet unicuique 
-              <lb ed="#SV"/>iuxta opera sua, et quando dicitur de innocentibus qui multa mala 
-              <lb ed="#SV"/>patiuntur ista opinio dicit quod deus numquam faceret innocentem 
-              <lb ed="#SV"/>pati nisi demeruisset, sed demerita latent nos de ma<lb ed="#SV"/>lis 
+            <p xml:id="l96-qoesqm">
+              Quinta opinio est <name ref="#Jews">Iudaeorum</name> 
+              quae resolvit se ad naturalia cuiuslibet speciei, 
+              ita quod sicut homo exercet 
+              suas operationes ita aliae species alium. et videtur dicere ista opinio 
+              quod generaliter providentia omnium est in haec quod deus reddet unicuique 
+              secundum quod meruerit. 
+              Et allegatur in scriptura universe <unclear>viae[?]</unclear> 
+              <unclear>deum[?]</unclear> iudicia, 
+              et ex hoc dicunt quod deus Reddet unicuique 
+              iuxta opera sua, et quando dicitur de innocentibus qui multa mala 
+              patiuntur ista opinio dicit quod deus numquam faceret innocentem 
+              pati nisi demeruisset, sed demerita latent nos de malis 
               qui exaltantur et habent multa bona, iterum dicit opinio quod 
-              <lb ed="#SV"/>non haberent aliquam prosperitatem nisi propter sua merita, sed 
-              <lb ed="#SV"/>illa latent nos. unde stat bene illos quos infames re<cb ed="#SV" n="315va"/><lb ed="#SV"/>putamus 
+              non haberent aliquam prosperitatem nisi propter sua merita, sed 
+              illa latent nos. unde stat bene illos quos infames re<cb ed="#SV" n="315va"/>putamus 
               per sua merita quae sunt nobis ignota exaltari, 
-              <lb ed="#SV"/>sed ista opinio non bene consonat experientiae ut de innocentibus 
-              <lb ed="#SV"/>quos fecit <name ref="#Herod">herodes</name> interfici.</p>
-          
-            <p xml:id="l96-sidfnm">Secundo immoralibus de summe virtuosis 
-              <lb ed="#SV"/>qui passi sunt poenas acerbissimas ut de <name ref="#Socrates">socrate</name> qui fuit 
-              <lb ed="#SV"/>interfectus et <name ref="#Plato">Plato</name> captus et <name ref="#Pompey">pompeius</name> qui pro iustitia 
-              <lb ed="#SV"/>certabat <unclear>morbus[?]</unclear> est. et ut <name ref="#Lactantius">latencius</name> ait <name ref="#JuliusCaesar">caesar</name> qui 
-              <lb ed="#SV"/>erat tyrannus regnavit a fuit exaltatus qui numquam 
-              <lb ed="#SV"/>bene fecerat nec meruerat.</p>
+              sed ista opinio non bene consonat experientiae ut de innocentibus 
+              quos fecit <name ref="#Herod">herodes</name> interfici.
+            </p>
+            <p xml:id="l96-sidfnm">
+              Secundo immoralibus de summe virtuosis 
+              qui passi sunt poenas acerbissimas ut de <name ref="#Socrates">socrate</name> qui fuit 
+              interfectus et <name ref="#Plato">Plato</name> captus et <name ref="#Pompey">pompeius</name> qui pro iustitia 
+              certabat <unclear>morbus[?]</unclear> est. et ut <name ref="#Lactantius">latencius</name> ait <name ref="#JuliusCaesar">caesar</name> qui 
+              erat tyrannus regnavit a fuit exaltatus qui numquam 
+              bene fecerat nec meruerat.
+            </p>
           </div>
           <div xml:id="l96-Dd1e1028">
             <head xml:id="l96-Hsororm">Sexta opinio Rabi Moyse</head>
-            <p xml:id="l96-soesda">sexta opinio est <name ref="Maimonides">Rabbi moyses</name> 
-              <lb ed="#SV"/>quae concordat cum <name ref="#Aristotle">aristotele</name> in hoc quod ait quod omnium quae fiunt in 
-              <lb ed="#SV"/>corporibus caelestibus sive sint species sive individua deus 
-              <lb ed="#SV"/>habet curam specialem individuorum existentium infra spheram 
-              <lb ed="#SV"/>activorum et passivorum, scilicet, tantum individuorum speciei huma<lb ed="#SV"/>nae 
+            <p xml:id="l96-soesda">
+              Sexta opinio est <name ref="Maimonides">Rabbi moyses</name> 
+              quae concordat cum <name ref="#Aristotle">aristotele</name> 
+              in hoc quod ait quod omnium quae fiunt in 
+              corporibus caelestibus sive sint species sive individua deus 
+              habet curam specialem individuorum existentium infra spheram 
+              activorum et passivorum, scilicet, tantum individuorum speciei humanae 
               et non aliorum, ita quod ipse dicit quod deus habet curam 
-              <lb ed="#SV"/>in particulari de hominibus et non de individuis aliarum specierum, 
-              <lb ed="#SV"/>et allegat scripturam, quis est homo quod memores eius. contra 
-              <lb ed="#SV"/>istam opinionem sunt multae auctoritates quibus probaretur 
-              <lb ed="#SV"/>evidenter quomodo deus habet curam de omnibus sive de hominibus 
-              <lb ed="#SV"/>sive de aliis.</p>
-        
-            <p xml:id="l96-ptfmip">positio tamen fidei diceret quod deus ex sua 
-              <lb ed="#SV"/>libertate Regit mundum ex qua nullam ponit necessitatem rebus. 
-              <lb ed="#SV"/>Sed ista materia declarabitur et videbitur quomodo salvaretur 
-              <lb ed="#SV"/>contingentia effectuum cum immutabilitate primae causae 
-              <lb ed="#SV"/>et istud dicetur magis in particulari.</p>
+              in particulari de hominibus et non de individuis aliarum specierum, 
+              et allegat scripturam, quis est homo quod memores eius. contra 
+              istam opinionem sunt multae auctoritates quibus probaretur 
+              evidenter quomodo deus habet curam de omnibus sive de hominibus 
+              sive de aliis.
+            </p>
+            <p xml:id="l96-ptfmip">
+              Positio tamen fidei diceret quod deus ex sua 
+              libertate Regit mundum ex qua nullam ponit necessitatem rebus. 
+              Sed ista materia declarabitur et videbitur quomodo salvaretur 
+              contingentia effectuum cum immutabilitate primae causae 
+              et istud dicetur magis in particulari.
+            </p>
           </div>
         </div>
       </div>
