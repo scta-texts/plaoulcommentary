@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2013.01-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 88, de Caritate</title>
           <date when="2013-01-16">January 16, 2013</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2013-01-16">January 16, 2013</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -32,269 +27,405 @@
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2013-01-16" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="307-r"/>
+        <cb ed="#SV" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio88">
-        <head xml:id="l88-Hldcldc" subtype="title">Lectio 88, de Caritate</head>
-        
-        <div>
+        <head xml:id="l88-Hldcldc">Lectio 88, de Caritate</head>
+        <div xml:id="l88-Dd1e109">
           <head xml:id="l88-Hpdhcam">Propositiones de habitudine Spiritus Sancti et caritatis ad mentem</head>
-          
-      <p xml:id="l88-avhpsp"><lb ed="#SV"/><hi rend="dropCapFourLines">A</hi>d videndum spiritus sancti et caritatis ad mentem 
-        <lb ed="#SV"/>ponendae sunt propositiones.</p>
-      
-      <div>
-        <head xml:id="l88-Hppqpssa">Prima propositio: quod per divinam acceptationem creatura est magis intrinsece digna quam per Spiritus Sancti assistentiam</head>
-        
-      <p xml:id="l88-ppecqa">Prima propositio est 
-        <lb ed="#SV"/>Ista: licet de communi lege simul concurrant assistentia 
-        <lb ed="#SV"/>spiritus sancti et assistentia caritatis et divina 
-        <lb ed="#SV"/>acceptatio, nihilominus per divinam acceptationem creatura 
-        <lb ed="#SV"/>est magis intrinsece digna quam per spiritus sancti assistentiam, 
-        <lb ed="#SV"/>ut Realiter tenet assistentiam specialem et ut re<lb ed="#SV"/>peritur 
-        concurrens assistendo. et etiam per acceptationem creatura 
-        <lb ed="#SV"/>est magis digna quam per caritatis quamcumque assistentiam.</p> 
-      
-        <p xml:id="l88-ppepva">prima pars est nota, quia doctores dicunt quod ad grati<lb ed="#SV"/>ficationem 
-          creaturae concurrunt spiritus sanctus assistens animae et 
-          <lb ed="#SV"/>caritas mentem elevans ad actus meritorios et 
-          <lb ed="#SV"/>acceptatio dignificans et acceptans creaturam ad 
-          <lb ed="#SV"/>praemium vitae aeternae.</p>
-      
-      <p xml:id="l88-spcdva">Secunda pars, scilicet, quod per divinam acceptationem 
-        <lb ed="#SV"/>creatura est magis grata quam per assistentiam spiritus vel 
-        <lb ed="#SV"/>caritatis et est magis digna essentialiter et intrinsece. 
-        <lb ed="#SV"/>patet nam sola acceptatio est causa sufficiens ad gratificandum 
-        <lb ed="#SV"/>creaturam. et illa posita creatura est cara, et illa 
-        <lb ed="#SV"/>Remota creatura non est digna vita aeterna.</p> 
-      
-      <p xml:id="l88-ubsdae">unde bene 
-        <lb ed="#SV"/>sequitur, deus acceptat creaturam, ergo ipsa est grata et 
-        <lb ed="#SV"/>digna et econverso sequitur creatura est digna vita 
-        <lb ed="#SV"/>aeterna, igitur deus acceptat eam.</p> 
-        
-        <p xml:id="l88-saicae">Sed absolute ista 
-          <lb ed="#SV"/>consequentia non valet: spiritus sanctus specialiter assistit creaturae, 
-          <lb ed="#SV"/>igitur creatura est grata. Et conformiter de caritate 
-          <lb ed="#SV"/>non sequitur caritas animam informat et ei assi<lb ed="#SV"/>stit 
-          specialiter, igitur creatura est deo grata. et causa est, quia 
-          <lb ed="#SV"/>influxus spiritus sancti Reducitur ad causalitatem effectiva. nam 
-          <lb ed="#SV"/>ista est causalitas distincta ab acceptatione et est causa<lb ed="#SV"/>litas 
-          ad extra.</p> 
-        
-        <p xml:id="l88-eidceo">et ita de caritate creata dicitur quod eius 
-          <lb ed="#SV"/>influxus est quaedam causalitas ad extra distincta a divina acce<lb ed="#SV"/>ptatione, 
-          igitur nulla est Repugnantia quin illa caritas infor<lb ed="#SV"/>met 
-          animam et quod spiritus sanctus Reperiatur concurrens respectu 
-          <lb ed="#SV"/>animae secundum modum concursus qui requiritur ad specialiter assistendum 
-          <lb ed="#SV"/>ipsi animae, et quod deus eam animam vel creatura nullo modo 
-          <lb ed="#SV"/>acceptet. patet quia divina acceptatio non includit 
-          <lb ed="#SV"/>assistentiam  spiritus 
-          <lb ed="#SV"/>sancti, nec eius influxum et nec etiam Requirit seu 
-          <lb ed="#SV"/>non includit assistentiam vel influxum, igitur caritatis 
-          <lb ed="#SV"/>creatae, quia nec caritas nec assistentia spiritus sancti 
-          <lb ed="#SV"/>inferunt intrinsece et essentialiter divinam acceptationem, et 
-          <lb ed="#SV"/>hoc intelligitur de lege absoluta licet oppositum bene sit verum de le<lb ed="#SV"/>ge 
-          communi et ordinata.</p>
-      
-      <p xml:id="l88-cqdncc">Confirmatur, quia dignitas quam 
-        <lb ed="#SV"/>dat spiritus sanctus vel caritas non est nisi instrumentalis 
-        <lb ed="#SV"/>ad divinam acceptationem. et per consequens divina acceptatio 
-        <lb ed="#SV"/>est principalis et essentialior respectu dignitatis, quae Requiritur ad 
-        <lb ed="#SV"/>creaturam esse dignam, et igitur ad hoc quod creatura sit 
-        <lb ed="#SV"/>digna Requiritur illa liberalitas immensa qua deus 
-        <lb ed="#SV"/>propter suam bonitatem gratuite vult dare creaturae 
-        <lb ed="#SV"/>vitam aeternam, igitur in gratificatione deus dat aliquid immense. 
-        et illud non est caritas nec spiritus sanctus, quia licet 
-        <lb ed="#SV"/>spiritus sanctus sit infinitus, finite tamen movet creaturam 
-        <cb ed="#SV" n="307rb"/><lb ed="#SV"/>et caritatem. et per consequens spiritus sanctus et caritas non 
-        <lb ed="#SV"/>attingunt ad plenariam gratificationem creaturae, et 
-        <lb ed="#SV"/>haec contradictio dicitur esse liberalitatis immensae non communicabilis creaturae.</p>
-      
-      </div>
-          <div>
-            <head xml:id="l88-Hspospo">Secunda propositio: </head>
-            
-            <p xml:id="l88-eqsrig"><lb ed="#SV"/>Ex quo sequitur istam consequentiam non valere tota perfectio 
-              <lb ed="#SV"/>caritatis creatae et essentia creaturae rationalis concurrunt 
-              <lb ed="#SV"/>unitive et identice et essentialiter, igitur creatura est 
-              <lb ed="#SV"/>intrinsece iusta et grata, vel resultans ex creatura 
-              <lb ed="#SV"/>rationali et caritate est gratum et simpliciter iustum. patet 
-              <lb ed="#SV"/>quia tota perfectio caritatis est citra gradum liberalitatis 
-              <lb ed="#SV"/>divinae eo quod procedit a natura immensa. etiam dato quod creatura 
-              <lb ed="#SV"/>esset intrinsece caritas, nihilominus ipsa non esset essentialiter 
-              <lb ed="#SV"/>digna, quia tota bonitas caritatis non sufficeret ad 
-              <lb ed="#SV"/>creaturae gratificationem et acceptationem. et ultra dicitur 
-              <lb ed="#SV"/>quod creatura vel natura non haberet rationem intrinsece grati<lb ed="#SV"/>ficationis.</p>
-      
-            <p xml:id="l88-eeiqei">Et ex isto sequitur falsitas aliquorum di<lb ed="#SV"/>centium 
+          <p xml:id="l88-avhpsp">
+            Ad videndum spiritus sancti et caritatis ad mentem 
+            ponendae sunt propositiones.
+          </p>
+          <div xml:id="l88-Dd1e117">
+            <head xml:id="l88-Hppqpssa">Prima propositio: quod per divinam acceptationem creatura est magis intrinsece digna quam per Spiritus Sancti assistentiam</head>
+            <p xml:id="l88-ppecqa">
+              Prima propositio est ista, 
+              licet de communi lege simul concurrant assistentia 
+              spiritus sancti et assistentia caritatis et divina acceptatio, 
+              nihilominus per divinam acceptationem creatura 
+              est magis intrinsece digna quam per spiritus sancti assistentiam, 
+              ut realiter tenet assistentiam specialem 
+              et ut reperitur concurrens assistendo, 
+              et etiam per acceptationem creatura 
+              est magis digna quam 
+              per caritatis quamcumque assistentiam.
+            </p>
+            <p xml:id="l88-ppepva">
+              Prima pars est nota 
+              quia doctores dicunt quod ad gratificationem 
+              creaturae concurrunt spiritus sanctus assistens animae et 
+              caritas mentem elevans ad actus meritorios et 
+              acceptatio dignificans et acceptans creaturam ad 
+              praemium vitae aeternae.
+            </p>
+            <p xml:id="l88-spcdva">
+              Secunda pars, 
+              scilicet quod per divinam acceptationem 
+              creatura est magis grata quam per assistentiam spiritus vel 
+              caritatis et est magis digna essentialiter et intrinsece. 
+              Patet nam sola acceptatio est causa sufficiens 
+              ad gratificandum creaturam. 
+              Et illa posita creatura est cara, et illa 
+              remota creatura non est digna vita aeterna.
+            </p>
+            <p xml:id="l88-ubsdae">
+              Unde bene sequitur, 
+              deus acceptat creaturam, 
+              ergo ipsa est grata et digna, 
+              et econverso sequitur creatura est digna vita aeterna, 
+              igitur deus acceptat eam.
+            </p>
+            <p xml:id="l88-saicae">
+              Sed absolute ista consequentia non valet: 
+              spiritus sanctus specialiter assistit creaturae, 
+              igitur creatura est grata. 
+              Et conformiter de caritate 
+              non sequitur caritas animam 
+              informat et ei assistit specialiter, 
+              igitur creatura est deo grata, 
+              et causa est 
+              quia influxus spiritus sancti reducitur ad causalitatem effectiva, 
+              nam ista est causalitas distincta 
+              ab acceptatione et est causalitas ad extra.
+            </p>
+            <p xml:id="l88-eidceo">
+              Et ita de caritate creata dicitur quod eius 
+              influxus est quaedam causalitas 
+              ad extra distincta a divina acceptatione, 
+              igitur nulla est repugnantia quin illa caritas informet 
+              animam et quod spiritus sanctus reperiatur concurrens respectu 
+              animae secundum modum concursus 
+              qui requiritur ad specialiter assistendum 
+              ipsi animae, 
+              et quod deus eam animam vel creatura nullo modo acceptet. 
+              Patet 
+              quia divina acceptatio non includit 
+              assistentiam spiritus sancti, 
+              nec eius influxum 
+              et nec etiam requirit seu 
+              non includit assistentiam vel influxum, 
+              igitur caritatis 
+              creatae, quia nec caritas nec assistentia spiritus sancti 
+              inferunt intrinsece et essentialiter divinam acceptationem, 
+              et hoc intelligitur de lege absoluta, 
+              licet oppositum bene sit verum de lege 
+              communi et ordinata.
+            </p>
+            <p xml:id="l88-cqdncc">
+              Confirmatur, 
+              quia dignitas quam 
+              dat spiritus sanctus vel caritas non est nisi instrumentalis 
+              ad divinam acceptationem. 
+              Et per consequens divina acceptatio 
+              est principalis et essentialior respectu dignitatis, 
+              quae requiritur ad 
+              creaturam esse dignam, 
+              et igitur ad hoc quod creatura sit 
+              digna requiritur illa liberalitas immensa qua deus 
+              propter suam bonitatem gratuite vult dare creaturae vitam aeternam, 
+              igitur in gratificatione deus dat aliquid immense. 
+              et illud non est caritas nec spiritus sanctus 
+              quia, 
+              licet spiritus sanctus sit infinitus, 
+              finite tamen movet creaturam 
+              <cb ed="#SV" n="b"/><!--SV307rb-->
+              et caritatem. 
+              Et per consequens spiritus sanctus et caritas non 
+              attingunt ad plenariam gratificationem creaturae, et 
+              haec contradictio dicitur esse liberalitatis immensae non communicabilis creaturae.
+            </p>
+          </div>
+          <div xml:id="l88-Dd1e148">
+            <head xml:id="l88-Hspospo">Secunda propositio</head>
+            <p xml:id="l88-eqsrig">
+              Ex quo sequitur istam consequentiam non valere tota perfectio 
+              caritatis creatae et essentia creaturae rationalis concurrunt 
+              unitive et identice et essentialiter, 
+              igitur creatura est 
+              intrinsece iusta et grata, 
+              vel resultans ex creatura 
+              rationali et caritate est gratum et simpliciter iustum. 
+              Patet 
+              quia tota perfectio caritatis est citra gradum liberalitatis 
+              divinae eo quod procedit a natura immensa, 
+              etiam dato quod creatura 
+              esset intrinsece caritas, 
+              nihilominus ipsa non esset essentialiter 
+              digna, quia tota bonitas caritatis non sufficeret ad 
+              creaturae gratificationem et acceptationem, 
+              et ultra dicitur quod creatura vel natura 
+              non haberet rationem intrinsece gratificationis.
+            </p>
+            <p xml:id="l88-eeiqei">
+              Et ex isto sequitur falsitas aliquorum dicentium 
               aliquam creaturam posse esse per naturam impeccabilem 
-              <lb ed="#SV"/>non quod caritas ponatur identice concurrere cum creatura. 
-              <lb ed="#SV"/><lb ed="#SV"/>Tamen isti imaginantur quod esse caritatis est denominatio 
-              <lb ed="#SV"/>perfectionis simpliciter et esse naturam intelligibilem est 
-              <lb ed="#SV"/>denominatio perfectionis simpliciter. et quaelibet istarum de<lb ed="#SV"/>nominationum 
-              est ad extra communicabilis. et una non Repugnat 
-              <lb ed="#SV"/>alteri, igitur istae denominationes possunt eidem communicari. et 
-              <lb ed="#SV"/>per consequens possibile est aliquam Rem esse cui communicabuntur 
-              <lb ed="#SV"/>istae denominationes quae erit impeccabilis.</p>
-      
-      <p xml:id="l88-scdntt">Sed contra data 
-        <lb ed="#SV"/>imaginatione nihilominus creatura non esset essentialiter deo 
-        <lb ed="#SV"/>grata, quia posset damnari vel ex alio quia sibi appli<lb ed="#SV"/>caretur, 
-        sed solum concluditur per illam imaginationem quod talis 
-        <lb ed="#SV"/>creatura est apta nata esse iusta et potest particulariter 
-        <lb ed="#SV"/>iustificari non tamen totaliter.</p>
-      </div>
-          <div>
+              non quod caritas ponatur identice concurrere cum creatura, 
+              tamen isti imaginantur quod esse caritatis est denominatio 
+              perfectionis simpliciter et esse naturam intelligibilem est 
+              denominatio perfectionis simpliciter, 
+              et quaelibet istarum denominationum 
+              est ad extra communicabilis, 
+              et una non repugnat alteri, 
+              igitur istae denominationes possunt eidem communicari, 
+              et per consequens possibile est aliquam rem esse cui communicabuntur 
+              istae denominationes quae erit impeccabilis.
+            </p>
+            <p xml:id="l88-scdntt">
+              Sed contra data 
+              imaginatione nihilominus creatura 
+              non esset essentialiter deo grata 
+              quia posset damnari vel ex alio 
+              quia sibi applicaretur, 
+              sed solum concluditur per illam imaginationem quod talis 
+              creatura est apta nata esse iusta 
+              et potest particulariter 
+              iustificari non tamen totaliter.
+            </p>
+          </div>
+          <div xml:id="l88-Dd1e163">
             <head xml:id="l88-Htpscei">Tertia propositio: si habitudo dignitatis <unclear>passivae[?]</unclear> et acceptati posset intrinsece communicari creaturae, tunc talis creatura esset impeccabilis</head>
-            
-            <p xml:id="l88-tmscrc">tertio modo sequitur quod si habi<lb ed="#SV"/>tudo 
-              dignitatis <unclear>passivae[?]</unclear> et acceptati posset intrinsece 
-              <lb ed="#SV"/>convenire creaturae, tunc talis creatura esset impeccabilis. 
-              <lb ed="#SV"/>apparet quia ipsa haberet intrinsece. unde ipsa esset digna 
-              <lb ed="#SV"/>nam ipsa acceptatio passiva est medium sufficiens et 
-              <lb ed="#SV"/>necessariam ad concludendum creaturam esse dignam, igitur si 
-              <lb ed="#SV"/>ista duo identice competerent creaturae talis esset 
-              <lb ed="#SV"/>digna vita aeterna, nec deus posset facere eam 
-              <lb ed="#SV"/>non dignam. Sed si quaeratur utrum huiusmodi acce<lb ed="#SV"/>ptatio 
-              passiva sit communicabilis, dicitur quod non quia ipsa 
-              <lb ed="#SV"/>dependet immediate a liberalitate divina et a libero 
-              <lb ed="#SV"/>dei actu, vel dependet extrinsece a divino actu 
-              <lb ed="#SV"/>contingenti respectu creaturae.</p>
+            <p xml:id="l88-tmscrc">
+              Tertio modo, 
+              sequitur quod si habitudo 
+              dignitatis <unclear>passivae</unclear> 
+              et acceptati posset intrinsece 
+              convenire creaturae, 
+              tunc talis creatura esset impeccabilis. 
+              apparet quia ipsa haberet intrinsece. 
+              Unde ipsa esset digna 
+              nam ipsa acceptatio passiva est medium sufficiens et 
+              necessariam ad concludendum creaturam esse dignam, 
+              igitur si ista duo identice competerent creaturae 
+              talis esset digna vita aeterna, 
+              nec deus posset facere eam 
+              non dignam. 
+              Sed si quaeratur utrum huiusmodi acceptatio 
+              passiva sit communicabilis, 
+              dicitur quod non quia ipsa dependet immediate 
+              a liberalitate divina et a libero dei actu, 
+              vel dependet extrinsece a divino actu 
+              contingenti respectu creaturae.
+            </p>
           </div>
-          <div>
+          <div xml:id="l88-Dd1e179">
             <head xml:id="l88-Hqpqemc">Quarta Propositio: quod in divinam bonitatem reducitur tota radix bonitatis et meritorum creatura.</head>
-            
-      <p xml:id="l88-qsqnam">Quarto sequitur quod in divinam 
-        <lb ed="#SV"/>bonitatem Reducitur tota radix bonitatis et meri<lb ed="#SV"/>torum 
-        creaturae. Nam nec ex libero arbitro sufficit 
-        <lb ed="#SV"/>quis habere dignitatem vitae aeternae, nec ex caritate 
-        <lb ed="#SV"/>creata nec ex motione spiritus sancti, igitur bonitas 
-        <lb ed="#SV"/>creaturae et tota eius gratificatio reducibilis est 
-        <lb ed="#SV"/>in divinam clementiam et bonitatem qua divina natura 
-        <lb ed="#SV"/>vult sic nobiscum agere misericorditer.</p> 
-            
-        <p xml:id="l88-eiveap">Et illud 
-          <lb ed="#SV"/>videtur se conformare ad scripturam dicentem quod non 
-          <lb ed="#SV"/>ex operibus iustitiae, quae fecimus nos, id est, non ex operibus 
-          <lb ed="#SV"/>caritatis, sed propter suam misericordiam salvos nos fecit. 
-          <lb ed="#SV"/>Et <title ref="#rom">Ad Romanos</title> <num>IX</num><note type="editorNote" subtype="citation" corresp="#l88-Qnevsdm"><title>Ad Romanos</title> 9:16</note> ait <name ref="#Paul">Apostolus</name> <quote xml:id="l88-Qnevsdm" type="rom9:16">non est volentis 
-          <lb ed="#SV"/>nec currentis, sed Dei miserentis</quote> mereri vitam aeternam. 
-          <cb ed="#SV" n="307va"/><lb ed="#SV"/>Nam dignitas operationum creaturae non reducitur in potestate 
-          <lb ed="#SV"/>eius, sed reducitur in divinam bonitatem et clementiam 
-          <lb ed="#SV"/>generaliter, qua deus vult nobis misereri quia apud 
-          <lb ed="#SV"/>ipsum non est acceptatio personarum.</p>
-        
+            <p xml:id="l88-qsqnam">
+              Quarto, 
+              sequitur quod in divinam 
+              bonitatem reducitur tota radix bonitatis et meritorum 
+              creaturae. Nam nec ex libero arbitro sufficit 
+              quis habere dignitatem vitae aeternae, 
+              nec ex caritate 
+              creata nec ex motione spiritus sancti, 
+              igitur bonitas 
+              creaturae et tota eius gratificatio reducibilis est 
+              in divinam clementiam et bonitatem qua divina natura 
+              vult sic nobiscum agere misericorditer.
+            </p>
+            <p xml:id="l88-eiveap">
+              Et illud 
+              videtur se conformare ad scripturam 
+              dicentem quod non 
+              ex operibus iustitiae, 
+              quae fecimus nos, 
+              id est, 
+              non ex operibus caritatis, 
+              sed propter suam misericordiam salvos nos fecit. 
+              Et 
+              <ref xml:id="l88-Rd1e189">
+                <title ref="#rom">Ad Romanos</title> 
+                <num>IX</num>
+              </ref>
+              ait 
+              <name ref="#Paul">Apostolus</name> 
+              <cit>
+                <quote xml:id="l88-Qnevsdm" source="http://scta.info/resource/rom9_16">
+                  non est volentis 
+                  nec currentis, 
+                  sed Dei miserentis
+                </quote>
+              </cit> 
+              mereri vitam aeternam. 
+              <pb ed="#SV" n="307-v"/>
+              <cb ed="#SV" n="a"/>
+              Nam dignitas operationum creaturae non reducitur in potestate eius, 
+              sed reducitur in divinam bonitatem et clementiam generaliter, 
+              qua deus vult nobis misereri quia apud 
+              ipsum non est acceptatio personarum.
+            </p>
           </div>
-          <div>
+          <div xml:id="l88-Dd1e213">
             <head xml:id="l88-Hqpqdsc">Quinta Propositio: quod nec concursus activus increatae caritatis nec creatae dignificat sufficienter creaturam</head>
-            
-      <p xml:id="l88-qsqbac">quinto sequitur quod nec 
-        <lb ed="#SV"/>concursus activus increatae caritatis nec creatae di<lb ed="#SV"/>gnificat 
-        sufficienter creaturam. patet quia non sunt con<lb ed="#SV"/>dignae 
-        passiones huius temporis ad futuram gloriam, quae 
-        <lb ed="#SV"/>Revelabitur involes, quod est contra <name ref="#Ripa">Iohannem de Rippa</name> qui 
-        <lb ed="#SV"/>ponit quod ex concursu caritatis et spiritus sancti assi<lb ed="#SV"/>stentia 
-        ad creaturam ipsa producit actus meritorios 
-        <lb ed="#SV"/>propter quos datur creaturae vita aeterna. et ex con<lb ed="#SV"/>cursu 
-        caritatis et spiritus sancti actus dicitur dignus 
-        <lb ed="#SV"/>vita aeterna secundum meritum iustitiae. patet quia ut dictum 
-        <lb ed="#SV"/>est secundum concursum caritatis et assistentiam spiritus sancti 
-        <lb ed="#SV"/>non est adaequata bonitas in creatura nec sunt eius 
-        <lb ed="#SV"/>actus meritorii, sed hoc totum Reducitur in divinam bonitatem 
-        <lb ed="#SV"/>atque clementiam.</p>
-      
+            <p xml:id="l88-qsqbac">
+              Quinto, 
+              sequitur quod nec 
+              concursus activus increatae caritatis 
+              nec creatae dignificat 
+              sufficienter creaturam. 
+              Patet quia non sunt condignae 
+              passiones huius temporis ad futuram gloriam, 
+              quae revelabitur involes, 
+              quod est contra <name ref="#Ripa">Iohannem de Rippa</name> 
+              qui ponit quod ex concursu caritatis et spiritus sancti assistentia 
+              ad creaturam ipsa producit actus meritorios 
+              propter quos datur creaturae vita aeterna. 
+              Et ex concursu 
+              caritatis et spiritus sancti actus dicitur dignus 
+              vita aeterna secundum meritum iustitiae. 
+              Patet quia ut dictum 
+              est secundum concursum caritatis et assistentiam spiritus sancti 
+              non est adaequata bonitas in creatura nec sunt eius 
+              actus meritorii, 
+              sed hoc totum reducitur 
+              in divinam bonitatem atque clementiam.
+            </p>
           </div>
-          
-          <div>
+          <div xml:id="l88-Dd1e225">
             <head xml:id="l88-Hspqdae">Sexta Propositio: quod actus productus a caritate cum Spiritu Sancto specialiter assistente circumscripta divina acceptatione esse</head>
-            
-      <p xml:id="l88-ssqvec">sexto sequitur quod actus productus 
-        <lb ed="#SV"/>a caritate cum spiritu sancto specialiter assistente circumscripta 
-        <lb ed="#SV"/>divina acceptatione esset nihilominus <unclear>virtuosissimus[?]</unclear> quantum 
-        <lb ed="#SV"/>ad genus, licet ille non esset meritorius, sed esset <unclear>di<lb ed="#SV"/>gnissimus[?]</unclear> 
-        citra dignitatem gratuitam. patet quia inter omnes 
-        <lb ed="#SV"/>alias virtutes caritas est nobilissima virtus, quia per 
-        <lb ed="#SV"/>ipsam quod  ex parte est. et alibi dicitur maior 
-        <lb ed="#SV"/>autem horum est caritas. tertio apparet quod secundum <ref corresp="#l88-Qveqebr"><name ref="#Aristotle">philosophum</name> IIo 
-        <lb ed="#SV"/><title ref="#Ethics">ethicorum</title></ref> <quote xml:id="l88-Qveqebr" source="http://scta.info/resource/aa-ethica-37">"virtus est quae habentem perficit et opus eius 
-        <lb ed="#SV"/>bonum reddit,"</quote> igitur proportionaliter quanto virtus est perfectior 
-        <lb ed="#SV"/>et nobilior tanto generat actum perfectiorem et 
-        <lb ed="#SV"/>nobiliorem etiam assistit ibi spiritus sanctus, qui habet 
-        <lb ed="#SV"/>motivitatem proportionalem respectu voluntatis et caritatis.</p>
-    
+            <p xml:id="l88-ssqvec">
+              Sexto, 
+              sequitur quod actus productus 
+              a caritate cum spiritu sancto specialiter assistente circumscripta 
+              divina acceptatione esset nihilominus <unclear>virtuosissimus[?]</unclear> 
+              quantum ad genus, 
+              licet ille non esset meritorius, 
+              sed esset <unclear>dignissimus[?]</unclear> 
+              citra dignitatem gratuitam. 
+              Patet quia inter omnes 
+              alias virtutes caritas est nobilissima virtus, quia per 
+              ipsam quod  ex parte est. 
+              Et alibi dicitur maior 
+              autem horum est caritas. 
+              Tertio apparet quod secundum 
+              <ref xml:id="l88-Rd1e238" corresp="#l88-Qveqebr">
+                <name ref="#Aristotle">philosophum</name> 
+                II 
+                <title ref="#Ethics">Ethicorum</title>
+              </ref> 
+              <cit>
+                <quote xml:id="l88-Qveqebr" source="http://scta.info/resource/aristneth-l2">
+                  virtus est quae habentem perficit et opus eius bonum reddit
+                </quote>
+                <bibl>XXX <!--auctoritates: aa-ethica-37--></bibl>
+              </cit>,
+              igitur proportionaliter quanto virtus est perfectior 
+              et nobilior tanto generat actum perfectiorem et 
+              nobiliorem etiam assistit ibi spiritus sanctus, qui habet 
+              motivitatem proportionalem respectu voluntatis et caritatis.
+            </p>
           </div>
-          <div>
+          <div xml:id="l88-Dd1e259">
             <head xml:id="l88-Hspqcca">Septima Propositio: quod Spiritus Sanctus caritas possunt stare cum culpabili actu</head>
-            
-            <p xml:id="l88-ssqcca"><lb ed="#SV"/>Septimo sequitur quod, licet caritas secundum modum communem 
-              <lb ed="#SV"/>concurrendi non possit ad culpam concurrere, etiam de 
-              <lb ed="#SV"/>potentia dei absoluta spiritus sanctus non possit concurrere 
-              <lb ed="#SV"/>specialiter ad culpam, ipse tamen et caritas possunt sta<lb ed="#SV"/>re 
-              cum culpabili actu.</p>
-      
-      <p xml:id="l88-ppaaiv">Prima pars apparet, quia spiritus 
-        <lb ed="#SV"/>sanctus concurrit cum caritate speciali modo concurrendi, 
-        <lb ed="#SV"/>sed impossibile est quod deus specialiter moveat creaturam 
-        <lb ed="#SV"/>ad actum culpabilem. patet quia non potest concurrere ad 
-        <lb ed="#SV"/>errorem specialiter ad quem maxime videretur concurrere, 
-        <lb ed="#SV"/>si concurreret ad talem actum, igitur a foritior non potest 
-        <lb ed="#SV"/>deus concurrere ad actum malum voluntatis, quae est 
-        <lb ed="#SV"/>peior, igitur si Repugnet deo concurrere specialiter ad 
-        <lb ed="#SV"/>errorem, ita ei Repugnat concurrere specialiter ad 
-        <lb ed="#SV"/>malum actum ipsius voluntatis.</p>
-      
-      <p xml:id="l88-spppac">secunda pars probatur 
-        <lb ed="#SV"/>quia divina acceptatio est separabilis ab huiusmodi 
-        <lb ed="#SV"/>assistentia spiritus sancti et caritatis, igitur stat creaturam 
-        <lb ed="#SV"/>inclinatam per caritatem et spiritum sanctum elicere contra 
-        <lb ed="#SV"/>inclinationem caritatis spiritu sancto remanente in ea caritate 
-        <cb ed="#SV" n="307vb"/><lb ed="#SV"/>et eidem spiritu sancto specialiter assistente. nam non est formalis 
-        <lb ed="#SV"/>Repugnantia ea Remanente et spiritu sancto specialiter 
-        <lb ed="#SV"/>assistente et movente creaturam inclinari ad actum 
-        <lb ed="#SV"/>malum et per consequens staret spiritum sanctum movere crea<lb ed="#SV"/>turam, 
-        et tamen ipsa non sequeretur impulsum spiritus sancti. 
-        <lb ed="#SV"/>Et tunc staret absolute habitudo spiritus sancti et cari<lb ed="#SV"/>tatis 
-        ad mentem simul, quae est in creatura in gratuite, 
-        <lb ed="#SV"/>et tamen illam omittere moraliter. et illud non intelligitur 
-        <lb ed="#SV"/>secundum legem statutam, quia esset in peccato mortali vel 
-        <lb ed="#SV"/>omitteret moraliter privaretur a caritate.</p>
-      
-      <p xml:id="l88-spsnmc">secundo patet secunda 
-        <lb ed="#SV"/>pars conclusionis, quia ita de peccato veniali est quod stat 
-        <lb ed="#SV"/>cum caritate in anima, igitur non Repugnat formaliter 
-        <lb ed="#SV"/>quin peccatum mortale sit per dei potentiam cum cari<lb ed="#SV"/>tate 
-        et assistentia spiritus sancti. antecedens apparet, quia stat quod 
-        <lb ed="#SV"/>veniale sit in anima, et tamen ipsa sit deo grata 
-        <lb ed="#SV"/>ut nomen est, quia <unclear>uni?cum[?]</unclear> veniale non minuit 
-        <lb ed="#SV"/>caritatem.</p>
-      
-            <p xml:id="l88-tsqeer">tertio stat quod caritas inclinet ad pro<lb ed="#SV"/>ducendum 
-              <c>a</c> actum cuius omissio esset peccatum ve<lb ed="#SV"/>niale 
-              tantum, igitur posset esse parva voluntas cum ca<lb ed="#SV"/>ritate, 
+            <p xml:id="l88-ssqcca">
+              Septimo, 
+              sequitur quod, 
+              licet caritas secundum modum communem 
+              concurrendi non possit ad culpam concurrere, 
+              etiam de potentia dei absoluta 
+              spiritus sanctus non possit concurrere specialiter ad culpam, 
+              ipse tamen et caritas possunt stare 
+              cum culpabili actu.
+            </p>
+            <p xml:id="l88-ppaaiv">
+              Prima pars apparet, 
+              quia spiritus 
+              sanctus concurrit 
+              cum caritate speciali modo concurrendi, 
+              sed impossibile est 
+              quod deus specialiter moveat creaturam 
+              ad actum culpabilem. 
+              Patet quia non potest concurrere ad 
+              errorem specialiter ad quem maxime videretur concurrere, 
+              si concurreret ad talem actum, 
+              igitur a foritior non potest 
+              deus concurrere ad actum malum voluntatis, 
+              quae est peior, 
+              igitur, 
+              si repugnet deo concurrere specialiter ad errorem, 
+              ita ei repugnat concurrere specialiter ad 
+              malum actum ipsius voluntatis.
+            </p>
+            <p xml:id="l88-spppac">
+              Secunda pars probatur 
+              quia divina acceptatio est separabilis ab huiusmodi 
+              assistentia spiritus sancti et caritatis, 
+              igitur stat creaturam 
+              inclinatam per caritatem et spiritum sanctum elicere contra 
+              inclinationem caritatis spiritu sancto remanente in ea caritate 
+              <pb ed="#SV" n="307-v"/>
+              <cb ed="#SV" n="b"/>
+              et eidem spiritu sancto specialiter assistente, 
+              nam non est formalis 
+              repugnantia ea remanente et spiritu sancto specialiter 
+              assistente et movente creaturam inclinari ad actum 
+              malum et per consequens staret spiritum sanctum movere creaturam, 
+              et tamen ipsa non sequeretur impulsum spiritus sancti. 
+              Et tunc staret absolute habitudo spiritus sancti et caritatis 
+              ad mentem simul, 
+              quae est in creatura in gratuite, 
+              et tamen illam omittere moraliter. et illud non intelligitur 
+              secundum legem statutam, quia esset in peccato mortali vel 
+              omitteret moraliter privaretur a caritate.
+            </p>
+            <p xml:id="l88-spsnmc">
+              Secundo patet secunda pars conclusionis 
+              quia ita de peccato veniali est quod stat 
+              cum caritate in anima, 
+              igitur non repugnat formaliter 
+              quin peccatum mortale sit per dei potentiam cum caritate 
+              et assistentia spiritus sancti. 
+              Antecedens apparet 
+              quia stat quod veniale sit in anima, 
+              et tamen ipsa sit deo grata ut nomen est, 
+              quia <unclear>uni?cum[?]</unclear> veniale non minuit caritatem.
+            </p>
+            <p xml:id="l88-tsqeer">
+              Tertio stat quod caritas inclinet ad producendum 
+              <c>a</c> actum cuius omissio esset peccatum veniale 
+              tantum, igitur posset esse parva voluntas cum caritate, 
               licet tamen hoc Repugnet lege stante, quia 
-              <lb ed="#SV"/>quicumque omittit <unclear>moraliter[?]</unclear>, si habeat caritatem 
-              <lb ed="#SV"/>privatur ab ea. staret tamen absolute habitualem 
-              <lb ed="#SV"/>vim appetitivam esset Rectam, et tamen vis actualis 
-              <lb ed="#SV"/>appetitiva esset deturpata vel in culpa revoluta. 
-              <lb ed="#SV"/>patet, quia habitualis bona dispositio est compossibilis male 
-              <lb ed="#SV"/><unclear>actuationi[?]</unclear>, et etiam forte stat aliquem esse ma<lb ed="#SV"/>le 
-              <unclear>habituatum[?]</unclear>, et tamen realiter esse in statu salutis 
-              <lb ed="#SV"/>et eligere Recte.</p>
-      
-      <p xml:id="l88-aeiils">Alia est imaginatio in hac 
-        <lb ed="#SV"/>materia, quae dicetur in lectione sequenti, etc.</p>
+              quicumque omittit <unclear>moraliter[?]</unclear>, 
+              si habeat caritatem privatur ab ea, 
+              staret tamen absolute habitualem 
+              vim appetitivam esset rectam, 
+              et tamen vis actualis 
+              appetitiva esset deturpata vel in culpa revoluta. 
+              Patet 
+              quia habitualis bona dispositio est compossibilis male 
+              <unclear>actuationi[?]</unclear>, 
+              et etiam forte stat aliquem esse male 
+              <unclear>habituatum[?]</unclear>, 
+              et tamen realiter esse in statu salutis 
+              et eligere recte.
+            </p>
+            <p xml:id="l88-aeiils">
+              Alia est imaginatio in hac materia, 
+              quae dicetur in lectione sequenti, etc.
+            </p>
           </div>
         </div>
-        </div>
+      </div>
     </body>
   </text>
 </TEI>
