@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.09-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 76, de Trinitate</title>
           <date when="2012-09-22">September 22, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-09-22">September 22, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -33,177 +28,635 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="external"/>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-09-22" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="291-r"/>
+        <cb ed="#SV" n="b"/>
+        <pb ed="#R" n="119-v"/>
+        <cb ed="#R" n="b"/>
       </div>
     </front>
     <body>
-        <div xml:id="lectio76">
-          <head xml:id="l76-Hldtldt" subtype="title">Lectio 76, de Trinitate</head>
-              
-              <p xml:id="l76-dedcgd">Dictum est de processione Spiritus Sancti et<anchor xml:id="l76-Aspsaet"/> de controversia inter <cb ed="#SV" n="291va"/> <name ref="#Greeks">Graecos</name> et <name ref="#Latins">Latinos</name> et ibi fuit introductum aliquid de materia consilii generalis. Pro cuius declaratione protestor quod non intendo aliquid tractare de materia praesentis schismatis, nisi inquantum pertinet ad materiam.</p>
-            <!-- paragraph adjustment needs to fixed in image coordinates -->
-          <div>
-            <head xml:id="l76-Hsqddin"><supplied>Suppositio: quod deus et natura non deficiunt in necessaris</supplied></head>
-            
-            <p xml:id="l76-pppspv">Et ideo ad videndum quantam auctoritatem<anchor xml:id="l76-Aquaude"/> deus determinationibus consiliorum generalium dedit. Ponuntur propositiones praemittendo tamen unicam suppositionem quae est ista quod deus et natura non deficiunt in necessaris. Et licet ista suppositio sit fundata in multis locis sacrae scripturae et libris <name ref="#Philosophers">philosophorum</name>, nihilominus ex divina providentia <cb ed="#R" n="120ra"/> specialiter supra genus humanum providente apparet quod propter hoc fuit verbi incarnatio, sacramentorum institutio, christi passio, eius resurrectio, ex quibus omnibus cum aliis quibusdam concluditur suppositio praemissa vera.</p>
+      <div xml:id="lectio76">
+        <head xml:id="l76-Hldtldt">Lectio 76, de Trinitate</head>
+        <p xml:id="l76-dedcgd">Dictum est de processione Spiritus Sancti 
+          <app>
+            <lem>et</lem>
+            <rdg wit="#R" type="variation-absent"/>
+          </app>
+          de controversia inter
+          <cb ed="#SV" n="291-v"/>
+          <cb ed="#SV" n="a"/>
+          <name ref="#Greeks">Graecos</name> et <name ref="#Latins">Latinos</name> et ibi fuit
+          introductum aliquid de materia consilii generalis. Pro cuius declaratione protestor quod
+          non intendo aliquid tractare de materia praesentis schismatis, nisi inquantum pertinet ad
+          materiam.
+        </p>
+        <!-- paragraph adjustment needs to fixed in image coordinates -->
+        <div xml:id="l76-Dd1e136">
+          <head xml:id="l76-Hsqddin">
+            <supplied>Suppositio: quod deus et natura non deficiunt in
+              necessaris</supplied>
+          </head>
+          <p xml:id="l76-pppspv">
+            Et ideo ad videndum 
+            <app>
+              <lem>quantam auctoritatem</lem>
+              <rdg wit="#R" type="correction-substitution">
+                <subst xml:id="l76-Cquaude">
+                  <del>quanta auctoritas</del>
+                  <add>quantam auctoritatem</add>
+                </subst>
+              </rdg>
+            </app>
+            deus determinationibus consiliorum generalium dedit. Ponuntur
+            propositiones praemittendo tamen unicam suppositionem quae est ista quod deus et natura
+            non deficiunt in necessaris.
+            Et licet ista suppositio sit fundata in multis locis sacrae
+            scripturae et libris <name ref="#Philosophers">philosophorum</name>, 
+            nihilominus ex
+            divina providentia
+            <pb ed="#R" n="120-r"/>
+            <cb ed="#R" n="a"/>
+            specialiter supra genus humanum providente apparet quod propter
+            hoc fuit verbi incarnatio, sacramentorum institutio, christi passio, eius resurrectio,
+            ex quibus omnibus cum aliis quibusdam concluditur suppositio praemissa vera.</p>
+        </div>
+        <div xml:id="l76-Dd1e173">
+          <head xml:id="l76-Hprones"><supplied>Propositiones</supplied></head>
+          <div xml:id="l76-Dd1e179">
+            <head xml:id="l76-Hprpprp"><supplied>Prima propositio</supplied></head> 
+            <head xml:id="l76-Hd1e185" type="question-title"><supplied>Quod finis hominis excedit eius
+                naturalem facultatem</supplied></head>
+            <p xml:id="l76-eqstcv">
+              Ex quo sequitur prima propositio seu primum corollarium,
+              scilicet, quod sicut finis 
+              hominis<anchor xml:id="l76-Asifiho"/> 
+              excedit eius
+              naturalem facultatem, ita de mediis attingendis deus supernaturaliter providit. prima
+              pars est evidens quia actus beatificus est naturalis et ad illum naturaliter non
+              possumus attingere, immo qui teneret contrarium esset 
+              error <name ref="#Pelagius">Pellagii</name> vel haeresis. 
+              Secunda pars sequitur ex divina providentia dei circa
+              genus humanum. 
+              Et non solum circa cultores veri Dei, immo circa rectores politiarum,
+              ut de angelo regente 
+              <name>Persas</name>,<note corresp="#l76-Ncfdcfd"/> 
+              ex divina
+              providentia ita 
+              quod<anchor xml:id="l76-Apritqu"/> 
+              principes
+              ut<anchor xml:id="l76-Aprutre"/> regant habent haec ex divina providentia, ut per eos vitia
+              domentur, licet non sit in eis bonitas moralis, prosunt tamen ibi ex hoc quod per eos
+              vitia impediuntur. 
+              Unde <name ref="#JuliusCaesar">Iulius Caesar</name> prosequendo
+                <name ref="#Pompey">Pompeium</name> in parva navicula dicit nautae 
+              <cit>
+                <quote xml:id="l76-Qd1e214">noli timere <name ref="#JuliusCaesar">Caesarem</name> vehis</quote>
+                <bibl>XXX</bibl>
+              </cit>.
+            </p>
           </div>
-            <div>
-              <head xml:id="l76-Hprones"><supplied>Propositiones</supplied></head>
-            <div>
-              <head xml:id="l76-Hprpprp"><supplied>Prima propositio: quod finis hominis excedit eius naturalem facultatem</supplied></head>
-              
-              <p xml:id="l76-eqstcv">Ex quo sequitur prima propositio seu primum corollarium, scilicet, quod sicut finis hominis<anchor xml:id="l76-Asifiho"/> excedit eius naturalem facultatem, ita de mediis attingendis deus supernaturaliter providit. prima pars est evidens quia actus beatificus est naturalis et ad illum naturaliter non possumus attingere, immo qui teneret contrarium esset error <name ref="#Pelagius">Pellagii</name> vel haeresis. Secunda pars sequitur ex divina providentia dei circa genus humanum. Et non solum circa cultores veri Dei, immo circa rectores politiarum, ut de angelo regente <name>Persas</name>,<note corresp="#l76-Ncfdcfd"/> ex divina providentia ita quod<anchor xml:id="l76-Apritqu"/> principes ut<anchor xml:id="l76-Aprutre"/> regant habent haec ex divina providentia, ut per eos vitia domentur, licet non sit in eis bonitas moralis, prosunt tamen ibi ex hoc quod per eos vitia impediuntur. Unde <name ref="#JuliusCaesar">Iulius Caesar</name> prosequendo <name ref="#Pompey">Pompeium</name> in parva navicula dicit nautae <quote type="Classical">"noli timere <name ref="#JuliusCaesar">caesarem</name> vehis"</quote>.</p>
-            </div>
-              <div>
-                <head xml:id="l76-Hspspsp"><supplied>Secunda propositio: quod ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur salutaris directio</supplied></head>
-                
-                <p xml:id="l76-ispgdp">Infertur secunda propositio quod sicut ad non ponere obicem interius sequitur salutaris<anchor xml:id="l76-Asesadi"/> directio respectu salutaris personae privatae, ita ad non ponere obicem exterius vel communicari ecclesiae catholicae sequitur salutaris directio, ista propositio fundatur in generali dei providentia.</p>
-            
-                <p xml:id="l76-uaeccg">Ubi advertendum est quod ex culpa originali et excellentia credendorum credenda transcendunt humanam facultatem, et ideo requiritur specialis et supernaturalis concursus ad eorum revelationem. Et licet in scriptura hoc<anchor xml:id="l76-Ainscho"/> contineatur, non tamen<anchor xml:id="l76-Aconota"/> evidenter et sufficienter pro quolibet. Et ideo provisum est occurrente difficultate de articulo credendo per certum remedium, scilicet quod in se est facere secundum traditiones patrum traditas in celebrationibus consiliorum generalium.</p>
-                
-                <p xml:id="l76-savscc">Secundo aliquibus videtur quod ex scriptura non habeatur evidenter ecclesiam vel fidem in aliquo vel aliquibus remanere cuiuscumque status fuerint. Unde dicendum est quod fides posset in simplici vetula remanere singulis aliis praelatis et viris ecclesiasticis errantibus in fide. Et in illo casu sufficit quantum ad exterius forum facere illa quae requiruntur ad sacri consilii celebrationem.</p>
-              
-              </div>
-              <div>
-                <head xml:id="l76-Htptptp"><supplied>Tertia propositio: quod in consilio sacro aggregati non sunt proprie qui loquuntur sed spiritus sanctus</supplied></head>
-                
-                <p xml:id="l76-eqsses">Ex quo sequitur <cb ed="#R" n="120rb"/> <cb ed="#SV" n="291vb"/> tertia propositio quod in consilio sacro aggregati non sunt proprie qui loquuntur sed Spiritus Sanctus est qui loquitur in eis, quia ex quo providentia est sufficiens non requiritur in eis bona dispositio, sic quod ipsi sint boni moraliter sed semper creatura ibi operatur per Spiritum Sanctum ut per formam verborum cum certa intentione sacramentum haberet efficaciam, licet conficiens sacramentum esset malus. Unde sacerdos quantumcumque pravus de eadem materia et observata forma realiter consecraret, igitur ex generali providentia si forma a patribus tradita servetur videtur quod Spiritus Sanctus habebit suam efficaciam et virtutem ad determinandum secundum quod fuerit ad vitam salubre et sanctum.</p>
-            
-                <p xml:id="l76-eqpnas">Ex quo patet quod implicat contradictionem sententiam consilii generalis in necessario credendum pro salute deficere. Patet quia ille terminus <mentioned>'consilium generale'</mentioned> et alii termini qui determinant de <unclear cert="high">confectione</unclear> sacramentorum accepti in propria acceptione theologica cognoscant quod in consilio generali et confectione sacramentorum operetur Spiritus Sanctus, ita quod sententia consilii generalis est sententia Spiritus Sancti, et sicut implicat contradictionem Spiritum Sanctum fallere vel decipere, ita implicat contradictionem sententiam consilii generalis aliquem decipere vel fallere in credendis necessario ad salutem.</p>
-              
-              </div>
-              
-              <div>
-                <head xml:id="l76-Hqpqpqp">Quarta propositio: quod sententia praelatorum, qui sunt defectus, non renuenda in hiis quae sunt necessaria ad salutem</head>
-                
-                <p xml:id="l76-scqnas">Sequitur corollarium quartum quod licet defectus praelatorum sit multum laesivus membrorum ecclesiae Dei, non propter hoc formidanda vel renuenda est sententia eorum in hiis quae sunt necessaria ad salutem.</p> 
-                
-                <p xml:id="l76-ppetmc">Prima pars est nota in casu quod aliqui essent tales, quia ex officio ipsi tenentur pabulum doctrinae ministrare et scitum reservare suis subditis in tantum quod si illo careant vel habentes non diffundant perdunt gregem quantum in eis est et turbant membra Christi</p> 
-                
-                <p xml:id="l76-spaphg">Secunda pars apparet quia illi non sunt qui loquuntur in consiliis generalibus vel in aliis sacramentorum<anchor xml:id="l76-Ainalsa"/> confectionibus, sed spiritus Dei qui loquitur in eis. Et haec observata a patribus sanctis praecipue forma tradita ut<anchor xml:id="l76-Afotrut"/> malitia sacerdotis non impediret<anchor xml:id="l6-Asanoim"/> Christi veram consecrationem, quia ad certam formam verborum ordinavit Deus se communicare corporaliter. Ita in consilio generali malitia praelatorum vel aliorum in eo existentium non tolleret efficaciam illius, quia non sunt praesides principales, sed organa Sancti Spiritus, qui loquitur in eis, ut proportionaliter <cb ed="#R" n="120va"/> locuta est asina <name ref="#Balaam">Balaam</name> ut malediceret populo dei, et tamen benedixit populo, licet coactus, ut patet <ref xml:id="l76-Rpanuca"><title ref="#num">Numeri</title> 20 et 23o capitulis</ref>,<note corresp="#l76-Rpanuca"/> ita in materia fidei aggregati in consilio generali Spiritus Sanctus per eos loquitur veritatem. Et hoc est ex divina providentia respectu humani generis in necessariis pro nostro sive consequendum <cb ed="#SV" n="292ra"/> quod non esset nisi consilio generali daretur auctoritas infallibilis non obstante ministrorum malitia. Unde sicut de <name ref="#Balaam">Balaam</name> cum audiret <name ref="#Balak">Balak</name>,<anchor xml:id="l76-Acuauba"/> benedicere populo debes, dicit <quote xml:id="l76-Qqehmmi" source="http://scta.info/resource/num23_11">"quid est hoc quod agis numquid vocavi te ut malediceres meis inimicis."</quote><note corresp="#l76-Qqehmmi"/> <name ref="#Balaam">Balaam</name> respondit <quote xml:id="l76-Qnpaqid" source="http://scta.info/resource/num23_12">"non possum aliud loqui nisi quae iusserit dominus."</quote><note corresp="#l76-Qnpaqid"/> Et ideo ubi agitur de instructione populi Christam quamcumque<anchor xml:id="l76-Achquco"/> convalesceret malitia assistentium, illi tamen mali homines possent cum <name ref="#Balaam">Balaam</name> 'non possumus aliud loqui nisi quae iusserit dominus'. Unde secunda vice <!--seems like there is a corruption here; see sorb --> dominus <name ref="#Balaam">Balaam</name> respondendo <name ref="#Balak">Balac</name> benedictionem prophetare non valeo tantum, quia pluries benedicit <name ref="#Balaam">Balaam</name> populis. Unde adhuc dicit <quote source="http://scta.info/resource/num23_19">"non est Deus quasi homo ut<anchor/> mentiatur nec <supplied>ut</supplied> filius hominis ut mutetur,"</quote> nam sicut Deus in lege moysaica specialiter regebat populum sibi electum, ita specialiori modo nunc regit sanctam ecclesiam Dei, et sicut repromisit Deus antiquis patribus in veteri lege, ita in nova regeneratione promisit vitam aeternam ipso dicente <quote source="http://scta.info/resource/mt28_20">"vobiscum ero usque ad consummationem saeculi."</quote> Ecce quomodo providet humano generi. Secundo ecclesiam vocat <mentioned>'petram'</mentioned> intantum quod <quote source="http://scta.info/resource/mt16_18">"portae inferi non praevalebunt adversus eam"</quote>, ut resistere posset mendaciis haereticae pravitatis</p>
+          <div xml:id="l76-Dd1e226">
+            <head xml:id="l76-Hspspsp"><supplied>Secunda propositio</supplied></head>
+            <head xml:id="l76-Hd1e232" type="question-title"><supplied>Quod ad non ponere obicem
+                exterius vel communicari ecclesiae catholicae sequitur salutaris
+              directio</supplied></head>
+            <p xml:id="l76-ispgdp">Infertur secunda propositio quod sicut ad non ponere obicem
+              interius sequitur 
+              salutaris<anchor xml:id="l76-Asesadi"/> 
+              directio respectu salutaris
+              personae privatae, ita ad non ponere obicem exterius vel communicari ecclesiae
+              catholicae sequitur salutaris directio, ista propositio fundatur in generali dei
+              providentia.</p>
+            <p xml:id="l76-uaeccg">
+              Ubi advertendum est quod ex culpa originali et excellentia
+              credendorum credenda transcendunt humanam facultatem, et ideo requiritur specialis et
+              supernaturalis concursus ad eorum revelationem. Et licet in scriptura 
+              hoc<anchor xml:id="l76-Ainscho"/> 
+              contineatur, non 
+              tamen<anchor xml:id="l76-Aconota"/>
+              evidenter et sufficienter pro quolibet. 
+              Et ideo provisum est occurrente difficultate
+              de articulo credendo per certum remedium, scilicet quod in se est facere secundum
+              traditiones patrum traditas in celebrationibus consiliorum generalium.</p>
+            <p xml:id="l76-savscc">
+              Secundo aliquibus videtur quod ex scriptura non habeatur
+              evidenter ecclesiam vel fidem in aliquo vel aliquibus remanere cuiuscumque status
+              fuerint. Unde dicendum est quod fides posset in simplici vetula remanere singulis
+              aliis praelatis et viris ecclesiasticis errantibus in fide. Et in illo casu sufficit
+              quantum ad exterius forum facere illa quae requiruntur ad sacri consilii
+              celebrationem.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e252">
+            <head xml:id="l76-Htptptp"><supplied>Tertia propositio</supplied></head>
+            <head xml:id="l76-Hd1e258" type="question-title"><supplied>Quod in consilio sacro aggregati
+                non sunt proprie qui loquuntur sed spiritus sanctus</supplied></head>
+            <p xml:id="l76-eqsses">
+              Ex quo sequitur
+              <cb ed="#R" n="b"/><!--R120rb-->
+              <cb ed="#SV" n="b"/><!--SV219vb--> 
+              tertia propositio quod in consilio sacro aggregati non sunt
+              proprie qui loquuntur sed Spiritus Sanctus est qui loquitur in eis, quia ex quo
+              providentia est sufficiens non requiritur in eis bona dispositio, sic quod ipsi sint
+              boni moraliter sed semper creatura ibi operatur per Spiritum Sanctum ut per formam
+              verborum cum certa intentione sacramentum haberet efficaciam, licet conficiens
+              sacramentum esset malus. Unde sacerdos quantumcumque pravus de eadem materia et
+              observata forma realiter consecraret, igitur ex generali providentia si forma a
+              patribus tradita servetur videtur quod Spiritus Sanctus habebit suam efficaciam et
+              virtutem ad determinandum secundum quod fuerit ad vitam salubre et sanctum.
+            </p>
+            <p xml:id="l76-eqpnas">
+              Ex quo patet quod implicat contradictionem sententiam consilii
+              generalis in necessario credendum pro salute deficere. 
+              Patet quia ille terminus
+              <mentioned>consilium generale</mentioned> 
+              et alii termini qui determinant de 
+              <unclear cert="high">confectione</unclear> sacramentorum accepti in propria
+              acceptione theologica cognoscant quod in consilio generali et confectione
+              sacramentorum operetur Spiritus Sanctus, ita quod sententia consilii generalis est
+              sententia Spiritus Sancti, et sicut implicat contradictionem Spiritum Sanctum fallere
+              vel decipere, ita implicat contradictionem sententiam consilii generalis aliquem
+              decipere vel fallere in credendis necessario ad salutem.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e281">
+            <head xml:id="l76-Hqpqpqp">Quarta propositio</head>
+            <head xml:id="l76-Hd1e286" type="question-title">Quod sententia praelatorum, qui sunt
+              defectus, non renuenda in hiis quae sunt necessaria ad salutem</head>
+            <p xml:id="l76-scqnas">
+              Sequitur corollarium quartum quod licet defectus praelatorum sit
+              multum laesivus membrorum ecclesiae Dei, non propter hoc formidanda vel renuenda est
+              sententia eorum in hiis quae sunt necessaria ad salutem.
+            </p>
+            <p xml:id="l76-ppetmc">
+              Prima pars est nota in casu quod aliqui essent tales, quia ex
+              officio ipsi tenentur pabulum doctrinae ministrare et scitum reservare suis subditis
+              in tantum quod si illo careant vel habentes non diffundant perdunt gregem quantum in
+              eis est et turbant membra Christi.
+            </p>
+            <p xml:id="l76-spaphg">
+              Secunda pars apparet quia illi non sunt qui loquuntur in
+              consiliis generalibus vel in aliis 
+              sacramentorum<anchor xml:id="l76-Ainalsa"/>
+              confectionibus, sed spiritus Dei qui loquitur in eis. Et haec observata a patribus
+              sanctis praecipue forma tradita 
+              ut<anchor xml:id="l76-Afotrut"/> malitia sacerdotis
+              non 
+              impediret<anchor xml:id="l6-Asanoim"/> 
+              Christi veram consecrationem, quia ad
+              certam formam verborum ordinavit Deus se communicare corporaliter. Ita in consilio
+              generali malitia praelatorum vel aliorum in eo existentium non tolleret efficaciam
+              illius, quia non sunt praesides principales, sed organa Sancti Spiritus, qui loquitur
+              in eis, ut proportionaliter
+              <pb ed="#R" n="120-v"/>
+              <cb ed="#R" n="a"/>
+              locuta est asina <name ref="#Balaam">Balaam</name> ut
+              malediceret populo dei, et tamen benedixit populo, licet coactus, ut patet 
+              <cit>
+                <ref xml:id="l76-Rpanuca">
+                  <title ref="#num">Numeri</title> 20 et 23o capitulis</ref>
+                <bibl>XXX<!--<note corresp="#l76-Rpanuca"/>--></bibl>
+              </cit>,
+              ita in materia fidei aggregati in
+              consilio generali Spiritus Sanctus per eos loquitur veritatem. Et hoc est ex divina
+              providentia respectu humani generis in necessariis pro nostro sive consequendum
+              <pb ed="#SV" n="292-r"/>
+              <cb ed="#SV" n="a"/>
+              quod non esset nisi consilio generali daretur auctoritas
+              infallibilis non obstante ministrorum malitia. 
+              Unde sicut de <name ref="#Balaam">Balaam</name> cum audiret <name ref="#Balak">Balak</name>,<anchor xml:id="l76-Acuauba"/> benedicere populo debes, dicit 
+              <cit>
+                <quote xml:id="l76-Qqehmmi" source="http://scta.info/resource/num23_11">
+                  quid est hoc quod agis numquid vocavi
+                  te ut malediceres meis inimicis
+                </quote>
+                <!-- note corresp="#l76-Qqehmmi"/> -->
+              </cit>.
+              <name ref="#Balaam">Balaam</name> 
+              respondit 
+              <cit>
+                <quote xml:id="l76-Qnpaqid" source="http://scta.info/resource/num23_12">
+                  non possum aliud loqui nisi quae iusserit dominus
+                </quote>
+                <!--<note corresp="#l76-Qnpaqid"/>-->
+              </cit>.
+              Et ideo ubi agitur de
+              instructione populi Christam 
+              quamcumque<anchor xml:id="l76-Achquco"/> 
+              convalesceret malitia assistentium, 
+              illi tamen mali homines possent cum 
+              <name ref="#Balaam">Balaam</name> 
+              <mentioned><!--should this be a repeat quote -->non possumus aliud loqui nisi quae iusserit dominus</mentioned>. 
+              Unde secunda
+              vice <!--seems like there is a corruption here; see sorb --> dominus <name ref="#Balaam">Balaam</name> respondendo <name ref="#Balak">Balac</name>
+              benedictionem prophetare non valeo tantum, quia pluries benedicit <name ref="#Balaam">Balaam</name> populis. Unde adhuc dicit 
+              <cit>
+                <quote xml:id="l76-Qd1e379" source="http://scta.info/resource/num23_19">
+                  non est Deus quasi homo 
+                  ut<anchor/>
+                  mentiatur nec 
+                  <supplied>ut</supplied> filius hominis ut mutetur
+                </quote></cit>, 
+              nam sicut
+              Deus in lege moysaica specialiter regebat populum sibi electum, ita specialiori modo
+              nunc regit sanctam ecclesiam Dei, et sicut repromisit Deus antiquis patribus in veteri
+              lege, ita in nova regeneratione promisit vitam aeternam ipso dicente 
+              <cit>
+                <quote xml:id="l76-Qd1e390" source="http://scta.info/resource/mt28_20">
+                  vobiscum ero usque ad consummationem
+                  saeculi
+                </quote>
+              </cit>. 
+              Ecce quomodo providet humano generi. Secundo ecclesiam vocat
+              <mentioned>petram</mentioned> intantum quod 
+              <cit>
+                <quote xml:id="l76-Qd1e399" source="http://scta.info/resource/mt16_18">
+                  portae inferi non praevalebunt adversus eam
+                </quote>
+              </cit>, 
+              ut resistere posset mendaciis haereticae pravitatis</p>
             <!-- note last line starting at "Second ecclesiam" has been moved up from previous paragraph; this needs to be reflected in diplomatic texts -->
-                <!-- consimiliter mali has been imported form vat and sorb because  -->
-                <p xml:id="l76-sevega">Consimiliter mali<anchor xml:id="l76-Aconmal"/> non invite tamen ignoranter prophetarent veritatem. Et ideo dupliciter potest intelligi aliquem veritatem prophetare. Uno modo invite et violenter ut apparet in exemplo de <name ref="#Balaam">Balaam</name>. Secundo modo ignoranter ut de <name ref="#Caiaphas">Caiaphas</name> qui sacramentum nostrae redemptionis et valoris et fructum incarnationis et passionis expressit, licet non intelligeret. Dicit enim <quote source="http://scta.info/resource/io11_50">"expedit ut unus homo moriatur pro<anchor xml:id="l76-Ahomopr"/> populo."</quote> Altum fuit illud verbum, sed non intellexit. Ita quaecumque esset congregatarum malitia in consilio generali, non sapientes veritatem, tamen eam prophetarent. Et consimiliter<anchor xml:id="l76-Apretsi"/> argueretur de prophetis qui huiusmodi sententiam protule<cb ed="#R" n="120vb"/>runt, ut <name ref="#Augustine">Augustinus</name> exponit <name ref="#Virgil">Virgilium</name> in <title ref="#Bucolics">Bucolicis</title> dicentem, <quote>"iam nova progenies venit de sedibus altis,"</quote> et versus sequens in praedictis ponitur, et ita sacramenta nostrae fidei prophetasse <name ref="#Jews">Iudaei</name> et <name>Gentiles</name> asserunt.<anchor xml:id="l76-Aetgeas"/></p>
-                
-              <p xml:id="l76-iipfst">Item illud potest aliunde fundari ex speciali regimine sanctae ecclesiae<anchor xml:id="l76-Aresaec"/> cui deputatus est tamquam<anchor xml:id="l76-Adeesta"/> minister spiritualis <name ref="#MichaelArchangel">Michael Archangelus</name>, quoniam sicut ante Christum adventum deputabatur ad custodiam synagogae cui ex officio incumbit<anchor xml:id="l76-Aexofin"/> non permittere haeresim in sacra ecclesia pullulare. Et ideo dicit quod<anchor xml:id="l76-Aiddiqu"/> ipse est<anchor xml:id="l76-Aquipes"/> nunc custos ecclesiae militantis nec permitteret eam errare, igitur stante praelatorum malitia <name ref="#MichaelArchangel">Michael Archangelus</name> non permitteret aliquam conclusionem fidei subversivam transire.</p>
-              </div>
-              <div>
-                <head xml:id="l76-Hqupqup"><supplied>Quinta propositio: non videtur evidenter repugnare quemlibet viatorem in consilio generali deputatum deficiere in fidem, et tamen non posse fidei veritatem non determinare</supplied></head>
-                
-                <p xml:id="l76-qcscev">Quintum corollarium seu quinta propositio: sequitur quod non videtur evidenter repugnare quemlibet viatorem in consilio generali deputatum deficere in fidem, et tamen non posse fidei veritatem non determinare. Primum apparet quia ex sacra scriptura non habemus nisi quod in consummatione saeculi erunt fideles, nec habetur ex scriptura quod debeant esse illo tunc praelati. Secunda pars apparet, quia dato quod quilibet consilii generalis esset malus, non staret tamen totam multitudinem errare. Et per consequens non staret determinationem consilii esse falsam et maxime in his quae sunt necessaria ad salutem, et hoc est ex spirituali assistentia Spiritus Sancti, qui loquitur in illis de consilio generali modo et forma antiquorum patrum congregato et vocato.</p>
-              
-              </div>
-              <div>
-                <head xml:id="l76-Hsxpsxp"><supplied>Sexta propositio: quod concedendum <name ref="#MichaelArchangel">Beatum Michaelem</name> speciali assistentia toti ecclesiae assistere</supplied></head>
-                
-                <p xml:id="l76-speede">Sexta propositio est ista: verisimiliter concedendum <name ref="#MichaelArchangel">Beatum Michaelem</name> speciali assistentia toti ecclesiae assistere. Patet ex deputatione officii et regnis ad ecclesiam quia ecclesiae regimen est deputatum ei.</p>
-                
-              </div>
-              <div>
-                <head xml:id="l76-Hsppspp"><supplied>Septima propositio: quod assistentia Spiritus Sancti et <name ref="#MichaelArchangel">Michaelis Archangeli</name> est respectu actuum et operationum quae sunt extra caritatem</supplied></head>
-                
-                <p xml:id="l76-spceea">Septima propositio corollaria: quod assistentia Spiritus Sancti et <name ref="#MichaelArchangel">Michaelis Archangeli</name> est respectu actuum et operationum quae sunt extra caritatem. Patet quia ad regimen ecclesiae sunt officia ordinata ad quae complenda Spiritus Sanctus et <name ref="#MichaelArchangel">Beatus Michael</name> assistunt, igitur sicut malitia in sacrando non tollit <unclear cert="high">quin</unclear> ex gradu suo consecret sacerdos malus, ita ex assistentia Spiritus Sancti et <name ref="#MichaelArchangel">Beati Michaelis</name> non tollit<anchor xml:id="l76-Anotoma"/> malitia <unclear cert="high">quin</unclear> consilium generale habeat effectum <cb ed="#R" n="121ra"/> et auctoritatem.</p>
-              </div>
-              <div>
-                <head xml:id="l76-Hocpocp"><supplied>Octava propositio: non obstante malitia summi pontificis, in hoc genere tamen est sibi summus gradus assistentiae spiritus sancti et <name>Beati Michaelis</name></supplied></head>
-                
-                <p xml:id="l76-cpdebm">Consequenter posset dici quod secundum ordinem graduum quantum ad assistentiam non gratificativam secundum gradus assistentiarum erunt gradus et proportiones auctoritatum et effectuum, ergo non obstante malitia summi pontificis, in hoc genere tamen est sibi summus gradus assistentiae Spiritus Sancti et <name ref="#MichaelArchangel">Beati Michaelis</name>.</p>
-           
-              </div>
-              <div>
-                <head xml:id="l76-Hnopnop"><supplied>Nona propositio: propter huiusmodi assistentiam, praelatis eis debetur Reverentia non obstante malitia tali in ipsis</supplied></head>
-                
-                <p xml:id="l76-npqhgp">Nona propositio quae sequitur quod propter huiusmodi assistentiam praelatis eis debetur reverentia non obstante malitia tali in ipsis quia Spiritus Sanctus eis inhabitat, non tamen gratificatione,<anchor xml:id="l76-Anotagr"/> sed quadam assistentia Dei sic humano generi providentis.</p>
-              </div>
-              
-              <div>
-                <head xml:id="l76-depdep"><supplied>Decima propositio: Spiritus Sanctus et <name ref="#MichaelArchangel">Michael Archangelus</name> habent specialem assistentiam respectu sacrorum librorum</supplied></head>
-                
-                <p xml:id="l76-dpcare">Decima propositio corollaria quod Spiritus Sanctus et <name ref="#MichaelArchangel">Michael Archangelus</name> habent specialem assistentiam respectu sacrorum librorum in quibus continetur vita spiritualis fidelium. Et hoc spectat ad regimen ecclesiae.</p>
-              
-              </div>
-              
-              <div>
-                <head xml:id="l76-Hudpudp"><supplied>Undecima propositio: quod libri sacri deberent singulari reverentia venerari</supplied></head>
-               
-                <p xml:id="l76-ehscmv">Ex hoc sequitur quod libri sacri deberent singulari reverentia venerari. Nam illi quadam vivificatione spirituali specialiter vivificantur et conservantur ultra communem modum vivificandi.</p>
-                
-              </div>
-              
-              <div>
-                <head xml:id="l76-Hddpddp"><supplied>Duodecima propositio: quod doctrina addita sacrae scripturae est indicium suae incorporationis et vivificationis</supplied></head>
-                
-                <p xml:id="l76-dceuer">Duodecimum corollarium est quod doctrina addita sacrae scripturae est indicium suae incorporationis et vivificationis. Et ex hoc arguit <ref corresp="#l76-Qsedtie"><name ref="#Gamaliel">Gamalielis</name> in <title ref="#act">Actibus Apostolorum</title></ref>,<note corresp="#l76-Qsedtie"/> <quote xml:id="l76-Qsedtie" source="http://scta.info/resource/act5_39">"si ex deo est, tunc ita erit."</quote> Nam additione facta respectu librorum sacrorum inter quos includuntur determinationes consiliorum generalium et alia per ecclesiam ordinata pro salute humana hoc est signum verificationis, scilicet, quod ex unica anima omnis in eadem sua uniuntur et roborantur.</p>
-             
-              </div>
-              <div>
-                <head xml:id="l76-Hdtpdtp"><supplied>Tertia decima propositio: quod additio facta in symbolo quod cantatur in missa est pars incomparabiliter a Spiritu Sancto recepta</supplied></head>
-                
-                <p xml:id="l76-tpssab"><cb ed="#SV" n="292v"/> Tertia decima propositio sequitur quod additio facta in symbolo quod cantatur in missa est pars incorporata et<anchor xml:id="l76-Apainet"/> a Spiritu Sancto recepta, quia Spiritus Sanctus assistebat in consilio ubi<anchor xml:id="l76-Aincoub"/> fuit talis additio determinata, et ipse specialiter assistit libro sacro pro doctrina sacra in tantum quod eis non permitteret aliquid addi quod non esset membrum vel tanquam membrum, sed aliquo modo provideret ex divina providentia alias Spiritus Sanctus ministraret pabulum sophisticum quod non spectat ad bonum.</p>
-             
-              </div>
-              <div>
-                <head xml:id="l76-Hdqpdqp"><supplied>Quarta decima propositio: quod additio facta per Latinos de processione spiritus sancti a filio sit addita inspirante deo et approbata</supplied></head>
-                
-                <p xml:id="l76-qpqeaf">Quarta decima propositio quod additio facta per <name ref="#Latins">Latinos</name> de processione Spiritus Sancti a Filio sit addita inspirante deo et approbata, et sic apparet <name ref="#Latins">Latinos</name> non defecisse. Immo <name ref="#Theologians">theologo</name> debet constare Deo inspirante quod determinatio fuit facta quod nedum a Patre procedit Spiritus Sanctus, sed etiam a Filio.</p>
-              </div>
-              
-              <div>
-                <head xml:id="l76-Hdqudqu"><supplied>Quinta decima propositio: quod diversitas translationum scripturarum nullum debet ponere offendiculum</supplied></head>
-                
-                <p xml:id="l76-suqesr">Sequitur ultra quod diversitas translationum scripturarum nullum debet ponere offendiculum, quia in<anchor xml:id="l76-Aofquin"/> eodem spiritu omnes scripturae litterae uniuntur. Nec requirenda est <cb ed="#R" n="121rb"/> superficiens litteralis, sed requirendus est<anchor xml:id="l76-Aserees"/> sensus spiritualis quem tradidit ecclesia vel doctores approbati seu inspirati, quia illud est scripturae eandem veritatem diversis modis exprimere. Et eandem veritatem quasi contrariis verbis proferre. Unde liber translationis <name ref="#Jerome">Ieromi</name> est biblia et eius receptio sicut signum vivificationis in creaturis. Et per hoc possent solvi multa argumenta quae fiunt communiter de translatione bibliae, quia semper fideles se debent resolvere ad eundem spiritum, et varia vocabula ad eundum sensum recipere.</p>
-            
-              </div>
-                <div>
-                  <head xml:id="l76-Hdsxdsx"><supplied>Sexta decima propositio: quod salutaris doctrina primo ad ecclesiam et ad videntes scripturas est diffusa</supplied></head>
-                  
-                  <p xml:id="l76-ssqvee">Sexto decimo sequitur quod salutaris doctrina primo ad ecclesiam et ad videntes scripturas est diffusa, deinde in scripturis seu scriptis redacta et iterum in ecclesia redundat. Patet quia illa est determinatio veritatis salutaris <unclear cert="high">facta</unclear> et prophetis, igitur illa veritas primo scribitur in pelle viva, id est, in anima. Deinde ipsa est ad scripturam redacta quae redundat in ecclesia una cum spiritu, scilicet, vivificante et exponente.</p>
-                  
-            </div>
-              <div>
-                
-                <head xml:id="l76-Hdspdsp"><supplied>Septima decima propositio: quod ecclesia in primaria sui significatione nihil aliud est nisi aggregatio fidelium</supplied></head>
-                
-               <p xml:id="l76-spsesc">Septima decima propositio sequitur quod ecclesia in primaria sui significatione nihil aliud est nisi aggregatio fidelium qui fuerunt et erunt<anchor xml:id="l76-Afueter"/> ab <name ref="#Abel">Abel</name> iusto usque ad finem mundi. Etiam sacra scriptura et ecclesia quae nunc est unirentur ad idem punctum et ad eadem regulam primae veritatis adaequate innituntur, quia omnis huiusmodi doctrina pro salute necessaria est immediate a spiritu sancto revelante, igitur sicut Deus non potuit prophetas immediate decipere nec falsum revelare, sic nec scriptura posset esse falsa ad sensum ad quem data est nec ecclesia aliquid determinat nisi quantum sacra religio et consilium et scriptura concernunt.</p>
-              
-              </div>
-              <div>
-                <head xml:id="l76-Hdopdop"><supplied>duodevicesima propositio: ecclesia videtur aliquo modo maioris auctoritatis quam scriptura sacra</supplied></head>
-                
-                <p xml:id="l76-opiaii">Duodevicesima propositio: istis non obstantibus, <cb ed="#SV" n="292vb"/> ecclesia videtur aliquo modo maioris auctoritatis quam scriptura sacra. Patet quia ecclesia sumpta primaria significatione, ut sumitur septima decima propositione, recipit immediate a Spiritu Sancto totam doctrinam in biblia contentam, et modo nobiliori in subiecto vitali quam alibi. Secundo ipsa ecclesia fuit extensive maior, quia plures sciverunt qui non scripserunt, et ex illis fuit unus immensus, qui fuit apostolus et praedicator veritatis. Ideo, ratione circumstantiae personae, ecclesia est immensae auctoritatis, licet adhuc ecclesia et scriptura ad idem innitantur.</p>
-              </div>
-              
-              <div>
-                <head xml:id="l76-dnpdnp"><supplied>Undevicesima propositio: quod capiendo ecclesiam pro aggregatione fidelium scriptura videtur maioris auctoritatis</supplied></head>
-                
-                <p xml:id="l76-npcecf">Undevicesima propositio: capiendo <mentioned>'ecclesiam'</mentioned> pro aggregatione fidelium vel praelatorum in consilio celebrando, quantum <cb ed="#R" n="121va"/> ad hoc, scriptura videtur maioris auctoritatis, saltem <unclear cert="high">numeraliter</unclear> quantum ad multitudinem, quia per plures et magis autenticos Christo revelante scriptura est nobis determinata, igitur considerando artifices, scriptura praeferendum est congregatum fidelium.</p>
-              
-              </div>
-              <div>
-                <head xml:id="l76-Hobiobi"><supplied>Obiectio</supplied></head>
-                
-                <p xml:id="l76-srepip">Sed respondendum est ad <name ref="#Augustine">Augustinum</name> dicentem <quote source="http://scta.info/resource/Augustine_ContraEpistolamManichaei_5_6_a">"euangelio non crederem nisi auctoritas ecclesiae ad hoc me compelleret,"</quote> igitur auctoritas ecclesiae est maior quam auctoritas scripturae quod est contra propositionem immediate praecedentem.</p>
-              
-              </div>
-              <div>
-                <head xml:id="l76-Hressio"><supplied>Responsio</supplied></head>
-                
-                <p xml:id="l76-rdudmr">Respondetur dupliciter. Uno modo quod <name ref="#Augustine">Augustinus</name> sumpsit <mentioned>'ecclesiam'</mentioned> <!-- sense here was inititially confusing, but the "second mode" here should not be thought of as the second part of the response, rather it refers to the two senses of the "ecclesiam" introduced above. The next "second mode" in the next paragraph should be seen as the second possible response --> secundo modo, scilicet pro aggregatione fidelium qui fuerunt ab <name ref="#Abel">Abel</name> sunt et erunt usque ad consummationem saeculi. Et hoc Christo incluso qui tantae fuit auctoritatis quod scriptura debet merito recipi.</p> 
-                
-                <p xml:id="l76-smpsfc">Secundo modo potest intelligi quod licet in secunda significatione sumatur ecclesia, tamen sensus esset <quote source="http://scta.info/resource/Augustine_ContraEpistolamManichaei_5_6_a">"euangelio non crederem nisi auctoritas ecclesiae ad hoc me compelleret,"</quote> id est, nescivissem hoc esse euangelium, et per consequens non adhaererem nisi ecclesia tradidisset. Cum hoc tamen non stat quin auctoritas scripturae sit quodammodo maior.</p> 
-            
-                <p xml:id="l76-tsbcfe">Et quia ista materia est ardua, nihil asseretur nisi sit fidei consonum. Tamen si bene advertatur materia, non resolvitur nisi ad unum punctum, scilicet, quod deus vult sufficienter providere nobis. Nihilominus tamen possunt nobis occurrere multi casus difficultatum, qui non bene possunt enucleari nisi per consilium generale. Ideo ordinarium est et provisum quod, si fuerit sufficienter ordinatum et convocatum, determinabit tanta veritate sicut esset scriptura. Et sic patet quod tollere auctoritatem consilii generalis in his quae concernunt fidem et veritatem est multum turbare in conscientiam fideles, etc.</p>
-                
-                </div>
-              </div>
+            <!-- consimiliter mali has been imported form vat and sorb because  -->
+            <p xml:id="l76-sevega">
+              Consimiliter 
+              mali<anchor xml:id="l76-Aconmal"/> non invite tamen
+              ignoranter prophetarent veritatem. 
+              Et ideo dupliciter potest intelligi aliquem
+              veritatem prophetare. Uno modo invite et violenter ut apparet in exemplo de <name ref="#Balaam">Balaam</name>. 
+              Secundo modo ignoranter ut de <name ref="#Caiaphas">Caiaphas</name> 
+              qui sacramentum nostrae redemptionis et valoris et fructum
+              incarnationis et passionis expressit, licet non intelligeret. 
+              Dicit enim 
+              <cit>
+                <quote xml:id="l76-Qd1e421" source="http://scta.info/resource/io11_50">
+                  expedit ut unus homo moriatur 
+                  pro<anchor xml:id="l76-Ahomopr"/> 
+                  populo
+                </quote>
+              </cit>. 
+              Altum fuit illud verbum, sed non
+              intellexit. Ita quaecumque esset congregatarum malitia in consilio generali, non
+              sapientes veritatem, tamen eam prophetarent. Et 
+              consimiliter<anchor xml:id="l76-Apretsi"/> 
+              argueretur de prophetis qui huiusmodi sententiam protule<cb ed="#R" n="b"/><!--R120vb-->runt, 
+              ut <name ref="#Augustine">Augustinus</name> exponit 
+              <name ref="#Virgil">Virgilium</name> in <title ref="#Bucolics">Bucolicis</title> 
+              dicentem,
+              <cit>
+                <quote xml:id="l76-Qd1e444">
+                  iam nova progenies venit de sedibus altis
+                </quote>
+              </cit>, 
+              et versus sequens in
+              praedictis ponitur, 
+              et ita sacramenta nostrae fidei prophetasse 
+              <name ref="#Jews">Iudaei</name> et <name>Gentiles</name> 
+              asserunt.<anchor xml:id="l76-Aetgeas"/>
+            </p>
+            <p xml:id="l76-iipfst">
+              Item illud potest aliunde fundari ex speciali regimine sanctae
+              ecclesiae<anchor xml:id="l76-Aresaec"/> 
+              cui deputatus est 
+              tamquam<anchor xml:id="l76-Adeesta"/>
+              minister spiritualis 
+              <name ref="#MichaelArchangel">Michael Archangelus</name>,
+              quoniam sicut ante Christum adventum deputabatur ad custodiam
+              synagogae cui ex officio 
+              incumbit<anchor xml:id="l76-Aexofin"/> non permittere
+              haeresim in sacra ecclesia pullulare. Et ideo dicit 
+              quod<anchor xml:id="l76-Aiddiqu"/>
+              ipse 
+              est<anchor xml:id="l76-Aquipes"/> nunc custos ecclesiae militantis nec
+              permitteret eam errare, igitur stante praelatorum malitia 
+              <name ref="#MichaelArchangel">Michael Archangelus</name> 
+              non permitteret aliquam
+              conclusionem fidei subversivam transire.
+            </p>
           </div>
+          <div xml:id="l76-Dd1e480">
+            <head xml:id="l76-Hqupqup"><supplied>Quinta propositio</supplied></head> 
+            <head xml:id="l76-Hd1e486" type="question-title"><supplied>Non videtur evidenter repugnare
+                quemlibet viatorem in consilio generali deputatum deficiere in fidem, et tamen non
+                posse fidei veritatem non determinare</supplied></head>
+            <p xml:id="l76-qcscev">
+              Quintum corollarium seu quinta propositio: sequitur quod non
+              videtur evidenter repugnare quemlibet viatorem in consilio generali deputatum deficere
+              in fidem, et tamen non posse fidei veritatem non determinare. Primum apparet quia ex
+              sacra scriptura non habemus nisi quod in consummatione saeculi erunt fideles, nec
+              habetur ex scriptura quod debeant esse illo tunc praelati. Secunda pars apparet, quia
+              dato quod quilibet consilii generalis esset malus, non staret tamen totam multitudinem
+              errare. Et per consequens non staret determinationem consilii esse falsam et maxime in
+              his quae sunt necessaria ad salutem, et hoc est ex spirituali assistentia Spiritus
+              Sancti, qui loquitur in illis de consilio generali modo et forma antiquorum patrum
+              congregato et vocato.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e494">
+            <head xml:id="l76-Hsxpsxp"><supplied>Sexta propositio</supplied></head> 
+            <head xml:id="l76-Hd1e500" type="question-title"><supplied>Quod concedendum <name ref="#MichaelArchangel">Beatum Michaelem</name> speciali assistentia toti
+                ecclesiae assistere</supplied></head>
+            <p xml:id="l76-speede">
+              Sexta propositio est ista: verisimiliter concedendum <name ref="#MichaelArchangel">Beatum Michaelem</name> 
+              speciali assistentia toti ecclesiae assistere. 
+              Patet ex deputatione officii 
+              et regnis ad ecclesiam quia ecclesiae regimen
+              est deputatum ei.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e514">
+            <head xml:id="l76-Hsppspp"><supplied>Septima propositio</supplied></head>
+            <head xml:id="l76-Hd1e520" type="question-title"><supplied>quod assistentia Spiritus
+                Sancti et <name ref="#MichaelArchangel">Michaelis Archangeli</name> est respectu
+                actuum et operationum quae sunt extra caritatem</supplied></head>
+            <p xml:id="l76-spceea">
+              Septima propositio corollaria: quod assistentia Spiritus Sancti
+              et <name ref="#MichaelArchangel">Michaelis Archangeli</name> est respectu actuum et
+              operationum quae sunt extra caritatem. Patet quia ad regimen ecclesiae sunt officia
+              ordinata ad quae complenda Spiritus Sanctus et <name ref="#MichaelArchangel">Beatus
+                Michael</name> assistunt, igitur sicut malitia in sacrando non tollit <unclear cert="high">quin</unclear> ex gradu suo consecret sacerdos malus, ita ex assistentia
+              Spiritus Sancti et <name ref="#MichaelArchangel">Beati Michaelis</name> non
+                tollit<anchor xml:id="l76-Anotoma"/> malitia <unclear cert="high">quin</unclear>
+              consilium generale habeat effectum
+              <pb ed="#R" n="121-r"/>
+              <cb ed="#R" n="a"/>
+              et auctoritatem.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e553">
+            <head xml:id="l76-Hocpocp"><supplied>Octava propositio</supplied></head>
+            <head xml:id="l76-Hd1e559" type="question-title"><supplied>Non obstante malitia summi
+                pontificis, in hoc genere tamen est sibi summus gradus assistentiae spiritus sancti
+                et <name>Beati Michaelis</name></supplied></head>
+            <p xml:id="l76-cpdebm">
+              Consequenter posset dici quod secundum ordinem graduum quantum ad
+              assistentiam non gratificativam secundum gradus assistentiarum erunt gradus et
+              proportiones auctoritatum et effectuum, ergo non obstante malitia summi pontificis, in
+              hoc genere tamen est sibi summus gradus assistentiae Spiritus Sancti et 
+              <name ref="#MichaelArchangel">Beati Michaelis</name>.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e572">
+            <head xml:id="l76-Hnopnop"><supplied>Nona propositio</supplied></head>
+            <head xml:id="l76-Hd1e578" type="question-title"><supplied>Propter huiusmodi assistentiam,
+                praelatis eis debetur Reverentia non obstante malitia tali in
+              ipsis</supplied></head>
+            <p xml:id="l76-npqhgp">
+              Nona propositio quae sequitur quod propter huiusmodi assistentiam
+              praelatis eis debetur reverentia non obstante malitia tali in ipsis quia Spiritus
+              Sanctus eis inhabitat, non tamen 
+              gratificatione,<anchor xml:id="l76-Anotagr"/> sed
+              quadam assistentia Dei sic humano generi providentis.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e588">
+            <head xml:id="l76-depdep"><supplied>Decima propositio</supplied></head>
+            <head xml:id="l76-Hd1e594" type="question-title"><supplied>Spiritus Sanctus et <name ref="#MichaelArchangel">Michael Archangelus</name> habent specialem assistentiam
+                respectu sacrorum librorum</supplied></head>
+            <p xml:id="l76-dpcare">
+              Decima propositio corollaria quod Spiritus Sanctus 
+              et <name ref="#MichaelArchangel">Michael Archangelus</name> habent specialem assistentiam
+              respectu sacrorum librorum in quibus continetur vita spiritualis fidelium. Et hoc
+              spectat ad regimen ecclesiae.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e609">
+            <head xml:id="l76-Hudpudp"><supplied>Undecima propositio: quod libri sacri deberent
+                singulari reverentia venerari</supplied></head>
+            <p xml:id="l76-ehscmv">
+              Ex hoc sequitur quod libri sacri deberent singulari reverentia venerari. 
+              Nam illi quadam vivificatione spirituali specialiter vivificantur et
+              conservantur ultra communem modum vivificandi.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e619">
+            <head xml:id="l76-Hddpddp"><supplied>Duodecima propositio</supplied></head>
+            <head xml:id="l76-Hd1e625" type="question-title"><supplied>Quod doctrina addita sacrae
+                scripturae est indicium suae incorporationis et vivificationis</supplied></head>
+            <p xml:id="l76-dceuer">
+              Duodecimum corollarium est quod doctrina addita sacrae scripturae
+              est indicium suae incorporationis et vivificationis. 
+              Et ex hoc arguit 
+              <ref xml:id="l76-Rd1e631" corresp="#l76-Qsedtie">
+                <name ref="#Gamaliel">Gamalielis</name> in 
+                <title ref="#act">Actibus Apostolorum</title>
+              </ref>,
+              <cit>
+                <quote xml:id="l76-Qsedtie" source="http://scta.info/resource/act5_39">
+                si ex deo est, tunc ita erit
+                </quote>
+                <!-- <note corresp="#l76-Qsedtie"/> -->
+              </cit>. 
+              Nam additione facta respectu librorum sacrorum inter quos
+              includuntur determinationes consiliorum generalium et alia per ecclesiam ordinata pro
+              salute humana hoc est signum verificationis, scilicet, quod ex unica anima omnis in
+              eadem sua uniuntur et roborantur.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e650">
+            <head xml:id="l76-Hdtpdtp"><supplied>Tertia decima propositio</supplied></head>
+            <head xml:id="l76-Hd1e656" type="question-title"><supplied>Quod additio facta in
+                symbolo quod cantatur in missa est pars incomparabiliter a Spiritu Sancto
+                recepta</supplied></head>
+            <p xml:id="l76-tpssab">
+              <pb ed="#SV" n="292-v"/><!--dbcheck-->
+              <cb ed="#SV" n="a"/>
+              Tertia decima propositio sequitur quod additio facta in
+              symbolo quod cantatur in missa est pars incorporata 
+              et<anchor xml:id="l76-Apainet"/> a
+              Spiritu Sancto recepta, quia Spiritus Sanctus assistebat in consilio 
+              ubi<anchor xml:id="l76-Aincoub"/> fuit talis additio determinata, et ipse specialiter assistit
+              libro sacro pro doctrina sacra in tantum quod eis non permitteret aliquid addi quod
+              non esset membrum vel tanquam membrum, sed aliquo modo provideret ex divina
+              providentia alias Spiritus Sanctus ministraret pabulum sophisticum quod non spectat ad
+              bonum.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e673">
+            <head xml:id="l76-Hdqpdqp"><supplied>Quarta decima propositio</supplied></head>
+            <head xml:id="l76-Hd1e679" type="question-title"><supplied>quod additio facta per
+                Latinos de processione spiritus sancti a filio sit addita inspirante deo et
+                approbata</supplied></head>
+            <p xml:id="l76-qpqeaf">
+              Quarta decima propositio quod additio facta per <name ref="#Latins">Latinos</name> de processione Spiritus Sancti a Filio sit addita
+              inspirante deo et approbata, et sic apparet <name ref="#Latins">Latinos</name> non
+              defecisse. Immo <name ref="#Theologians">theologo</name> debet constare Deo inspirante
+              quod determinatio fuit facta quod nedum a Patre procedit Spiritus Sanctus, sed etiam a
+              Filio.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e696">
+            <head xml:id="l76-Hdqudqu"><supplied>Quinta decima propositio</supplied></head>
+            <head xml:id="l76-Hd1e702" type="question-title"><supplied>quod diversitas
+                translationum scripturarum nullum debet ponere offendiculum</supplied></head>
+            <p xml:id="l76-suqesr">
+              Sequitur ultra quod diversitas translationum scripturarum nullum
+              debet ponere offendiculum, quia 
+              in<anchor xml:id="l76-Aofquin"/> eodem spiritu omnes
+              scripturae litterae uniuntur. Nec requirenda est
+              <pb ed="#R" n="121-r"/>
+              <cb ed="#R" n="b"/>
+              superficiens litteralis, sed requirendus 
+              est<anchor xml:id="l76-Aserees"/> sensus spiritualis quem tradidit ecclesia vel doctores
+              approbati seu inspirati, quia illud est scripturae eandem veritatem diversis modis
+              exprimere. Et eandem veritatem quasi contrariis verbis proferre. Unde liber
+              translationis <name ref="#Jerome">Ieromi</name> est biblia et eius receptio sicut
+              signum vivificationis in creaturis. Et per hoc possent solvi multa argumenta quae
+              fiunt communiter de translatione bibliae, quia semper fideles se debent resolvere ad
+              eundem spiritum, et varia vocabula ad eundum sensum recipere.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e721">
+            <head xml:id="l76-Hdsxdsx"><supplied>Sexta decima propositio</supplied></head>
+            <head xml:id="l76-Hd1e727" type="question-title"><supplied>quod salutaris doctrina
+                primo ad ecclesiam et ad videntes scripturas est diffusa</supplied></head>
+            <p xml:id="l76-ssqvee">
+              Sexto decimo sequitur quod salutaris doctrina primo ad ecclesiam
+              et ad videntes scripturas est diffusa, deinde in scripturis seu scriptis redacta et
+              iterum in ecclesia redundat. 
+              Patet quia illa est determinatio veritatis salutaris
+                <unclear cert="high">facta</unclear> et prophetis, igitur illa veritas primo
+              scribitur in pelle viva, id est, in anima. Deinde ipsa est ad scripturam redacta quae
+              redundat in ecclesia una cum spiritu, scilicet, vivificante et exponente.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e739">
+            <head xml:id="l76-Hdspdsp"><supplied>Septima decima propositio</supplied></head>
+              <head xml:id="l76-Hd1e745" type="question-title"><supplied>quod ecclesia in
+                primaria sui significatione nihil aliud est nisi aggregatio
+              fidelium</supplied></head>
+            <p xml:id="l76-spsesc">
+              Septima decima propositio sequitur quod ecclesia in primaria sui
+              significatione nihil aliud est nisi aggregatio fidelium qui fuerunt et 
+              erunt<anchor xml:id="l76-Afueter"/> 
+              ab <name ref="#Abel">Abel</name> iusto usque ad finem mundi.
+              Etiam sacra scriptura et ecclesia quae nunc est unirentur ad idem punctum et ad eadem
+              regulam primae veritatis adaequate innituntur, quia omnis huiusmodi doctrina pro
+              salute necessaria est immediate a spiritu sancto revelante, igitur sicut Deus non
+              potuit prophetas immediate decipere nec falsum revelare, sic nec scriptura posset esse
+              falsa ad sensum ad quem data est nec ecclesia aliquid determinat nisi quantum sacra
+              religio et consilium et scriptura concernunt.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e758">
+            <head xml:id="l76-Hdopdop"><supplied>Duodevicesima propositio</supplied></head>
+            <head xml:id="l76-Hd1e764" type="question-title"><supplied>Ecclesia videtur aliquo
+                modo maioris auctoritatis quam scriptura sacra</supplied></head>
+            <p xml:id="l76-opiaii">
+              Duodevicesima propositio: 
+              istis non obstantibus,
+              <cb ed="#SV" n="b"/><!--SV292vb--> 
+              ecclesia videtur aliquo modo maioris auctoritatis quam
+              scriptura sacra. 
+              Patet quia ecclesia sumpta primaria significatione, ut sumitur
+              septima decima propositione, recipit immediate a Spiritu Sancto totam doctrinam in
+              biblia contentam, et modo nobiliori in subiecto vitali quam alibi. 
+              Secundo ipsa
+              ecclesia fuit extensive maior, quia plures sciverunt qui non scripserunt, et ex illis
+              fuit unus immensus, qui fuit apostolus et praedicator veritatis. 
+              Ideo, ratione
+              circumstantiae personae, ecclesia est immensae auctoritatis, 
+              licet adhuc ecclesia et
+              scriptura ad idem innitantur.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e775">
+            <head xml:id="l76-dnpdnp"><supplied>Undevicesima propositio</supplied></head>
+            <head xml:id="l76-Hd1e781" type="question-title"><supplied>quod capiendo ecclesiam pro
+                aggregatione fidelium scriptura videtur maioris auctoritatis</supplied></head>
+            <p xml:id="l76-npcecf">
+              Undevicesima propositio: capiendo
+                <mentioned>ecclesiam</mentioned> pro aggregatione fidelium vel praelatorum in
+              consilio celebrando, quantum
+              <cb ed="#R" n="121-v"/>
+              <cb ed="#R" n="a"/>
+              ad hoc, scriptura videtur maioris auctoritatis, 
+              saltem <unclear cert="high">numeraliter</unclear> quantum ad multitudinem, quia per plures
+              et magis autenticos Christo revelante scriptura est nobis determinata, igitur
+              considerando artifices, scriptura praeferendum est congregatum fidelium.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e799">
+            <head xml:id="l76-Hobiobi"><supplied>Obiectio</supplied></head>
+            <p xml:id="l76-srepip">Sed respondendum est ad <name ref="#Augustine">Augustinum</name>
+              dicentem 
+              <cit>
+                <quote xml:id="l76-Qd1e812" source="http://scta.info/resource/Augustine_ContraEpistolamManichaei_5_6_a">
+                  <!-- needs corrected source id -->
+                  euangelio non crederem nisi auctoritas ecclesiae ad hoc me compelleret
+                </quote>
+                <bibl>
+                  <name>Augustinus</name>,
+                  <title>Contra Epistola Manichaei</title>
+                  V, 6
+                </bibl>
+              </cit>,
+              igitur auctoritas ecclesiae est maior quam auctoritas scripturae quod est contra
+              propositionem immediate praecedentem.
+            </p>
+          </div>
+          <div xml:id="l76-Dd1e829">
+            <head xml:id="l76-Hressio"><supplied>Responsio</supplied></head>
+            <p xml:id="l76-rdudmr">
+              Respondetur dupliciter. Uno modo quod <name ref="#Augustine">Augustinus</name> 
+              sumpsit <mentioned>ecclesiam</mentioned>
+              <!-- sense here was inititially confusing, but the "second mode" 
+                here should not be thought of as the second part of the response, 
+                rather it refers to the two senses of the "ecclesiam" introduced above. 
+                The next "second mode" in the next paragraph should be seen as the second possible response -->
+              secundo modo, scilicet pro aggregatione fidelium 
+              qui fuerunt ab <name ref="#Abel">Abel</name> sunt 
+              et erunt usque ad consummationem saeculi.
+              Et hoc Christo incluso
+              qui tantae fuit auctoritatis quod scriptura debet merito recipi.</p>
+            <p xml:id="l76-smpsfc">
+              Secundo modo potest intelligi quod licet in secunda
+              significatione sumatur ecclesia, tamen sensus esset 
+              <cit>
+                <quote xml:id="l76-Qd1e853" source="http://scta.info/resource/Augustine_ContraEpistolamManichaei_5_6_a">
+                  <!-- needs corrected source id -->
+                  euangelio non crederem nisi auctoritas ecclesiae ad hoc me compelleret
+                </quote>
+                <bibl>
+                  <name>Augustinus</name>,
+                  <title>Contra Epistola Manichaei</title>
+                  V, 6
+                </bibl>
+              </cit>
+              id est, nescivissem hoc esse euangelium, 
+              et per consequens non adhaererem nisi
+              ecclesia tradidisset. 
+              Cum hoc tamen non stat 
+              quin auctoritas scripturae sit quodammodo maior.
+            </p>
+            <p xml:id="l76-tsbcfe">
+              Et quia ista materia est ardua, nihil asseretur nisi sit fidei
+              consonum. Tamen si bene advertatur materia, non resolvitur nisi ad unum punctum,
+              scilicet, quod deus vult sufficienter providere nobis. Nihilominus tamen possunt nobis
+              occurrere multi casus difficultatum, qui non bene possunt enucleari nisi per consilium
+              generale. Ideo ordinarium est et provisum quod, si fuerit sufficienter ordinatum et
+              convocatum, determinabit tanta veritate sicut esset scriptura. Et sic patet quod
+              tollere auctoritatem consilii generalis in his quae concernunt fidem et veritatem est
+              multum turbare in conscientiam fideles, etc.
+            </p>
+          </div>
+        </div>
+      </div>
     </body>
   </text>
 </TEI>

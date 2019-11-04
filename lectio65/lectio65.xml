@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -8,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.11-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 65, de Trinitate</title>
           <date when="2012-11-30">November 30, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-11-30">November 30, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -30,264 +27,508 @@
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-11-30" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-    
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="278-r"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio65">
-        <head xml:id="l65-Hldtldt" subtype="title">Lectio 65, de Trinitate</head>
-        <div>
-          
+        <head xml:id="l65-Hldtldt">Lectio 65, de Trinitate</head>
+        <div xml:id="l65-Dd1e109">
           <head xml:id="l65-Hrpcrpc">Recapitulatio priores conclusiones</head>
-          
-          <p xml:id="l65-pidppi">Pro inquisitione divinae simplicitatis, dictum fuit in praecedenti 
-            lectione quod deus non potest formaliter influere, 
+          <p xml:id="l65-pidppi">
+            Pro inquisitione divinae simplicitatis, 
+            dictum fuit in praecedenti lectione 
+            quod deus non potest formaliter influere, 
             nec potest esse forma informativa creaturae, nec 
-            potest vitaliter potentiam perceptivam informare.</p>
-          
+            potest vitaliter potentiam perceptivam informare.
+          </p>
         </div>
-        <div>
+        <div xml:id="l65-Dd1e118">
           <head xml:id="l65-Hobines">Obiectiones</head>
-          
-          <p xml:id="l65-nrivma">Nunc Restat inducere 
-            motiva ad contrarium ut veritas magis appareat.</p>
-          
-            <p xml:id="l65-peisia">primo 
-              ex imaginatione philosophorum ponentium quod deus est anima mundi. 
-              Unde <name ref="#Virgil">virgilius</name> in VIo <title ref="#Eneads">eneydos</title> ponit quod omnia spiritus iutus 
-              alit.</p> 
-          
-            <p xml:id="l65-esrend">et sicut Recitat <name ref="#Albert">albertus</name> fuit intensio philosophorum quod 
-              deus est unica forma omnium Rerum, scilicet, secundum gradus complexionum 
-              sunt gradus operabilium, et quod nobiliores exercet operationes 
-              ubi materia est nobilius disposita.</p> 
-           
-          <p xml:id="l65-aiepea">Ad idem est <name ref="#Maimonides">Rabbi moyses</name> 
-            in libro <title ref="#GuideForThePerplexed">de duce dubiorum</title>, qui ponit quod mundus debet imaginari 
-            tanquam quod vivens habens diversa membra, alia terrestria, 
-            alia minus terrestria, et alia spiritualia, et ponit expresse 
-            quod deus se habet in triplici genere causae efficientis, scilicet, et 
-            finalis. et Realiter formalis ergo ex intentione philosophorum est 
+          <p xml:id="l65-nrivma">
+            Nunc restat inducere 
+            motiva ad contrarium ut veritas magis appareat.
+          </p>
+          <p xml:id="l65-peisia">
+            primo 
+            ex imaginatione philosophorum ponentium 
+            quod deus est anima mundi. 
+            Unde 
+            <ref xml:id="l65-Rd1e128" corresp="#l65-Qd1e139">
+              <name ref="#Virgil">Virgilius</name> 
+              in VI 
+              <title ref="#Eneads">eneydos</title>
+            </ref> 
+            ponit quod 
+            omnia 
+            <cit>
+              <quote xml:id="l65-Qd1e139">spiritus iutus alit</quote>
+              <bibl>XXX</bibl>
+            </cit>.
+          </p>
+          <p xml:id="l65-esrend">
+            Et sicut recitat 
+            <cit>
+              <ref xml:id="l65-Rd1e151">
+                <name ref="#Albert">Albertus</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            fuit <unclear>intensio<!--intentio--></unclear> philosophorum 
+            quod deus est unica forma omnium rerum, 
+            scilicet secundum gradus complexionum 
+            sunt gradus operabilium, 
+            et quod nobiliores exercet operationes 
+            ubi materia est nobilius disposita.
+          </p> 
+          <p xml:id="l65-aiepea">
+            Ad idem est 
+            <cit>
+              <ref xml:id="l65-Rd1e168">
+                <name ref="#Maimonides">Rabbi Moyses</name> 
+                in libro 
+                <title ref="#GuideForThePerplexed">de duce dubiorum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit>, 
+            qui ponit quod mundus debet imaginari 
+            tanquam quod vivens habens diversa membra, 
+            alia terrestria, 
+            alia minus terrestria, 
+            et alia spiritualia, 
+            et ponit expresse 
+            quod deus se habet 
+            in triplici genere causae efficientis, 
+            scilicet et finalis. 
+            et realiter formalis, 
+            ergo ex intentione philosophorum est 
             quod deus est realiter forma mundi et non de possibili solum, 
-            sed de facto et quod actuet tamquam forma principissima et actualissima.</p> 
-          
-          <p xml:id="l65-icicrf">Item <name ref="#Averroes">commentator</name> in pluribus commentis in XIIo <title ref="#MetaphysicsCommentary">metaphysicae</title> 
-            Reponit deum sub triplici genere causae, scilicet, formalis, efficientis, 
-            et finalis, ergo ex intentione philosophorum est quod deus est prima 
-            forma concurrens in genere causae formalis respectu cuiuscumque 
-            Rei formalis.</p>
-          
-            <p xml:id="l65-ibdevv">Item <name ref="#Dionysius">beatus dionysius</name> in suis 
-              <cb ed="#SV" n="277va"/>libris quasi in  locis innumeris ponit expresse quod deus 
-              est esse entium et vita viventium.</p>
-          
+            sed de facto et quod actuet 
+            tamquam forma principissima et actualissima.
+          </p> 
+          <p xml:id="l65-icicrf">
+            Item <name ref="#Averroes">Commentator</name> 
+            <cit>
+              <ref xml:id="l65-Rd1e190">
+                in pluribus commentis in 
+                XIIo 
+                <title ref="#MetaphysicsCommentary">Metaphysicae</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            reponit deum sub triplici genere causae, 
+            scilicet formalis, efficientis, et finalis, 
+            ergo ex intentione philosophorum est 
+            quod deus est prima forma concurrens 
+            in genere causae formalis respectu cuiuscumque rei formalis.
+          </p>
+          <p xml:id="l65-ibdevv">
+            Item 
+            <cit>
+              <ref xml:id="l65-Rd1e205">
+                <name ref="#Dionysius">Beatus Dionysius</name> 
+                in suis 
+                <pb ed="#SV" n="277-v"/>
+                <cb ed="#SV" n="a"/>
+                libris
+              </ref>
+            </cit> 
+            quasi in locis innumeris ponit expresse quod deus 
+            est esse entium et vita viventium.
+          </p>
           <p xml:id="l65-aeifrm">
-            <ref><name ref="#Augustine">augustinus</name> eciam in libro 
-            <title ref="#Confessions">confessionum</title></ref> omnes formas mutabiles subordinat in aliquem 
-            immutabilem in eodem genere causae proportionaliter, sicut de efficientibus, 
-            ergo videtur quod deus concurrat in genere causae formalis, ut 
-            est aliud genus esse ab aliis, ergo deus de facto concurrit 
-            in genere causae formalis. et 
-            <ref>X <title ref="#Confessions">confessionum</title> expresse <name ref="#Augustine">augustinus</name></ref> 
+            <cit>
+              <ref xml:id="l65-Rd1e221">
+                <name ref="#Augustine">Augustinus</name> 
+                etiam in libro 
+                <title ref="#Confessions">Confessionum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            omnes formas mutabiles subordinat in aliquem 
+            immutabilem in eodem genere causae proportionaliter, 
+            sicut de efficientibus, 
+            ergo videtur quod deus concurrat in genere causae formalis, 
+            ut est aliud genus esse ab aliis,
+            ergo deus de facto concurrit 
+            in genere causae formalis. 
+            Et 
+            <cit>
+              <ref xml:id="l65-Rd1e236">
+                X 
+                <title ref="#Confessions">confessionum</title> 
+                expresse 
+                <name ref="#Augustine">Augustinus</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
             approbat sententiam 
-            <name ref="#Plotinus">plotini</name> philosophi <name ref="#Platonists" type="group">platonici</name> ponentes 
-            quod deus sit Realiter forma Rerum mutabilium.</p>
-          
-            <p xml:id="l65-aiesap">Ad idem etiam  
-              est <name ref="#Grosseteste">linconiensis</name> supra librum <title ref="#deDivinisNominibus">de divinis nominibus</title>. Conformiter 
-              ad <name ref="#Dionysius">dionysium</name> qui ponit quod deus est sic forma mutabilium, 
-              sicut impressio sigilli in forma liquidi. et quidquid sit 
-              utrum sit forma extrinseca, tamen eam ibi dicit esse formam, 
-              et hoc sufficit ad propositum.</p>
+            <name ref="#Plotinus">Plotini</name> 
+            philosophi <name ref="#Platonists" type="group">Platonici</name> 
+            ponentes quod deus sit realiter forma rerum mutabilium.
+          </p>
+          <p xml:id="l65-aiesap">
+            Ad idem etiam  
+            est 
+            <cit>
+              <ref xml:id="l65-Rd1e260">
+                <name ref="#Grosseteste">Linconiensis</name> 
+                supra librum 
+                <title ref="#deDivinisNominibus">de divinis nominibus</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit>. 
+            Conformiter 
+            ad 
+            <cit>
+              <ref xml:id="l65-Rd1e275">
+                <name ref="#Dionysius">Dionysium</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            qui ponit quod deus est sic forma mutabilium, 
+            sicut impressio sigilli in forma liquidi. 
+            Et quidquid sit 
+            utrum sit forma extrinseca, 
+            tamen eam ibi dicit esse formam, 
+            et hoc sufficit ad propositum.
+          </p>
           
         </div>
-        <div>
-          <head xml:id="l65-Hresnes"><unclear>Responsiones[?]</unclear></head>
-          
-          <p xml:id="l65-dargcf">Deinde arguitur rationibus. 
-            primo sic: nulla secunda causa sufficit influere in aliquo genere 
+        <div xml:id="l65-Dd1e287">
+          <head xml:id="l65-Hresnes"><unclear>Responsiones</unclear></head>
+          <p xml:id="l65-dargcf">
+            Deinde arguitur rationibus. 
+            primo sic: 
+            nulla secunda causa sufficit influere in aliquo genere 
             esse primo, ergo sequitur quod in omni genere causae influentis 
-            excludendo materiam, oportet devenire ad aliquam primam et illa est 
-            deus, ergo deus est prima causa in genere causae formalis.</p>
-         
-          <p xml:id="l65-sivmif">secundo informare 
+            excludendo materiam, 
+            oportet devenire ad aliquam primam et illa est deus, 
+            ergo deus est prima causa in genere causae formalis.
+          </p>
+          <p xml:id="l65-sivmif">
+            Secundo informare 
             vel influxus informativus dicit communicationem bonitatis 
             et perfectionis, ergo debet deo attribui, immo sibi maxime 
             convenit quia communicatio bonitatis venit ex plenitudine bonitatis, 
-            ergo ubi est maxima plenitudo bonitatis, ibi est 
-            maxima communicatio bonitatis et maxime influxus 
-            formalis.</p>
-          
-          <p xml:id="l65-ifhfrm">Item forma habet multiplicem habitudinem ad suum formale 
-            habet aliquam habitudinem secundum quam Recipit  
-            perfectionem a suo formabili sicut inhaesionem, nam inharentiam 
-            est quod genus dependentiae, habent etiam saltem 
+            ergo ubi est maxima plenitudo bonitatis, 
+            ibi est maxima communicatio bonitatis et maxime influxus 
+            formalis.
+          </p>
+          <p xml:id="l65-ifhfrm">
+            Item forma habet multiplicem habitudinem ad suum formale 
+            habet aliquam habitudinem secundum quam recipit  
+            perfectionem a suo formabili sicut inhaesionem, 
+            nam inharentiam est quod genus dependentiae, 
+            habent etiam saltem 
             aliquae et plures formae dependentiam tamquam ad sui productionem, 
-            quia formae educuntur de potentia materiae, ergo quantum est ad illam habitudinem, 
+            quia formae educuntur de potentia materiae, 
+            ergo quantum est ad illam habitudinem, 
             quae est inhaere et quantum etiam ad illam quae est educi 
-            formae magis dependet a materia, quam econtra. et potius Recipit 
-            a materia quam forma communicet sibi. Ita quo inhaesio et eductio 
-            formae dicunt potius perfectionem in materia et imperfectionem 
-            in forma. et secundum has duas habitudines non influit 
-            forma formaliter, ergo secundum aliam habitudinem respectu 
-            influxus formalis, scilicet, influere formaliter. Unde communiter forma 
-            inhaereret et quantum ad hoc forma Recipit a materia, quia 
-            inhaesio est quaedam dependentia formae respectu materiae.</p> 
-          
-          <p xml:id="l65-ecpcpd">et 
-            communiter plures formae educuntur de potentia materiae Realiter, et 
-            haec duae habitudines, non sunt habitudines influxus 
-            formalis, quia ut sic forma in illis habitudinibus non influit, 
-            sed potius Recipit. habet ergo forma tertiam habitudinem 
-            respectu formabilibus, scilicet perficere formabile, ut constitutum. modo 
-            ista habitudo est habitudo influxus formalis, quia inhaesio 
-            est impertinens et conservatio etiam passiva sive eductio 
-            formae, quia non est influere, sed potius Recipere. et tunc 
-            <cb ed="#SV" n="277vb"/>capiamus influere formaliter, tunc nullam dicit perfectionem, 
-            sed dicit actuationem et suae bonitatis communicationem, ergo potest deo competere, 
-            quia ex quo dicit perfectionem hoc potest deo competere et hoc 
-            competit formae, quia non est de ratione formalis influxus 
-            vel formae inhaere vel educi a materia, sed communicare suo formabili 
+            formae magis dependet a materia, quam econtra. 
+            Et potius recipit 
+            a materia quam forma communicet sibi. 
+            Ita quo inhaesio et eductio 
+            formae dicunt potius perfectionem in materia 
+            et imperfectionem in forma. 
+            Et secundum has duas habitudines non influit 
+            forma formaliter, 
+            ergo secundum aliam habitudinem respectu influxus formalis, 
+            scilicet influere formaliter. 
+            Unde communiter forma 
+            inhaereret et quantum ad hoc forma recipit a materia, 
+            quia inhaesio est quaedam dependentia formae respectu materiae.
+          </p> 
+          <p xml:id="l65-ecpcpd">
+            Et communiter plures formae educuntur 
+            de potentia materiae realiter, 
+            et haec duae habitudines, 
+            non sunt habitudines influxus formalis 
+            quia ut sic forma in illis habitudinibus non influit, 
+            sed potius recipit, 
+            habet ergo forma tertiam habitudinem 
+            respectu formabilibus, scilicet perficere formabile, 
+            ut constitutum, 
+            modo ista habitudo est habitudo influxus formalis 
+            quia inhaesio est impertinens et conservatio 
+            etiam passiva sive eductio formae 
+            quia non est influere, 
+            sed potius recipere, 
+            et tunc 
+            <cb ed="#SV" n="b"/><!--277vb-->
+            capiamus influere formaliter, 
+            tunc nullam dicit perfectionem, 
+            sed dicit actuationem et suae bonitatis communicationem, 
+            ergo potest deo competere, 
+            quia ex quo dicit perfectionem 
+            hoc potest deo competere et hoc competit formae, 
+            quia non est de ratione formalis influxus 
+            vel formae inhaere vel educi a materia, 
+            sed communicare suo formabili 
             sive denominationem sive perfectionem vi cuius communicationis competunt 
-            suo formabili denominationes concretive, ergo cum influxus formalis 
-            non dicit imperfectionem, tunc potest deo competere, ergo deus 
-            potest formaliter influere quod est contra prius dicta.</p>
-          
-          <p xml:id="l65-idecsm">Item deus est <unclear>univocalis[?universalis?]</unclear> in esse personali naturae humanae, sicut de facto est, ergo 
-            est <unclear>univocalis[?]</unclear> et communicabilis essentialiter et formaliter. antecedens est clarum 
-            de unione verbi ad naturam humanam. et consequentia probatur, quia 
-            de ratione essentiae est quod sit communicabilis et communicatur in divinis 
-            ad intra, in divinis autem persona non communicatur ad intra, ergo si sit 
-            in esse per se <unclear>univocalis[?]</unclear>, ergo in esse essentiae est <unclear>univocalis[?]</unclear> communicando suam 
-            perfectionem.</p>
-          
-          <p xml:id="l65-ceehic">Confirmatur essentia est communicabilis ad intra 
+            suo formabili denominationes concretive, 
+            ergo cum influxus formalis 
+            non dicit imperfectionem, 
+            tunc potest deo competere, ergo deus 
+            potest formaliter influere, 
+            quod est contra prius dicta.
+          </p>
+          <p xml:id="l65-idecsm">Item, 
+            deus est <unclear>univocalis[?universalis?]</unclear> in esse personali naturae humanae, 
+            sicut de facto est, 
+            ergo est <unclear>univocalis[?]</unclear> 
+            et communicabilis essentialiter 
+            et formaliter. 
+            Antecedens est clarum 
+            de unione verbi ad naturam humanam. 
+            Et consequentia probatur 
+            quia de ratione essentiae est quod sit communicabilis et communicatur in divinis 
+            ad intra, in divinis autem persona non communicatur ad intra, 
+            ergo si sit in esse per se <unclear>univocalis[?]</unclear>, 
+            ergo in esse essentiae est <unclear>univocalis[?]</unclear> communicando suam 
+            perfectionem.
+          </p>
+          <p xml:id="l65-ceehic">
+            Confirmatur essentia est communicabilis ad intra 
             per plenitudinem ad extra communicatur per plenitudinem participatione. 
             ex quo non dicit imperfectionem et nulla de necessitate coniuncta, 
             forte diceretur quod ex parte dei communicabilis non est Repugnantia 
             <unclear>quin[?]</unclear> sit de se communicabilis, sed oritur ex defectu creaturae 
-            quae non est huiusmodi influxus capax.</p> 
+            quae non est huiusmodi influxus capax.
+          </p>
+          <p xml:id="l65-eitsue">
+            Et illud tollitur primo 
+            quia non videtur maior repugnantia quod creatura sit 
+            capax unionis essentialis et formalis essentiae et influxus 
+            formalis ab essentia quam sit capax unionis ad personam, sed 
+            natura humana est capax unionis verbi ad ipsam, 
+            ergo non est repugnantia creaturae, 
+            <unclear>quin</unclear> sit <unclear>univocalis[?universalis?]</unclear> essentia.
+          </p>
+          <p xml:id="l65-ipcpic">
+            Item, potentialitas 
+            creaturae ad huiusmodi uniones supernaturales 
+            non est intrinseca, 
+            sed extrinseca, 
+            scilicet ex potentia mensurantis, 
+            ergo debet magis mensurari 
+            penes posse ordinantis 
+            quam penes imperfectionem creaturae.
+          </p>
           
-            <p xml:id="l65-eitsue">Et illud tollitur 
-              primo, quia non videtur maior Repugnantia quod creatura sit 
-              capax unionis essentialis et formalis essentiae et influxus 
-              formalis ab essentia quam sit capax unionis ad personam, sed 
-              natura humana est capax unionis verbi ad ipsam, ergo non est 
-              Repugnantia creaturae, <unclear>quin[?]</unclear> sit <unclear>univocalis[?universalis?]</unclear> essentia.</p>
-          
-          <p xml:id="l65-ipcpic">Item potentialitas 
-            creaturae ad huiusmodi uniones supernaturales non est intrinseca, sed extrinseca, 
-            scilicet, ex potentia mensurantis, ergo debet magis mensurari 
-            penes posse ordinantis quam penes imperfectionem 
-            creaturae.</p>
-          
-          <p xml:id="l65-ipospd">Item potentia obedientalis non est intrinseca, sed quantificatur secundum gradum 
+          <p xml:id="l65-ipospd">
+            Item, 
+            potentia obedientalis non est intrinseca, 
+            sed quantificatur secundum gradum 
             potentiae extrinsecae <unclear>sic[?]</unclear> potentis uti tali vel tali instrumento 
             nec quantificatur penes gradum intrinsecum creaturae, sed magis 
-            penes gradum potentiae sit ordinantis. et sic patet quod ex parte 
+            penes gradum potentiae sit ordinantis, 
+            et sic patet quod ex parte 
             creaturae considerata obedientiali potentia et immensitate 
-            dei non est Repugnantia <unclear>quin[?]</unclear> sit formaliter deo <unclear>univocalis[?]</unclear>, et 
-            <unclear>quin[?]</unclear> deus posset concurrere formaliter influendo.</p>
+            dei non est repugnantia <unclear>quin</unclear> 
+            sit formaliter deo <unclear>univocalis[?]</unclear>, 
+            et <unclear>quin</unclear> deus posset concurrere formaliter influendo.
+          </p>
           
-          <p xml:id="l65-ineedd">Item nihil 
-            est denegandum vel Removendum a divina omnipotentia, nisi appareat 
-            contradictio vel clara inevidentia. Sed deum concurrere 
-            formaliter non implicat contradictionem, quia salvatur in eo concursus 
-            formalis sive influxus Remota quacumque imperfectione, 
+          <p xml:id="l65-ineedd">
+            Item nihil 
+            est denegandum vel removendum a divina omnipotentia, nisi appareat 
+            contradictio vel clara inevidentia. 
+            Sed deum concurrere 
+            formaliter non implicat contradictionem 
+            quia salvatur in eo concursus 
+            formalis sive influxus remota quacumque imperfectione, 
             ergo cum de ratione influxus formalis sit aliqua perfectio 
-            et nullam dicit perfectionem istud non est deo denegandum.</p>
-          
-          <p xml:id="l65-cempdc">Confirmatur et magis apparenter quia 
-            deitas de facto est creaturae communicata per Realem informationem, 
+            et nullam dicit perfectionem istud non est deo denegandum.
+          </p>
+          <p xml:id="l65-cempdc">
+            Confirmatur et magis apparenter quia 
+            deitas de facto est creaturae communicata per realem informationem, 
             ergo istud non est deo denegandum de possibili respectu cuiuscumque 
-            creaturae. Antecedens patet per <ref><name ref="#Paul">Apostolum</name> in <title ref="#col">Epistola ad colossenses</title></ref><note type="editorNote" subtype="citation" corresp="#l65-Qiehpdc"><title>Ad colossenses</title> 2:9</note> de humanitate 
-            <cb ed="#SV" n="278ra"/>christi dicentem quod <quote xml:id="l65-Qiehpdc" source="http://scta.info/resource/col2_9">"in eo habitat plenitudo divinitatis corporaliter."</quote></p> 
-          
-            <p xml:id="l65-ehahcc">et hanc 
-              auctoritatem exponunt doctores ad huiusmodi intellectum huiusmodi 
-              communicationis formalis, nam <name ref="#HughOfStVictor">hugo</name> in libro <title ref="#deSapientiaAnimaeChristi">de sapientia animae christi</title> 
-              allegando auctoritatem dicit quod animae christi sive humanitati christi communicatum 
-              est gratiose quidquid deus habet per naturam, ergo tota plenitudo 
-              deitatis est humanitati christi communicata.</p> 
-          
-            <p xml:id="l65-aiapsc">Ad idem allegatur <name ref="#Ambrose">ambrosius</name> 
-              qui expresse tenet quod deus humanitati christi communicavit quicquid habet 
-              in se essentialiter et naturaliter. et hoc non potuit fieri nisi 
-              per intrinsecam unionem animae christi secundum suam totam plenitudinem 
-              se communicatam.</p> 
-          
-            <p xml:id="l65-aieufs">Ad idem est <name ref="#RichardOfStVictor">Richardus</name> de contemplatione parte quinta, 
-              qui inquit de communicabiitate essentiae divinae vel perfectionis ad humanitatem 
-              christi. et dicit quod non solum communicata est animae christi omnis scientia, sed 
-              etiam omnipotentia. Tunc ultra animae christi communicata est omnipotentia, 
-              ergo tota latitudo divinae perfectionis et hoc non potest esse, nisi 
-              per vitalem immutationem, ergo ex vi unionis formalis deitatis 
-              ad humanitatem christi deus formaliter secundum plenitudinem est unitus 
-              formaliter sibi.</p>
-          
-          <p xml:id="l65-icu">Item comparando unionem animae christi ad verbum et 
+            creaturae. 
+            Antecedens patet per 
+            <ref xml:id="l65-Rd1e363">
+              <name ref="#Paul">Apostolum</name> in 
+              <title ref="#col">Epistola ad colossenses</title>
+            </ref>
+            de humanitate 
+            <pb ed="#SV" n="278-r"/>
+            <cb ed="#SV" n="a"/>
+            christi dicentem quod 
+            <cit>
+              <quote xml:id="l65-Qiehpdc" source="http://scta.info/resource/col2_9">
+                in eo habitat plenitudo divinitatis corporaliter
+              </quote>
+            </cit>.
+          </p>
+          <p xml:id="l65-ehahcc">
+            Et hanc 
+            auctoritatem exponunt doctores ad huiusmodi intellectum huiusmodi 
+            communicationis formalis, 
+            nam 
+            <cit>
+              <ref xml:id="l65-Rd1e387">
+                <name ref="#HughOfStVictor">Hugo</name> 
+                in libro 
+                <title ref="#deSapientiaAnimaeChristi">De sapientia animae christi</title>
+              </ref>
+            </cit> 
+            allegando auctoritatem dicit 
+            quod animae christi sive humanitati christi communicatum 
+            est gratiose quidquid deus habet per naturam, 
+            ergo tota plenitudo deitatis est humanitati christi communicata.
+          </p>
+          <p xml:id="l65-aiapsc">
+            Ad idem, 
+            allegatur 
+            <cit>
+              <ref xml:id="l65-Rd1e402"><name ref="#Ambrose">Ambrosius</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            qui expresse tenet quod deus humanitati christi communicavit quicquid habet 
+            in se essentialiter et naturaliter. 
+            Et hoc non potuit fieri nisi 
+            per intrinsecam unionem animae christi 
+            secundum suam totam plenitudinem se communicatam.
+          </p>
+          <p xml:id="l65-aieufs">
+            Ad idem est 
+            <cit>
+              <ref xml:id="l65-Rd1e415">
+                <name ref="#RichardOfStVictor">Richardus</name> 
+                de contemplatione, 
+                sparte quinta
+              </ref>
+              <bibl>XXX</bibl>
+            </cit>, 
+            qui inquit de communicabiitate essentiae divinae vel perfectionis ad humanitatem 
+            christi. 
+            Et dicit quod non solum communicata est animae christi omnis scientia, 
+            sed etiam omnipotentia. 
+            Tunc ultra animae christi communicata est omnipotentia, 
+            ergo tota latitudo divinae perfectionis et hoc non potest esse, nisi 
+            per vitalem immutationem, 
+            ergo ex vi unionis formalis deitatis 
+            ad humanitatem christi deus formaliter secundum plenitudinem est unitus 
+            formaliter sibi.
+          </p>
+          <p xml:id="l65-icu">
+            Item, 
+            comparando unionem animae christi ad verbum et 
             econtra sequitur propositum, quia tanta est unio dei ad humanitatem 
-            christi. et tam intuitiva quam econtra, scilicet, humanitatis ad verbum, sed 
-            unio humanitatis ad verbum tanta est quod vi illius communicantur 
-            denominationes competentes humanitati communicantur verbo, ergo econtra vi illius 
+            christi. et tam intuitiva quam econtra, 
+            scilicet humanitatis ad verbum, 
+            sed unio humanitatis ad verbum tanta est quod vi illius communicantur 
+            denominationes competentes humanitati communicantur verbo, 
+            ergo econtra vi illius 
             unionis communicantur humanitati christi denominationes competentes verbo, 
             ergo sicut vi illius unionis deus denominatur homo, et sicut verbum 
-            Recipiet denominationes concretivas humanitatis, ita humanitas denominationes 
-            verbi, ergo humanitas denominabitur deus quo dato sequitur 
-            quod est intrinseca  communicatio et non potest Reduci ad aliam 
-            causam nisi ad causam formalem ergo deus unitur formaliter creaturae.</p>
+            recipiet denominationes concretivas humanitatis, 
+            ita humanitas denominationes verbi, 
+            ergo humanitas denominabitur deus quo dato sequitur 
+            quod est intrinseca communicatio et non potest reduci ad aliam 
+            causam nisi ad causam formalem ergo deus unitur formaliter creaturae.
+          </p>
+          <p xml:id="l65-ipqhvs">
+            Item, 
+            probatur 
+            quod deus possit vitaliter immutare, 
+            et auctoritas 
+            <cit>
+              <ref xml:id="l65-Rd1e433"><name ref="#Lombard">Magistri</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            est expresse ad hoc 
+            et inducit etiam auctoritates 
+            <name ref="#Augustine">Augustini</name> 
+            quae hoc videntur sonare.
+          </p>
+          <div xml:id="l65-Dd1e446">
+            <head xml:id="l65-Hurdrdr">Una ratio <name ref="#Ripa">de Rippa</name></head>
+            <p xml:id="l65-atpess">
+              Arguo tamen per unicam rationem 
+              quae in hac materia movet 
+              <cit>
+                <ref xml:id="l65-Rd1e457"><name ref="#Ripa">Magistrum Iohannes de Rippa</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              ubi praesupponit quod notitia 
+              habet multiplicem habitudinem ad potentiam perceptivam 
+              quia notitia habet ad potentiam perceptivam habitudinem inhaesionis 
+              quia communiter quodlibet accidens dependet a suo subiecto et 
+              inhaeret etiam suo subiecto.
+            </p>
+            <p xml:id="l65-ihhpua">
+              Item habet habitudinem notitia ad potentiam 
+              ut activam.
+            </p>
+            <p xml:id="l65-tnhefp">
+              Tertio notitia habet habitudinem,
+              ut vitaliter immutativam. 
+              modo sequestremus duas primas habitudines quae sunt omnino <unclear>impertinentes</unclear>, 
+              nam inhaesio est impertinens qualitati vitali ad hoc quod immutet 
+              nec ratione inhaesionis notitia dicitur vitaliter immutare 
+              quia potest absque inhaesione vitaliter immutare, 
+              ergo notitia non 
+              est vitaliter immutativa vel notitia ratione inhaesionis nec 
+              etiam denominatur notitia vitaliter immutativa in habitudine ad 
+              potentiam ut productivam, quia aliqua est notitia quae non est formaliter 
+              producta.
+            </p> 
+            <p xml:id="l65-Hesupvi">
+              Etiam si una notitia crearetur et poneretur in 
+              anima, 
+              tunc anima per illam notitiam posset cognoscere, 
+              ergo notitia 
+              non dicitur per se notitia vel vitaliter immutativa in habitudine 
+              ad potentiam ut activa notitia dicitur vitaliter immutare, 
+              <cb ed="#SV" n="b"/><!--SV278rb-->
+              sequitur quod in ordine ad potentiam ut vitaliter immutabilem 
+              modo duae primae habitudines dicunt imperfectionem 
+              quia inhaerere dicit imperfectionem et dependentiam et etiam produci 
+              dicit imperfectionem, 
+              ergo cum illae duae habitudines non sint 
+              de integritate formalis influxus vel vitalis immutationis, 
+              quia non est de ratione notitiae quod inhaeret vel informat 
+              vel a potentia producatur, 
+              sed solum quod vitaliter immutet quod denominatio, 
+              scilicet vitaliter immutare dicit aliquam perfectionem 
+              cum magis reducatur ad causalitatem extrare et effectivam quae 
+              dicit perfectionem simpliciter, 
+              et non imperfectionem quod potest deo competere, 
+              ergo deus potest vitaliter immutare.
+            </p>
           
-          <p xml:id="l65-ipqhvs">Item probatur quod deus possit vitaliter immutare et auctoritas 
-            <name ref="#Lombard">magistri</name> est expresse ad hoc et inducit etiam auctoritates 
-            <name ref="#Augustine">augustini</name> quae hoc videntur sonare.</p>
-        
-            <div>
-              <head xml:id="l65-Hurdrdr">Una ratio <name ref="#Ripa">de Rippa</name></head>
-              <p xml:id="l65-atpess">Arguo tamen per unicam 
-                rationem quae in hac materia movet <name ref="#Ripa">magistrum Iohannes de 
-                  Rippa</name> ubi praesupponit quod notitia habet multiplicem habitudinem ad potentiam 
-                perceptivam, quia notitia habet ad potentiam perceptivam habitudinem 
-                inhaesionis, quia communiter quodlibet accidens dependet a suo subiecto et 
-                inhaeret etiam suo subiecto.</p>
-          
-            <p xml:id="l65-ihhpua">Item habet habitudinem notitia ad potentiam 
-              ut activam.</p>
-        
-          <p xml:id="l65-tnhefp">tertio notitia habet habitudinem, ut vitaliter immutativam. 
-            modo sequestremus duas primas habitudines quae sunt omnino <unclear>impertinentes[?]</unclear>, 
-            nam inhaesio est impertinens qualitati vitali ad hoc quod immutet 
-            nec ratione inhaesionis notitia dicitur vitaliter immutare, quia 
-            potest absque inhaesione vitaliter immutare, ergo notitia non 
-            est vitaliter immutativa vel notitia ratione inhaesionis nec 
-            etiam denominatur notitia vitaliter immutativa in habitudine ad 
-            potentiam ut productivam, quia aliqua est notitia quae non est formaliter 
-            producta.</p> 
-              
-              <p xml:id="l65-Hesupvi">etiam si una notitia crearetur et poneretur in 
-                anima, tunc anima per illam notitiam posset cognoscere, ergo notitia 
-                non dicitur per se notitia vel vitaliter immutativa in habitudine 
-                ad potentiam ut activa notitia dicitur vitaliter immutare, 
-                <cb ed="#SV" n="278rb"/>sequitur quod in ordine ad potentiam ut vitaliter immutabilem 
-                modo duae primae habitudines dicunt imperfectionem, quia 
-                inhaerere dicit imperfectionem et dependentiam et etiam produci 
-                dicit imperfectionem, ergo cum illae duae habitudines non sint 
-                de integritate formalis influxus vel vitalis immutationis, 
-                quia non est de ratione notitiae quod inhaeret vel informat 
-                vel a potentia producatur, sed solum quod vitaliter immutet 
-                quod denominatio, scilicet, vitaliter immutare dicit aliquam perfectionem 
-                cum magis Reducatur ad causalitatem extrare et effectivam quae 
-                dicit perfectionem simpliciter. et non imperfectionem quod potest 
-                deo competere, ergo deus potest vitaliter immutare.</p>
-          
-            <p xml:id="l65-eieppn">Et ista est 
-              tota radix <name ref="#Ripa">magistri Iohannis de Rippa</name> breviter in ista materia, 
-              quia ex  habitudinibus formarum substantialium et accidentalium ad 
-              sua formabilia proveniunt magnae difficultates, ideo circa ista 
-              tractabo aliqua et non plus pro nunc.</p>
-              </div>
-            
+            <p xml:id="l65-eieppn">
+              Et ista est tota radix 
+              <cit>
+                <ref xml:id="l65-Rd1e486"><name ref="#Ripa">Magistri Iohannis de Rippa</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              breviter in ista materia
+              quia ex habitudinibus formarum substantialium et accidentalium ad 
+              sua formabilia proveniunt magnae difficultates, 
+              ideo circa ista tractabo aliqua et non plus pro nunc.
+            </p>
+          </div>
         </div>
       </div>
     </body>
