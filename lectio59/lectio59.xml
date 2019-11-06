@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.11-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 59, de Trinitate</title>
           <date when="2012-11-11">November 11, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-11-09">November 29, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -32,65 +27,97 @@
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-11-11" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <xi:include href="../../XMLFragments/citationlists_include.xml" xpointer="include_list">
-        <xi:fallback>
-          <xi:include href="http://www.petrusplaoul.org/projectfiles/XMLFragments/citationlists_include.xml" xpointer="include_list"/>
-        </xi:fallback>
-      </xi:include>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="271-r"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio59">
-        
-      <head xml:id="l59-Hldfldf" subtype="title">Lectio 59, de Trinitate</head>
+        <head xml:id="l59-Hldfldf">Lectio 59, de Trinitate</head>
         <div>
           <head xml:id="l59-Hpcdcds">Propositiones contra divinam simplicitatem</head>
-          
-      <p xml:id="l59-qcmtid"><hi rend="dropCapThreeLines">Q</hi>uia circa materiam trinitatis maxime attendi debet 
-        divina simplicitas et unitas. ideo quantum ad materiam 
-        simplicitatis, aliquae videntur esse vel Repugnare 
-        divinae simplicitati quae communiter tractantur in doctoribus.</p>
-      
-        <div>
-      <head xml:id="l59-Hpqnirf">Prima: Quod non est identitas rationum formalium</head>  
-      
-      <p xml:id="l59-pidess">primo in divina 
-        essentia est non identitas rationum formalium sive multiplicitas 
-        inter se Realiter vel formaliter distinctarum, circumscripta operatione 
-        intellectus nostri, ergo non est ibi summa simplicitas, quia 
-        multitudo distinctorum excludit summam simplicitatem.</p>
-        </div>
+          <p xml:id="l59-qcmtid">
+            Quia circa materiam trinitatis maxime attendi debet 
+            divina simplicitas et unitas. ideo quantum ad materiam 
+            simplicitatis, aliquae videntur esse vel Repugnare 
+            divinae simplicitati quae communiter tractantur in doctoribus.
+          </p>
+          <div>
+            <head xml:id="l59-Hpqnirf">Prima: Quod non est identitas rationum formalium</head>
+            <p xml:id="l59-pidess">
+              Primo in divina 
+              essentia est non identitas rationum formalium sive multiplicitas 
+              inter se realiter vel formaliter distinctarum, 
+              circumscripta operatione intellectus nostri, 
+              ergo non est ibi summa simplicitas, quia 
+              multitudo distinctorum excludit summam simplicitatem.
+            </p>
+          </div>
           <div>
             <head xml:id="l59-Hsqieap">Secunda: Quod in divinis est distinctio essentiae ad personam</head>
-            
-      <p xml:id="l59-iidraa">Item in divinis 
-        est distinctio essentiae ad personam, ergo ibi est quaedam personae et 
-        essentiae compositio, ergo non est ibi omnimoda simplicitas. antecedens probatur, quia de 
-        essentia et persona verificantur contradictoria vel verbi gratia essentia 
-        est tres personae, essentia est filius, essentia est spiritus sanctus, et 
-        tamen de patre negatur quod sit tres personae, quod sit filius, quod sit 
-        spiritus sanctus. modo maximum medium probandi distinctionem inter 
-        res est, quia aliquid convenit uni parti quod Removetur ab alia.</p>
+            <p xml:id="l59-iidraa">
+              Item in divinis 
+              est distinctio essentiae ad personam, ergo ibi est quaedam personae et 
+              essentiae compositio, ergo non est ibi omnimoda simplicitas. 
+              Antecedens probatur 
+              quia de essentia et persona verificantur contradictoria vel verbi gratia essentia 
+              est tres personae, essentia est filius, essentia est spiritus sanctus, et 
+              tamen de patre negatur quod sit tres personae, quod sit filius, quod sit 
+              spiritus sanctus. modo maximum medium probandi distinctionem inter 
+              res est, quia aliquid convenit uni parti quod removetur ab alia.
+            </p>
           </div>
           <div>
             <head xml:id="l59-Htidepi">Tertia: in Deo est pluralitas idearum</head>
-            
-         <p xml:id="l59-tidaef">tertio in deo est pluralitas idearum et Realis distinctio earum, 
-           ergo ibi non est summa simplicitas. immo est ibi idearum distinctarum 
-           infinitas. unde <name ref="#Augustine">augustinus</name> <title ref="#deDiversisQuaestionibus">octoginta-trium quaestionum</title> 
-           quaestione 86 ponit quod alia ratione factus est homo, alia ratione 
-           factus est aequus, ergo in deo sunt ideae variae specierum ad 
-           extra factive.</p> 
-            
-           <p xml:id="l59-aiceer">Ad idem concordant doctores varii dicentes 
+            <p xml:id="l59-tidaef">
+              Tertio in deo est pluralitas idearum et Realis distinctio earum, 
+              ergo ibi non est summa simplicitas. immo est ibi idearum distinctarum 
+              infinitas. 
+              Unde 
+              <cit>
+                <ref target="http://scta.info/resource/a83-q86">
+                  <name ref="#Augustine">Augustinus</name> 
+                  <title ref="#deDiversisQuaestionibus">octoginta-trium quaestionum</title> 
+                  quaestione 86
+                </ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              ponit quod alia ratione factus est homo, 
+              alia ratione factus est aequus, 
+              ergo in deo sunt ideae variae specierum ad extra factive.
+            </p> 
+           <p xml:id="l59-aiceer">
+             Ad idem concordant doctores varii dicentes 
              in deo esse pluralitates idearum, et alio modo dicunt quod in deo 
-             sunt variae mensurae Rerum rationes[?] producibilium Regulae fulgores 
-             origines et  esse rerum.</p> 
-            
-            <p xml:id="l59-uatdcb">unde <ref><name ref="#Augustine">Augustinus</name> III 
-              <title ref="#deTrinitate">De Trinitate</title> <supplied>18<!-- witnesses record 16 --></supplied> capitulo</ref> dicit de deo 
+             sunt variae mensurae rerum <unclear>rationes</unclear> producibilium regulae fulgores 
+             origines et esse rerum.
+           </p>
+            <p xml:id="l59-uatdcb">
+              Unde 
+              <ref>
+                <name ref="#Augustine">Augustinus</name> 
+                III 
+                <title ref="#deTrinitate">De Trinitate</title> 
+                <supplied>18<!-- witnesses record 16 --></supplied> capitulo
+              </ref> 
+              dicit de deo 
               <cit>
                 <quote source="http://scta.info/resource/adt-l3-d1e444">
                   quod penes ipsum sunt mensurae, 
@@ -133,43 +160,61 @@
                   VI
                 </bibl>
               </cit> 
-              Et <name ref="#Dionysius">Dionysius</name> 
-              <title ref="#deCaelestiHierarchia">De caelesti 
-                <sic>gerarchia</sic></title> vocat ideas fulgores, et 
-              <name ref="#Ambrose">Ambrosius</name> in <title ref="#Hexameron">exameron</title> 
+              Et 
+              <cit>
+                <ref>
+                  <name ref="#Dionysius">Dionysius</name> 
+                  <title ref="#deCaelestiHierarchia">De caelesti hierarchia</title>
+                </ref>
+              </cit> 
+              vocat ideas fulgores, 
+              et 
+              <cit>
+                <ref>
+                  <name ref="#Ambrose">Ambrosius</name> 
+                  in <title ref="#Hexameron">Hexameron</title>
+                </ref>
+              </cit> 
               vocat ideas origines et causas Rerum. et sic apparet quod 
               doctores ponunt diversitatem et pluralitatem idearum in 
               divina essentia. et ista dimitto causa brevitatis.
             </p>
           </div>
         </div>
-            <div>
-              
-        <head xml:id="l59-Hrppppa">Rationes pro prima propositio: probatio antecedentis</head>
-        
-              <p xml:id="l59-srafid">Sed Reddeo 
-                ad primum: antecedens probandum, scilicet, quod sit pluralitas rationum 
-                formalium in deo.</p>
-      <div>
-        <head xml:id="l59-Hprprpr">Prima ratio</head>
-      
-        <p xml:id="l59-epaepn">Et primo arguo per rationes <name ref="#Scotus">scoti</name> qui 
-          vult probare quod inter divinam sapientiam et divinam bonitatem 
-          sit non identitas, et ita de aliis attributis primo 
-          sit, si infinita sapientia esset formaliter bonitas infinita, 
-          tunc sapientia in communi esset bonitas, in communi etiam formaliter. 
-          et ista Ratio est obscura. sed exponetur in solvendo 
-          eam tunc arguitur, quia ratio infiniti non variat rationem illius 
-          <cb ed="#SV" n="271ra"/>cui additur. Sed probat quod consequens sit falsum, quia tunc in diffinitione quidditativa 
-          sapientiae poneretur tamquam pars bonitas vel esset eius 
-          diffinitio ista ratio indigebit longa expositione. ideo non expono 
-          pro nunc.</p>
-        
-      </div>
+        <div>
+          <head xml:id="l59-Hrppppa">Rationes pro prima propositio: probatio antecedentis</head>
+          <p xml:id="l59-srafid">
+            Sed reddeo ad primum: 
+            antecedens probandum, 
+            scilicet quod sit pluralitas rationum formalium in deo.
+          </p>
           <div>
-          <head xml:id="l59-Hsrsrsr">Secunda ratio</head>
-      
-            <p xml:id="l59-sasiev">secundo arguitur sic: distinctio emanationum divinarum 
+            <head xml:id="l59-Hprprpr">Prima ratio</head>
+            <p xml:id="l59-epaepn">
+              Et primo arguo per rationes <name ref="#Scotus">scoti</name> qui 
+              vult probare quod inter divinam sapientiam et divinam bonitatem 
+              sit non identitas, et ita de aliis attributis primo 
+              sit, si infinita sapientia esset formaliter bonitas infinita, 
+              tunc sapientia in communi esset bonitas, in communi etiam formaliter. 
+              et ista ratio est obscura. 
+              Sed exponetur in solvendo 
+              eam tunc arguitur 
+              quia ratio infiniti non variat rationem illius 
+              <pb ed="#SV" n="271-r"/>
+              <cb ed="#SV" n="a"/>
+              cui additur. 
+              Sed probat quod consequens sit falsum 
+              quia tunc in diffinitione quidditativa 
+              sapientiae poneretur tamquam pars bonitas vel esset eius 
+              diffinitio ista ratio indigebit longa expositione, 
+              ideo non expono pro nunc.
+            </p>
+          </div>
+          <div>
+            <head xml:id="l59-Hsrsrsr">Secunda ratio</head>
+            <p xml:id="l59-sasiev">
+              Secundo arguitur sic: 
+              distinctio emanationum divinarum 
               necessario praesumpsit distinctionem principiorum elicitivorum et non distinctione 
               rationis tantum, quia illa est impertinens, nec Realem simpliciter 
               quam una Res negatur de alia, ergo formalem. prima pars antecedentis 
@@ -177,120 +222,147 @@
               esse diversitas principiorum elicitivorum, nec posset salvari 
               quomodo filius procederet secundum modum naturae. et spiritus 
               sanctus non, nisi poneretur diversitas principiorum elicitivorum quae 
-              Resolvitur ad intellectum et voluntatem.</p>
-              </div>
-              
-              <div>
-                
-                <head xml:id="dT57Htrtrtr">Terta ratio</head>
-                
-      <p xml:id="l59-tqeiaa">tertio quidquid est 
-        ex se formaliter idem existens principium producendi duo pari ratione 
-        potest esse principium producendi infinita patet quia si eodem modo se habendo 
-        adaequate potest in duo eadem ratione in tria et in infinita. 
-        ex quo cum unitate principii eodem modo se habentis formaliter stat 
-        diversitas principiorum. Exemplum in naturalibus: sicut ignis se habens 
-        eodem modo adaequate potest producere unum ignem et duos, et sic 
-        in infinitum. Ita potest poni exemplum in agentibus aequivocis[?].</p> 
-      
-      <p xml:id="l59-isspcn">Item 
-        spiritus sanctus producitur libere et filius naturaliter, et ista 
-        varietas non oritur ex modo actuum, sicut patet exemplum 
-        de actu voluntatis, qui, licet sit liber, tamen hanc denominationem 
-        Recipit a suo principio effectivo. ergo si in divinis aliqua 
-        sit productio libere oportet quod sit respectu principii liberi, et 
-        si aliqua sit naturalis oportet quod sit respectu principii naturalis, 
-        sicut respectu effectus liberi ponitur causa libera, et respectu naturalis 
-        ponitur causa naturalis.</p>
-          
-                <p xml:id="l59-iaaenc">Item aliqua attribuuntur sive competunt 
-                  divinae voluntati, quae non intellectui divino, nam 
-                  voluntas divina ex se determinat libere respectu positionis effectus 
-                  in esse. et non intellectus, quia intellectus divinus est necessario 
-                  cognitio.</p> 
-                
-                <p xml:id="l59-evanvm">et viceversa aliqua attribuuntur intellectui, 
-                  quae non voluntati, quia intellectus divinus intelligit mala 
-                  et voluntas divina non vult mala.</p>
-      
-      <p xml:id="l59-aiaqef">Ad idem arguit 
-        <name ref="#Ripa">magister Iohannes de Rippa</name>. primo sic: divina essentia 
-        est participalis in esse ab aliquo. et ab eodem non participatur 
-        in esse vitae, ergo in deo est aliqualis distinctio inter 
-        esse et esse vitae. nam si participatio dei in esse simpliciter a 
-        parte obiecti esset idem formaliter in esse et in esse vitae. tunc 
-        quidquid deo participaret in esse et in esse vitae. et sic materia 
-        prima, quia participat in esse tunc participaret esse vivens, quod 
-        est falsum.</p>
-      
-      <p xml:id="l59-issqpi">Item si sic sequeretur quod Res non differet 
-        specie, sed solum secundum intensum et Remissum. consequens est falsum. 
-        probatur consequentia, quia ex quo Res participant eandem rationem 
-        formalem in deo sequitur quod non erit diversitas inter res 
-        participantes, nisi secundum intensum Remissum, ex quo est eadem ratio 
-        <cb ed="#SV" n="271rb"/>formalitatis in deo, quae participatur ab omnibus. et sic inter Res non 
-        erit differentia specifica. licet alia et alia participaret intensius vel Remissius. 
-        alias rationes facit, quae posterius introducentur.</p>
-                </div>
-            </div>
-          
+              resolvitur ad intellectum et voluntatem.
+            </p>
+          </div>
           <div>
-            
-            <head xml:id="l59-Hraootp">Rationes ad oppositum trium propositionum</head>
-            
-            <p xml:id="l59-aoiepd">Ad oppositum istorum trium arguitur auctoritate <name ref="#Dionysius">dionysii</name> ponentis 
-              quod circa divina non est aliquid assentiendum nisi quod divina docent 
-              eloquia. et per consequens cum non habeamus ex sacra scriptura, 
-              nec ex determinatione ecclesiae, nec ex auctoritate ligante 
-              nec ex ratione convincente quod sit huiusmodi pluralitas 
-              formalitatum. videtur quod nullo modo, licet talia circa deitatem 
-              asserere, et maxime considerata <name ref="#Anselm">venerabilis anselmi</name> 
-              regula dicentis quod in divinis omnia sunt idem, ubi non obviat 
-              relationis opposito, ergo praecise inter personas relativas ex ponenda 
-              distinctio.</p>
-      
-      <p xml:id="l59-iasddm">Item arguitur sic: nam positio distinctionis formalitatum 
-        et distinctionis essentiae ad personam est difficilior quam sit 
-        distinctio personarum inter se et magis Recedens a 
-        communi apparentia quam positio trinitatis, ergo non est ponenda. Ex quo 
-        fides non astringit, nec fides nos ad haec obligat, 
-        et illud est maius quam fides sequitur quod non est ponendum. 
-        antecedens probatur, quia mirabilitas positionis trinitatis, et tota difficultas 
-        trinitatis est in hoc quia ponit distinctionem Realem minorem quam 
-        sit distinctio essentialis, quia ponit distinctionem sic quod haec res 
-        quae est persona non est haec Res quae est alia persona, et tamen haec res 
-        est essentia. Ista est distinctio minor quam in creaturis. modo 
-        distinctio formalitatum multo plus Recedit a distinctione essentiali, 
-        quia distinctio formalitatum est multo minor quam sit distinctio realis 
-        personarum, ergo si positio trinitatis est mirabilis ad sustinendum 
-        ratione Recessus distinctionis Realis ab essentiali sequitur 
-        quod positio formalitatum est magis mirabilis quia magis 
-        Recedit et maxime cum fides non alligat. et 
-        omnia alia aeque salvantur sine positione formalitatum et 
-        aeque salvatur articulus trinitatis et est aeque difficilis, sicut 
-        positio trinitatis sequitur quod non est nisi voluntarium huiusmodi 
-        distinctionem formalitatum ponere rationes alias quas faciunt 
-        intendo deducere declarando materiam.</p> 
-            </div>
-          
-          <div>
-            <head xml:id="l59-Hdraatp">Divisio responsionis ad tres propositiones</head>
-            
-      <p xml:id="l59-cttams">Circa tria tacta, 
-        tria erunt puncta tractanda antequam veniam ad materiam 
-        simpliciter.</p> 
-            
-            <p xml:id="l59-pedmsit">Primus erit de formalitatibus, utrum sint ponendae, 
-              et inducam opiniones doctorum. et videbitur quid in ista 
-              materia sit tenendum.</p> 
-            
-            <p xml:id="l59-sedeep">secundus erit de distinctione alia, quae vocatur ex natura 
-              Rei, quae ab aliquibus ponitur inter essentiam et personam.</p> 
-            
-            <p xml:id="l59-tedise">tertius erit de ideis, utrum sint ponendae in deo et si sic, 
-              quomodo inter se, etc.</p>
-          </div>  
+            <head xml:id="dT57Htrtrtr">Terta ratio</head>
+            <p xml:id="l59-tqeiaa">
+              Tertio quidquid est 
+              ex se formaliter idem existens principium producendi duo pari ratione 
+              potest esse principium producendi infinita patet quia si eodem modo se habendo 
+              adaequate potest in duo eadem ratione in tria et in infinita. 
+              ex quo cum unitate principii eodem modo se habentis formaliter stat 
+              diversitas principiorum. Exemplum in naturalibus: sicut ignis se habens 
+              eodem modo adaequate potest producere unum ignem et duos, et sic 
+              in infinitum. Ita potest poni exemplum in agentibus aequivocis[?].
+            </p>
+            <p xml:id="l59-isspcn">
+              Item, 
+              spiritus sanctus producitur libere et filius naturaliter, et ista 
+              varietas non oritur ex modo actuum, sicut patet exemplum 
+              de actu voluntatis, qui, licet sit liber, tamen hanc denominationem 
+              recipit a suo principio effectivo, 
+              ergo si in divinis aliqua 
+              sit productio libere oportet quod sit respectu principii liberi, 
+              et si aliqua sit naturalis oportet quod sit respectu principii naturalis, 
+              sicut respectu effectus liberi ponitur causa libera, 
+              et respectu naturalis ponitur causa naturalis.
+            </p>
+            <p xml:id="l59-iaaenc">
+              Item, 
+              aliqua attribuuntur sive competunt 
+              divinae voluntati, quae non intellectui divino, nam 
+              voluntas divina ex se determinat libere respectu positionis effectus 
+              in esse. et non intellectus, quia intellectus divinus est necessario 
+              cognitio.
+            </p>
+            <p xml:id="l59-evanvm">
+              Et viceversa aliqua attribuuntur intellectui, 
+              quae non voluntati, quia intellectus divinus intelligit mala 
+              et voluntas divina non vult mala.
+            </p>
+            <p xml:id="l59-aiaqef">
+              Ad idem arguit 
+              <name ref="#Ripa">Magister Iohannes de Rippa</name>, 
+              primo sic: divina essentia 
+              est participalis in esse ab aliquo. 
+              et ab eodem non participatur in esse vitae, 
+              ergo in deo est aliqualis distinctio inter 
+              esse et esse vitae, 
+              nam si participatio dei in esse simpliciter a 
+              parte obiecti esset idem formaliter in esse et in esse vitae. tunc 
+              quidquid deo participaret in esse et in esse vitae, 
+              et sic materia prima 
+              quia participat in esse 
+              tunc participaret esse vivens, 
+              quod est falsum.
+            </p>
+            <p xml:id="l59-issqpi">
+              Item, 
+              si sic sequeretur quod res non differet specie, 
+              sed solum secundum intensum et remissum. 
+              Consequens est falsum. 
+              Probatur consequentia, 
+              quia ex quo res participant eandem rationem 
+              formalem in deo sequitur quod non erit diversitas inter res 
+              participantes, nisi secundum intensum remissum, 
+              ex quo est eadem ratio 
+              <cb ed="#SV" n="b"/><!--271rb-->
+              formalitatis in deo, 
+              quae participatur ab omnibus, 
+              et sic inter res non 
+              erit differentia specifica, 
+              licet alia et alia participaret intensius vel remissius. 
+              alias rationes facit, quae posterius introducentur.
+            </p>
+          </div>
         </div>
+        <div>
+          <head xml:id="l59-Hraootp">Rationes ad oppositum trium propositionum</head>
+          <p xml:id="l59-aoiepd">
+            Ad oppositum istorum trium arguitur auctoritate <name ref="#Dionysius">dionysii</name> ponentis 
+            quod circa divina non est aliquid assentiendum nisi quod divina docent 
+            eloquia. et per consequens cum non habeamus ex sacra scriptura, 
+            nec ex determinatione ecclesiae, nec ex auctoritate ligante 
+            nec ex ratione convincente quod sit huiusmodi pluralitas 
+            formalitatum. videtur quod nullo modo, licet talia circa deitatem 
+            asserere, et maxime considerata <name ref="#Anselm">venerabilis anselmi</name> 
+            regula dicentis quod in divinis omnia sunt idem, ubi non obviat 
+            relationis opposito, ergo praecise inter personas relativas ex ponenda 
+            distinctio.
+          </p>
+          <p xml:id="l59-iasddm">
+            Item, 
+            arguitur sic: nam positio distinctionis formalitatum 
+            et distinctionis essentiae ad personam est difficilior quam sit 
+            distinctio personarum inter se et magis Recedens a 
+            communi apparentia quam positio trinitatis, ergo non est ponenda. Ex quo 
+            fides non astringit, nec fides nos ad haec obligat, 
+            et illud est maius quam fides sequitur quod non est ponendum. 
+            antecedens probatur, quia mirabilitas positionis trinitatis, et tota difficultas 
+            trinitatis est in hoc quia ponit distinctionem Realem minorem quam 
+            sit distinctio essentialis, quia ponit distinctionem sic quod haec res 
+            quae est persona non est haec res quae est alia persona, et tamen haec res 
+            est essentia. Ista est distinctio minor quam in creaturis. modo 
+            distinctio formalitatum multo plus recedit a distinctione essentiali, 
+            quia distinctio formalitatum est multo minor quam sit distinctio realis 
+            personarum, ergo si positio trinitatis est mirabilis ad sustinendum 
+            ratione recessus distinctionis realis ab essentiali sequitur 
+            quod positio formalitatum est magis mirabilis quia magis 
+            recedit et maxime cum fides non alligat. 
+            Et omnia alia aeque salvantur sine positione formalitatum et 
+            aeque salvatur articulus trinitatis et est aeque difficilis, sicut 
+            positio trinitatis sequitur quod non est nisi voluntarium huiusmodi 
+            distinctionem formalitatum ponere rationes alias quas faciunt 
+            intendo deducere declarando materiam.
+          </p>
+        </div>
+        <div>
+          <head xml:id="l59-Hdraatp">Divisio responsionis ad tres propositiones</head>
+          <p xml:id="l59-cttams">
+            Circa tria tacta, 
+            tria erunt puncta tractanda antequam veniam ad materiam 
+            simpliciter.
+          </p> 
+          <p xml:id="l59-pedmsit">
+            Primus erit de formalitatibus, utrum sint ponendae, 
+            et inducam opiniones doctorum. 
+            Et videbitur quid in ista 
+            materia sit tenendum.
+          </p> 
+          <p xml:id="l59-sedeep">
+            Secundus erit de distinctione alia, 
+            quae vocatur ex natura rei, 
+            quae ab aliquibus ponitur inter essentiam et personam.
+          </p>
+          <p xml:id="l59-tedise">
+            Tertius erit de ideis, 
+            utrum sint ponendae in deo et si sic, 
+            quomodo inter se, etc.
+          </p>
+        </div>  
+      </div>
     </body>
   </text>
 </TEI>
