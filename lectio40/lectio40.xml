@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -8,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.07-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 40, de Fruitione</title>
           <date when="2012-07-07">July 07, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-07-07">July 7th, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -30,129 +27,163 @@
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-07-07" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
-    <front xml:lang="la">
-      
+    <front>
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="246-r"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio40">
-        <head xml:id="l40-Hldfldf" subtype="title">Lectio 40, de Fruitione</head>
+        <head xml:id="l40-Hldfldf">Lectio 40, de Fruitione</head>
         <div xml:id="l40-Dd1e83">
           <!-- this section was originally in 39 and correctly moved to 40; it should be corrected now in all diplomatic transcriptions-->
           <head xml:id="l40-Hqeqdnp">Quod ea quae tacta fuerunt quantum ad materiam nobilitatis non sunt intelligenda de nobilitate politica</head>
-          
-          <p xml:id="l40-aecldn">Advertendum est circa prius dicta quod ea quae tacta fuerunt 
-            quantum ad materiam nobilitatis <seg ana="#politica">non sunt intelligenda de 
-              nobilitate politica secundum communem usum loquendi, quia ad dei subiectionem 
-              non sufficit talis nobilitas politica</seg>, quae quid 
+          <p xml:id="l40-aecldn">
+            Advertendum est circa prius dicta quod ea quae tacta fuerunt 
+            quantum ad materiam nobilitatis non sunt intelligenda de 
+            nobilitate politica secundum communem usum loquendi, quia ad dei subiectionem 
+            non sufficit talis nobilitas politica, quae quid 
             subiectio creaturae ad deum non est nisi amor dei et 
             voluntas obediendi sibi offerendo se totum deo, et 
-            non Reflectendo aliquid in se, ideo dicit <name ref="#Augustine">augustinus</name> in libro 
-            <title ref="#CityOfGod">de civitate dei</title> duas civitates fecerunt duo amores, 
-            amor dei usque ad contemptum sui, amor sui usque 
-            ad contemptum dei <seg ana="#politica">et huiusmodi subiectio non sufficit 
-              ad nobilitatem politicam secundum quod utuntur leges de nobilitate</seg>.</p>      
-          
-          <p xml:id="l40-dsqecl"><seg ana="#politica">Dico secundo quod ab huiusmodi subiectione et eius umbra 
-            nobilitas politica <unclear>sumpser[?]</unclear> <name ref="#Origen">originem</name></seg>, quia ab ea antiqui 
-            sumpserunt et condiderunt leges.</p>
-          
-          <p xml:id="l40-tdqpfn"><seg ana="#politica">tertio dico quod ad nobilitatem 
+            non reflectendo aliquid in se, 
+            ideo dicit 
+            <ref xml:id="l40-Rd1e118">
+              <name ref="#Augustine">Augustinus</name> 
+              in libro
+              <title ref="#CityOfGod">De civitate Dei</title>
+            </ref>
+            <cit>
+              <quote xml:id="l40-Qd1e129" source="http://scta.info/resource/adcd-l14-d1e2142">
+                duas civitates fecerunt duo amores, 
+                amor dei usque ad contemptum sui, 
+                amor sui usque ad contemptum dei
+              </quote>
+            </cit> 
+            et huiusmodi subiectio non sufficit 
+            ad nobilitatem politicam secundum 
+            quod utuntur leges de nobilitate.
+          </p>
+          <p xml:id="l40-dsqecl">
+            Dico secundo quod ab huiusmodi subiectione et eius umbra 
+            nobilitas politica <unclear>sumpser</unclear> 
+            <name ref="#Origen">Originem</name>, 
+            quia ab ea antiqui 
+            sumpserunt et condiderunt leges.
+          </p>
+          <p xml:id="l40-tdqpfn">
+            Tertio dico quod ad nobilitatem 
             politicam ultra virtutem apparentem vel existentem 
-            Requiritur applicatio ad conferentia politicae</seg>. 
-            
-            <seg ana="#politica">unde quantumcumque 
-              quis esset virtuosus non propter hoc diceretur nobilis 
-              <unclear>politicae[?]</unclear>, nisi eius virtus diffunderetur in politia</seg>. 
-            
-            <seg ana="#politica">Requiritur 
-              etiam longa continuatio quia propter unum solum factum in politia 
-              non dicitur unus nobilis, sed Requiritur quod continuet et faciat 
-              plura facta nobilitatis</seg>.</p>
-          
-          <p xml:id="l40-idccnd" ana="#politica">Ideo dicitur consequentur quod servitus peccati 
+            requiritur applicatio ad conferentia politicae.
+            Unde quantumcumque 
+            quis esset virtuosus non propter hoc diceretur nobilis 
+            <unclear>politicae</unclear>, 
+            nisi eius virtus diffunderetur in politia. 
+            Requiritur 
+            etiam longa continuatio 
+            quia propter unum solum factum in politia 
+            non dicitur unus nobilis, 
+            sed requiritur quod continuet et faciat 
+            plura facta nobilitatis.
+          </p>
+          <p xml:id="l40-idccnd">
+            Ideo dicitur consequentur quod servitus peccati 
             non tollit nobilitatem politicam, saltem cum diu non 
-            duret.</p>
-          
-          <p xml:id="l40-idqpni">Item dicitur quod servitus peccati non etiam tollit 
+            duret.
+          </p>
+          <p xml:id="l40-idqpni">
+            Item dicitur quod servitus peccati non etiam tollit 
             dominium, nam sacra scriptura praecipit quod servi obediant 
             dominis suis supposito adhuc quod sint in peccato. qui nec 
             sunt de intrinsecam ratione nobilitatis non pertinet ad 
-            propositum nec pro nunc investigabitur et cetera et cetera.</p>
+            propositum nec pro nunc investigabitur et cetera et cetera.
+          </p>
         </div>
         <div xml:id="l40-Dd1e187">
           <head xml:id="l40-Hmpddfo">Materia principalis: diffinitio fruitionis ordinatae</head>
-          
-      <p xml:id="l40-vamdps">Veniendo ad materiam principalem satis ex declaratione 
-        habitudinis ipsius dei ad creaturam apparet quod deus est solum 
-        obiectum licitae fruitionis et obiectum beatificum, quia in nulla creatura 
-        Reperitur ratio fruibilis vel terminantis finaliter vel satiantis. 
-        unde fruitio ordinata potest sic describi, fruitio ordinata est 
-        dilectio dei propter se.</p>
-      
-      <div xml:id="l40-Dd1e206">
-        <head xml:id="l40-Hobines">Obiectiones</head>
-      
-        <p xml:id="l40-scaeim">
-          Sed contra arguitur ex dictis 
-            <cit>
-              <ref xml:id="l40-Rd1e217" target="http://scta.info/resource/l34-ideaed">
-                in praecedenti quaestione
-              </ref>
-              <bibl>Vide supra</bibl>
-            </cit>,
-          nam deus est diligendus propter beneficia, ergo beneficia 
-          sunt magis diligenda, quia propter unum quodque talem et illud magis.
-          <!--<note type="crossReference">See below for response <ref xml:id="l40-Rd1e226" target="lectio40.xml#l40-aprnof" type="crossReference">Lecture 38, para. </ref></note>
-          -->
-        </p>
-      
-        <p xml:id="l40-iacnvc">Item
-          <!--<note type="crossReference">See below <ref xml:id="l40-Rd1e233" target="lectio40.xml#l40-qaspnr" type="crossReference">Lecture 38, para. </ref></note>--> 
-          arguitur contra illud propter se, quia vel li 'propter se' capitur 
-          negative vel positive, non negative, quia tunc creatura esset fruendum, 
-          quia virtutes propter se diliguntur quia virtutes possunt diligi et 
-          quod illa dilectio non Referatur in aliud, si capitur positive oportet quod sit 
-          alterum duorum modorum vel quia huiusmodi dilectio habet li propter 
-          se tamquam partem obiecti, vel quia huiusmodi dilectionem praecedit 
-          amor dei alius propter quem amor dei causatur quia non videtur 
-          alius modus explicandi li propter se, sed neutrum est dicendum quia 
-          si detur principium, tunc Realiter erit bis obiectum eiusdem dilectionis si li 
-          propter se sit pars dilectionis obiecti dei, nam tunc Replicabit 
-          idem quod non videtur conveniens, si detur secundum tunc numquam staret 
-          habere unicum actum diligendi deum fruitione, sed semper duo Requirerentur 
-          quod non videtur conveniens.
-        </p> 
-        <p xml:id="l40-arprof">
-          Aliae rationes possunt induci quia 
-          quaereretur qua dilectione una persona divina diligit aliam, 
-          quia videtur quod persona in esse personali non habet rationem obiecti fruibilis, 
-          quia tunc essent plures rationes obiectales fruibiles.
-          <!--<note type="crossReference">This concern was previously raised in <ref xml:id="l40-Rd1e273" target="lectio34.xml#l34-ineuof" type="crossReference">lectio 32, para</ref> and is responded to below at <ref xml:id="l40-Rd1e276" target="lectio41.xml#l41-reedpp">Lecture 41, para. </ref></note>-->
-        </p>
-        <p xml:id="l40-iqqnrb">Item quaereretur 
-          qua ratione pater diligit filium, et sic si filius in esse personali 
-          non dicat rationem fruibilis, ergo nec rationem bonitatis.
-        </p>
-        
-        <p xml:id="l40-eqdsde">Etiam quaereretur de tota civitate, etiam apud <name ref="#formalizantes" type="group">formalizantes</name> quaereretur 
-          sub qua ratione compraehendit se divina essentia.</p>
-      
-        <p xml:id="l40-iaqpoe">
-          Item
-          <!--<note type="crossReference">See below <ref xml:id="l40-Rd1e300" target="lectio41.xml#l41-schuvf" type="crossReference">Lecture 41, para. </ref> and response at <ref xml:id="l40-Rd1e303" target="lectio41.xml#l41-crsuef" type="crossReference">Lecture 41, para</ref></note>--> 
-          <unclear>confirmatur[?]</unclear> 
-          quia idem actus est usus et fruitio ordinata sit, ergo ille actus <c>a</c>, 
-          tunc est fruitio et habet creaturam pro obiecto, ergo.
-        </p>
-      </div>
+          <p xml:id="l40-vamdps">
+            Veniendo ad materiam principalem satis ex declaratione 
+            habitudinis ipsius dei ad creaturam apparet quod deus est solum 
+            obiectum licitae fruitionis et obiectum beatificum, quia in nulla creatura 
+            Reperitur ratio fruibilis vel terminantis finaliter vel satiantis. 
+            unde fruitio ordinata potest sic describi, fruitio ordinata est 
+            dilectio dei propter se.
+          </p>
+          <div xml:id="l40-Dd1e206">
+            <head xml:id="l40-Hobines">Obiectiones</head>
+            <p xml:id="l40-scaeim">
+              Sed contra arguitur ex dictis
+              <cit>
+                <ref xml:id="l40-Rd1e217" target="http://scta.info/resource/l34-ideaed">
+                  in praecedenti quaestione
+                </ref>
+                <bibl>Vide supra</bibl>
+              </cit>,
+              nam deus est diligendus propter beneficia, ergo beneficia 
+              sunt magis diligenda, quia propter unum quodque talem et illud magis.
+              <!--<note type="crossReference">See below for response <ref xml:id="l40-Rd1e226" target="lectio40.xml#l40-aprnof" type="crossReference">Lecture 38, para. </ref></note>
+              -->
+            </p>
+            <p xml:id="l40-iacnvc">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l40-Rd1e233" target="lectio40.xml#l40-qaspnr" type="crossReference">Lecture 38, para. </ref></note>--> 
+              arguitur contra illud propter se, quia vel li 'propter se' capitur 
+              negative vel positive, non negative, quia tunc creatura esset fruendum, 
+              quia virtutes propter se diliguntur quia virtutes possunt diligi et 
+              quod illa dilectio non Referatur in aliud, si capitur positive oportet quod sit 
+              alterum duorum modorum vel quia huiusmodi dilectio habet li propter 
+              se tamquam partem obiecti, vel quia huiusmodi dilectionem praecedit 
+              amor dei alius propter quem amor dei causatur quia non videtur 
+              alius modus explicandi li propter se, sed neutrum est dicendum quia 
+              si detur principium, tunc Realiter erit bis obiectum eiusdem dilectionis si li 
+              propter se sit pars dilectionis obiecti dei, nam tunc Replicabit 
+              idem quod non videtur conveniens, si detur secundum tunc numquam staret 
+              habere unicum actum diligendi deum fruitione, sed semper duo Requirerentur 
+              quod non videtur conveniens.
+            </p>
+            <p xml:id="l40-arprof">
+              Aliae rationes possunt induci quia 
+              quaereretur qua dilectione una persona divina diligit aliam, 
+              quia videtur quod persona in esse personali non habet rationem obiecti fruibilis, 
+              quia tunc essent plures rationes obiectales fruibiles.
+              <!--<note type="crossReference">This concern was previously raised in <ref xml:id="l40-Rd1e273" target="lectio34.xml#l34-ineuof" type="crossReference">lectio 32, para</ref> and is responded to below at <ref xml:id="l40-Rd1e276" target="lectio41.xml#l41-reedpp">Lecture 41, para. </ref></note>-->
+            </p>
+            <p xml:id="l40-iqqnrb">Item quaereretur 
+              qua ratione pater diligit filium, et sic si filius in esse personali 
+              non dicat rationem fruibilis, ergo nec rationem bonitatis.
+            </p>
+            <p xml:id="l40-eqdsde">
+              Etiam quaereretur de tota civitate, etiam apud 
+              <name ref="#formalizantes" type="group">formalizantes</name> quaereretur 
+              sub qua ratione compraehendit se divina essentia.
+            </p>
+            <p xml:id="l40-iaqpoe">
+              Item
+              <!--<note type="crossReference">See below <ref xml:id="l40-Rd1e300" target="lectio41.xml#l41-schuvf" type="crossReference">Lecture 41, para. </ref> and response at <ref xml:id="l40-Rd1e303" target="lectio41.xml#l41-crsuef" type="crossReference">Lecture 41, para</ref></note>--> 
+              <unclear>confirmatur[?]</unclear> 
+              quia idem actus est usus et fruitio ordinata sit, ergo ille actus <c>a</c>, 
+              tunc est fruitio et habet creaturam pro obiecto, ergo.
+            </p>
+          </div>
           <div xml:id="l40-Dd1e316">
             <head xml:id="l40-Hraorao">Responsiones ad obiectiones</head>
-        
             <div xml:id="l40-Dd1e321">
               <head xml:id="l40-Hapapap">Ad primum</head>
-              
               <p xml:id="l40-aprnof">
                 <cit>
                   <ref xml:id="l40-Rd1e330" target="http://scta.info/resource/l40-scaeim">Ad primum</ref>
@@ -169,7 +200,7 @@
                 divina arguunt ad intra summam bonitatem et largitatem modo 
                 ex hoc quod beneficia solum iudicant non propter hoc habent 
                 rationem fruibilis, sed solum iudicant notitiam obiecti fruibilis.
-              </p> 
+              </p>
               <p xml:id="l40-speici">
                 Secundo possunt esse causa Rememorativa ad istum sensum quod faciant 
                 ostendere materiam obiecti fruibili et ex hoc inducunt 
@@ -178,15 +209,17 @@
               <p xml:id="l40-tpcddf">
                 Tertio possunt considerari alligando et movendo 
                 potentiam, nam ex Receptione beneficiorum creatura Redditur promptior 
-                <cb ed="#SV" n="246va"/>ad existendum in actum fruitive et in hoc Reddunt potentiam volitivam 
+                <pb ed="#SV" n="246-v"/>
+                <cb ed="#SV" n="a"/>
+                ad existendum in actum fruitive et in hoc Reddunt potentiam volitivam 
                 promptiorem ad diligendum deum fruitive
               </p>
               <p xml:id="l40-qpcgce">
                 Auarto possunt concurrere in genere 
                 causae efficientis
               </p> 
-      
-              <p xml:id="l40-qpcqdd">quinto possunt concurrere in genere causae finalis, sed non essentialiter 
+              <p xml:id="l40-qpcqdd">
+                Quinto possunt concurrere in genere causae finalis, sed non essentialiter 
                 ordinat et iste est intellectus de quo magis ad propositum, in materia possunt enim 
                 concurrere beneficia vel dilectionis fruitione in genere causae finalis 
                 sic quod Realiter moveant per modum finis ad productionem dilectionis 
@@ -202,24 +235,30 @@
                 quod beneficium sic causa finalis essentialis propter quam diligo deum. 
                 si autem li 'propter' dicat causam occasionalem, tunc poterit concedi 
                 quod deus diligitur propter beneficia, quia beneficia sunt causa 
-                occasionalis propter quam deus diligitur.</p>
+                occasionalis propter quam deus diligitur.
+              </p>
             </div>
             <div xml:id="l40-Dd1e417">
               <head xml:id="l40-Hasasas">Ad secundum</head>
-            
               <p xml:id="l40-qaspnr">
                 Quantum 
                 <cit>
-                  <ref xml:id="l40-Rd1e426" target="http://scta.info/resource/l40-iacnvc">ad secundum</ref>
+                  <ref xml:id="l40-Rd1e426" target="http://scta.info/resource/l40-iacnvc">Ad secundum</ref>
                 </cit> 
                 utrum li 'propter' se capitur negative vel positive, dicendum quod positive capitur 
                 et non negative, quia tunc illa dilectio propter quam diligeretur 
                 deus non referretur. Sed ibi est difficultas in modo exprimendi, 
-                et breviter <name ref="#Ockham">Ockam</name> dicit quod deus diligitur propter se, quia deus 
-                diligitur et propter nullum aliud, et quodlibet aliud diligitur 
-                propter ipsum loquendo semper de dilectione fruitiva. et in hoc dicitur 
-                deus diligi propter se secundum imaginationem <name ref="#Ockham">Ockam</name> sed illud pro praesenti 
-                non reprobabitur.
+                et breviter 
+                <cit>
+                  <ref xml:id="l40-Rd1e273"><name ref="#Ockham">Ockam</name></ref>
+                  <bibl>XXX</bibl>
+                </cit> dicit quod deus diligitur propter se 
+                quia deus diligitur et propter nullum aliud, 
+                et quodlibet aliud diligitur 
+                propter ipsum loquendo semper de dilectione fruitiva, 
+                et in hoc dicitur deus diligi propter 
+                se secundum imaginationem <name ref="#Ockham">Ockam</name>, 
+                sed illud pro praesenti non reprobabitur.
               </p>
               <p xml:id="l40-seasod">
                 Sed est alius modus magis gratus, ubi 
@@ -238,9 +277,9 @@
               </p>
               <p xml:id="l40-eivsod">
                 Et istam viam ponit <name ref="#Chatton">Chatton</name>, et ita dicit quod ita debet 
-                intelligi quod deus est super omnia diligendus, non quod li 'propter 
-                se' teneat a parte obiecti, nec quod dilectionem fruitivam praecedat 
-                <cb ed="#SV" n="246vb"/>
+                intelligi quod deus est super omnia diligendus, non quod li <mentioned>propter 
+                se</mentioned> teneat a parte obiecti, nec quod dilectionem fruitivam praecedat 
+                <cb ed="#SV" n="b"/><!--SV246vb-->
                 maior alius, sed quia dilectionem fruitivam praecedit una maior 
                 cui asseritur ex fide, et minor assumitur in qua ponitur 
                 terminus supponens pro divinitate, ex quibus concluditur quod 
@@ -249,17 +288,17 @@
                 asserimus maiori, non autem sic est in aliis quia oportet 
                 quod sit desiderium assentiendi, et hoc respectu syllogismi 
                 practici, verbi gratia, ponatur quod sit aliquis qui non infirmetur 
-                et tunc sumatur ista maior omne Remedium pro sanitate 
+                et tunc sumatur ista maior omne remedium pro sanitate 
                 habenda est quaerendum, tunc iste non assentiet maiori, quia non 
                 vult nec desiderat, non autem sic est in proposito quia 
                 maiori assentietur ex fide, et minor erit consideratio 
                 deitatis, et ex illo, id est, ex maiori et consideratione 
-                deitatis inferetur quod deus est super omnia diligendus, etc.</p>
-              
+                deitatis inferetur quod deus est super omnia diligendus, etc.
+              </p>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </body>
   </text>
 </TEI>

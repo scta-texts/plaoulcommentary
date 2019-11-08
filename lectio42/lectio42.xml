@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -7,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2012.07-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 42, de Fruitione</title>
-          <date when="2012-07-10">July 10, 2012</date>
+          <date when="2012-07-19">July 19, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-07-10">July 10th, 2012</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -29,216 +27,282 @@
         </listWit>
       </sourceDesc>
     </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-07-19" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      
+      <div xml:id="starts-on">
+        <pb ed="#SV" n="249-v"/>
+        <cb ed="#SV" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio42">
-        
-        <head xml:id="l42-Hldfldf" subtype="title">Lectio 42, de Fruitione</head>
-        
+        <head xml:id="l42-Hldfldf">Lectio 42, de Fruitione</head>
         <div xml:id="l42-Dd1e85">
           <head xml:id="l42-Hrcqefo">Recapitulatio conclusionis: quod dilectio Dei propter se est fruitio ordinata</head>
-        
-         <p xml:id="l42-ehedfo">Ex habitudine et conditione creaturarum, dictum est 
-           quod nulla habet rationem quietativum, ideo nulla creatura 
-           est fruendum. consequenter dictum est quod dilectio dei 
-           propter se est fruitio ordinata et illa fuit descriptio 
-           fruitionis ordinatae.</p>
-         
+          <p xml:id="l42-ehedfo">
+            Ex habitudine et conditione creaturarum, dictum est 
+            quod nulla habet rationem quietativum, ideo nulla creatura 
+            est fruendum. consequenter dictum est quod dilectio dei 
+            propter se est fruitio ordinata et illa fuit descriptio 
+            fruitionis ordinatae.
+          </p>
         </div>
         <div xml:id="l42-Dd1e103">
-        
           <head xml:id="l42-Hrccefo">Rationes contra conclusionem quod dilectio Dei propter se est fruitio ordinata</head>
-        
-        <div xml:id="l42-Dd1e108">
-          <head xml:id="l42-Hprprpr">Prima ratio</head>
-      
-          <p xml:id="l42-chasib">Contra hoc arguitur multipliciter. 
-            primo sic: aliqua est dilectio dei propter se quae 
-            Realiter non est fruitio, ergo illa descriptio mala probatur 
-            antecedens. nam dilectio dei, quae terminatur ad personam secundum rationem 
-            personalitatis, illa est propter deum et propter se, et 
-            tamen non est fruitio patet, quia suppositum in esse suppositibili 
-            vel personali non est alicuius perfectionis, nec dicit 
-            <cb ed="#SV" n="248rb"/>aliqua perfectionem, ergo non habet rationem obiective fruitionis. consequentia 
-            tenet, quia de ratione obiecti fruibilis est quod sit immensae bonitatis.</p>
+          <div xml:id="l42-Dd1e108">
+            <head xml:id="l42-Hprprpr">Prima ratio</head>
+            <p xml:id="l42-chasib">
+              Contra hoc arguitur multipliciter. 
+              primo sic: aliqua est dilectio dei propter se quae 
+              Realiter non est fruitio, ergo illa descriptio mala probatur 
+              antecedens. nam dilectio dei, quae terminatur ad personam secundum rationem 
+              personalitatis, illa est propter deum et propter se, et 
+              tamen non est fruitio patet, quia suppositum in esse suppositibili 
+              vel personali non est alicuius perfectionis, nec dicit 
+              <cb ed="#SV" n="248rb"/><!--SV248rb-->
+              aliqua perfectionem, ergo non habet rationem obiective fruitionis. consequentia 
+              tenet, quia de ratione obiecti fruibilis est quod sit immensae bonitatis.
+            </p>
+          </div>
+          <div xml:id="l42-Dd1e135">
+            <head xml:id="l42-Hsrsrsr">Secunda ratio</head>
+            <p xml:id="l42-saiipp">
+              Secundo ad idem, probatur quod suppositum divinum in esse suppositi non possit 
+              esse obiectum fruibile, quia ut sic non continet aliquid gradum perfectionis 
+              vel bonitatis vel communicabilitatis ad extra, ergo non continet 
+              aliquam bonitatem ad intra. tenet consequentia quia de ratione bonitatis 
+              est quod sit ad extra sui ipsius diffusiva. antecedens patet, nam ratio personalitatis 
+              sive proprietatis personalis non communicabilis ad intra, ergo 
+              nec ad extra. consequentia tenet, quia ordo est quod quidquid communicatur 
+              ad extra per participationem. oportet quod sit communicabile ad intra per plenitudinem.
+            </p>
+            <p xml:id="l42-iaiesd">
+              Item ad istud propositum, allegatur dictum salvatorum non possum 
+              facere a me ipso quicquam. et hoc ratione personalitatis 
+              quia ratio personalitatis 
+              est solum distinctiva.
+            </p>
+          </div>
+          <div xml:id="l42-Dd1e168">
+            <head xml:id="l42-Htrtrtr">Tertia ratio</head>
+            <p xml:id="l42-tsvpof">
+              Tertio si verbum in esse suo personali 
+              esset obiectum fruibile, tunc Pater realiter beatificaretur in alio a se, 
+              et sic haberet obiectum fruibile distinctum a se quia filius distinguitur 
+              Realiter a patre, ergo si fruatur filio fruitur distincto a se, et 
+              etiam fruitur se et spiritu sancto pari ratione et tunc habebit plura 
+              obiecta fruibilia.
+            </p>
+            <p xml:id="l42-itpesb">
+              Item, tunc pater beatificaretur in alio et hoc 
+              dicit imperfectionem, quia tunc non haberet plenitudinem beatitudinis, 
+              immo essent duo obiecta fruibilia distincta ab ipso, et sic cuilibet 
+              per se deficerent duo obiecta fruibilia, et sicut arguitur de 
+              personis ad intra ita argueretur respectu voluntatis creatae, quia 
+              quaereretur in qua ratione se habeat persona in esse personae respectu voluntatis 
+              creatae, quia idem obiectum fruibile respectu voluntatis creatae 
+              et essentiae divinae vel personae, quia illud est summum bonum.
+            </p>
+            <p xml:id="l42-iarame">
+              Item arguitur 
+              ratio obiectiva fruitionis dicit perfectionem simpliciter, sed ratio personalis 
+              non dicit perfectionem simpliciter, quia esse patrem non est denominatio 
+              perfectionis simpliciter, quia tunc esset aliqua denominatio simpliciter 
+              quae competet patri quae non competit filio, et sic aliquid deus 
+              quod non haberet omnem perfectionem simpliciter tunc sic, ergo 
+              si pater in esse personali diligitur, diligitur aliquo actu 
+              qui non erit fruitio et sic erit usus vel actus medius etc.
+            </p>
+            <p xml:id="l42-caesfe">
+              Consequenter arguitur ex alia Radice et sic, gratia exempli, 
+              anima cui essentia divina obiciatur beatifice circa essentiam divinam, 
+              anima potest habere <unclear>plur</unclear> actus distinctos, quia habebit actum 
+              complacentiae, et ille est dilectio dei incomplexa qua voluntas 
+              complacet deo, et habebit alios actus complexos qui sunt 
+              velle deum esse, et deum esse summum bonum, et tamen primus actus 
+              qui est complacentiae et solum fruitio beatifica, et cum omnis dilectio 
+              complexa Resolvatur in simplicem illae dilectiones complexae 
+              sunt dilectiones et sunt propter se, tamen non sunt fruitiones, 
+              ergo.
+            </p>
+          </div>
         </div>
-        <div xml:id="l42-Dd1e135">
-          
-          <head xml:id="l42-Hsrsrsr">Secunda ratio</head>
-          
-          <p xml:id="l42-saiipp">secundo ad idem, probatur quod suppositum divinum in esse suppositi non possit 
-            esse obiectum fruibile, quia ut sic non continet aliquid gradum perfectionis 
-            vel bonitatis vel communicabilitatis ad extra, ergo non continet 
-            aliquam bonitatem ad intra. tenet consequentia quia de ratione bonitatis 
-            est quod sit ad extra sui ipsius diffusiva. antecedens patet, nam ratio personalitatis 
-            sive proprietatis personalis non communicabilis ad intra, ergo 
-            nec ad extra. consequentia tenet, quia ordo est quod quidquid communicatur 
-            ad extra per participationem. oportet quod sit communicabile ad intra per plenitudinem.</p>
-          
-          <p xml:id="l42-iaiesd">Item ad istud propositum, allegatur dictum salvatorum non possum 
-            facere a me ipso quicquam. et hoc ratione personalitatis, quia ratio personalitatis 
-            est solum distinctiva.</p>
-        
-        </div>
-        
-        <div xml:id="l42-Dd1e168">
-        
-          <head xml:id="l42-Htrtrtr">Tertia ratio</head>
-          
-          <p xml:id="l42-tsvpof">tertio si verbum in esse suo personali 
-            esset obiectum fruibile, tunc Pater Realiter beatificaretur in alio a se, 
-            et sic haberet obiectum fruibile distinctum a se quia filius distinguitur 
-            Realiter a patre, ergo si fruatur filio fruitur distincto a se, et 
-            etiam fruitur se et spiritu sancto pari ratione et tunc habebit plura 
-            obiecta fruibilia.</p>
-      
-          <p xml:id="l42-itpesb">Item, tunc pater beatificaretur in alio et hoc 
-            dicit imperfectionem, quia tunc non haberet plenitudinem beatitudinis, 
-            immo essent duo obiecta fruibilia distincta ab ipso, et sic cuilibet 
-            per se deficerent duo obiecta fruibilia, et sicut arguitur de 
-            personis ad intra ita argueretur respectu voluntatis creatae, quia 
-            quaereretur in qua ratione se habeat persona in esse personae respectu voluntatis 
-            creatae, quia idem obiectum fruibile respectu voluntatis creatae 
-            et essentiae divinae vel personae, quia illud est summum bonum.</p>
-      
-          <p xml:id="l42-iarame">Item arguitur 
-            ratio obiectiva fruitionis dicit perfectionem simpliciter, sed ratio personalis 
-            non dicit perfectionem simpliciter, quia esse patrem non est denominatio 
-            perfectionis simpliciter, quia tunc esset aliqua denominatio simpliciter 
-            quae competet patri quae non competit filio, et sic aliquid deus 
-            quod non haberet omnem perfectionem simpliciter tunc sic, ergo 
-            si pater in esse personali diligitur, diligitur aliquo actu 
-            qui non erit fruitio et sic erit usus vel actus medius etc.</p>
-      
-          <p xml:id="l42-caesfe">Consequenter arguitur ex alia Radice et sic, gratia exempli, 
-            anima cui essentia divina obiciatur beatifice circa essentiam divinam, 
-            anima potest habere plur actus distinctos, quia habebit actum 
-            complacentiae, et ille est dilectio dei incomplexa qua voluntas 
-            complacet deo, et habebit alios actus complexos qui sunt 
-            velle deum esse, et deum esse summum bonum, et tamen primus actus 
-            qui est complacentiae et solum fruitio beatifica, et cum omnis dilectio 
-            complexa Resolvatur in simplicem illae dilectiones complexae 
-            sunt dilectiones et sunt propter se, tamen non sunt fruitiones, 
-            ergo.</p>
-       
-        </div>
-      </div>
-          
         <div xml:id="l42-Dd1e247">
           <head xml:id="l42-Hacffir">Argumentum contra fundamentum istarum rationum</head>
-          
-          <p xml:id="l42-ararsi">Antequam Respondetur ad istas rationes, volo arguere 
+          <p xml:id="l42-ararsi">
+            Antequam Respondetur ad istas rationes, volo arguere 
             contra fundamentum istarum rationum. et primo volo probare 
-            <cb ed="#SV" n="248va"/>quod ista positio est male fudata et quod rationes sunt in valde.</p> 
-          
+            <pb ed="#SV" n="248-v"/>
+            <cb ed="#SV" n="a"/>
+            quod ista positio est male fudata et quod rationes sunt in valde.
+          </p> 
           <p xml:id="l42-psqapp">primo 
-            sequeretur quod pater in suo esse personali non esset tantae perfectionis, 
+            Sequeretur quod pater in suo esse personali non esset tantae perfectionis, 
             sicut minimum accidens dabile, consequens est inconveniens. patet consequentia, quia pater 
             in suo esse personali non esset  non dicit aliquam 
             perfectionem parte, et tamen quaelibet creatura ponit aliqua perfectionem 
-            participatam.</p>
-      
-          <p xml:id="l42-isafei">Item sumamus ad imaginationem personalitatem 
+            participatam.
+          </p>
+          <p xml:id="l42-isafei">
+            Item sumamus ad imaginationem personalitatem 
             ut sit quaedam proprietatis, etiam imaginando distinctionem inter essentiam 
             et proprietatem illam constitutivam, tunc illa sumpta in sua formalitate ipsa 
-            est, <add place="aboveLine">quia</add> vel non constitueret, nisi esset ergo est bonum, quia ens et bonum 
-            convertuntur, ergo est necesse esse, et ultra est bonum, ergo habet rationem 
-            diligibilitatis, et ultra habet rationem diligibilitatis, et non finite, ergo infinite.</p>
-      
-          <p xml:id="l42-iomefc">Item omnis modus qui est deo intrinsecus est simpliciter immensus et infinitus, 
+            est, 
+            <app>
+              <lem>quia</lem>
+              <rdg wit="#SV" type="correction-addition">
+                <add place="above-line">quia</add>
+              </rdg>
+            </app> 
+            vel non constitueret, nisi esset ergo est bonum, quia ens et bonum 
+            convertuntur, ergo est necesse esse, 
+            et ultra est bonum, ergo habet rationem 
+            diligibilitatis, et ultra habet rationem diligibilitatis, 
+            et non finite, ergo infinite.
+          </p>
+          <p xml:id="l42-iomefc">
+            Item omnis modus qui est deo intrinsecus est simpliciter immensus et infinitus, 
             ergo omnis modus deo ad intra est modus 
             infinite hoc se habendi, ergo quaecumque proprietas ibi adhuc posita 
-            est, est modus immensus, quia nihil potest Deo mense et finite competere.</p>
-      
-          <p xml:id="l42-ihpeab">Item huiusmodi proprietas est cognoscibilis et alicuius cognoscentis 
-            tamquam obiectum Realiter existens, ergo est alicuius entitatis tenet 
-            consequentia ex doctrina <name ref="#Aristotle">philosophi</name> IIo <title ref="#Metaphysics">metaphysicae</title>, quia proportionaliter se habet 
-            res ad esse, sicut ad cognosci, et quantae est cognoscentis tantae 
-            est entitatis. et ultra est alicuius entitatis, ergo est alicuius 
-            bonitatis.</p>
-      
-          <p xml:id="l42-ietrdi">Item ex testimonio scripturae arguitur quod filius 
-            diligatur a patre, nam dicit pater, "hoc est filius meus dilectus 
-            in quo mihi bene complacui," ergo pater diligit filium in suo esse 
-            personali, ergo filius habet rationem diligibilitatis et non sicut 
-            scriptura, ergo habet rationem diligibilitatis immensae.</p>
-      
-          <p xml:id="l42-iqpiei">Item quaelibet 
+            est, est modus immensus, quia nihil potest Deo mense et finite competere.
+          </p>
+          <p xml:id="l42-ihpeab">
+            Item huiusmodi proprietas est cognoscibilis et alicuius cognoscentis 
+            tamquam obiectum realiter existens, 
+            ergo est alicuius entitatis tenet 
+            consequentia ex doctrina 
+            <cit>
+              <ref xml:id="l42-Rd1e207" target="http://scta.info/resource/aristmet-l2">
+                <name ref="#Aristotle">Philosophi</name> 
+                II 
+                <title ref="#Metaphysics">Metaphysicae</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            quia proportionaliter se habet 
+            res ad esse, sicut ad cognosci, 
+            et quantae est cognoscentis tantae 
+            est entitatis. 
+            Et ultra est alicuius entitatis, 
+            ergo est alicuius bonitatis.
+          </p>
+          <p xml:id="l42-ietrdi">
+            Item ex testimonio scripturae arguitur quod filius 
+            diligatur a patre, nam dicit pater, 
+            <cit>
+              <quote xml:id="l42-Qd1e225" source="http://scta.info/resource/mt17_5">
+                <unclear>hoc<!-- probably "hic" --></unclear> est filius meus dilectus 
+                in quo mihi bene complacui
+              </quote>
+            </cit>, 
+            ergo pater diligit filium in suo esse 
+            personali, 
+            ergo filius habet rationem diligibilitatis 
+            et non sicut scriptura, 
+            ergo habet rationem diligibilitatis immensae.
+          </p>
+          <p xml:id="l42-iqpiei">
+            Item quaelibet 
             persona divina in suo esse personali diligit se, ergo habet 
-            rationem diligibilitatis, et non finite, ergo infinite et immense.</p>
-      
-          <p xml:id="l42-issndr">Item spiritus sanctus in suo esse personali Realiter est amor 
+            rationem diligibilitatis, et non finite, ergo infinite et immense.
+          </p>
+          <p xml:id="l42-issndr">
+            Item spiritus sanctus in suo esse personali Realiter est amor 
             immo conceditur esse amor quo pater et filius diligunt, 
             ergo illo diligunt se, ergo in esse personaliter habet rationem diligibilitatis, 
-            alias illo non diligerent.</p>
-          
-        <p xml:id="l42-eirndr">Ex istis rationibus videtur 
-          evidenter quod fundatum <unclear>o??tarum[?]</unclear> rationum, nullum est quia fundantur 
-          in hoc quod ratio personalitatis in esse tali nullam dixit perfectionem 
-          nec diligibilitatis rationem.</p>
-        
+            alias illo non diligerent.
+          </p>
+          <p xml:id="l42-eirndr">
+            Ex istis rationibus videtur 
+            evidenter quod fundatum <unclear>o??tarum[?]</unclear> rationum, nullum est quia fundantur 
+            in hoc quod ratio personalitatis in esse tali nullam dixit perfectionem 
+            nec diligibilitatis rationem.
+          </p>
         </div>
-        
         <div xml:id="l42-Dd1e362">
           <head xml:id="l42-Hcqrere">Clarificatio: quod ratio diligibilitatis in Deo est realiter essentialis</head>
-          
-          <p xml:id="l42-pstdpb">Pro solutione 
+          <p xml:id="l42-pstdpb">
+            Pro solutione 
             tamen istarum rationum et pro materia quae stat in uno puncto 
             est advertendum quod ratio diligibilitatis vel fruibilitatis in deo est 
             Realiter essentialis. et ex hoc sequitur quod est in qualibet 
             persona, ubi advertendum quod, sicut persona ut teneo et 
             tenebo in esse suo personali est Realiter immensa et infinita, 
             ita in esse personali est immensae diligibilitatis. nam dicere 
-            quod persona in esse personali non sit immensae no<cb ed="#SV" n="248vb"/>bilitatis 
-            et perfectionis nundum est contra doctores ut contra 
-            <name ref="#Augustine">augustinum</name> et <name ref="#Lombard">magistrum</name> in alios, immo est contra divinas 
-            personas blasphemia.</p> 
-          
-          <p xml:id="l42-usefrp">unde, sicut essentia divina est 
-            communis cuilibet trium personarum, et omnino identica sine 
-            distinctione. ita ratio fruibilitatis est communis tribus et cuilibet identica 
+            quod persona in esse personali non sit immensae no<cb ed="#SV" n="b"/><!--SV 248vb-->bilitatis 
+            et perfectionis nundum est contra doctores, 
+            ut contra 
+            <cit>
+              <ref xml:id="l42-Rd1e259"><name ref="#Augustine">Augustinum</name></ref>
+            </cit> 
+            et 
+            <cit>
+              <ref xml:id="l42-Rd1e266"><name ref="#Lombard">Magistrum</name></ref>
+            </cit> in alios, 
+            immo est contra divinas 
+            personas blasphemia.
+          </p> 
+          <p xml:id="l42-usefrp">
+            Unde, sicut essentia divina est 
+            communis cuilibet trium personarum, 
+            et omnino identica sine 
+            distinctione, 
+            ita ratio fruibilitatis est communis tribus et cuilibet identica 
             et eadem adaequate, et ideo proportionaliter sicut loquimur 
             de essentia respectu personarum, ita loquamur de obiecto 
-            fruibili respectu personarum.</p> 
-        
-          <p xml:id="l42-uscsde">Unde sicut conceditur quod pater et 
-            filius Realiter distinguuntur, et tamen sunt eadem essentia 
+            fruibili respectu personarum.
+          </p> 
+          <p xml:id="l42-uscsde">
+            Unde sicut conceditur quod pater et 
+            filius realiter distinguuntur, 
+            et tamen sunt eadem essentia 
             ita concedendum est quod pater et filius distinguuntur et tamen sunt 
-            idem obiectum fruibile et sicut pater est eadem essentia cum filio, 
-            ita est eadem fruibilitas cum filio. ideo concedendum est 
+            idem obiectum fruibile 
+            et sicut pater est eadem essentia cum filio, 
+            ita est eadem fruibilitas cum filio. 
+            Ideo concedendum est 
             quod pater fruitur filio et quaelibet persona fruitur qualibet 
-            et fruitio personae est Realiter fruitio essentiae, et econtra 
+            et fruitio personae est realiter fruitio essentiae, et econtra 
             propter ergo identitatem fruibilitatis ad personam in esse personae, 
             sicut conceditur quod essentia est obiectum fruibile, ita pater et filius 
             sunt idem obiectum fruibile et pater fruitur filio et 
             tota trinitate et hoc respectu eiusdem obiecti in ratione frubilitatis, 
             nec distinctio personalis plus ponit distinctionem fruibilitatum 
             quam entitatum, ideo proportionaliter est loquendum, sicut 
-            de essentia.</p> 
-          
-          <p xml:id="l42-esdmti">Et si dicatur contra personae in esse personali sunt 
+            de essentia.
+          </p> 
+          <p xml:id="l42-esdmti">
+            Et si dicatur contra personae in esse personali sunt 
             distinctae et sunt plures, ergo si in esse personali quaelibet sit 
             formaliter obiectum fruibile, tunc erunt tria obiecta fruibilia, 
             dicitur quod etiam probaretur quod essent tria immensa quia 
             quaelibet persona est immensa in esse personali et sunt tres 
-            distinctae, ergo sunt tria immensa, ideo eodem modo Respondendum 
-            est ad omnes tales syllogismos, et ista materia tangetur infra.</p>
-         
+            distinctae, ergo sunt tria immensa, 
+            ideo eodem modo respondendum 
+            est ad omnes tales syllogismos, 
+            et ista materia tangetur infra.
+          </p>
         </div>
-
         <div xml:id="l42-Dd1e457">
-
           <head xml:id="l42-Hrarrar">Responsiones ad rationes</head>
-      
           <div xml:id="l42-Dd1e462">
-        
             <head xml:id="l42-Hararar">Ad primam</head>
-        
-            <p xml:id="l42-rraqvi">Restat Respondere ad rationes quando dicitur in prima in esse 
+            <p xml:id="l42-rraqvi">Restat respondere ad rationes 
+              quando dicitur in prima in esse 
               personali pater non dicit bonitatem immensam negatur, immo 
               est bonitas immensa a parte obiecti. Sed utrum illud 
               vocabulum pater exprimat bonitatem immensam non dico, 
@@ -250,59 +314,72 @@
               non dicit perfectionem, negatur consequentia, quia licet illud 
               vocabulum secundum quod vocabulum non dicat perfectionem, tunc 
               supponit pro perfectionem simpliciter ideo quaelibet persona 
-              est obiectum fruibile. <ref xml:id="l42-Rd1e494" type="commentary" target="http://scta.info/resource/pll1d1c2-riqhud">Unde <name ref="#Lombard">magister</name> pluraliter loquitur 
-              in prima distinctione</ref> cum dicit 
+              est obiectum fruibile. 
+              <ref xml:id="l42-Rd1e494" corresp="#l42-Qd1e504">
+                Unde <name ref="#Lombard">magister</name> 
+                pluraliter loquitur in prima distinctione
+              </ref> 
+              cum dicit 
               <cit>
-                <quote xml:id="l42-Qd1e504">Res quibus fruendum est 
-                <cb ed="#SV" n="249ra"/>sunt pater filius et spiritus sanctus,</quote>
-                <bibl><ref type="commentary" target="http://scta.info/resource/pll1d1c2-riqhud">Lombard, Sententia, I, d. 1, c. 2</ref></bibl>
-              </cit> 
+                <quote xml:id="l42-Qd1e504" source="http://scta.info/resource/pll1d1c2-riqhud">
+                  Res quibus fruendum est 
+                  <pb ed="#SV" n="249-r"/>
+                  <cb ed="#SV" n="a"/>
+                  sunt pater filius et spiritus sanctus
+                </quote>
+                <bibl>Lombard, Sententia, I, d. 1, c. 2</bibl>
+              </cit>,
               et tamen sunt ad obiectum 
-              fruibile sicut tota trinitas Sed utrum una persona divina 
-              possit videri sine alia. hoc tangit difficultatem unam 
-              quae videbitur inferius.</p>
-      
+              fruibile sicut tota trinitas. 
+              Sed utrum una persona divina possit videri sine alia, 
+              hoc tangit difficultatem unam 
+              quae videbitur inferius.
+            </p>
           </div>
-            <div xml:id="l42-Dd1e523">
-              
-              <head xml:id="l42-Hasasas">Ad secundam</head>
-      
-              <p xml:id="l42-aspsub">ad secundam: persona in esse personae 
-                non habet aliquam bonitatem negatur, immo habet omnem bonitatem, 
-                et quando dicitur quod proprietas ad intra non est communicabilis ut 
-                paternitas conceditur, ergo non est bonitas immensa 
-                consequentia non valet, et quando dicitur non potest communicari ad extra 
-                negatur, licet non sit communicabilis ad intra, tamen est communicabilis 
-                ad extra, quia est summum bonum et sui ipsius diffusivum, 
-                immo in esse personali agit tota trinitas et in esse 
-                trium, quia actiones sunt suppositorum, et una non potest 
-                agere sine alia, et hoc ex modo agendi causae principalis 
-                respectu effectus, quia oportet quod causa concurrat ut potentia, ut 
-                sapiens, ut bonitas.</p>
-      
-              <p xml:id="l42-echeae">Et circa hoc solet inquiri 
-                utrum productio creatura ad extra supponat emanationem 
-                divinarum personarum ad intra, et teneo opinionem <name ref="#HenryOfGhent">gandaventis</name> 
-                quod sic et alias declarabitur, et sic patet quod ratio 
-                non valet, quia imaginatur quod persona in esse personali ad extra 
-                non sit communicabilis immo et eandem bonitatem diffundunt 
-                tres personae. Unde et propter identitatem essentiae 
-                si una agit alia agit, et hoc etiam est de ratione 
-                causae principalis ut agat ut trina, et alias explicabitur.</p>
-            
-            </div>
-            
+          <div xml:id="l42-Dd1e523">
+            <head xml:id="l42-Hasasas">Ad secundam</head>
+            <p xml:id="l42-aspsub">
+              Ad secundam: persona in esse personae 
+              non habet aliquam bonitatem negatur, immo habet omnem bonitatem, 
+              et quando dicitur quod proprietas ad intra non est communicabilis ut 
+              paternitas conceditur, ergo non est bonitas immensa 
+              consequentia non valet, et quando dicitur non potest communicari ad extra 
+              negatur, licet non sit communicabilis ad intra, tamen est communicabilis 
+              ad extra, quia est summum bonum et sui ipsius diffusivum, 
+              immo in esse personali agit tota trinitas et in esse 
+              trium, quia actiones sunt suppositorum, et una non potest 
+              agere sine alia, et hoc ex modo agendi causae principalis 
+              respectu effectus, quia oportet quod causa concurrat ut potentia, ut 
+              sapiens, ut bonitas.
+            </p>
+            <p xml:id="l42-echeae">
+              Et circa hoc solet inquiri 
+              utrum productio creatura ad extra supponat emanationem 
+              divinarum personarum ad intra, et teneo opinionem 
+              <cit>
+                <ref xml:id="l42-Rd1e328"><name ref="#HenryOfGhent">Gandaventis</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              quod sic et alias declarabitur, et sic patet quod ratio 
+              non valet, quia imaginatur quod persona in esse personali ad extra 
+              non sit communicabilis immo et eandem bonitatem diffundunt 
+              tres personae. Unde et propter identitatem essentiae 
+              si una agit alia agit, et hoc etiam est de ratione 
+              causae principalis ut agat ut trina, et alias explicabitur.
+            </p>
+          </div>
           <div xml:id="l42-Dd1e580">
             <head xml:id="l42-Hatatat">Ad tertiam</head>
-      
-            <p xml:id="l42-aaqeif">Ad aliud quando dicitur, tunc pater beatificaretur in alio, 
-              Responsum est quod pater et filius sunt idem obiectum fruibile 
+            <p xml:id="l42-aaqeif">
+              Ad aliud quando dicitur, tunc pater beatificaretur in alio, 
+              responsum est quod pater et filius sunt idem obiectum fruibile 
               et <unclear>beatificibile[?]</unclear>, et ideo non in alio beatificatur pater fruendo filio, 
               si tamen intelligeretur quod aliquis esset alius a patre 
               qui esset obiectum <unclear>beatificibile[?]</unclear>, tunc bene concederetur quod pater beatificaretur 
-              in alio.</p> 
-            
-            <p xml:id="l42-paqeif">Post ea arguitur quod ratio fruibilitatis est perfectionis 
+              in alio.
+            </p> 
+            <p xml:id="l42-paqeif">
+              Post ea arguitur quod ratio fruibilitatis est perfectionis 
               simpliciter et ratio personalitatis, et ideo conceditur quod ratio fruibilis 
               est perfectionis immensae et hoc causando rationem pro 
               obiecto. ita conceditur quod ratio personalitatis est immensa. si tamen intelligantur 
@@ -317,35 +394,42 @@
               illud praedicatum competit filio, unde aliqua perfectio negatur 
               a filio. verum est si intelligatur de praedicato, tamen tota perfectio 
               importata per praedicatum competit filio, sed ex modo 
-              <cb ed="#SV" n="249rb"/>cognoscendi et significandi illud praedicatum negatur a filio et Removetur 
+              <cb ed="#SV" n="b"/><!--SV249rb-->
+              cognoscendi et significandi illud praedicatum negatur a filio et Removetur 
               ut generare, non tamen perfectio Importata per illud praedicatum negatur 
-              a filio, sed est in filio.</p>
-      
-      <p xml:id="l42-apdepc">[ommited or something from above paragraph goes in here</p>
-            
-            <p xml:id="l42-paaiss">post ea allegavi auctoritatem salvarum 
+              a filio, sed est in filio.
+            </p>
+            <p xml:id="l42-apdepc">[ommited or something from above paragraph goes in here]</p>
+            <p xml:id="l42-paaiss">
+              Post ea allegavi auctoritatem salvarum 
               nihil possum facere a me ipso quicquam, dum quod per istam auctoritatem non 
               intendit quin filius agat ad extra, quia actiones sunt suppositorum, 
               dicitur tamen quod illa auctoritas intelligitur altero duorum modorum 
               uno, quia filius denotat emanationem a patre et sic filius dicit se habere 
               quicquam habet a patre, et sic filius dicit quod non habet a seipso, et sic habet 
               ab alio quidquid habet perfectionis, ideo innuit quod a patre procedit qui 
-              dat sibi totam perfectionem suam.</p> 
-            
-            <p xml:id="l42-spiiss">secundo potest intelligi de humanitate, 
+              dat sibi totam perfectionem suam.
+            </p>
+            <p xml:id="l42-spiiss">
+              Secundo potest intelligi de humanitate, 
               quia nihil habet a se nec aliquid agit propria virtute, sed quicquid habet, habet 
               a deo quin cum suppositum in esse suppositi non agit hic non arguitur, 
               cum operationes sint suppositorum, et sic negandum est quod persona in esse personali 
               non sit sui ipsius diffusiva, nec agit ad extra. unde sicut 
               est immensae bonitatis ita immensae communicabilitatis. et sic rationes 
-              illius sunt solutae.</p>
-            
-            <p xml:id="l42-perosn">per eandem Radicem potest solvi ratio probans 
-              ordinem dilectionum in patria quae omnis Resolvuntur ad primam complacentiam. 
-              unde quando dicitur obiciatur animae essentia divina, tunc est ibi complacentia 
-              et amor complacentiae. Et iterum sunt ibi aliqui amores 
+              illius sunt solutae.
+            </p>
+            <p xml:id="l42-perosn">
+              Per eandem radicem potest solvi ratio probans 
+              ordinem dilectionum in patria quae omnis resolvuntur ad primam complacentiam. 
+              unde quando dicitur obiciatur animae essentia divina, 
+              tunc est ibi complacentia 
+              et amor complacentiae. 
+              Et iterum sunt ibi aliqui amores 
               complexi ut quod deus est et quod deus est summum bonum, breviter 
-              ista imaginatio deficit, quia licet sit ordo dilectionum inter se, 
+              ista imaginatio deficit 
+              quia, 
+              licet sit ordo dilectionum inter se, 
               tamen non est ordo causalitatis cur anima diligit, nam sibi sit 
               amor incomplexus complacentiae, est etiam amor complexus quo aptatur 
               deum esse summum bonum, tamen omnes illi terminantur ad deum, nec 
@@ -355,11 +439,14 @@
               sit ordo inter dilectiones, tamen non hunc ordinem ad obiectum, 
               quia respectu obiecti est una ratio fruibilitatis ultima et adaequata, et sic patet quod 
               deus est fruibilis et obiectum fruibile, et quod fruitio ordinata est dilecito 
-              dei propter se. Et consequenter dilectio alicuius Rei propter se est 
-              descriptio fruitionis in communi, sive sit ordinata sive non.</p> 
-      
-            <p xml:id="l42-atqcpd">Advertendum 
-              tamen quod li 'propter' in proposito tollere relatione obiecti ad aliud tam actualem 
+              dei propter se. Et consequenter dilectio alicuius rei propter se est 
+              descriptio fruitionis in communi, 
+              sive sit ordinata sive non.
+            </p> 
+            <p xml:id="l42-atqcpd">
+              Advertendum 
+              tamen quod li <mentioned>propter</mentioned> in proposito tollere 
+              relatione obiecti ad aliud tam actualem 
               quam habitualem unde si diligatur aliquid propter se si bene Resolvatur, 
               tunc non invenietur causa aliqua nisi bonitas quae reperitur 
               in illo obiecto. Et usus ordinatus potest sic describi. 
@@ -369,14 +456,15 @@
               et fruitio inordinata quod est dilectio creaturae propter se et 
               ista intelliguntur secundum proprietatem terminorum quantum spectat ad 
               theologos, quia illi termini sunt aequivoci. Ex dictis satis sequitur 
-              <cb ed="#SV" n="249va"/>quod non est Repugnantia quod idem actus sit usus et fruitio, quia 
+              <cb ed="#SV" n="249-v"/>
+              <cb ed="#SV" n="a"/>
+              quod non est repugnantia quod idem actus sit usus et fruitio, quia 
               stat quod idem actus sit dilectio dei propter se et dilectio creaturae 
-              propter deum, etc.</p>
-        
+              propter deum, etc.
+            </p>
           </div>
         </div>
-        </div>
-      
+      </div>
     </body>
   </text>
 </TEI>

@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="0.1-dev-master">
-          <title>Lectio 31, Notitia</title>
+        <edition n="0.0.0-dev">
+          <title>Lectio 31, de Notitia</title>
           <date when="2012-05-07">May 7th, 2012</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Petrus Plaoul Editio Critica Electronica (PPECE)</publisher>
-        <pubPlace>Baltimore, MD</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2012-05-07">May 7th, 2012</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -33,80 +28,100 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="internal" />
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2012-05-07" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
+      <div xml:id="starts-on">
+        <pb ed="#R" n="52-r"/>
+        <cb ed="#R" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio31">
         <head xml:id="l31-Hldalda">Lectio 31, de Notitia</head>
-        <div>
+        <div xml:id="l31-Dd1e109">
           <head xml:id="l31-Hraranc">Responsio ad rationes principales: quod Deus non sit a nobis cognoscibilis</head>
-          
           <p xml:id="l31-affnro">
             Aliae fuerunt factae rationes quaedam ad probandum 
-          contra nostram fidem quod de ea nec de eius obiecto possit 
-          haberi scientia, ad quas nunc respondendum. Arguebatur 
-          enim primo quod Deus non sit a nobis cognoscibilis, 
-          quia si sic, huiusmodi notitia, per quam cognosceretur 
-          Deus, esset potentiae perceptivae proportionata. 
-          Et si sic, cum potentia sit finita et finite immutabilis, 
-          sequitur quod huiusmodi notitia erit improportionata 
-          obiecto, quia obiectum est infinitum. Vel viceversa, 
-          huiusmodi notitia erit proportionata obiecto, 
-          et si sic, erit improportionata potentiae. Et per consequens, 
-          data notitia Dei, sequitur necessario quod illa proportionata 
-        <cb ed="#R" n="52rb" />potentiae et disproportionata obiecto vel e contra, et per consequens 
-          non reputabile obiectum.</p>
-          
-          <div>
+            contra nostram fidem quod de ea nec de eius obiecto possit 
+            haberi scientia, ad quas nunc respondendum. 
+            <!--- this should probably be moved below -->
+            <!--<note>See above <ref type="crossReference" target="lectio20.xml#l20-dapend">lectio 19, para.</ref></note>-->
+            Arguebatur 
+            enim primo quod Deus non sit a nobis cognoscibilis, 
+            quia si sic, huiusmodi notitia, per quam cognosceretur 
+            Deus, esset potentiae perceptivae proportionata. 
+            Et si sic, cum potentia sit finita et finite immutabilis, 
+            sequitur quod huiusmodi notitia erit improportionata 
+            obiecto, quia obiectum est infinitum. Vel viceversa, 
+            huiusmodi notitia erit proportionata obiecto, 
+            et si sic, erit improportionata potentiae. Et per consequens, 
+            data notitia Dei, sequitur necessario quod illa proportionata 
+            <cb ed="#R" n="b"/><!--R52rb-->
+            potentiae et disproportionata obiecto vel e contra, et per consequens 
+            non reputabile obiectum.
+          </p>
+          <div xml:id="l31-Dd1e124">
             <head xml:id="l31-Drapapr">Responsio ad primam rationem</head>
-            
-            <p xml:id="l31-rpdneo">Respondetur primo dicendo quod:<note>See above <ref type="crossReference" target="lectio20.xml#l20-dapend">lectio 19, para.</ref></note> inter 
-          potentiam et notitiam et inter notitiam et obiectum 
-          non requiritur aliqua proportio secundum proprium modum loquendi, 
-          quia nec requiritur proportio proprie sumpta quae est in quantitatibus 
-          continuis, ut cuilibet constat, nec est ibi proportio 
-          quae reperitur inter potentias ad similitudinem quantitatum, 
-          sicut in potentiis motivis, quae ad similitudinem 
-          quantitatum dicuntur ad invicem comparari, scilicet, secundum proportionem, 
-          quae reperitur in quantitatibus continuis vel in numeris. 
-          Ad propositum nullo modo huiusmodi proportio requiritur inter potentiam 
-          et notitiam vel notitiam et obiectum.</p>
-            
-            <p xml:id="l31-sdqrcc">Secundo dico quod dicta 
-          Sanctorum et doctorum dicentium: 'quod inter potentiam 
-          et obiectum debet esse certa proportio', debet intelligi quod 
-          obiectum est conveniens potentiae vel bonum quantum 
-          est de per se. Unde quod est alteri bonum vel ad quod 
-          alterum ordinatur vel cuius adeptio sibi proficit 
-          vel se habet in ratione finis vel alterius causae 
-          illi proficitur[?} illud. Respectu illius dicitur proportionatum. 
-          Unde obiectum esse proportionatum potentiae vel intellectui, 
-          nihil aliud est quam ipsum esse bonum tali potentiae 
-          vel conveniens vel ad quod talis potentia inclinatur 
-          vel ordinatur. Et iste est verus intellectus omnium dicentium 
-          quod 'inter potentiam et obiectum debet esse certa proportio'. 
-          Et non ita est proportio in proposito quod Deus est obiectum 
-          beatificum et finis ultimus ipsius creaturae. Ideo 
-          consequentur est obiectum proportionatum potentiae intellectivae creaturae 
-          pro cuius adeptionem creatura optime est, quia ipsa est 
-          secundum quod ordinata est. Ideo in eo formaliter quiescit 
-          et omnis inclinationes, quae sunt in creatura per modum 
-          carentiae cessant. Et solum remanent complacentiae 
-          convenientis.</p>
-            
-            <p xml:id="l31-spqmie">Sequitur primo quod quanto Deus 
-            excedit potentiam, tanto est sibi magis proportionatus. 
-            Patet nam, nisi Deus excederet potentiam 
-            perceptivam immense et infinite, non haberet rationem 
-            finis ultimi creaturae, nec esset obiectum finaliter 
-            quietans creaturam, ergo non haberet sufficientem proportionem 
-            ad creaturam secundum modum iam expressum.</p>
-            
-            <p xml:id="l31-sdapee">Sequitur 
+            <p xml:id="l31-rpdneo">
+              Respondetur primo dicendo quod: 
+              inter potentiam et notitiam et inter notitiam et obiectum 
+              non requiritur aliqua proportio secundum proprium modum loquendi, 
+              quia nec requiritur proportio proprie sumpta quae est in quantitatibus 
+              continuis, ut cuilibet constat, nec est ibi proportio 
+              quae reperitur inter potentias ad similitudinem quantitatum, 
+              sicut in potentiis motivis, quae ad similitudinem 
+              quantitatum dicuntur ad invicem comparari, scilicet, secundum proportionem, 
+              quae reperitur in quantitatibus continuis vel in numeris. 
+              Ad propositum nullo modo huiusmodi proportio requiritur inter potentiam 
+              et notitiam vel notitiam et obiectum.
+            </p>
+            <p xml:id="l31-sdqrcc">
+              Secundo dico quod dicta 
+              Sanctorum et doctorum dicentium: 'quod inter potentiam 
+              et obiectum debet esse certa proportio', debet intelligi quod 
+              obiectum est conveniens potentiae vel bonum quantum 
+              est de per se. Unde quod est alteri bonum vel ad quod 
+              alterum ordinatur vel cuius adeptio sibi proficit 
+              vel se habet in ratione finis vel alterius causae 
+              illi proficitur[?} illud. Respectu illius dicitur proportionatum. 
+              Unde obiectum esse proportionatum potentiae vel intellectui, 
+              nihil aliud est quam ipsum esse bonum tali potentiae 
+              vel conveniens vel ad quod talis potentia inclinatur 
+              vel ordinatur. Et iste est verus intellectus omnium dicentium 
+              quod 'inter potentiam et obiectum debet esse certa proportio'. 
+              Et non ita est proportio in proposito quod Deus est obiectum 
+              beatificum et finis ultimus ipsius creaturae. Ideo 
+              consequentur est obiectum proportionatum potentiae intellectivae creaturae 
+              pro cuius adeptionem creatura optime est, quia ipsa est 
+              secundum quod ordinata est. Ideo in eo formaliter quiescit 
+              et omnis inclinationes, quae sunt in creatura per modum 
+              carentiae cessant. Et solum remanent complacentiae 
+              convenientis.
+            </p>
+            <p xml:id="l31-spqmie">
+              Sequitur primo quod quanto Deus 
+              excedit potentiam, tanto est sibi magis proportionatus. 
+              Patet nam, nisi Deus excederet potentiam 
+              perceptivam immense et infinite, non haberet rationem 
+              finis ultimi creaturae, nec esset obiectum finaliter 
+              quietans creaturam, ergo non haberet sufficientem proportionem 
+              ad creaturam secundum modum iam expressum.
+            </p>
+            <p xml:id="l31-sdapee">
+              Sequitur 
               secundo de actu quod quanto actus, qui inter potentiam 
               et obiectum, magis excedit facultatem naturalem 
               potentiae perceptivae, tanto talis actus est potentiae 
@@ -119,11 +134,14 @@
               tanto est sibi magis conveniens et magis 
               proportionatus, quia quanto magis ascendit recedendo 
               a non gradu, tanto magis delectatur 
-              <cb ed="#R" n="52va" />et quietatur potentiam perceptivam, ergo etc.</p>
-            
-            <p xml:id="l31-eqshqh">Ex quo 
-            sequitur tertio quod huiusmodi proportio non consistit 
-            in aliquo gradu quantum ad speciem, quia tota latitudo 
+              <pb ed="#R" n="52-v"/>
+              <cb ed="#R" n="a"/>
+              et quietatur potentiam perceptivam, ergo etc.
+            </p>
+            <p xml:id="l31-eqshqh">
+              Ex quo 
+              sequitur tertio quod huiusmodi proportio non consistit 
+              in aliquo gradu quantum ad speciem, quia tota latitudo 
               graduum beatificarum est talis quod in huiusmodi latitudine 
               quilibet gradus est proportionatus et conveniens 
               potentiae. Et ascendendo continue secundum proportionem 
@@ -138,57 +156,78 @@
               numquam quis ascendit ad suum caput, quod est 
               Christus. Adhuc quantum ad humanitatem, ita quod nullus 
               viator de lege communi potest ad tantam beatitudinem 
-              pervenire sicut Christus, et hoc quoad humanitatem.</p>
-            
-            <p xml:id="l31-suqrit">Sequitur 
-                ulterius quod nullum obiectum finium est summae proportionatum 
-                potentiae creatae intellectivae, quia nullum 
-                obiectum finium est summae <unclear>quietatum[?]</unclear> intellectus. 
-                Item nulla creatura habet rationem infiniti et ultimi 
-                finis. Modo, sicut alias dictum est, proportionalis ordo est 
-                causarum finalium, sicut agentium, ita quod, sicut causa 
-                secunda concurrit active per accidens et non ex se, sed ex causa 
-                infinite et immense activa. Item causa finalis 
-                secundaria potest esse causa finalis per accidens alicuius 
-                ordinati in ipsam, et non se sola, sed mediante 
-                ultimo sive immenso, etc. Ideo dicit <name ref="#Augustine">Augustinus</name><quote type="Patristic">"inquietum est cor nostrum, Domine, donec requiescat 
-                in te."</quote></p>
-            
-            <p xml:id="l31-usqpee">Ulterius sequitur quod nulli potentiae proportionatum 
-            obiectum est sibi simile vel ipsamet solo 
-            Deo excepto, quia quaelibet alia potentiae ordinatur 
-            et tendit finaliter in ipsum, tamquam in sibi proportionatum, 
-            ergo etc.</p>
-            
-            <p xml:id="l31-eqscbc">Ex quo sequitur quod ex diversitatem 
-            magis consurgit proportio convenientiae 
-            quam ex similitudine, simile enim reperitur in naturalibus. 
-            Nam materia est improportionatissima formae, et tamen 
-            una maxime in naturalibus appetit aliam, et tamen 
-            cum hoc habet oppositas conditiones, quia forma 
-            est actus et<app><lem>et</lem><rdg wit="#R" type="add."><add place="aboveLine">et</add></rdg></app> materia potentia, et ista convenientia consurgit 
-            ex appetitibus ipsarum habentibus ordinem inter se. Et 
-            ex isto consurgit bonum convenientiae.</p>
-            
-            <p xml:id="l31-suqfnq">Sequitur 
-            ulterius quod dependenti independens et finito 
-            infinitum sunt <unclear>proportionativa[?issima?]</unclear>, ita quod independens 
-            est proportionum dependenti, quia nisi obiectum dependentis 
-            esset independens, non quietaret dependendum, 
-            nec dependentis ad dependendum posset 
-            esse terminus finalis, nec quietatio.</p>
-            
-            <p xml:id="l31-suqtia">Sequitur ulterius 
-            quod ad esse proportionatum sicut requiritur inter potentiam 
-            <cb ed="#R" n="52vb" />et obiectum, non requiritur essentialis convenientia, 
-            immo sic esse proportionaliter consurgit ex oppositis 
-            rationibus quantum ad esse similitudinis. Sed magis ex in<lb ed="#S" />clinatione 
-            et tendentia unus in aliud. Unde 
-            si A inclinetur ad B et continue tendat in B 
-            et per convictionem A cum B cessat tendentia 
-            ipsius A.</p>
-            
-            <p xml:id="l31-suqrss">Sequitur ulterius quod proprie loquendo inter 
+              pervenire sicut Christus, et hoc quoad humanitatem.
+            </p>
+            <p xml:id="l31-suqrit">
+              Sequitur 
+              ulterius quod nullum obiectum finium est summae proportionatum 
+              potentiae creatae intellectivae, quia nullum 
+              obiectum finium est summae <unclear>quietatum[?]</unclear> intellectus. 
+              Item nulla creatura habet rationem infiniti et ultimi 
+              finis. Modo, sicut alias dictum est, proportionalis ordo est 
+              causarum finalium, sicut agentium, ita quod, sicut causa 
+              secunda concurrit active per accidens et non ex se, sed ex causa 
+              infinite et immense activa. Item causa finalis 
+              secundaria potest esse causa finalis per accidens alicuius 
+              ordinati in ipsam, et non se sola, sed mediante 
+              ultimo sive immenso, etc. Ideo dicit 
+              <ref xml:id="l31-Rd1e154"><name ref="#Augustine">Augustinus</name></ref>
+              <cit>
+                <quote xml:id="l31-Qd1e160" source="http://scta.info/resource/aconf-l1-d1e102">
+                  inquietum est cor nostrum, Domine, donec requiescat in te
+                </quote>
+              </cit>.
+            </p>
+            <p xml:id="l31-usqpee">
+              Ulterius sequitur quod nulli potentiae proportionatum 
+              obiectum est sibi simile vel ipsamet solo 
+              Deo excepto, quia quaelibet alia potentiae ordinatur 
+              et tendit finaliter in ipsum, tamquam in sibi proportionatum, 
+              ergo etc.
+            </p>
+            <p xml:id="l31-eqscbc">
+              Ex quo sequitur quod ex diversitatem 
+              magis consurgit proportio convenientiae 
+              quam ex similitudine, simile enim reperitur in naturalibus. 
+              Nam materia est improportionatissima formae, et tamen 
+              una maxime in naturalibus appetit aliam, et tamen 
+              cum hoc habet oppositas conditiones, quia forma 
+              est actus
+              <app>
+                <lem>et</lem>
+                <rdg wit="#R" type="correction-addition">
+                  <add place="above-line">et</add>
+                </rdg>
+              </app> 
+              materia potentia, et ista convenientia consurgit 
+              ex appetitibus ipsarum habentibus ordinem inter se. Et 
+              ex isto consurgit bonum convenientiae.
+            </p>
+            <p xml:id="l31-suqfnq">
+              Sequitur 
+              ulterius quod dependenti independens et finito 
+              infinitum sunt <unclear>proportionativa[?issima?]</unclear>, 
+              ita quod independens 
+              est proportionum dependenti, quia nisi obiectum dependentis 
+              esset independens, non quietaret dependendum, 
+              nec dependentis ad dependendum posset 
+              esse terminus finalis, nec quietatio.
+            </p>
+            <p xml:id="l31-suqtia">
+              Sequitur ulterius 
+              quod ad esse proportionatum sicut requiritur inter potentiam 
+              <cb ed="#R" n="b"/><!--R52vb-->
+              et obiectum, non requiritur essentialis convenientia, 
+              immo sic esse proportionaliter consurgit ex oppositis 
+              rationibus quantum ad esse similitudinis. 
+              Sed magis ex inclinatione 
+              et tendentia unus in aliud. Unde 
+              si A inclinetur ad B et continue tendat in B 
+              et per convictionem A cum B cessat tendentia 
+              ipsius A.
+            </p>
+            <p xml:id="l31-suqrss">
+              Sequitur ulterius quod proprie loquendo inter 
               actum et obiectum non requiritur similitudo, quia, sicut 
               alias dictum, est non competit notitiae ratione similitudinis 
               ipsius ad obiectum quod sit repraesentativa obiecti, 
@@ -197,13 +236,16 @@
               notitiarum, ex quibus resultat certa combinatio 
               et proportio tenens locum speciei, ex qua elicitur 
               notitia abstractiva de re. Et sic patet quomodo prima 
-              ratio sit soluta.</p>
+              ratio sit soluta.
+            </p>
           </div>
-          <div>
-            
+          <div xml:id="l31-Dd1e200">
             <head xml:id="l31-Hrasasr">Responsio ad secundam rationem</head>
-            
-            <p xml:id="l31-spaiee">Secundo principaliter arguebatur<note>See above <ref type="crossReference" target="lectio20.xml#l20-spanis">lectio 19, para.</ref></note> quod impossibile 
+            <p xml:id="l31-spaiee">
+              <cit>
+                <ref xml:id="l31-Rd1e209" target="http://scta.info/resource/l20-spanis">Secundo principaliter arguebatur</ref>
+              </cit> 
+              quod impossibile 
               sit de De habere notitiam, et hoc ratione <unclear>infinitis[?]</unclear> 
               distantiae obiecti a potentia per similitudinem de mobili 
               localiter. Nam si esset aliquod mobile localiter quod 
@@ -215,273 +257,356 @@
               in ipso Deo a quo infinite distat. Et per consequens 
               moveri non potest ad illum locum nisi per formam 
               infinitam, id est, per notitiam infinitam et infinite 
-              repraesentantem, et talis creaturae est impossibile, ergo etc.</p>
-            
-            <p xml:id="l31-heneie">Hic est notandum, sicut ad primam rationem, quod quantum ad 
-            essentialem perfectionem essentia divina infinite 
-            distat a creatura, non tamen infinite distat quantum 
-            ad propositum. Spectat, quia divina essentia non 
-            distat infinite <unclear>cognoscentis[?]</unclear> a creatura. Ita quod 
-            ita quod cognoscere divinam essentiam non est infinitae 
-            difficultatis. Unde possumus imaginari 
-            aliquas res secundum unam rationem infinite distare 
-            abinvicem et finite solum secundum aliam rationem. 
-            Gratia exempli: sicut sunt superficies et lineae 
-            mathematicae, considerando quantum est ex parte essentialis 
-            perfectionis linea et superficiens non distat 
-            infinite, et tamen quantum est ex parte proportionis 
-            distant infinite, ita quod quantumcumque linea augeretur 
-            numquam deveniret ad aequalitatem superficiei. 
-            Ita in proposito quasi viceversa quantum est ad 
-            rationem essentialis perfectionis creaturae ad Deum 
-            est infinita distantia. Quantum autem est ad possibilitatem 
-            cognoscendi est distantia solum finita, 
-            nam potentia intellectiva creaturae se extendit 
-            ad quodlibet obiectum cognoscibile. Ideo in suo ambitu 
-            claudit divinam essentiam, ideo etc.</p>
-            
-            <p xml:id="l31-sdqcab">Secundo dicitur 
-          <cb ed="#R" n="53ra" />quod: si esset in argumento aliquis color hoc esset 
-          ad probandum quod impossibile sit creaturae divinam 
-          essentiam<app><lem/><rdg wit="#R" type="add.sed.del."><del>esse</del></rdg></app> attingere comprehensive, quia ad 
-          comprehendendum divinam essentiam, oportet habere notitiam 
-          aeque perfectam in esse notitiae, sicut est obiectum in se. 
-          Ita quod notitia, per quam obiectum, quod est Deus, comprehenderetur, 
-          esset infinita et infinite immensa, et sic bene concederetur quod isto modo creatura non est huiusmodi 
-          notitiae capax, immo solus Deus cognoscit 
-          se sic comprehensive. Cum hoc tamen stat quod Deus 
-          sufficienter cognoscitur a beatis.</p>
+              repraesentantem, et talis creaturae est impossibile, ergo etc.
+            </p>
+            <p xml:id="l31-heneie">
+              Hic est notandum, sicut ad primam rationem, quod quantum ad 
+              essentialem perfectionem essentia divina infinite 
+              distat a creatura, non tamen infinite distat quantum 
+              ad propositum. Spectat, quia divina essentia non 
+              distat infinite <unclear>cognoscentis[?]</unclear> a creatura. Ita quod 
+              ita quod cognoscere divinam essentiam non est infinitae 
+              difficultatis. Unde possumus imaginari 
+              aliquas res secundum unam rationem infinite distare 
+              abinvicem et finite solum secundum aliam rationem. 
+              Gratia exempli: sicut sunt superficies et lineae 
+              mathematicae, considerando quantum est ex parte essentialis 
+              perfectionis linea et superficiens non distat 
+              infinite, et tamen quantum est ex parte proportionis 
+              distant infinite, ita quod quantumcumque linea augeretur 
+              numquam deveniret ad aequalitatem superficiei. 
+              Ita in proposito quasi viceversa quantum est ad 
+              rationem essentialis perfectionis creaturae ad Deum 
+              est infinita distantia. Quantum autem est ad possibilitatem 
+              cognoscendi est distantia solum finita, 
+              nam potentia intellectiva creaturae se extendit 
+              ad quodlibet obiectum cognoscibile. Ideo in suo ambitu 
+              claudit divinam essentiam, ideo etc.
+            </p>
+            <p xml:id="l31-sdqcab">
+              Secundo dicitur 
+            <cb ed="#R" n="53ra"/>quod: si esset in argumento aliquis color hoc esset 
+            ad probandum quod impossibile sit creaturae divinam 
+            essentiam
+            <app>
+              <lem n="essentiam"/>
+              <rdg wit="#R" type="add.sed.del.">
+                <del>esse</del>
+              </rdg>
+            </app> 
+            attingere comprehensive 
+            quia ad comprehendendum divinam essentiam, 
+            oportet habere notitiam 
+            aeque perfectam in esse notitiae, sicut est obiectum in se. 
+            Ita quod notitia, per quam obiectum, 
+            quod est Deus, comprehenderetur, 
+            esset infinita et infinite immensa, 
+            et sic bene concederetur quod isto modo creatura non est huiusmodi 
+            notitiae capax, immo solus Deus cognoscit 
+            se sic comprehensive. Cum hoc tamen stat quod Deus 
+            sufficienter cognoscitur a beatis.
+            </p>
           </div>
-          
-          <div>
-          
+          <div xml:id="l31-Dd1e240">
             <head xml:id="l31-Hratatr">Responsio ad tertiam rationem</head>
-            
-            <p xml:id="l31-trpoia">Tertia ratio principalis:<note>not found in lectio 19</note> 
-          sensus non potest attingere ad materiam rem 
-          intelligibilem immaterialem, ergo nec intellectus 
-          ad rem infinitam et immensam. Probatur consequentia, quia multo 
-          magis Deus excedit nostrum intellectum quam intellectus 
-          sensum. Si ergo sensus non sufficit <unclear>intelligere[?]</unclear> <unclear>materiam[?]</unclear> 
-          abstractam a materia, sequitur quod intellectus non sufficiet 
-          in Deum <unclear>mi?eum[??]</unclear>, qui est obiectum immensum 
-          absolute.</p>
-            
-            <p xml:id="l31-reqcie">Respondendum est quod huiusmodi excessus 
-          quam spectat ad excessum rerum inter se est 
-          impertinens ad propositum. Et istud potest exemplificari 
-          in cognitione sensus, nam sensus visus habet 
-          obiectum suum color et lumen vel lucem, sensus 
-          gustus habet saporem pro obiecto, modo visus non 
-          potest percipere saporem, nec gustus colorem 
-          sive lucem. Unde sensus sunt limitati secundum organa 
-          quibus utuntur. Intellectus autem non est 
-          potentia organica nec utitur organo in suis 
-          operationibus perfectis, ideo sufficit intellectui quod 
-          habeat intelligibile pro obiecto. Unde de ratione 
-          intrinseca sensus, non est quod posset in illud obiectum 
-          et non in aliud, maxime cum intellectus et sensus sint eadem 
-          potentia; et etiam cum omnes sensus sint eadem potentia, 
-          sed sensus est talis quod non est aptus natus exire 
-          in obiecta nisi mediantibus diversis organis, intellectus autem 
-          non. Ideo habet quodlibet intelligibile pro obiecto. Ideo patet quod illa 
-          ratio nihil concludit. Unde non provenit imperfectione 
-          sensus quod non posset in hoc obiectum vel in illud, sed hoc 
-          provenit ex limitatione diversorum organorum 
-          secundum quae sensus fertur in sua obiecta diversa. 
-          Si autem non limitatur intellectus organo corporeo, 
-          ideo etc.</p>
+            <p xml:id="l31-trpoia">
+              Tertia ratio principalis:
+              <!--<note>not found in lectio 19/20</note>--> 
+              sensus non potest attingere ad materiam rem 
+              intelligibilem immaterialem, ergo nec intellectus 
+              ad rem infinitam et immensam. Probatur consequentia, quia multo 
+              magis Deus excedit nostrum intellectum quam intellectus 
+              sensum. Si ergo sensus non sufficit <unclear>intelligere[?]</unclear> <unclear>materiam[?]</unclear> 
+              abstractam a materia, sequitur quod intellectus non sufficiet 
+              in Deum <unclear>mi?eum[??]</unclear>, qui est obiectum immensum 
+              absolute.
+            </p>
+            <p xml:id="l31-reqcie">
+              Respondendum est quod huiusmodi excessus 
+              quam spectat ad excessum rerum inter se est 
+              impertinens ad propositum. Et istud potest exemplificari 
+              in cognitione sensus, nam sensus visus habet 
+              obiectum suum color et lumen vel lucem, sensus 
+              gustus habet saporem pro obiecto, modo visus non 
+              potest percipere saporem, nec gustus colorem 
+              sive lucem. Unde sensus sunt limitati secundum organa 
+              quibus utuntur. Intellectus autem non est 
+              potentia organica nec utitur organo in suis 
+              operationibus perfectis, ideo sufficit intellectui quod 
+              habeat intelligibile pro obiecto. Unde de ratione 
+              intrinseca sensus, non est quod posset in illud obiectum 
+              et non in aliud, maxime cum intellectus et sensus sint eadem 
+              potentia; et etiam cum omnes sensus sint eadem potentia, 
+              sed sensus est talis quod non est aptus natus exire 
+              in obiecta nisi mediantibus diversis organis, intellectus autem 
+              non. Ideo habet quodlibet intelligibile pro obiecto. Ideo patet quod illa 
+              ratio nihil concludit. Unde non provenit imperfectione 
+              sensus quod non posset in hoc obiectum vel in illud, sed hoc 
+              provenit ex limitatione diversorum organorum 
+              secundum quae sensus fertur in sua obiecta diversa. 
+              Si autem non limitatur intellectus organo corporeo, 
+              ideo etc.
+            </p>
           </div>
-          
-          <div>
-          
+          <div xml:id="l31-Dd1e264">
             <head xml:id="l31-Hraqaqr">Responsio ad quartam rationem</head>
-           
-            <p xml:id="l31-qaesdr">Quartum argumentum esset:<note>See above <ref type="crossReference" target="lectio20.xml#l20-dpeiia">lectio 19, para.</ref></note> si Deus esset 
-          a nobis cognoscibilis, vel huiusmodi notitia esset 
-          divina essentia vel esset qualitas creata. Non primum, 
-          quia tunc illa notitia esset immensa, quia divina 
-          essentia est in se et essentialiter et intrinsece immensa. Confirmando arguebatur 
-          sic: per hoc quod notitia est perfectioris speciei proportionaliter 
-          secundum hoc perfectius immutat, modo notitia divina 
-          est specie immensa. Nec potest dici quod huiusmodi 
-          notitia sit qualitas creata, quia nulla qualitas creata 
-          <cb ed="#R" n="53rb" /><lb ed="#S" />potest esse sufficienter Dei repraesentativa.</p>
-            
-            <p xml:id="l31-irtidr">Ista ratio 
-          tangit difficultatem, quae debet tractari circa distinctionem 
-            17,<note>See below, lectio 78 and following</note> quia secundum aliquos, qui ponunt quod Spiritus 
-            Sanctus realiter sit caritas et dilectio qua diligimus 
-            Deum et proximum, et quod vitaliter seipso ipsam 
-            immutat potentiam affectivam, scilicet, voluntatem 
-            per modum habitus vel actus secundum aliquos, sicut 
-            ponit <name ref="#Lombard">Magister</name>. Eadem difficultas est utrum posset 
-            esse realiter notitia creaturae, et ista materia habet 
-            prolixius tractari circa <ref ana="#pl-b1d17">distinctione 17</ref>. Tamen licet <name ref="#Lombard">Magister</name>in hoc multi videantur negare, reputo illud 
-            satis probabile, sicut dicunt plures, ut <name ref="#Ripa">Magister 
-            Ioannes de Ripa</name>.</p>
-           
-            <p xml:id="l31-uchdai">Unde circa hoc respondeo ad rationem: 
-            potest pro nunc probabiliter dici quod notitia qua 
-            Deus cognoscitur a creatura est ipsemet Deus, 
-              ita quod seipso potest immutare potentiam vitaliter<note>possible indication that the order should be reversed</note>creaturae intellectivam absque productione notitiae 
-              vel speciei distincte ab ipso.</p>
-           
-            <p xml:id="l31-tarrvo">Tunc ad rationem 
-                quando dicitur quod illa notitia esset absolute immensa, 
-                negatur consequentia ad probationem, quia <supplied>si</supplied>, Deus est realiter et intrinsice 
-                notitia immensa, conceditur, esset creaturae immensae 
-                notitia. Negatur consequentia, quia Deus mere libere se communicat 
-                creaturae secundum quaecumque gradum notitiae sibi placuerit, 
-                sicut infinita causalitate activa concurrit quantum est 
-                de se semper uniformiter, et tamen quodcumque effectum 
-                potest producere, sive parvum sive magnum, 
-                secundum quod sibi placuerit, ita est ex parte causalitatis 
-                istius, quae reducitur ad extra rem vel obiectalem.</p>
-            
+            <p xml:id="l31-qaesdr">
+              <cit>
+                <ref xml:id="l31-Rd1e273" target="http://scta.info/resource/l20-dpeiia">Quartum argumentum</ref>
+              </cit> 
+              esset:
+              <!--<note>See above <ref type="crossReference" target="lectio20.xml#l20-dpeiia">lectio 19, para.</ref></note>--> 
+              si Deus esset 
+              a nobis cognoscibilis, vel huiusmodi notitia esset 
+              divina essentia vel esset qualitas creata. Non primum, 
+              quia tunc illa notitia esset immensa, quia divina 
+              essentia est in se et essentialiter et intrinsece immensa. Confirmando arguebatur 
+              sic: per hoc quod notitia est perfectioris speciei proportionaliter 
+              secundum hoc perfectius immutat, modo notitia divina 
+              est specie immensa. Nec potest dici quod huiusmodi 
+              notitia sit qualitas creata, quia nulla qualitas creata 
+              <cb ed="#R" n="b"/><!--53rb-->
+              potest esse sufficienter Dei repraesentativa.
+            </p>
+            <p xml:id="l31-irtidr">
+              Ista ratio 
+              tangit difficultatem, quae debet tractari circa distinctionem 17,
+              <!--<note>See below, lectio 78 and following</note>--> 
+              quia secundum aliquos, qui ponunt quod Spiritus 
+              Sanctus realiter sit caritas et dilectio qua diligimus 
+              Deum et proximum, et quod vitaliter seipso ipsam 
+              immutat potentiam affectivam, scilicet, voluntatem 
+              per modum habitus vel actus secundum aliquos, sicut 
+              ponit <name ref="#Lombard">Magister</name>. 
+              Eadem difficultas est utrum posset 
+              esse realiter notitia creaturae, 
+              et ista materia habet 
+              prolixius tractari circa 
+              <cit>
+                <ref xml:id="l31-Rd1e292" target="http://scta.info/resource/pl-l1d17">distinctione 17</ref>
+                <bibl>XXX</bibl>
+              </cit>. 
+              Tamen, 
+              licet 
+              <cit>
+                <ref xml:id="l31-Rd1e301"><name ref="#Lombard">Magister</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              in hoc multi videantur negare, 
+              reputo illud satis probabile, 
+              sicut dicunt plures,
+              ut 
+              <cit>
+                <ref xml:id="l31-Rd1e311"><name ref="#Ripa">Magister Ioannes de Ripa</name></ref>
+                <bibl>XXX</bibl>
+              </cit>.
+            </p>
+            <p xml:id="l31-uchdai">
+              Unde circa hoc respondeo ad rationem: 
+              potest pro nunc probabiliter dici quod notitia qua 
+              Deus cognoscitur a creatura est ipsemet Deus, 
+              ita quod seipso potest immutare potentiam vitaliter
+              <!--<note>possible indication that the order should be reversed</note>--> 
+              creaturae intellectivam absque productione notitiae 
+              vel speciei distincte ab ipso.
+            </p>
+            <p xml:id="l31-tarrvo">
+              Tunc ad rationem 
+              quando dicitur quod illa notitia esset absolute immensa, 
+              negatur consequentia ad probationem, quia <supplied>si</supplied>, Deus est realiter et intrinsice 
+              notitia immensa, conceditur, esset creaturae immensae 
+              notitia. Negatur consequentia, quia Deus mere libere se communicat 
+              creaturae secundum quaecumque gradum notitiae sibi placuerit, 
+              sicut infinita causalitate activa concurrit quantum est 
+              de se semper uniformiter, et tamen quodcumque effectum 
+              potest producere, sive parvum sive magnum, 
+              secundum quod sibi placuerit, ita est ex parte causalitatis 
+              istius, quae reducitur ad extra rem vel obiectalem.
+            </p>
             <p xml:id="l31-accqsp">
               Ad confirmationem, cum arguitur sic: generaliter quanto aliqua 
-                  notitia est perfectioris speciei, tanto perfectius immutat. 
-                  Sed notitia illa, quae est Deus, supra 
-                  omnem aliam possibilem, etiam supra summam 
-                  intelligentiam, si daretur, ergo etc. Negatur consequentia, 
-                  quia huiusmodi notitiae, quae sunt immediate causatae 
-                  ab obiectis, illa obiecta sunt agentia naturalia, ideo 
-                  immutant potentiam secundum ultimum sui posse. 
-                  Modo sic non est de notitia divina, quia mere libere 
-                  immutat potentiam secundum quod sibi placet.</p>
-            
+              notitia est perfectioris speciei, tanto perfectius immutat. 
+              Sed notitia illa, quae est Deus, supra 
+              omnem aliam possibilem, etiam supra summam 
+              intelligentiam, si daretur, ergo etc. Negatur consequentia, 
+              quia huiusmodi notitiae, quae sunt immediate causatae 
+              ab obiectis, illa obiecta sunt agentia naturalia, ideo 
+              immutant potentiam secundum ultimum sui posse. 
+              Modo sic non est de notitia divina, quia mere libere 
+              immutat potentiam secundum quod sibi placet.
+            </p>
             <p xml:id="l31-eqsvtc">
               Ex quo sequitur quod staret quod aliqua notitia causata 
-                  ab obiecto creata perfectius immutaret et faceret 
-                  perfectius cognoscere obiectum suum quam Deus, ut 
-                  notitia concurrens, non quod Deus sit intensibilis 
-                  et remissibilis, sed ex sua libertate esset quod 
-                  esset creaturae creatae vel tantae cognitio.</p>
-            
-            <p xml:id="l31-eaitqg">Et ad istam 
-            rationem respondet <name ref="#Ripa">Magister Ioannes de Ripa</name> sub 
-          aliis verbis, dicit enim sic: quod si Deus sit 
-          notitia creaturae, sicut ipse tenet, tunc Deus erit 
-          notitia infinita quantum ad speciem, finita tamen 
-          quoad gradum.</p>
-            
-            <p xml:id="l31-siuisr">Sed istud, ut mihi videtur, 
-          non potest stare, quia licet Deus absolute sibi et 
-              <cb ed="#R" n="53va" />et<app><lem>et</lem><rdg wit="#R" type="add."><add place="inline">et</add></rdg></app> intrinsece sit infinita notitia, tamen non est notitia 
-          creaturae secundum tantam denominationem secundum quam est sibi 
-          notitiam. Nam si modus secundum <unclear>quae[?]</unclear> Deus est notitia 
-          creaturae esset infinitus et immensus, ratio demonstraret, 
-          ut mihi videtur, quod Deus infinite 
-          immutaret creaturam, quia perfectius immutaret 
-          quam quaecumque notitia creata, etiam quam suprema, si sit 
-          debilis. Et ideo videtur quod istud sit contra opinionem 
-          praedictam, et contra ipsum dicentem quod Deus non potest 
+              ab obiecto creata perfectius immutaret et faceret 
+              perfectius cognoscere obiectum suum quam Deus, ut 
+              notitia concurrens, non quod Deus sit intensibilis 
+              et remissibilis, sed ex sua libertate esset quod 
+              esset creaturae creatae vel tantae cognitio.
+            </p>
+            <p xml:id="l31-eaitqg">
+              Et ad istam 
+              rationem respondet <name ref="#Ripa">Magister Ioannes de Ripa</name> sub 
+              aliis verbis, dicit enim sic: quod si Deus sit 
+              notitia creaturae, sicut ipse tenet, tunc Deus erit 
+              notitia infinita quantum ad speciem, finita tamen 
+              quoad gradum.
+            </p>
+            <p xml:id="l31-siuisr">
+              Sed istud, ut mihi videtur, 
+              non potest stare, quia licet Deus absolute sibi et 
+              <cb ed="#R" n="53va"/>et<app><lem>et</lem><rdg wit="#R" type="add."><add place="inline">et</add></rdg></app> intrinsece sit infinita notitia, tamen non est notitia 
+              creaturae secundum tantam denominationem secundum quam est sibi 
+              notitiam. Nam si modus secundum <unclear>quae[?]</unclear> Deus est notitia 
+              creaturae esset infinitus et immensus, ratio demonstraret, 
+              ut mihi videtur, quod Deus infinite 
+              immutaret creaturam, quia perfectius immutaret 
+              quam quaecumque notitia creata, etiam quam suprema, si sit 
+              debilis. Et ideo videtur quod istud sit contra opinionem 
+              praedictam, et contra ipsum dicentem quod Deus non potest 
               esse notitia creaturae secundum quaecumque gradum notitiae 
-              sibi placuerit sive intensum sive remissum.</p>
-            
-            <p xml:id="l31-uchnvg">Unde circa hoc de reponendo huiusmodi notitiam 
-            sub specie, quia istud est mere extrinsecum sibi, potest 
-            dici quod illa erit in esse notitiae creaturae eiusdem speciei, 
-            cuius notitiae vicem gerit.</p>
-            
-            <p xml:id="l31-eqsvip">Ex quo sequitur 
-            quod potest esse infinitarum diversarum specierum in esse 
-            notitiarum creaturae, quia imaginabiles sunt infinitae 
-            notitiae creaturae possibiles. Ex quo ergo Deus supplet vicem, vel supplere potest, reponetur sub 
-            eadem specie sub qua reponitur notitia cuius vicem 
-            supplet. Et illud est probabilius dicere quod ipse 
-            idem repraesentat et eodem gradu immutat potentiam, 
-            sicut species cuius vicem gerit. Ergo quantum ad 
-            habitudinem ad potentiam et obiectum se habet, sicut 
-            notitia cuius vicem supplet. Et per consequens quantum 
-            ad hoc potest dici: eiusdem speciei cum notitia 
-            illa cuius vicem supplet<app><lem/><rdg wit="#R" type="add.sed.del."><del rend="strikethrough"><add>et per consequens quantum ad hoc 
-              potest dici eiusdem speciei cum notitia illa</add></del></rdg></app>, igitur etc. 
-            Et sic non concederem cum <name ref="#Ripa">Magistri Ioannes de Ripa</name> quod 
-            Deus esset infinita notitia quoad specie. Unde 
-            data quacumque notitia creata in eadem proportione, 
-            Deus potest libere immutare potentiam; et 
-            huiusmodi immutatio non includit inhaesionem 
-            vel informationem, quia de ratione notitiae non est 
-            quod inhaereat vel informet potentiam.</p>
-            
-            <p xml:id="l31-resdie">Respondendum 
-            est secundum aliam viam admittendum secundam partem argumenti, 
-            scilicet, quod Deus possit esse a nobis cognoscibilis notitia 
-            creata. Et cum dicitur: 'Deus est immensus, ergo nulla 
-            notitia creata potest eum repraesentare.' Negatur consequentia ad probationem, 
-            incircumscriptibilis est dicendum, esset, si placet de vocabulo, 
-            quia vel intelligitur quod nulla notitia creata 
-            Deo adaequatur comprehensive, et sic ratio concludit 
-            verum. Alio, quod est incircumscriptibilis vel incomprehensibilis, 
-          id est, quod per nullam notitiam creatam beatifica potest 
-          repraesentari. Et sic negaretur, quia isto modo cognoscendo 
-          Deum sufficit cognoscere ut summum bonum 
-          et summae quietatum secundum quod in eo consistit ratio 
-          ultimi finis. Utrum autem possit aliqua 
-          notitia creata cognosci secundum omne de eo dicibile, 
-          teneo, propter reverentiam Sanctorum et<app><lem>et</lem><rdg wit="#R" type="add.sed.del"><del rend="strikethrough">s[?]</del></rdg></app> doctorum et           
-          <cb ed="#R" n="53vb" />animae Christi, dicentium quod anima Christi cognovit omnia, 
-          quae verbum, et quod ipsa notitia animae Christi est tamquam 
-          exemplar divinae essentiae et quare mundus 
-          architectus in quo relucet Deus et omnia factibilia 
-          cum hoc. Tamen stat quod illa notitia non sit 
-          comprehensiva ipsius Dei, quia oporteret quod esset notitia 
-          in se aeque perfecta sicut Deus. Modo secunda notitia 
-          animae Christi non esset aequae clara in se nec aeque 
-          perfecta sicut Deus, ergo. Modo secunda notitia animae Christi non esset 
-          aeque clara in se nec aequae perfecta sictu Deus, ideo etc.</p>
-            
-            <p xml:id="l31-stdapn">Sed tunc dicit <name ref="#Wodeham">Adam</name> penes quid attenditur 
-            perfectio notitiae.</p>
-           
-            <p xml:id="l31-refhic">Responsio est facilis penes imaginationem 
-            illius supremae notitiae. Valde 
-            enim imaginale est quod sint plures notitiae distinctae 
-            idem repraesentantes. Verbi gratia, possibile est quod sit aliqua 
-            notitia quae modo repraesentet etiam Deum et nullam creaturam. 
-            Potest iterum esse una alia, quae non repraesentet nisi 
-            Deum, quae magis assimilabitur primae luci quam prima. 
-            Ita quod possibile est quod sint duae notitiae, quae non repraesentant 
-            nisi idem, et tamen una perfectius repraesentabit 
-            quam alia. Et istud induxi ad ostendendo quod nedum quoad 
-            istam multitudinem, quae est omnium cognoscibilium possibilium habuit 
-            anima Christi cognitionum, sed habuit suprema in speciem possibilem, 
-            quia Deus dedit sibi tantum quantum potuit et extensive 
-            et intensive. Et ideo cum reverentia ipsius 
-            <name ref="#Wodeham">Adae</name> videtur mihi quod non bene dicit declarando se 
-            dicens quod: si Sortes et Plato cognovissent istam 
-            conclusionem 'triangulus habet tres' etc., aeque 
-            perfecte cognovisset unus sicut alter. Verum est 
-            dicit ipse quod de triangulo unus potest habere 
-            notitiam perfectiorem quam alter; sed quantum ad illam 
-            conclusionem, aeque perfectam notitiam habuisset unus sicut 
-            alter. Et consequentur dicit quod: si Sortes cognoscat triangulum 
-            habere tres, etc. aeque perfecte, cognoscit sicut Deus 
-            cognoscit, quia Deus respectu huius conclusionis triangulus <unclear>hoc[?]</unclear> etiam 
-            adaequate cognovit finite sicut Sortis, licet 
-            de <unclear>substantia[?]</unclear> illius conclusionis habeat infinitas cognitiones.</p>
-            
-            <p xml:id="l31-iuviel">Istud ut videtur non bene stat, quia Deus eandem 
-            conclusionem multum clarius et perfectius cognoscit 
-            quam Sortes, quia quicquid Deus cognoscit 
-            infinite, ita quod si, ad imaginationem, iudicia 
-            essent in Deo distincta, quotquot essent, essent 
-            infinita et infinitae perfectionis. Et ideo iudicium 
-            illud quod Deus habet de creatura est infinitae virtutis 
-            et nobilitatis et lux infinita. Lux autem quam 
-            habeo de creatura est <sic>infinita</sic> et limitata.</p>
-            
-            <p xml:id="l31-udcair">Unde 
-            dicit consequenter continuando materiam: non est dicit ipse 
-            inconveniens quod Deus cognoscat contingenter, ergo non 
-            est inconveniens quod cognoscat finite. Salva sui 
-            reverentia, consequentia non valet, immo ex hoc, scilicet, quod cognoscit 
-            <cb ed="#R" n="54ra" />contingenter cum hoc, quod est <unclear>substantia[?]</unclear> immutabilis, sequitur 
-            ipsius immensitas et infinita perfectio; 
-            ergo non sequitur, contingenter cognoscit, ergo finite 
-            cognoscit; immo ex <unclear>antecedente[?]</unclear>, cum uno addito, vero 
+              sibi placuerit sive intensum sive remissum.
+            </p>
+            <p xml:id="l31-uchnvg">
+              Unde circa hoc de reponendo huiusmodi notitiam 
+              sub specie, quia istud est mere extrinsecum sibi, potest 
+              dici quod illa erit in esse notitiae creaturae eiusdem speciei, 
+              cuius notitiae vicem gerit.
+            </p>
+            <p xml:id="l31-eqsvip">
+              Ex quo sequitur 
+              quod potest esse infinitarum diversarum specierum in esse 
+              notitiarum creaturae, quia imaginabiles sunt infinitae 
+              notitiae creaturae possibiles. Ex quo ergo Deus supplet vicem, vel supplere potest, reponetur sub 
+              eadem specie sub qua reponitur notitia cuius vicem 
+              supplet. Et illud est probabilius dicere quod ipse 
+              idem repraesentat et eodem gradu immutat potentiam, 
+              sicut species cuius vicem gerit. Ergo quantum ad 
+              habitudinem ad potentiam et obiectum se habet, sicut 
+              notitia cuius vicem supplet. Et per consequens quantum 
+              ad hoc potest dici: eiusdem speciei cum notitia 
+              illa cuius vicem supplet
+              <app>
+                <lem n="supplet"/>
+                <rdg wit="#R" type="correction-deletion">
+                  <del rend="strikethrough">
+                    et per consequens quantum ad hoc 
+                    potest dici eiusdem speciei cum notitia illa
+                  </del>
+                </rdg>
+              </app>, 
+              igitur etc. 
+              Et sic non concederem cum 
+              <cit>
+                <ref xml:id="l31-Rd1e377"><name ref="#Ripa">Magistri Ioannes de Ripa</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              quod 
+              Deus esset infinita notitia quoad specie. 
+              Unde data quacumque notitia creata in eadem proportione, 
+              Deus potest libere immutare potentiam; et 
+              huiusmodi immutatio non includit inhaesionem 
+              vel informationem, quia de ratione notitiae non est 
+              quod inhaereat vel informet potentiam.
+            </p>
+            <p xml:id="l31-resdie">
+              Respondendum 
+              est secundum aliam viam admittendum secundam partem argumenti, 
+              scilicet, quod Deus possit esse a nobis cognoscibilis notitia 
+              creata. Et cum dicitur: 'Deus est immensus, ergo nulla 
+              notitia creata potest eum repraesentare.' Negatur consequentia ad probationem, 
+              incircumscriptibilis est dicendum, esset, si placet de vocabulo, 
+              quia vel intelligitur quod nulla notitia creata 
+              Deo adaequatur comprehensive, et sic ratio concludit 
+              verum. Alio, quod est incircumscriptibilis vel incomprehensibilis, 
+              id est, quod per nullam notitiam creatam beatifica potest 
+              repraesentari. Et sic negaretur, quia isto modo cognoscendo 
+              Deum sufficit cognoscere ut summum bonum 
+              et summae quietatum secundum quod in eo consistit ratio 
+              ultimi finis. Utrum autem possit aliqua 
+              notitia creata cognosci secundum omne de eo dicibile, 
+              teneo, propter reverentiam Sanctorum et
+              <app>
+                <lem n="et"/>
+                <rdg wit="#R" type="correction-deletion">
+                  <del rend="strikethrough">s</del>
+                </rdg>
+              </app> 
+              doctorum et 
+              <cb ed="#R" n="b"/><!--R53vb --> 
+              animae Christi, dicentium quod anima Christi cognovit omnia, 
+              quae verbum, et quod ipsa notitia animae Christi est tamquam 
+              exemplar divinae essentiae et quare mundus 
+              architectus in quo relucet Deus et omnia factibilia 
+              cum hoc. Tamen stat quod illa notitia non sit 
+              comprehensiva ipsius Dei, quia oporteret quod esset notitia 
+              in se aeque perfecta sicut Deus. Modo secunda notitia 
+              animae Christi non esset aequae clara in se nec aeque 
+              perfecta sicut Deus, ergo. Modo secunda notitia animae Christi non esset 
+              aeque clara in se nec aequae perfecta sictu Deus, ideo etc.
+            </p>
+            <p xml:id="l31-stdapn">
+              Sed tunc dicit 
+              <cit>
+                <ref xml:id="l31-Rd1e408"><name ref="#Wodeham">Adam</name></ref>
+                <bibl>XXX</bibl>
+              </cit> 
+              penes quid attenditur 
+              perfectio notitiae.
+            </p>
+            <p xml:id="l31-refhic">
+              Responsio est facilis penes imaginationem 
+              illius supremae notitiae. Valde 
+              enim imaginale est quod sint plures notitiae distinctae 
+              idem repraesentantes. Verbi gratia, possibile est quod sit aliqua 
+              notitia quae modo repraesentet etiam Deum et nullam creaturam. 
+              Potest iterum esse una alia, quae non repraesentet nisi 
+              Deum, quae magis assimilabitur primae luci quam prima. 
+              Ita quod possibile est quod sint duae notitiae, quae non repraesentant 
+              nisi idem, et tamen una perfectius repraesentabit 
+              quam alia. Et istud induxi ad ostendendo quod nedum quoad 
+              istam multitudinem, quae est omnium cognoscibilium possibilium habuit 
+              anima Christi cognitionum, sed habuit suprema in speciem possibilem, 
+              quia Deus dedit sibi tantum quantum potuit et extensive 
+              et intensive. 
+              Et ideo cum reverentia ipsius 
+              <name ref="#Wodeham">Adae</name> 
+              videtur mihi quod non bene dicit declarando se 
+              dicens quod: si Sortes et Plato cognovissent istam 
+              conclusionem 'triangulus habet tres' etc., aeque 
+              perfecte cognovisset unus sicut alter. Verum est 
+              dicit ipse quod de triangulo unus potest habere 
+              notitiam perfectiorem quam alter; sed quantum ad illam 
+              conclusionem, aeque perfectam notitiam habuisset unus sicut 
+              alter. Et consequentur dicit quod: si Sortes cognoscat triangulum 
+              habere tres, etc. aeque perfecte, cognoscit sicut Deus 
+              cognoscit, quia Deus respectu huius conclusionis triangulus <unclear>hoc[?]</unclear> etiam 
+              adaequate cognovit finite sicut Sortis, licet 
+              de <unclear>substantia[?]</unclear> illius conclusionis habeat infinitas cognitiones.
+            </p>
+            <p xml:id="l31-iuviel">
+              Istud ut videtur non bene stat, quia Deus eandem 
+              conclusionem multum clarius et perfectius cognoscit 
+              quam Sortes, quia quicquid Deus cognoscit 
+              infinite, ita quod si, ad imaginationem, iudicia 
+              essent in Deo distincta, quotquot essent, essent 
+              infinita et infinitae perfectionis. Et ideo iudicium 
+              illud quod Deus habet de creatura est infinitae virtutis 
+              et nobilitatis et lux infinita. Lux autem quam 
+              habeo de creatura est <sic>infinita</sic> et limitata.
+            </p>
+            <p xml:id="l31-udcair">
+              Unde 
+              dicit consequenter continuando materiam: non est dicit ipse 
+              inconveniens quod Deus cognoscat contingenter, ergo non 
+              est inconveniens quod cognoscat finite. Salva sui 
+              reverentia, consequentia non valet, immo ex hoc, scilicet, quod cognoscit 
+              <pb ed="#R" n="54-r"/>
+              <cb ed="#R" n="a"/>
+              contingenter cum hoc, quod est <unclear>substantia[?]</unclear> immutabilis, 
+              sequitur 
+              ipsius immensitas et infinita perfectio; 
+              ergo non sequitur, contingenter cognoscit, ergo finite 
+              cognoscit; immo ex <unclear>antecedente[?]</unclear>, cum uno addito, vero 
               sequitur oppositum recte, scilicet, quod infinite cognoscit. 
               Nam bene sequitur Deus contingenter cognoscit et 
               non est mutabilis, ergo infinite cognoscit. Et ita 
@@ -493,8 +618,8 @@
               cognoscit et est scientia immutabilis. Et sic patet 
               quantum ad istam rationem a creatura Deus notitia 
               creata et etiam notitia increata potest cognosci. 
-              Et sic patet quid sit dicendum ad istam rationem.</p>
-         
+              Et sic patet quid sit dicendum ad istam rationem.
+            </p>
           </div> 
         </div>
       </div>
