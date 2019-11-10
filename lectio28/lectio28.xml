@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../../Documentation/PlaoulProjectODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 28, de Notitia</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2011-08-01">August 1st, 2011</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -33,555 +28,1984 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="internal"/>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
+      <div xml:id="starts-on">
+        <pb ed="#R" n="45-v"/>
+        <cb ed="#R" n="b"/>
+        <pb ed="#V" n="57-r"/>
+        <cb ed="#V" n="b"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio28">
-        <head subtype="title">Lectio 28, de Notitia</head>
-        <div>
-          <head xml:id="l28-Hudragp">Utrum Deus reponatur in aliquo praedicamento vel in aliquo genere praedicamentorum</head>
-          
-          <p xml:id="l28-iirig">In isto <supplied reason="sense">quarto</supplied><app><lem>quarto</lem><rdg wit="R">tertio</rdg><rdg wit="V">tertio</rdg></app> articulo, videndum est utrum 
-                Deus reponatur in aliquo praedicamento 
-                vel in aliquo genere praedicamentorum.<app><lem>in aliquo praedicamento vel in aliquo genere praedicamentorum</lem><rdg wit="V">in aliquo genere vel praedicamento</rdg></app> 
-        Et quantum ad hoc non debet esse magna<app><lem>magna</lem><rdg wit="V">magis</rdg></app> 
-                difficultas, utrum quaestio intelligitur<app><lem>intelligitur</lem><rdg wit="V">intelligatur</rdg></app> 
-                <cb ed="#V" n="57va"/>de rebus vel de<app><lem>vel de</lem><rdg wit="V">aut</rdg></app> terminis, quia termini primo et 
-                principaliter ponuntur in genere, et consequenter res significatae 
-                per ipsos; ita quod quaerere, utrum Deus reponatur 
-                in aliquo genere est quaerere, utrum Deus 
-                immediate significetur per aliquem terminum sibi 
-                proprium repositum in aliquo genere, vel etiam 
-                secundum alios, utrum res quae est Deus reponatur 
-                in aliquo genere, quia, sicut in praedicamento vel genere 
-                terminum<app><lem>terminum</lem><rdg wit="V">termini</rdg></app> se habent secundum quaedam ordinem inter se, 
-                sic aliqui imaginantur quod correspondentes<app><lem>correspondentes</lem><rdg wit="V">correspondeter</rdg></app> se habeant 
-                res ad extra secundum certum ordinem inter se, secundum quem 
-                ordinem dicuntur reponi in genere.</p>
-      
-          <p xml:id="l28-cimpdp">Circa istam 
-          materiam sunt variae opiniones doctorum et breviter 
-          <name ref="#Ockham">Okam</name>, <name ref="#Rimini">Gregorius</name> et <name ref="#Holcot">Holcot</name> et alii <name ref="#Moderni" type="group">moderni</name> 
-          plures tenent quod Deus reponitur in praedicamento, 
-          id est, quod Deus immediate significatur per aliquem 
-        terminum repositum in praedicamento sibi proprium, 
-          <cb ed="#R"/>ita quod iste terminus 'Deus' est<app><lem>est</lem><rdg wit="V">reponitur</rdg></app> in praedicamento substantiae, 
-          et etiam consequentur res, quae est Deus, reponitur in praedicamento 
-          substantiae.<app><lem>et etiam consequentur res, quae est Deus, reponitur in praedicamento substantiae</lem><rdg wit="V" type="om." cause="homeoarchy"/></app> Et consequenter quod<app><lem>quod</lem><rdg wit="V">quia</rdg></app> Deus relative dicitur ad creaturas<app><lem>ad creaturas</lem><rdg wit="R" type="om."/></app> reponi 
-          in praedicamento relationis; et ita, quia agit, reponitur 
-          in praedicamento actionis, ita quod reponitur in diversis 
-          praedicamentis secundum quod significatur per terminos sibi proprios 
-        diversorum praedicatorum.</p> 
-      </div>
-      <div>
-        <head xml:id="l28-Hoooooo">Opinio Ockham</head>
-        <p xml:id="l28-uciopa">Unde circa istam materiam, scilicet, 
-              utrum Deus reponitur in aliquo praedicamento vel 
-          genere, <name ref="#Ockham">Okam</name> ponit aliqua.</p>
-
-        <p xml:id="l28-pqgmss">Primo<app><lem>primo</lem><rdg wit="V">immo</rdg></app> quod genus 
-              est conceptus communiter multa individua et multas 
-          species significans.</p> 
-        
-        <p xml:id="l28-spqctp">Secundo ponit quod dupliciter aliquid potest 
-              reponi in praedicamento. Uno modo tamquam terminus existens 
-              in coordinatione<app><lem>coordinatione</lem><rdg wit="R" type="corr."><subst><add>coordinatione</add><del>cordinatione</del></subst></rdg></app> alicuius generis vel praedicamenti. 
-              Secundo modo tamquam res significata per talem terminum sic repositum 
-              in tali<app><lem>tali</lem><rdg wit="R" type="om."/></app> coordinatione talis praedicamenti.</p>
-        
-        <p xml:id="l28-tardba">Tertio affirmative respondet 
-            ad quaestionem illam, utrum Deus reponatur in praedicamento.<app><lem>reponatur in praedicamento</lem><rdg wit="V">etc.</rdg></app> Et dicit<app><lem>et dicit</lem><rdg wit="R" type="om."/></app> quod sic<app><lem>sic</lem><rdg wit="V" type="add."><add>reponitur in praedicamento</add></rdg></app>, id est, quod est aliquis terminus significans 
-            ipsum repositum in praedicamento, ita quod Deus concipitur 
-            per aliquem conceptum, et etiam concipitur per aliquem 
-            conceptum,<app><lem>et etiam concipitur per aliquem conceptum</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> et etiam significatur per terminum<app><lem>per terminum</lem><rdg wit="V" type="om."/></app> repositum in 
-            aliquo genere vel<app><lem>genere vel</lem><rdg wit="V" type="om."/></app> praedicamento. Et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> probat 
-            sic, quia istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> non detrahit de sua perfectione et simplicitate, quia illud non arguit<app><lem/><rdg wit="R" type="add.sed.del."><del><add>[?]</add></del></rdg></app><del>[?]</del> 
-            aliquam imperfectionem sive compositionem in ipso 
-            Deo, <cb ed="#V" n="57vb"/>quia impertinens est sibi, si sic vel sic 
-            concipiamus<app><lem>concipiamus</lem><rdg wit="V">capiamus</rdg></app> ipsum. Et per consequens, si concipiatur aliquo 
-            conceptu generali vel specifico reposito in praedicamento 
-            non videtur aliqualiter repugnare suae perfectioni 
-            et simplicitati. Verum est quod ipse <name ref="#Ockham">Okam</name> respondet 
-            ad auctoritates<app><lem>auctoritates</lem><rdg wit="V">auctoritatem</rdg></app> antiquorum doctorum qui dicebant 
-            'Deum non posse reponi in aliquo praedicamento' 
-            et unus doctor antiquus ad hoc allegabat<app><lem>allegabat</lem><rdg wit="V">allegat</rdg></app> 
-            quod est articulus<app><lem>articulus</lem><rdg wit="V">unus articulus</rdg></app> condemnatus, scilicet, dicere<app><lem/><rdg wit="R" type="om."/></app> quod Deus 
-            reponitur<app><lem>reponitur</lem><rdg wit="V">reponatur</rdg></app> in praedicamento, error. Et 
-            istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> legi in uno doctore bene autentico.<app><lem>autentico</lem><rdg wit="V">antiquo</rdg></app></p> 
-        
-        <p xml:id="l28-orqcep"><name ref="#Ockham">Okam</name> respondet quod ipsi aequivocabant de 
-          praedicamento. Unde capiebant praedicamentum sive 
-          genus taliter ut esset compositum ex parte vel esset 
-          pars compositi, ita quod realiter esse in genere eis 
-          significabat esse tamquam pars; vel tamquam<app><lem>tamquam</lem><rdg wit="R">esse</rdg></app> compositum 
-          ex parte. Et isto modo bene concedo quod Deus 
-          non est in genere vel praedicamento, quia nec est pars 
-            nec compositum ex parte.</p>
-        
-      </div>
-      <div>
-        <head xml:id="l28-Hcococo">Contra Okam</head>
-        
-        <p xml:id="l28-cipgie">Contra istam po
-          sitionem,<app><lem>positionem</lem><rdg wit="V">partem</rdg></app> arguitur, quia sicut visum est in prae
-          cedenti lectione, Deus non est univocabilis, 
-          id est, univoce significabilis cum creatura ratione indigentiae 
-          et modi essendi, cum igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> Deus magis<app><lem>Deus magis</lem><rdg wit="V" type="om."/></app> ex
-          cedit substantiam creatam quamcumque et magis indi
-          geat substantia quaecumque creata ipso Deo ipsum<app><lem>ipsum</lem><rdg wit="V">ipsam</rdg></app> sustentante 
-          quam<app><lem>quod</lem><rdg wit="V">quod</rdg></app> accidens indigeat substantia creata vel separetur<app><lem>separetur</lem><rdg wit="V">superetur</rdg></app> 
-          <cb ed="#R" n="46rb"/>ab ea a fortiori, scilicet, accidens propter istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> non posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> 
-          univocari cum substantia nec cum Deo creatura, et sic, si non posset<app><lem>posset</lem><rdg wit="V">possit</rdg></app> 
-          esse univocatio in terminis generalissimis a fortiori 
-          nec in specialioribus, ubi adhuc maior re
-          quireretur convenientia et specialior quam in terminis 
-          generalissimis, ideo etc.</p>
-        
-        <p xml:id="l28-sapdes">Secundo, arguitur probando<app><lem>probando</lem><rdg wit="V" type="om."/></app> quod 
-          conceptus Dei non sit in aliquo genere, quia si sic: vel 
-          reponeretur tamquam species vel tamquam individuum. 
-          Si tamquam species,<app><lem>si tamquam species</lem><rdg wit="V">si primum</rdg></app> cum omnis conceptus specificus<app><lem>specificus</lem><rdg wit="V" type="om."/></app> 
-          sit aptus natus praedicari de pluribus vel ex <unclear>suo[?]</unclear><app><lem>suo[?]</lem><rdg wit="V">suae</rdg></app> 
-          modo significandi<app><lem>significandi</lem><rdg wit="V">impositis</rdg></app> non sibi repugnat significare plura. 
-          sequitur quod conceptus Dei non excludet omnem pluralitatem 
-          terminorum,<app><lem>terminorum</lem><rdg wit="V">deorum</rdg></app> quod est falsum. Si vero reponatur tamquam 
-          individuum, tunc oportebat quod species sibi immediata 
-          contineat immediate plura <cb ed="#V" n="58ra"/>individua 
-          eiusdem speciei, et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> erunt plures dii eiusdem 
-          speciei.</p>
-        
-        <p xml:id="l28-taseig">Tertio, arguitur supponendo radicem quam 
-          supponit <name ref="#Scotus">Doctor Subtilis</name>, scilicet, quod diffinitio 
-          vel conceptus specificus repositus in aliquo genere 
-          est talis quod non repugnat sibi poni primo vel 
-          secundo modo dicendi per se.<app><lem>sibi poni primo vel secundo modo dicendi per se</lem><rdg wit="V">sibi per se et primo vel in secundo modo dicendi per se</rdg></app> Et<app><lem>et</lem><rdg wit="V" type="om."/></app> quod differentiae positae in 
-          eius diffinitione sint<app><lem>sint</lem><rdg wit="V">sunt</rdg></app> supponentes pro<app><lem>pro</lem><rdg wit="R">per[?]</rdg></app> diversis rebus.<app><lem>rebus</lem><rdg wit="V" type="add."><add>et</add></rdg></app> 
-          In hoc videtur fundare totam imaginationem 
-          suam<app><lem>suam</lem><rdg wit="V" type="om."/></app> ad praedicandum quod Deus non est in aliquo 
-          praedicamento et quod repugnat sibi ratione suae 
-          simplicitatis et non angelo; licet angelus sit omnino 
-          simplex,<app><lem>lict angelus sit omnino simplex</lem><rdg wit="V">sic omnino simplex</rdg></app> dicit tamen quod diffinitio angeli continet 
-          differentias, et licet non sit possibile absolute quod competant 
-          diversis rebus, tamen illud non repugnat diffinitioni 
-          angeli. Diffinitioni autem Dei repugnat, quia diffinitio 
-          Dei secundum se totam excludit omnem potentialitatem 
-          per se primo et in secundo modo dicendi per se. Unde 
-          ex ista radice, diffinitioni rei repositae 
-          in praedicamento non repugnant primo et per se et 
-          in secundo modo dicendi per se,<app><lem>Unde ex ista radice . . .primo et per se et in secundo modo dicendi per se</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> quin differentiae potentiae in 
-          huiusmodi diffinitione supponant pro diversis, 
-          licet non sit ita a parte rei. Sed aliunde provenit quod 
-          Deus non reponitur in aliquo<app><lem>aliquo</lem><rdg wit="R" type="om."/></app> praedicamento. Verbi gratia, capiamus 
-          diffinitionem animae et ponamus in ea plures differentias 
-          ut sensitivum, rationale, intellectivum, etc. Licet enim sensitivum 
-          et rationale sint idem in anima, tamen huic diffinitioni 
-          non repugnat primo et per se et<app><lem>et</lem><rdg wit="V">vel</rdg></app> in secundo modo 
-          dicendi per se quod esse sensitivum in anima sit aliud 
-          quam esse intellectivum vel rationale, licet per accidens, 
-          et ita stricte non capit <name ref="#Ockham">Okam</name> per se, et primo 
-          modo non est sic de Deo, quia secundum omnem differentiam 
-          repositam in eius diffinitione quaelibet esset 
-          actualissima et necessaria, ita quod quaelibet immediate 
-          ipsum Deum repraesentaret ut actualissimum et necesse 
-          esse. Et ideo, quia diffinitio ipsius repugnat 
-          <cb ed="#R" n="46va"/>diffinitioni generis, ita consequenter repugnat diffinitio 
-          et per consequens non potest esse in genere.</p> 
-        
-        <p xml:id="l28-icsegg">Item 
-          conceptus substantiae non sibi plus competit prout 
-          est praedicamentum quam conceptus sapientiae prout ponitur<app><lem>ponitur</lem><rdg wit="V">reponitur</rdg></app> in 
-          praedicamento qualitatis non dicitur de Deo, quia si sic, 
-          tunc<app><lem>tunc</lem><rdg wit="V">cum</rdg></app> genus generalissimum illius praedicamenti, scilicet li<app><lem>li</lem><rdg wit="V" type="om."/></app> 'qualitatis', 
-          verificaretur de Deo, et sic Deus esset qualitas,<app><lem>qualitas</lem><rdg wit="V">qualis</rdg></app> igitur<app><lem>igitur</lem><rdg wit="V">ergo</rdg></app> 
-          nec substantia competit<app><lem>competit</lem><rdg wit="V">convenit</rdg></app> Deo prout est genus generalissimum.</p> 
-        
-      </div>
-      <div>
-        <head xml:id="l28-Haoaoao">Alia opinio</head>
-        
-          <p xml:id="l28-saoesc">Sequitur alia opinio quae ponit istam propositionem 
-          magis describendo genus: quod genus est illud 
-          quod<app><lem>quod</lem><rdg wit="V">cui</rdg></app> subtranscendente est praedicabile in quid de pluribus 
-          differentibus specie, quorum nulli repugnat per se 
-          ex sua diffinitione specifica quod in eo<app><lem>eo</lem><rdg wit="V">ea</rdg></app> sit compositio.</p>
-        
-        <p xml:id="l28-dstisi"><name ref="#Scotus">Doctor Subtilis</name> tenet quod li 'ens' et li 'vita' 
-          et omnia<app><lem>omnia</lem><rdg wit="V">alia</rdg></app> praedicata essentialia, quae vocantur trancendentia 
-          sunt omnia extra genus et extra praedicamenta. 
-          Et quantum est de me, sequendo opinionem quae magis mihi 
-          videtur<app><lem>mihi videtur</lem><rdg wit="V">est</rdg></app> theologica, et<app><lem>et</lem><rdg wit="V" type="om."/></app> philosophica, et logicalis. Etiam si bene resolvatur<app><lem>resolvatur</lem><rdg wit="V">resolvantur</rdg></app> 
-          illa praedicata non dicuntur<app><lem>dicuntur</lem><rdg wit="V">debent</rdg></app> reponi in praedicamento, nec 
-          sunt genera secundum modum loquendi ipsorum doctorum et philosophorum. 
-          Ideo genus debet sic describi genus est illud 
-          quod<app><lem>quod</lem><rdg wit="V">cui</rdg></app> subtranscendente etc., sicut immediate dictum est, 
-          unde<app><lem>unde</lem><rdg wit="R">bene</rdg></app> et angelo et animae ex sua diffinitione specifica 
-          non repugnat per se compositio, licet illud sit impossibile.</p> 
-        
-        <div>
-          <head xml:id="l28-Hcrcrcr">Conclusio responsalis</head>
-          
-          <p xml:id="l28-eqscie">Ex quo sequitur conclusio responsalis ad articulum quod Deo 
-            repugnat esse in genere praedicamentali, et hoc ex quattuor, 
-            scilicet,<app><lem>scilicet</lem><rdg wit="V">primo</rdg></app> ex sua simplicitate, necessitate, unitate, et 
-            infinitate. Ex sua simplicitate, quia diffinitio 
-            sua specifica componitur ex praedicatis et differentiis nullam 
-            potentialitatem dicentibus; immo quaelibet differentia ibidem 
-            posita dicit purum actum simplicem. In aliis 
-            vero diffinitionibus est ordo quoad<app><lem>quoad</lem><rdg wit="V">quod ad[?]</rdg></app> modos 
-            considerandi, quia generales differentiae sunt quodammodo 
-            potentialiores<app><lem>potentialiores</lem><rdg wit="V">posteriores</rdg></app> quam magis speciales. Et ita potest 
-            induci de aliis tribus, scilicet, de necessitate, unitate, 
-            et<app><lem>et</lem><rdg wit="V" type="add.sed.del"><del rend="strikethrough"><add place="inline">x</add></del></rdg></app> infinitate, quia immediate quaelibet eius diffinitio 
-            et quilibet terminus repositus in illis immediate re
-          praesentat vel significat immensitatem divinam et 
-            actum purum. Ideo quantum ad hoc non debet esse ordo 
-            talis sicut in aliis diffinitionibus. Ideo diffinitioni 
-            <cb ed="#V" n="58va"/>ipsius Dei repugnat per se et immediate 
-            pluralitas sive compositio, ideo etc.</p>
+        <head xml:id="l28-Hd1e110">Lectio 28, de Notitia</head>
+        <div xml:id="l28-Dd1e113">
+          <head xml:id="l28-Hudragp">Utrum Deus reponatur in aliquo praedicamento vel in aliquo
+            genere praedicamentorum</head>
+          <p xml:id="l28-iirig">
+            In isto
+            <app>
+              <lem type="conjecture-corrected"><corr>quarto</corr></lem>
+              <rdg wit="#R" facs="45v/80">tertio</rdg>
+              <rdg wit="#V" type="variation-absent" facs="57r/77"/>
+            </app>
+            <app>
+              <lem>articulo</lem>
+              <rdg wit="#V" type="variation-absent" facs="57r/78"/>
+            </app>
+            videndum est utrum Deus reponatur 
+            <app>
+              <lem>in aliquo praedicamento vel in aliquo genere praedicamentorum</lem>
+              <rdg wit="#V">in aliquo genere vel praedicamento</rdg>
+            </app>.
+            Et quantum ad hoc non debet esse 
+            <app>
+              <lem>magna</lem>
+              <rdg wit="#V">magis</rdg>
+            </app> 
+            difficultas, utrum quaestio 
+            <app>
+              <lem>intelligitur</lem>
+              <rdg wit="#V">intelligatur</rdg>
+            </app>
+            <pb ed="#V" n="57-v"/>
+            <cb ed="#V" n="a"/>
+            de rebus vel de<app>
+              <lem>vel de</lem>
+              <rdg wit="#V">aut</rdg>
+            </app> 
+            terminis, quia termini primo et principaliter ponuntur in genere, et consequenter
+            res significatae per ipsos; ita quod quaerere, utrum Deus reponatur in aliquo genere est
+            quaerere, utrum Deus immediate significetur per aliquem terminum sibi proprium repositum
+            in aliquo genere, vel etiam secundum alios, utrum res quae est Deus reponatur in aliquo
+            genere, quia, sicut in praedicamento vel genere 
+            <app>
+              <lem>terminum</lem>
+              <rdg wit="#V">termini</rdg>
+            </app> 
+            se habent secundum quaedam ordinem inter se, sic aliqui imaginantur quod 
+            <app>
+              <lem>correspondentes</lem>
+              <rdg wit="#V">correspondeter</rdg>
+            </app> 
+            se habeant res ad extra secundum certum ordinem inter se, secundum quem ordinem
+            dicuntur reponi in genere.
+          </p>
+          <p xml:id="l28-cimpdp">
+            Circa istam materiam sunt variae opiniones doctorum et breviter
+            <name ref="#Ockham">Okam</name>, 
+            <name ref="#Rimini">Gregorius</name>, 
+            et <name ref="#Holcot">Holcot</name>, 
+            et alii <name ref="#Moderni" type="group">Moderni</name>
+            plures tenent quod Deus reponitur in praedicamento, 
+            id est quod Deus immediate significatur 
+            per aliquem terminum repositum in praedicamento sibi proprium,
+            ita quod iste terminus 'Deus' 
+            <app>
+              <lem>est</lem>
+              <rdg wit="#V">reponitur</rdg>
+            </app> 
+            in praedicamento substantiae, 
+            <app>
+              <lem>et etiam consequentur res, quae est Deus, reponitur in praedicamento
+                substantiae
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoarchy"/>
+            </app>. Et consequenter quod<app>
+              <lem>quod</lem>
+              <rdg wit="#V">quia</rdg>
+            </app> 
+            Deus relative dicitur 
+            <app>
+              <lem>ad creaturas</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            reponi in praedicamento relationis; et ita 
+            quia agit, reponitur in praedicamento actionis, 
+            ita quod reponitur in diversis praedicamentis 
+            secundum quod significatur per
+            terminos sibi proprios diversorum praedicatorum.
+          </p>
+        </div>
+        <div xml:id="l28-Dd1e251">
+          <head xml:id="l28-Hoooooo">Opinio Ockham</head>
+          <p xml:id="l28-uciopa">
+            Unde circa istam materiam, 
+            scilicet utrum Deus reponitur in aliquo praedicamento vel genere, 
+            <name ref="#Ockham">Okam</name> ponit aliqua.
+          </p>
+          <p xml:id="l28-pqgmss">
+            <app>
+              <lem>Primo</lem>
+              <rdg wit="#V">immo</rdg>
+            </app> 
+            quod genus 
+            est conceptus communiter multa individua et multas 
+            species significans.
+          </p> 
+          <p xml:id="l28-spqctp">
+            Secundo ponit quod dupliciter aliquid potest reponi in
+            praedicamento. 
+            Uno modo tamquam terminus existens in 
+            <app>
+              <lem>coordinatione</lem>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
+                  <add>coordinatione</add>
+                  <del>cordinatione</del>
+                </subst>
+              </rdg>
+            </app> 
+            alicuius generis vel praedicamenti. 
+            Secundo modo tamquam res significata per
+            talem terminum sic repositum in 
+            <app>
+              <lem>tali</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            coordinatione talis praedicamenti.
+          </p>
+          <p xml:id="l28-tardba">
+            Tertio affirmative respondet ad quaestionem illam, 
+            utrum Deus 
+            <app>
+              <lem>reponatur in praedicamento</lem>
+              <rdg wit="#V">etc.</rdg>
+            </app>.
+            Et 
+            <app>
+              <lem>et dicit</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            quod sic
+            <app>
+              <lem n="sic"/>
+              <rdg wit="#V" type="variation-present">
+                reponitur in praedicamento
+              </rdg>
+            </app>, 
+            id est quod est aliquis terminus significans 
+            ipsum repositum in praedicamento,
+            ita quod Deus concipitur per aliquem conceptum, 
+            <app>
+              <lem>
+                et etiam concipitur 
+                per aliquem conceptum
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoteleuton"/>
+            </app>, 
+            et etiam significatur 
+            <app>
+              <lem>per terminum</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            repositum in aliquo 
+            <app>
+              <lem>genere vel</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            praedicamento. Et 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app> 
+            probat sic 
+            quia 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app> 
+            non detrahit de sua perfectione et simplicitate
+            quia illud non arguit
+            <app>
+              <lem n="arguit"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del><unclear/></del>
+              </rdg>
+            </app>
+            aliquam imperfectionem sive compositionem in ipso Deo,
+            <cb ed="#V" n="b"/><!--V57vb -->
+            quia impertinens est sibi, 
+            si sic vel sic 
+            <app>
+              <lem>concipiamus</lem>
+              <rdg wit="#V">capiamus</rdg>
+            </app> 
+            ipsum. 
+            Et per consequens, 
+            si concipiatur aliquo conceptu generali vel specifico
+            reposito in praedicamento non videtur aliqualiter repugnare suae perfectioni et
+            simplicitati. 
+            Verum est quod 
+            ipse <name ref="#Ockham">Okam</name> respondet ad 
+            <app>
+              <lem>auctoritates</lem>
+              <rdg wit="#V">auctoritatem</rdg>
+            </app> 
+            antiquorum doctorum 
+            qui dicebant 'Deum non posse reponi in aliquo praedicamento'
+            et unus doctor antiquus ad hoc 
+            <app>
+              <lem>allegabat</lem>
+              <rdg wit="#V">allegat</rdg>
+            </app> 
+            quod est 
+            <app>
+              <lem>articulus</lem>
+              <rdg wit="#V">unus articulus</rdg>
+            </app> 
+            condemnatus, 
+            scilicet 
+            <app>
+              <lem>dicere</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            quod Deus 
+            <app>
+              <lem>reponitur</lem>
+              <rdg wit="#V">reponatur</rdg>
+            </app> 
+            in praedicamento, error. 
+            Et 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app> 
+            legi in uno doctore bene 
+            <app>
+              <lem>autentico</lem>
+              <rdg wit="#V">antiquo</rdg>
+            </app>
+          </p>
+          <p xml:id="l28-orqcep">
+            <name ref="#Ockham">Okam</name> 
+            respondet quod ipsi aequivocabant de praedicamento. 
+            Unde capiebant praedicamentum sive genus taliter ut esset compositum
+            ex parte vel esset pars compositi, 
+            ita quod realiter esse in genere eis significabat
+            esse tamquam pars; vel 
+            <app>
+              <lem>tamquam</lem>
+              <rdg wit="#R">esse</rdg>
+            </app> 
+            compositum ex parte. 
+            Et isto modo bene concedo quod Deus non est in genere vel
+            praedicamento quia nec est pars nec compositum ex parte.
+          </p>
+        </div>
+        <div xml:id="l28-Dd1e481">
+          <head xml:id="l28-Hcococo">Contra Okam</head>
+          <p xml:id="l28-cipgie">
+            Contra istam 
+            <app>
+              <lem>positionem</lem>
+              <rdg wit="#V">partem</rdg>
+            </app>, 
+            arguitur 
+            quia sicut visum est in prae cedenti lectione, 
+            Deus non est univocabilis, 
+            id est univoce significabilis 
+            cum creatura ratione indigentiae et modi essendi, 
+            cum 
+            <app>
+              <lem>igitur</lem>
+              <rdg wit="#V">ergo</rdg>
+            </app> 
+            <app>
+              <lem>Deus magis</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            ex cedit substantiam creatam quamcumque 
+            et magis indigeat substantia quaecumque
+            creata ipso Deo 
+            <app>
+              <lem>ipsum</lem>
+              <rdg wit="#V">ipsam</rdg>
+            </app> 
+            sustentante 
+            <app>
+              <lem>quam</lem>
+              <rdg wit="#V">quod</rdg>
+            </app> 
+            accidens indigeat substantia creata vel 
+            <app>
+              <lem>separetur</lem>
+              <rdg wit="#V">superetur</rdg>
+            </app>
+            <cb ed="#R" n="b"/><!--R46rb-->
+            ab ea a fortiori, 
+            scilicet accidens propter 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app> 
+            non 
+            <app>
+              <lem>posset</lem>
+              <rdg wit="#V">possit</rdg>
+            </app> 
+            univocari cum substantia nec cum Deo creatura, 
+            et sic, si non 
+            <app>
+              <lem>posset</lem>
+              <rdg wit="#V">possit</rdg>
+            </app> 
+            esse univocatio in terminis generalissimis a fortiori nec in specialioribus, 
+            ubi adhuc maior requireretur convenientia 
+            et specialior quam in terminis generalissimis, 
+            ideo etc.
+          </p>
+          <p xml:id="l28-sapdes">
+            Secundo, arguitur 
+            <app>
+              <lem>probando</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            quod 
+            conceptus Dei non sit in aliquo genere, quia si sic: vel 
+            reponeretur tamquam species vel tamquam individuum. 
+            <app>
+              <lem>Si tamquam species</lem>
+              <rdg wit="#V">si primum</rdg>
+            </app>, 
+            cum omnis conceptus 
+            <app>
+              <lem>specificus</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            sit aptus natus praedicari de pluribus vel ex 
+            <app>
+              <lem><unclear>suo</unclear></lem>
+              <rdg wit="#V">suae</rdg>
+            </app> 
+            modo 
+            <app>
+              <lem>significandi</lem>
+              <rdg wit="#V">impositis</rdg>
+            </app> 
+            non sibi repugnat significare plura. 
+            sequitur quod conceptus Dei non excludet omnem pluralitatem 
+            <app>
+              <lem>terminorum</lem>
+              <rdg wit="#V">deorum</rdg>
+            </app>, 
+            quod est falsum. 
+            Si vero reponatur tamquam 
+            individuum, tunc oportebat quod species sibi immediata 
+            contineat immediate plura 
+            <pb ed="#V" n="58-r"/>
+            <cb ed="#V" n="a"/>
+            individua 
+            eiusdem speciei, 
+            et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app> 
+            erunt plures dii eiusdem speciei.
+          </p>
+          <p xml:id="l28-taseig">
+            Tertio, 
+            arguitur supponendo radicem quam 
+            supponit 
+            <name ref="#Scotus">Doctor Subtilis</name>, 
+            scilicet quod diffinitio 
+            vel conceptus specificus repositus in aliquo genere 
+            est talis quod non repugnat 
+            <app>
+              <lem>sibi poni primo vel secundo modo dicendi per se</lem>
+              <rdg wit="#V">sibi per se et primo vel in secundo modo dicendi per se</rdg>
+            </app>. 
+            <app>
+              <lem>Et</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            quod differentiae positae in 
+            eius diffinitione 
+            <app>
+              <lem>sint</lem>
+              <rdg wit="#V">sunt</rdg>
+            </app> 
+            supponentes 
+            <app>
+              <lem>pro</lem>
+              <rdg wit="#R"><unclear>per</unclear></rdg>
+            </app> 
+            diversis rebus.
+            <app>
+              <lem n="rebus"/>
+              <rdg wit="#V" type="variation-present">
+                <add>et</add>
+              </rdg>
+            </app> 
+            In hoc videtur fundare totam imaginationem 
+            <app>
+              <lem>suam</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            ad praedicandum quod Deus non est in aliquo 
+            praedicamento et quod repugnat sibi ratione suae 
+            simplicitatis et non angelo; 
+            <app>
+              <lem>lict angelus sit omnino simplex</lem>
+              <rdg wit="#V">sic omnino simplex</rdg>
+            </app>, 
+            dicit tamen quod diffinitio angeli continet differentias, 
+            et licet non sit possibile absolute quod competant 
+            diversis rebus, tamen illud non repugnat diffinitioni 
+            angeli. Diffinitioni autem Dei repugnat, quia diffinitio 
+            Dei secundum se totam excludit omnem potentialitatem 
+            per se primo et in secundo modo dicendi per se. 
+            <app>
+              <lem>Unde 
+                ex ista radice, diffinitioni rei repositae 
+                in praedicamento non repugnant primo et per se et 
+                in secundo modo dicendi per se
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoteleuton"/>
+            </app>, 
+            quin differentiae potentiae in 
+            huiusmodi diffinitione supponant pro diversis, 
+            licet non sit ita a parte rei. Sed aliunde provenit quod 
+            Deus non reponitur in 
+            <app>
+              <lem>aliquo</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            praedicamento. 
+            Verbi gratia, capiamus 
+            diffinitionem animae et ponamus in ea plures differentias 
+            ut sensitivum, rationale, intellectivum, etc. Licet enim sensitivum 
+            et rationale sint idem in anima, tamen huic diffinitioni 
+            non repugnat primo et per se 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V">vel</rdg>
+            </app> 
+            in secundo modo 
+            dicendi per se quod esse sensitivum in anima sit aliud 
+            quam esse intellectivum vel rationale, licet per accidens, 
+            et ita stricte non capit <name ref="#Ockham">Okam</name> per se, 
+            et primo modo non est sic de Deo 
+            quia secundum omnem differentiam 
+            repositam in eius diffinitione quaelibet esset 
+            actualissima et necessaria, 
+            ita quod quaelibet immediate 
+            ipsum Deum repraesentaret ut actualissimum et necesse esse. 
+            Et ideo, quia diffinitio ipsius repugnat 
+            <pb ed="#R" n="46-v"/>
+            <cb ed="#R" n="a"/>
+            diffinitioni generis, ita consequenter repugnat diffinitio 
+            et per consequens non potest esse in genere.
+          </p> 
+          <p xml:id="l28-icsegg"> 
+            Item conceptus substantiae non sibi plus competit prout est
+            praedicamentum quam conceptus sapientiae prout 
+            <app>
+              <lem>ponitur</lem>
+              <rdg wit="#V">reponitur</rdg>
+            </app>
+            in praedicamento qualitatis non dicitur de Deo, quia si sic, 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">cum</rdg>
+            </app>
+            genus generalissimum illius praedicamenti, scilicet 
+            <app>
+              <lem>li</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            <mentioned>qualitatis</mentioned>, 
+            verificaretur de Deo, 
+            et sic Deus esset
+            <app>
+              <lem>qualitas</lem>
+              <rdg wit="#V">qualis</rdg>
+            </app>,
+            <app>
+              <lem>igitur</lem>
+              <rdg wit="#V">ergo</rdg>
+            </app>
+            nec substantia 
+            <app>
+              <lem>competit</lem>
+              <rdg wit="#V">convenit</rdg>
+            </app>
+            Deo prout est genus generalissimum.
+          </p> 
+        </div>
+        <div xml:id="l28-Dd1e787">
+          <head xml:id="l28-Haoaoao">Alia opinio</head>
+          <p xml:id="l28-saoesc">
+            Sequitur alia opinio quae ponit istam propositionem 
+            magis describendo genus: quod genus est illud 
+            <app>
+              <lem>quod</lem>
+              <rdg wit="#V">cui</rdg>
+            </app> 
+            subtranscendente est praedicabile in quid de pluribus 
+            differentibus specie, quorum nulli repugnat per se 
+            ex sua diffinitione specifica quod in 
+            <app>
+              <lem>eo</lem>
+              <rdg wit="#V">ea</rdg>
+            </app> 
+            sit compositio.
+          </p>
+          <p xml:id="l28-dstisi">
+            <name ref="#Scotus">Doctor Subtilis</name> tenet quod li 'ens' et li 'vita' 
+            et 
+            <app>
+              <lem>omnia</lem>
+              <rdg wit="#V">alia</rdg>
+            </app> 
+            praedicata essentialia, 
+            quae vocantur trancendentia 
+            sunt omnia extra genus et extra praedicamenta. 
+            Et quantum est de me, 
+            sequendo opinionem quae magis 
+            <app>
+              <lem>mihi videtur</lem>
+              <rdg wit="#V">est</rdg>
+            </app> 
+            theologica, 
+            <app><lem>et</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            philosophica, et logicalis. 
+            Etiam si bene 
+            <app>
+              <lem>resolvatur</lem>
+              <rdg wit="#V">resolvantur</rdg>
+            </app> 
+            illa praedicata non 
+            <app>
+              <lem>dicuntur</lem>
+              <rdg wit="#V">debent</rdg>
+            </app> 
+            reponi in praedicamento, 
+            nec sunt genera secundum modum loquendi ipsorum doctorum et philosophorum. 
+            Ideo genus debet sic describi genus est illud 
+            <app>
+              <lem>quod</lem>
+              <rdg wit="#V">cui</rdg>
+            </app> 
+            subtranscendente etc., 
+            sicut immediate dictum est, 
+            <app>
+              <lem>unde</lem>
+              <rdg wit="#R">bene</rdg>
+            </app> 
+            et angelo et animae ex sua diffinitione specifica 
+            non repugnat per se compositio, 
+            licet illud sit impossibile.
+          </p> 
+          <div xml:id="l28-Dd1e881">
+            <head xml:id="l28-Hcrcrcr">Conclusio responsalis</head>
+            <p xml:id="l28-eqscie">
+              Ex quo sequitur conclusio responsalis ad articulum quod Deo 
+              repugnat esse in genere praedicamentali, et hoc ex quattuor, 
+              <app>
+                <lem>scilicet</lem>
+                <rdg wit="#V">primo</rdg>
+              </app>, 
+              ex sua simplicitate, necessitate, unitate, et 
+              infinitate. Ex sua simplicitate, quia diffinitio 
+              sua specifica componitur ex praedicatis et differentiis nullam 
+              potentialitatem dicentibus; immo quaelibet differentia ibidem 
+              posita dicit purum actum simplicem. In aliis 
+              vero diffinitionibus est ordo 
+              <app>
+                <lem>quoad</lem>
+                <rdg wit="#V">quod ad[?]</rdg>
+              </app> 
+              modos 
+              considerandi, 
+              quia generales differentiae sunt quodammodo 
+              <app>
+                <lem>potentialiores</lem>
+                <rdg wit="#V">posteriores</rdg>
+              </app> 
+              quam magis speciales. 
+              Et ita potest 
+              induci de aliis tribus, 
+              scilicet de necessitate, unitate, 
+              <app>
+                <lem n="et"/>
+                <rdg wit="#V" type="correction-deletion">
+                  <del rend="strikethrough">x</del>
+                </rdg>
+              </app> 
+              infinitate, quia immediate quaelibet eius diffinitio 
+              et quilibet terminus repositus in illis immediate re
+              praesentat vel significat immensitatem divinam et 
+              actum purum. Ideo quantum ad hoc non debet esse ordo 
+              talis sicut in aliis diffinitionibus. Ideo diffinitioni 
+              <pb ed="#V" n="58-v"/>
+              <cb ed="#V" n="a"/>
+              ipsius Dei repugnat per se et immediate 
+              pluralitas sive compositio, ideo etc.
+            </p>
           </div>
-      </div>
-      <div>
-        <head xml:id="l28-Hoididr">Opinio Ioannes de Ripa</head>
-        
-        <p xml:id="l28-saoafe">Sequitur alia opinio <name ref="#Ripa">Magistri Ioannes de Ripa</name><app><lem/><rdg wit="V" type="marginalNote">Opinio <name ref="#Ripa">Magistri Ioannes de Ripa</name></rdg></app> qui absolute negat 
-          Deum univoce praedicari cum creaturis in quolibet praedicamento. 
-          <name ref="#Scotus">Scotus</name><app><lem/><rdg wit="V" type="marginalNote"><name ref="#Scotus">Scotus</name></rdg></app> tamen hoc videtur negare, immo dicit quod potest 
-          univocari cum creaturis in quolibet praedicamento transcendente, 
-          sicut est in 'esse' et<app><lem>et</lem><rdg wit="R" type="om."/></app> 'vivere' etc. Nec obstat illud 
-          quod dicit <name ref="#Ripa">Magister<app><lem>Magister</lem><rdg wit="V" type="om."/></app> de Ripa</name> quod non est ratio obiectialis 
-          communis Deo et creaturis; immo<app><lem>immo</lem><rdg wit="V" type="om."/></app> ratio entis est bene 
-          communis Deo et creaturis, quia est indifferens<app><lem>indifferens</lem><rdg wit="R">differens</rdg></app> ad finitum et 
-          <cb ed="#R" n="46vb"/>infinitum et ita de rationibus aliorum praedicatorum 
-          transcendentium. Et ideo consequenter <name ref="#Ripa">Magister<app><lem>Magister</lem><rdg wit="V" type="om."/></app> Ioannes de Ripa</name> 
-          habet concedere quod Deus non est in aliquo praedicamento vel<app><lem>praedicamento vel</lem><rdg wit="R" type="om."/></app> genere 
-          cum creatura, quia genus debet univoce praedicari 
-          de suis speciebus. Modo, iste tenet expresse<app><lem>expresse</lem><rdg wit="V" type="om."/></app> 
-          quod nulla potest esse univocatio Dei cum creaturis 
-          in esse propter defectum<app><lem>defectum</lem><rdg wit="R">Deum</rdg></app> rationis obiectalis, quia esse Dei 
-          est immensum et infinitum et esse creaturae 
-          est limitatum et imperfectum vel<app><lem>imperfectum vel</lem><rdg wit="R" type="om."/></app> finite perfectum. Ergo a fortiori 
-          nec poterit univocari cum creaturis in speciebus, ergo 
-          etc.<app><lem>etc.</lem><rdg wit="V" type="om."/></app></p> 
-        
-        <p xml:id="l28-spisip">Secundo ponit iste doctor quod creaturae univocantur 
-          inter se secundum praedicata perfectionalia,<app><lem>perfectionalia</lem><rdg wit="V">personalia</rdg></app> quae communiter 
-          vocantur transcendentia, ut sunt 'esse', 'vivere', 'intelligere', 
-          et huiusmodi. Ideo reponuntur<app><lem>reponuntur</lem><rdg wit="V">reponitur</rdg></app> in genere sive in praedicamento.</p>
-      </div>
-      <div>
-        <head xml:id="l28-Hoadoad">Opinio aliorum doctorum</head>
-        
-        <p xml:id="l28-aeorip">Alia est opinio <name ref="#Augustine">Augustini</name>, <name ref="#HenryOfGhent">Gandavensis</name>, <name ref="#Aquinas">Sancti Tomae</name> et <ref><name ref="#Lombard">Magistri</name> <title ref="#Sentences">Sententiarum</title></ref> et generaliter 
-          omnium aliorum doctorum, id est, quod<app><lem>quod</lem><rdg wit="V">quasi</rdg></app> omnes doctores 
-          concedunt quod Deus non est in aliquo genere, 
-          quamvis <name ref="#HenryOfGhent">Gandavensis</name> alleget<app><lem>alleget</lem><rdg wit="V">allegat[?]</rdg></app> <name ref="#Avicenna">Avicenam</name> in sua 
-          <title ref="#AvicennaMetaphysics">Metaphysica</title> in pluribus locis, ubi expresse ponit in<app><lem>in</lem><rdg wit="R" type="om."/></app>
-          numerando praedicamenta quod Deus non est in aliquo 
-          praedicamento. Ita quod nedum doctores nostri, immo et<app><lem>et</lem><rdg wit="R" type="om."/></app> 
-          philosophi tenuerunt quod Deus 
-          non est in praedicamento; immo 
-          voluerunt aliqui doctores dicere quod opinio 
-          <name ref="#Aristotle">Aristotelis</name> fuit quod omnes intelligentiae separatae et<app><lem>et</lem><rdg wit="V" type="om."/></app> omnia 
-          immaterialia essent extra<app><lem>extra</lem><rdg wit="V" type="add"><add>in</add></rdg></app> genus. <name ref="#Ripa">Magister Ioannes 
-            de Ripa</name> vult inducere per auctoritates<app><lem>auctoritates</lem><rdg wit="V">auctoritatem</rdg></app> ipsius <name ref="#Aristotle">Aristotelis</name> 
-          quod res immateriales non reponuntur in <cb ed="#V" n="58vb"/>genere, 
-          sicut intelligentiae. Unde <name ref="#HenryOfGhent">Gandavensis</name> in 26<app><lem>26</lem><rdg wit="R">126[?]</rdg></app> 
-          quaestione articulo secundo primae partis suae <title ref="#SummaeQuaestionumOrdinariarum">Summae</title> ponit 
-          rationes aliquas ad probandum omnino quod Deus 
-          non sit in praedicamento, unde dicit Deus non est 
-          res alicuius praedicamenti. Sed illa quae sunt ab eo per 
-          participationem reponuntur in generibus. Consequenter 
-          dicit quod ens in prima sui divisione dividitur 
-          in ens increatum et in<app><lem>in</lem><rdg wit="V" type="om."/></app> ens creatum. Ens 
-          vero increatum non reponitur in aliquo genere. Sed<app><lem>sed</lem><rdg wit="R" type="om."/></app> 
-          ens vero<app><lem>vero</lem><rdg wit="V" type="om."/></app> creatum est analogum ad decem genera 
-          generalissima, ita quod ens creatum adhuc analogice 
-          dicitur de decem generibus generalissimus sive praedicamentis.<app><lem>generalissimus sive praedicamentis</lem><rdg wit="V">praedicamentalibus</rdg></app> 
-          Et in isto se<app><lem>se</lem><rdg wit="V">secum</rdg></app> concordat <name ref="#Porphyry">Porphyrius</name> et 
-          etiam <name ref="#Aristotle">Aristoteles</name> quod ens non dicitur nisi analogice de 
-          substantia et accidente; et in hoc etiam concordat <name ref="#Augustine">Augustinus</name> 
-          <title ref="#OnFaithToPeter">De fide ad Petrum</title>,<app><lem>Petrum</lem><rdg wit="R">Porphyrium</rdg></app> qui dicit quod ab istis 
-          praedicamentis Deus elongatur distantia summa. 
-          Hoc est<app><lem>hoc est</lem><rdg wit="V">habetur</rdg></app> quod Deus propter supremitatem<app><lem>supremitatem</lem><rdg wit="R">superminentem[?]</rdg></app> perfectionem 
-          ipsius supra aliam Deus non taliter 
-          concipitur sicut concipimus per terminos repositos 
-          in praedicamento.<app><lem>praedicamento</lem><rdg wit="V">praedicamentis</rdg></app></p>
-        
-        <p xml:id="l28-ssgerd">Secundo sic: genus habet suas species secundum 
-          esse superioritatis et inferioritatis <unclear>distinctum[?]</unclear><app><lem>distinctum</lem><rdg wit="V">distinctis[?]</rdg></app> et<app><lem>et</lem><rdg wit="V" type="om."/></app> esse generis 
-          <cb ed="#R" n="47ra"/>participantis. Et ista ratio est satis difficilis 
-          si bene resolvatur, et istum modum habuerunt philosophi 
-          antiqui, et ipso saepe usi<app><lem>usi</lem><rdg wit="V">nisi</rdg></app> sunt quod genus, se 
-          habet per modum materiae et differentia sive<app><lem>differentia sive</lem><rdg wit="V" type="om."/></app> species per 
-          modum formae.<app><lem>formae</lem><rdg wit="V" type="add.">similiter et differentia</rdg></app> Et illud communiter solet exponi 
-          de terminis, licet<app><lem>licet</lem><rdg wit="V">sed</rdg></app> realiter non fuerit<app><lem>fuerit</lem><rdg wit="V">fuit</rdg></app> eorum intentio. 
-          Ita quod realiter videntur imaginari quod a parte rei in genere 
-          debet esse quaedam potentialitas, ita quod genus sit 
-          quaedam quidditas sive essentia communis et quod 
-          differentia se habet per modum cuiusdam<app><lem>cuiusdam</lem><rdg wit="R" type="corr."><subst><del>eiusdem</del><add place="aboveLine">cuiusdam</add></subst></rdg></app> esse, et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> cum illud 
-          esse sive illa differentia additur illi quidditati sive 
-          essentiae constituitur una species et ex additione 
-          alterius constituitur altera species et ex additione alterius constituitur alia species.<app><lem>et ex additione alterius constituitur alia species</lem><rdg wit="R" type="om." cause="homeoteleuton"/></app> Unde expressissime 
-          in hoc videntur innuere quod esse distinguitur ab essentia. 
-          Ita quod videntur imaginari unam essentiam 
-          communem generis, et postea imaginatur tot esse 
-          distincta quot sunt species distinctae. <cb ed="#V" n="59ra"/>Et tunc<app><lem>et tunc</lem><rdg wit="R" type="om."/></app> ex illa 
-          essentia quasi<app><lem>quasi</lem><rdg wit="V">scilicet</rdg></app> cum alio esse constituitur alia 
-          species, et cum alio et alio,<app><lem>cum alio esse constituitur alia species, et cum alio et alio</lem><rdg wit="V">cum alia et alio esse constituitur</rdg></app> alia et alia species. Et ista 
-          opinio est bene difficilis, licet non sit verisimilis. 
-          Tamen doctores plures in hoc concordant quod, scilicet, esse 
-          et essentia realiter distinguuntur.</p>
-        
-        <p xml:id="l28-taseip">Tertio arguitur<app><lem>arguitur</lem><rdg wit="V" type="om."/></app> sic: 
-          Deus non est accidens nec substantia, ergo non est in aliquo<app><lem>aliquo</lem><rdg wit="R" type="om."/></app> genere. 
-          Consequentia est nota.<app><lem>nota</lem><rdg wit="R">bona</rdg></app> Antecedens patet, quod non sit accidens 
-          notum est; sed quod non sit substantia patet, quia, sicut ipse 
-          <name ref="#HenryOfGhent">Gandavensis Doctor Sollemnis</name> dicit, duo 
-          sunt de ratione substantiae, ut est genus. 
-          Primum est in subiecto non<app><lem>non</lem><rdg wit="R" type="add.sed.del"><del rend="strikethrough"><add type="place">id</add></del></rdg></app> esse, id est, quod non inhaereat 
-          alicui, et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> ut dicit non sufficit. Ideo 
-          ponitur secundum quod est quod substantia sit apta nata 
-          subici modo istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> secundum repugnat Deo etc.<app><lem>etc.</lem><rdg wit="V">ergo</rdg></app> 
-          Postea adducit <name ref="#Avicenna">Avicennam</name> conclusio <title ref="#AvicennaMetaphysics">Metaphysicae</title> suae, ubi 
-          dicit universitas<app><lem>universitas</lem><rdg wit="V" type="add."><add place="inline">sicut</add></rdg></app> habet principium<app><lem>principium</lem><rdg wit="V">primum</rdg></app> quod est necesse esse 
-          quod non reponitur sub genere. Unde doctores 
-          antiqui, sicut fuit doctor iste et <name ref="#Grosseteste">Linconiensis</name> 
-          videntur dicere quod Deus sit exemplar 
-          rerum et quod<app><lem>quod</lem><rdg wit="R" type="om."/></app> omnia fuit extracta<app><lem>fuit extracta</lem><rdg wit="V">sunt exemplata</rdg></app> ab eo.<app><lem>eo</lem><rdg wit="V">Deo</rdg></app> Et primo 
-          substantiae,<app><lem>substantiae</lem><rdg wit="V">substantia[?]</rdg></app> deinde quasi a substantia emanant accidentia, 
-          et quia ista genera debent<app><lem>debent</lem><rdg wit="V">debet</rdg></app> esse extracta. Ideo substantia 
-          ponitur genus primum et supra accidentia. Accidentia 
-          autem sunt posteriora, et, ut dixi in principio,<app><lem>ut dixi in principio</lem><rdg wit="V">dixi a principio</rdg></app> 
-          non facio hic difficultatem de terminis vel de 
-          rebus, quia aliquando capio terminos pro<app><lem>pro</lem><rdg wit="V">per</rdg></app> rebus et e converso.<app><lem>et e converso</lem><rdg wit="V">vel de terminis e converso</rdg></app> 
-          Sed istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> debet resolvi, sicut dictum est in principio.</p> 
-      </div>
-        <div>
+        </div>
+        <div xml:id="l28-Dd1e935">
+          <head xml:id="l28-Hoididr">Opinio Ioannes de Ripa</head>
+          <p xml:id="l28-saoafe">
+            Sequitur alia opinio 
+            <name ref="#Ripa">Magistri Ioannes de Ripa</name>
+            qui absolute negat 
+            Deum univoce praedicari cum creaturis in quolibet praedicamento. 
+            <name ref="#Scotus">Scotus</name> 
+            tamen hoc videtur negare, 
+            immo dicit quod potest 
+            univocari cum creaturis in quolibet praedicamento transcendente, 
+            sicut est in 'esse' 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 'vivere' etc. 
+            Nec obstat illud 
+            quod dicit 
+            <cit>
+              <ref xml:id="l28-Rd1e958">
+                <name ref="#Ripa">
+                  <app>
+                    <lem>Magister</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app> 
+                  de Ripa
+                </name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            quod non est ratio obiectialis 
+            communis Deo et creaturis; 
+            <app>
+              <lem>immo</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            ratio entis est bene 
+            communis Deo et creaturis, quia est 
+            <app>
+              <lem>indifferens</lem>
+              <rdg wit="#R">differens</rdg>
+            </app> 
+            ad finitum et 
+            <cb ed="#R" n="46vb"/><!--R46vb-->
+            infinitum et ita de rationibus aliorum praedicatorum 
+            transcendentium. 
+            Et ideo consequenter 
+            <name ref="#Ripa">
+              <app>
+                <lem>Magister</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app> 
+              Ioannes de Ripa
+            </name> 
+            habet concedere quod Deus non est in aliquo 
+            <app>
+              <lem>praedicamento vel</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            genere 
+            cum creatura, quia genus debet univoce praedicari 
+            de suis speciebus. Modo, iste tenet 
+            <app>
+              <lem>expresse</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            quod nulla potest esse univocatio Dei cum creaturis 
+            in esse propter 
+            <app>
+              <lem>defectum</lem>
+              <rdg wit="#R">Deum</rdg>
+            </app> 
+            rationis obiectalis 
+            quia esse Dei 
+            est immensum et infinitum et esse creaturae 
+            est limitatum et 
+            <app>
+              <lem>imperfectum vel</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            finite perfectum. 
+            Ergo a fortiori nec poterit univocari cum creaturis in speciebus, 
+            ergo 
+            <app>
+              <lem>etc.</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+          </p> 
+          <p xml:id="l28-spisip">
+            Secundo ponit iste doctor quod creaturae univocantur 
+            inter se secundum praedicata 
+            <app>
+              <lem>perfectionalia</lem>
+              <rdg wit="#V">personalia</rdg>
+            </app> 
+            quae communiter 
+            vocantur transcendentia, 
+            ut sunt 'esse', 'vivere', 'intelligere', 
+            et huiusmodi. 
+            Ideo 
+            <app>
+              <lem>reponuntur</lem>
+              <rdg wit="#V">reponitur</rdg>
+            </app> 
+            in genere sive in praedicamento.
+          </p>
+        </div>
+        <div xml:id="l28-Dd1e1073">
+          <head xml:id="l28-Hoadoad">Opinio aliorum doctorum</head>
+          <p xml:id="l28-aeorip">
+            Alia est opinio 
+            <cit>
+              <ref xml:id="l28-Rd1e1082"><name ref="#Augustine">Augustini</name></ref>
+              <bibl>XXX</bibl>
+            </cit>, 
+            <cit>
+              <ref xml:id="l28-Rd1e1092"><name ref="#HenryOfGhent">Gandavensis</name></ref>
+              <bibl>XXX</bibl>
+            </cit>, 
+            <cit>
+              <ref xml:id="l28-Rd1e1102"><name ref="#Aquinas">Sancti Tomae</name></ref>
+              <bibl>XXX</bibl>
+            </cit>, 
+            et 
+            <cit>
+              <ref xml:id="l28-Rd1e1112">
+                <name ref="#Lombard">Magistri</name> 
+                <title ref="#Sentences">Sententiarum</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            et generaliter 
+            omnium aliorum doctorum, 
+            id est, 
+            <app>
+              <lem>quod</lem>
+              <rdg wit="#V">quasi</rdg>
+            </app> 
+            omnes doctores 
+            concedunt quod Deus non est in aliquo genere, 
+            quamvis 
+            <cit>
+              <ref xml:id="l28-Rd1e1137"><name ref="#HenryOfGhent">Gandavensis</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            <app>
+              <lem>alleget</lem>
+              <rdg wit="#V">allegat</rdg>
+            </app> 
+            <cit>
+              <ref xml:id="l28-Rd1e1156">
+                <name ref="#Avicenna">Avicenam</name> in sua 
+                <title ref="#AvicennaMetaphysics">Metaphysica</title> 
+                in pluribus locis</ref>
+            </cit>, 
+            ubi expresse ponit 
+            <app>
+              <lem>in</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            numerando praedicamenta quod Deus non est in aliquo 
+            praedicamento. Ita quod nedum doctores nostri, immo 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            philosophi tenuerunt quod Deus 
+            non est in praedicamento; immo 
+            voluerunt aliqui doctores dicere quod opinio 
+            <name ref="#Aristotle">Aristotelis</name> 
+            fuit quod omnes intelligentiae separatae 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            omnia 
+            immaterialia essent extra
+            <app>
+              <lem n="extra"/>
+              <rdg wit="#V" type="variation-present">
+              <add>in</add>
+              </rdg>
+            </app> 
+            genus. 
+            <cit>
+              <ref xml:id="l28-Rd1e1207"><name ref="#Ripa">Magister Ioannes de Ripa</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            vult inducere per 
+            <app>
+              <lem>auctoritates</lem>
+              <rdg wit="#V">auctoritatem</rdg>
+            </app> 
+            ipsius <name ref="#Aristotle">Aristotelis</name> 
+            quod res immateriales non reponuntur in 
+            <cb ed="#V" n="b"/><!--58vb-->
+            genere, 
+            sicut intelligentiae. 
+            Unde 
+            <cit>
+              <ref xml:id="l28-Rd1e1233">
+                <name ref="#HenryOfGhent">Gandavensis</name> 
+                in 
+                <app>
+                  <lem>26</lem>
+                  <rdg wit="#R">
+                    <unclear>126</unclear>
+                  </rdg>
+                </app> 
+                quaestione, 
+                articulo secundo, 
+                primae partis 
+                suae <title ref="#SummaeQuaestionumOrdinariarum">Summae</title>
+              </ref>
+            </cit> 
+            ponit 
+            rationes aliquas ad probandum omnino quod Deus 
+            non sit in praedicamento, unde dicit Deus non est 
+            res alicuius praedicamenti. Sed illa quae sunt ab eo per 
+            participationem reponuntur in generibus. Consequenter 
+            dicit quod ens in prima sui divisione dividitur 
+            in ens increatum et 
+            <app>
+              <lem>in</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            ens creatum. Ens 
+            vero increatum non reponitur in aliquo genere. 
+            <app>
+              <lem>Sed</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            ens 
+            <app>
+              <lem>vero</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            creatum est analogum ad decem genera 
+            generalissima, ita quod ens creatum adhuc analogice 
+            dicitur de decem generibus 
+            <app>
+              <lem>generalissimus sive praedicamentis</lem>
+              <rdg wit="#V">praedicamentalibus</rdg>
+            </app>. 
+            Et in isto 
+            <app>
+              <lem>se</lem>
+              <rdg wit="#V">secum</rdg>
+            </app> 
+            concordat 
+            <cit>
+              <ref xml:id="l28-Rd1e1300"><name ref="#Porphyry">Porphyrius</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            et 
+            etiam 
+            <cit>
+              <ref xml:id="l28-Rd1e1310">
+                <name ref="#Aristotle">Aristoteles</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            quod ens non dicitur nisi analogice de 
+            substantia et accidente; et in hoc etiam concordat 
+            <cit>
+              <ref xml:id="l28-Rd1e1322"><name ref="#Augustine">Augustinus</name> 
+                <title ref="#OnFaithToPeter">De fide ad 
+                  <app>
+                    <lem>Petrum</lem>
+                    <rdg wit="#R">Porphyrium</rdg>
+                  </app>
+                </title>
+              </ref>
+            </cit>,
+            qui dicit quod ab istis 
+            praedicamentis Deus elongatur distantia summa. 
+            <app>
+              <lem>Hoc est</lem>
+              <rdg wit="#V">habetur</rdg>
+            </app> 
+            quod Deus propter 
+            <app><lem>supremitatem</lem>
+              <rdg wit="#R"><unclear>superminentem</unclear></rdg>
+            </app> 
+            perfectionem 
+            ipsius supra aliam Deus non taliter 
+            concipitur sicut concipimus per terminos repositos 
+            in 
+            <app>
+              <lem>praedicamento</lem>
+              <rdg wit="#V">praedicamentis</rdg>
+            </app>.
+          </p>
+          <p xml:id="l28-ssgerd">
+            Secundo sic: genus habet suas species secundum esse superioritatis
+            et inferioritatis 
+            <app>
+              <lem><unclear>distinctum</unclear></lem>
+              <rdg wit="#V"><unclear>distinctis</unclear></rdg>
+            </app> 
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            esse generis
+            <pb ed="#R" n="47-r"/>
+            <cb ed="#R" n="a"/>
+            participantis. 
+            Et ista ratio est satis difficilis si bene resolvatur, 
+            et istum modum habuerunt philosophi antiqui, et ipso saepe 
+            <app>
+              <lem>usi</lem>
+              <rdg wit="#V">nisi</rdg>
+            </app> 
+            sunt quod genus, 
+            se habet per modum materiae et 
+            <app>
+              <lem>differentia sive</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            species per modum formae
+            <app>
+              <lem n="formae"/>
+              <rdg wit="#V" type="variation-present">
+                similiter et differentia
+              </rdg>
+            </app>. 
+            Et illud communiter solet exponi de terminis, 
+            <app>
+              <lem>licet</lem>
+              <rdg wit="#V">sed</rdg>
+            </app> 
+            realiter non 
+            <app>
+              <lem>fuerit</lem>
+              <rdg wit="#V">fuit</rdg>
+            </app> 
+            eorum intentio. 
+            Ita quod realiter videntur imaginari quod a parte rei in genere
+            debet esse quaedam potentialitas, ita quod genus sit quaedam quidditas sive essentia
+            communis et quod differentia se habet per modum 
+            <app>
+              <lem>cuiusdam</lem>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
+                  <del>eiusdem</del>
+                  <add place="above-line">cuiusdam</add>
+                </subst>
+              </rdg>
+            </app> 
+            esse, et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app> 
+            cum illud esse sive illa differentia additur illi quidditati sive essentiae
+            constituitur una species et ex additione alterius constituitur altera species <app>
+              <lem>et ex additione alterius constituitur alia species</lem>
+              <rdg wit="#R" type="variation-absent" cause="homeoteleuton"/>
+            </app>. 
+            Unde expressissime in hoc videntur innuere 
+            quod esse distinguitur ab essentia.
+            Ita quod videntur imaginari unam essentiam communem generis, 
+            et postea imaginatur tot
+            esse distincta quot sunt species distinctae.
+            <pb ed="#V" n="59-r"/>
+            <cb ed="#V" n="a"/>
+            <app>
+              <lem>Et tunc</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app> 
+            ex illa essentia 
+            <app>
+              <lem>quasi</lem>
+              <rdg wit="#V">scilicet</rdg>
+            </app> 
+            <app>
+              <lem>cum alio esse constituitur alia species, et cum alio et alio</lem>
+              <rdg wit="#V">cum alia et alio esse constituitur</rdg>
+            </app>, 
+            alia et alia species. Et ista opinio est bene difficilis,
+            licet non sit verisimilis, 
+            tamen doctores plures in hoc concordant quod, 
+            scilicet esse et essentia
+            realiter distinguuntur.
+          </p>
+          <p xml:id="l28-taseip"> Tertio
+            <app>
+              <lem>arguitur</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            sic: Deus non est accidens nec substantia, ergo non est in
+            <app>
+              <lem>aliquo</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            genere. 
+            Consequentia est
+            <app>
+              <lem>nota</lem>
+              <rdg wit="#R">bona</rdg>
+            </app>
+            Antecedens patet 
+            quod non sit accidens notum est; sed quod non sit substantia patet,
+            quia, sicut ipse 
+            <cit>
+              <ref xml:id="l28-Rd1e1533"><name ref="#HenryOfGhent">Gandavensis Doctor Sollemnis</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            dicit,
+            duo sunt de ratione substantiae, 
+            ut est genus. 
+            Primum est in subiecto non
+            <app>
+              <lem n="non"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del rend="strikethrough">id</del>
+              </rdg>
+            </app>
+            esse, id est, quod non inhaereat alicui, et istud
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            ut dicit non sufficit. Ideo ponitur secundum quod est quod substantia sit apta nata
+            subici modo istud
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            secundum repugnat Deo etc.
+            <app>
+              <lem>etc.</lem>
+              <rdg wit="#V">ergo</rdg>
+            </app>
+            Postea adducit 
+            <cit>
+              <ref xml:id="l28-Rd1e1582">
+                <name ref="#Avicenna">Avicennam</name> 
+                conclusio 
+                <title ref="#AvicennaMetaphysics">Metaphysicae</title> suae
+              </ref>
+            </cit>, 
+            ubi dicit universitas
+            <app>
+              <lem n="universitas"/>
+              <rdg wit="#V" type="correction-addition">
+                <add place="inline">sicut</add>
+              </rdg>
+            </app>
+            habet 
+            <app>
+              <lem>principium</lem>
+              <rdg wit="#V">primum</rdg>
+            </app>
+            quod est necesse esse quod non reponitur sub genere. Unde doctores antiqui, 
+            sicut fuit
+            <cit>
+              <ref xml:id="l28-Rd1e1615">doctor iste</ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            et 
+            <cit>
+              <ref xml:id="l28-Rd1e1624"><name ref="#Grosseteste">Linconiensis</name></ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            videntur dicere quod Deus
+            sit exemplar rerum et 
+            <app>
+              <lem>quod</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            omnia fuit extracta
+            <app>
+              <lem>fuit extracta</lem>
+              <rdg wit="#V">sunt exemplata</rdg>
+            </app>
+            ab eo.
+            <app>
+              <lem>eo</lem>
+              <rdg wit="#V">Deo</rdg>
+            </app>
+            Et primo substantiae,
+            <app>
+              <lem>substantiae</lem>
+              <rdg wit="#V">substantia[?]</rdg>
+            </app>
+            deinde quasi a substantia emanant accidentia, et quia ista genera debent
+            <app>
+              <lem>debent</lem>
+              <rdg wit="#V">debet</rdg>
+            </app>
+            esse extracta. 
+            Ideo substantia ponitur genus primum et supra accidentia. 
+            Accidentia
+            autem sunt posteriora, 
+            et, ut dixi in principio,
+            <app>
+              <lem>ut dixi in principio</lem>
+              <rdg wit="#V">dixi a principio</rdg>
+            </app>
+            non facio hic difficultatem de terminis vel de rebus 
+            quia aliquando capio terminos pro
+            <app>
+              <lem>pro</lem>
+              <rdg wit="#V">per</rdg>
+            </app>
+            rebus et e converso.
+            <app>
+              <lem>et e converso</lem>
+              <rdg wit="#V">vel de terminis e converso</rdg>
+            </app>
+            Sed istud
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            debet resolvi, sicut dictum est in principio.
+          </p> 
+        </div>
+        <div xml:id="l28-Dd1e1715">
           <head xml:id="l28-Hrdprdp">Responsio de Plaoul</head>
-          
-          <p xml:id="l28-pcapqd">Pro concordantia aliquali et declaratione 
-            antiquorum doctorum in ista materia 
-            aliqua sunt attendenda.<app><lem>aliqua sunt attendenda</lem><rdg wit="V" type="om."/></app> Hic<app><lem>hic</lem><rdg wit="V" type="om."/></app> primo, attendendum 
-            est quod praedicamenta sunt artificialiter inventa<app><lem>inventa</lem><rdg wit="V">adinventa</rdg></app> 
-            et causa doctrinae et facilitatis. Etiam et ex consequenti, 
-            sequitur quod potuerunt institui plures vel 
-          <cb ed="#R" n="47rb"/>pauciores<app><lem>plures vel pauciores</lem><rdg wit="V">plura vel pauciora</rdg></app> quam decem.</p>
-
-          <p xml:id="l28-qapdir">Quantum ad primum: praedicamenta 
-            instituta fuerunt propter infinitatem rerum et infinitum 
-            modum se habendi ipsarum<app><lem>ipsarum</lem><rdg wit="V">ipsorum</rdg></app> et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> fuit 
-            valde utile reducere omnia et omnes modos 
-            se habendi vel conceptus de decem praedicamenta ad fa
-            cilius et ad melius et distinctius intelligendum 
-            res.</p> 
-            
-          <p xml:id="l28-qapvaq">Quin autem potuerint<app><lem>potuerint</lem><rdg wit="V">potuerunt</rdg></app> fuisse plura vel 
-            pauciora vel non aeque commoda non videtur 
-            <cb ed="#V" n="59rb"/>repugnantia. Unde expresse <name ref="#Simplicius">Simplicius</name>, 
-            qui scripsit supra <title ref="#SimpliciusCommentaryOnCategories">Praedicamenta</title> <name ref="#Aristotle">Aristotelis</name> multum 
-            elegantur,<app><lem>elegantur</lem><rdg wit="V">allegantur</rdg></app> reducit omnia praedicamenta <name ref="#Aristotle">Aristotelis</name><app><lem>Aristotelis</lem><rdg wit="V" type="om."/></app> ad duo,
-            alii vero ad tria, alii vero ad quattuor.</p>
-        
-          <p xml:id="l28-adrrsa">Ad duo 
-            reducentes omnia<app><lem>omnia</lem><rdg wit="R" type="om."/></app> praedicamenta reducebat<app><lem>reducebat</lem><rdg wit="V">reducebam</rdg></app> ad esse et 
-              ad esse quale vel<app><lem>quale vel</lem><rdg wit="V" type="om."/></app> aliquale. Ita quod omne<app><lem>omne</lem><rdg wit="V">esse</rdg></app> 
-            absolutum reducebant ad unum praedicamentum, scilicet, ad 
-            esse. Sed<app><lem>sed</lem><rdg wit="V">et</rdg></app> omne quale reducebantur ad aliud, 
-            scilicet, ad esse aliquale, quia in talibus, licet fingere 
-            nomina, quia non semper habemus propria nomina imposita,<app><lem>imposita</lem><rdg wit="V" type="om."/></app> 
-              sicut ipsemet<app><lem>ipsemet</lem><rdg wit="R">met</rdg></app> finxit <name ref="#Aristotle">Aristoteles</name> in <title ref="#Categories">Praedicamentis</title> 
-            qui aliquando <unclear>significata[?]</unclear><app><lem>significata[?]</lem><rdg wit="R">simbulata[?]</rdg></app> posuit<app><lem>posuit</lem><rdg wit="V">ponit</rdg></app> loco generis, 
-            ita quod breviter isti<app><lem>isti</lem><rdg wit="V">iste</rdg></app> ponebant duo praedicamenta 
-            solum, scilicet, unum absolutum et aliud respectivum sive 
-              accidentale.</p>
-        
-          <p xml:id="l28-avcseq">Alii vero consideraverunt totam 
-            latitudinem omnium rerum et isti fuerunt iterum<app><lem>iterum</lem><rdg wit="V">adhuc</rdg></app> 
-            diversi, quia aliqui eorum<app><lem>eorum</lem><rdg wit="R" type="om."/></app> solum<app><lem/><rdg wit="V" type="add.sed.del."><del rend="blackedout"><add>posiie</add></del></rdg></app> posuerunt duo praedicamenta, 
-            scilicet, substantia et qualitas,<app><lem>substantia et qualitas</lem><rdg wit="V">substantiam et qualitatem</rdg></app> et istius opinionis fuit <name ref="#Ockham">Okam</name>, 
-            quia <name ref="#Ockham">Okam</name> negat omne ens praeter substantiam et qualitatem. 
-          Quantum enim<app><lem>enim</lem><rdg wit="V" type="om."/></app> est de quantitate non distinguitur 
-            a substantia vel qualitate; quantum est de relatione 
-            non distinguitur ab extremis; quantum est de motu 
-          non distinguitur a mobili; et sic de aliis. Et sic 
-            non posuit,<app><lem>posuit</lem><rdg wit="V">ponit</rdg></app> nisi duas<app><lem>duas</lem><rdg wit="R">duos</rdg></app> ordinationes<app><lem>ordinationes</lem><rdg wit="V">coordinationes</rdg></app> rerum, scilicet,<app><lem>scilicet</lem><rdg wit="V" type="om."/></app> 
-            substantiam et qualitatem.</p>
-
-          <p xml:id="l28-avpqeq">Alii vero posuerunt tres, 
-            scilicet, substantiam et qualitatem et quantitatem.<app><lem>Alli vero posuerunt tres . . .qualitatem et quantitatem</lem><rdg wit="V" type="om." cause="homeoarchy"/></app></p>
-          
-          <p xml:id="l28-avpqqa">Alii vero 
-            posuerunt quattuor et superaddiderunt relationem 
-            et actionem et passionem, ita quod relatio distinguitur ab extremis,<app><lem>ab extremis</lem><rdg wit="R" type="om."/></app> 
-            et<app><lem>et</lem><rdg wit="V">quod</rdg></app> actio et passio distinguitur<app><lem>distinguitur</lem><rdg wit="V">distinguantur</rdg></app> a qualitate, quae 
-            acquiritur.</p>
-
-          <p xml:id="l28-asmasm">Alii superaddiderunt motum.</p>
-          
-          <p xml:id="l28-avpiie">Alii 
-            vero posuerunt decem, sicut <name ref="#Scotus">Scotus</name>, qui 
-            posuit<app><lem>posuit</lem><rdg wit="V">ponit</rdg></app> decem ordines rerum. Ideo correspondenter 
-            posuit<app><lem>posuit</lem><rdg wit="V">ponit</rdg></app> decem ordines<app><lem>ordines</lem><rdg wit="V">coordinationes</rdg></app> terminorum. Isto enim 
-            modo notum est qui vellet tenere opinionem 
-            <name ref="#Scotus">Scoti</name> et multorum aliorum quod li 'ens' sit nomen 
-            transcendens. Et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> si omnes termini absoluti 
-            reponerentur<app><lem>reponerentur</lem><rdg wit="V">reponitur</rdg></app> in aliquo<app><lem>aliquo</lem><rdg wit="V" type="om."/></app> praedicamento, tunc<app><lem>tunc</lem><rdg wit="R" type="om."/></app> non esset revocandum 
-            in dubium quin Deus esset in praedicamento. 
-            Ita quod, qui vellet sic ordinare omnem terminum
-            <cb ed="#V" n="59va"/>absolutum de quo, alius praedicaretur<app><lem>praedicaretur</lem><rdg wit="V">praedicetur</rdg></app> in quid 
-            sive quidditative esse<app><lem>esse</lem><rdg wit="R">esset</rdg></app> repositum in praedicamento, 
-            tunc ens esset genus generalissimum. Et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> 
-            <cb ed="#R" n="47va"/>Deus reponeretur in genere. Et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> consequenter, si ens diceretur 
-            univoce de accidente et substantia, omnia accidentia quae significatur 
-            absolute per terminum absolutum reponerentur sub illo primo 
-            genere ens. Et forte quod de Deo habuerunt<app><lem/><rdg wit="V" type="corr."><subst><del rend="strikethrough">posuerunt</del><add place="inline">habuerunt</add></subst></rdg></app> antiqui 
-            ponentes ipsum in praedicamento istum modum considerandi, 
-            quia capiebant substantiam absolute prout convertitur cum 
-            ente, et quia substantiam non connotabat<app><lem>connotabat</lem><rdg wit="V">convocabant</rdg></app> illis aliquod<app><lem>aliquod</lem><rdg wit="V">aliquid</rdg></app> imperfectum,
-            ideo<app><lem>ideo</lem><rdg wit="V" type="add."><add place="inline">non</add></rdg></app> reponebant Deum sub illo genere substantia. Et sic, 
-            si bene resolvantur,<app><lem>resolvantur</lem><rdg wit="V">resolvatur</rdg></app> erunt concordes, quia sine dubio 
-            aequivocabant de praedicamento et de generibus generalissimis, 
-            quia illis<app><lem>illis</lem><rdg wit="V">illi</rdg></app> qui<app><lem/><rdg wit="R"><add place="aboveLine">qui</add></rdg></app> non ponebant Deum reponi in praedicamento 
-            substantia connotabat eis aliquod imperfectum. Ideo<app><lem>non ponebant Deum reponi in praedicamento substantia connotabat eis aliquod imperfectum ideo</lem><rdg wit="V" type="om."/></app> non reponebant<app><lem/><rdg wit="V">repondebant</rdg></app> 
-            Deum in praedicamento. Aliis vero li 'substantia' nihil              
-            imperfectionis eis connotabat.<app><lem>nihil imperfectionis eis connotabat</lem><rdg wit="V">nihil convocabat imperfectionis, ideo etc.</rdg></app></p>
-
-          <p xml:id="l28-aetaap">Advertendum est<app><lem>est</lem><rdg wit="V" type="om."/></app> tamen, 
-            redeundo ad primum, quod praedicamenta sunt nunc adinventa 
-            causae doctrinae et facilitatis doctrinae. Ideo 
-            subtilius imaginati sunt illi,<app><lem>illi</lem><rdg wit="V">aliqui</rdg></app> qui non posuerunt 
-            Deum in praedicamento quam illi, qui eum reposuerunt<app><lem>reposuerunt</lem><rdg wit="V">posuerunt</rdg></app> 
-            in praedicamento, quia ex quo praedicamenta sunt adin
-            venta causa doctrine et secundum modum loquendi 
-            antiquorum traduntur praedicamenta secundum rationes et modos 
-            exprimentes naturas proprias rerum pro quibus supponunt 
-            et ordinem et habitudinem ipsarum, ergo illi qui<app><lem>qui</lem><rdg wit="V" type="add" cause="repetitio"><add>posuerunt eum in praedicamento, quia ex quo praedicamenta sunt adinventa causa doctrinae et secundum modum loquendi antiquorum traduntur praedicamenta secundum rationes et modos exprimentes naturas proprias rerum pro quibus supponit et ordinem et habitudinem ipsarum, ergo illi qui</add></rdg></app> conceperunt 
-            Deum<app><lem>Deum</lem><rdg wit="R">Dei</rdg></app> conceptu sibi proprio exprimente<app><lem>exrimente</lem><rdg wit="V">explicite</rdg></app> etc., 
-            magis attinxerunt finem illum quam per generalem 
-            modum concipiendi et cognoscendi ipsum, quia non curamus 
-            de ordine, nec de cognitione terminorum, nisi 
-            in ordine ad illa quae significant <cb ed="#V" n="59vb"/>de quibus volumus 
-            habere scientiam. Et ideo quia antiqui philosophi 
-            immediate introducebantur ad conceptus magis altos 
-            et magis exprimentes proprias naturas rerum pro quibus supponunt<app><lem>pro quibus supponunt</lem><rdg wit="R" type="om."/></app>. Ideo 
-            forte erant magis apti ad philosophandum.</p>
-        
-          <p xml:id="l28-pieeas">Pro 
-          intellectu<app><lem>intellectu</lem><rdg wit="R">intellectum</rdg></app> ergo antiquorum, qui videntur multa<app><lem>multa</lem><rdg wit="R">multi</rdg></app> 
-          dicere de comparatione<app><lem>comparatione</lem><rdg wit="V">compositione</rdg></app> generis et differentiae, quia communiter 
-          exponuntur dicta sua de terminis, scilicet, quod genus 
-          est indifferens ad <unclear>incurandum[?]</unclear> hanc vel hanc speciem, 
-          sed per aliam et aliam differentiam componitur 
-          ex eo alia et alia species.<app><lem>species</lem><rdg wit="V">substantia</rdg></app></p>
-
-          <p xml:id="l28-ssddrf">Sed sine dubio antiqui 
-            philosophi quantum ad hoc referebant se ad res 
-            et ad<app><lem/><rdg wit="R" type="add."><add place="aboveLine">ad</add></rdg></app> habitudines rerum, ita quod vocabant genus 
-            non terminum, sed rationem significatam per terminum, quae est quaedam 
-            quidditas<app><lem>quidditas</lem><rdg wit="V">quidditatis</rdg></app> indifferens ad hanc vel hanc speciem. 
-            Differentia vero<app><lem>vero</lem><rdg wit="V">veri</rdg></app> erit magis determinata, ideo genus 
-            magis habebat rationem materiae et differentiam rationem 
-            formae.</p> 
-          
-          <p xml:id="l28-pcinat">Pro cuius<app><lem>cuius</lem><rdg wit="V" type="add." cause="repetitio"><add place="inline">cuius</add></rdg></app> intellectu<app><lem>intellectu</lem><rdg wit="R">intellectum</rdg></app> ponam unum 
-            exemplum de anima intellectiva alias positum. Unde 
-            anima intellectiva, licet sit simplex res et indivisibilis,            
-            tamen multas habet operationes et particulares inclinationes<app><lem>inclinationes</lem><rdg wit="V">inclinantes</rdg></app> 
-            sive naturas, ut<app><lem>ut</lem><rdg wit="V">et</rdg></app> ita loquar.<app><lem>loquar</lem><rdg wit="V">loquor</rdg></app> Primo 
-            enim<app><lem>enim</lem><rdg wit="V" type="om."/></app> habet infimam, quae est existere, quae est infimus 
-            <cb ed="#R" n="47vb"/>modus perfectionis suae<app><lem>suae</lem><rdg wit="V" type="om."/></app> et sua prima operatio est 
-            appetere existere. Et ista operatio vel<app><lem>vel</lem><rdg wit="V">seu</rdg></app> conditio est<app><lem>est</lem><rdg wit="R">conditionem[?]</rdg></app> 
-            generalis in omnibus. Deinde ascendendo habet varias 
-            operationes habet, enim influere formaliter 
-            in corpus quod informat, et istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> generaliter 
-            habet quaelibet forma habet. Consequenter ad<app><lem>ad</lem><rdg wit="V" type="om."/></app> inclinationem 
-            ad hoc, ut sit in loco, id est, quod corpus quod informat 
-            et illud generaliter habet quaelibet forma <unclear>habet[?]</unclear><app><lem>et illud generaliter habet quaelibet forma habet[?]</lem><rdg wit="R">sit supra terram habet[?]</rdg></app> Consequenter quod complexio sua<app><lem>sua</lem><rdg wit="V" type="om."/></app> sit 
-            reducta ad debitum temperamentum et illam 
-            complexionem. Consequenter habet reducere ad debitum 
-            temperamentum sit<app><lem>et illam complexionem. Consequenter habet reducere ad debitum temperamentum sit</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> sibi in proportionata. Et ita<app><lem>ita</lem><rdg wit="V">sic</rdg></app> 
+          <p xml:id="l28-pcapqd">
+            Pro concordantia aliquali et declaratione antiquorum doctorum in
+            ista materia 
+            <app>
+              <lem>aliqua sunt attendenda</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            <app>
+              <lem>Hic</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            primo, 
+            attendendum est quod praedicamenta sunt artificialiter 
+            <app>
+              <lem>inventa</lem>
+              <rdg wit="#V">adinventa</rdg>
+            </app>
+            et causa doctrinae et facilitatis. 
+            Etiam et ex consequenti, sequitur quod potuerunt
+            institui plures vel
+            <pb ed="#R" n="47-r"/>
+            <cb ed="#R" n="b"/>
+            pauciores
+            <app>
+              <lem>plures vel pauciores</lem>
+              <rdg wit="#V">plura vel pauciora</rdg>
+            </app>
+            quam decem.
+          </p>
+          <p xml:id="l28-qapdir">
+            Quantum ad primum: praedicamenta instituta fuerunt propter
+            infinitatem rerum et infinitum modum se habendi ipsarum
+            <app>
+              <lem>ipsarum</lem>
+              <rdg wit="#V">ipsorum</rdg>
+            </app>
+            et istud
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            fuit valde utile reducere omnia et omnes modos se habendi vel conceptus de decem
+            praedicamenta ad fa cilius et ad melius et distinctius intelligendum res.
+          </p>
+          <p xml:id="l28-qapvaq">
+            Quin autem 
+            <app>
+              <lem>potuerint</lem>
+              <rdg wit="#V">potuerunt</rdg>
+            </app> 
+            fuisse plura vel pauciora vel non aeque commoda non videtur
+            <cb ed="#V" n="b"/><!--59rb-->
+            repugnantia. 
+            Unde expresse 
+            <cit>
+              <ref xml:id="l28-Rd1e1799">
+                <name ref="#Simplicius">Simplicius</name>, 
+                qui scripsit supra 
+                <title ref="#SimpliciusCommentaryOnCategories">Praedicamenta</title>
+                <name ref="#Aristotle">Aristotelis</name>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            multum
+            <app>
+              <lem>elegantur</lem>
+              <rdg wit="#V">allegantur</rdg>
+            </app>, 
+            reducit omnia praedicamenta 
+            <app>
+              <lem><name ref="#Aristotle">Aristotelis</name></lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app> 
+            ad duo, alii vero ad tria, alii vero ad quattuor.
+          </p>
+          <p xml:id="l28-adrrsa">
+            Ad duo reducentes omnia
+            <app>
+              <lem>omnia</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            praedicamenta 
+            <app>
+              <lem>reducebat</lem>
+              <rdg wit="#V">reducebam</rdg>
+            </app>
+            ad esse et ad esse 
+            <app>
+              <lem>quale vel</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            aliquale. 
+            Ita quod 
+            <app>
+              <lem>omne</lem>
+              <rdg wit="#V">esse</rdg>
+            </app>
+            absolutum reducebant ad unum praedicamentum, 
+            scilicet ad esse. 
+            <app>
+              <lem>Sed</lem>
+              <rdg wit="#V">et</rdg>
+            </app>
+            omne quale reducebantur ad aliud, 
+            scilicet ad esse aliquale, quia in talibus, licet
+            fingere nomina 
+            quia non semper habemus propria nomina
+            <app>
+              <lem>imposita</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>,
+            sicut 
+            <app>
+              <lem>ipsemet</lem>
+              <rdg wit="#R">met</rdg>
+            </app>
+            finxit 
+            <cit>
+              <ref xml:id="l28-Rd1e1899">
+                <name ref="#Aristotle">Aristoteles</name> 
+                in <title ref="#Categories">Praedicamentis</title>
+              </ref>
+            </cit> 
+            qui aliquando 
+            <app>
+              <lem><unclear>significata</unclear></lem>
+              <rdg wit="#R"><unclear>simbulata</unclear></rdg>
+            </app>
+            posuit
+            <app>
+              <lem>posuit</lem>
+              <rdg wit="#V">ponit</rdg>
+            </app>
+            loco generis, 
+            ita quod breviter isti
+            <app>
+              <lem>isti</lem>
+              <rdg wit="#V">iste</rdg>
+            </app>
+            ponebant duo praedicamenta solum, 
+            scilicet unum absolutum et aliud respectivum sive
+            accidentale.
+          </p>
+          <p xml:id="l28-avcseq">
+            Alii vero consideraverunt totam latitudinem omnium rerum et isti
+            fuerunt 
+            <app>
+              <lem>iterum</lem>
+              <rdg wit="#V">adhuc</rdg>
+            </app>
+            diversi 
+            quia aliqui 
+            <app>
+              <lem>eorum</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            solum
+            <app>
+              <lem n="solum"/>
+              <rdg wit="#V" type="correction-deletion">
+                <del rend="blackedout">posiie</del>
+              </rdg>
+            </app>
+            posuerunt duo praedicamenta, 
+            scilicet
+            <app>
+              <lem>substantia et qualitas</lem>
+              <rdg wit="#V">substantiam et qualitatem</rdg>
+            </app>,
+            et istius opinionis fuit 
+            <name ref="#Ockham">Okam</name> 
+            quia 
+            <name ref="#Ockham">Okam</name> 
+            negat omne ens praeter substantiam et qualitatem. 
+            Quantum 
+            <app>
+              <lem>enim</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            est de quantitate non distinguitur a substantia vel qualitate; 
+            quantum est de relatione
+            non distinguitur ab extremis; 
+            quantum est de motu non distinguitur a mobili; et sic de
+            aliis. 
+            Et sic non
+            <app>
+              <lem>posuit</lem>
+              <rdg wit="#V">ponit</rdg>
+            </app>,
+            nisi 
+            <app>
+              <lem>duas</lem>
+              <rdg wit="#R">duos</rdg>
+            </app>
+            <app>
+              <lem>ordinationes</lem>
+              <rdg wit="#V">coordinationes</rdg>
+            </app>
+            rerum,
+            <app>
+              <lem>scilicet</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            substantiam et qualitatem.
+          </p>
+          <p xml:id="l28-avpqeq">
+            <app>
+              <lem>
+                Alii vero posuerunt tres, 
+                scilicet, substantiam et qualitatem et quantitatem.
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoarchy"/>
+            </app>
+          </p>
+          <p xml:id="l28-avpqqa">
+            Alii vero posuerunt quattuor et superaddiderunt relationem et
+            actionem et passionem, 
+            ita quod relatio distinguitur,
+            <app>
+              <lem>ab extremis</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V">quod</rdg>
+            </app>
+            actio et passio 
+            <app>
+              <lem>distinguitur</lem>
+              <rdg wit="#V">distinguantur</rdg>
+            </app>
+            a qualitate, 
+            quae acquiritur.
+          </p>
+          <p xml:id="l28-asmasm">
+            Alii superaddiderunt motum.
+          </p>
+          <p xml:id="l28-avpiie"> 
+            Alii vero posuerunt decem, 
+            sicut 
+            <name ref="#Scotus">Scotus</name>, 
+            qui 
+            <app>
+              <lem>posuit</lem>
+              <rdg wit="#V">ponit</rdg>
+            </app>
+            decem ordines rerum. 
+            Ideo correspondenter 
+            <app>
+              <lem>posuit</lem>
+              <rdg wit="#V">ponit</rdg>
+            </app>
+            decem 
+            <app>
+              <lem>ordines</lem>
+              <rdg wit="#V">coordinationes</rdg>
+            </app>
+            terminorum. 
+            Isto enim modo notum est 
+            qui vellet tenere opinionem 
+            <name ref="#Scotus">Scoti</name> 
+            et multorum aliorum 
+            quod li 'ens' sit nomen transcendens. 
+            Et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app>
+            si omnes termini absoluti 
+            <app>
+              <lem>reponerentur</lem>
+              <rdg wit="#V">reponitur</rdg>
+            </app>
+            in 
+            <app>
+              <lem>aliquo</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            praedicamento, 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            non esset revocandum in dubium quin Deus esset in praedicamento. 
+            Ita quod, qui vellet
+            sic ordinare omnem terminum
+            <pb ed="#V" n="59-v"/>
+            <cb ed="#V" n="a"/>
+            absolutum de quo, 
+            alius 
+            <app>
+              <lem>praedicaretur</lem>
+              <rdg wit="#V">praedicetur</rdg>
+            </app>
+             in quid sive quidditative 
+            <app>
+              <lem>esse</lem>
+              <rdg wit="#R">esset</rdg>
+            </app>
+            repositum in praedicamento, 
+            tunc ens esset genus generalissimum. 
+            Et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app>
+            <pb ed="#R" n="47-v"/>
+            <cb ed="#R" n="a"/>
+            Deus reponeretur in genere. 
+            Et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app>
+            consequenter, si ens diceretur univoce de accidente et substantia, 
+            omnia accidentia
+            quae significatur absolute 
+            per terminum absolutum reponerentur sub illo primo genere ens. 
+            Et forte quod de Deo 
+            <app>
+              <lem>habuerunt</lem>
+              <rdg wit="#V" type="correction-substitution">
+                <subst>
+                  <del rend="strikethrough">posuerunt</del>
+                  <add place="inline">habuerunt</add>
+                </subst>
+              </rdg>
+            </app>
+            antiqui ponentes ipsum in praedicamento istum modum considerandi, quia capiebant
+            substantiam absolute prout convertitur cum ente, et quia substantiam non 
+            <app>
+              <lem>connotabat</lem>
+              <rdg wit="#V">convocabant</rdg>
+            </app>
+            illis 
+            <app>
+              <lem>aliquod</lem>
+              <rdg wit="#V">aliquid</rdg>
+            </app>
+            imperfectum, 
+            ideo
+            <app>
+              <lem n="ideo"/>
+              <rdg wit="#V" type="variation-present">
+                <add place="inline">non</add>
+              </rdg>
+            </app>
+            reponebant Deum sub illo genere substantia. 
+            Et sic, si bene
+            <app>
+              <lem>resolvantur</lem>
+              <rdg wit="#V">resolvatur</rdg>
+            </app>,
+            erunt concordes 
+            quia sine dubio aequivocabant de praedicamento et de generibus
+            generalissimis, 
+            quia 
+            <app>
+              <lem>illis</lem>
+              <rdg wit="#V">illi</rdg>
+            </app>
+            <app>
+              <lem>qui</lem>
+              <rdg wit="#R" type="correction-addition">
+                <add place="above-line">qui</add>
+              </rdg>
+            </app>
+            <app>
+              <lem>
+                non ponebant Deum reponi in praedicamento 
+                substantia connotabat eis aliquod imperfectum. 
+                Ideo</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            non 
+            <app>
+              <lem>reponebant</lem>
+              <rdg wit="#V">repondebant</rdg>
+            </app>
+            Deum in praedicamento. 
+            Aliis vero li 'substantia'
+            <app>
+              <lem>nihil imperfectionis eis connotabat</lem>
+              <rdg wit="#V">nihil convocabat imperfectionis, ideo etc.</rdg>
+            </app>.
+          </p>
+          <p xml:id="l28-aetaap">
+            Advertendum est
+            <app>
+              <lem>est</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            tamen, 
+            redeundo ad primum, 
+            quod praedicamenta sunt nunc adinventa causae doctrinae et
+            facilitatis doctrinae. 
+            Ideo subtilius imaginati sunt
+            <app>
+              <lem>illi</lem>
+              <rdg wit="#V">aliqui</rdg>
+            </app>,
+            qui non posuerunt Deum in praedicamento quam illi, 
+            qui eum 
+            <app>
+              <lem>reposuerunt</lem>
+              <rdg wit="#V">posuerunt</rdg>
+            </app>
+            in praedicamento 
+            quia ex quo praedicamenta sunt adin venta causa doctrine et secundum
+            modum loquendi antiquorum traduntur praedicamenta secundum rationes et modos exprimentes
+            naturas proprias rerum pro quibus supponunt et ordinem et habitudinem ipsarum, 
+            ergo illi qui
+            <app>
+              <lem n="qui"/>
+              <rdg wit="#V" type="variation-present" cause="repetitio">
+                posuerunt eum in praedicamento, quia
+                ex quo praedicamenta sunt adinventa causa doctrinae et secundum modum loquendi
+                antiquorum traduntur praedicamenta secundum rationes et modos exprimentes naturas
+                proprias rerum pro quibus supponit et ordinem et habitudinem ipsarum, ergo illi
+                qui
+              </rdg>
+            </app>
+            conceperunt 
+            <app>
+              <lem>Deum</lem>
+              <rdg wit="#R">Dei</rdg>
+            </app>
+            conceptu sibi proprio 
+            <app>
+              <lem>exprimente</lem>
+              <rdg wit="#V">explicite</rdg>
+            </app>
+            etc., magis attinxerunt finem illum 
+            quam per generalem modum concipiendi et cognoscendi ipsum 
+            quia non curamus de ordine, nec de cognitione terminorum, 
+            nisi in ordine ad illa quae significant
+            <cb ed="#V" n="b"/><!--V59vb--> 
+            de quibus volumus habere scientiam. 
+            Et ideo quia antiqui
+            philosophi immediate introducebantur ad conceptus magis altos 
+            et magis exprimentes proprias naturas rerum 
+            <app>
+              <lem>pro quibus supponunt</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>. 
+            Ideo forte erant magis apti ad philosophandum.
+          </p>
+          <p xml:id="l28-pieeas">
+            Pro 
+            <app>
+              <lem>intellectu</lem>
+              <rdg wit="#R">intellectum</rdg>
+            </app>
+             ergo antiquorum, 
+             qui videntur 
+            <app>
+              <lem>multa</lem>
+              <rdg wit="#R">multi</rdg>
+            </app>
+             dicere de 
+            <app>
+              <lem>comparatione</lem>
+              <rdg wit="#V">compositione</rdg>
+            </app>
+            generis et differentiae 
+            quia communiter exponuntur dicta sua de terminis, scilicet,
+            quod genus est indifferens ad <unclear>incurandum</unclear> hanc vel hanc speciem,
+            sed per aliam et aliam differentiam componitur ex eo alia et alia
+            <app>
+              <lem>species</lem>
+              <rdg wit="#V">substantia</rdg>
+            </app>.
+          </p>
+          <p xml:id="l28-ssddrf">
+            Sed sine dubio antiqui philosophi 
+            quantum ad hoc referebant se ad res et 
+            <app>
+              <lem>ad</lem>
+              <rdg wit="#R" type="correction-addition">
+                <add place="above-line">ad</add>
+              </rdg>
+            </app>
+            habitudines rerum, 
+            ita quod vocabant genus non terminum, 
+            sed rationem significatam per
+            terminum, quae est quaedam 
+            <app>
+              <lem>quidditas</lem>
+              <rdg wit="#V">quidditatis</rdg>
+            </app>
+            indifferens ad hanc vel hanc speciem. 
+            Differentia vero
+            <app>
+              <lem>vero</lem>
+              <rdg wit="#V">veri</rdg>
+            </app>
+            erit magis determinata, 
+            ideo genus magis habebat rationem materiae et differentiam
+            rationem formae.
+          </p>
+          <p xml:id="l28-pcinat">
+            Pro cuius
+            <app>
+              <lem n="cuius"/>
+              <rdg wit="#V" type="variation-present" cause="repetitio">
+                <add place="inline">cuius</add>
+              </rdg>
+            </app>
+            <app>
+              <lem>intellectu</lem>
+              <rdg wit="#R">intellectum</rdg>
+            </app>
+            ponam unum exemplum de anima intellectiva alias positum. 
+            Unde anima intellectiva, licet
+            sit simplex res et indivisibilis, 
+            tamen multas habet operationes et particulares 
+            <app>
+              <lem>inclinationes</lem>
+              <rdg wit="#V">inclinantes</rdg>
+            </app>
+            sive naturas, 
+            <app>
+              <lem>ut</lem>
+              <rdg wit="#V">et</rdg>
+            </app>
+            ita 
+            <app>
+              <lem>loquar</lem>
+              <rdg wit="#V">loquor</rdg>
+            </app>.
+            Primo 
+            <app>
+              <lem>enim</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            habet infimam, 
+            quae est existere, quae est infimus
+            <cb ed="#R" n="b"/><!--R47vb-->
+            modus perfectionis 
+            <app>
+              <lem>suae</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            et sua prima operatio est appetere existere. 
+            Et ista operatio 
+            <app>
+              <lem>vel</lem>
+              <rdg wit="#V">seu</rdg>
+            </app>
+            conditio 
+            <app>
+              <lem>est</lem>
+              <rdg wit="#R"><unclear>conditionem</unclear></rdg>
+            </app>
+            generalis in omnibus. 
+            Deinde ascendendo habet varias operationes habet, 
+            enim influere formaliter in corpus quod informat, 
+            et 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            generaliter habet quaelibet forma habet. 
+            Consequenter 
+            <app>
+              <lem>ad</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            inclinationem ad hoc, ut sit in loco, 
+            id est, quod corpus quod informat 
+            <app>
+              <lem>et illud generaliter habet quaelibet forma <unclear>habet</unclear></lem>
+              <rdg wit="#R">sit supra terram habet[?]</rdg>
+            </app>
+            Consequenter quod complexio 
+            <app>
+              <lem>sua</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            sit reducta ad debitum temperamentum 
+            <app>
+              <lem>
+                et illam complexionem. 
+                Consequenter habet reducere ad debitum temperamentum sit
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoteleuton"/>
+            </app>
+            sibi in proportionata. 
+            Et 
+            <app>
+              <lem>ita</lem>
+              <rdg wit="#V">sic</rdg>
+            </app>
             consequenter ascendendo per gradus correspondentes speciebus 
-            consequenter<app><lem>consequenter</lem><rdg wit="V">essentialiter[?]</rdg></app> habet anima quod sit sensitiva, et postea 
-            quod est intellectiva modo ad propositum anima considerata 
-            secundum operationem suam infimam ipsam habet obiectaliter 
-            rationem generis generalissimi, ita quod ipsa,<app><lem>ipsa</lem><rdg wit="V" type="om."/></app> ut <cb ed="#V" n="60ra"/>sic 
-            considerata, est obiectum generis generalissimi.<app><lem>generis generalissimi</lem><rdg wit="V" type="om."/></app> Et ita ascendendo 
-            secundum eius operationes perfectiores, sequitur<app><lem>sequitur</lem><rdg wit="V">significatur</rdg></app> 
-            per terminos minus communes sive specialiores, et est 
-            secundum illas operationes, ut sic considerata obiectum 
-            illorum<app><lem>illorum</lem><rdg wit="R" type="om."/></app> terminorum minus communium. Et sic tandem veniendo 
-            ad suam operationem perfectissimam,<app><lem>perfectissimam[?]</lem><rdg wit="V">perfectam</rdg></app> quae est intelligere, 
-            significatur per terminum specificum sibi proprium et in istis 
-            operationibus est ordo talis quod prima est quodammodo 
-            potentia ad secundam. Et ideo philosophi istas habitudines 
-            considerantes imposuerunt eis<app><lem>eis</lem><rdg wit="V">sibi</rdg></app> terminos nunc 
-            transferendo suum modum loquendi ad rem nunc ad 
-            terminos.</p>
-        
-          <p xml:id="l28-iipfot">Item istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> potest reduci ad similitudinem 
-            formarum substantialium, ita quod, quid imaginati sunt 
-            quod secundum modum essendi, sit ordo formarum substantalium 
-            ut per aliquam formam res primo constituitur 
-          in esse et ista forma est imperfectiva 
-          et est im potentia ad recipiendum aliam. Et sic consequenter 
-          usque quod aliquod secundam formam propriam per quam constituitur<app><lem>in esset et ista forma . .  .secundum formam propriam per quam constituitur</lem><rdg wit="V" type="om." cause="homeotelueton"/></app> 
-            sub certa specie, et secundum istum ordinem 
-            potest imaginari ordo terminorum; unde per primam 
-            differentiam genus contrahitur ad istud<app><lem>istud</lem><rdg wit="V">illud</rdg></app> genus 
-            substantia per secundam differentiam ad genus specialius 
-            sive ad speciem specialiorem. Et sic consequenter usque ad 
-            propriam speciem; et sic<app><lem>sic</lem><rdg wit="V" type="om."/></app> secundum istos duos modos 
-            potest salvari modus loquendi antiquorum 
-          qui suppositio quod ita non, tamen ita potest imaginari 
-          modus loquendi antiquorum<app><lem>qui suppositio quod ita non . . modus loquendi antiquorum</lem><rdg wit="V" type="om." cause="homeoteleuton"/></app> vel secundum modum 
-            loquendi <name ref="#WilliamOfParis">Guillelmi Parisiensis</name>, scilicet, quod creatura 
-            sit essentia sua, non tamen proprie suum esse. 
-            Sed Deus est suum esse.<app><lem>esse</lem><rdg wit="V" type="om."/></app> Et tunc<app><lem>tunc</lem><rdg wit="V">sic</rdg></app> secundum quod essentia 
-            rei actualiter variis specibus actuationis 
-            secundum hoc reponitur in diversis speciebus  
-            sive generibus, quia primo est in 'esse', secundo in 'vivere', 
-            tertio in 'intelligere', etc. Et secundum hoc, ut tetigi, 
-          <cb ed="#R" n="48ra"/>potest fingi ordo terminorum.</p> 
-        
-          <p xml:id="l28-aevmpf">Alia est 
-          via ponendo distinctionem formalem 
-            a parte rei, licet concurrent<app><lem>concurrent</lem><rdg wit="V">concurrant</rdg></app> identitate, 
-            sicut est de modo ponendi formalitates.</p> 
-        
-          <p xml:id="l28-aeocti">Alia est opinio <name ref="#Ripa">de Ripa</name> quod in variis 
-            operationibus in qualibet reperitur instrumentum.<app><lem>instrumentum</lem><rdg wit="V">instantia</rdg></app> 
-            Unde imaginatur quod ratio formalis essendi 
-            est illa a qua sumitur primum praedicatum generalem. 
-            Deinde ideo vivendi esset<app><lem>esset</lem><rdg wit="V">est</rdg></app> secunda<app><lem>secunda</lem><rdg wit="V">illa</rdg></app> a qua sumeretur<app><lem>sumeretur</lem><rdg wit="V">sumitur</rdg></app> 
-            secundum praedicatum minus generale quam primum. Et in eis 
-            esset aliqualis distinctio concurrerent, tamen 
-            identitate.</p>
-          
-          <p xml:id="l28-aevrip">Alia est via antiquorum, qui posuerunt 
-            universalia a parte rei sibi correspondentia, 
-            ita quod, secundum praedicamenta universalia erant universalia a parte rei sibi correspondentia,<app><lem>ita quod secundum praedicamenta . . .rei sibi correspondentia</lem><rdg wit="R" type="om." cause="homeoarchy"/></app> ita quod idem erat 'esse' in omnibus, et idem erat 
-            'vivere' in omnibus viventibus, et ita in<app><lem>ita in</lem><rdg wit="V">sic de</rdg></app> aliis. 
-            Et secundum illum<app><lem>illum</lem><rdg wit="V">istum</rdg></app> ordinem erat ordo terminorum, 
-            et inter omnes istos modos, reputo primum magis 
-            verisimilem et magis probabilem.<app><lem>et magis probabilem</lem><rdg wit="V" type="om."/></app> Ideo eligatis 
-            quemcumque modum vos volueritis. Finaliter 
-            tamen magis consonando ad doctores antiquos 
-            tenendum est quod Deus non reponatur in 
-            praedicamento.</p> 
-            
-          <p xml:id="l28-etaiae">Et tunc ad rationes in contrarium, quod Deus 
-            est in praedicamento relationis, quia relative dicitur, etc. Respondendum 
-            est quod non, quia relatio ut<app><lem>ut</lem><rdg wit="V">prout</rdg></app> dicitur de creaturis dicit 
-            quamdam perfectionis limitationem sive imperfectionem 
-            repugnantem Deo, ideo etc. Ita<app><lem>ita</lem><rdg wit="V">et ita</rdg></app> respondetur 
-            ad alias rationes, ita quod finaliter, si praedicata<app><lem>praedicata</lem><rdg wit="R">praedicamenta</rdg></app> 
-            concedantur de Deo et creaturis, hoc non est univoce, 
-            sed analogice, et<app><lem>et</lem><rdg wit="V" type="om."/></app> per quamdam transumptionem, etc. 
-              Et sic patet quid sic dicendum ad illum articulum, etc.<app><lem>et sic patet quid . . . ad illum articulum, etc.</lem><rdg wit="V" type="om."/></app></p>
+            <app>
+              <lem>consequenter</lem>
+              <rdg wit="#V"><unclear>essentialiter</unclear></rdg>
+            </app>
+            habet anima quod sit sensitiva, 
+            et postea quod est intellectiva modo ad propositum
+            anima considerata secundum operationem suam infimam ipsam 
+            habet obiectaliter rationem generis generalissimi, 
+            ita quod
+            <app>
+              <lem>ipsa</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>,
+            ut
+            <cb ed="#V" n="60-r"/>
+            <cb ed="#V" n="a"/>
+            sic considerata, 
+            est obiectum 
+            <app>
+              <lem>generis generalissimi</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            Et ita ascendendo secundum eius operationes perfectiores, 
+            <app>
+              <lem>sequitur</lem>
+              <rdg wit="#V">significatur</rdg>
+            </app>
+            per terminos minus communes sive specialiores, 
+            et est secundum illas operationes, 
+            ut sic considerata obiectum 
+            <app>
+              <lem>illorum</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            terminorum minus communium. 
+            Et sic tandem veniendo ad suam operationem
+            <app>
+              <lem>perfectissimam</lem>
+              <rdg wit="#V">perfectam</rdg>
+            </app>,
+            quae est intelligere, 
+            significatur per terminum specificum sibi proprium et in istis
+            operationibus est ordo talis quod prima est quodammodo potentia ad secundam. 
+            Et ideo philosophi istas habitudines considerantes imposuerunt 
+            <app>
+              <lem>eis</lem>
+              <rdg wit="#V">sibi</rdg>
+            </app>
+            terminos nunc transferendo suum modum 
+            loquendi ad rem nunc ad terminos.
+          </p>
+          <p xml:id="l28-iipfot">
+            Item 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            potest reduci ad similitudinem formarum substantialium, 
+            ita quod, quid imaginati sunt
+            quod secundum modum essendi, sit ordo formarum substantalium ut per aliquam formam res
+            primo constituitur 
+            <app>
+              <lem>
+                in esse et ista forma est imperfectiva et est im potentia ad
+                recipiendum aliam. 
+                Et sic consequenter usque quod aliquod secundam formam propriam per
+                quam constituitur
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeotelueton"/>
+            </app>
+            sub certa specie, 
+            et secundum istum ordinem potest imaginari ordo terminorum; 
+            unde per primam differentiam genus contrahitur ad 
+            <app>
+              <lem>istud</lem>
+              <rdg wit="#V">illud</rdg>
+            </app>
+            genus substantia per secundam differentiam ad genus specialius sive ad speciem
+            specialiorem. 
+            Et sic consequenter usque ad propriam speciem; 
+            et sic
+            <app>
+              <lem>sic</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            secundum istos duos modos potest salvari modus loquendi antiquorum 
+            <app>
+              <lem>
+                qui suppositio quod
+                ita non, tamen ita potest imaginari modus loquendi antiquorum
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homeoteleuton"/>
+            </app>
+            vel secundum modum loquendi 
+            <cit>
+              <ref xml:id="l28-Rd1e2694"><name ref="#WilliamOfParis">Guillelmi Parisiensis</name></ref>
+              <bibl>XXX</bibl>
+            </cit>,
+            scilicet 
+            quod creatura sit essentia sua, non tamen proprie suum esse. 
+            Sed Deus est suum 
+            <app>
+              <lem>esse</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            Et 
+            <app>
+              <lem>tunc</lem>
+              <rdg wit="#V">sic</rdg>
+            </app>
+            secundum quod essentia rei actualiter variis specibus actuationis secundum hoc
+            reponitur in diversis speciebus sive generibus, quia primo est in 'esse', secundo in
+            'vivere', tertio in 'intelligere', etc. Et secundum hoc, ut tetigi,
+            <pb ed="#R" n="48-r"/>
+            <cb ed="#R" n="a"/>
+            potest fingi ordo terminorum.
+          </p>
+          <p xml:id="l28-aevmpf">
+            Alia est via ponendo distinctionem formalem a parte rei, 
+            licet 
+            <app>
+              <lem>concurrent</lem>
+              <rdg wit="#V">concurrant</rdg>
+            </app>
+            identitate, 
+            sicut est de modo ponendi formalitates.
+          </p>
+          <p xml:id="l28-aeocti">
+            Alia est opinio
+            <cit>
+              <ref xml:id="l28-Rd1e2740"><name ref="#Ripa">de Ripa</name></ref>
+              <bibl>XXX</bibl>
+            </cit>
+            quod in variis operationibus in qualibet reperitur
+            <app>
+              <lem>instrumentum</lem>
+              <rdg wit="#V">instantia</rdg>
+            </app>. 
+            Unde imaginatur quod ratio formalis essendi est illa a qua sumitur primum praedicatum
+            generalem. 
+            Deinde ideo vivendi 
+            <app>
+              <lem>esset</lem>
+              <rdg wit="#V">est</rdg>
+            </app>
+            <app>
+              <lem>secunda</lem>
+              <rdg wit="#V">illa</rdg>
+            </app>
+            a qua 
+            <app>
+              <lem>sumeretur</lem>
+              <rdg wit="#V">sumitur</rdg>
+            </app>
+            secundum praedicatum minus generale quam primum. 
+            Et in eis esset aliqualis distinctio
+            concurrerent, tamen identitate.
+          </p>
+          <p xml:id="l28-aevrip">
+            Alia est via antiquorum, 
+            qui posuerunt universalia a parte rei sibi
+            correspondentia, 
+            <app>
+              <lem>
+                ita quod, 
+                secundum praedicamenta universalia erant universalia a parte
+                rei sibi correspondentia
+              </lem>
+              <rdg wit="#R" type="variation-absent" cause="homeoarchy"/>
+            </app>
+            ita quod idem erat 'esse' in omnibus, et idem erat 'vivere' in omnibus viventibus, 
+            et
+            <app>
+              <lem>ita in</lem>
+              <rdg wit="#V">sic de</rdg>
+            </app>
+            aliis. Et secundum 
+            <app>
+              <lem>illum</lem>
+              <rdg wit="#V">istum</rdg>
+            </app>
+            ordinem erat ordo terminorum, 
+            et inter omnes istos modos, 
+            reputo primum magis
+            verisimilem 
+            <app>
+              <lem>et magis probabilem</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            Ideo eligatis quemcumque modum vos volueritis. 
+            Finaliter tamen magis consonando ad
+            doctores antiquos tenendum est 
+            quod Deus non reponatur in praedicamento.
+          </p>
+          <p xml:id="l28-etaiae">
+            Et tunc ad rationes in contrarium, 
+            quod Deus est in praedicamento
+            relationis, quia relative dicitur, etc. 
+            Respondendum est quod non, quia relatio
+            <app>
+              <lem>ut</lem>
+              <rdg wit="#V">prout</rdg>
+            </app>
+            dicitur de creaturis dicit 
+            quamdam perfectionis limitationem sive imperfectionem
+            repugnantem Deo, ideo etc. 
+            <app>
+              <lem>Ita</lem>
+              <rdg wit="#V">et ita</rdg>
+            </app>
+            respondetur ad alias rationes, 
+            ita quod finaliter, 
+            si 
+            <app>
+              <lem>praedicata</lem>
+              <rdg wit="#R">praedicamenta</rdg>
+            </app>
+            concedantur de Deo et creaturis, hoc non est univoce, sed analogice,
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            per quamdam transumptionem, etc. 
+            <app>
+              <lem>Et sic patet quid sic dicendum ad illum articulum, etc.</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+          </p>
         </div>
       </div>
     </body>
