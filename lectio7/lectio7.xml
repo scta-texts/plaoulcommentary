@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 7, de Fide</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -33,1829 +28,2349 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="double-end-point" location="external"/>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      <div xml:id="starts-on">
+        
       </div>
     </front>
     <body>
       <div xml:id="lectio7">
-        <head subtype="title">Lectio 7, de Fide</head>
+        <head>Lectio 7, de Fide</head>
         <div>
           <head xml:id="l7-Hraccpc">Recapitulatio argumenti circa periculum credulitatis</head>
-          
-          <p xml:id="l7-seqgpe">Sciendum est quod in solutione ultimi argumenti, in qua 
+          <p xml:id="l7-seqgpe">
+            Sciendum est quod in solutione ultimi argumenti, 
+            in qua
             <app to="#l7-Ainqudi">
               <lem>dicebatur</lem>
               <rdg wit="#V">dicetur</rdg>
-            </app> 
-            de illo, qui assentiret corpus Christi esse in hostia non consecrata sibi data a presbytero in extremo mortis, dictum est quod ille assensus non est multum periculosus et non faceret ipsum assentientem de per se idolatrare. Verum est quia modus loquendi communis est quod in illo casu sacerdos facit 
+            </app>
+            de illo, qui assentiret corpus Christi 
+            esse in hostia non consecrata sibi data a
+            presbytero in extremo mortis, 
+            dictum est quod ille assensus non est multum periculosus
+            et non faceret ipsum assentientem de per se idolatrare. 
+            Verum est quia modus loquendi
+            communis est quod in illo casu sacerdos facit
             <app to="#l7-Asafasi">
               <lem>simpliciter</lem>
               <rdg wit="V">simplicem</rdg>
-              <note xml:lang="en">It seems like the sense could go either way. The Vatican reading, however, would suggest that the priest forces the simple person to be an idolater, whereas the reading of R, SV, S suggest that the "strictly speaking" (simpliciter) it is the priest who is the idolater.</note>
-            </app> 
-            idolatrare. Sciendum 
+              <note xml:lang="en">It seems like the sense could go either way. The Vatican reading,
+                however, would suggest that the priest forces the simple person to be an idolater,
+                whereas the reading of R, SV, S suggest that the "strictly speaking" (simpliciter)
+                it is the priest who is the idolater.
+              </note>
+            </app>
+            idolatrare. 
+            Sciendum
             <app to="#l7-Aidsces">
               <lem wit="#V">est</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
               <note xml:lang="en">We select the more explicit reading here</note>
-            </app> 
-            quod communiter simplices habent pro obiecto adorationis 
-            <cb ed="#V" n="14vb"/> 
-            aliquid contentum sub speciebus, et sic, si corpus Christi non 
+            </app>
+            quod communiter simplices habent pro obiecto adorationis
+            <cb ed="#V" n="14vb"/><!--V14vb-->
+            aliquid contentum sub speciebus, 
+            et sic, si corpus Christi non sit
             <app to="#l7-Anosiib">
-              <lem>sit</lem>
-              <rdg wit="#R" type="corrDeletion">
-                <corr corresp="#l7-Csiqqib">
-                  <del rend="strikethrough">q</del>
-                </corr>
+              <lem n="sit"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del rend="strikethrough">q</del>
               </rdg>
-            </app> 
-            ibidem quando hostia non est consecrata, habent illud quod continetur 
+            </app>
+            ibidem quando hostia non est consecrata, 
+            habent illud quod continetur
             <app to="#l7-Acosusp">
               <lem>sub speciebus</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            pro obiecto adorationis. Et istud 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            pro obiecto adorationis. 
+            Et istud
             <app to="#l7-Aetispr">
               <lem>permittitur</lem>
               <rdg wit="#R #SV #S">promittitur</rdg>
-              <note xml:lang="en">Despite its lack of support "permit" seems to make more sense here than "promise." We read this as saying "they [the simple] have that which is contained under some liknesses as an object of adoration. And this 'is permitted' to them because if they were required/induced to believe conditionally, then they would hesitate on account of this, and their devotion would be lessened."</note>
-            </app> 
-            eis quia, si inducerentur ad conditionaliter credendum, 
+              <note xml:lang="en">Despite its lack of support "permit" seems to make more sense here
+                than "promise." We read this as saying "they [the simple] have that which is
+                contained under some liknesses as an object of adoration. And this 'is permitted' to
+                them because if they were required/induced to believe conditionally, then they would
+                hesitate on account of this, and their devotion would be lessened."</note>
+            </app>
+            åeis quia, 
+            åsi inducerentur ad conditionaliter credendum,
             <app to="#l7-Acrpeho">
               <lem>per hoc</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
             <app to="#l1-A">
               <lem>haesitarent</lem>
               <rdg wit="#V">haesitarentur</rdg>
-            </app> 
-            et remitteretur eorum devotio. Et ad istum intellectum, prohibitum est sacerdotibus ne illis dent hostias non consecratas, et si hoc faciant, scilicet dando eis hostias non consecratas, gravissime peccant, etc.</p>
-       
+            </app>
+            ået remitteretur eorum devotio. 
+            Et ad istum intellectum, prohibitum est sacerdotibus ne
+            illis dent hostias non consecratas, 
+            et si hoc faciant, scilicet dando eis hostias non
+            consecratas, gravissime peccant, etc.
+          </p>
         </div>
         <div>
           <head xml:id="l7-Hramdcf">Redeundo ad materiam de certitudinem fidei</head>
-          
           <p xml:id="l7-cmisir">
+            Continuando
             <app to="#l7-Apeetco">
-              <lem>Continuando</lem>
-              <rdg wit="#S #V" type="intextu">autem</rdg>
-            </app> 
-            materiam inceptam de certitudine fidei: 
+              <lem n="Continuando"/>
+              <rdg wit="#S #V" type="variation-present">autem</rdg>
+            </app>
+            materiam inceptam de certitudine fidei:
+            quomodo
             <app to="#l7-Acefiqu">
-              <lem>quomodo</lem>
-              <rdg wit="#V" type="intextu">enim</rdg>
-            </app> 
-            non potest 
+              <lem n="quomodo"/>
+              <rdg wit="#V" type="variation-present">enim</rdg>
+            </app>
+            non potest
             <app to="#l7-Anopoei">
               <lem>ei</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            subesse falsum. Quia hoc est aliqualiter difficile ad capiendum, ita communiter accidit quod veritas 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            subesse falsum. 
+            Quia hoc est aliqualiter difficile ad capiendum, 
+            ita communiter accidit
+            quod veritas
+            est
             <app to="#l7-Aquvees">
-              <lem>est</lem>
-              <rdg wit="#V" type="intextu">aliqualiter</rdg>
-            </app> 
-            difficilis ad capiendum ex corruptione peccati, ita quod falsitates sunt 
+              <lem n="est"/>
+              <rdg wit="#V" type="variation-present">aliqualiter</rdg>
+            </app>
+            difficilis ad capiendum ex corruptione peccati, 
+            ita quod falsitates sunt
             <app to="#l7-Afasuno">
               <lem>nobis</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            quodammodo 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quodammodo
             <app to="#l7-Anoquma">
               <lem>magis</lem>
-              <rdg wit="#V" type="om."/>
-            </app> proportionatae quam sint aliquae veritates. Unde qui vellet sequi opinionem <name ref="#Anglici">Anglicorum,</name> non esset difficultas, quia 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            proportionatae quam sint aliquae veritates. 
+            Unde qui vellet sequi opinionem 
+            <name ref="#Anglici">Anglicorum</name>, 
+            non esset difficultas 
+            quia
             <app to="#l7-Adiquip">
               <lem>ipsi</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
               <note xml:lang="en">We include "ipsi" as the more explicit rendering</note>
-            </app> 
-            concedunt quod fidei potest subesse falsum et quod Deus potest decipere aliquem. Et 
+            </app>
+            concedunt quod fidei potest subesse falsum 
+            et quod Deus potest decipere aliquem. 
+            Et
             <app to="#l7-Aetcoco">
               <lem>consequenter concedunt</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            quod anima Christi 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quod anima Christi
             <app to="#l7-Achpode">
               <lem>potuit decipi</lem>
               <rdg wit="#V">potest peccare</rdg>
-            </app> 
-            ipsa existente unica verbo. Dicunt etiam quod praeteritum potest non fuisse praeteritum. Dicunt etiam alii quod licet fides causaverit aliquem 
+            </app>
+            ipsa existente unica verbo. 
+            Dicunt etiam quod praeteritum potest non fuisse praeteritum. 
+            Dicunt etiam alii quod licet fides causaverit aliquem
             <app to="#l7-Acaalal">
               <lem>alium</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            assensum, potest tamen illum numquam causavisse. Unde concedunt quod licet quaelibet res positiva, si fuerit necesse, est ipsam fuisse, tamen non est sic in respectibus.</p>
-          
-          <p xml:id="l7-sdiqpr">Sed dimittendo ista et eundo ad propositum 
-            <cb ed="#R" n="9rb"/> 
-            prius inchoatum de certitudine fidei, tenendo quod 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            assensum, potest tamen illum numquam causavisse. 
+            Unde concedunt quod licet quaelibet
+            res positiva, si fuerit necesse, est ipsam fuisse, 
+            tamen non est sic in respectibus.
+          </p>
+          <p xml:id="l7-sdiqpr">
+            Sed dimittendo ista et eundo ad propositum
+            <cb ed="#R" n="b"/><!--9rb--> 
+            prius inchoatum de certitudine fidei, 
+            tenendo quod
             <app to="#l7-Atequfi">
               <lem>fidei</lem>
               <rdg wit="#V">ei</rdg>
-            </app> 
-            non potest subesse falsum, contra quam imaginationem inductae sunt 
+            </app>
+            non potest subesse falsum, 
+            contra quam imaginationem inductae sunt
             <app to="#l7-Aaldiet">
               <lem>aliquae difficultates et</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            rationes 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            rationes
             <app to="#l7-Aetradi">
               <lem>difficiliores</lem>
               <rdg wit="#S">difficultates</rdg>
-              <note xml:lang="en">Both R and V are quite clear about "difficiliores" here. SV is less clear, but could easily be "difficiliores." S is more difficult to render as "difficiliores" as it appears to be an identical abbreviation of the previous use (three words prior) of "difficultates"</note>
-            </app> 
-            quas potui reperire.</p>
+              <note xml:lang="en">Both R and V are quite clear about "difficiliores" here. SV is
+                less clear, but could easily be "difficiliores." S is more difficult to render as
+                "difficiliores" as it appears to be an identical abbreviation of the previous use
+                (three words prior) of "difficultates"</note>
+            </app>
+            quas potui reperire.
+          </p>
         </div>
         <div>
-          <head xml:id="l7-Hratpii">Responsio ad tertiam rationem secundae instantiae: circa continuationem fidei post instans incarnationis</head>
-          
-          <p xml:id="l7-urefie">Unde respondendum est ad illam rationem consequenter quae erat de continuatione 
+          <head xml:id="l7-Hratpii">Responsio ad tertiam rationem secundae instantiae: circa
+            continuationem fidei post instans incarnationis</head>
+          <p xml:id="l7-urefie">
+            Unde respondendum est ad illam rationem 
+            consequenter quae erat de
+            continuatione
             <app to="#l7-Adecoas">
               <lem>assensus</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            fidei post instans incarnationis, 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            fidei post instans incarnationis,
             <app>
-              <lem>et ista ratio est maximae apparentiae. Unde arguebatur sic: ponatur quod ante incarnationem aliquis assensit isti mediante habitu fide, 
-                <mentioned>Christus incarnabitur,</mentioned> 
-                et quod ille assensus 
+              <lem>
+                et ista ratio est maximae apparentiae. 
+                Unde arguebatur sic: ponatur quod ante
+                incarnationem aliquis assensit isti mediante habitu fide, 
+                <mentioned>Christus incarnabitur</mentioned>, 
+                et quod ille assensus
                 <app to="#l7-Aquilas">
                   <lem wit="#R">continuetur</lem>
                   <rdg wit="#SV #S">continetur</rdg>
                 </app>
-              usque ad instans incarnationis,</lem>
-              <rdg wit="#V" type="om." cause="homoteleuton"/>
-            </app> 
+                usque ad instans incarnationis
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+            </app>,
             <app to="#l7-Aininin">
               <lem>tunc in instanti incarnationis</lem>
-              <rdg wit="#R" type="om." cause="homoteleuton"/>
-            </app> 
-            ille assensus erit falsus, ideo etc.</p>
-          
+              <rdg wit="#R" type="variation-absent" cause="homoteleuton"/>
+            </app>
+            ille assensus erit falsus, ideo etc.
+          </p>
           <div>
             <head>Prima responsio possibilis: responsio Guillelmi Altissiodorensis</head>
-            
             <p xml:id="l7-gaapap">
-              <name ref="#WilliamOfAuxerre">Guillelmus 
+              <ref>
+                <name ref="#WilliamOfAuxerre">Guillelmus
                 <app to="#l7-Aetgual">
                   <lem>Altissiodorensis</lem>
-                  <rdg wit="#V">Parisiensis</rdg> <!-- its rather unusual for the app to be inside the name tag so watch for problems here -->
+                  <rdg wit="#V">Parisiensis</rdg>
+                  <!-- its rather unusual for the app to be inside the name tag so watch for problems here -->
                 </app>
-              </name> 
-              ad hoc dat unam 
+              </name>
+              </ref>
+              ad hoc dat unam responsionem
               <app to="#l7-Adaunre">
-                <lem>responsionem</lem>
-                <rdg wit="#V" type="corrDeletion">
-                  <corr corresp="#l7-Cuncore">
-                    <del rend="strikethrough">conclusionem</del>
-                  </corr>
+                <lem n="responsionem"/>
+                <rdg wit="#V" type="correction-deletion">
+                  <del rend="strikethrough">conclusionem</del>
                 </rdg>
-              </app> 
-              quam recitabo et 
+              </app>
+              quam recitabo et
               <app to="#l7-Areetpo">
                 <lem>post</lem>
                 <rdg wit="#V">postea</rdg>
-              </app> 
-              dicam alias responsiones. Unde 
+              </app>
+              dicam alias responsiones. 
+              Unde
               <app to="#l7-Areunip">
                 <lem>ipse</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              dicit sic: 
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              dicit sic:
               <cit>
-                <quote>quod ante adventum Christi, <name ref="#Jews">Iudaei</name> et praecipue praelati 
-              <app to="#l7-Adoinle">
-                <lem>et doctores in lege</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              per scripturas et 
-              <app to="#l7-Ascetpr">
-                <lem>prophetationes</lem>
-                <rdg wit="#V">prophetes</rdg>
-              </app> 
-              poterant scire adventum salvatoris, saltem satis proprie.</quote>
+                <quote>
+                  quod ante adventum Christi, 
+                  <name ref="#Jews">Iudaei</name> et praecipue
+                  praelati
+                  <app to="#l7-Adoinle">
+                    <lem>et doctores in lege</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                   per scripturas et
+                  <app to="#l7-Ascetpr">
+                    <lem>prophetationes</lem>
+                    <rdg wit="#V">prophetes</rdg>
+                  </app>
+                   poterant scire adventum salvatoris, saltem satis proprie.</quote>
                 <bibl>Guillelmus Altissiodorensis, ??</bibl>
-              </cit> 
-              Et ista 
-              <cb ed="#V" n="15ra"/> 
-              responsio fuit alias declarata in praecedentibus et credo quod illa sit satis probabilis. Et pro intellectu istius solutionis ponit aliquas propositiones.</p>
-            
-            <p xml:id="l7-peqces">Prima est quod quanto <name ref="#Jews">Iudaei</name> ante adventum Christi erant 
+              </cit>
+              Et ista
+              <cb ed="#V" n="15-r"/>
+              <cb ed="#V" n="a"/>
+              responsio fuit alias declarata in praecedentibus et credo quod
+              illa sit satis probabilis. 
+              Et pro intellectu istius solutionis ponit aliquas
+              propositiones.
+            </p>
+            <p xml:id="l7-peqces">
+              Prima est quod quanto <name ref="#Jews">Iudaei</name> ante
+              adventum Christi erant
               <app to="#l7-Achersi">
-                <lem>simpliciores,</lem>
-                <rdg wit="#V">simplices,</rdg>
-              </app> 
-              tanto citius in eis desinit esse assensus fidei huius, 
-              <mentioned>Christus incarnabitur,</mentioned> 
-              quia quanto erant simpliciores tanto minus poterant 
+                <lem>simpliciores</lem>
+                <rdg wit="#V">simplices</rdg>
+              </app>,
+              tanto citius in eis desinit esse assensus fidei huius, <mentioned>Christus
+              incarnabitur</mentioned> 
+              quia quanto erant simpliciores tanto minus poterant
               <app to="#l7-Amipodi">
                 <lem>discutere</lem>
                 <rdg wit="#R #SV #S">discurrere</rdg>
-                <note xml:lang="en">We understand "discutere" as "to discuss" or "to examine" which seems to fit the sense best.</note>
-              </app> 
-              et scire 
+                <note xml:lang="en">We understand "discutere" as "to discuss" or "to examine" which
+                  seems to fit the sense best.</note>
+              </app>
+              et scire
               <app to="#l7-Aadchte">
-                <lem>adventus christi 
+                <lem>adventus christi tempus
                   <app to="#l7-Ascadch">
-                    <lem>tempus</lem>
-                    <rdg wit="#SV" type="corrDeletion">
-                      <corr corresp="#l7-Ctechet">
-                        <del rend="expunctuated">christum</del>
-                      </corr>
+                    <lem n="tempus"/>
+                    <rdg wit="#SV" type="correction-deletion">
+                      <del rend="expunctuated">christum</del>
                     </rdg>
                   </app>
                 </lem>
-                <rdg wit="#V">de adventu  christi temporaliter</rdg>
-                <note xml:lang="en">We see the best reading as: "to know the time of the coming of Christ"</note>
+                <rdg wit="#V">de adventu christi temporaliter</rdg>
+                <note xml:lang="en">We see the best reading as: "to know the time of the coming of
+                  Christ"</note>
               </app>
-              et etiam ad pauciora credere tenebantur. Secundo, sequitur quod citius simpliciores obligabantur ad credendum 
+              et etiam ad pauciora credere tenebantur. Secundo, sequitur quod citius simpliciores
+              obligabantur ad credendum
               <app>
-                <lem>hoc disiunctum, 
-                  <mentioned>Christus incarnabitur vel est incarnatus vel incarnatur</mentioned> quam magis docti in Scripturis, quia magis docti non obligabantur ad credendum</lem>
-                <rdg wit="#V" type="om." cause="homoteleuton"/>
-              </app> 
-              illud disiunctum in toto tempore in quo poterant sufficienter 
+                <lem>
+                  hoc disiunctum, 
+                  <mentioned>
+                    Christus incarnabitur vel est incarnatus vel
+                    incarnatur
+                  </mentioned> 
+                  quam magis docti in Scripturis, quia magis docti non
+                  obligabantur ad credendum</lem>
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>
+               illud disiunctum in toto tempore in quo poterant sufficienter
               <app to="#l7-Adietdi">
                 <lem wit="#S">distinguere et discernere</lem>
                 <rdg wit="#R #SV">discurrere et discernere</rdg>
                 <rdg wit="#V">distinguere</rdg>
-                <note xml:lang="en">While the difference seems slight, we chose to avoid the use of "discurrere" in R and SV because we do not it is meaning as clearly coincides with the sense reflect in the other words used, i.e. "discernere," "distinguere," and "discutere" (above).</note>
-              </app> 
-              de adventu Christi ex Scriptura.</p>
-            
+                <note xml:lang="en">While the difference seems slight, we chose to avoid the use of
+                  "discurrere" in R and SV because we do not it is meaning as clearly coincides with
+                  the sense reflect in the other words used, i.e. "discernere," "distinguere," and
+                  "discutere" (above).</note>
+              </app>
+              de adventu Christi ex Scriptura.
+            </p>
             <p xml:id="l7-sppadd">
               <app to="#l1-A">
                 <lem>Secunda</lem>
                 <rdg wit="#R #SV #S">Alia</rdg>
-            </app> 
-              propositio probabilis 
+              </app>
+              propositio probabilis
               <app>
                 <lem>et</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              teneo quod in sola <name ref="#Mary">Virgine Maria</name> fuit iste assensus continuatus <mentioned>Christus incarnabitur</mentioned> 
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              teneo quod in sola 
+              <name ref="#Mary">Virgine Maria</name> fuit iste assensus
+              continuatus 
+              <mentioned>Christus incarnabitur</mentioned>
+              causatus
               <app>
-                <lem>causatus</lem>
-                <rdg wit="#S" type="intextu">causa</rdg>
-              </app> 
-              ex fide usque ad instans 
+                <lem n="causatus"/>
+                <rdg wit="#S" type="variation-present">causa</rdg>
+              </app>
+              ex fide usque ad instans
               <app>
                 <lem>incarnationis; exclusive</lem>
-                <rdg wit="#R" type="corrReplace">
-                  <corr>
+                <rdg wit="#R" type="correction-substitution">
+                  <subst>
                     <del>exclusive incarnationis</del>
                     <add>incarnationis exclusive</add>
-                  </corr>
+                  </subst>
                 </rdg>
-              </app> 
-              quia ipsa ante quodlibet instans incarnationis 
+              </app>
+              quia ipsa ante quodlibet instans incarnationis
               <app>
-                <lem>scivit quod Christus incarnaretur. Immo 
+                <lem>scivit quod Christus incarnaretur. 
+                  Immo dicendum
                   <app>
-                    <lem>dicendum</lem>
-                    <rdg wit="#SV" type="intextu">dicendi</rdg>
-                  </app> 
-                  est quod ipsa sciebat instans incarnationis modo nullus 
+                    <lem n="dicendum"/>
+                    <rdg wit="#SV" type="variation-present">dicendi</rdg>
+                  </app>
+                  est quod ipsa sciebat instans incarnationis modo nullus alius
                   <app>
-                    <lem>alius</lem>
-                    <rdg wit="#V" type="intextu">hoc</rdg>
+                    <lem n="alius"/>
+                    <rdg wit="#V" type="variation-present">hoc</rdg>
                   </app>
                   <app>
                     <lem>poterat</lem>
                     <rdg wit="#R">potuit</rdg>
-                    <note xml:lang="en">We choose the imperfect to match the sense initiated by "sciebat"</note>
-                  </app> 
-                  scire, nisi ex revelatione speciali a Deo data.</lem>
-                <rdg wit="#S" type="om."/>
+                    <note xml:lang="en">We choose the imperfect to match the sense initiated by
+                      "sciebat"</note>
+                  </app>
+                  scire, 
+                  nisi ex revelatione speciali a Deo data.
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-tpqpci">
               <app>
                 <lem>
                   <app>
                     <lem>Tertia</lem>
                     <rdg wit="#R #SV">Alia</rdg>
-                  </app> 
-                  propositio quod 
+                  </app>
+                  propositio quod
                   <app>
                     <lem>in instanti</lem>
                     <rdg wit="#R #SV">instans</rdg>
-                    <note xml:lang="en">The sense seems better reflected in the reading from V</note>
-                  </app> 
-                  incarnationis assensus fidei respectu huius de futuro <mentioned>Christus incarnabitur</mentioned> desiit esse. Primo quia in illo instanti non fuit et ante quodlibet instans ante illud fuit, quia, si in illo fuisset iam, fuisset falsus et sic non fuisset assensus <app>
-                    <lem>fidei; unde in eadem instanti, scilicet, in instanti incarnationis desiit esse assensus fidei respectu huius <mentioned>Christus incarnabitur</mentioned> et incepit esse assensus <cb ed="#R" n="9va"/> huius de praesenti <mentioned>Christus incarnatur,</mentioned> ita quod illud instans incarnationis fuit instans primum non esse</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  illius assensus de futuro <mentioned>Christus incarnabitur</mentioned> et primum esse illius assensus de praesenti <mentioned>Christus incarnatur.</mentioned></lem>
-                <rdg wit="#S" type="om."/>
+                    <note xml:lang="en">The sense seems better reflected in the reading from
+                      V</note>
+                  </app>
+                  incarnationis assensus fidei respectu huius de futuro 
+                  <mentioned>Christus incarnabitur</mentioned> 
+                  desiit esse. 
+                  Primo quia in illo instanti non fuit et
+                  ante quodlibet instans ante illud fuit, 
+                  quia, 
+                  si in illo fuisset iam, fuisset
+                  falsus et sic non fuisset assensus
+                  <app>
+                    <lem>
+                      fidei; unde in eadem instanti, scilicet, in instanti incarnationis desiit
+                      esse assensus fidei respectu huius 
+                      <mentioned>Christus incarnabitur</mentioned> 
+                      et incepit esse assensus
+                      <pb ed="#R" n="9-v"/> 
+                      <cb ed="#R" n="a"/> 
+                      huius de praesenti 
+                      <mentioned>Christus incarnatur</mentioned>, 
+                      ita quod illud instans incarnationis fuit instans
+                      primum non esse
+                    </lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  illius assensus de futuro 
+                  <mentioned>Christus incarnabitur</mentioned> 
+                  et primum esse illius assensus de praesenti 
+                  <mentioned>Christus incarnatur</mentioned>.
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-apevie">
               <app>
-                <lem>Alia propositio 
+                <lem>Alia propositio
                   <app>
                     <lem>est</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  quod assensus ille fidei respectu huius de praesenti <mentioned>Christus incarnatur</mentioned> in <name ref="#Mary">Virgine Gloriosa</name> solum remansit per instans, quia in illo instanti fuit verus et numquam ante vel post 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  quod assensus ille fidei respectu huius de praesenti 
+                  <mentioned>Christus incarnatur</mentioned> 
+                  in <name ref="#Mary">Virgine Gloriosa</name> solum
+                  remansit per instans 
+                  quia in illo instanti fuit verus et numquam ante vel post
                   <app>
                     <lem>fuisset verus, ideo etc.</lem>
                     <rdg wit="V">etc.</rdg>
                   </app>
                 </lem>
-                <rdg wit="#S" type="om."/>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-ehhppi">
               <app>
                 <lem>
                   <app>
                     <lem>Ex hoc habetur</lem>
                     <rdg wit="V">Ex quo sequitur corollariae</rdg>
-                  </app> 
-                  quod possibile est quod aliqua res duret 
+                  </app>
+                  quod possibile est quod aliqua res duret
                   <app>
                     <lem>praecise</lem>
                     <rdg wit="#V">solum</rdg>
-                  </app> 
-                  per instans.</lem>
-                <rdg wit="#S" type="om."/>
+                  </app>
+                  per instans.
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-suqedp">
               <app>
-                <lem>Sequitur ulterius quod est dabile ultimum 
+                <lem>Sequitur ulterius quod est dabile ultimum
                   <app>
                     <lem>instans</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> 
-                  rei permanentis in esse, 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  rei permanentis in esse,
                   <app>
                     <lem>sicut est dabile primum</lem>
-                    <rdg wit="#V" type="om."/>
+                    <rdg wit="#V" type="variation-absent"/>
                   </app>
                 </lem>
-                <rdg wit="#S" type="om."/>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-apipci">
               <app>
-                <lem>Alia propositio in eodem instanti in quo incepit esse assensus fidei respectu 
-                  <cb ed="V" n="15rb"/> 
-                  huius de praesenti <mentioned>Christus incarnatur</mentioned> in eodem instanti incepit esse assensus fidei respectu huius de praeterito <mentioned>Christus incarnabatur.</mentioned></lem>
-                <rdg wit="#R #SV #S" type="om."/>
+                <lem>Alia propositio in eodem instanti in quo incepit esse assensus fidei respectu
+                  <cb ed="V" n="b"/><!--15rb--> 
+                  huius de praesenti 
+                  <mentioned>Christus incarnatur</mentioned> 
+                  in eodem instanti incepit esse assensus fidei respectu
+                  huius de praeterito 
+                  <mentioned>Christus incarnabatur.</mentioned>
+                </lem>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-apeiii">
               <app>
-                <lem>Alia propositio 
+                <lem>Alia propositio
                   <app>
                     <lem>est</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
                   <app>
                     <lem>quod</lem>
-                    <rdg wit="#SV" type="corrAddition">
-                      <corr>
-                        <add>quod</add>
-                      </corr>
-                    </rdg>
-                  </app> 
-                in eodem instanti inceperunt esse duo assensus fidei 
-                  <app>
-                    <lem>in</lem>
-                    <rdg wit="#V" type="corrDeletion">
-                      <corr>
-                        <del>ea</del>
-                      </corr>
+                    <rdg wit="#SV" type="correction-addition">
+                      <add>quod</add>
                     </rdg>
                   </app>
-                   <name ref="#Mary">Virgine Gloriosa</name> et desierunt esse 
+                  in eodem instanti inceperunt esse duo assensus fidei in
                   <app>
-                    <lem>duo</lem>
-                    <rdg wit="#V" type="intextu" cause="repetitio">duo</rdg>
-                  </app> 
-                  assensus fidei in 
+                    <lem n="in"/>
+                    <rdg wit="#V" type="correction-deletion">
+                      <del>ea</del>
+                    </rdg>
+                  </app>
+                  <name ref="#Mary">Virgine Gloriosa</name> et desierunt esse
+                  duo
+                  <app>
+                    <lem n="duo"/>
+                    <rdg wit="#V" type="variation-present" cause="repetitio">duo</rdg>
+                  </app>
+                  assensus fidei in
                   <app to="#l1-A">
-                    <lem>eadem,</lem>
-                    <rdg wit="#V">ea,</rdg>
-                  </app> 
-                  et tamen non fuerunt ibidem, nisi duo assensus fidei, scilicet, 
+                    <lem>eadem</lem>
+                    <rdg wit="#V">ea</rdg>
+                  </app>,
+                  et tamen non fuerunt ibidem, 
+                  nisi duo assensus fidei, 
+                  scilicet,
                   <app>
                     <lem>in instanti</lem>
                     <rdg wit="#R">instans</rdg>
                     <rdg wit="#SV">in instans</rdg>
-                  </app> 
-                  incarnationis quod 
+                  </app>
+                  incarnationis quod
                   <app>
                     <lem>illi</lem>
                     <rdg wit="#V">ibi</rdg>
-                  </app> 
-                  duo assensus 
+                  </app>
+                  duo assensus
                   <app>
                     <lem>desierunt</lem>
                     <rdg wit="#R #SV">inceperunt</rdg>
                     <note xml:lang="en"><!-- probably need a note here explaining sense and therefore choice of V over R SV --></note>
                   </app>
-                   esse. Patet quia assensus ille, qui erat respectu huius futuri <mentioned>Christus incarnabitur,</mentioned> in illo instanti desiit esse, quia in illo 
+                  esse. 
+                  Patet quia assensus ille, 
+                  qui erat respectu huius futuri
+                  <mentioned>Christus incarnabitur</mentioned>, 
+                  in illo instanti desiit esse, quia
+                  in illo
                   <app>
-                    <lem>non fuit et immediate ante illud instans fuit. Assensus etiam de praesenti respectu huius <mentioned>Christus incarnatur</mentioned> in illo instanti desiit esse, quia in illo</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  instanti fuit et in nullo post. Sed quod in eodem instanti inceperunt esse duo assensus, patet supponendo quod in toto tempore post instans incarnationis assensit isti 
-                  <mentioned>Christus incarnabatur,</mentioned> quia supponitur pro nunc, et alias probabitur quod possibile est quod aliqua res quae tota simul producitur sic producatur quod detur ultimum eius non esse et non primum, sicut si Deus immediate post hoc crearet unum angelum, tunc 
+                    <lem>non fuit et immediate ante illud instans fuit. Assensus etiam de praesenti
+                      respectu huius 
+                      <mentioned>Christus incarnatur</mentioned> 
+                      in illo instanti
+                      desiit esse, quia in illo</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  instanti fuit et in nullo post. 
+                  Sed quod in eodem instanti inceperunt esse duo
+                  assensus, patet supponendo quod in toto tempore post instans incarnationis
+                  assensit isti <mentioned>Christus incarnabatur,</mentioned> quia supponitur pro
+                  nunc, et alias probabitur quod possibile est quod aliqua res quae tota simul
+                  producitur sic producatur quod detur ultimum eius non esse et non primum, sicut si
+                  Deus immediate post hoc crearet unum angelum, tunc
                   <app>
                     <lem>patet</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  quod in illo instanti 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  quod in illo instanti
                   <app>
                     <lem>incarnationis</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  incepit esse assensus huius de praeterito <mentioned>Christus incarnabatur,</mentioned> quia in illo non fuit et immediate post illud fuit, ergo in illo incepit esse 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  incepit esse assensus huius de praeterito 
+                  <mentioned>Christus incarnabatur</mentioned> 
+                  quia in illo non fuit et immediate post illud fuit,
+                  ergo in illo incepit esse
                   <app>
                     <lem>assensus etc.</lem>
-                    <rdg wit="#R #SV" type="om."/>
+                    <rdg wit="#R #SV" type="variation-absent"/>
                   </app>
-                  Proportionaliter probatur quod 
+                  Proportionaliter probatur quod
                   <app>
                     <lem>in illo instanti incarnationis</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> incepit esse assensus de praesenti respectu huius <mentioned>Christus incarnatur</mentioned> 
-                  <app>
-                    <lem>quia in illo fuit et in nullo ante fuit, ergo in illo incepit.</lem>
-                    <rdg wit="#V" type="om."/>
+                    <rdg wit="#V" type="variation-absent"/>
                   </app>
-              </lem>
-                <rdg wit="#S" type="om."/>
-              </app>
+                  incepit esse assensus de praesenti respectu huius 
+                  <mentioned>Christus incarnatur</mentioned>
+                  <app>
+                    <lem>quia in illo fuit et in nullo ante fuit, ergo in illo incepit</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>.
             </p>
-            
             <p xml:id="l7-suqivi">
               <app>
                 <lem>
                   <app>
-                  <lem>Sequitur ulterius quod assensus respectu huius verbi de praesenti <mentioned>Christus incarnatur</mentioned> proportionalis et</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                similis quantum ad obiectum, si fuisset in alio quam in <name ref="#Mary">Virgine Gloriosa</name> fuisset non meritorius, quia in illo 
-                <app>
-                  <lem>tempore</lem>
-                  <rdg wit="#R #SV" type="om."/>
-                </app> 
-                fuisset praesumptiose in quocumque tempore sive in tempore incarnationis sive ante sive post, quia semper habebat dubitare, utrum Christus incarnabatur vel non, quia non poterat 
-                <app>
-                  <lem>scire</lem>
-                  <rdg wit="#V">sciri</rdg>
-                </app> 
-                ex Scripturis tempus adaequatum incarnationis Christi. Ideo non debet 
-                <app>
-                  <lem>sic</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                catholice 
-                <app>
-                  <lem>assensit</lem>
-                  <rdg wit="#V">assentire</rdg>
-                </app> 
-                huic <mentioned>Christus incarnatur</mentioned> sed disiunctive sic <mentioned>Christus 
-                  <cb ed="#R" n="9vb"/> 
-                  incarnatur vel est incarnatus vel incarnabitur.</mentioned></lem>
-                <rdg wit="#S" type="om."/>
+                    <lem>
+                      Sequitur ulterius quod assensus respectu huius verbi de praesenti
+                      <mentioned>Christus incarnatur</mentioned> 
+                      proportionalis et
+                    </lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  similis quantum ad obiectum, si fuisset in alio quam in 
+                  <name ref="#Mary">Virgine Gloriosa</name> 
+                  fuisset non meritorius 
+                  quia in illo
+                  <app>
+                    <lem>tempore</lem>
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  fuisset praesumptiose in quocumque tempore 
+                  sive in tempore incarnationis sive
+                  ante sive post, quia semper habebat dubitare, 
+                  utrum Christus incarnabatur vel non
+                  quia non poterat
+                  <app>
+                    <lem>scire</lem>
+                    <rdg wit="#V">sciri</rdg>
+                  </app>
+                  ex Scripturis tempus adaequatum incarnationis Christi. 
+                  Ideo non debet
+                  <app>
+                    <lem>sic</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  catholice
+                  <app>
+                    <lem>assensit</lem>
+                    <rdg wit="#V">assentire</rdg>
+                  </app>
+                  huic 
+                  <mentioned>Christus incarnatur</mentioned> sed disiunctive sic
+                  <mentioned>Christus
+                  <cb ed="#R" n="9vb"/> incarnatur vel est incarnatus vel
+                  incarnabitur.</mentioned>
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
             </p>
-            
             <p xml:id="l7-suqead">
               <app>
-                <lem>Sequitur ulterius quanto fuerunt magis docti <name ref="#Jews">Iudaei</name> ante adventum Christi, 
-              <cb ed="#V" n="15va"/>diutius duravit in eis assensus huius de futuro <mentioned>Christus incarnabitur</mentioned> 
+                <lem>
+                  Sequitur ulterius quanto fuerunt 
+                  magis docti <name ref="#Jews">Iudaei</name>
+                  ante adventum Christi,
+                  <pb ed="#V" n="15-v"/>
+                  <cb ed="#V" n="a"/>
+                  diutius duravit in eis assensus huius de futuro
+                  <mentioned>Christus incarnabitur</mentioned>
                   <app>
-                    <lem>quia, in toto tempore in quo poterant sufficienter ex Scripturis distinguere de adventu Christi, tenebantur huic assentire de futuro <mentioned>Christus incarnabitur</mentioned>
+                    <lem>
+                      quia in toto tempore in quo poterant sufficienter ex Scripturis
+                      distinguere de adventu Christi, tenebantur huic assentire de futuro
+                      <mentioned>Christus incarnabitur</mentioned>
                     </lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  modo quanto 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  modo quanto
                   <app>
                     <lem>plus</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> erant <unclear cert="high">elevantiores,</unclear> tanto plus poterant distinguere de tempore adventus Christi, ergo etc. Et ideo in aliquibus 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  erant <unclear cert="high">elevantiores</unclear>, 
+                  tanto plus poterant distinguere de tempore adventus Christi, 
+                  ergo etc. 
+                  Et ideo in aliquibus
                   <app>
                     <lem>aliquid</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> 
-                  fuisset meritorium 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  fuisset meritorium
                   <app>
                     <lem>credere</lem>
-                    <rdg wit="V" type="om."/>
-                  </app> 
-                  quod <mentioned>Christus incarnabitur</mentioned> et in aliis non. Ex quo sequitur 
+                    <rdg wit="V" type="variation-absent"/>
+                  </app>
+                  quod <mentioned>Christus incarnabitur</mentioned> et in aliis non. 
+                  Ex quo sequitur
                   <app>
                     <lem>quod</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  aliquid incepit esse articulus uni quod non incepit esse articulus alteri, 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  aliquid incepit esse articulus uni 
+                  quod non incepit esse articulus alteri,
                   <app>
-                    <lem>quia hoc complexum <mentioned>Christus incarnabitur,</mentioned></lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
+                    <lem>quia hoc complexum <mentioned>Christus incarnabitur</mentioned></lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>,
                   <app>
                     <lem>tunc</lem>
                     <rdg wit="#V">et sic</rdg>
-                  </app> 
-                  incepit esse articulus simplicibus 
+                  </app>
+                  incepit esse articulus simplicibus
                   <app>
                     <lem>quando</lem>
                     <rdg wit="#V">quod</rdg>
-                  </app> 
-              non incepit esse articulus doctoribus.</lem>
-                <rdg wit="#S" type="om."/>
-              </app>
+                  </app>
+                  non incepit esse articulus doctoribus
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>.
             </p>
-            
             <p xml:id="l7-usqoga">
               <app>
-                <lem>Ulterius sequitur quod ex solo lapsu temporis aliqua propositio desiit esse articulus fidei et 
+                <lem>
+                  Ulterius sequitur quod ex solo lapsu temporis 
+                  aliqua propositio desiit esse
+                  articulus fidei et
                   <app>
                     <lem>aliquo modo</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
                   <app>
                     <lem>aliqua</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> 
-                  incepit esse articulus fidei. Et 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  incepit esse articulus fidei. Et
                   <app>
                     <lem>sic</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  ex 
-                  <app>
-                    <lem>istis,</lem>
-                    <rdg wit="#V">dictis</rdg>
+                    <rdg wit="#V" type="variation-absent"/>
                   </app>
+                  ex
+                  <app>
+                    <lem>istis</lem>
+                    <rdg wit="#V">dictis</rdg>
+                  </app>,
                   <app>
                     <lem>apparet</lem>
                     <rdg wit="#V">patet</rdg>
                   </app>
-                  quomodo respondendum 
+                  quomodo respondendum
                   <app>
                     <lem>esset</lem>
                     <rdg wit="#V">est</rdg>
-                  </app> 
-                  ad 
+                  </app>
+                  ad
                   <app>
                     <lem>argumentum</lem>
                     <rdg wit="#V">rationem</rdg>
-                  </app> 
-              secundum opinionem <name ref="#WilliamOfAuxerre">Guillelmi Altissiodorensis</name>.</lem>
-                <rdg wit="#S" type="om."/>
-              </app>
+                  </app>
+                  secundum opinionem 
+                  <name ref="#WilliamOfAuxerre">Guillelmi Altissiodorensis</name>
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>.
             </p>
           </div>
           <div>
             <head xml:id="l7-Hsrpsrp">Secunda responsio possibilis</head>
-            
             <p xml:id="l7-atppce">
               <app>
-                <lem>Aliter tamen potest responderi imaginando quod fides sit instrumentum Spiritus Sancti et quod sit instrumentum causae liberae agentis in sua potestate omnimoda, quo posito probabiliter potest dici quod, absque quacumque 
+                <lem>
+                  Aliter tamen potest responderi imaginando 
+                  quod fides sit instrumentum Spiritus
+                  Sancti et quod sit instrumentum causae liberae agentis 
+                  in sua potestate omnimoda,
+                  quo posito probabiliter potest dici quod, 
+                  absque quacumque nova
                   <app>
-                    <lem>nova</lem>
-                    <rdg wit="#V" type="intextu">quacumque</rdg>
-                  </app> 
-                  inquisitione, habitus fidei sufficiebat 
+                    <lem n="nova"/>
+                    <rdg wit="#V" type="variation-present">quacumque</rdg>
+                  </app>
+                  inquisitione, 
+                  habitus fidei sufficiebat
                   <app>
-                    <lem>simplicibus.</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  Ita quod, sine 
+                    <lem>simplicibus</lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>.
+                  Ita quod, sine
                   <app>
                     <lem>quacumque</lem>
-                    <rdg wit="3V" type="om."/>
-                  </app> 
-                  nova inquisitione in toto tempore ante adventum Christi, in simplicibus fides inclinabat ad credendum quod <mentioned>Christus 
+                    <rdg wit="3V" type="variation-absent"/>
+                  </app>
+                  nova inquisitione in toto tempore ante adventum Christi, 
+                  in simplicibus fides
+                  inclinabat ad credendum quod 
+                  <mentioned>
+                    Christus
                     <app to="#l1-A">
                       <lem>incarnabitur</lem>
                       <rdg wit="#V">incarnatur</rdg>
                     </app>
-                  </mentioned> 
+                  </mentioned>
                   <app>
-                    <lem>et post instans incarnationis inclinabat ad credendum quod</lem>
+                    <lem>
+                      et post instans incarnationis inclinabat ad credendum quod
+                    </lem>
                     <rdg wit="#R #SV" cause="homoteleuton">in instanti in quo</rdg>
-                    <note xml:lang="en">Seems like a clear and potentially corruption in R and SV. Seems to confuse the way "Christu est incarnatus" is being used here. Seems like R and SV should have read "in instanti in quo Christus est incarnatus inclinabat ad credendum quod Christus est incarnatus." Most likely a homoteleuton but it does not show clear because V is using a slightly different wording to say the same thing.</note>
+                    <note xml:lang="en">Seems like a clear and potentially corruption in R and SV.
+                      Seems to confuse the way "Christu est incarnatus" is being used here. Seems
+                      like R and SV should have read "in instanti in quo Christus est incarnatus
+                      inclinabat ad credendum quod Christus est incarnatus." Most likely a
+                      homoteleuton but it does not show clearly because V is using a slightly
+                      different wording to say the same thing.</note>
                   </app>
-                  <mentioned>Christus est incarnatus,</mentioned> quia, licet simplices nescivissent posuisse istam distinctionem, 
+                  <mentioned>Christus est incarnatus</mentioned>, 
+                  quia, licet simplices nescivissent
+                  posuisse istam distinctionem,
                   <app>
                     <lem>tamen</lem>
                     <rdg wit="#V">et modo</rdg>
-                  </app> 
-                  erat 
+                  </app>
+                  erat
                   <app>
                     <lem>distinctio</lem>
                     <rdg wit="#V">distincta</rdg>
-                  </app> 
-                  quia, sicut tactum est, hoc est multum difficile in simplicibus habere suorum actuum cognitionem. 
+                  </app>
+                  quia, sicut tactum est, hoc est multum difficile in simplicibus habere suorum
+                  actuum cognitionem.
+                  Immo
                   <app>
-                    <lem>Immo</lem>
-                    <rdg wit="#V" type="intextu">et</rdg>
-                  </app> 
-                  in prophetiis, quia aliquando prophetae credebant 
+                    <lem n="Immo"></lem>
+                    <rdg wit="#V" type="variation-present">et</rdg>
+                  </app>
+                  in prophetiis 
+                  quia aliquando prophetae credebant
                   <app>
                     <lem>se habere</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  revelationes a Spiritu Sancto quas formabant ex proprio capite 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  revelationes a Spiritu Sancto quas formabant ex proprio capite
                   <app>
                     <lem>et</lem>
                     <rdg wit="#V">quia</rdg>
-                  </app> 
-                  non poterant ponere differentiam inter revelationes sibi factas a Spiritu Sancto et actus suos quos formabant ex proprio capite, 
+                  </app>
+                  non poterant ponere differentiam inter 
+                  revelationes sibi factas a Spiritu Sancto
+                  et actus suos quos formabant ex proprio capite,
                   <app>
                     <lem>etc.</lem>
                     <rdg wit="#V">ideo etc.</rdg>
                   </app>
                 </lem>
-                <rdg wit="#S" type="om."/>
-              </app>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>.
             </p>
           </div>
           <div>
             <head xml:id="l7-Htrptrp">Tertia responsio possibilis</head>
-            
             <p xml:id="l7-aveiie">
               <app>
-                <lem>Alia via et tertia esset secundum imaginationem prius tactam imaginando quod fideinon possit sub esse falsum. 
+                <lem>
+                  Alia via et tertia esset 
+                  secundum imaginationem prius tactam imaginando quod
+                  fidei non possit sub esse falsum.
                   <app>
-                  <lem>et</lem>
-                  <rdg wit="#V">etc.</rdg>
-                </app> 
-                  ista responsio est bona, et 
+                    <lem>et</lem>
+                    <rdg wit="#V">etc.</rdg>
+                  </app>
+                  ista responsio est bona, 
+                  et
                   <app>
                     <lem>ideo</lem>
-                    <rdg wit="#V" type="om."/>
+                    <rdg wit="#V" type="variation-absent"/>
                   </app>
-                  sto in ea. Imaginandum est igitur quod fides sit talis naturae et 
+                  sto in ea. 
+                  Imaginandum est igitur quod fides sit talis naturae et
                   <app to="#l1-A">
                     <lem>eius</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> 
-                  actus et habitus quod 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  actus et habitus quod
                   <app>
                     <lem>subordinantur</lem>
                     <rdg wit="#V">subordinetur</rdg>
-                  </app> 
-                  essentialiter divino iudicio, ita 
-                  <cb ed="#V" n="15vb"/> 
-                  quod, sicut impossibile esset ignem agere producendo ignem quin in tali actione Deus principaliter concurreret, ita imaginanda est una essentialis habitudo causalitatis respectu iudicii 
+                  </app>
+                  essentialiter divino iudicio, ita
+                  <cb ed="#V" n="15vb"/><!--V15vb --> 
+                  quod, sicut impossibile esset ignem agere producendo ignem
+                  quin in tali actione Deus principaliter concurreret, 
+                  ita imaginanda est una
+                  essentialis habitudo causalitatis respectu iudicii
                   <app>
                     <lem>divini</lem>
-                    <rdg wit="#R" type="corrReplace">
-                      <corr>
+                    <rdg wit="#R" type="correction-substitution">
+                      <subst>
                         <add>divini</add>
                         <del>divinii</del>
-                      </corr>
+                      </subst>
                     </rdg>
-                  </app> 
-                  et ipsius fidei assensus, quod fides 
-                  <cb ed="#R" n="10ra"/> 
-                  nullo modo posset esse assensus respectu alicuius quin Deus respectu eiusdem 
+                  </app>
+                  et ipsius fidei assensus, quod fides
+                  <pb ed="#R" n="10-r"/>
+                  <cb ed="#R" n="a"/>
+                  nullo modo posset esse assensus respectu alicuius quin Deus
+                  respectu eiusdem
                   <app>
                     <lem>sit</lem>
                     <rdg wit="#V">esset</rdg>
-                  </app> 
-                  assensus, ita quod necessario sequitur 
+                  </app>
+                  assensus, 
+                  ita quod necessario sequitur
                   <app>
                     <lem>ad</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  conformitatem divini iudicii. Et ideo sicut Deus ante quodlibet instans incarnationis</lem>
-                <rdg wit="#S" type="om."/>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  conformitatem divini iudicii. 
+                  Et ideo sicut Deus ante quodlibet instans
+                  incarnationis
+                </lem>
+                <rdg wit="#S" type="variation-absent"/>
               </app>
-              <cb ed="#S" n="12vb"/>
-              Christi assentiebat isti <mentioned>Christus incarnabitur,</mentioned> 
+              <cb ed="#S" n="b"/><!--S12vb--> 
+              Christi assentiebat isti 
+              <mentioned>Christus incarnabitur</mentioned>,
               <app>
-                <lem>ita fides pro tunc inclinabat ad assentiendum isti <mentioned>Christus incarnabitur,</mentioned></lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              nec 
+                <lem>
+                  ita fides pro tunc inclinabat ad assentiendum isti <mentioned>Christus
+                  incarnabitur</mentioned>
+                </lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>,
+              nec
               <app>
                 <lem>fides pro tunc</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              poterat exire in actum 
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              poterat exire in actum
               <app>
                 <lem>istius</lem>
                 <rdg wit="#V">huiusmodi</rdg>
-              </app> 
-              <mentioned>Christus est incarnatus vel incarnatur</mentioned> quia 
+              </app>
+              <mentioned>Christus est incarnatus vel incarnatur</mentioned> 
+              quia
               <app>
                 <lem>pro</lem>
-                <rdg wit="#R" type="corrAddition">
-                  <corr>
-                    <add>pro</add>
-                  </corr>
+                <rdg wit="#R" type="correction-addition">
+                  <add>pro</add>
                 </rdg>
-              </app> 
-              tunc Deus non assentiebat illi, ideo etc.</p>
-            
+              </app>
+              tunc Deus non assentiebat illi, 
+              ideo etc.
+            </p>
             <div>
               <head xml:id="l7-Hoatatr">Obiectio ad tertiam responsionem</head>
-              
-              <p xml:id="l7-eqpfee">Ex quo patet quod si aliquis fuisset assensus 
+              <p xml:id="l7-eqpfee">
+                Ex quo patet quod si aliquis fuisset assensus
                 <app>
-                  <lem>huius: <mentioned>Christus incarnatur</mentioned> ante Christi incarnationem, non fuisset assensus fidei, sed assensus</lem>
-                  <rdg wit="#V" type="om." cause="homoteleuton"/>
-                </app> 
-                humanus causatus a proprio capite. Sed tunc 
+                  <lem>huius: <mentioned>Christus incarnatur</mentioned> ante Christi incarnationem,
+                    non fuisset assensus fidei, sed assensus</lem>
+                  <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+                </app>
+                humanus causatus a proprio capite. 
+                Sed tunc diceretur:
                 <app>
-                  <lem>diceretur:</lem>
-                  <rdg wit="#S" type="intextu">quod</rdg>
-                </app> <unclear>continetur <!-- all R SV S and V but the sense was odd for me. At first it seemed like "continuetur" would be better. But perhaps if you read "continetur" as "reserved" it could read: "This assent of faith should be preserved up to and including the moment of the incarnation"--></unclear> iste assensus fidei qui ante incarnationem erat respectu huius de futuro <mentioned>Christus incarnabitur</mentioned> usque ad instans incarnationis inclusive, tunc in illo instanti erit 
+                  <lem n="diceretur"/>
+                  <rdg wit="#S" type="variation-present">quod</rdg>
+                </app>
+                <unclear>continetur
+                  <!-- all R SV S and V but the sense was odd for me. At first it seemed like "continuetur" would be better. But perhaps if you read "continetur" as "reserved" it could read: "This assent of faith should be preserved up to and including the moment of the incarnation"--></unclear>
+                iste assensus fidei qui ante incarnationem erat respectu huius de futuro
+                <mentioned>Christus incarnabitur</mentioned> usque ad instans incarnationis
+                inclusive, tunc in illo instanti erit
                 <app>
-                  <lem>falsus,</lem>
-                  <rdg wit="#R">prius,</rdg>
-                </app> 
-                ergo etc.</p>
+                  <lem>falsus</lem>
+                  <rdg wit="#R">prius</rdg>
+                </app>,
+                ergo etc.
+              </p>
             </div>
             <div>
               <head xml:id="l7-Hraorao">Responsio ad obiectionem</head>
-              <p xml:id="l7-ddqdam">Dicendum 
+              <p xml:id="l7-ddqdam">
+                Dicendum
                 <app>
                   <lem>est</lem>
-                  <rdg wit="#R #SV #S"></rdg>
-                </app> 
+                  <rdg wit="#R #SV #S"/>
+                </app>
                 <app>
                   <lem>dupliciter</lem>
                   <rdg wit="#V">duplico</rdg>
-                </app> 
-                quia vel casus 
+                </app>
+                 quia vel casus
                 <app>
                   <lem>esset</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                   <rdg wit="#S">est</rdg>
-                </app> 
-                impossibilis vel quia idem assensus, qui prius erat assensus respectu huius de futuro <mentioned>Christus incarnabitur</mentioned> ante Christi incarnationem, in instanti incarnationis ille idem erit assensus huius <mentioned>Christus incarnatur</mentioned> in instanti incarnationis. Et 
+                </app>
+                impossibilis vel quia idem assensus, 
+                qui prius erat assensus respectu huius de
+                futuro <mentioned>Christus incarnabitur</mentioned> ante Christi incarnationem, 
+                in instanti incarnationis ille idem erit assensus 
+                huius <mentioned>Christus incarnatur</mentioned> 
+                in instanti incarnationis. 
+                Et
                 <app>
                   <lem>quia</lem>
                   <rdg wit="#V">cum</rdg>
-                </app> 
-                utraque responsio 
+                </app>
+                utraque responsio
                 <app>
                   <lem>videtur esse</lem>
                   <rdg wit="#V">sit</rdg>
-                </app> 
-                sufficiens, 
+                </app>
+                sufficiens,
                 <app>
                   <lem>oportet earum</lem>
                   <rdg wit="#S">esset eorum</rdg>
-                </app> 
-                dare 
-                <app>
-                  <lem>aliqua</lem>
-                  <rdg wit="#SV" type="intextu" cause="repetitio">aliqua</rdg>
                 </app>
-                <cb ed="#SV" n="195va"/>
-                motiva.</p>
-              
-              <p xml:id="l7-depnif">Dico ergo primo quod huiusmodi assensus non potest conservari in esse assensus quia motivitas fidei est una motivitas supernaturalis dirigens hominem in suum finem; similiter concursus ipsius Dei 
+                dare aliqua
+                <app>
+                  <lem n="aliqua"/>
+                  <rdg wit="#SV" type="variation-present" cause="repetitio">aliqua</rdg>
+                </app>
+                <pb ed="#SV" n="195-v"/>
+                <cb ed="#SV" n="a"/>
+                motiva.
+              </p>
+              <p xml:id="l7-depnif">
+                Dico ergo primo quod huiusmodi assensus 
+                non potest conservari in esse assensus 
+                quia motivitas fidei est una 
+                motivitas supernaturalis dirigens hominem in suum finem; 
+                similiter concursus ipsius Dei
                 <app>
                   <lem>secum</lem>
                   <rdg wit="#V">secus</rdg>
-                </app> est specialis, ita quod Spiritus Sanctus specialiter concurrit respectu actus fidei, et non solum 
+                </app>
+                est specialis, 
+                ita quod Spiritus Sanctus specialiter 
+                concurrit respectu actus fidei, 
+                et non solum
                 <app>
                   <lem>per</lem>
                   <rdg wit="#V">secundum</rdg>
-                </app> 
-                influentiam generalem. Et sic, tam 
+                </app>
+                influentiam generalem. 
+                Et sic, 
+                tam
                 <app>
                   <lem>motio</lem>
                   <rdg wit="#S">modo</rdg>
-                </app> 
-                Dei quam fidei est specialis. Modo, tota theologia clamat quod Deus non 
+                </app>
+                Dei quam fidei est specialis. 
+                Modo, tota theologia clamat quod Deus non
                 <app>
                   <lem>potest</lem>
                   <rdg wit="#V">posset</rdg>
-                </app> 
-                speciali modo concurrere ad decipiendum aliquem. 
+                </app>
+                speciali modo concurrere ad decipiendum aliquem.
                 <app>
                   <lem>Ideo</lem>
                   <rdg wit="#V">tunc</rdg>
-                </app> 
-                continuatio illius actus usque ad instans incarnationis repugnat tam ipsi Deo quam naturae ipsius fidei.</p>
-              
-              <p xml:id="l7-unepig">Unde notandum est circa illud, quod Deus aliter concurrit respectu bonorum et malorum, quia respectu malorum solum concurrit permissive, excepta substantia actus 
-                <cb ed="V" n="16rb"/> 
-                ad 
+                </app>
+                continuatio illius actus usque 
+                ad instans incarnationis repugnat 
+                tam ipsi Deo quam
+                naturae ipsius fidei.
+              </p>
+              <p xml:id="l7-unepig">
+                Unde notandum est circa illud, 
+                quod Deus aliter concurrit
+                respectu bonorum et malorum 
+                quia respectu malorum solum concurrit permissive,
+                excepta substantia actus
+                <cb ed="V" n="16rb"/><!--V16rb--> 
+                ad
                 <app>
                   <lem>quem</lem>
                   <rdg wit="#V">quam</rdg>
-                  <note xml:lang="en">The decision is here is a little tough, but we think the "actus" is really the antecedent, where the sense reads something like: "even having removed the substance of the act, to which he effectively concurs necessarily" <!-- little unsure here --></note>
-                </app> 
-                concurrit 
+                  <note xml:lang="en">The decision is here is a little tough, but we think the
+                    "actus" is really the antecedent, where the sense reads something like: "even
+                    having removed the substance of the act, to which he effectively concurs
+                    necessarily" <!-- little unsure here --></note>
+                </app>
+                concurrit
                 <app>
                   <lem>effective</lem>
                   <rdg wit="#V">active</rdg>
-                </app> 
-                necessario quia nullus effectus potest produci nisi ipse principaliter concurrat ad talis effectus productionem; sed respectu bonorum concurrit effective et speciali modo et non solum 
+                </app>
+                necessario quia nullus effectus potest produci 
+                nisi ipse principaliter concurrat ad
+                talis effectus productionem; 
+                sed respectu bonorum concurrit effective et speciali
+                modo et non solum
                 <app>
                   <lem>per</lem>
                   <rdg wit="#S">secundum</rdg>
-                </app> 
-                influentiam generalem.</p>
-              
+                </app>
+                influentiam generalem.
+              </p>
               <div>
                 <head xml:id="l7-Hoarrer">Obiectio ad responsionem et responsio</head>
-                
-                <p xml:id="l7-esdadc">Et 
+                <p xml:id="l7-esdadc">
+                  Et
                   <app>
                     <lem>si</lem>
                     <rdg wit="#V">sic</rdg>
-                  </app> 
-                  dicatur quod Deus potest illam substantiam conservare, respondeo iterem dupliciter. Primo quod Deus secundum influentiam conservativam fidei quae sufficiebat 
+                  </app>
+                  dicatur quod Deus potest illam substantiam conservare, 
+                  respondeo iterem dupliciter. 
+                  Primo quod Deus secundum influentiam conservativam fidei quae
+                  sufficiebat
                   <app>
                     <lem>ante</lem>
                     <rdg wit="#V">ad</rdg>
-                  </app> 
-                  incarnationem non sufficit conservare huiusmodi assensum sive in aere sive 
-                  <cb ed="#R" n="10rb"/> 
-                  in quocumque alio loco. Sed si Deus conservaret illum assensum, sicut 
+                  </app>
+                  incarnationem non sufficit conservare huiusmodi assensum sive in aere sive
+                  <cb ed="#R" n="10rb"/><!--R10rb--> 
+                  in quocumque alio loco. Sed si Deus conservaret illum
+                  assensum, sicut
                   <app>
                     <lem>concedam</lem>
                     <rdg wit="#V">concedit</rdg>
-                  </app> 
-                  quod potest 
+                  </app>
+                  quod potest
                   <app>
                     <lem>conservare</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
-                  de potentia sua absoluta, oporteret quod esset per unam aliam specialem influentiam, et causa est nam ita reperitur in naturalibus, 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
+                  de potentia sua absoluta, 
+                  oporteret quod esset per unam aliam specialem influentiam, 
+                  et causa est nam ita reperitur in naturalibus,
                   <app>
                     <lem>nam</lem>
                     <rdg wit="#V">quod</rdg>
-                  </app> 
-                  inter omnia natura maxime abhorret 
+                  </app>
+                  inter omnia natura maxime abhorret
                   <app>
                     <lem>otiositatem</lem>
                     <rdg wit="#V">otium</rdg>
-                  </app> 
-                  sive non posse exire in 
+                  </app>
+                  sive non posse exire in actum
                   <app>
-                    <lem>actum</lem>
-                    <rdg wit="#V" type="intextu">suum fidei</rdg>
-                    <note xml:lang="en">Though I'm tempted to see V as the more explicit reading, it may actually be the case that a larger point is being made about "acts" in general. Not just "acts of faith".</note>
-                  </app> 
+                    <lem n="actum"/>
+                    <rdg wit="#V" type="variation-present">suum fidei</rdg>
+                    <note xml:lang="en">Though I'm tempted to see V as the more explicit reading, it
+                      may actually be the case that a larger point is being made about "acts" in
+                      general. Not just "acts of faith".</note>
+                  </app>
                   <app>
                     <lem>sibi</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  debitum. Ista est causa proprie 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  debitum. 
+                  Ista est causa proprie
                   <app>
                     <lem>quare</lem>
                     <rdg wit="#V">propter quam</rdg>
-                  </app> 
-                  forma substantialis desinit esse in materia, quia quando qualitativae dispositiones sunt ita improportionatae quod non potest 
+                  </app>
+                  forma substantialis desinit esse in materia 
+                  quia quando qualitativae
+                  dispositiones sunt ita improportionatae quod non potest
                   <app>
                     <lem>anima</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> mediantibus illis exire in 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
+                  mediantibus illis exire in
                   <app>
-                    <lem>aliquam operationem sibi debitam,</lem>
-                    <rdg wit="#V">operationes sibi debitas,</rdg>
-                  </app> 
-                  ne sit otium 
+                    <lem>aliquam operationem sibi debitam</lem>
+                    <rdg wit="#V">operationes sibi debitas</rdg>
+                  </app>,
+                  ne sit otium
                   <app>
                     <lem>in</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  natura desinit informare materiam. Modo, si huiusmodi assensus 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  natura desinit informare materiam. 
+                  Modo, si huiusmodi assensus
                   <app>
                     <lem>remaneret</lem>
                     <rdg wit="#V">remanet</rdg>
-                  </app> 
-                  in 
+                  </app>
+                  in
                   <app>
                     <lem>natura</lem>
                     <rdg wit="#S">materia</rdg>
-                  </app> 
-                  et non in esse assensus esset otiosus et sic a natura corrumperetur nisi per specialem influentiam a Deo conservaretur.</p>
-                
-                <p xml:id="l7-apdafe">Aliter potest dici quod sicut idem assensus, qui est respectu huius 'iudicium futurum erit', potest esse non assensus huius, 
+                  </app>
+                  et non in esse assensus esset otiosus 
+                  et sic a natura corrumperetur nisi per
+                  specialem influentiam a Deo conservaretur.
+                </p>
+                <p xml:id="l7-apdafe">
+                  Aliter potest dici quod sicut idem assensus, 
+                  qui est respectu
+                  huius 'iudicium futurum erit', 
+                  potest esse non assensus huius,
+                  sed
                   <app>
-                    <lem>sed</lem>
-                    <rdg wit="#V" type="intextu" cause="repetitio">sed</rdg>
-                  </app> 
-                  oppositi, sicut dictum est prius in alio casu, 
+                    <lem n="sed"/>
+                    <rdg wit="#V" type="variation-present" cause="repetitio">sed</rdg>
+                  </app>
+                  oppositi, sicut dictum est prius in alio casu,
                   <app>
                     <lem>ita</lem>
                     <rdg wit="#V">ideo</rdg>
-                  </app> 
+                  </app>
                   diceretur quod assensus ille qui prius erat assensus respectu huius futuri 
-                  <mentioned>Christus incarnabitur</mentioned> in instanti incarnationis esset assensus respectu huius <mentioned>Christus incarnatur.</mentioned> Unde quia talis assensus fidei est supernaturalis, si sit mirabilis conditionis, non est mirandum si ei attribuamus aliqua quae non reperimus in natura, 
+                  <mentioned>Christus incarnabitur</mentioned> 
+                  in instanti incarnationis esset
+                  assensus respectu huius 
+                  <mentioned>Christus incarnatur</mentioned>. 
+                  Unde quia
+                  talis assensus fidei est supernaturalis, si sit mirabilis conditionis, non est
+                  mirandum si ei attribuamus aliqua quae non reperimus in natura,
                   <app>
                     <lem>et istud</lem>
                     <rdg wit="#V">ideo</rdg>
-                  </app> 
-                  non est inconveniens eodem modo diceretur de omnibus revelationibus a Spiritu Sancto 
-                  <cb ed="#V" n="16rb"/> 
-                  et de 
-                  <cb ed="#SV" n="195vb"/> 
-                  omnibus Prophetiis et 
+                  </app>
+                  non est inconveniens eodem modo diceretur 
+                  de omnibus revelationibus a Spiritu Sancto
+                  <cb ed="#V" n="b"/> <!-- V16rb--> 
+                  et de
+                  <cb ed="#SV" n="b"/><!-- SV195vb--> 
+                  omnibus Prophetiis et
                   <app>
                     <lem>de</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
                     <note xml:lang="en">V is followed as part of the more explicit reading</note>
-                  </app> 
-                  cognitionibus in Verbo. Et haec sufficiant pro solutione istius argumenti de continuatione actus fidei etc.</p>
+                  </app>
+                  cognitionibus in Verbo. Et haec sufficiant pro solutione istius argumenti de
+                  continuatione actus fidei etc.
+                </p>
               </div>
             </div>
             <div>
               <head>Alia responsio ad obiectionem</head>
-              <p xml:id="l7-aunfci">Arguebatur ulterius nam ponamus quod Abraham crediderit quod <mentioned>Christus incarnabitur</mentioned> sicut ipsemet testatur etc. <name ref="#WilliamOfAuxerre">
+              <p xml:id="l7-aunfci">
+                Arguebatur ulterius nam ponamus quod Abraham crediderit quod
+                <mentioned>Christus incarnabitur</mentioned> 
+                sicut ipsemet testatur etc. 
+                <name
+                ref="#WilliamOfAuxerre">
                 <app>
                   <lem>Guillelmus</lem>
-                  <rdg wit="#R #S #SV" type="om."/>
-                </app> 
+                  <rdg wit="#R #S #SV" type="variation-absent"/>
+                </app>
                 Altissiodorensis</name> 
-                dat unam responsionem, quam tetigi ab 
+                dat unam responsionem, quam tetigi ab
                 <app>
-                  <lem>initio,</lem>
-                  <rdg wit="#V">principio,</rdg>
-                </app> aliqui enim dicunt quod si 
-                  <app>
-                    <lem><name ref="#Abraham">Abraham</name></lem>
-                    <rdg wit="#V">Adam</rdg>
-                  </app> 
-                assensit, 
+                  <lem>initio</lem>
+                  <rdg wit="#V">principio</rdg>
+                </app>,
+                aliqui enim dicunt quod si
+                <app>
+                  <lem><name ref="#Abraham">Abraham</name></lem>
+                  <rdg wit="#V">Adam</rdg>
+                </app>
+                assensit,
                 <app>
                   <lem>necessarium</lem>
                   <rdg wit="#V">quod necessem</rdg>
-                </app> 
-                est ipsum assensisse, tamen concursus fidei respectu 
+                </app>
+                est ipsum assensisse, tamen concursus fidei respectu
                 <app>
                   <lem>huius</lem>
                   <rdg wit="#V">huiusmodi</rdg>
-                </app> assensus semper est contingens, ita quod si non eveniat numquam 
+                </app>
+                assensus semper est contingens, ita quod si non eveniat numquam
                 <app>
                   <lem>fides</lem>
-                  <rdg wit="3V" type="om."/>
-                </app> 
-                concurrit ad huiusmodi assensus productionem. Sed huiusmodi responsio non est sufficiens ut videtur, quia, sicut res posita fuit 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                concurrit ad huiusmodi assensus productionem. 
+                Sed huiusmodi responsio non est
+                sufficiens ut videtur 
+                quia, sicut res posita fuit
                 <app>
                   <lem>inesse</lem>
                   <rdg wit="#V">esse</rdg>
-                </app> 
-                sic fides concurrit ad eius positionem in esse. Ideo respondet aliter et dicit quod habitus fidei habet necessariam habitudinem a sua causa, 
+                </app>
+                sic fides concurrit ad eius positionem in esse. 
+                Ideo respondet aliter et dicit quod
+                habitus fidei habet necessariam habitudinem a sua causa,
+                ideo
                 <app>
-                  <lem>ideo</lem>
-                  <rdg wit="#V" type="intextu">sio</rdg>
-                </app> 
-                actus fidei quoad suum esse necesse 
+                  <lem n="ideo"></lem>
+                  <rdg wit="#V" type="variation-present">sio</rdg>
+                </app>
+                actus fidei quoad suum esse necesse
                 <app>
                   <lem>est</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                sic fuisse, si Abraham crediderit mediante actu fidei <mentioned>Christum incarnandum.</mentioned>
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                sic fuisse, 
+                si Abraham crediderit mediante actu fidei 
+                <mentioned>Christum incarnandum</mentioned>.
               </p>
-              <p xml:id="l7-qtacsd">Quantum tamen ad illud quod significat: non 
+              <p xml:id="l7-qtacsd">
+                Quantum tamen ad illud quod significat: non
                 <app>
-                  <lem>habet necessariam istam habitudinem sic esse sicut significat, nec dependent ab obiecto, sicut satis dictum est, et sic 
-                <app>
-                  <lem>si Christus</lem>
-                  <rdg wit="#R" type="intextu" cause="repetitio">si Christus</rdg>
-                </app> 
-                <cb ed="#R" n="10va"/> 
-                non incarnetur, assensus ille numquam potuit fore assensus huius <mentioned>Christus incarnabitur,</mentioned> sed erit assensus sui oppositi; et causa est iam dicta, quia non</lem>
-                  <rdg wit="#V" type="om." cause="homoteleuton"/>
-                </app> 
-                dependet ab obiecto in sic significando 
+                  <lem>habet necessariam istam habitudinem sic esse sicut significat, nec dependent
+                    ab obiecto, sicut satis dictum est, et sic
+                    si Christus
+                    <app>
+                      <lem n="Christus"/>
+                      <rdg wit="#R" type="variation-present" cause="repetitio">si Christus</rdg>
+                    </app>
+                    <pb ed="#R" n="10-v"/>
+                    <cb ed="#R" n="a"/>
+                    non incarnetur, 
+                    assensus ille numquam potuit fore assensus huius 
+                    <mentioned>
+                      Christus incarnabitur
+                    </mentioned>, 
+                    sed erit assensus sui oppositi; 
+                    et causa est iam dicta, quia non
+                  </lem>
+                  <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+                </app>
+                dependet ab obiecto in sic significando
                 <app>
                   <lem>et</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                subdit fides tam quoad actum quam quoad habitum, quia emanat a luce prima, ideo sequitur primam 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                subdit fides tam quoad actum quam quoad habitum 
+                quia emanat a luce prima, 
+                ideo sequitur primam lucem,
                 <app>
-                  <lem>lucem,</lem>
-                  <rdg wit="#S" type="intextu">et</rdg>
-                </app> 
-                quia 
+                  <lem n="lucem"/>
+                  <rdg wit="#S" type="variation-present">et</rdg>
+                </app>
+                quia
                 <app>
                   <lem>prima</lem>
                   <rdg wit="#V">illa</rdg>
-                </app> 
-                lux potest numquam fuisse assensus illius <mentioned>Christus incarnabitur,</mentioned> si non incarnetur; ita erit de fide, et sic patet quid de illo casu sit dicendum.
+                </app>
+                lux potest numquam fuisse assensus illius 
+                <mentioned>Christus
+                incarnabitur,</mentioned> si non incarnetur; 
+                ita erit de fide, et sic patet quid
+                de illo casu sit dicendum.
               </p>
             </div>
             <div>
-              <head xml:id="l7-Hsoainc"><supplied>Secunda obiectio ad tertiam responsionem: utrum aliqui damnabitur qui, ante incarnationem, non credidit?</supplied></head>
-              
-              <p xml:id="l7-aceeud">Alius casus 
+              <head xml:id="l7-Hsoainc"><supplied>Secunda obiectio ad tertiam responsionem: utrum
+                  aliqui damnabitur qui, ante incarnationem, non credidit?</supplied></head>
+              <p xml:id="l7-aceeud">
+                Alius casus
                 <app>
                   <lem>est:</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
                 <app>
                   <lem>ponatur</lem>
                   <rdg wit="#V">ponebatur</rdg>
-                </app> 
+                </app>
                 <app>
                   <lem>quod,</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                tempore illo quo <name ref="#Abraham">Abraham</name> credidit <mentioned>Christum incarnandum esse</mentioned> ex <app>
-                  <lem>fide,</lem>
-                  <rdg wit="#R #SV #S" type="om."/>
-                  <note xml:lang="en">The sense seems better supported with the absence of "quod"</note>
-                </app> fuisset unus alius, qui 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                tempore illo quo <name ref="#Abraham">Abraham</name> 
+                credidit 
+                <mentioned>Christum incarnandum esse</mentioned> ex
+                <app>
+                  <lem>fide</lem>
+                  <rdg wit="#R #SV #S" type="variation-absent"/>
+                  <note xml:lang="en">The sense seems better supported with the absence of
+                    "quod"</note>
+                </app>,
+                fuisset unus alius, 
+                qui
                 <app>
                   <lem>crediderit</lem>
                   <rdg wit="#V">credidisset</rdg>
-                </app> 
-                oppositum et decesserit cum <name ref="#Abraham">Abraham</name> et 
+                </app>
+                oppositum et decesserit cum <name ref="#Abraham">Abraham</name> et
                 <app>
                   <lem>quod</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                in nullo alio defecisset, utrum ille, qui assentiebat oppositum fidei damnabitur. 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                in nullo alio defecisset, utrum ille, 
+                qui assentiebat oppositum fidei damnabitur.
                 <app>
                   <lem>Et</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
                 <app>
                   <lem>ponatur</lem>
                   <rdg wit="#V">ponitur</rdg>
-                </app> 
-                ulterius, sicut positum est prius, quod Christus non incarnetur, quia aliter poterat 
+                </app>
+                ulterius, sicut positum est prius, 
+                quod Christus non incarnetur, quia aliter
+                poterat
                 <app>
                   <lem>Deus</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-                redimere genus humanum, quia illud 
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                redimere genus humanum, quia illud
                 <app>
                   <lem>ante incarnationem erat</lem>
                   <rdg wit="#V">est</rdg>
-                </app> 
-                contingens. Quaeritur 
+                </app>
+                contingens. 
+                Quaeritur
                 <app>
                   <lem>ergo</lem>
                   <rdg wit="#V">tunc</rdg>
-                </app> 
-                utrum 
+                </app>
+                utrum damnabitur.
                 <app>
-                  <lem>damnabitur.</lem>
-                  <rdg wit="#SV" type="corrDeletion">
-                    <corr>
-                      <del>licet crediderit veritati nihilominus dampnabitur</del>
-                    </corr>
+                  <lem n="damnabitur"/>
+                  <rdg wit="#SV" type="correction-deletion">
+                    <del>licet crediderit veritati nihilominus dampnabitur</del>
                   </rdg>
-                </app></p>
-              
-              <p xml:id="l7-vqncee">Videtur quod non, quia credidit veritati et in nullo alio defecit 
-                <cb ed="#V" n="16va"/> 
+                </app>
+              </p>
+              <p xml:id="l7-vqncee">Videtur quod non, quia credidit veritati et in nullo alio
+                defecit
+                <pb ed="#V" n="16-v"/>
+                <cb ed="#V" n="a"/>
                 per casum ergo etc.</p>
-              
               <div>
                 <head xml:id="l7-Hrasaso">Responsio ad secundam obiectionem</head>
-                
-                <p xml:id="l7-epresi">Ego 
+                <p xml:id="l7-epresi">
+                  Ego
                   <app>
                     <lem>primo</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
                   recitabo verba 
-                  <name ref="#WilliamOfAuxerre">
-                    <app>
-                      <lem>Guillelmi</lem>
-                      <rdg wit="#R #SV #S" type="om."/>
-                    </app> 
-                    Altissiodorensis</name> 
-                  et postea dicam illud quod mihi 
+                  <cit>
+                    <ref>
+                      <name ref="#WilliamOfAuxerre">
+                        <app>
+                          <lem>Guillelmi</lem>
+                          <rdg wit="#R #SV #S" type="variation-absent"/>
+                        </app>
+                         Altissiodorensis
+                      </name>
+                    </ref>
+                    <bibl>XXX<!-- quote might be below --></bibl>
+                  </cit>
+                  et postea dicam illud quod mihi
                   <app>
                     <lem>occurret.</lem>
                     <rdg wit="#V">occurrit.</rdg>
-                  </app> 
-                  Ipse enim respondet quod in isto casu iste, qui 
+                  </app>
+                  Ipse enim respondet quod in isto casu iste, 
+                  qui
                   <app>
                     <lem>credidit</lem>
                     <rdg wit="#V">credit</rdg>
-                  </app> 
-                  quod <mentioned>Christus non incarnabitur,</mentioned> licet crediderit veritati, nihilominus damnabitur. Imaginatio fundatur in hoc iudicio meo, quia 
+                  </app>
+                  quod 
+                  <mentioned>Christus non incarnabitur</mentioned>, 
+                  licet crediderit veritati,
+                  nihilominus damnabitur. 
+                  Imaginatio fundatur in hoc iudicio meo 
+                  quia
                   <app>
                     <lem>in</lem>
-                    <rdg>deo</rdg>
-                  </app> 
-                  his quae non sunt clare determinata per Ecclesiam aliquid sit simpliciter asserere, dato quod esset verum, est peccatum praesumptionis. Unde inducit ad hoc 
+                    <rdg wit="#V">deo</rdg><!--dbcheck -->
+                  </app>
+                  his quae non sunt clare determinata per Ecclesiam aliquid sit simpliciter
+                  asserere, dato quod esset verum, est peccatum praesumptionis. 
+                  Unde inducit ad hoc
                   <ref corresp="#l7-Qshoeni">
                     <app>
                       <lem>
                         <name ref="#Paul">Apostolum</name>
                       </lem>
-                      <rdg wit="#SV" type="corrReplace">
-                        <corr>
+                      <rdg wit="#SV" type="correction-substitution">
+                        <subst>
                           <del>app</del>
                           <add>Apostolum</add>
-                        </corr>
+                        </subst>
                       </rdg>
-                    </app> 
+                    </app>
                     <app>
                       <lem><supplied>I</supplied></lem>
                       <rdg wit="#R #SV #S #V">II</rdg>
-                    </app> 
-                    <title ref="#Icor">Ad Corinthios</title> 
+                    </app>
+                    <title ref="#Icor">Ad Corinthios</title>
                     <app>
                       <lem><supplied>secundo</supplied></lem>
                       <rdg wit="#R #SV #S #V">primo</rdg>
-                    </app> 
-                    capitulo</ref>
-                  <anchor/> et ponit quemdam ordinem et dicit quod 
+                    </app>
+                     capitulo
+                  </ref>
+                  et ponit quemdam ordinem et dicit quod
                   <cit>
-                    <quote xml:id="l7-Qshoeni" source="http://scta.info/resource/Icor2_15">spiritualis homo omnia iudicat, 
+                    <quote xml:id="l7-Qshoeni" source="http://scta.info/resource/Icor2_15">
+                      spiritualis homo omnia iudicat,
                       <app>
                         <lem>carnalis</lem>
                         <rdg wit="#R">corporalis</rdg>
                       </app>
-                       autem iudicatur ab homine 
+                      autem iudicatur ab homine
                       <app>
                         <lem>et neminem iudicat</lem>
-                        <rdg wit="#V" type="om."/>
+                        <rdg wit="#V" type="variation-absent"/>
                       </app>
                     </quote>
                     <bibl>I Ad Corinthios 2:15</bibl>
-                  </cit> 
-                  Unde imaginatur quod homo spiritualis, qui per caritatem 
-                  <cb ed="#SV" n="196ra"/> 
-                  et fidem est elevatus, semper 
+                  </cit>
+                  Unde imaginatur quod homo spiritualis, qui per caritatem
+                  <pb ed="#SV" n="196-r"/>
+                  <cb ed="#SV" n="a"/>
+                  et fidem est elevatus, semper
                   <app>
                     <lem>bene</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  iudicat. 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  iudicat.
+                  Sed carnalis.
                   <app>
-                    <lem>Sed carnalis</lem>
-                    <rdg wit="#SV" type="intextu" cause="repetitio">sed carnalis</rdg>
-                  </app> 
+                    <lem n="carnalis"/>
+                    <rdg wit="#SV" type="variation-present" cause="repetitio">sed carnalis</rdg>
+                  </app>
                   <app>
-                    <lem>homo,</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
-                  quia 
+                    <lem>homo</lem>
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>,
+                  quia
                   <app>
                     <lem>non</lem>
-                    <rdg wit="#R #SV" type="om."/>
-                  </app> <unclear cert="high">innititur</unclear> 
+                    <rdg wit="#R #SV" type="variation-absent"/>
+                  </app>
+                  <unclear cert="high">innititur</unclear>
                   <app>
                     <lem>Deo</lem>
                     <rdg wit="#V">Deum</rdg>
-                  </app> 
+                  </app>
                   <app>
                     <lem>per</lem>
                     <rdg wit="#V">et</rdg>
-                  </app> 
-                  caritatem ipsum elevantem, non semper bene iudicat. 
+                  </app>
+                  caritatem ipsum elevantem, non semper bene iudicat.
+                  Modo,
                   <app>
-                    <lem>Modo,</lem>
-                    <rdg wit="#V" type="intextu">quia</rdg>
-                  </app> 
+                    <lem n="Modo"/>
+                    <rdg wit="#V" type="variation-present">quia</rdg>
+                  </app>
                   <app>
                     <lem>illud</lem>
                     <rdg wit="#R #SV">ad</rdg>
-                  </app> 
-                  iudicium, quo quis credebat oppositum illius quod <name ref="#Abraham">Abraham</name> credidit ex fide, non erat ex fide, 
+                  </app>
+                  iudicium, quo quis credebat oppositum illius 
+                  quod <name ref="#Abraham">Abraham</name> credidit ex fide, 
+                  non erat ex fide,
                   <app>
                     <lem>sed</lem>
-                    <rdg wit="#R #SV #S"></rdg>
+                    <rdg wit="#R #SV #S"/>
                   </app>
-                  fuit praesumptiosum. Ideo propter 
+                  fuit praesumptiosum.
+                  Ideo propter
                   <app>
                     <lem>illam</lem>
                     <rdg wit="#V">illum</rdg>
-                  </app> 
-                  fuit damnatus, nec illud iudicium erat ex fide nec contra fidem, immo erat sibi impertinens.</p>
-                
-                <p xml:id="l7-veqdgb">Verum est quod ego hic notavi aliqua ad declarationem istius materiae. Et breviter, ut casus habeatur clarius, ponatur, respectu futuri iudicii et quod Deus 
+                  </app>
+                  fuit damnatus, 
+                  nec illud iudicium erat ex fide nec contra fidem, 
+                  immo erat sibi
+                  impertinens.
+                </p>
+                <p xml:id="l7-veqdgb">
+                  Verum est quod ego hic notavi 
+                  aliqua ad declarationem istius materiae. 
+                  Et breviter, 
+                  ut casus habeatur clarius, ponatur, 
+                  respectu futuri iudicii
+                  et quod Deus
                   <app>
                     <lem>latenter</lem>
-                    <rdg wit="#V">latanter</rdg> <!-- might just be a form that should be normalized --> 
-                  </app> 
-                  ordinet quod futurum iudicium non erit in isto casu, ipse verum 
+                    <rdg wit="#V">latanter</rdg>
+                    <!-- might just be a form that should be normalized -->
+                  </app>
+                  ordinet quod futurum iudicium non erit in isto casu, ipse verum
                   <app>
                     <lem>credidit</lem>
                     <rdg wit="#V">credit</rdg>
-                  </app> 
-                  et tamen ipse peccat, 
-                  <cb ed="#R" n="10vb"/> 
-                  quia licet futurum iudicium non erit, tamen ex communiter apparentibus quibus <unclear cert="high">catholicus</unclear> iudicaret quod immo iudicium futurum erit. Et 
+                  </app>
+                  et tamen ipse peccat,
+                  <cb ed="#R" n="10vb"/><!--R10vb--> 
+                  quia licet futurum iudicium non erit, 
+                  tamen ex communiter
+                  apparentibus quibus <unclear cert="high">catholicus</unclear> 
+                  iudicaret quod immo
+                  iudicium futurum erit. 
+                  Et
                   <app>
                     <lem>ideo</lem>
                     <rdg wit="#V">sic</rdg>
-                  </app> 
+                  </app>
                   <app>
                     <lem>iste,</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  licet 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  licet
                   <app>
                     <lem>iudicat</lem>
                     <rdg wit="#S #V">iudicet</rdg>
-                  </app> 
-                  veritatem, tamen ipse contemnit Scripturam et fidem. Licet igitur Deus 
+                  </app>
+                  veritatem, tamen ipse contemnit Scripturam et fidem. 
+                  Licet igitur Deus
                   <app>
                     <lem>non</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  revelaverit nobis expresse quod iudicium futurum non erit, 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  revelaverit nobis expresse quod iudicium futurum non erit,
                   <app>
                     <lem>tamen si</lem>
                     <rdg wit="#V">sed</rdg>
-                  </app> 
-                  iste bene se resolvat, iudicabit se credere contra fidem; et est sicut ille, qui facit contra conscientiam et peccat, licet bene agat et agat 
+                  </app>
+                  iste bene se resolvat, iudicabit se credere contra fidem; 
+                  et est sicut ille, qui
+                  facit contra conscientiam et peccat, 
+                  licet bene agat et agat
                   <app>
                     <lem>opus</lem>
                     <rdg wit="#V">opera</rdg>
-                  </app> 
-                  de genere bonum.</p>
-                
-                <p xml:id="l7-idtoac">Item de tam arduis immediate 
+                  </app>
+                  de genere bonum.
+                </p>
+                <p xml:id="l7-idtoac">
+                  Item de tam arduis immediate
                   <app>
                     <lem>ad</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
-                  salutem hominis tangentibus 
-                  <cb ed="#V" n="16vb"/> 
-                  quorum veritas non potest haberi sine revelatione Spiritus Sancti, 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
+                  salutem hominis tangentibus
+                  <cb ed="#V" n="b"/><!--16vb--> 
+                  quorum veritas non potest haberi 
+                  sine revelatione Spiritus Sancti,
                   <app>
                     <lem>sic</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  simpliciter credere 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  simpliciter credere
                   <app>
                     <lem>de eis</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  est peccatum praesumptionis. Ex quibus 
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  est peccatum praesumptionis. 
+                  Ex quibus patet,
                   <app>
-                    <lem>patet,</lem>
-                    <rdg wit="#V" type="intextu">quod</rdg>
-                  </app> 
-                  si in talibus liceat habere aliquod iudicium, magis liceret habere falsum quam 
+                    <lem n="patet"/>
+                    <rdg wit="#V" type="variation-present">quod</rdg>
+                  </app>
+                  si in talibus liceat habere aliquod iudicium, 
+                  magis liceret habere falsum quam
                   <app>
-                    <lem>verum.</lem>
+                    <lem>verum</lem>
                     <rdg wit="#V">bonum</rdg>
-                  </app> 
-                  Unde in casu 
+                  </app>.
+                  Unde in casu
                   <app>
-                    <lem>posito,</lem>
+                    <lem>posito</lem>
                     <rdg wit="#V">praedicto</rdg>
-                  </app> 
-                  ille qui crederet iudicium futurum fore, crederet falsum, non tamen 
+                  </app>,
+                  ille qui crederet iudicium futurum fore, 
+                  crederet falsum, 
+                  non tamen
                   <app>
                     <lem>tantum</lem>
-                    <rdg wit="#SV" type="corrAddition">
-                      <corr>
-                        <add>tantum</add>
-                      </corr>
+                    <rdg wit="#SV" type="correction-addition">
+                      <add>tantum</add>
                     </rdg>
-                  </app> 
-                  peccaret quantum ille qui credendo oppositum crederet veritatem, quia ille qui crederet falsum haberet 
+                  </app>
+                  peccaret quantum ille qui credendo oppositum crederet veritatem, quia ille qui
+                  crederet falsum haberet
                   <app>
                     <lem>coniecturationem</lem>
-                    <rdg wit="#S" type="om."/>
-                    <note xml:lang="en">S leaves a blank here as if the scribe could not figure out the word</note>
-                  </app> 
-                  probabilem ex Sacra Scriptura, quam alter non haberet, ita quod credulitas falsitatis in illo casu non esset multum periculosa, nisi dicatur quod talis obligaretur ad contrarium.</p>
-               
-                <p xml:id="l7-tdqihs">Tertio dicitur quod in illo casu utraque pars contradictionis in materia fidei 
+                    <rdg wit="#S" type="variation-absent"/>
+                    <note xml:lang="en">S leaves a blank here as if the scribe could not figure out
+                      the word</note>
+                  </app>
+                  probabilem ex Sacra Scriptura, quam alter non haberet, 
+                  ita quod credulitas
+                  falsitatis in illo casu non esset multum periculosa, 
+                  nisi dicatur quod talis
+                  obligaretur ad contrarium.
+                </p>
+                <p xml:id="l7-tdqihs">
+                  Tertio dicitur quod in illo casu 
+                  utraque pars contradictionis
+                  in materia fidei
                   <app>
                     <lem>esset</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
                   <app>
                     <lem>illicita</lem>
                     <rdg wit="#SV #S">illuminata</rdg>
-                    <rdg wit="#R" type="corrReplace">
-                      <corr>
+                    <rdg wit="#R" type="correction-substitution">
+                      <subst>
                         <del>illimitata</del>
                         <add>illuminata</add>
-                      </corr>
+                      </subst>
                     </rdg>
-                    <note xml:lang="en">While the correction in R and the repeated use in the next paragraph suggests the scribe has an improve idea about the word, currently the sense seems to fit better with the reading in V</note>
-                  </app> 
-                  iudicio humano simpliciter.</p>
-                
-                <p xml:id="l7-sapaoa">Sequitur alia propositio quod, respectu propositionis credibilis, viator obligaretur habere assensum fidei, et tamen non liceret eidem 
+                    <note xml:lang="en">While the correction in R and the repeated use in the next
+                      paragraph suggests the scribe has an improve idea about the word, currently
+                      the sense seems to fit better with the reading in V</note>
+                  </app>
+                  iudicio humano simpliciter.
+                </p>
+                <p xml:id="l7-sapaoa">
+                  Sequitur alia propositio quod, respectu propositionis
+                  credibilis, viator obligaretur habere assensum fidei, 
+                  et tamen non liceret eidem
                   <app>
-                    <lem>humanitus assentire vel dissentire, quia utraque pars esset 
+                    <lem>
+                      humanitus assentire vel dissentire, quia utraque pars esset
                       <app>
-                        <lem><supplied>illicita</supplied>,</lem>
-                        <rdg wit="#R #SV #S">illuminata,</rdg>
-                      </app> 
-                      ut satis probatum est, quia si assentiret veritati peccaret</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
-                  peccato praesumptionis, et si assentiret falso peccaret 
+                        <lem><supplied>illicita</supplied></lem>
+                        <rdg wit="#R #SV #S">illuminata</rdg>
+                      </app>,
+                      ut satis probatum est 
+                      quia si assentiret veritati peccaret
+                    </lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>
+                  peccato praesumptionis, 
+                  et si assentiret falso peccaret
                   <app>
                     <lem>etiam</lem>
-                    <rdg wit="#S" type="om."/>
-                  </app> 
-                  quia obligaretur ad oppositum assentire.</p>
-                
-                <p xml:id="l7-eqseih">Ex quo sequitur periculosum 
+                    <rdg wit="#S" type="variation-absent"/>
+                  </app>
+                  quia obligaretur ad oppositum assentire.
+                </p>
+                <p xml:id="l7-eqseih">
+                  Ex quo sequitur periculosum
                   <app>
                     <lem>formare</lem>
                     <rdg wit="#V">esse formales</rdg>
-                  </app> 
-                  assensus per rationes probabiles vel apparentias naturales circa huiusmodi articulum, immo esset peccatum ubi obligaretur ad alteram partem contradictionis, quia, si veritati 
+                  </app>
+                  assensus per rationes probabiles 
+                  vel apparentias naturales circa huiusmodi
+                  articulum, immo esset peccatum ubi obligaretur 
+                  ad alteram partem contradictionis
+                  quia, 
+                  si veritati
                   <app>
-                    <lem>assentiebat,</lem>
+                    <lem>assentiebat</lem>
                     <rdg wit="#V">assentiat</rdg>
-                  </app> 
+                  </app>,
                   <app>
-                    <lem>incidit in peccatum praesumptionis, si falsitati assentiebat,</lem>
-                    <rdg wit="#V" type="om."/>
-                  </app> 
+                    <lem>
+                      incidit in peccatum praesumptionis, 
+                      si falsitati assentiebat
+                    </lem>
+                    <rdg wit="#V" type="variation-absent"/>
+                  </app>,
                   <app>
                     <lem>assentiebat</lem>
                     <rdg wit="#V">assentit</rdg>
-                  </app> 
-                  contra fidem. Ideo circa materiam 
+                  </app>
+                  contra fidem. 
+                  Ideo circa materiam fidei
                   <app>
-                    <lem>fidei</lem>
-                    <rdg wit="#V" type="intextu">et</rdg>
-                  </app> 
-                  praecipue de futuris contingentibus, cum magna sollicitudine examinanda est intelligentia humana.</p>
-               
-                <p xml:id="l7-suqmpc">Sequitur ulterius quod in materia fidei debet esse mirabilis sollicitudo, quia timor Domini debet esse initium sapientiae. Unde notandum est 
+                    <lem n="fidei"/>
+                    <rdg wit="#V" type="variation-present">et</rdg>
+                  </app>
+                  praecipue de futuris contingentibus, 
+                  cum magna sollicitudine examinanda est
+                  intelligentia humana.
+                </p>
+                <p xml:id="l7-suqmpc">
+                  Sequitur ulterius 
+                  quod in materia fidei debet esse mirabilis sollicitudo 
+                  quia timor Domini debet esse initium sapientiae. 
+                  Unde notandum est
                   <app to="#l1-A">
                     <lem>quod</lem>
                     <rdg wit="#V">propter</rdg>
-                  </app> 
-                  positiones casus in materia fidei non diversificant materiam fidei nec aggravant nec minuunt peccatum credentis.</p>
-                
-                <p xml:id="l7-suqnsa">Sequitur ulterius quod bene staret assensus fidei esse respectu alicuius, qualem 
+                  </app>
+                  positiones casus in materia fidei non diversificant 
+                  materiam fidei nec aggravant
+                  nec minuunt peccatum credentis.
+                </p>
+                <p xml:id="l7-suqnsa">
+                  Sequitur ulterius quod bene staret assensus fidei esse
+                  respectu alicuius, 
+                  qualem assensum
                   <app>
-                    <lem>assensum</lem>
-                    <rdg wit="#R" type="intextu" cause="repetitio">assensum</rdg>
-                  </app> 
-                  <cb ed="#R" n="11ra"/> 
-                  non posset 
+                    <lem n="assensum"/>
+                    <rdg wit="#R" type="variation-present" cause="repetitio">assensum</rdg>
+                  </app>
+                  <cb ed="#R" n="11-r"/>
+                  <cb ed="#R" n="a"/>
+                  non posset
                   <app>
                     <lem>homo</lem>
-                    <rdg wit="#R #SV #S" type="om."/>
-                  </app> 
-                  iudicare se habere, ita quod talis assentiret aliqualiter ex fide, qualiter 
+                    <rdg wit="#R #SV #S" type="variation-absent"/>
+                  </app>
+                  iudicare se habere, ita quod talis assentiret aliqualiter ex fide, qualiter
                   <app>
                     <lem>nesciret</lem>
                     <rdg wit="#V">nesciet</rdg>
-                  </app> 
-                  se assentire.</p>
+                  </app>
+                  se assentire.
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <head xml:id="l7-Hraqcaf">Responsio ad quartam rationem secundae instantiae: utrum Abraham credidit aliquid
-            falsum?</head>
-          
-          <p xml:id="l7-arfdmf">Alia ratio fuit de <name ref="#Abraham">Abraham</name>, qui ex fide credidit filium suum 
-            <cb ed="#V" n="17ra"/> 
-            immolandum 
+          <head xml:id="l7-Hraqcaf">Responsio ad quartam rationem secundae instantiae: utrum Abraham
+            credidit aliquid falsum?</head>
+          <p xml:id="l7-arfdmf">
+            Alia ratio fuit de <name ref="#Abraham">Abraham</name>, 
+            qui ex fide credidit filium suum
+            <pb ed="#V" n="17-r"/>
+            <cb ed="#V" n="a"/>
+            immolandum
             <app>
-              <lem>esse,</lem>
-              <rdg wit="V" type="om."/>
-            </app> 
-            et tamen non immolavit, ergo credidit falsum ex fide. Respondetur 
+              <lem>esse</lem>
+              <rdg wit="V" type="variation-absent"/>
+            </app>,
+            et tamen non immolavit, ergo credidit falsum ex fide. 
+            Respondetur
             <app>
               <lem>breviter</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            quod <name ref="#Abraham">Abraham</name> habuit praeceptum quod vellet filium 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quod <name ref="#Abraham">Abraham</name> 
+            habuit praeceptum quod vellet filium
             <app>
               <lem>immolare ita quod deus petebat ab eo quod vellet filium suum</lem>
               <rdg wit="#R #V" cause="homoeteleuton"/>
-              <note xml:lang="en">It's rather unusual for R V to agree in this variant against the presence in SV and S</note>
-            </app> 
-            immolare ad videndum obedientiam 
+              <note xml:lang="en">It's rather unusual for R V to agree in this variant against the
+                presence in SV and S</note>
+            </app>
+            immolare ad videndum obedientiam
             <app>
-              <lem>eius.</lem>
+              <lem>eius</lem>
               <rdg wit="#V">suam.</rdg>
-            </app> 
-            Sed quantum ad credulitatem potuit 
+            </app>
+            Sed quantum ad credulitatem potuit
             <app>
               <lem>habere</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            credulitatem quod semen suum multiplicaretur, sicut sibi fuit dictum et revelatum et ita fuit. Si autem credidit filium suum 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            credulitatem quod semen suum multiplicaretur, 
+            sicut sibi fuit dictum et revelatum et ita fuit. 
+            Si autem credidit filium suum
             <app>
-              <lem>immolari,</lem>
+              <lem>immolari</lem>
               <rdg wit="#R #SV #S">immolare</rdg>
-            </app><anchor/> credidit 
+            </app>,
+            credidit
             <app>
               <lem>hoc</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            ex credulitate humana, quae non erat sibi periculosa, quia non erat de materia fidei.</p>
-          
-          <p xml:id="l7-iphfcf">Item potuit habere credulitatem quod solum Deus petebat obedientiam ut vellet filium suum immolare. Unde sicut 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            ex credulitate humana, quae non erat sibi periculosa, quia non erat de materia
+            fidei.
+          </p>
+          <p xml:id="l7-iphfcf">
+            Item potuit habere credulitatem quod solum Deus petebat obedientiam
+            ut vellet filium suum immolare. 
+            Unde sicut
             <app>
               <lem>notatur</lem>
               <rdg wit="#V">habetur</rdg>
             </app>
             in 
-            <ref>
-              <seg>una 
+            <cit>
+              <ref>
+                una
                 <app>
-                  <lem>decretali,</lem>
-                  <rdg wit="#R" type="corrReplace">
-                    <corr>
+                  <lem>decretali</lem>
+                  <rdg wit="#R" type="correction-substitution">
+                    <subst>
                       <del>dectali</del>
                       <add>decretali</add>
-                    </corr>
+                    </subst>
                   </rdg>
                 </app>
-              </seg>
+              </ref>
               <bibl>Decretalis, ?</bibl>
-            </ref> 
-            aliqua sunt praecepta credenda in forma praecepti, sed non secundum intentionem praecepti, sicut est praeceptum illud, 
+            </cit>, 
+            aliqua sunt praecepta credenda in forma praecepti, 
+            sed non secundum intentionem
+            praecepti, sicut est praeceptum illud,
             <cit>
-              <quote source="http://scta.info/resource/ex20_14">non moechaberis,</quote>
+              <quote source="http://scta.info/resource/ex20_14">non moechaberis</quote>
               <bibl>Exodus 20:14</bibl>
-            </cit> 
+            </cit>,
             <cit>
               <quote source="http://scta.info/resource/ex20_14">non furtum faciens</quote>
               <bibl>Exodus 20:15</bibl>
-            </cit> 
-            etc. Sic fuit in proposito, quod non erat intentio praecepti quod <name ref="#Abraham">Abraham</name> immolaret filium suum, sed solum erat forma praecepti. Alia sunt praecepta 
+            </cit>
+            etc. Sic fuit in proposito, 
+            quod non erat intentio praecepti 
+            quod <name ref="#Abraham">Abraham</name> immolaret filium suum, 
+            sed solum erat forma praecepti. 
+            Alia sunt praecepta quae
             <app>
-              <lem>quae</lem>
-              <rdg wit="#V" type="intextu">sicut</rdg>
-            </app> 
-            sunt 
+              <lem n="quae"/>
+              <rdg wit="#V" type="variation-present">sicut</rdg>
+            </app>
+            sunt
             <app>
               <lem>credenda et</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            secundum intentionem 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            secundum intentionem
             <app>
               <lem>praecepti</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            et 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            et
             <app>
               <lem>secundum</lem>
               <rdg wit="#V">sicut</rdg>
-            </app> 
-            formam praecepti, sicut est istud praeceptum 
+            </app>
+            formam praecepti, 
+            sicut est istud praeceptum
             <cit>
-              <quote source="http://scta.info/resource/20_12">honora patrem et matrem</quote>
+              <quote source="http://scta.info/resource/20_12">
+                honora patrem et matrem
+              </quote>
               <bibl>Exodus 20:12</bibl>
-            </cit> 
-            etc. Et sic in dicto casu, credere filium suum immolare, non fuit <name ref="#Abraham">Abrahae</name> meritorium, quia non 
+            </cit>
+            etc. 
+            Et sic in dicto casu, credere filium suum immolare, 
+            non fuit <name ref="#Abraham">Abrahae</name> meritorium 
+            quia non
             <app>
               <lem>fuit</lem>
               <rdg wit="#R">fit</rdg>
-            </app> 
-            ex fide, immo ex proprio capite, nec fuit peccatum, quia non fuit contra fidem.</p>
-          
-          <p xml:id="l7-duqsfm">Dicitur ulterius quod si ex caritate determinavisset se ad credendum quod <mentioned>filius suus immolaretur,</mentioned> 
+            </app>
+            ex fide, immo ex proprio capite, nec fuit peccatum 
+            quia non fuit contra fidem.
+          </p>
+          <p xml:id="l7-duqsfm">
+            Dicitur ulterius 
+            quod si ex caritate determinavisset se ad credendum
+            quod 
+            <mentioned>filius suus immolaretur</mentioned>,
             <app>
               <lem>illam determinationem</lem>
               <rdg wit="#V">illa determinatio</rdg>
-            </app> 
-            non 
+            </app>
+            non
             <app>
               <lem>fecisset</lem>
               <rdg wit="#R #SV #S">fecit</rdg>
-            </app> 
+            </app>
             <app>
-              <lem>ex fide,</lem>
-              <rdg wit="#V" type="om"/>
-            </app> 
+              <lem>ex fide</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>,
             <app>
               <lem>nec</lem>
               <rdg wit="#V">quod</rdg>
-            </app> 
-            illa credulitas fuisset fides, 
+            </app>
+            illa credulitas fuisset fides,
             <app>
               <lem>licet bene</lem>
               <rdg wit="#V">sed quod</rdg>
-            </app> 
-            actus suus fuisset meritorius.</p>
-          
-          <p xml:id="l7-esdntf">Et si dicatur quod 
+            </app>
+            actus suus fuisset meritorius.
+          </p>
+          <p xml:id="l7-esdntf">
+            Et si dicatur quod
             <app>
               <lem>talis actus</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            procedebat ex caritate et per 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            procedebat ex caritate et per
             <app>
               <lem>et per consequens</lem>
               <rdg wit="#V">ergo</rdg>
             </app>
-            ex fide, respondendum est quod caritas in regno animae tenet 
+            ex fide, respondendum est 
+            quod caritas in regno animae tenet principatum
             <app>
-              <lem>principatum</lem>
-              <rdg wit="#SV" type="corrDeletion">
-                <corr>
-                  <del>in</del>
-                </corr>
+              <lem n="principatum"/>
+              <rdg wit="#SV" type="correction-deletion">
+                <del>in</del>
               </rdg>
-            </app> 
-            in respectu aliarum 
-            <cb ed="#V" n="17rb"/> 
-            virtutum, ita quod concurrit ad omnem effectum 
+            </app>
+            in respectu aliarum
+            <cb ed="#V" n="b"/><!--V17rb--> 
+            virtutum, ita quod concurrit ad omnem effectum
             <app>
               <lem>aliarum</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            virtutum, sed fides non 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            virtutum, sed fides non
             <app>
               <lem>immo</lem>
               <rdg wit="#V">quia ipsa</rdg>
-            </app> 
-            est limitata respectu credibilium necessariorum ad salutem, et ideo bene 
+            </app>
+            est limitata respectu credibilium necessariorum ad salutem, 
+            et ideo bene
             <app>
               <lem>consideretur</lem>
               <rdg wit="#V">concederet</rdg>
-            </app> 
-            quod caritas concurret ad huiusmodi assensum, 
+            </app>
+            quod caritas concurret ad huiusmodi assensum,
             <app>
               <lem>non tamen</lem>
               <rdg wit="#V">et non</rdg>
-            </app> 
-            fides.</p>
-          
-          <p xml:id="l7-veqins">Verum est quod ibi 
+            </app>
+            fides.
+          </p>
+          <p xml:id="l7-veqins">
+            Verum est quod ibi
             <app>
               <lem>notatur</lem>
               <rdg wit="#S">negatur</rdg>
-            </app> unum aliud quod bene requireret magnam investigationem, scilicet, quod aliquis actus 
+            </app>
+            unum aliud quod bene requireret magnam investigationem, 
+            scilicet, quod aliquis actus
             <app>
               <lem>est</lem>
               <rdg wit="#V">esset</rdg>
-            </app> 
-            meritorius, qui non esset proprie actus caritatis, sicut 
+            </app>
+            meritorius, qui non esset proprie actus caritatis, 
+            sicut
             <app>
               <lem>si</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            aliquis bonus homo ex caritate velit alteri bona temporalia, ista volitio est meritoria; et tamen non est proprie motus caritatis, quia motus 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            aliquis bonus homo ex caritate velit alteri bona temporalia, 
+            ista volitio est meritoria;
+            et tamen non est proprie motus caritatis, 
+            quia motus
             <app>
               <lem>caritatis</lem>
               <rdg wit="#V">illae</rdg>
-            </app> 
-            semper habet rem spiritualem pro obiecto. 
+            </app>
+            semper habet rem spiritualem pro obiecto.
             <app>
-              <lem>Vel aliter dicitur quod <name ref="#Abraham">Abraham</name> meruit obediendo, et si crediderit categorice 
-            <cb ed="#R" n="11rb"/> 
-            vel conditionaliter adhuc tamen verisimilem est quod crederet sub disiunctione, scilicet, si Deus vellet eum 
+              <lem>
+                Vel aliter dicitur quod <name ref="#Abraham">Abraham</name> 
+                meruit obediendo, 
+                et si crediderit categorice
+                <cb ed="#R" n="b"/> <!--R11rb-->
+                vel conditionaliter adhuc tamen verisimilem est quod crederet
+                sub disiunctione, scilicet, si Deus vellet eum
                 <app>
                   <lem>obligari</lem>
                   <rdg wit="#S">obligaret</rdg>
-                </app> 
-                ad sic credendum, sed constat 
+                </app>
+                ad sic credendum, sed constat etiam
                 <app>
-                  <lem>etiam</lem>
-                  <rdg wit="#SV #S" type="intextu">adhuc</rdg>
-                </app> 
-                si categorice credidit, adhuc non peccavit, licet sit falsum. Et si dicatur credidit falsum et inde meruit, quia scriptum, 
+                  <lem n="etiam"/>
+                  <rdg wit="#SV #S" type="variation-present">adhuc</rdg>
+                </app>
+                si categorice credidit, adhuc non peccavit, 
+                licet sit falsum. 
+                Et si dicatur credidit falsum et inde meruit 
+                quia scriptum,
                 <app>
-                  <lem>scilicet,</lem>
-                  <rdg wit="#S" type="om."/>
-                </app> 
-                quod 
+                  <lem>scilicet</lem>
+                  <rdg wit="#S" type="variation-absent"/>
+                </app>
+                quod
                 <cit>
-                  <quote ana="gen15_16">sibi reputatum est ad 
+                  <quote source="http://scta.info/resource/gen15_16 
+                    http://scta.info/resource/rom4_3
+                    http://scta.info/resource/rom4_22 
+                    http://scta.info/resource/gal3_6 
+                    http://scta.info/resource/iac2_23">
+                    sibi reputatum est ad
                     <app>
-                      <lem>iustitiam,</lem>
+                      <lem>iustitiam</lem>
                       <rdg wit="#S">instantiam</rdg>
                     </app>
                   </quote>
-                  <bibl>Genesis 15:16; Romanos 4:3 Romanos 4:22, Galatas 3:6, Iacobi 2:23</bibl> <!-- note that only Genesis reference will currently get logged in scta db -->
-                </cit> 
-                dico quod ex actu credulitatis imperato a voluntate existente in gratia meruit, non propter creditum illud. Unde per illud 
+                  <bibl>Genesis 15:16; Romanos 4:3 Romanos 4:22, Galatas 3:6, Iacobi 2:23</bibl>
+                </cit>,
+                dico quod ex actu credulitatis imperato a voluntate existente in gratia meruit, 
+                non
+                propter creditum illud. 
+                Unde per illud
                 <app>
-                  <lem>praeceptum,</lem>
+                  <lem>praeceptum</lem>
                   <rdg wit="#S">sceptum</rdg>
-                </app> 
-                Deus intendebat demonstrare obedientiam <name ref="#Abraham">Abrahamae</name>; non autem immolationem filii Deus intendebat, sed obedientiam. Unde quis actum credendi circa 
+                </app>,
+                Deus intendebat demonstrare obedientiam 
+                <name ref="#Abraham">Abrahamae</name>; 
+                non autem immolationem filii Deus intendebat, 
+                sed obedientiam. Unde quis actum credendi circa
                 <app>
                   <lem>aliquod</lem>
                   <rdg wit="#R">aliud</rdg>
-                </app> 
-                obiectum falsum, non tamen apparens falsum, potest habere, et tamen inde merebitur. Unde Deus bene volebat <name ref="#Abraham">Abraham</name> sic velle, non tamen obligabat eum ad sic velle. Unde in casu nostro, si <name ref="#Abraham">Abraham</name> credidit categorice hoc, fuit ex verisimili coniectura et ratione probabili, non tamen ex fide, licet fide obediret, et credo <name ref="#Abraham">Abraham</name> non fuisse obligatum ad credendum <mentioned>immolare filium suum,</mentioned> sed potius ad <mentioned>velle immolare, si Deus vellet eum; immolatur non sibi.</mentioned>
+                </app>
+                obiectum falsum, non tamen apparens falsum, potest habere, et tamen inde merebitur.
+                Unde Deus bene volebat <name ref="#Abraham">Abraham</name> sic velle, non tamen
+                obligabat eum ad sic velle. 
+                Unde in casu nostro, si <name ref="#Abraham">Abraham</name> 
+                credidit categorice hoc, fuit ex verisimili coniectura et ratione
+                probabili, non tamen ex fide, licet fide obediret, 
+                et credo <name ref="#Abraham">Abraham</name> 
+                non fuisse obligatum ad credendum 
+                <mentioned>immolare filium suum</mentioned>, 
+                sed potius ad 
+                <mentioned>
+                  velle immolare, si Deus vellet eum; 
+                  immolatur non sibi
+                </mentioned>.
               </lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app>
           </p>
         </div>
         <div>
-          <head>Responsio ad quintam rationem secundae instantia: utrum Spiritus Sanctus potest concurrere ad
-            causandum assensum falsum?</head>
-          
-          <p xml:id="l7-aafnaf">Aliud argumentum fuit 
+          <head>Responsio ad quintam rationem secundae instantia: utrum Spiritus Sanctus potest
+            concurrere ad causandum assensum falsum?</head>
+          <p xml:id="l7-aafnaf">
+            Aliud argumentum fuit
             <app>
               <lem>factum</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            de Spiritu Sancto, 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            de Spiritu Sancto,
             <app>
               <lem>scilicet</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-              <note xml:lang="en">I prefer to include the reading form V here as the more explicit reading</note>
-            </app> 
-            quod 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+              <note xml:lang="en">I prefer to include the reading form V here as the more explicit
+                reading</note>
+            </app>
+            quod
             <app>
               <lem>potest</lem>
               <rdg wit="#V">potuit</rdg>
-            </app> 
-            concurrere ad causandum assensum falsum, ergo et fides. Responsio est facilis, 
+            </app>
+            concurrere ad causandum assensum falsum, 
+            ergo et fides. 
+            Responsio est facilis,
             <app>
               <lem>unde dicendum</lem>
               <rdg wit="#V">dicendo</rdg>
-            </app> 
-            quod fides speciali modo et supernaturali concurrit ad assentiendum articulis credendis et 
+            </app>
+            quod fides speciali modo et supernaturali 
+            concurrit ad assentiendum articulis credendis
+            et
             <app>
               <lem>ita</lem>
-              <rdg wit="#R" type="corrAddition">
-                <corr>
-                  <add>ita</add>
-                </corr>
+              <rdg wit="#R" type="correction-addition">
+                <add>ita</add>
               </rdg>
-            </app> 
-            etiam Spiritus Sanctus secum concurrit speciali motione dirigendo 
+            </app>
+            etiam Spiritus Sanctus secum 
+            concurrit speciali motione dirigendo hominem
             <app>
-              <lem>hominem</lem>
-              <rdg wit="#R" type="corrDeletion">
-                <corr>
-                  <del>h</del>
-                </corr>
+              <lem n="hominem"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del>h</del>
               </rdg>
-            </app> 
-            in finem suum. Modo, dicitur quod Spiritus Sanctus non posset 
+            </app>
+            in finem suum. 
+            Modo, dicitur quod Spiritus Sanctus non posset
             <app>
               <lem>movere</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            ad assentiendum falso ista motione speciali qua concurrit cum fide ad assentiendum vero, sed Spiritus Sanctus concurrit ad productionem assensus falsi 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            ad assentiendum falso ista motione speciali 
+            qua concurrit cum fide ad assentiendum vero, 
+            sed Spiritus Sanctus concurrit ad productionem assensus falsi
             <app>
               <lem>tamquam</lem>
               <rdg wit="#V">sicut</rdg>
-            </app> 
-            causa necessario requisita, ita quod concurrit in 
+            </app>
+            causa necessario requisita, 
+            ita quod concurrit in
             <app>
               <lem>minimo</lem>
               <rdg wit="#V">numero</rdg>
-            </app> 
-            et generalissimo modo concurrendi. Sed de concursu speciali Spiritus 
+            </app>
+            et generalissimo modo concurrendi. 
+            Sed de concursu speciali Spiritus
             <app>
               <lem>Sanctus</lem>
               <rdg wit="#V">Sancti</rdg>
-            </app> 
-            non posset sic specialiter concurrere ad decipiendum creaturam, et per consequens nec 
+            </app>
+            non posset sic specialiter concurrere ad decipiendum creaturam, 
+            et per consequens nec ad
             <app>
-              <lem>ad</lem>
-              <rdg wit="#SV" type="corrDeletion">
-                <corr>
-                  <del>decipiendum</del>
-                </corr>
+              <lem n="ad"/>
+              <rdg wit="#SV" type="correction-deletion">
+                <del>decipiendum</del>
               </rdg>
-            </app> 
-            assentiendum falso sicut nec fides. Et per consequens non attribuitur fidei aliqua praerogativa, quae non 
+            </app>
+            assentiendum falso sicut nec fides. 
+            Et per consequens non attribuitur fidei aliqua praerogativa, 
+            quae non
             <app>
               <lem>attribuatur</lem>
               <rdg wit="#V">attribuitur</rdg>
-            </app> 
-            Spiritu Sancto, sed quia fides non potest habere concursum generalem ad concurrendum ad cuiuslibet effectus productionem sicut Spiritus Sanctus, 
+            </app>
+            Spiritu Sancto, sed quia fides 
+            non potest habere concursum generalem ad concurrendum ad
+            cuiuslibet effectus productionem sicut Spiritus Sanctus,
             <app>
               <lem>immo</lem>
               <rdg wit="#V">sed</rdg>
-            </app> 
-            solum habet concursum specialem ad assentiendum vero. Ideo non concurrit ad assentiendum falso sicut Spiritus Sanctus. Et ideo, 
-            <cb ed="#V" n="17va"/> 
-            si argumentum bene resolvatur, arguet praerogativam in Deo quam non attribuimus fidei.<anchor/></p>
-          
+            </app>
+            solum habet concursum specialem ad assentiendum vero. 
+            Ideo non concurrit ad
+            assentiendum falso sicut Spiritus Sanctus. 
+            Et ideo,
+            <pb ed="#V" n="17-v"/>
+            <cb ed="#V" n="a"/>
+            si argumentum bene resolvatur, 
+            arguet praerogativam in Deo quam
+            non attribuimus fidei.
+          </p>
           <p xml:id="l7-acqlec">
             <app>
               <lem>Arguebatur</lem>
               <rdg wit="#V">arguitur</rdg>
-            </app> 
-            confirmando quia fides potest in actum perfectum, 
+            </app>
+             confirmando quia fides potest in actum perfectum,
             <app>
               <lem>scilicet</lem>
               <rdg wit="#V">puta</rdg>
-            </app> 
-            in actum illum 
-            <cb ed="#R" n="11va"/> 
-            supernaturalem etc. Breviter consequentia non valet, quia causalitates rerum sunt limitatae, ita quod non possunt in 
+            </app>
+            in actum illum
+            <pb ed="#R" n="11-v"/>
+            <cb ed="#R" n="a"/>
+            supernaturalem etc. 
+            Breviter consequentia non valet, quia
+            causalitates rerum sunt limitatae, 
+            ita quod non possunt in
             <app>
               <lem>quaecumque</lem>
               <rdg wit="#V">quaelibet</rdg>
-            </app> 
-            effectum, sed solum in aliquos effectus sibi debitos ex natura sua. Unde non sequitur 
+            </app>
+            effectum, sed solum in aliquos effectus sibi debitos ex natura sua. 
+            Unde non sequitur homo
             <app>
-              <lem>homo</lem>
-              <rdg wit="#SV" type="corrDeletion">
-                <corr>
-                  <del>non</del>
-                </corr>
+              <lem n="homo"/>
+              <rdg wit="#SV" type="correction-deletion">
+                <del>non</del>
               </rdg>
-            </app> 
-            potest producere hominem, ergo potest producere lapidem, et sic de aliis.</p>
-          
-          <p xml:id="l7-aacapf">Ad aliam confirmationem, quia fides est in potentia obedientiali et sic potest assumi a Spiritu Sancto ad concurrendum 
+            </app>
+            potest producere hominem, 
+            ergo potest producere lapidem, et sic de aliis.
+          </p>
+          <p xml:id="l7-aacapf">
+            Ad aliam confirmationem 
+            quia fides est in potentia obedientiali et
+            sic potest assumi a Spiritu Sancto ad concurrendum
             <app>
               <lem>seu</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            ad productionem assensus falsi. Quantum est de materia ista quae tangit potentiam obedientialem, ipsa 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            ad productionem assensus falsi. 
+            Quantum est de materia ista quae tangit potentiam
+            obedientialem, 
+            ipsa
             <app>
               <lem>requireret</lem>
               <rdg wit="#R">requiret</rdg>
-            </app> 
-            longum processum ad eius declarationem, ideo, pro praesenti, non intrabo eam. Sed quantum ad propositum spectat, dupliciter potest responderi. Uno modo, quod fides 
+            </app>
+            longum processum ad eius declarationem, 
+            ideo, pro praesenti, non intrabo eam. 
+            Sed
+            quantum ad propositum spectat, 
+            dupliciter potest responderi. 
+            Uno modo, quod fides
             <app>
               <lem>aliquas</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            proprietates habet quae sibi non competunt ut fides est 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            proprietates habet quae sibi non competunt ut fides est
             <app>
               <lem>sicut</lem>
               <rdg wit="3V">ut</rdg>
-            </app> 
-            inhaesio 
+            </app>
+            inhaesio
             <app>
               <lem>et alias.</lem>
               <rdg wit="#V">etc.</rdg>
-            </app> 
-            Utrum autem Deus 
+            </app>
+            Utrum autem Deus
             <app>
               <lem>posset</lem>
               <rdg wit="#R">possit</rdg>
-            </app> 
-            fidem assumere secundum denominationem sibi competentem, non inquantum est fides ad producendum assensum falsum, non est ad propositum, quia tunc non concurreret ut fides, 
+            </app>
+            fidem assumere secundum denominationem sibi competentem,
+            non inquantum est fides ad
+            producendum assensum falsum, non est ad propositum 
+            quia tunc non concurreret ut fides,
             <app>
               <lem>sed</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            ut qualitas 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            ut qualitas quaedam
             <app>
-              <lem>quaedam.</lem>
-              <rdg wit="#V" type="intextu">et</rdg>
-            </app> 
-            Ideo potest 
+              <lem n="quaedam"/>
+              <rdg wit="#V" type="variation-present">et</rdg>
+            </app>.
+            Ideo potest
             <app>
               <lem>dici</lem>
               <rdg wit="#V">dixi</rdg>
-            </app> 
-            quod omnino repugnat fidei 
+            </app>
+            quod omnino repugnat fidei
             <app>
               <lem>inquantum</lem>
               <rdg wit="#V">ut</rdg>
-            </app> 
-            est 
+            </app>
+            est fides
             <app>
-              <lem>fides</lem>
-              <rdg wit="#R" type="corrDeletion">
-                <corr>
-                  <del>ad producendum assensum falsum non est ad propositum</del>
-                </corr>
+              <lem n="fides"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del>ad producendum assensum falsum non est ad propositum</del>
               </rdg>
             </app>
-            concurrere ad assensum falsum. Ideo quantum ad hoc, non est in potentia obedientali respectu 
+            concurrere ad assensum falsum. 
+            Ideo quantum ad hoc, 
+            non est in potentia obedientali respectu
             <app>
               <lem>ipsius</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            Spiritus Sancti. Ultimo posset dici quod istud non est contra positionem quin Deus variando naturam fidei posset ipsam assummere ad concurrendum ad assensum falsum. 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            Spiritus Sancti. 
+            Ultimo posset dici quod istud non est contra positionem 
+            quin Deus variando naturam fidei posset ipsam assummere 
+            ad concurrendum ad assensum falsum.
             <app>
               <lem>Et</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            sic teneatis quam viam volueritis in ista materia. Et sic patet 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            sic teneatis quam viam volueritis in ista materia. 
+            Et sic patet
             <app>
               <lem>ex dictis</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            quomodo respondendum sit ad omnia 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quomodo respondendum sit ad omnia
             <app>
               <lem>argumenta</lem>
               <rdg wit="#R #SV #S">obiecta</rdg>
-            </app> 
-            prius facta.</p>
+            </app>
+            prius facta.
+          </p>
         </div>
       </div>
     </body>
