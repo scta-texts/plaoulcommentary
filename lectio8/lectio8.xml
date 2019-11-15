@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 8, De fide</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>LombardPress</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -33,24 +28,32 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-      <div xml:id="includeList">
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
-        <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
+      <div xml:id="starts-on">
+        
       </div>
     </front>
     <body>
       <div xml:id="lectio8">
-        <head subtype="title">Lectio 8, de Fide</head>
-        <div>
+        <head xml:id="l8-Hd1e102">Lectio 8, de Fide</head>
+        <div xml:id="l8-Dd1e105">
           <head xml:id="l8-Hcaqaqo">
             <supplied>Conclusio ad questionem originalem</supplied>
           </head>
-          
           <p xml:id="l8-seqses">
             <app>
               <lem>Sciendum</lem>
@@ -63,35 +66,45 @@
             </app> 
             <app>
               <lem>postquam</lem>
-              <rdg wit="#SV" type="corrReplace">
-                <del rend="strikethrough">post</del>
-                <add>postquam</add>
+              <rdg wit="#SV" type="correction-substitution">
+                <subst>
+                  <del rend="strikethrough">post</del>
+                  <add>postquam</add>
+                </subst>
               </rdg>
             </app> 
             proposita fuit quaestio, scilicet, utrum 
             <app>
               <lem>in foro vel</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             in causa iudicali fidei 
             <app>
               <lem>contra traditionem pure humanitus adinventam,</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             iudex idoneus pro fide <!-- check idoneus in vat --> 
             <app>
               <lem>feret</lem>
               <rdg wit="#V">habeat determinare</rdg>
             </app> 
-            sententiam? Protestata fuit conclusio ista: quod fides non subicitur humano iudicio, immo vice versa; et haec fuit una conclusio, quod 
-            <cb ed="#V" n="17vb"/> 
-            fides est donum Dei supernaturale et spirituale.</p>
+            sententiam? 
+            Protestata fuit conclusio ista: 
+            quod fides non subicitur humano iudicio, immo vice versa; et haec fuit una conclusio, quod 
+            <cb ed="#V" n="17vb"/><!--V17vb--> 
+            fides est donum Dei supernaturale et spirituale.
+          </p>
         </div>
-        <div>
+        <div xml:id="l8-Dd1e184">
           <head xml:id="l8-Hncefea">Nova conclusio et rationes: quod fides elevat animam</head>
-          
-          <p xml:id="l8-eqpscv">Ex qua propositione prius posita, infero istam propositionem: 
-            <mentioned>quod fides elevat animam et roborat et illuminat super omnes habitus seu actus naturaliter acquisitos.</mentioned> 
+          <p xml:id="l8-eqpscv">
+            Ex qua propositione prius posita, infero istam propositionem: 
+            <mentioned>
+              quod fides elevat animam 
+              et roborat et illuminat 
+              super omnes habitus 
+              seu actus naturaliter acquisitos
+            </mentioned>. 
             Et ex ista 
             <app>
               <lem>propositione</lem>
@@ -100,47 +113,58 @@
             sequitur una alia 
             <app>
               <lem>conclusio</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
             </app> 
             quae est contra 
-            <ref>
+            <ref xml:id="l8-Rd1e211">
               <name ref="#Averroes">Averroes</name> 
               in prologo suo supra III 
               <title ref="#Physics">Physicorum</title>
             </ref> 
             ubi dicit quod 
             <cit>
-              <quote source="http://scta.info/resource/Averroes_Physics_III_a">instructio in aliqua lege impedit cognitionem veritatis.</quote>
-              <bibl>Averroes, Physica III, prologus, ??</bibl>
-            </cit> 
+              <quote xml:id="l8-Qd1e222">
+                instructio in aliqua lege impedit cognitionem veritatis
+              </quote>
+              <bibl>Averroes, Physica III, prologus, ??
+                <!-- source="http://scta.info/resource/Averroes_Physics_III_a" -->
+              </bibl>
+            </cit>. 
             <app>
-              <lem>Sed quod: instructio in lege divina illuminat et roborat animam ad cognitionem veritatis</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
+              <lem>
+                Sed quod: 
+                instructio in lege divina illuminat 
+                et roborat animam ad cognitionem veritatis
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
             Quantum 
             <app to="#l1-A">
               <lem>autem</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             est de aliis legibus, verisimile est 
             <app>
               <lem>et videtur esse</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
-            quod instructio earum impediat inquisitionem veritatis, quia inficiunt animam. Probatur igitur propositio mea per effectum, nam fides facit veritates arduissimas per assensum fidei 
-            <cb ed="#R" n="11vb"/> 
+            quod instructio earum impediat inquisitionem veritatis 
+            quia inficiunt animam. 
+            Probatur igitur propositio mea per effectum, 
+            nam fides facit veritates arduissimas per assensum fidei 
+            <cb ed="#R" n="11vb"/> <!--R11vb-->
             attingi, et eas primo creditas 
             <app>
               <lem>et</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
             </app> 
             postea intelligere iuxta 
-            <ref>
+            <ref xml:id="l8-Rd1e269">
               <title ref="#is">Isaiam</title>
             </ref> 
             dictum 
             <cit>
-              <quote source="http://scta.info/resource/is7_9">
+              <quote xml:id="l8-Qd1e277" source="http://scta.info/resource/is7_9">
                 <app>
                   <lem>nisi</lem>
                   <rdg wit="#V">si non</rdg>
@@ -153,10 +177,10 @@
               <lem>ex quo</lem>
               <rdg wit="#V">si</rdg>
             </app> 
-            igitur 
+            igitur fides
             <app>
-              <lem>fides</lem>
-              <rdg wit="#V" type="intextu">potest</rdg>
+              <lem n="fides"/>
+              <rdg wit="#V" type="variation-present">potest</rdg>
             </app> 
             <app>
               <lem>elevat</lem>
@@ -167,13 +191,17 @@
               <lem>facit</lem>
               <rdg wit="#R #SV #S">facere</rdg>
             </app> 
-            cognoscere praedictas veritates, quae non possunt cognosci sine fide; sequitur conclusio vera.</p>
-          
-          <p xml:id="l8-aiaesa">Ad idem arguitur ratione primo sic: fides est 
+            cognoscere praedictas veritates, 
+            quae non possunt cognosci sine fide; 
+            sequitur conclusio vera.
+          </p>
+          <p xml:id="l8-aiaesa">
+            Ad idem arguitur ratione primo sic: 
+            fides est 
             <app>
               <lem>in</lem>
-              <rdg wit="#SV" type="corrAddition">
-                <add place="aboveLine">in</add>
+              <rdg wit="#SV" type="correction-addition">
+                <add place="above-line">in</add>
               </rdg>
             </app> 
             suprema dispositione supremae potentiae intellectus reddens 
@@ -181,44 +209,59 @@
               <lem>ipsum</lem>
               <rdg wit="#V">ipso</rdg>
             </app> 
-            virtuosissimum, ergo conclusio vera. Consequentia nota. Antecedens 
+            virtuosissimum, 
+            ergo conclusio vera. 
+            Consequentia nota. Antecedens 
             <app>
               <lem>probatur,</lem>
               <rdg wit="#V">patet</rdg>
             </app> 
-            quia maximus vigor est applicare se ad credulitatem articulorum, maxime articulorum Trinitatis, et respectu ipsorum cognoscere arduissimas veritates 
+            quia maximus vigor est applicare se ad credulitatem articulorum, 
+            maxime articulorum Trinitatis, 
+            et respectu ipsorum cognoscere arduissimas veritates 
             <app>
               <lem>modo</lem>
               <rdg wit="#S">non</rdg>
             </app> 
-            in potentia, quae est diversarum operationum, <unclear>dispositio supremae activa est dispositio supremae potentiae;</unclear> etiam eadem est proportio 
+            in potentia, quae est diversarum operationum, 
+            <unclear>dispositio supremae activa est dispositio supremae potentiae</unclear>; 
+            etiam eadem est proportio 
             <app>
               <lem>respectu</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
             </app> 
-            dispositionum inter se, qualis est 
+            dispositionum inter se, 
+            qualis est 
             <app>
               <lem>proportio</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
             </app> 
-            potentiarum inter se, igitur <unclear>dispositio supremae potentiae est supremae activa.</unclear></p>
-          
-          <p xml:id="l8-ifeqqa">Item fides est 
+            potentiarum inter se, 
+            igitur 
+            <unclear>dispositio supremae potentiae est supremae activa</unclear>.
+          </p>
+          <p xml:id="l8-ifeqqa">
+            Item, 
+            fides est 
             <app>
               <lem>lumen</lem>
-              <rdg wit="V">unum</rdg>
+              <rdg wit="#V">unum</rdg>
             </app> 
             repulsivum 
             <app>
               <lem>errorum</lem>
               <rdg wit="#V">erroris</rdg>
             </app> 
-            et falsarum cognitionum, maxime circa felicitatis obiectum, ergo etc. Antecedens est 
+            et falsarum cognitionum, 
+            maxime circa felicitatis obiectum, ergo etc. 
+            Antecedens est 
             <app>
               <lem>clarum</lem>
               <rdg wit="#V">notum</rdg>
             </app> 
-            et consequentia patet, quia iuxta proportionem obiectorum est proportio habituum, unde habitus et actus maxime 
+            et consequentia patet 
+            quia iuxta proportionem obiectorum est proportio habituum, 
+            unde habitus et actus maxime 
             <app>
               <lem>concernentes</lem>
               <rdg wit="#S #V">concernans</rdg>
@@ -226,75 +269,89 @@
             felicitatis obiectum 
             <app>
               <lem>in eadem proportione</lem>
-              <rdg wit="#R #SV #S" type="om."/>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
             </app> 
             est 
             <app>
               <lem>nobilior</lem>
               <rdg wit="#V">notior</rdg>
             </app> 
-            quam quicumque alter.</p>
-          
+            quam quicumque alter.
+          </p>
           <p xml:id="l8-ifaaid">Item fides annectitur speciali 
-            <cb ed="#V" n="18rb"/> 
-            Dei assistentia et speciali gratia dirigente hominem in suum finem, sicut caritas annectitur speciali amore 
+            <cb ed="#V" n="18rb"/> <!--V18rb-->
+            Dei assistentia et speciali gratia dirigente hominem in suum finem, 
+            sicut caritas annectitur speciali amore 
             <app>
               <lem>Dei</lem>
               <rdg wit="#V">ipsius</rdg>
             </app> 
-            et speciali amorosa assistentia ipsius Dei.</p>
-          
+            et speciali amorosa assistentia ipsius Dei.
+          </p>
           <p xml:id="l8-iftete">
             <app>
               <lem>Item,</lem>
               <rdg wit="#R">Tertio</rdg>
               <rdg wit="#SV #S">Quinto</rdg>
             </app> 
-            fides tollit activitatem rationum Sophisticarum circa felicitatem et supremum bonum et varios errores 
+            fides tollit activitatem rationum Sophisticarum 
+            circa felicitatem et supremum bonum et varios errores 
             <app>
-              <lem>introducentium,</lem>
-              <rdg wit="#V">inducentium,</rdg>
-            </app> 
-            ergo etc. Consequentia tenet, quia non est 
+              <lem>introducentium</lem>
+              <rdg wit="#V">inducentium</rdg>
+            </app>,
+            ergo etc. 
+            Consequentia tenet 
+            quia non est 
             <app>
               <lem>parvum</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             <app>
               <lem>in</lem>
-              <rdg wit="#R #SV" type="om."/>
+              <rdg wit="#R #SV" type="variation-absent"/>
             </app> 
-            intellectum tollere errores circa fidem, quia 
+            intellectum tollere errores circa fidem 
+            quia quam
             <app>
-              <lem>quam</lem>
-                <rdg wit="#R" type="intextu" cause="repetitio">
-                  <add>quam</add>
+              <lem n="quam"/>
+                <rdg wit="#R" type="variation-present" cause="repetitio">
+                  quam
                 </rdg>
               </app> 
-            bonum est sentire bene de felicitate tam malum est errare circa felicitatem. Modo, fides nedum facit bene sentire de felicitate et eius obiecto, sed 
+            bonum est sentire bene de felicitate 
+            tam malum est errare circa felicitatem. 
+            Modo, fides nedum facit bene sentire 
+            de felicitate et eius obiecto, 
+            sed 
             <app>
-              <lem>etiam circa ea tollit errores.</lem>
+              <lem>etiam circa ea tollit errores</lem>
               <rdg wit="#V">tollit errores, ergo etc.</rdg>
-            </app>
+            </app>.
           </p>
-         
-          <p xml:id="l8-qacfcp">Sexto <!-- definitely say 6; need help discerning count here --> 
+          <p xml:id="l8-qacfcp">
+            Sexto <!-- definitely say 6; need help discerning count here --> 
             <app>
-              <lem>arguitur:</lem>
-              <rdg wit="#R" type="corrReplace">
-                <del>argui</del>
-                <add>arguitur</add>
+              <lem>arguitur</lem>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
+                  <del>argui</del>
+                  <add>arguitur</add>
+                </subst>
               </rdg>
-            </app>
-             corpus quod corrumpitur aggravat animam iuxta testimonium Sacrae Scripturae, quia inclinat ipsam ad temporalia dimittendo spiritualia. Fides autem 
+            </app>:
+            corpus quod corrumpitur aggravat animam iuxta testimonium Sacrae Scripturae 
+            quia inclinat ipsam ad temporalia dimittendo spiritualia. 
+            Fides autem 
             <app>
                <lem>elevat</lem>
                <rdg wit="#R">incinat</rdg>
-             </app> 
+            </app> 
+            animam
             <app>
-              <lem>animam</lem>
-              <rdg wit="#V" type="intextu">
-                <add>scilicet</add>
+              <lem n="animam"/>
+              <rdg wit="#V" type="variation-present">
+                scilicet
               </rdg>
             </app> 
             ad spiritualia et nedum elevat 
@@ -302,19 +359,24 @@
               <lem>vel</lem>
               <rdg wit="#V">et</rdg>
             </app> 
-            inclinat ad assensum, sed ad amorem spiritualium et 
+            inclinat ad assensum, 
+            sed ad amorem spiritualium et
+            remittendo
             <app>
-              <lem>remittendo</lem>
-              <rdg wit="#V" type="intextu">
-                <add>spiritualia</add>
+              <lem n="remittendo"/>
+              <rdg wit="#V" type="variation-present">
+                spiritualia
               </rdg>
             </app> 
-            temporalia, ita quod fides facit intellectum abnegare temporalia et semet ipsum et ista fuit conclusio probanda.</p>
+            temporalia, 
+            ita quod fides facit intellectum abnegare temporalia 
+            et semet ipsum et ista fuit conclusio probanda.
+          </p>
         </div>
-        <div>
+        <div xml:id="l8-Dd1e585">
           <head xml:id="l8-Hlalala"><supplied>Languores animae</supplied></head>
-          
-          <p xml:id="l8-cvqrpa">Consequenter viso 
+          <p xml:id="l8-cvqrpa">
+            Consequenter viso 
             <app>
               <lem>qualiter</lem>
               <rdg wit="#SV">quomodo</rdg>
@@ -322,43 +384,54 @@
             fides sit elevativa 
             <app>
               <lem>et inclinativa</lem>
-              <rdg wit="#SV" type="om."/>
-              <rdg wit="#S" type="corrDeletion">
-                <corr>
-                  <del rend="strikethrough">intellectiva</del>
-                </corr>
+              <rdg wit="#SV" type="variation-absent"/>
+            </app>
+            <app>
+              <lem n="inclinativa"/>
+              <rdg wit="#S" type="correction-deletion">
+                <del rend="strikethrough">intellectiva</del>
               </rdg>
-            </app> 
+            </app>
             <app>
               <lem>intellectus</lem>
-              <rdg wit="#S" type="om."/>
+              <rdg wit="#S" type="variation-absent"/>
             </app> 
-            ad summum bonum, videndum est qui sunt languores animae qui per fidem removentur. Circa
+            ad summum bonum, 
+            videndum est qui sunt languores animae 
+            qui per fidem removentur. 
+            Circa
             <app>
               <lem>quod</lem>
               <rdg wit="#V">quam</rdg>
             </app>
-            notandum est quod primaria radix omnium languorum et defectuum animae est pena originalis culpae, et causa fuit principaliter peccatum, nihilominus <app>
+            notandum est quod primaria radix omnium languorum 
+            et defectuum animae est pena originalis culpae, 
+            et causa fuit principaliter peccatum, nihilominus 
+            <app>
               <lem>punito</lem>
               <rdg wit="#V">purgato</rdg>
             </app> 
             peccato remanet 
             <app to="#l1-A">
-              <lem>poena aliqua.</lem>
-              <rdg wit="#V">culpa ideo etc.</rdg>
+              <lem>poena aliqua</lem>
+              <rdg wit="#V">culpa ideo etc</rdg>
             </app>
           </p>
-          
-          <div>
-            <head xml:id="l8-Hplddid"><supplied>Primus languor: deformatio imaginis Dei</supplied></head>
-            
-            <p xml:id="l8-pelmis">Primus 
-              <cb ed="#R" n="12ra"/> 
-              ergo languor animae est originalis culpa per quam anima, quae est imago 
+          <div xml:id="l8-Dd1e658">
+            <head xml:id="l8-Hplddid">
+              <supplied>Primus languor: deformatio imaginis Dei</supplied>
+            </head>
+            <p xml:id="l8-pelmis">
+              Primus 
+              <pb ed="#R" n="12-r"/> 
+              <cb ed="#R" n="a"/> 
+              ergo languor animae est originalis 
+              culpa per quam anima, 
+              quae est imago 
               <app>
-                <lem>Dei,</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
+                <lem>Dei</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>,
               deformatur, per quam deformitatem 
               <app>
                 <lem>perdidit</lem>
@@ -367,50 +440,73 @@
               <app>
                 <lem>vigorem</lem>
                 <rdg wit="#V">vigores</rdg>
-              </app> et dominium. Unde <unclear cert="high">servus</unclear> dicitur subici cui 
+              </app> 
+              et dominium. 
+              Unde <unclear cert="high">servus</unclear> dicitur subici cui 
               <app>
                 <lem>deberet</lem>
                 <rdg wit="#V">debet</rdg>
               </app> 
-              dominari. Nam sicut alias allegatum 
+              dominari. 
+              Nam sicut alias allegatum 
               <app>
                 <lem>est</lem>
                 <rdg wit="#V">fuit</rdg>
               </app> 
               secundum doctrinam 
-              <ref corresp="#l8-Qihbads"><name ref="#Aristotle">Philosophi</name>, Io <title ref="#Politics">Politicae</title> capitulo 
+              <ref xml:id="l8-Rd1e720" corresp="#l8-Qihbads">
+                <name ref="#Aristotle">Philosophi</name>, 
+                Io <title ref="#Politics">Politicae</title> 
+                capitulo 
                 <app>
-                  <lem>3,</lem>
-                  <rdg wit="#R">9,</rdg>
+                  <lem>3</lem>
+                  <rdg wit="#R">9</rdg>
                 </app>
-              </ref> 
+              </ref>,
               <cit>
-                <quote xml:id="l8-Qihbads" source="http://scta.info/resource/aa-politica-15">In homine bene disposito, anima dominatur corpori, domino disposito et vocatur dominum dispositum, quando dominus habet plenum dominium et iudicium supra servum, ita quod servus nihil facit, nisi quod sibi praecipitur a domino suo.</quote> <!-- dbcheck cases of dominio and domino etc here -->
-                <bibl>Aristotle, Politics, ?</bibl>
-              </cit> <cb ed="#V" n="18vb"/> Nunc autem viceversa stante influentia Dei generali sive speciali influentia vel iuvamine ipsius Dei vel alias homo specialiter 
+                <quote xml:id="l8-Qihbads" source="http://scta.info/resource/aristpoli-3">
+                  In homine bene disposito, anima dominatur corpori, 
+                  domino disposito et vocatur dominum dispositum, 
+                  quando dominus habet plenum dominium et iudicium supra servum, 
+                  ita quod servus nihil facit, nisi quod sibi praecipitur a domino suo
+                </quote> <!-- dbcheck cases of dominio and domino etc here -->
+                <bibl>
+                  Aristotle, Politics, ?
+                  <!-- aa-politica-15 -->
+                </bibl>
+              </cit>. 
+              <cb ed="#V" n="b"/><!-- V 18vb--> 
+              Nunc autem viceversa stante influentia Dei generali 
+              sive speciali influentia vel iuvamine ipsius Dei 
+              vel alias homo specialiter 
               <app>
                 <lem>iuvaretur</lem>
                 <rdg wit="#V">mutetur</rdg>
               </app>
-               ex poena culpae originalis in homine mutatur <unclear cert="high">dominium</unclear> viceversa, ita quod sensus dominatur rationi et subicitur 
+              ex poena culpae originalis in homine mutatur 
+              <unclear cert="high">dominium</unclear> viceversa, 
+              ita quod sensus dominatur rationi et subicitur 
               <app>
                 <lem>ideo</lem>
                 <rdg wit="#S">ratio</rdg>
               </app> 
-              motibus ipsius sensus.</p>
-            
-            <p xml:id="l8-pelrdt"><app>
-              <lem>Primus ergo languor</lem>
-              <rdg wit="#V">et illum languorem</rdg>
-            </app> quantum ad 
+              motibus ipsius sensus.
+            </p>
+            <p xml:id="l8-pelrdt">
+              <app>
+                <lem>Primus ergo languor</lem>
+                <rdg wit="#V">et illum languorem</rdg>
+              </app>
+              quantum ad 
               <app>
                 <lem>primam</lem>
                 <rdg wit="#V">tertiam</rdg>
               </app> 
-              partem imaginis, quia 
+              partem imaginis 
+              quia 
               <app>
                 <lem>prima pars imaginis</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               quae attribuitur 
               <app>
@@ -419,38 +515,45 @@
               </app> 
               vocatur 
               <app>
-                <lem>memorativa,</lem>
+                <lem>memorativa</lem>
                 <rdg wit="#V">memoria</rdg>
               </app> 
               non 
               <app>
                 <lem>capiendo</lem>
+                <rdg wit="#V" facs="18r/47">capio</rdg>
               </app>
-              <mentioned><app> <!-- smashed here to avoid unwanted space. Double check memorativa vs memoria. -->
-                <lem>memorativa,</lem>
-                <rdg wit="#V">memoria</rdg>
-              </app></mentioned> 
-              pro specie reservata, sed pro potentia tali specie 
+              <mentioned>
+                <app>
+                <lem>memorativa</lem>
+                <rdg wit="#V" facs="18r/48">memoriam</rdg>
+              </app>
+              </mentioned>, 
+              pro specie reservata, 
+              sed pro potentia tali specie 
               <app>
-                <lem>habituata,</lem>
+                <lem>habituata</lem>
                 <rdg wit="#V">actuata</rdg>
-              </app> 
+              </app>,
               <app>
-                <lem>et per huiusmodi originalem culpam obliviscitur spiritualia et recordatur de temporalibus.</lem>
-                <rdg wit="V" type="om."/>
-              </app>
+                <lem>et per huiusmodi originalem culpam 
+                  obliviscitur spiritualia et recordatur de temporalibus
+                </lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>.
             </p>
-            
-            <p xml:id="l8-slvaot">Secundus languor vel secunda pars languoris 
+            <p xml:id="l8-slvaot">
+              Secundus languor vel secunda pars languoris 
               <app>
                 <lem>primi, quantum ad secundam partem imaginis, 
                   <app>
                     <lem>quantum</lem>
-                    <rdg wit="#S" type="om."></rdg>
+                    <rdg wit="#S" type="variation-absent"/>
                   </app> 
-                  quae vocatur potentia intellectiva,</lem>
-                <rdg wit="V" type="om."/>
-              </app> 
+                  quae vocatur potentia intellectiva
+                </lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>,
               est quia per huiusmodi culpam 
               <app>
                 <lem>originalem</lem>
@@ -458,13 +561,16 @@
               </app> 
               <app>
                 <lem>intellectus</lem>
-                <rdg wit="V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app>
               <app>
                 <lem>perdidit</lem>
                 <rdg wit="#V">perdit</rdg>
               </app> 
-              iudicium rectitudinis, obliviscendo spiritualia et negligendo et acceptando temporalia. Et in hoc deformatur secunda pars imaginis, scilicet, intellectiva, quae filio correspondet cui attribuitur sapientia, et qui per modum 
+              iudicium rectitudinis, 
+              obliviscendo spiritualia et negligendo et acceptando temporalia. 
+              Et in hoc deformatur secunda pars imaginis, scilicet, intellectiva, 
+              quae filio correspondet cui attribuitur sapientia, et qui per modum 
               <app>
                 <lem>intelligentiae</lem>
                 <rdg wit="#V">sapientiae</rdg>
@@ -474,15 +580,20 @@
                 <lem>quamdam</lem>
                 <rdg wit="#R">quamlibet</rdg>
               </app>
-              similitudinem iudicium animae, sic infirmatur quod iudicat, sicut gustus male dispositus, qui iudicat dulce esse amarum et e contra; 
+              similitudinem iudicium animae, 
+              sic infirmatur quod iudicat, 
+              sicut gustus male dispositus, 
+              qui iudicat dulce esse amarum et e contra; 
               <app>
                 <lem>contra</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               quod scribitur 
-              <ref><title ref="#is">Isaias</title> V</ref> 
+              <ref xml:id="l8-Rd1e934"><title ref="#is">Isaias</title> V</ref> 
               <cit>
-                <quote source="http://scta.info/resource/is5_20">vae qui dicitis dulce esse amarum</quote>
+                <quote xml:id="l8-Qd1e941" source="http://scta.info/resource/is5_20">
+                  vae qui dicitis dulce esse amarum
+                </quote>
                 <bibl>Isaias 5:20</bibl>
               </cit> 
               etc., 
@@ -490,7 +601,9 @@
                 <lem>et ita</lem>
                 <rdg wit="#V">ita quod</rdg>
               </app> 
-              illud, quod est conveniens ipsi animae propter poenam originalis culpae, iudicat esse disconveniens et e converso. Et istum languorem quodammodo philosophi 
+              illud, quod est conveniens ipsi animae propter poenam originalis culpae, 
+              iudicat esse disconveniens et e converso. 
+              Et istum languorem quodammodo philosophi 
               <app>
                 <lem>cognoverunt</lem>
                 <rdg wit="#V">cognoscunt</rdg>
@@ -506,17 +619,21 @@
                 <rdg wit="#V">posito</rdg>
               </app> 
               obliviscitur anima suam felicitatem; et 
-              <ref><name ref="#Macrobius">Macrobius</name></ref> hoc 
+              <ref xml:id="l8-Rd1e985"><name ref="#Macrobius">Macrobius</name></ref> hoc 
               <app>
                 <lem>pulchre</lem>
                 <rdg wit="#V">pulchrissime</rdg>
               </app> 
               declarat dicens quod 
               <cit>
-                <quote>ista inebriatio est in isto mundo quando quis contemnit spiritualia et acceptat omnino temporalia.</quote>
+                <quote xml:id="l8-Qd1e1000">
+                  ista inebriatio est in isto mundo 
+                  quando quis contemnit spiritualia 
+                  et acceptat omnino temporalia
+                </quote>
                 <bibl>Macrobius, ??</bibl>
-              </cit></p>
-            
+              </cit>.
+            </p>
             <p xml:id="l8-itaqat">
               <app>
                 <lem>In</lem>
@@ -540,68 +657,92 @@
               quam ad alia quae deturpant ipsam 
               <app>
                 <lem>vim</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
-              <cb ed="#R" n="12rb"/> 
-              concupiscibilem. Et in hoc deturpatur tertia pars imaginis, scilicet, 
+              <cb ed="#R" n="b"/><!--R12rb--> 
+              concupiscibilem. 
+              Et in hoc deturpatur tertia pars imaginis, scilicet, 
               <app to="#l1-A">
                 <lem>scilicet, volitiva</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               quae attribuitur Spiritui Sancto, quae 
               <app>
                 <lem>etiam</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
-              vocatur dilectius amor. Et istae tres potentiae possunt alio nomine nominari, nam 
+              vocatur dilectius amor. 
+              Et istae tres potentiae possunt alio nomine nominari, 
+              nam 
               <app>
                 <lem>vis</lem>
                 <rdg wit="#SV #S">vix</rdg>
               </app> 
-              irascibilis deturpatur <cb ed="#V" n="18va"/> quantum ad primum, 
+              irascibilis deturpatur 
+              <pb ed="#V" n="18-v"/>
+              <cb ed="#V" n="a"/>
+              quantum ad primum, 
               <app>
                 <lem>vis</lem>
                 <rdg wit="#SV #S">vix</rdg>
               </app> 
-              rationalis quantum ad secundum, et 
+              rationalis quantum ad secundum, 
+              et 
               <app>
                 <lem>vis</lem>
                 <rdg wit="#SV #S">vix</rdg>
               </app> 
-              concupiscibilis quantum ad tertium.</p>
+              concupiscibilis quantum ad tertium.
+            </p>
           </div>
-          <div>
+          <div xml:id="l8-Dd1e1108">
             <head xml:id="l8-Hslslsl">
               <supplied>Secundus languor</supplied>
             </head>
-            
-            <p xml:id="l8-spissd">Secunda principalis infirmitas ipsius animae, quod tres praedictae non faciunt, nisi unam infirmitatem totalem, sumens tamen 
+            <p xml:id="l8-spissd">
+              Secunda principalis infirmitas ipsius animae, 
+              quod tres praedictae non faciunt, 
+              nisi unam infirmitatem totalem, 
+              sumens tamen 
               <app>
                 <lem>originem</lem>
-                <rdg wit="V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
-              a prima est ex parte humanae complexionis. Nam in statu innocentiae non fuisset defectus in humana complexione, immo quilibet viguisset 
+              a prima est ex parte humanae complexionis. 
+              Nam in statu innocentiae non fuisset defectus in humana complexione, 
+              immo quilibet viguisset ratione 
               <app>
-                <lem>ratione</lem>
-                <rdg wit="#V" type="intextu">pro tempore illo</rdg>
-                <note xml:lang="en">It seems possible that V could have accidentally written "pro tempore illo" instead of "per totum tempus" which follows without having scratched out the mistake.</note>
+                <lem n="ratione"/>
+                <rdg wit="#V" type="variation-present">pro tempore illo</rdg>
+                <note xml:lang="en">It seems possible that V could have accidentally written 
+                  "pro tempore illo" instead of "per totum tempus" 
+                  which follows without having scratched out the mistake.
+                </note>
               </app> 
-              per totum tempus vitae suae. Nam in statu naturae lapsae, scilicet nunc, in infusione animae primaria generaliter 
+              per totum tempus vitae suae. 
+              Nam in statu naturae lapsae, scilicet nunc, 
+              in infusione animae primaria generaliter 
               <app>
                 <lem>caret</lem>
                 <rdg wit="#SV">causaret</rdg>
-                <note xml:lang="en">It's slightly hard to tell if R should also be "causaret". At present "caret" seems to make more sense and is unequivocally supported in S and V</note>
+                <note xml:lang="en">It's slightly hard to tell if R should also be "causaret". 
+                  At present "caret" seems to make more sense and is unequivocally supported in S and V.
+                </note>
               </app> 
-              anima usu rationis; sed nedum 
+              anima usu rationis; 
+              sed nedum 
               <app>
                 <lem>in</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               infusione primaria sed 
               <app>
                 <lem>etiam</lem>
-                <rdg wit="#R #SV #S" type="om."/>
-                <note xml:lang="en">Though only present in V, this we think helps the sense and therefore is a more explicit reading.</note>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
+                <note xml:lang="en">
+                  Though only present in V, 
+                  this we think helps the sense and therefore is a more explicit reading.
+                </note>
               </app> 
               post nativitatem, et hoc est 
               <app>
@@ -611,18 +752,20 @@
               corpus quod corrumpitur aggravat animam. Non dico 
               <app>
                 <lem>tamen</lem>
-                <rdg wit="#R #SV #S" type="om."/>
-                <note xml:lang="en">Though only present in V, we think its inclusion helps with the sense and therefore is the more explicit reading</note>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
+                <note xml:lang="en">Though only present in V,
+                  we think its inclusion helps with the sense 
+                  and therefore is the more explicit reading</note>
               </app> 
               <app>
                 <lem>quod</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               cuilibet 
               <app to="#l1-A">
-                <lem>sic esset,</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
+                <lem>sic esset</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>,
               quia exempti fuerunt Christus et <name ref="#Mary">Virgo Gloriosa</name>. 
               <app>
                 <lem>Est</lem>
@@ -631,16 +774,21 @@
               ergo illa infirmitas 
               <app>
                 <lem>animae</lem>
-                <rdg wit="#R" type="om."/>
+                <rdg wit="#R" type="variation-absent"/>
               </app> 
-              ex parte complexionis quae est terminata ad brutorum complexionem et ascendit per gradus remissos cum quibus stat 
+              ex parte complexionis quae est terminata ad brutorum 
+              complexionem et ascendit per gradus remissos cum quibus stat 
               <app>
-                <lem>et cum quibus stat et cum quibus non habet operationes nobiles sibi et suae speciei debitas</lem>
+                <lem>
+                  et cum quibus stat et cum quibus 
+                  non habet operationes nobiles sibi 
+                  et suae speciei debitas
+                </lem>
                 <rdg wit="#V">cum quibus non habet operationes nobiles sibi debitas.</rdg>
               </app>
             </p>
-            
-            <p xml:id="l8-eihsis">Et iuxta hoc posset dici quod staret hominem esse qui non 
+            <p xml:id="l8-eihsis">
+              Et iuxta hoc posset dici quod staret hominem esse qui non 
               <app>
                 <lem>haberet</lem>
                 <rdg wit="#V">habere</rdg>
@@ -648,10 +796,8 @@
               nisi sensum tactus nec naturaliter posset 
               <app>
                 <lem>aliis</lem>
-                <rdg wit="#R" type="corrAddition">
-                  <corr>
-                    <add>aliis</add>
-                  </corr>
+                <rdg wit="#R" type="correction-addition">
+                  <add>aliis</add>
                 </rdg>
               </app> 
               sensibus 
@@ -659,7 +805,13 @@
                 <lem>uti</lem>
                 <rdg wit="#V">sentire</rdg>
               </app> 
-              et per consequens nec ratione nec aliis potentiis interioribus, scilicet, sensu communi et potentia memorativa, etc. Patet primo quia de facto ad esse hominem non requiritur visus, quia multi a nativitate sunt caeci; similiter multi a nativitate sunt surdi, et sic aliis sensibus potest esse excepto sensu tactu, unde puer in utero matris recipit nutrimentum sibi conveniens et hoc non est proprie per gustum. 
+              et per consequens nec ratione nec aliis potentiis interioribus, 
+              scilicet, sensu communi et potentia memorativa, etc. 
+              Patet primo quia de facto ad esse hominem non requiritur visus 
+              quia multi a nativitate sunt caeci; similiter multi a nativitate sunt surdi, 
+              et sic aliis sensibus potest esse excepto sensu tactu, 
+              unde puer in utero matris recipit nutrimentum sibi conveniens 
+              et hoc non est proprie per gustum. 
               <app>
                 <lem>Videmus</lem>
                 <rdg wit="#S">Videamus</rdg>
@@ -667,28 +819,35 @@
               etiam 
               <app>
                 <lem>quod</lem>
-                <rdg wit="#R #SV #S" type="om."/>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
               </app> 
               in vegetabilibus 
               <app>
                 <lem>quod vegetabilia</lem>
-                <rdg wit="#V" type="om."/>
+                <rdg wit="#V" type="variation-absent"/>
               </app> 
               attrahunt 
               <app>
                 <lem>sibi</lem>
-                <rdg wit="#R" type="om."/>
-              </app> nutrimentum  
+                <rdg wit="#R" type="variation-absent"/>
+              </app> 
+              nutrimentum  
               <app>
-                <lem>conveniens, et tamen non habent proprie tactum nec cognoscunt illud nutrimentum</lem>
-                <rdg wit="#V" type="om."/>
-              </app> ergo etc. Confirmatur, quia forma substantialis potest educi de materia sub qualitativa
+                <lem>
+                  conveniens, 
+                  et tamen non habent proprie 
+                  tactum nec cognoscunt illud nutrimentum
+                </lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app> 
+              ergo etc. 
+              Confirmatur 
+              quia forma substantialis 
+              potest educi de materia sub qualitativa dispositione
               <app>
-                <lem>dispositione</lem>
-                <rdg wit="#SV" type="corrDeletion">
-                  <corr>
-                    <del rend="expunctuated">disponente</del>
-                  </corr>
+                <lem n="dispositione"/>
+                <rdg wit="#SV" type="correction-deletion">
+                  <del rend="expunctuated">disponente</del>
                 </rdg>
               </app> 
               sufficiente solum ad exercendum 
@@ -696,26 +855,28 @@
                 <lem>solum opera</lem>
                 <rdg wit="#V">operationes</rdg>
               </app> 
-              unius sensus et potest sub illa stare.</p>
-            
-            <div>
+              unius sensus et potest sub illa stare.
+            </p>
+            <div xml:id="l8-Dd1e1331">
               <head xml:id="l8-Hapapap">
                 <supplied>Aliquae propositiones</supplied>
               </head>
-              
-              <p xml:id="l8-uchqav">Unde circa 
+              <p xml:id="l8-uchqav">
+                Unde circa 
                 <app>
                   <lem>hoc</lem>
                   <rdg wit="#V">positionem</rdg>
                 </app> 
-                possent poni aliquae propositiones. Prima 
-                <cb ed="#V" n="18vb"/> 
+                possent poni aliquae propositiones. 
+                Prima 
+                <cb ed="#V" n="18vb"/> <!-- V18vb-->
                 est 
                 <app>
                   <lem>quod</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                non stat formam substantialem esse in materia, <unclear cert="high">quoniam</unclear> 
+                non stat formam substantialem esse in materia, 
+                <unclear cert="high">quoniam</unclear> 
                 <app>
                   <lem>posset</lem>
                   <rdg wit="#R #SV">post</rdg>
@@ -723,21 +884,29 @@
                 </app> 
                 aliquam operationem exercere cum dispositione qualitativa sibi debita. Patet quia 
                 <app>
-                  <lem>natura non potest operari quidquam otiosa, quia otiositas</lem>
+                  <lem>
+                    natura non potest operari 
+                    quidquam otiosa, 
+                    quia otiositas
+                  </lem>
                   <rdg wit="#V">si non operaretur quidquam esset otiosa et est</rdg>
                 </app> 
-                est illud quod maxime abhorret natura. Ideo subito corrumperetur, si omnino nihil operaretur; immo causa principalis corruptionis formae in materia est quia talis forma non potest exire in 
+                est illud quod maxime abhorret natura. 
+                Ideo subito corrumperetur, si omnino nihil operaretur; 
+                immo causa principalis corruptionis formae in materia est 
+                quia talis forma non potest exire in 
                 <app>
                   <lem>aliquam</lem>
-                  <rdg wit="#SV" type="corrReplace">
-                    <corr>
+                  <rdg wit="#SV" type="correction-substitution">
+                    <subst>
                       <del rend="strikethrough">aliqua</del>
                       <add place="inline">aliquam</add>
-                    </corr>
+                    </subst>
                   </rdg>
                 </app> 
                 operationem. 
-                <cb ed="#R" n="12va"/> 
+                <pb ed="#R" n="12-v"/> 
+                <cb ed="#R" n="a"/> 
                 Sed quamdiu dispositio qualitativa est sufficiens ad hoc--
                 <app>
                   <lem>quod talis forma substantialis mediante illa posset</lem>
@@ -746,27 +915,34 @@
                 exire in aliquam operationem sibi debitam--sufficit ad eius educationem et 
                 <app>
                   <lem>eius</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                conservationem in materia. Hoc enim videmus in multis: nam aqua diu stat sub dispositione sibi 
+                conservationem in materia. 
+                Hoc enim videmus in multis: nam aqua diu stat sub dispositione sibi 
                 <app>
-                  <lem>disconvenienti,</lem>
-                  <rdg wit="#R" type="corrReplace">
-                    <corr>
+                  <lem>disconvenienti</lem>
+                  <rdg wit="#R" type="correction-substitution">
+                    <subst>
                       <del>convenienti</del>
                       <add>disconvenienti</add>
-                    </corr>
+                    </subst>
                   </rdg>
-                </app> 
+                </app>,
                 quando, 
                 <app>
                   <lem>scilicet,</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                calefit. Ex illa radice potest inferri quod dispositio qualitativa sub qua creatur forma humana est immediata dispositioni sub qua est forma bruti vel complexioni sub qua stat forma bruti, immo quod plus est sub qua stat forma vegetabilis. Unde licet anima humana non dependeat a materia, nec proprie educatur de potentia 
+                calefit. 
+                Ex illa radice potest inferri quod dispositio qualitativa 
+                sub qua creatur forma humana est immediata dispositioni 
+                sub qua est forma bruti vel complexioni sub qua stat forma bruti, 
+                immo quod plus est sub qua stat forma vegetabilis. 
+                Unde licet anima humana non dependeat a materia, 
+                nec proprie educatur de potentia 
                 <app>
-                  <lem>materiae,</lem>
-                  <rdg wit="#R">materia,</rdg>
+                  <lem>materiae</lem>
+                  <rdg wit="#R">materia</rdg>
                 </app> 
                 tamen Deus sic ordinavit quod numquam 
                 <app to="#l1-A">
@@ -781,36 +957,50 @@
                 in materia nisi quamdiu est 
                 <app>
                   <lem>ibi</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                qualitativa dispositio sibi debita vel complexio ad exercendum aliquam operationem. Patet conclusio quia stat quod forma educatur sive 
+                qualitativa dispositio sibi debita vel complexio 
+                ad exercendum aliquam operationem. 
+                Patet conclusio quia stat quod forma educatur sive 
                 <app>
                   <lem>causetur</lem>
                   <rdg wit="#S #V">creetur</rdg>
                   <note xml:lang="en">Note that "causetur" is slightly hard to read in R. SV seems pretty clear. And S and especially V are clear about "creetur". Since the meaning is about the same we stick with R and SV here.</note>
                 </app> 
-                in materia sub minima dispositione sibi debita, scilicet, sub dispositione tactiva solum, quae est minima dispositio sufficiens 
+                in materia sub minima dispositione sibi debita, 
+                scilicet sub dispositione tactiva solum, 
+                quae est minima dispositio sufficiens 
                 <app>
                   <lem>solum</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
                 pro 
                 <app>
                   <lem>operatione</lem>
-                  <rdg wit="#SV" type="corrReplace">
-                    <corr>
+                  <rdg wit="#SV" type="correction-substitution">
+                    <ssubst>
                       <add>operatione</add>
                       <del>dispositione</del>
-                    </corr>
+                    </ssubst>
                   </rdg>
                 </app> 
-                humana. Igitur quaecumque daretur minor non esset sufficiens pro anima humana, immo nec pro bruto, sed solum pro vegetabili, si non sit essentialis ordo complexionum inter se de quo alias videbitur.</p>
-              
-              <p xml:id="l8-eirsci">Ex ista radice sequuntur aliqua: primum est quod in gradibus cognoscendi specifice 
+                humana. 
+                Igitur quaecumque daretur minor non esset sufficiens pro anima humana, 
+                immo nec pro bruto, sed solum pro vegetabili, 
+                si non sit essentialis ordo complexionum inter se de quo alias videbitur.
+              </p>
+              <p xml:id="l8-eirsci">
+                Ex ista radice sequuntur aliqua: 
+                primum est quod in gradibus cognoscendi specifice 
                 <app>
                   <lem>distincti contenti</lem>
                   <rdg wit="#V">distinctis contentis</rdg>
-                  <note xml:lang="en">At the present, the best reading seems to support "distincti contenti" as matching case with the passive participle "cognoscendi," to render something like: in degrees of specifically distinct things being known contained under a species of understanding..."</note>
+                  <note xml:lang="en">At the present, 
+                    the best reading seems to support "distincti contenti" 
+                    as matching case with the passive participle "cognoscendi," 
+                    to render something like: in degrees of specifically distinct things 
+                    being known contained under a species of understanding..."
+                  </note>
                 </app> 
                 sub specie intellectionis, non potest argui quod 
                 <app>
@@ -818,349 +1008,443 @@
                   <rdg wit="#V">possit</rdg>
                 </app> 
                 esse multitudo specie distincta intellectuum sive creaturarum 
-                <cb ed="#V" n="19ra"/> 
-                intelligibilium. Voluerunt enim aliqui dicere quod esset imaginabilis aliqua creatura quae intelligeret 
+                <pb ed="#V" n="19-r"/>
+                <cb ed="#V" n="a"/>
+                intelligibilium. 
+                Voluerunt enim aliqui dicere quod esset imaginabilis 
+                aliqua creatura quae intelligeret 
                 <app>
                   <lem>praecise, confuse</lem>
                   <rdg wit="#S #V">confuse, praecise</rdg>
-                  <note xml:lang="en">Sense wise, this reversal should probably make minimal difference. However, it seemed potentially significant and at the least is another example of closer similarity of S with V than with R SV.</note>
+                  <note xml:lang="en">Sense wise, this reversal 
+                    should probably make minimal difference. 
+                    However, it seemed potentially significant and at the least is 
+                    another example of closer similarity of S with V than with R SV.
+                  </note>
                 </app> 
                 alia, quae 
                 <app>
                   <lem>alia</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
                 specie 
                 <app>
                   <lem>
                     <app>
                       <lem>cognitionis</lem>
-                      <rdg wit="#R" type="corrReplace">
-                        <corr>
+                      <rdg wit="#R" type="correction-substitution">
+                        <subst>
                           <del>confusionis</del>
                           <add>cognitionis</add>
-                        </corr>
+                        </subst>
                       </rdg>
                     </app> 
                     vel</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                intellectionis cognosceret, scilicet, componendo et dividendo, et alia, quae intelligeret syllogizando, et sic secundum gradus varios intellectionum variarentur specie creaturae intellectuales sub specie humana. Sed istud non est verum, ut videtur, quia istae operationes possunt reperiri in eadem potentia secundum diversitatem organorum sive complexionum. Unde de facto
+                intellectionis cognosceret, 
+                scilicet componendo et dividendo, 
+                et alia, quae intelligeret syllogizando, 
+                et sic secundum gradus varios intellectionum variarentur specie creaturae 
+                intellectuales sub specie humana. 
+                Sed istud non est verum, ut videtur 
+                quia istae operationes possunt reperiri 
+                in eadem potentia secundum diversitatem organorum sive complexionum. 
+                Unde de facto
                 <app>
                   <lem>est</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
-                aliqua propositio demonstrabilis <name ref="#Sortes">Sorti</name>, quae non est demonstrabilis <name ref="#Plato">Platoni</name>, ergo talis diversitas cognitionis magis reducenda est ad diversitatem dispositionum organicarum quam ad diversitatem specificam creaturarum intelligibilium.</p>
-              
-              <p xml:id="l8-eqpsec">Ex quo 
+                aliqua propositio demonstrabilis <name ref="#Sortes">Sorti</name>, 
+                quae non est demonstrabilis <name ref="#Plato">Platoni</name>, 
+                ergo talis diversitas cognitionis magis reducenda est 
+                ad diversitatem dispositionum organicarum 
+                quam ad diversitatem specificam creaturarum intelligibilium.
+              </p>
+              <p xml:id="l8-eqpsec">
+                Ex quo patet
                 <app>
-                  <lem>patet</lem>
-                  <rdg wit="#S" type="intextu">quod</rdg>
+                  <lem n="patet"/>
+                  <rdg wit="#S" type="variation-present">quod</rdg>
                 </app> 
-                fundamentum illorum, qui ponunt quod possibile est esse aliquam creaturam quae sit intellectiva et non volitiva, et e contra nullum est. Et si 
+                fundamentum illorum, 
+                qui ponunt quod possibile est esse aliquam creaturam 
+                quae sit intellectiva et non volitiva, et e contra nullum est. 
+                Et si dicatur
                 <app>
-                  <lem>dicatur</lem>
-                  <rdg wit="#V" type="intextu">contra quia</rdg>
+                  <lem n="dicatur"/>
+                  <rdg wit="#V" type="variation-present">contra quia</rdg>
                 </app> 
-                esse cognitivum et esse volitivum sunt denomina<cb ed="#R" n="12vb"/>tiones essentiales, quarum una est prior alia, ergo una potest separari ab alia, quia quaecumque distincta, 
+                esse cognitivum et esse volitivum sunt denomina<cb ed="#R" n="b"/><!--R12vb-->tiones 
+                essentiales, quarum una est prior alia, 
+                ergo una potest separari ab alia, quia quaecumque distincta, 
                 <app>
                   <lem>Deus potest separare etc.</lem>
                   <rdg wit="#V">etc.</rdg>
                 </app> 
-                Breviter, ut me expediam, ista ratio non concludit. Unde esse volitivum<!-- volitivum --> non est communicabile sine 
+                Breviter, 
+                ut me expediam, ista ratio non concludit. 
+                Unde esse volitivum<!-- volitivum --> non est communicabile sine 
                 <app>
                   <lem>esse</lem>
-                  <rdg wit="#R #SV #S" type="om."/>
-                  <note xml:lang="en">While only supported in V, the inclusion of "esse" contributes to the more explicit reading.</note>
-                </app> cognitivo nec e contra, 
+                  <rdg wit="#R #SV #S" type="variation-absent"/>
+                  <note xml:lang="en">While only supported in V, 
+                    the inclusion of "esse" contributes to the more explicit reading.
+                  </note>
+                </app> 
+                cognitivo nec e contra, 
                 <app>
                   <lem>et</lem>
                   <rdg wit="#V">unde</rdg>
                 </app> 
-                habent inter se necessariam habitudinem quod una non potest esse sine alia. Ideo sunt coaequae et convertibiles, et causa est, quia esse volitivum non est, nisi esse appetitivum intellectualiter.  
+                habent inter se necessariam habitudinem 
+                quod una non potest esse sine alia. Ideo sunt coaequae et convertibiles, 
+                et causa est, quia esse volitivum non est, 
+                nisi esse appetitivum intellectualiter.  
                 <app>
                   <lem>Modo constat quod omne 
                     <app>
                       <lem>volitivum</lem>
                       <rdg wit="#SV #S">intellectivum</rdg>
-                      <note xml:lang="en">This seems like a signficant corruptions. At present V seems to offer the reading that makes the most sense.</note>
+                      <note xml:lang="en">This seems like a signficant corruptions. 
+                        At present V seems to offer the reading that makes the most sense.</note>
                     </app> 
-                    est appetitivum intellectualiter.</lem>
-                  <rdg wit="#R" type="om."/>
-                </app> 
+                    est appetitivum intellectualiter
+                  </lem>
+                  <rdg wit="#R" type="variation-absent"/>
+                </app>. 
                 Sed forte volitivum habet rationem passionis et esse intellectivum 
                 <app>
                   <lem>habet</lem>
-                  <rdg wit="#R #SV #S" type="om."/>
+                  <rdg wit="#R #SV #S" type="variation-absent"/>
                 </app> 
-                rationem subiecti, quicquid sit tamen de hoc unum non potest esse sine alio, immo sunt coaequae et convertibiles, et ista est secunda infirmitas 
+                rationem subiecti, 
+                quicquid sit tamen de hoc unum non potest esse sine alio, 
+                immo sunt coaequae et convertibiles, et ista est secunda infirmitas 
                 <app>
                   <lem>animae</lem>
-                  <rdg wit="#R #SV #S" type="om."/>
+                  <rdg wit="#R #SV #S" type="variation-absent"/>
                 </app> 
-                quae sumit originem ab originali culpa, quia in statu innocentiae non fuisset defectus in aliquibus a principio usque ad finem. Unde certum est quod ista infirmitas in multis est causa modicum sciendi et cognoscendi.</p>
+                quae sumit originem ab originali culpa 
+                quia in statu innocentiae non fuisset defectus 
+                in aliquibus a principio usque ad finem. 
+                Unde certum est quod ista infirmitas 
+                in multis est causa modicum sciendi et cognoscendi.</p>
             </div>
           </div>
         </div>
-        <div>
+        <div xml:id="l8-Dd1e1710">
           <head xml:id="l8-Htltltl"><supplied>Tertius languor</supplied></head>
-          <p xml:id="l8-tlarqa">Tertius languor 
+          <p xml:id="l8-tlarqa">Tertius languor
             <app>
               <lem>animae</lem>
-              <rdg wit="V" type="om."/>
-            </app> est consuetudo audiendi 
-            <cb ed="#V" n="19rb"/> 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+             est consuetudo audiendi
+            <cb ed="#V" n="b"/><!-- V19rb-->
+            errores
             <app to="#l1-A">
-              <lem>errores,</lem>
-              <rdg wit="#V" type="corrDeletion">
-                <corr>
+              <lem n="errores"/>
+              <rdg wit="#V" type="correction-deletion">
                   <del rend="strikethrough">falsum impedit ab inquisitione verae errores</del>
-                </corr>
               </rdg>
-            </app> 
-            unde 
-            <ref>
-              <name ref="#Averroes">Commentator</name> in IIIo <title type="PhysicsCommentary">Physicorum</title> in 
-                <app>
-                  <lem>prologo</lem>
-                  <rdg wit="#V" type="intextu">suo</rdg>
-                </app>
-            </ref> 
+            </app>
+             unde 
+            <ref xml:id="l8-Rd1e1740">
+              <name ref="#Averroes">Commentator</name> 
+              in IIIo <title type="PhysicsCommentary">Physicorum</title> 
+              in prologo
+              <app>
+                <lem n="prologo"/>
+                <rdg wit="#V" type="variation-present">suo</rdg>
+              </app>
+            </ref>
             <app>
               <lem>dicit</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            quod 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quod
             <cit>
-              <quote>consuetudo audiendi falsum impedit ab inquisitione veritatis,</quote> <!-- probably a paraphrase of some sort -->
+              <quote xml:id="l8-Qd1e1768">consuetudo audiendi falsum impedit ab inquisitione veritatis,</quote>
+              <!-- probably a paraphrase of some sort -->
               <bibl>Averroes, Commentarius in Physicorum, prologus, ??</bibl>
-            </cit> 
-            nam 
+            </cit>
+            nam
             <app>
               <lem>quantumcumque</lem>
               <rdg wit="#V">quandocumque</rdg>
-            </app> 
-            aliqua 
+            </app>
+            aliqua
             <app to="#l1-A">
               <lem>sunt</lem>
               <rdg wit="#R">sint</rdg>
-            </app> 
-            falsa et improbabilia tandem per consuetudinem 
+            </app>
+            falsa et improbabilia tandem per consuetudinem
             <app>
               <lem>inclinamus</lem>
               <rdg wit="#V">inclinamur</rdg>
-            </app> eis assentire; unde 
-            <ref>
-              <name ref="#Cicero">Tullius</name>in libro <title ref="#TuscanDisputations">De Tusculanis quaestionibus</title>
-            </ref> hoc pulchre declarat, unde dicit quod 
+            </app>
+             eis assentire; unde 
+            <ref xml:id="l8-Rd1e1804">
+              <name ref="#Cicero">Tullius</name> 
+              in libro <title ref="#TuscanDisputations">De
+              Tusculanis quaestionibus
+              </title>
+            </ref> 
+            hoc pulchre declarat, 
+            unde dicit quod
             <cit>
-              <quote>natura, quantum est de se, nos tales genuit, ut si ipsam 
+              <quote xml:id="l8-Qd1e1815">
+                natura, quantum est de se, nos tales genuit, ut si ipsam
                 <app>
                   <lem>nos</lem>
-                  <rdg wit="#R #SV #S" type="om.">nos</rdg>
-                </app> 
-                intelligeremus, nos duceret ad vitam beatam.</quote>
+                  <rdg wit="#R #SV #S" type="variation-absent"/>
+                </app>
+                intelligeremus, nos duceret ad vitam beatam
+              </quote>
               <bibl>Cicero, De Tusculanis quaestionibus, ??</bibl>
-            </cit> 
-            Sed dicit ipse 
+            </cit>.
+            Sed dicit ipse
             <cit>
-              <quote>ex mala consuetudine extinguimus illud quod indidit nobis natura,</quote>
-              <bibl>Averroes, ??<!-- check AVERROES a la Retórica de ARISTÓTELES
-(Commentaire moyen à la Rhétorique d’Aristote, edición crítica del texto árabe y traducción francesa de
-MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
-            </cit> et causa est 
+              <quote xml:id="l8-Qd1e1833">
+                ex mala consuetudine extinguimus illud 
+                quod indidit nobis natura
+              </quote>
+              <bibl>Averroes,
+                ??<!-- check AVERROES a la Retórica de ARISTÓTELES
+                (Commentaire moyen à la Rhétorique d’Aristote, edición crítica del texto árabe y traducción francesa de
+                MAROUN AOUAD, 3 ts., París, Vrin, 2002). -->
+              </bibl>
+            </cit>,
+            et causa est
             <app>
               <lem>quia</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            maior pars cum quibus conversantur iuvenes est minus 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            maior pars cum quibus conversantur iuvenes est minus
             <app>
               <lem>docta</lem>
               <rdg wit="#V">data</rdg>
-            </app> 
-            et quae communiter 
+            </app>
+            et quae communiter
             <app>
               <lem>solent</lem>
               <rdg wit="#R #SV #S">solet</rdg>
-            </app> 
-            falsa dicere. Et quia natura ab initio est avida ut veritatem recipiat, 
+            </app>
+             falsa dicere. 
+             Et quia natura ab initio est avida ut veritatem recipiat,
             <app>
               <lem>si audiat</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            falsa continue forte, imprimit in se illa falsa et retinet ex consuetudine 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            falsa continue forte, 
+            imprimit in se illa falsa et retinet ex consuetudine
             <app>
               <lem>sic</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            quod in toto tempore post non possunt extingui nisi mediantibus virtutibus. Et ista fuit radix idolatriae filiorum Israel in civitate <name>Caldea,</name> quae duravit et 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            quod in toto tempore post non possunt extingui nisi mediantibus virtutibus. 
+            Et ista fuit radix idolatriae filiorum Israel 
+            in civitate <name>Caldea</name>, 
+            quae duravit et
             <app>
               <lem>continuata est</lem>
               <rdg wit="#V">continuavit</rdg>
-            </app> 
-            usque nunc, nam vetulae pro tempore isto 
+            </app>
+            usque nunc, 
+            nam vetulae pro tempore isto
             <app>
               <lem>adhuc</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-            </app> 
-            faciunt multa sortilega 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            faciunt multa sortilega
             <app>
               <lem>et hoc est, quia</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            a primis 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            a primis
             <app>
               <lem>hoc</lem>
               <rdg wit="#V">quae haec</rdg>
-            </app> 
-            viderunt facere. 
+            </app>
+            viderunt facere.
             <app>
               <lem>Et</lem>
-              <rdg wit="EV" type="om."/>
-            </app> 
-            ex 
+              <rdg wit="EV" type="variation-absent"/>
+            </app>
+            ex
             <app>
               <lem>hoc</lem>
               <rdg wit="#V">ista</rdg>
-            </app> 
-            patet quantum est malum dare iuvenibus mala exempla. Et iste est unus modus quantificandi 
+            </app>
+            patet quantum est malum dare iuvenibus mala exempla. 
+            Et iste est unus modus quantificandi peccatum
             <app to="#l1-A">
-              <lem>peccatum</lem>
-              <rdg wit="#R" type="corrDeletion">
-                <corr>
-                  <del>quod</del>
-                </corr>
+              <lem n="peccatum"/>
+              <rdg wit="#R" type="correction-deletion">
+                <del>quod</del>
               </rdg>
-            </app> 
-            intantum quod sit infinitae malitiae. Et ista est valde mala infirmitas, 
+            </app>
+            intantum quod sit infinitae malitiae. 
+            Et ista est valde mala infirmitas,
             <app>
               <lem>quia</lem>
               <rdg wit="#V">quam</rdg>
-            </app> 
-            valde bene 
+            </app>
+             valde bene
             <app>
               <lem>cognoverunt</lem>
               <rdg wit="#V">cognoscunt</rdg>
-            </app> 
+            </app>
+            philosophi
             <app to="#l1-A">
-              <lem>philosophi;</lem>
-              <rdg wit="#V" type="intextu">et</rdg>
-            </app> 
+              <lem n="philosophi"/>
+              <rdg wit="#V" type="variation-present">et</rdg>
+            </app>
             ideo 
-            <ref>
+            <ref xml:id="l8-Rd1e1977">
               <name ref="#Aristotle">Aristoteles</name> Io <title ref="#Ethics">Ethicorum</title>
-            </ref> 
+            </ref>
+            docet
             <app>
-              <lem>docet</lem>
-              <rdg wit="#S" type="corrDeletion">
-                <corr>
-                  <del>quod</del>
-                </corr>
+              <lem n="docet"/>
+              <rdg wit="#S" type="correction-deletion">
+                <del>quod</del>
               </rdg>
-            </app> 
-            quod 
+            </app>
+            quod
             <cit>
-              <quote source="http://scta.info/resource/aa-ethica-27">iuvenes bene debent 
+              <quote xml:id="l8-Qd1e2000" source="http://scta.info/resource/aristneth-l1">
+                iuvenes bene debent
                 <app>
-                  <lem>assuesci,</lem>
+                  <lem>assuesci</lem>
                   <rdg wit="#V">assuefieri</rdg>
-                </app> 
-                unde dicit non parum autem refert qualiter assuescant.</quote>
-              <bibl>Aristoteles, N. Ethica, B1, 1103b23-25.</bibl>
+                </app>,
+                <!-- is this really part of the quote -->
+                unde dicit non parum autem refert qualiter assuescant.
+              </quote>
+              <bibl>
+                Aristoteles, N. Ethica, B1, 1103b23-25.
+                <!--aa-ethica-27-->
+              </bibl>
             </cit>
           </p>
         </div>
-        <div>
-          <head>Quartus languor</head>
+        <div xml:id="l8-Dd1e2023">
+          <head xml:id="l8-Hd1e2025">Quartus languor</head>
           <p xml:id="l8-qianem">
+            Quarta infirmitas animae
             <app>
-              <lem>Quarta infirmitas animae</lem>
-              <rdg wit="#R" type="intextu">unde dicit non parum autem refert qualiter assuescant. Quarta infirmitas animae</rdg>
-              <note xml:lang="en">Here R seems to start the new paragraph at the end of the page, then repeate the last line of the previous paragraph at the start of the new page and the begin the paragraph again by repeating "quartas infirmitas"</note>
-          </app> 
-            <cb ed="#R" n="13ra"/> 
+              <lem n="animae"/>
+              <rdg wit="#R" type="variation-present">
+                unde dicit non parum autem refert qualiter assuescant.
+                Quarta infirmitas animae
+              </rdg>
+              <note xml:lang="en">Here R seems to start the new paragraph at the end of the page,
+                then repeate the last line of the previous paragraph at the start of the new page
+                and the begin the paragraph again by repeating "quartas infirmitas"</note>
+            </app>
+            <pb ed="#R" n="13-r"/>
+            <cb ed="#R" n="a"/>
             <app>
               <lem>est</lem>
-              <rdg wit="#R #SV" type="om."/>
-            </app> 
-            affectio 
+              <rdg wit="#R #SV" type="variation-absent"/>
+            </app>
+             affectio
             <app>
               <lem>primaria</lem>
               <rdg wit="#V">parva</rdg>
-            </app> 
-            quae est sui obiecti repraesentativa sub ratione mali, nam amor et odium pervertunt iudicium. Et ideo 
-            <ref>
-              <name ref="#Boethius">Boethius</name> in fine I 
-              <title ref="#Consolation">De consolatione</title>
-            </ref> 
-            iubet passiones tolli, si 
+            </app>
+            quae est sui obiecti repraesentativa sub ratione mali, 
+            nam amor et odium pervertunt
+            iudicium. 
+            Et ideo 
+            <cit>
+              <ref xml:id="l8-Rd1e2065">
+                <name ref="#Boethius">Boethius</name> 
+                in fine I 
+                <title ref="#Consolation">De consolatione</title>
+              </ref>
+              <bibl>XXX</bibl>
+            </cit> 
+            iubet passiones tolli, si
             <app>
               <lem>interius</lem>
               <rdg wit="#V">intellectus</rdg>
-            </app> 
-            bene debeat disponi ad iudicandum et 
-            <ref>
-              <title ref="#sap">Sapientiae</title> II
-            </ref> 
+            </app>
+             bene debeat disponi ad iudicandum et 
+            <ref xml:id="l8-Rd1e2087">
+             <title ref="#sap">Sapientiae</title> II </ref>
             <app>
               <lem>dicitur</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
             <cit>
-              <quote source="http://scta.info/resource/sap2_21">malitia eorum 
+              <quote xml:id="l8-Qd1e2103" source="http://scta.info/resource/sap2_21">
+                malitia eorum
                 <app>
                   <lem>excaecavit</lem>
                   <rdg wit="#V">caecavit</rdg>
                 </app>
-                <cb ed="#V" n="19va"/> 
-                eos.</quote>
+                <pb ed="#V" n="19-v"/>
+                <cb ed="#V" n="a"/>
+                eos
+              </quote>
               <bibl>Sapientia 2:21</bibl>
-            </cit> 
-            Ideo dicit Psalmista 
+            </cit>.
+            Ideo dicit Psalmista
             <cit>
-              <quote source="http://scta.info/resource/ps37_5">Iniquitates meae supergressae sunt caput meum</quote>
-              <bibl>Psalm 37:5</bibl></cit> et sequitur et 
+              <quote xml:id="l8-Qd1e2125" source="http://scta.info/resource/ps37_5">
+                Iniquitates meae supergressae sunt caput meum
+              </quote>
+              <bibl>Psalm 37:5</bibl>
+            </cit>
+            et sequitur et
             <cit>
-              <quote source="http://scta.info/resource/ps37_11">lumen oculorum meorum non est 
+              <quote xml:id="l8-Qd1e2135" source="http://scta.info/resource/ps37_11">
+                lumen oculorum meorum non est
                 <app>
                   <lem>mecum.</lem>
                   <rdg wit="#S">meus</rdg>
-                </app> <!-- expect unwanted space between end of quote and quotation mark here -->
+                </app>
+                <!-- expect unwanted space between end of quote and quotation mark here -->
               </quote>
               <bibl>Psalm 37:11</bibl>
             </cit>
           </p>
         </div>
-        <div>
+        <div xml:id="l8-Dd1e2155">
           <head xml:id="l8-Hacacac">
             <supplied>Aliquae conclusiones</supplied>
           </head>
-          
-          <p xml:id="l8-ipsdda">Istis praemissis, sit haec conclusio: anima cum influentia Dei generali sive speciali influentia magis movetur apparentiis 
+          <p xml:id="l8-ipsdda">
+            Istis praemissis, sit haec conclusio: anima cum influentia Dei generali sive speciali influentia magis movetur apparentiis 
             <app>
               <lem>falsis</lem>
-              <rdg wit="#R #SV #S" type="om."/>
-          </app> 
-            et rationibus sophisticis quam veritate, ita quod falsitas magis movet animam ad assentiendum quam veritas exceptis principiis per se notis, 
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app> 
+            et rationibus sophisticis quam veritate, 
+            ita quod falsitas magis movet animam ad assentiendum 
+            quam veritas exceptis principiis per se notis, 
             <app>
               <lem>etiam</lem>
               <rdg wit="#SV #S">et</rdg>
             </app> 
             hoc tetigit 
-            <ref corresp="#l8-Qqfspqv">
-              <name ref="#Aristotle">Philosophus</name> in 
+            <ref xml:id="l8-Rd1e2182" corresp="#l8-Qqfspqv">
+              <name ref="#Aristotle">Philosophus</name> in
+              <title ref="#Topics">Topicis</title>
               <app>
-                <lem><title ref="#Topics">Topicis</title></lem>
-                <rdg wit="#V" type="corrDeletion">
-                  <corr>
-                    <del>in quo dicit</del>
-                  </corr>
+                <lem n="Topicis"/>
+                <rdg wit="#V" type="correction-deletion">
+                  <del>in quo dicit</del>
                 </rdg>
               </app>
             </ref> 
             quando dicit quod 
             <cit>
-              <quote xml:id="l8-Qqfspqv">quaedam falsa sunt probabiliora 
+              <quote xml:id="l8-Qqfspqv">
+                quaedam falsa sunt probabiliora 
                 <app>
                 <lem>quibusdam</lem>
                   <rdg wit="#S">quibus</rdg>
@@ -1168,251 +1452,297 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
                 veris.</quote>
               <bibl>Aristotle, Topics, I, ??</bibl>
             </cit> 
-            Et provenit ex poena originalis culpae, quia verum quantum est de se non movet, nisi 
+            Et provenit ex poena originalis culpae 
+            quia verum quantum est de se non movet, nisi 
             <app to="#l1-A">
               <lem>quantum</lem>
-              <rdg wit="#SV #S #V" type="om."/>
+              <rdg wit="#SV #S #V" type="variation-absent"/>
             </app> ad assensum, et falsum 
             <app>
               <lem>etiam</lem>
-              <rdg wit="#R #SV" type="om."/>
+              <rdg wit="#R #SV" type="variation-absent"/>
             </app> 
             quantum est de se non movet, nisi ad 
             <app>
               <lem>dissensum,</lem>
               <rdg wit="#SV #S">assensum,</rdg>
             </app> 
-            sicut amarum non movet, nisi suo modo, scilicet, amare, et dulce, nisi dulce, et tamen in male disposito dulce apparet amarum et e conversa, nam actus activorum sunt in patiente 
+            sicut amarum non movet, nisi suo modo, 
+            scilicet, amare, et dulce, nisi dulce, 
+            et tamen in male disposito dulce apparet amarum et e conversa, 
+            nam actus activorum sunt in patiente 
             <app>
               <lem>et disposito</lem>
               <rdg wit="#V">praedisposito</rdg>
             </app> 
-            <ref>
-              <seg>II 
-              <app>
-                <lem><title ref="#deAnima">De anima.</title></lem>
-                <rdg wit="#V"><title>De generatione.</title></rdg>
-              </app>
-              </seg>
+            <cit>
+              <ref xml:id="l8-Rd1e2257" target="http://scta.info/resource/aristda-l2">
+                II 
+                <app>
+                  <lem><title ref="#deAnima">De anima</title></lem>
+                  <rdg wit="#V"><title>De generatione</title></rdg>
+                </app>
+              </ref>
               <bibl>Aristotle, De anima II, ?</bibl>
-            </ref></p>
-          
-          <p xml:id="l8-scamic">Secunda 
+            </cit>.
+          </p>
+          <p xml:id="l8-scamic">
+            Secunda
             <app>
               <lem>propositio:</lem>
               <rdg wit="#V">conclusio:</rdg>
-          </app> 
-            anima humana cum ista vulneratione et cum praedictis languoribus ad investigationem humanam veritatis indiget fide imperfecta, 
+            </app>
+            anima humana cum ista vulneratione 
+            et cum praedictis languoribus ad investigationem
+            humanam veritatis indiget fide imperfecta,
             <app>
               <lem>ita quod, sicut indiget fide perfecta</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            ad inquisitionem veritatum supernaturalium, ita in humana investigatione indiget fide imperfecta, et hoc 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            ad inquisitionem veritatum supernaturalium, 
+            ita in humana investigatione indiget fide
+            imperfecta, et hoc
+            testatur
             <app>
-              <lem>testatur</lem>
-              <rdg wit="#V" type="intextu">fides <!-- this is possible scratched out--></rdg> 
-            </app> 
-            <ref corresp="#l8-Qoeaacv">
-              <name ref="#Aristotle">Philosophus</name> Io <title ref="#SophisticalRefutations">Elenchorum</title>
-            </ref> 
+              <lem n="testatur"/>
+              <rdg wit="#V" type="variation-present">fides <!-- this is possible scratched out--></rdg>
+            </app>
+            <ref xml:id="l8-Rd1e2304" corresp="#l8-Qoeaacv">
+              <name ref="#Aristotle">Philosophus</name> 
+              Io 
+              <title ref="#SophisticalRefutations">Elenchorum</title>
+            </ref>
             <cit>
-              <quote xml:id="l8-Qoeaacv">oportet enim dicit ipse <!-- instance where dicit ipse should be excluded from quotations --> addiscentem credere veritatem.</quote>
+              <quote xml:id="l8-Qoeaacv">
+                oportet enim dicit ipse
+                <!-- instance where dicit ipse should be excluded from quotations --> 
+                addiscentem
+                credere veritatem
+              </quote>
               <bibl>Aristotle, Sophistical Refuations, I, ??</bibl>
-            </cit> 
-            Unde in philosophia multa 
+            </cit>.
+            Unde in philosophia multa
             <app>
               <lem>reperiuntur</lem>
-              <rdg wit="#R" type="corrReplace">
-                <corr>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
                   <add>reperiuntur</add>
                   <del>proponuntur</del>
-                </corr>
+                </subst>
               </rdg>
               <rdg wit="#V">inveniuntur</rdg>
-            </app> 
-            proportionata fidei suo modo 
+            </app>
+            proportionata fidei suo modo
             <app>
               <lem>quae</lem>
               <rdg wit="#R #SV">quod</rdg>
-            </app> 
-            nec sunt conclusiones demonstratae nec principia, sed sunt 
+            </app>
+            nec sunt conclusiones demonstratae nec principia, 
+            sed sunt praesupposita
             <app>
-              <lem>praesupposita</lem>
-              <rdg wit="#S" type="corrDeletion">
-                <corr>
-                  <del>multa</del>
-                </corr>
+              <lem n="praesupposita"/>
+              <rdg wit="#S" type="correction-deletion">
+                <del>multa</del>
               </rdg>
-            </app> 
-            tamquam vera pro inquisitione veritatis. Unde in mathematica et in geometria, quae sunt 
+            </app>
+            tamquam vera pro inquisitione veritatis. 
+            Unde in mathematica et in geometria, quae sunt
             <app>
-              <lem>in primo gradu certitudinis praesupponuntur multa quae 
+              <lem>in primo gradu certitudinis praesupponuntur multa quae
                 <app>
                   <lem>non</lem>
                   <rdg wit="#S">nec</rdg>
-                </app> 
-                sunt conclusiones demonstratae nec principia indemonstrabilia. Similiter</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            <ref>
-              <app>
-                <lem><name ref="#Ptolemy">Ptolemaeus</name></lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              in <title ref="#Almagest">Almagesti</title>
-            </ref> praesupponit <unclear>epistillos et centricos, <!-- ms witness show a lot a strange spellings here --></unclear> 
+                </app>
+                sunt conclusiones demonstratae nec principia indemonstrabilia. 
+                Similiter 
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            <cit>
+              <ref xml:id="l8-Rd1e2385">
+                <app>
+                  <lem><name ref="#Ptolemy">Ptolemaeus</name></lem>
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                in 
+                <title ref="#Almagest">Almagesti</title>
+              </ref>
+            </cit> 
+            praesupponit 
+            <unclear>
+              epistillos et centricos,
+              <!-- ms witness show a lot a strange spellings here -->
+            </unclear>
             <app>
               <lem>non</lem>
               <rdg wit="#S">nec</rdg>
-            </app> 
-            tamen hoc est probatum nec demonstratum 
+            </app>
+            tamen hoc est probatum nec demonstratum
             <app>
               <lem>nec</lem>
               <rdg wit="#V">immo non</rdg>
-            </app> 
+            </app>
             <app>
               <lem>posset</lem>
               <rdg wit="#S">potest</rdg>
-            </app> 
+            </app>
             <app>
               <lem>etiam</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            probari 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            probari
             <app>
               <lem>nec</lem>
               <rdg wit="#V">sive</rdg>
-            </app> 
-            demonstrari, quo supposito 
+            </app>
+            demonstrari, quo supposito
             <app>
               <lem>de facili</lem>
               <rdg wit="#V">faciliter</rdg>
-            </app> 
-            salvatur diversitas motuum in corporibus caelestibus.</p>
-          
-          <p xml:id="l8-eqssda">Ex quo 
+            </app>
+            salvatur diversitas motuum in corporibus caelestibus.
+          </p>
+          <p xml:id="l8-eqssda">
+            Ex quo sequitur
             <app to="#l1-A">
-              <lem>sequitur</lem>
-              <rdg wit="#V" type="intextu">corollarie</rdg>
-          </app> 
-            quod maxima pars scientiae humanitus adinventae est quaedam fides praesupposita ex defectum rationum probabilium vel ex defectu rationum ad oppositum 
+              <lem n="sequitur"/>
+              <rdg wit="#V" type="variation-present">corollarie</rdg>
+            </app>
+            quod maxima pars scientiae humanitus 
+            adinventae est quaedam fides praesupposita ex
+            defectum rationum probabilium 
+            vel ex defectu rationum ad oppositum
             <app to="#l1-A">
               <lem>inducentium</lem>
               <rdg wit="#V">inducibilium</rdg>
-            </app> 
-            <cb ed="#V" n="19vb"/> 
-            Unde dicit quidam <name>philosophus</name> quid enim potest anima 
-            <cb ed="#R" n="13rb"/> 
-            ex propria natura cognoscere 
+            </app>
+            <cb ed="#V" n="b"/><!--V19vb--> 
+            Unde dicit quidam <name>philosophus</name> 
+            quid enim potest anima
+            <cb ed="#R" n="b"/><!--R13rb--> 
+            ex propria natura cognoscere quasi
             <app>
-              <lem>quasi</lem>
-              <rdg wit="#V" type="intextu">dicit</rdg>
-            </app> 
-            nihil. Unde sicut dicit 
-            <name ref="#Bradwardine">Bradwardinus</name> allegando <name>Philosophum,</name> 
+              <lem n="quasi"/>
+              <rdg wit="#V" type="variation-present">dicit</rdg>
+            </app>
+             nihil. 
+             Unde sicut dicit 
+            <ref xml:id="l8-Rd1e2498">
+              <name ref="#Bradwardine">Bradwardinus</name>
+            </ref> 
+            allegando <name>Philosophum</name>,
             <cit>
-              <quote>credo quod non plene 
-              <app>
-                <lem>cognovi</lem>
-                <rdg wit="#V">cognoscens</rdg>
-              </app>
-            </quote>
+              <quote xml:id="l8-Qd1e2509">
+                credo quod non plene
+                <app>
+                  <lem>cognovi</lem>
+                  <rdg wit="#V">cognoscens</rdg>
+                </app>
+              </quote>
               <bibl>Bradwardine; Cf. Plato ??</bibl>
-            </cit> 
-            minimam guttam aeque 
+            </cit>
+            minimam guttam aeque seu
             <app>
-              <lem>seu</lem>
-              <rdg wit="#SV" type="intext" cause="repetitio">seu</rdg>
-            </app> 
+              <lem n="seu"/>
+              <rdg wit="#SV" type="variation-present" cause="repetitio">seu</rdg>
+            </app>
             <app>
               <lem>minimum</lem>
               <rdg wit="#S">minimus</rdg>
-            </app> 
-            corpus, nam in illo corpore sunt infinitae 
+            </app>
+            corpus, 
+            nam in illo corpore sunt infinitae
             <app>
               <lem>figurae et infinitae <unclear>sphericis</unclear> et infinitae</lem>
-              <rdg wit="V" type="om."/>
-            </app> 
-            pyramides et sic de aliis.</p>
-          
-          <p xml:id="l8-eqsdaf">Ex 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            pyramides et sic de aliis.
+          </p>
+          <p xml:id="l8-eqsdaf">
+            Ex
             <app>
               <lem>ex quo</lem>
-              <rdg wit="V">et sic</rdg>
-          </app> 
-            sequitur quod quantumcumque aliquid cognoscimus in infinitum, plus illud ignoramus quam cognoscimus. Et ex hoc apparet debilitas humanae investigationis quantum est de se, intantum 
+              <rdg wit="#V">et sic</rdg>
+            </app>
+            sequitur quod quantumcumque aliquid cognoscimus in infinitum, 
+            plus illud ignoramus quam cognoscimus. 
+            Et ex hoc apparet debilitas humanae investigationis 
+            quantum est de se, intantum
             <app>
               <lem>est</lem>
               <rdg wit="#V #S">quod</rdg>
-            </app> 
-            cognitio huiusmodi infirmitatis est 
+            </app>
+            cognitio huiusmodi infirmitatis est
             <app>
               <lem>perfectior</lem>
               <rdg wit="#S">perfector</rdg>
-            </app> 
-            cognitio quam possumus humanitus 
+            </app>
+            cognitio quam possumus humanitus acquirere
             <app>
-              <lem>acquirere.</lem>
-              <rdg wit="#SV" type="corrDeletion">
-                <corr>
-                  <del>habere de deo per humanam investigationem esset ita minus perfecta quam praedicta</del>
-                </corr>
+              <lem n="acquirere"/>
+              <rdg wit="#SV" type="correction-deletion">
+                <del>
+                  habere de deo per humanam investigationem 
+                  esset ita minus perfecta quam praedicta
+                </del>
               </rdg>
-            </app> 
-            Ita quod se cognoscere 
+            </app>.
+            Ita quod se cognoscere
             <app>
               <lem>modicum</lem>
               <rdg wit="#S">modicus</rdg>
-            </app> 
+            </app>
             <app>
               <lem>et cognoscere se</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            ex 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            ex
             <app>
               <lem>natura sua propria</lem>
               <rdg wit="#V">humana natura</rdg>
-            </app> 
-            est nobilissimum humanorum 
+            </app>
+            est nobilissimum humanorum
             <app>
-              <lem>cognoscibilium,</lem>
+              <lem>cognoscibilium</lem>
               <rdg wit="#V">cognitionum</rdg>
-            </app> 
-            quia cognitio 
+            </app>,
+            quia cognitio quam
             <app>
-              <lem>quam</lem>
-              <rdg wit="#V" type="intextu">ego</rdg>
-            </app> 
+              <lem n="quam"/>
+              <rdg wit="#V" type="variation-present">ego</rdg>
+            </app>
             <app>
               <lem>haberem</lem>
               <rdg wit="#S">haberetur</rdg>
-            </app> 
-            de Deo per humanam investigationem esset ita minus perfecta 
+            </app>
+            de Deo per humanam investigationem esset ita minus perfecta
             <app>
               <lem>quam</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            praedicta 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            praedicta
             <app>
               <lem>cognitio</lem>
               <rdg wit="#V">cognitione</rdg>
-            </app> 
-            Et ideo de caelo venit <seg xml:lang="gr">notis elytos,</seg> 
+            </app>
+             Et ideo de caelo venit 
+            <foreign xml:lang="gr">notis elytos</foreign>,
             <app>
-              <lem>nomen Graecum,</lem>
-              <rdg wit="#R" type="om."/>
-            </app> 
-            id est, 
+              <lem>nomen Graecum</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            id est,
             <cit>
-              <quote>cognosce te ipsum et tuam fragilitatem.</quote>
-              <bibl>[common saying -- not sure what source to note]</bibl>
-            </cit> 
-            Unde illa cognitio maxime disponit ad fidem.</p>
-          
-          <p xml:id="l8-uhivms">Unde habita illa 
+              <quote xml:id="l8-Qd1e2679">cognosce te ipsum et tuam fragilitatem</quote>
+              <bibl>XXX<!--[common saying -\- not sure what source to note]--></bibl>
+            </cit>,
+            Unde illa cognitio maxime disponit ad fidem.
+          </p>
+          <p xml:id="l8-uhivms">
+            Unde habita illa 
             <app>
               <lem>homo</lem>
-              <rdg wit="#S" type="om."/>
+              <rdg wit="#S" type="variation-absent"/>
             </app> 
             libenter recipit fidem ut elevet 
             <app>
@@ -1420,16 +1750,21 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
               <rdg wit="#V">eam</rdg>
               <rdg wit="#S">eum</rdg>
             </app> 
-            ad maxima cognoscibilia, et ideo maximus philosophorum 
+            ad maxima cognoscibilia, 
+            et ideo maximus philosophorum 
             <app>
               <lem>reputatur</lem>
               <rdg wit="#V">reputatus</rdg>
             </app> 
             <name ref="#Socrates">Socrates,</name> 
-            unde quia nihil scripsit, et quia multa <name ref="#Aristotle">Aristoteles</name> scripsit et bene ideo 
+            unde quia nihil scripsit, 
+            et quia multa <name ref="#Aristotle">Aristoteles</name> 
+            scripsit et bene ideo 
             <app>
-              <lem>vocatur <name ref="#Aristotle">Aristoteles</name> princeps philosophorum, tamen alter reputatus est a philosophis maximus. Et</lem>
-              <rdg wit="#V" type="om."/>
+              <lem>vocatur <name ref="#Aristotle">Aristoteles</name> princeps philosophorum, 
+                tamen alter reputatus est a philosophis maximus. 
+                Et</lem>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             tamen quando multa 
             <app>
@@ -1448,35 +1783,39 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
             </app> 
             hoc maxime 
             <cit>
-              <quote>
+              <quote xml:id="l8-Qd1e2767">
                 <app>
                   <lem>scio</lem>
-                  <rdg wit="#R" type="corrReplace">
-                    <corr>
+                  <rdg wit="#R" type="correction-substitution">
+                    <subst>
                       <add>quod</add>
                       <del>qd</del>
-                    </corr>
+                    </subst>
                   </rdg>
-                </app> quod nescio,</quote>
-              <bibl>[source??]</bibl>
-            </cit> 
+                </app> 
+                quod nescio
+              </quote>
+              <bibl>XXX</bibl>
+            </cit>, 
             et ista propositio de vi vocis implicat contradictionem, 
             <app>
               <lem>et</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
-            ideo debet sic intelligi hoc maxime <mentioned>
+            ideo debet sic intelligi hoc maxime 
+            <mentioned>
               <app>
                 <lem>scio</lem>
-                <rdg wit="#SV" type="om."/>
+                <rdg wit="#SV" type="variation-absent"/>
               </app> 
-              quod nescio,</mentioned> id est, 
+              quod nescio
+            </mentioned>, 
+            id est,
+            quod
             <app>
-              <lem>quod</lem>
-              <rdg wit="#S" type="corrDeletion">
-                <corr>
-                  <del>ne</del>
-                </corr>
+              <lem n="quod"/>
+              <rdg wit="#S" type="correction-deletion">
+                <del>ne</del>
               </rdg>
             </app> 
             scio me 
@@ -1484,33 +1823,41 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
               <lem>nihil</lem>
               <rdg wit="#V">non</rdg>
             </app> 
-            scire vel modicum scire.</p>
-          
-          <p xml:id="l8-duqipi">Dicitur ulterius quod 
+            scire vel modicum scire.
+          </p>
+          <p xml:id="l8-duqipi">
+            Dicitur ulterius quod licet
             <app>
-              <lem>licet</lem>
-              <rdg wit="#V" type="intextu">et</rdg>
+              <lem n="licet"/>
+              <rdg wit="#V" type="variation-present">et</rdg>
             </app> 
             geometria 
             <app>
               <lem>sit</lem>
               <rdg wit="#V">scit</rdg>
             </app> 
-            de quantitate continua, tamen per eam non possumus cognoscere determinate quanta aliqua res sit. Ita quod pono istam propositionem: quod humanitus 
+            de quantitate continua, 
+            tamen per eam non possumus cognoscere determinate quanta aliqua res sit. 
+            Ita quod pono istam propositionem: quod humanitus 
             <app>
               <lem>et</lem>
-              <rdg wit="#V" type="om."/>
-              <rdg wit="#S" type="intextu" cause="repetitio">et</rdg>
-            </app> 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            <app>
+              <lem n="et"/>
+              <rdg wit="#S" type="variation-present" cause="repetitio">et</rdg>
+            </app>
             secundum investigationem humanam non est proprie
             <app>
               <lem>scibile</lem>
-              <rdg wit="#S" type="om."/>
+              <rdg wit="#S" type="variation-absent"/>
             </app> 
-            de aliqua re quanta sit, et per consequens geometria fundatur super principia ignota. Probatur conclusio quia si sic, 
+            de aliqua re quanta sit, 
+            et per consequens geometria fundatur super principia ignota. 
+            Probatur conclusio quia si sic, 
             <app>
               <lem>vel</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             hoc esset per aliam quantitatem 
             <app>
@@ -1520,34 +1867,42 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
             illi quantitati, et hoc non quia 
             <app to="#l1-A">
               <lem>non</lem>
-              <rdg wit="V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             potest 
             <app>
-              <lem>constare nobis quin inter <c>A</c> et <c>B</c> sit excessus quia non sequitur a nobis non 
+              <lem>
+                constare nobis quin inter <c>A</c> et <c>B</c> 
+                sit excessus quia non sequitur a nobis non
+                percipitur
                 <app>
-                  <lem>percipitur</lem>
-                  <rdg wit="#SV" type="corrDeletion">
-                    <corr>
-                      <del>assen</del>
-                    </corr>
+                  <lem n="percipitur"/>
+                  <rdg wit="#SV" type="correction-deletion">
+                    <del>assen</del>
                   </rdg>
-                  </app> 
-                excessus inter <c>A</c> et <c>B</c> igitur inter <c>A</c> et <c>B</c> non est excessus quia potest</lem>
-              <rdg wit="#V" type="om."/>
+                </app> 
+                excessus inter <c>A</c> et <c>B</c>, 
+                igitur inter <c>A</c> et <c>B</c> non est excessus quia potest
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             ibi esse excessus a nobis 
-            <cb ed="#V" n="20ra"/> 
-            imperceptibilis ut notum est. Item quaereretur de 
+            <cb ed="#V" n="20-r"/> 
+            <cb ed="#V" n="a"/> 
+            imperceptibilis ut notum est. 
+            Item quaereretur de 
             <app>
               <lem>illa</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app>
             alia quantitate per 
             <app>
               <lem><unclear>quid</unclear></lem>
               <rdg wit="#V">quam</rdg>
-              <note xml:lang="en">I'm still unclear about the sense here. "quam" may be preferable since it seems to agree in gender with "illa alia quantitate"</note>
+              <note xml:lang="en">
+                I'm still unclear about the sense here. 
+                "quam" may be preferable since it seems to agree in gender with "illa alia quantitate"
+              </note>
             </app> 
             esset 
             <app>
@@ -1556,81 +1911,102 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
             </app> 
             <app>
               <lem>utrum</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
-            per se ipsam vel per aliam. Si per seipsam, ita erat standum in prima nec per aliam, quia 
+            per se ipsam vel per aliam. 
+            Si per seipsam, 
+            ita erat standum in prima nec per aliam, quia 
             <app>
               <lem>tunc</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
-            sic procederetur in infinitum; nec valet, si dicatur quod tandem deveniemus 
-            <cb ed="#R" n="13va"/> 
+            sic procederetur in infinitum; 
+            nec valet, si dicatur quod tandem deveniemus 
+            <pb ed="#R" n="13-v"/>
+            <cb ed="#R" n="a"/>
             ad 
             <app>
               <lem>unam</lem>
-              <rdg wit="V">aliquam</rdg>
+              <rdg wit="#V">aliquam</rdg>
             </app> 
             quantitatem quae 
             <app>
               <lem>erit</lem>
               <rdg wit="#V">esset</rdg>
             </app> 
-            nobis de se nota, quia in tribus casibus staret quod nos iudicando 
+            nobis de se nota, 
+            quia in tribus casibus staret quod nos iudicando 
             <app>
               <lem>secundum</lem>
-              <rdg wit="V">de</rdg>
+              <rdg wit="#V">de</rdg>
             </app> 
             <app>
               <lem>eam</lem>
               <rdg wit="#V">ea</rdg>
             </app> 
-            erraremus. In primo iudicando quod aliqua re non augmentata 
+            erraremus. 
+            In primo iudicando quod aliqua re non augmentata 
             <app>
-              <lem>esse maiorem in duplo quam ante. In secundo casu eadem re non augmentata</lem>
-              <rdg wit="#R #SV" type="om."/>
-              <note xml:lang="en">This is a significant omission by R and SV. Here they leave out the "in secundo casu" which clearly comes between the "in primo" and the "in tertio"</note>
+              <lem>
+                esse maiorem in duplo quam ante. 
+                In secundo casu eadem re non augmentata
+              </lem>
+              <rdg wit="#R #SV" type="variation-absent"/>
+              <note xml:lang="en">This is a significant omission by R and SV. 
+                Here they leave out the "in secundo casu" 
+                which clearly comes between the "in primo" and the "in tertio".
+              </note>
             </app> 
-            nec diminuta esse minorem in duplo quam ante. In tertio casu eadem re augmentata in duplo iudicaremus esse praecise tantam sicut ante augmentationem. Primus casus est quod omnes 
+            nec diminuta esse minorem in duplo quam ante. 
+            In tertio casu eadem re augmentata in duplo iudicaremus 
+            esse praecise tantam sicut ante augmentationem. 
+            Primus casus est quod omnes aliae 
             <app>
-              <lem>aliae</lem>
-              <rdg wit="#S" type="corrDeletion">
-                <corr>
-                  <del rend="strikethrough">partes</del>
-                </corr>
+              <lem n="aliae"/>
+              <rdg wit="#S" type="correction-deletion">
+                <del rend="strikethrough">partes</del>
               </rdg>
             </app> 
-            quantitates ab illa de se nota diminueretur ad sub duplo imperceptibiliter per Dei potentiam. 
+            quantitates ab illa de se nota diminueretur 
+            ad sub duplo imperceptibiliter per Dei potentiam. 
             <app>
               <lem>Secundus casus est quod omnes quantitates 
                 <app>
                   <lem>aliae</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app> 
                 ab illa 
                 <app>
                   <lem>quantitate</lem>
-                  <rdg wit="#V" type="om."/>
-                </app> 
-            per se nota augmentarentur in duplo imperceptibiliter. Tertius casus est quod omnes quantitates generaliter augmentarentur in duplo etiam imperceptibiliter.</lem>
+                  <rdg wit="#V" type="variation-absent"/>
+                </app>
+                per se nota augmentarentur in duplo imperceptibiliter. 
+                Tertius casus est quod omnes quantitates generaliter 
+                augmentarentur in duplo etiam imperceptibiliter
+              </lem>
               <rdg wit="#V">Tertius casus venit ante secundus casus</rdg>
-              <note xml:lang="en">This is a difficult variant to describe in the encoding. Basically V presents the "tertius casus" before the "secundus casus"</note>
-            </app> 
+              <note xml:lang="en">
+                This is a difficult variant to describe in the encoding. 
+                Basically V presents the "tertius casus" before the "secundus casus".
+              </note>
+            </app>. 
             Et consimiliter posset dici 
             <app>
               <lem>de motu generationis</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             quod non est nobis evidens 
             <app>
               <lem>naturaliter</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             aliquid 
             <app>
               <lem>generari</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
-            et ita de motibus corporum caelestium de tarditate et velocitate motuum, 
+            et ita de motibus corporum caelestium 
+            de tarditate et velocitate motuum, 
             <app>
               <lem>et</lem>
               <rdg wit="#V">ita</rdg>
@@ -1643,27 +2019,30 @@ MAROUN AOUAD, 3 ts., París, Vrin, 2002). --></bibl>
             <name ref="#Sortes">Sortem</name> 
             <app>
               <lem>durare</lem>
-              <rdg wit="#R" type="corrReplace">
-                <corr>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
                   <del>manere</del>
                   <add>durare</add>
-                </corr>
+                </subst>
               </rdg>
             </app> 
-            per annum, qui solum duraret per diem, et e converso et sic de 
+            per annum, 
+            qui solum duraret per diem, 
+            et e converso et sic de 
             <app>
-              <lem>aliis,</lem>
+              <lem>aliis</lem>
               <rdg wit="#V #S">similibus</rdg>
-            </app> 
+            </app>,
             <app>
               <lem>ista</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
             </app> 
             <app>
               <lem>patent</lem>
               <rdg wit="#V">patet</rdg>
             </app> 
-            intuenti.</p>
+            intuenti.
+          </p>
         </div>
       </div>
     </body>
