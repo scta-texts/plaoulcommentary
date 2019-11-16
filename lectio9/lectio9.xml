@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -7,18 +7,16 @@
         <editor xml:id="JW">Jeffrey C. Witt</editor>
       </titleStmt>
       <editionStmt>
-        <edition n="2011.10-dev-master">
+        <edition n="0.0.0-dev">
           <title>Lectio 9, De fide</title>
           <date when="2011-10-04">October 04, 2011</date>
         </edition>
       </editionStmt>
       <publicationStmt>
-        <publisher>Lombard Press</publisher>
-        <pubPlace>Sacramento, CA</pubPlace>
+        <authority>SCTA</authority>
         <availability status="free">
-          <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
         </availability>
-        <date when="2011-03-25">March 23rd, 2011</date>  
       </publicationStmt>
       <sourceDesc>
         <listWit>
@@ -30,750 +28,1041 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
     </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text xml:lang="la">
     <front>
-    <div type="include-list"/>  
+      <div xml:id="starts-on">
+        <pb ed="#R" n="13-v"/>
+        <cb ed="#R" n="a"/>
+        <pb ed="#S" n="16-v"/>
+        <cb ed="#S" n="b"/>
+        <pb ed="#SV" n="199-r"/>
+        <cb ed="#SV" n="a"/>
+        <pb ed="#V" n="20-r"/>
+        <cb ed="#V" n="a"/>
+      </div>
     </front>
     <body>
       <div xml:id="lectio9">
-        <head xml:id="l9-Hd1e3488" subtype="title">Lectio 9, Prologus</head>
+        <head xml:id="l9-Hd1e3488">Lectio 9, Prologus</head>
         <div xml:id="l9-Dd1e3491">
-          
           <head xml:id="l9-Hrlprlp">[Recapitulatio lectionis praecedentis]</head>
-          
-          <p xml:id="l9-seqcpt">Sciendum 
+          <p xml:id="l9-seqcpt">
+            Sciendum
             <app>
               <lem>est</lem>
-              <rdg wit="#R" type="om."/>
-            </app> 
-            quod in lectione 
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+             quod in lectione
             <app>
               <lem>praecedenti</lem>
-              <rdg wit="#R" type="corrReplace">
-                <corr>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
                   <del rend="strikethrough">pnu</del>
                   <add type="inline">praecedenti</add>
-                </corr>
+                </subst>
               </rdg>
-            </app> 
-            fuit 
+            </app>
+            fuit
             <app>
               <lem>tactum</lem>
-              <rdg wit="#R" type="corrReplace">
-                <corr>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
                   <del rend="strikethrough">tractum</del>
                   <add place="inline">tactum</add>
-                </corr>
+                </subst>
               </rdg>
-            </app> 
-            de infirmitate ingenii humani, et eius vulneratione ex pluribus causis ibidem tactis. Et quia aliqua exempla posui, quae non videntur aliquibus bene declarata, ideo aliqua repetam ad ostendendum debilitatem ingenii humani. Ego enim in ultimo exemplo descendi ad obiectum infimum, scilicet, ad quantitatem continuam, et ibidem dictum fuit 
+            </app>
+            de infirmitate ingenii humani, 
+            et eius vulneratione ex pluribus causis ibidem tactis.
+            Et quia aliqua exempla posui, 
+            quae non videntur aliquibus bene declarata, ideo aliqua
+            repetam ad ostendendum debilitatem ingenii humani. 
+            Ego enim in ultimo exemplo descendi
+            ad obiectum infimum, 
+            scilicet ad quantitatem continuam, 
+            et ibidem dictum fuit quod
             <app>
-              <lem>quod</lem>
-              <rdg wit="#V #S" type="intextu">
+              <lem n="quod"/>
+              <rdg wit="#V #S" type="variation-present">
                 <add place="inline">nos</add>
               </rdg>
-            </app> 
-            non habemus aliquod certum medium ad concludendum de aliqua re quanta sit proprie. Nam quacumque quantitate data 
+            </app>
+            non habemus aliquod certum medium 
+            ad concludendum de aliqua re quanta sit proprie. 
+            Nam quacumque quantitate data
             <app>
               <lem>ipsa</lem>
               <rdg wit="#SV #S">ipsam</rdg>
-            </app> 
-            <cb ed="#V" n="20rb"/> 
-            est nota per aliam, ita quod solum cognoscimus 
+            </app>
+            <cb ed="#V" n="b"/><!--V20rb--> 
+            est nota per aliam, 
+            ita quod solum cognoscimus
             <app>
               <lem>quantitates</lem>
               <rdg wit="#V">quantitatem</rdg>
-            </app> 
-            relative comparando unam ad aliam, ita quod non possumus realiter de aequalitate 
+            </app>
+            relative comparando unam ad aliam, 
+            ita quod non possumus realiter de aequalitate
             <app>
-              <lem>iudicare proprie,</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            nec aliqua quantitas potest nobis simpliciter esse nota ut patuit in tribus casibus ibidem positis. Ideo nescimus proprie quanta res est nisi sciamus in Verbo vel per revelationem specialem a Spiritu Sancto. Ideo non est mirum si, respectu 
+              <lem>iudicare proprie</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>,
+            nec aliqua quantitas potest nobis simpliciter esse nota, 
+            ut patuit in tribus casibus
+            ibidem positis. 
+            Ideo nescimus proprie quanta res est nisi sciamus in Verbo vel per
+            revelationem specialem a Spiritu Sancto. 
+            Ideo non est mirum si, 
+            respectu
             <app>
-              <lem>credendorum,</lem>
+              <lem>credendorum</lem>
               <rdg wit="#V">credendo</rdg>
-            </app> 
+            </app>,
             <app>
               <lem>ponatur</lem>
               <rdg wit="#V">ponamus</rdg>
-            </app> 
-            requirere 
+            </app>
+            requirere
             <app>
-              <lem>fides,</lem>
-              <rdg wit="#V">fidem,</rdg>
-            </app> 
-            quando ad cognoscendum de aliqua re 
+              <lem>fides</lem>
+              <rdg wit="#V">fidem</rdg>
+            </app>,
+            quando ad cognoscendum de aliqua re
             <app>
-              <lem>quanta sit oportet ponere fidem. Ponebatur communiter quod nedum est ita de quantitate</lem>
-              <rdg wit="#V" type="om." cause="homoteleuton"/>
-            </app> 
-            continua, sed etiam de velocitate et tarditate motuum et de generatione et corruptione rerum. Unde quia natura est subiecta Deo 
+              <lem>
+                quanta sit oportet ponere fidem. 
+                Ponebatur communiter quod nedum est ita de quantitate
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+            </app>
+            continua, 
+            sed etiam de velocitate et tarditate motuum 
+            et de generatione et corruptione rerum. 
+            Unde quia natura est subiecta Deo
             <app>
               <lem>sicut</lem>
               <rdg wit="#R">sicut met</rdg>
-            </app> 
-            testatur 
+            </app>
+            testatur
             <app>
               <lem><name ref="#Aristotle">Philosopho</name></lem>
               <rdg wit="#V">Metaphysiciis</rdg>
-            </app> 
-            quod quaelibet natura particularis est subiecta naturae universali; quaelibet res magis insequitur finem suum ultimate intentum et 
+            </app>
+            quod quaelibet natura particularis est subiecta naturae universali; 
+            quaelibet res magis insequitur finem suum ultimate intentum et
             <app>
               <lem>ordinarium</lem>
               <rdg wit="#V">ordinem</rdg>
-            </app> 
-            <cb ed="#R" n="13vb"/> 
-            illius finis 
+            </app>
+            <cb ed="#R" n="b"/><!--R13vb--> 
+            illius finis
             <app>
               <lem>quam</lem>
               <rdg wit="#V">quod</rdg>
-            </app> 
-            quodcumque aliud. Ideo dicitur quod possibile fuit ex congruentia regnis rerum, caelum aliquando velocius, aliquando tardius moveri; ita quod secundum quod caelum velocius movetur secundum hoc: proveniunt influentiae nobiliores et perfectiores. Ideo bene potest salvari quod antiquitus caelum velocius movebatur quam nunc 
+            </app>
+            quodcumque aliud. 
+            Ideo dicitur quod possibile fuit ex congruentia regnis rerum, caelum
+            aliquando velocius, aliquando tardius moveri; 
+            ita quod secundum quod caelum velocius
+            movetur secundum hoc: 
+            proveniunt influentiae nobiliores et perfectiores. 
+            Ideo bene potest salvari 
+            quod antiquitus caelum velocius movebatur quam nunc
             <app>
-              <lem>movetur.</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            Et hoc propter nequitiam vel malitiam hominum, 
+              <lem>movetur</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            Et hoc propter nequitiam vel malitiam hominum,
             <app>
               <lem>et</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            hoc ex ordinatione divina, et hoc testatur Scriptura Sacra 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            hoc ex ordinatione divina, 
+            et hoc testatur Scriptura Sacra dicens
             <app>
-              <lem>dicens</lem>
-              <rdg wit="#V" type="intextu">duae</rdg>
-            </app> 
+              <lem n="dicens"/>
+              <rdg wit="#V" type="variation-present">duae</rdg>
+            </app>
             <cit>
-              <quote xml:id="l9-Qd1e3686" source="http://scta.info/resource/lev26_19">dabo eis caelum ferreum,</quote>
+              <quote xml:id="l9-Qd1e3686" source="http://scta.info/resource/lev26_19">
+                dabo eis caelum ferreum
+              </quote>
               <bibl>Leviticus 26:19</bibl>
-            </cit> 
-            id est, influentiam malam. Ex hoc bene salvaretur quod a principio motus caeli erant velociores, et consequenter quod influentiae erant perfectiores et meliores, et consequenter, 
+            </cit>
+            id est, influentiam malam. 
+            Ex hoc bene salvaretur quod a principio motus caeli erant velociores, 
+            et consequenter quod influentiae erant perfectiores et meliores, 
+            et consequenter,
             <app>
               <lem>complexiones</lem>
               <rdg wit="#R">complexio</rdg>
-            </app> 
-            homini et aliarum rerum quam nunc sit. Et consequenter salvaretur quod antiquitus homines vixissent per tot annos sicut legitur in 
+            </app>
+            homini et aliarum rerum quam nunc sit. 
+            Et consequenter salvaretur quod antiquitus
+            homines vixissent per tot annos sicut legitur in
             <app>
-              <lem>Scripturis,</lem>
+              <lem>Scripturis</lem>
               <rdg wit="#V">Scriptura</rdg>
-            </app> 
-            sed non tanto tempore vocando annum, 
+            </app>,
+            sed non tanto tempore vocando annum,
             <app>
-              <lem>scilicet,</lem>
-              <rdg wit="#R #S" type="om."/>
-            </app> 
-            completam revolutionem solis non quod annus habuisset tot dies et 
+              <lem>scilicet</lem>
+              <rdg wit="#R #S" type="variation-absent"/>
+            </app>,
+            completam revolutionem solis 
+            non quod annus habuisset tot dies et
             <app>
               <lem>tot</lem>
-              <rdg wit="#R #S" type="om."/>
-            </app> 
-            horas sicut nunc propter velocitatem motus caeli pro tunc.</p> 
-          
+              <rdg wit="#R #S" type="variation-absent"/>
+            </app>
+             horas sicut nunc propter velocitatem motus caeli pro tunc.
+          </p>
           <div xml:id="l9-Dd1e3729">
             <head xml:id="l9-Hcercer">
               <supplied>Conclusio ex recapitulatione</supplied>
             </head>
-     
-            <p xml:id="l9-eiefhs">Ex ista enim debilitate ingenii humani ad fidem persuadetur quod fides est assumenda 
+            <p xml:id="l9-eiefhs">
+              Ex ista enim debilitate ingenii humani ad fidem persuadetur quod
+              fides est assumenda
               <app>
                 <lem>quod fides est</lem>
                 <rdg wit="#V">et</rdg>
-              </app> 
-              summe necessaria tam in agibilibus quam in 
-              <cb ed="#V" n="20va"/> 
-              <app> <!-- dbcheck -->
+              </app>
+              summe necessaria tam in agibilibus quam in
+              <pb ed="#V" n="20-v"/>
+              <cb ed="#V" n="a"/>
+              <app>
+                <!-- dbcheck -->
                 <lem>scibilibus</lem>
                 <rdg wit="#R">scabilibus</rdg>
                 <rdg wit="#S">factibilibus</rdg>
                 <rdg wit="#V">factibilis</rdg>
-              </app> 
-              quam in quibuscumque aliis, ita quod, ratione huiusmodi defectus et debilitatis ingenii humani, antiqui philosophi discordaverunt inter se de felicitate et obiecto felicitatis, quare mihi videtur quod iuvenibus studentibus in theologia primitus debent eis materia fidei tractari, quia est fundamentum omnium aliarum veritatum. Modo habito fundamento, facilius habentur sequentia.</p>
-            </div>
+              </app>
+              quam in quibuscumque aliis, 
+              ita quod, ratione huiusmodi defectus et debilitatis ingenii humani, 
+              antiqui philosophi discordaverunt inter se de felicitate et obiecto felicitatis, 
+              quare mihi videtur quod iuvenibus studentibus in theologia primitus
+              debent eis materia fidei tractari 
+              quia est fundamentum omnium aliarum veritatum. 
+              Modo habito fundamento, 
+              facilius habentur sequentia.
+            </p>
+          </div>
         </div>
         <div xml:id="l9-Dd1e3770">
           <head xml:id="l9-Hpipipi">
             <supplied>Plures infirmitates</supplied>
           </head>
-          
-          <p xml:id="l9-pisiid">Praeter infirmitates 
+          <p xml:id="l9-pisiid">
+            Praeter infirmitates
             <app>
               <lem>superius</lem>
               <rdg wit="#V">huius</rdg>
-            </app> 
-            tactas, est una, quae forte habebit locum, licet originaliter 
+            </app>
+            tactas, est una, quae forte habebit locum, 
+            licet originaliter
             <app>
               <lem>veniat</lem>
               <rdg wit="#V #S">proveniat</rdg>
-            </app> 
-            ex prima, scilicet, ex pena originalis culpae, scilicet, 
+            </app>
+            ex prima, 
+            scilicet ex pena originalis culpae, 
+            scilicet
             <app>
-              <lem>daemonis temptatio, nam ex originali culpa et pena</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            caro nedum rebellat rationi ratio subicit sibi 
+              <lem>
+                daemonis temptatio, 
+                nam ex originali culpa et pena
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            caro nedum rebellat rationi ratio subicit sibi
             <app>
               <lem>rationem</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            immo 
-            <app> <!-- dbcheck; not showing up on juxta -->
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+             immo
+            <app>
+              <!-- dbcheck; not showing up on juxta -->
               <lem>etiam</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            daemones. Ita quod homo non potest vexationes et temptationes daemonium 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            daemones. 
+            Ita quod homo non potest vexationes et temptationes daemonium
             <app>
               <lem>repellere</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            sine speciali gratia et iuvamine ipsius Dei.</p> 
-        
-          <p xml:id="l9-eetsiv">Est etiam torpor et desidia, est etiam curiositas, quae vocatur quaedam adhaesio sive investigatio veritatum impertinentium saluti. Pro quo est notandum quod secundum opinionem 
-            <ref xml:id="l9-Rd1e3836">
-              <name ref="#WilliamOfParis">Guillelmi Parisiensis</name> in libro suo 
-            <app>
-              <lem><title ref="#OnFaithAndLaws">De fide et legibus</title>
-              </lem>
-              <rdg wit="#V"><title>de sacris</title></rdg>
+              <rdg wit="#V" type="variation-absent"/>
             </app>
+            sine speciali gratia et iuvamine ipsius Dei.
+          </p>
+          <p xml:id="l9-eetsiv">
+            Est etiam torpor et desidia, 
+            est etiam curiositas, quae vocatur
+            quaedam adhaesio sive investigatio veritatum impertinentium saluti. 
+            Pro quo est notandum
+            quod secundum opinionem 
+            <ref xml:id="l9-Rd1e3836">
+              <name ref="#WilliamOfParis">Guillelmi Parisiensis</name> 
+              in libro suo
+              <app>
+                <lem><title ref="#OnFaithAndLaws">De fide et legibus</title>
+                </lem>
+                <rdg wit="#V"><title>de sacris</title></rdg>
+              </app>
             </ref> 
-            et in hoc concordat 
+            et in hoc concordat
             <app>
               <lem>secum</lem>
               <rdg wit="#R #SV #S">se</rdg>
-            </app> 
-            <name ref="#WilliamOfAuxerre">Guillelmus Altissiodorensis</name> quod intellectus habet primam veritatem pro sua sponsa vera cui debet ultimate coniungi et quae est perfectio ultimata et summa ipsius intellectus. Dicit consequenter quod omnes aliae veritates solum sunt 
-            <cb n="14ra" ed="#R"/> 
-            ab intellectu complendae in relatione ad primam veritatem, ita quod imaginatio sua est quod, sicut dilectio non 
+            </app>
+            <name ref="#WilliamOfAuxerre">Guillelmus Altissiodorensis</name> 
+            quod intellectus habet
+            primam veritatem pro sua sponsa vera 
+            cui debet ultimate coniungi et quae est perfectio
+            ultimata et summa ipsius intellectus. 
+            Dicit consequenter quod omnes aliae veritates
+            solum sunt
+            <pb n="14-r" ed="#R"/>
+            <cb n="a" ed="#R"/>
+            ab intellectu complendae in relatione ad primam veritatem, 
+            ita quod imaginatio sua est quod, 
+            sicut dilectio non
             <app>
               <lem>est</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            bene regulata, quae non est in dilectione Dei relata, ita assensus sive veritas non est consideranda, nisi in ordine ad primam veritatem, 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+             bene regulata, quae non est in dilectione Dei relata, 
+             ita assensus sive veritas non est
+            consideranda, nisi in ordine ad primam veritatem,
             <app>
-              <lem>referendo eam ad primam veritatem.</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            Si autem contingat quod intellectus assentiat alicui veritati non referendo ipsam in primam veritatem, tunc dicit <name>Guillelmus</name> quod est fornicatio spiritualis et talis veritas non perficit intellectum; immo est dispositio 
+              <lem>referendo eam ad primam veritatem</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+            Si autem contingat
+            quod intellectus assentiat alicui veritati 
+            non referendo ipsam in primam veritatem, 
+            tunc dicit <name>Guillelmus</name> quod est fornicatio spiritualis et
+            talis veritas non perficit intellectum; 
+            immo est dispositio distrahens
             <app>
-              <lem>distrahens</lem>
-              <rdg wit="#V #S" type="intextu">
-                <add place="inline">a</add>
-              </rdg>
-            </app> 
-            consecutive sive investigatione veritatis.</p>
-          
+              <lem n="distrahens"/>
+              <rdg wit="#V #S" type="variation-present">a</rdg>
+            </app>
+            consecutive sive investigatione veritatis.
+          </p>
         </div>
         <div xml:id="l9-Dd1e3902">
           <head xml:id="l9-Hdpdpdp">
-          <supplied>Duae propositiones</supplied>
-        </head>
-          
-          <p xml:id="l9-epiaca">Ex 
+            <supplied>Duae propositiones</supplied>
+          </head>
+          <p xml:id="l9-epiaca">
+            Ex
             <app>
               <lem>praedictis</lem>
               <rdg wit="#V">praecedentibus</rdg>
-            </app> 
-            inferuntur 
+            </app>
+            inferuntur
             <app>
               <lem>duae</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            propositiones. Prima est quod respectu temporalium 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            propositiones. 
+            Prima est quod respectu temporalium et
             <app>
-              <lem>et</lem>
-              <rdg wit="#V" type="intextu">
-                <add place="inline">vero</add>
-              </rdg>
-            </app> 
-            naturalium et respectu veritatum politicae necessariarum oportet 
-            <cb ed="#V" n="20vb"/> 
-            uti fide quadam. Unde in regimine politico, ratione debilitatis ingenii 
+              <lem n="et"/>
+              <rdg wit="#V" type="variation-present">vero</rdg>
+            </app>
+            naturalium et respectu veritatum politicae necessariarum oportet
+            <cb ed="#V" n="b"/><!--20vb--> 
+            uti fide quadam. 
+            Unde in regimine politico, 
+            ratione debilitatis ingenii
             <app>
-              <lem>humani,</lem>
-              <rdg wit="#R" type="om."/>
-            </app> 
-            oportet quod servus regatur a domino et quod credat domino suo. Item infirmi adhibent fidem et credunt medico suo, quia infirmus, dum est infirmus, non potest investigare medicinam curativam sui morbi. Item in consiliis sunt aliqui qui non possunt comprehendere aliquas veritates, ideo oportet quod credant aliis qui sunt 
+              <lem>humani</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+            oportet quod servus regatur a domino et quod credat domino suo. 
+            Item infirmi adhibent fidem et credunt medico suo 
+            quia infirmus, dum est infirmus, 
+            non potest investigare
+            medicinam curativam sui morbi. 
+            Item in consiliis sunt aliqui qui non possunt
+            comprehendere aliquas veritates, 
+            ideo oportet quod credant aliis qui sunt
             <app>
               <lem>excellentiores.</lem>
               <rdg wit="#R">elevantiores</rdg>
-            </app> 
-            Et generaliter in omnibus, oportet 
+            </app>
+            Et generaliter in omnibus, 
+            oportet
             <app>
               <lem>quod</lem>
               <rdg wit="#V">ut</rdg>
-            </app> 
-            credatur magis elevantibus et 
+            </app>
+            credatur magis elevantibus et
             <app>
-              <lem>superientibus.</lem>
-              <rdg wit="#V">sapientibus.</rdg>
-            </app> 
-            Item caecus credit videnti, 
+              <lem>superientibus</lem>
+              <rdg wit="#V">sapientibus</rdg>
+            </app>.
+            Item caecus credit videnti,
             <app>
               <lem>ideo</lem>
               <rdg wit="#V">immo</rdg>
-            </app> 
-            submittit se bruto ut docet communis experientia; ergo naturalis ordo etiam politicus in hiis in quibus est defectus potentiae oportet se submittere alteri, et nedum aequali, sed minori, quia caecus communiter ducitur a bruto. Et per consequens 
+            </app>
+            submittit se bruto ut docet communis experientia; 
+            ergo naturalis ordo etiam politicus
+            in hiis in quibus est defectus potentiae 
+            oportet se submittere alteri, 
+            et nedum aequali, sed minori 
+            quia caecus communiter ducitur a bruto. 
+            Et per consequens
             <app>
               <lem>cum</lem>
               <rdg wit="#V">quod</rdg>
-            </app> 
-            intellectus humanus propter impedimenta prius dicta sit quasi secutiens, et hoc testatur 
+            </app>
+            intellectus humanus propter impedimenta prius dicta sit quasi secutiens, et hoc
+            testatur 
             <ref xml:id="l9-Rd1e3997" corresp="#l9-Qd1e4025">
-              <name ref="#Aristotle">Aristoteles</name></ref> et 
+              <name ref="#Aristotle">Aristoteles</name>
+            </ref> 
+            et 
             <ref xml:id="l9-Rd1e4003">
               <name ref="#Averroes">Commentator</name> IIo <title>Metaphysicae</title>
-            </ref> 
+            </ref>
             <app>
               <lem>dicens quod</lem>
-              <rdg wit="#V" type="om."/>
+              <rdg wit="#V" type="variation-absent"/>
               <rdg wit="#S">dicens</rdg>
-            </app> 
+            </app>
             <cit>
-              <quote xml:id="l9-Qd1e4025" source="http://scta.info/resource/aristmet-l2">sicut se habet oculus noctuae 
+              <quote xml:id="l9-Qd1e4025" source="http://scta.info/resource/aristmet-l2">
+                sicut se
+                habet oculus noctuae
                 <app>
                   <lem>ad lumen solis</lem>
-                  <rdg wit="#V" type="om."/>
+                  <rdg wit="#V" type="variation-absent"/>
                 </app>
               </quote>
-            </cit> 
-            etc. Videtur quod fides sit accipienda tamquam summe necessaria ad cognoscendum arduissima.</p>
-          
-          <p xml:id="l9-cimnei">Circa istam materiam proposueram adducere multas apparentias falsas, sed ne 
+            </cit>
+            etc. 
+            Videtur quod fides sit accipienda 
+            tamquam summe necessaria ad cognoscendum arduissima.
+          </p>
+          <p xml:id="l9-cimnei">
+            Circa istam materiam proposueram adducere multas apparentias falsas,
+            sed ne
             <app>
               <lem>nimis</lem>
               <rdg wit="#V">magis</rdg>
-            </app> 
-            vos <unclear>attediam</unclear>, dico pro praesenti quod 
+            </app>
+            vos <unclear>attediam</unclear>, 
+            dico pro praesenti quod
             <app>
               <lem>debilitatem</lem>
               <rdg wit="#V">debilitas</rdg>
-            </app> ingenii 
+            </app>
+            ingenii
             <app>
               <lem>humani</lem>
-              <rdg wit="#R #S" type="om."/>
-            </app> 
-            alibi 
+              <rdg wit="#R #S" type="variation-absent"/>
+            </app>
+            alibi
             <app>
               <lem>
                 <unclear>exprimemus</unclear>
               </lem>
               <rdg wit="#V">expitur</rdg>
-            </app> 
-            quam in materia fidei aequae 
-            <app> <!-- dbcheck svict here -->
+            </app>
+            quam in materia fidei aequae
+            <app>
+              <!-- dbcheck svict here -->
               <lem>vehementis patet</lem>
               <rdg wit="#S">vehementor patet</rdg>
-            </app> 
-            clare in certis sophisticibus et in aliquibus propositionibus geometriae et astrologiae et in materia proportionum. Ita quod multae reperiuntur propositiones ita difficiles ad sustinendum, sicut sunt articuli fidei, unde, licet in materia insolubilium multi multa dixerint, tamen numquam materia illa fuit bene soluta. Et 
+            </app>
+             clare in certis sophisticibus 
+             et in aliquibus propositionibus geometriae et astrologiae
+            et in materia proportionum. 
+            Ita quod multae reperiuntur propositiones ita difficiles ad
+            sustinendum, sicut sunt articuli fidei, 
+            unde, 
+            licet in materia insolubilium multi multa dixerint, 
+            tamen numquam materia illa fuit bene soluta. 
+            Et
             <app>
-              <lem>gratia exempli,</lem>
-              <rdg wit="#V">verbi gratia,</rdg>
-            </app> 
-            capio 
+              <lem>gratia exempli</lem>
+              <rdg wit="#V">verbi gratia</rdg>
+            </app>,
+            capio
             <app>
               <lem>minimum</lem>
-              <rdg wit="#V" type="corrReplace">
-                <corr>
+              <rdg wit="#V" type="correction-substitution">
+                <subst>
                   <del rend="strikethrough">unum</del>
                   <add place="inline">minimum</add>
-                </corr>
+                </subst>
               </rdg>
-            </app> 
-            insolubilium, scilicet, 
+            </app>
+            insolubilium, scilicet,
             <app>
               <lem>istud</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            <name ref="#Sortes">Sortes</name> dicit falsum supposito quod non dicat aliam propositionem et quod remaneant significationes terminorum, 
-            <app> <!-- dbcheck sorb "tunc" vs "etiam" here -->
-              <lem>et tunc 
-                <cb ed="#R" n="14rb"/> 
-                introduceretur sicut fit communiter.</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            <name ref="#Sortes">Sortes</name> dicit falsum supposito quod non dicat aliam
+            propositionem et quod remaneant significationes terminorum,
+            <app>
+              <!-- dbcheck sorb "tunc" vs "etiam" here -->
+              <lem>
+                et tunc
+                <cb ed="#R" n="14rb"/><!--R14rb--> 
+                introduceretur sicut fit communiter
+              </lem>
               <rdg wit="V">etc.</rdg>
-            </app> Difficultas est hic maxima ex parte circulationis intellectus, nam intellectus iudicando de veritate alicuius propositionis habet istum modum quod primo considerat rem per propositionem significatam 
-            <cb n="21ra" ed="#V"/> 
-            et consequenter considerat qualiter se habeat, et 
+            </app>.
+            Difficultas est hic maxima ex parte circulationis intellectus, 
+            nam intellectus iudicando de veritate alicuius propositionis 
+            habet istum modum quod primo considerat rem
+            per propositionem significatam
+            <pb ed="#V" n="21-r"/>
+            <cb ed="#V" n="a"/>
+            et consequenter considerat qualiter se habeat, 
+            et
             <app>
               <lem>tunc</lem>
               <rdg wit="#V">sic</rdg>
-            </app> 
+            </app>
             <app>
               <lem>si sic</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            conformitas rei significatae ad extra per propositionem et modi significandi propositionis, tunc illa propositio est vera, quia ab eo quod res est vel non est, dicitur 
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            conformitas rei significatae 
+            ad extra per propositionem et modi significandi propositionis, 
+            tunc illa propositio est vera 
+            quia ab eo quod res est vel non est,
+            dicitur
             <app>
               <lem>oratio</lem>
               <rdg wit="#V">propositio</rdg>
-            </app> 
-            vera vel falsa modo in propositionibus insolubilibus. Est circulatio 
+            </app>
+            vera vel falsa modo in propositionibus insolubilibus. 
+            Est circulatio
             <app>
-              <lem>plenissima,</lem>
+              <lem>plenissima</lem>
               <rdg wit="#V">plena</rdg>
-            </app> 
-            quia si ego velim scire utrum sit 
+            </app>
+            quia si ego velim scire utrum sit
             <app>
-              <lem>ita a parte rei sicut propositio significat, oportebit prius scire utrum propositio sit vera,</lem>
-              <rdg wit="#V" type="om."/>
-            </app> 
-            et antequam possumus scire quod propositio sit vera, oportet scire utrum ita sit a parte rei, nec patet ibidem introitus ratione debilitatis nostri ingenii, quia non dubito quod angelo illud non 
+              <lem>
+                ita a parte rei sicut propositio significat, 
+                oportebit prius scire utrum
+                propositio sit vera
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>,
+            et antequam possumus scire quod propositio sit vera, 
+            oportet scire utrum ita sit a parte rei, 
+            nec patet ibidem introitus ratione debilitatis nostri ingenii 
+            quia non dubito quod angelo illud non
             <app>
               <lem>esset</lem>
               <rdg wit="#V">oportet</rdg>
-            </app> 
-            insolubile.
+            </app>
+             insolubile. 
           </p>
-        </div>     
-
-          <div xml:id="l9-Dd1e4202">
-            <head xml:id="l9-Hapapap">
-              <supplied>Aliquae propositiones</supplied>
+        </div>
+        <div xml:id="l9-Dd1e4202">
+          <head xml:id="l9-Hapapap">
+            <supplied>Aliquae propositiones</supplied>
+          </head>
+          <p xml:id="l9-edeaap">
+            Ex dictis et imaginatione praedicta adiunguntur aliquae
+            propositiones.
+          </p>
+          <p xml:id="l9-peqsdd">
+            Prima est quod stat quod <name ref="#Sortes">Sortes</name><!--dbcheck against socrates --> non posset habere ex puris naturalibus
+            suis nisi fide de propositione quae sit scita a <name ref="#Plato">Platone</name>.
+            Probatur conclusio, nam capiamus aliquam propositionem quae sit extra totam latitudinem
+            propositionum scibilium a <name ref="#Sortes">Sorte</name> secundum
+            <app>
+              <lem n="secundum"/>
+              <rdg wit="#V" type="variation-present">
+                <add place="in-line">est</add>
+              </rdg>
+            </app>
+            investigationem humanam, 
+            tunc ponatur quod <name ref="#Plato">Plato</name> sit melioris
+            complexionis, et consequenter melioris ingenii 
+            quam <name ref="#Socrates">Socrates</name>, 
+            tunc propositio illa poterit
+            <app>
+              <lem>esse scita</lem>
+              <rdg wit="#V">sciri</rdg>
+            </app>
+            a <name ref="#Plato">Platone</name>, 
+            ergo si <name ref="#Socrates">Socrates</name>
+            assentiat illi oportebit 
+            quod sit per fidem supponendo eam esse veram.
+            <app>
+              <lem>Et sic</lem>
+              <rdg wit="#V">Secundo</rdg>
+            </app>
+             consequenter inferretur quod in geometria
+            <app>
+              <lem>sunt</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            multae propositiones ab angelo 
+            vel ab homine bene complexionato sive
+            <app>
+              <lem n="sive"/>
+              <rdg wit="#V" type="variation-present">
+                bene
+              </rdg>
+              <rdg wit="#S" type="variation-present">
+                unde
+                <!-- dbcheck -->
+              </rdg>
+            </app>
+            disposito
+            <app>
+              <lem>scitae</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quibus homines, ut in pluribus, 
+            non possent assentire nisi ex fide ratione debilitatis
+            complexionum eorum. 
+            Et ex hoc
+            <app>
+              <lem>sequitur</lem>
+              <rdg wit="#V">habetur</rdg>
+            </app>
+            quod non est mirabile, 
+            si habeamus fidem de
+            <app>
+              <lem>secundo</lem>
+              <rdg wit="#V #S">illo</rdg>
+            </app>
+            obiecto, scilicet, de Deo.
+          </p>
+          <p xml:id="l9-suqads">
+            Sequitur ulterius quod in regiminibus politicis periculosum est
+            inniti iudicio humano. 
+            Ex
+            <app>
+              <lem>hoc</lem>
+              <rdg wit="#V #S">quo</rdg>
+            </app>
+            sequitur quod maxime apud regentes politiam
+            <app>
+              <lem n="politiam"/>
+              <rdg wit="#V" type="variation-present">
+                maxime
+                <!-- dbcheck against previous maxime -->
+              </rdg>
+            </app>
+            consulenda est
+            <app>
+              <lem>eis</lem>
+              <rdg wit="#R #SV" type="variation-absent"/>
+            </app>
+            Sacra Scriptura 
+            quia
+            <app>
+              <lem>nititur</lem>
+              <rdg wit="#S">innititur</rdg>
+            </app>
+            medio infallibili. 
+            Et cum hoc
+            <app>
+              <lem>quia</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            ipsa sufficit 
+            quia si Sacram Scripturam bene resolverent de omnibus, 
+            in ea
+            <!-- dbcheck in ea --> 
+            invenirent consilium. 
+            Unde ponit expresse 
+            <name ref="#Anselm">Anselmus</name> quod
+            <cit>
+              <quote xml:id="l9-Qd1e4382">
+                omnis veritas est realiter contenta in Sacra Scriptura
+              </quote>
+              <bibl>Anselm, ??</bibl>
+            </cit>,
+            et ita ponit 
+            <name ref="#Augustine">Beatus Augustinus</name> 
+            et multi allii doctores sancti
+            <app>
+              <lem n="sancti"/>
+              <rdg wit="#V" type="variation-present" cause="repetitio">
+                <add place="inline">
+                  et ita ponit Beatus Augustinus et multi allii doctores sancti
+                </add>
+              </rdg>
+            </app>.
+          </p>
+          <p xml:id="l9-suqetc">
+            Sequitur ulterius quod 
+            non est semper sine periculo uti legibus
+            <cb ed="#V" n="b"/><!--V21vb-->
+            <app>
+              <lem>rationis</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            ad omnem politiam regendam. 
+            Non dico
+            <app>
+              <lem>tamen</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            quin bene iuvant, 
+            sed dico quod non est ultimate sistendum in eis 
+            quia innituntur
+            aliquando debili fundamento, 
+            immo aliquando innituntur forte fundamento falso 
+            quia verisimile est quod 
+            <name ref="#Romans">Romani</name> aliquas leges
+            <pb ed="#R" n="14-v"/>
+            <cb ed="#R" n="a"/>
+            malae et
+            <app>
+              <lem>tyrannicae</lem>
+              <rdg wit="#S">tyrannicissimae</rdg>
+            </app>
+            condiderit.
+          </p>
+          <p xml:id="l9-stqfad">
+            Sequitur tandem quod in omnibus agibilibus, 
+            sive tangentibus fidem
+            sive non, semper debet invocari divinum auxilium 
+            quia semper est verum nec potest falli, 
+            et hoc testatur 
+            <cit>
+              <ref xml:id="l9-Rd1e4444">
+                <name ref="#Plato">Plato</name> 
+                in <title ref="#Timaeus">Tymeo</title> 
+              </ref>
+            </cit>, 
+            ubi acturus erat de Deo
+            <app>
+              <lem>et</lem>
+              <rdg wit="#V">ubi</rdg>
+            </app>
+            dicit quod auxilium divinitatis in omnibus debet implorari, 
+            et ista imploratio non permittit aliquae errare immittendo isti implorationi, 
+            isti enim defectus, sicut praedicti, 
+            proveniunt ex defectu originalis culpae. 
+            Ex quo sequitur quod omnis deceptio
+            provenit ex originali culpa 
+            quia in statu innocentiae non fuissent aliquae deceptiones.
+          </p>
+          <p xml:id="l9-suqeoc">
+            <app>
+              <lem>
+                Sequitur ulterius 
+                quod formido veritatis <unclear>offensivae</unclear> est
+                effectus originalis culpae
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>.
+          </p>
+          <p xml:id="l9-suqnhl">
+            Sequitur ulterius quod omnis error 
+            et omnis sophisticatio provenit
+            ex originali culpa. 
+            Ex quo sequitur quod
+            <app>
+              <lem>si</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            status innocentiae mansisset, 
+            nulli fuissent errores nec sophisticationes. 
+            Ex quo
+            <app>
+              <lem>ulterius</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            sequitur quod in statu innocentiae ars sophistica non habuisset locum.
+          </p>
+          <p xml:id="l9-seqnff">
+            Sequitur
+            <app>
+              <lem>etiam</lem>
+              <rdg wit="#V">ulterius</rdg>
+            </app>
+            quod in
+            <app>
+              <lem n="in"/>
+              <rdg wit="#V" type="variation-present">illo</rdg>
+            </app>
+            statu innocentiae nulla
+            <app>
+              <lem>opinionum</lem>
+              <rdg wit="#V">opinio</rdg>
+            </app>
+            contrarietas, 
+            immo nulla fuisset opinio, 
+            et causa est 
+            quia opinio est cum formidine;
+            semper modo in statu illo non fuisset formido.
+          </p>
+          <p xml:id="l9-suqhne">
+            Sequitur ulterius quod nulla
+            <app>
+              <lem>etiam</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            fuisset
+            <app>
+              <lem>ibidem</lem>
+              <rdg wit="#R">ibi</rdg>
+            </app>
+            ratio probabilis prout ratio probabilis dicit formidinem. 
+            Verum est quod de modo
+            cognoscendi veritatem in statu
+            <app>
+              <lem>illo</lem>
+              <rdg wit="#R" type="correction-addition">
+                <add place="above-line">illo</add>
+              </rdg>
+            </app>
+            innocentiae
+            <app>
+              <lem>possunt</lem>
+              <rdg wit="#V">possent</rdg>
+            </app>
+            poni aliquae propositiones,
+            <app>
+              <lem>posset</lem>
+              <rdg wit="#V">possent</rdg>
+            </app>
+            enim imaginari de statu innocentiae dupliciter; 
+            dicitur enim quod in primis
+            <app>
+              <lem>prius parens</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            de quibusdam veritatibus habebat notitiam
+            <app>
+              <lem>et evidentiam</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            certam, 
+            ita quod circa quamlibet veritatem 
+            circa quam volebat considerare per habitum
+            <app>
+              <lem>nobiliorem</lem>
+              <rdg wit="#V">nobilem</rdg>
+            </app>
+            sibi a Deo infusum stanti habebat notitiam certam 
+            et evidentem sicut fuit de Christo,
+            non quia habuerit lumen aequae perfectum sicut Christus, 
+            sed quia habuerit lumen
+            mediante quo poterat immediate 
+            circa quamlibet veritatem requisitam ad decorem sui status
+            <app>
+              <lem>et circa quam
+                <app>
+                  <lem>docebat</lem>
+                  <rdg wit="#S">decebat</rdg>
+                </app>
+              </lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            habere notitiam evidentem.
+          </p>
+          <div xml:id="l9-Dd1e4625">
+            <head xml:id="l9-Hoauper">
+              <supplied>Obiecto ad ultimam propositionem et responsiones</supplied>
             </head>
-        
-            <p xml:id="l9-edeaap">Ex dictis et imaginatione praedicta adiunguntur aliquae propositiones.</p> 
-       
-            <p xml:id="l9-peqsdd">Prima est quod stat quod <name ref="#Sortes">Sortes</name><!--dbcheck against socrates --> non posset habere ex puris naturalibus suis nisi fide de propositione quae sit scita a <name ref="#Plato">Platone</name>. Probatur conclusio, nam capiamus aliquam propositionem quae sit extra totam latitudinem propositionum scibilium a <name ref="#Sortes">Sorte</name> 
+            <p xml:id="l9-stdcsd">
+              Sed
+              <app>
+                <lem>tunc</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              diceretur, 
+              tunc aeque erat cognoscens sicut Deus.
+            </p>
+            <p xml:id="l9-rncesi">
+              <pb ed="#V" n="21-v"/>
+              <cb ed="#V" n="a"/>
+              Respondetur negando consequentiam et modus respondendi esset
+              multiplex. 
+              Unus
+              <app>
+                <lem>modus</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              esset quod realiter quaelibet veritas
+              <app>
+                <lem>quantum est de se est</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              <app>
+                <lem>
+                  immediate cognoscibilis 
+                  quia iam de facto quaelibet veritas
+                </lem>
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>
+              immediate cognoscitur a Deo, 
+              ita quod non essentialis ordo ex parte cognoscibilium,
+              <app>
+                <lem>scilicet</lem>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
+              </app>
+              quod principia prius cognoscantur quam conclusiones, 
+              sed solum quoad nos est talis
+              ordo ex defectu potentiae,
+              <app>
+                <lem>scilicet</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              quod per prius
+              <app>
+                <lem>cognoscimus</lem>
+                <rdg wit="#S">cognoscamus</rdg>
+              </app>
+              principia quam conclusiones.
+              <app>
+                <lem>Immo</lem>
+                <rdg wit="#V">ideo</rdg>
+              </app>
+              imaginandum est quod <name ref="#Adam">Adam</name> 
+              ex habitu illo nobili sibi a Deo
+              infuso poterat
+              <app>
+                <lem>exire</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              <app>
+                <lem>immediate</lem>
+                <rdg wit="#R" type="variation-absent"/>
+              </app>
+              <pb ed="#R" n="14-v"/>
+              <cb ed="#R" n="b"/>
+              in quamlibet veritatem et istud bene potest sustineri sine
+              contradictione nec istud est contra
+              <app>
+                <lem>
+                  immensitatem divinam, 
+                  immo potius in laudem ipsius nec hoc est contra
+                </lem>
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>
+              fidem, sed quia hoc non communiter ponitur a doctoribus, 
+              ideo nolo hoc multum assentire, 
+              sed solum
               <app>
                 <lem>secundum</lem>
-                <rdg wit="#V" type="intextu">
-                  <add place="inline">est</add>
-                </rdg>
-              </app> 
-              investigationem humanam, tunc ponatur quod <name ref="#Plato">Plato</name> sit melioris complexionis, et consequenter melioris ingenii quam <name ref="#Socrates">Socrates</name>, tunc propositio illa poterit 
-              <app>
-                <lem>esse scita</lem>
-                <rdg wit="#V">sciri</rdg>
-              </app> 
-              a <name ref="#Plato">Platone</name>, ergo si <name ref="#Socrates">Socrates</name> assentiat illi oportebit quod sit per fidem supponendo eam esse veram. 
-              <app>
-                <lem>Et sic</lem>
-                <rdg wit="#V">Secundo</rdg>
-              </app> 
-              consequenter inferretur quod in geometria 
-              <app>
-                <lem>sunt</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              multae propositiones ab angelo vel ab homine bene complexionato 
-              <app>
-                <lem>sive</lem>
-                <rdg wit="#V" type="intextu">
-                  <add place="inline">bene</add>
-                </rdg>
-                <rdg wit="#S" type="intextu">
-                  <add place="inline">unde</add> <!-- dbcheck -->
-                </rdg>
-              </app> 
-              disposito 
-              <app>
-                <lem>scitae</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              quibus homines, ut in pluribus, non possent assentire nisi ex fide ratione debilitatis complexionum eorum. Et ex hoc 
-              <app>
-                <lem>sequitur</lem>
-                <rdg wit="#V">habetur</rdg>
-              </app> 
-              quod non est mirabile, si habeamus fidem de 
-              <app>
-                <lem>secundo</lem>
-                <rdg wit="#V #S">illo</rdg>
-              </app> 
-              obiecto, scilicet, de Deo.</p>  
-           
-            <p xml:id="l9-suqads">Sequitur ulterius quod in regiminibus politicis periculosum est inniti iudicio humano. Ex 
-              <app>
-                <lem>hoc</lem>
-                <rdg wit="#V #S">quo</rdg>
-              </app> 
-              sequitur quod maxime apud regentes 
-              <app>
-                <lem>politiam</lem>
-                <rdg wit="#V" type="intextu">
-                  <add place="inline">maxime</add> <!-- dbcheck against previous maxime -->
-                </rdg>
-              </app> consulenda est 
-              <app>
-                <lem>eis</lem>
-                <rdg wit="#R #SV" type="om."/>
-              </app> 
-              Sacra Scriptura, quia 
-              <app>
-                <lem>nititur</lem>
-                <rdg wit="#S">innititur</rdg>
-              </app> 
-              medio infallibili. Et cum hoc 
-              <app>
-                <lem>quia</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              ipsa sufficit, quia si Sacram Scripturam bene resolverent de omnibus, in ea <!-- dbcheck in ea --> invenirent consilium. Unde ponit expresse <name ref="#Anselm">Anselmus</name> quod 
-              <cit>
-                <quote xml:id="l9-Qd1e4382">omnis veritas est realiter contenta in Sacra Scriptura,</quote>
-                <bibl>Anselm, ??</bibl>
-              </cit>
-              <app>
-                <lem>et ita ponit <name ref="#Augustine">Beatus Augustinus</name> et multi allii doctores sancti.</lem>
-                <rdg wit="#V" type="intextu" cause="repetitio">
-                  <add place="inline">et ita ponit Beatus Augustinus et multi allii doctores sancti</add>
-                </rdg>
+                <rdg wit="#R #SV #V"/>
               </app>
+              imaginationem quod ita potest dici; 
+              posset etiam dici quod non omnia poterat
+              cognoscere mediante illo habitu nobili 
+              bene imaginatur quod erant quaedam veritates
+              quae habebant ordinem ad decorem sui status. 
+              Aliae autem non immo erant totaliter
+              impertinentes, ideo secunda solutio esset 
+              quod mediante illo habitu poterat immediate
+              exire in omnem veritatem facientem ad decorem sui status, 
+              sed non in cognitionem
+              aliarum veritatum, 
+              immo erant sibi ignotae.
             </p>
-          
-            <p xml:id="l9-suqetc">Sequitur ulterius quod non est semper sine periculo uti legibus 
-              <cb ed="#V" n="21vb"/> 
+            <p xml:id="l9-scseec">
+              Sed contra,
               <app>
-                <lem>rationis</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              ad omnem politiam regendam. Non dico 
-              <app>
-                <lem>tamen</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              quin bene iuvant, sed dico quod non est ultimate sistendum in eis, quia innituntur aliquando debili fundamento, immo aliquando innituntur forte fundamento falso, quia verisimile est quod <name ref="#Romans">Romani</name> aliquas leges 
-              <cb n="14va" ed="#R"/> 
-              malae et <app>
-                <lem>tyrannicae</lem>
-                <rdg wit="#S">tyrannicissimae</rdg>
-              </app> condiderit.</p> 
-         
-            <p xml:id="l9-stqfad">Sequitur tandem quod in omnibus agibilibus, sive tangentibus fidem sive non, semper debet invocari divinum auxilium, quia semper est verum nec potest falli, et hoc testatur 
-              <ref xml:id="l9-Rd1e4444">
-                <name ref="#Plato">Plato</name> in 
-                <title ref="#Timaeus">Tymeo</title>,
-              </ref> ubi acturus erat de Deo 
-              <app>
-                <lem>et</lem>
-                <rdg wit="#V">ubi</rdg>
-              </app> dicit quod auxilium divinitatis in omnibus debet implorari, et ista imploratio non permittit aliquae errare immittendo isti implorationi, isti enim defectus, sicut praedicti, proveniunt ex defectu originalis culpae. Ex quo sequitur quod omnis deceptio provenit ex originali culpa, quia in statu innocentiae non fuissent aliquae deceptiones.</p> 
-             
-            <p xml:id="l9-suqeoc">
-              <app>
-              <lem>Sequitur ulterius quod formido veritatis <unclear>offensivae</unclear> est effectus originalis culpae.</lem>
-              <rdg wit="#V" type="om."/>
+                <lem>si iste</lem>
+                <rdg wit="#V">sequitur quod si christus</rdg>
               </app>
+               considerasset de huiusmodi veritatibus, 
+               non potuisset habere notitiam de eis quod est
+              contra
+              <app>
+                <lem>dictum</lem>
+                <rdg wit="#V">dicta</rdg>
+              </app>
+              prius quia dictum est quod in primis 
+              circa quamlibet veritatem circa quam considerare
+              volebant immediate habebant notitiam evidentem et certam.
             </p>
-
-            <p xml:id="l9-suqnhl">Sequitur ulterius quod omnis error et omnis sophisticatio provenit ex originali culpa. Ex quo sequitur quod 
+            <p xml:id="l9-ruedss">
+              Responsio una est quod in isto casu ex ordinatione divina habebat
+              unum habitum mediante quo, sicut dictum est, poterat exire in notitiam veritatum ad
+              decorem sui status
               <app>
-                <lem>si</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              status innocentiae mansisset, nulli fuissent errores nec sophisticationes. Ex quo 
-              <app>
-                <lem>ulterius</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              sequitur quod in statu innocentiae ars sophistica non habuisset locum.</p> 
-         
-            <p xml:id="l9-seqnff">Sequitur 
-              <app>
-                <lem>etiam</lem>
-                <rdg wit="#V">ulterius</rdg>
-              </app> 
-              quod 
-              <app>
-                <lem>in</lem>
-                <rdg wit="#V" type="intextu">
-                  <add place="inline">illo</add>
-                </rdg>
-              </app> 
-              statu innocentiae nulla 
-              <app>
-                <lem>opinionum</lem>
-                <rdg wit="#V">opinio</rdg>
-              </app> 
-              contrarietas, immo nulla fuisset opinio, et causa est, quia opinio est cum formidine; semper modo in statu illo non fuisset formido.</p> 
-         
-            <p xml:id="l9-suqhne">Sequitur ulterius quod nulla 
-              <app>
-                <lem>etiam</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              fuisset 
-              <app>
-                <lem>ibidem</lem>
-                <rdg wit="#R">ibi</rdg>
-              </app> 
-              ratio probabilis prout ratio probabilis dicit formidinem. Verum est quod de modo cognoscendi veritatem in statu 
-              <app>
-                <lem>illo</lem>
-                <rdg wit="#R" type="corrAddition">
-                  <corr>
-                    <add place="aboveLine">illo</add>
-                  </corr>
-                </rdg>
-              </app> 
-              innocentiae 
-              <app>
-                <lem>possunt</lem>
-                <rdg wit="#V">possent</rdg>
-              </app> poni aliquae propositiones, 
-              <app>
-                <lem>posset</lem>
-                <rdg wit="#V">possent</rdg>
-              </app> 
-              enim imaginari de statu innocentiae dupliciter; dicitur enim quod in primis 
-              <app>
-                <lem>prius parens</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              de quibusdam veritatibus habebat notitiam 
-              <app>
-                <lem>et evidentiam</lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              certam, ita quod circa quamlibet veritatem circa quam volebat considerare per habitum 
-              <app>
-                <lem>nobiliorem</lem>
-                <rdg wit="#V">nobilem</rdg>
-              </app> 
-              sibi a Deo infusum stanti habebat notitiam certam et evidentem sicut fuit de Christo, non quia habuerit lumen aequae perfectum sicut Christus, sed quia habuerit lumen mediante quo poterat immediate circa quamlibet veritatem requisitam ad decorem sui status 
-              <app>
-                <lem>et circa quam 
-                  <app>
-                    <lem>docebat</lem>
-                    <rdg wit="#S">decebat</rdg>
-                  </app>
+                <lem>
+                  pertinentium; respectu autem aliarum veritatum habebant unum assensum quod
+                  infinite latebat eum necessarias ad decorem sui status
                 </lem>
-                <rdg wit="#V" type="om."/>
-              </app> 
-              habere notitiam evidentem.</p>    
-       
-       <div xml:id="l9-Dd1e4625">
-         <head xml:id="l9-Hoauper">
-         <supplied>Obiecto ad ultimam propositionem et responsiones</supplied>
-        </head>
-         
-         <p xml:id="l9-stdcsd">Sed 
-           <app>
-             <lem>tunc</lem>
-             <rdg wit="#V" type="om."/>
-           </app> 
-           diceretur, tunc aeque erat cognoscens sicut Deus.</p> 
-      
-         <p xml:id="l9-rncesi">
-           <cb ed="#V" n="21va"/> 
-           Respondetur negando consequentiam et modus respondendi esset multiplex. Unus 
-           <app>
-             <lem>modus</lem>
-             <rdg wit="#V" type="om."/>
-           </app> 
-           esset quod realiter quaelibet veritas 
-           <app>
-             <lem>quantum est de se est</lem>
-             <rdg wit="#V" type="om."/>
-           </app> 
-           <app>
-             <lem>immediate cognoscibilis quia iam de facto quaelibet veritas</lem>
-             <rdg wit="#V" type="om." cause="homoteleuton"/>
-           </app> 
-           immediate cognoscitur a Deo, ita quod non essentialis ordo ex parte cognoscibilium, 
-           <app>
-             <lem>scilicet</lem>
-             <rdg wit="#R #SV #S" type="om."/>
-           </app> 
-           quod principia prius cognoscantur quam conclusiones, sed solum quoad nos est talis ordo ex defectu potentiae, 
-           <app>
-             <lem>scilicet</lem>
-             <rdg wit="#V" type="om."/>
-           </app> 
-           quod per prius <app>
-             <lem>cognoscimus</lem>
-             <rdg wit="#S">cognoscamus</rdg>
-           </app> 
-           principia quam conclusiones. 
-           <app>
-             <lem>Immo</lem>
-             <rdg wit="#V">ideo</rdg>
-           </app> 
-           imaginandum est quod <name ref="#Adam">Adam</name> ex habitu illo nobili sibi a Deo infuso poterat 
-           <app>
-             <lem>exire</lem>
-             <rdg wit="#V" type="om."/>
-           </app> 
-           <app>
-             <lem>immediate</lem>
-             <rdg wit="#R" type="om."/>
-           </app>
-           <cb n="14vb" ed="#R"/> 
-           in quamlibet veritatem et istud bene potest sustineri sine contradictione nec istud est contra 
-           <app>
-             <lem>immensitatem divinam, immo potius in laudem ipsius nec hoc est contra</lem>
-             <rdg wit="#V" type="om." cause="homoteleuton"/>
-           </app> 
-           fidem, sed quia hoc non communiter ponitur a doctoribus, ideo nolo hoc multum assentire, sed solum 
-           <app>
-             <lem>secundum</lem>
-             <rdg wit="#R #SV #V"/>
-           </app> 
-           imaginationem quod ita potest dici; posset etiam dici quod non omnia poterat cognoscere mediante illo habitu nobili bene imaginatur quod erant quaedam veritates quae habebant ordinem ad decorem sui status. Aliae autem non immo erant totaliter impertinentes, ideo secunda solutio esset quod mediante illo habitu poterat immediate exire in omnem veritatem facientem ad decorem sui status, sed non in cognitionem aliarum veritatum, immo erant sibi ignotae.</p>
-         
-         <p xml:id="l9-scseec">Sed contra, 
-           <app>
-             <lem>si iste</lem>
-             <rdg wit="#V">sequitur quod si christus</rdg>
-           </app> 
-           considerasset de huiusmodi veritatibus, non potuisset habere notitiam de eis quod est contra 
-           <app>
-             <lem>dictum</lem>
-             <rdg wit="#V">dicta</rdg>
-           </app> 
-           prius quia dictum est quod in primis circa quamlibet veritatem circa quam considerare volebant immediate habebant notitiam evidentem et certam.</p>
-      
-         <p xml:id="l9-ruedss">Responsio una est quod in isto casu ex ordinatione divina habebat unum habitum mediante quo, sicut dictum est, poterat exire in notitiam veritatum ad decorem sui status 
-           <app>
-             <lem>pertinentium; respectu autem aliarum veritatum habebant unum assensum quod infinite latebat eum necessarias ad decorem sui status.</lem>
-             <rdg wit="#V" type="om." cause="homoteleuton"/>
-           </app> 
-           Et faciebat ad gaudium suum, quia ipse sciebat quod erant infinitae veritates quae non requirebantur ad decorem sui status, sicut est de beatis, beatus enim vident in Verbo, quod infinita Deus cognoscit, quae beatus ille non cognoscit et quae non sunt necessaria ad beatitudinem eius formalem. Et ex hoc iudicat Deum esse nobilissimae perfectionis et cognitionis et in hoc gaudet, quia habet talem Deum ita nobilem et ita perfectum. Dico consequenter quod 
-           <cb ed="#V" n="21vb"/> 
-           stabat quod <name ref="#Adam">Adam</name> considerasset circa huiusmodi veritates quae non pertinebant ad decorem sui status, quia non 
-           <app>
-             <lem>appetebat</lem>
-             <rdg wit="#V">appetebant</rdg>
-           </app> 
-           eas, sed tota perfectio eius erat considerare circa veritates necessarias ad decorem sui 
-           <app>
-             <lem>status.</lem>
-             <rdg wit="V" type="corrDeletion">
-             <corr>
-                <del rend="strikethrough">quia non appetebant</del>
-             </corr>
-           </rdg>
-           </app>
-         </p>
-         
-         <p xml:id="l9-srpivi">Secunda responsio posset esse quod respectu cuiuscumque veritatis habebat habitum et non actum, ideo licet omnem veritatem potuisset cognovisse, 
-           <app>
-             <lem>non tamen potuisset cognovisse</lem>
-             <rdg wit="#V" type="om." cause="homoteleuton"/>
-           </app> 
-           omnes veritates. Et istam viam reputo satis probabilem, licet non sit multum consueta, quomodo autem fides remaneat 
-           <app>
-             <lem>ad praedictas</lem>
-             <rdg wit="#V">a praedictis</rdg>
-           </app> 
-           <app>
-             <lem>animae</lem>
-             <rdg wit="#R" type="om."/>
-           </app> 
-           infirmitates, videbitur 
-           <app>
-             <lem>in sequentibus.</lem>
-             <rdg wit="V">in lectione sequenti.</rdg>
-           </app>
-         </p>
-
-       </div>
-</div>       
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>.
+              Et faciebat ad gaudium suum, quia ipse sciebat quod erant infinitae veritates quae
+              non requirebantur ad decorem sui status, sicut est de beatis, beatus enim vident in
+              Verbo, quod infinita Deus cognoscit, quae beatus ille non cognoscit et quae non sunt
+              necessaria ad beatitudinem eius formalem. Et ex hoc iudicat Deum esse nobilissimae
+              perfectionis et cognitionis et in hoc gaudet, quia habet talem Deum ita nobilem et ita
+              perfectum. Dico consequenter quod
+              <cb ed="#V" n="b"/><!-- V21vb--> 
+              stabat quod <name ref="#Adam">Adam</name> considerasset circa
+              huiusmodi veritates quae non pertinebant ad decorem sui status 
+              quia non
+              <app>
+                <lem>appetebat</lem>
+                <rdg wit="#V">appetebant</rdg>
+              </app>
+              eas, sed tota perfectio eius erat 
+              considerare circa veritates necessarias ad decorem sui
+              <app>
+                <lem>status</lem>
+                <rdg wit="V" type="correction-deletion">
+                  <del rend="strikethrough">quia non appetebant</del>
+                </rdg>
+              </app>.
+            </p>
+            <p xml:id="l9-srpivi">
+              Secunda responsio posset esse quod respectu cuiuscumque veritatis
+              habebat habitum et non actum, 
+              ideo licet omnem veritatem potuisset cognovisse,
+              <app>
+                <lem>non tamen potuisset cognovisse</lem>
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>
+              omnes veritates. 
+              Et istam viam reputo satis probabilem, 
+              licet non sit multum consueta, 
+              quomodo autem fides remaneat
+              <app>
+                <lem>ad praedictas</lem>
+                <rdg wit="#V">a praedictis</rdg>
+              </app>
+              <app>
+                <lem>animae</lem>
+                <rdg wit="#R" type="variation-absent"/>
+              </app>
+              infirmitates, videbitur
+              <app>
+                <lem>in sequentibus</lem>
+                <rdg wit="V">in lectione sequenti</rdg>
+              </app>
+            </p>
+          </div>
+        </div>
       </div>
-      
     </body>
   </text>
 </TEI>
