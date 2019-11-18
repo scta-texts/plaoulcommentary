@@ -1,573 +1,700 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://bitbucket.org/lombardpress/lombardpress-schema/raw/master/LombardPressODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
- <teiHeader>
-  <fileDesc>
-   <titleStmt>
-    <title>Lectio 15, De fide</title>
-    <author xml:id="PP">Petrus Plaoul</author>
-    <editor xml:id="JW">Jeffrey C. Witt</editor>
-   </titleStmt>
-   <editionStmt>
-    <edition n="2011.10-dev-master">
-     <title>Lectio 15, De fide</title>
-     <date when="2011-10-04">October 04, 2011</date>
-    </edition>
-   </editionStmt>
-   <publicationStmt>
-    <publisher>LombardPress</publisher>
-    <pubPlace>Sacramento, CA</pubPlace>
-    <availability status="free">
-     <p>Published under a <ref target="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</ref></p>
-    </availability>
-    <date when="2011-03-25">March 23rd, 2011</date>  
-   </publicationStmt>
-   <sourceDesc>
-     <listWit>
-       <witness xml:id="R" n="reims">Reims</witness>
-       <witness xml:id="V" n="vat">Vatican</witness>
-       <witness xml:id="S" n="sorb">Sorbonne</witness>
-       <witness xml:id="SV" n="svict">St. Victor</witness>
-     </listWit>
-   </sourceDesc>
-  </fileDesc>
-  <encodingDesc>
-   <variantEncoding method="parallel-segmentation" location="internal"/>
-  </encodingDesc>
- </teiHeader>
- <text xml:lang="la">
-  <front>
-   <div xml:id="includeList">
-    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/workscited.xml" xpointer="worksCited"></xi:include>
-    <xi:include href="https://bitbucket.org/lombardpress/lombardpress-lists/raw/master/Prosopography.xml" xpointer="prosopography"></xi:include>
-   </div>
-  </front>
-  <body>
-   <div xml:id="lectio15">
-   <head subtype="title">Lectio 15, De fide</head>
-    <div>
-     <head xml:id="l15-Hrdpdpc">
-      <supplied>Recapitulatio duarum praedictarum conclusionum</supplied>
-     </head>
-     <p xml:id="l15-seqapd">
-      <cb ed="#R" n="21va"/>
-      Sciendum est quod in 
-      <app>
-       <lem>praecedenti</lem>
-       <rdg wit="#R" type="corrReplace">
-        <corr>
-         <add>praecedenti</add>
-         <del>praesenti</del>
-        </corr>
-       </rdg>
-      </app> 
-      lectione positae fuerunt duae conclusiones. Una fuit quod actus sciendi et actus fidei de eodem sunt compossibiles. Secunda fuit quod lumen naturale in infinitum ascendit per latitudinem veritatum a principiis distantium.</p></div> 
-    
-    <div>
-     <head xml:id="l15-Hcpcnsc">
-      <supplied>Circa primam conclusionem: opinio quod actus fidei actus scientificus non sunt compossibiles</supplied>
-     </head>
-     <p xml:id="l15-ecppss">Et 
-      <app>
-       <lem>circa</lem>
-       <rdg wit="#V">per</rdg>
-      </app> 
-      primam conclusionem fuit tacta opinio 
-      <app>
-       <lem>communis</lem>
-       <rdg wit="#R" type="om."/>
-      </app> 
-      quod: actus fidei et actus scientificus 
-      <app>
-       <lem>respectu eiusdem non possunt simul stare.</lem>
-       <rdg wit="V" type="om." cause="homoteleuton"/>
-       <note xml:lang="en">Omission is part of homoteleuton continued into the next paragraph</note>
-      </app>
-     </p>
-    </div>
-    
-   <div>
-    <head xml:id="l15-Hopdpdc">
-     <supplied>Opinio Petri de Candia</supplied>
-    </head>
-    <p xml:id="l15-ncmani">
-     <app>
-      <lem>Nihilominus considerando materiam, sciendum est quod <name ref="#Candia">Magister Petrus de Candia</name> in ista materia ponit istam conclusionem: quod licet actus fidei et actus scientificus</lem>
-      <rdg wit="#V" type="om." cause="homoteleuton"/>
-     </app> 
-     sic 
-     <app>
-      <lem>sunt</lem>
-      <rdg wit="#V">sint</rdg>
-     </app> 
-     impossibiles respectu eiusdem quod impossibile sit 
-     <app>
-      <lem>aliquem assentire</lem>
-      <rdg wit="#R #SV">quis aperire</rdg>
-     </app> 
-     <app>
-      <lem>eidem</lem>
-      <rdg wit="#V" type="om."/>
-     </app> 
-     actu fidei et actu scientifico, tamen sunt simul 
-     <app>
-      <lem>compossibiles</lem>
-      <rdg wit="#V" type="corrReplace">
-       <del rend="strikethrough">incompossibiles</del>
-       <add>compossibiles</add>
-      </rdg>
-     </app> 
-     subiective, 
-     <app>
-      <lem>ita quod conclusio est ista: quod actus fidei et actus scientificus de eodem sunt facilis compossibiles in eadem potentia subiective,</lem>
-      <rdg wit="#R" type="om." cause="homoteleuton"/>
-     </app> 
-     non tamen sic: quod quilibet illorum actuum 
-     <app>
-      <lem>immutet</lem>
-      <rdg wit="#V">mutet</rdg>
-     </app> 
-     <app>
-      <lem>vitaliter</lem>
-      <rdg wit="#R #SV">veritatis</rdg>
-     </app> 
-     potentiam, ita quod 
-     <app>
-      <lem>vel</lem>
-      <rdg wit="#R #SV #S" type="om."/>
-     </app> 
-     <app> <!-- dbcheck; nominative seems best here given the parallel nominatives that follow -->
-      <lem>nullus</lem>
-      <rdg wit="#V">nullum</rdg>
-     </app> 
-     immutat vel, si 
-     <app>
-      <lem>unus</lem>
-      <rdg wit="#S">aliquis</rdg>
-     </app> 
-     <app>
-      <lem>immutet,</lem>
-      <rdg wit="#S #V">immutat</rdg>
-     </app> 
-     <app>
-      <lem>alter</lem>
-      <rdg wit="#V">alius</rdg>
-     </app> 
-     non 
-     <app>
-      <lem>immutat.</lem>
-      <rdg wit="#S" type="om."/>
-     </app>
-    </p>
-   </div>
-    
-    <div>
-     <head xml:id="l15-Hrapcrc">
-      <supplied>Responsio ad opinionem Petri de Candia: quattuor conclusiones circa rationem cognitionis</supplied>
-     </head>
-     <p xml:id="l15-cicimc">Circa istam conclusionem, 
-      <app>
-       <lem>possunt</lem>
-       <rdg wit="#S #V">possent</rdg>
-      </app> 
-      poni 
-      <app>
-       <lem>plura</lem>
-       <rdg wit="#V">multa</rdg>
-      </app> 
-      quae pro nunc non discutientur ad plenum, sed solum ponentur 
-      <app>
-       <lem>aliqua</lem>
-       <rdg wit="#V" type="om."/>
-      </app> 
-      in generali et 
-      <app>
-       <lem>possunt</lem>
-       <rdg wit="#V">possent</rdg>
-      </app> 
-      poni in modum conclusionum.</p>
-     
-     <div>
-      <head xml:id="l15-Hpccdce">
-       <supplied>Prima conclusio: cognitio non dicitur "cognitio" essentialiter</supplied>
-      </head>
-      <p xml:id="l15-pdenep">Primum dictum 
-       <app>
-        <lem>est:</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       cognitio non dicitur intrinsece et essentialiter cognitio, 
-       <app>
-        <lem>et</lem>
-        <rdg wit="#S" type="om."/>
-       </app> 
-       ita diceretur de quocumque actu cognoscendi generaliter. Probatur sic primo: quia, circumscriptis potentia et obiecto, cognitio non 
-       <app>
-        <lem>remaneret</lem>
-        <rdg wit="#S">maneret</rdg>
-       </app> 
-       cognitio, ergo etc. Consequentia tenet, quia illud quod est 
-       <app>
-        <lem>intrinsece</lem>
-        <rdg wit="#V" type="intextu">essentialiter</rdg>
-       </app> 
-       <app> <!-- dbcheck -->
-        <lem>aliquale</lem>
-        <rdg wit="#R">aut quale</rdg>
-       </app> 
-       semper remanet tale omnibus extrinsecis circumscriptis. 
-       <app>
-        <lem>Patet</lem>
-        <rdg wit="#V">apparet</rdg>
-       </app> 
-       antecedens, quia, si non, esset potentia praeceptiva talis 
-       <app>
-        <lem>qualitas</lem>
-        <rdg wit="#V">qualis</rdg>
-       </app> 
-       <app>
-        <lem>quae</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       est cognitio, 
-       <app>
-        <lem>non esset cognitio,</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       quia nec sibi, quia non 
-       <app>
-        <lem>cognovit,</lem>
-        <rdg wit="#V">cognoscit</rdg>
-       </app> 
-       nec potentiae, quia per casum 
-       <app>
-        <lem>nulla</lem>
-        <rdg wit="#V">non</rdg>
-       </app> 
-       est potentia.</p> 
-    
-      <p xml:id="l15-spcsqq">Secundo probatur conclusio praedicta, quia si cognitio esset essentialiter et 
-       <app>
-        <lem>intrinsece</lem>
-        <rdg wit="#S">extrinsece</rdg>
-       </app> 
-       cognitio, tunc cum quilibet gradus repositus in latitudine cognitionum dicat perfectionem similiter repositam sub latitudine viventium sequeretur quod cognitio viveret. Et per consequens esset perfectior subiecta non vivente, quod est falsum, cum sit quaedam qualitas.</p> 
-     
-      <p xml:id="l15-taippp">Tertio 
-       <app>
-        <lem>ad idem</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       sic, si cognitio poneretur in lapide, si esset essentialiter cognitio, tunc lapis per eam denominaretur intrinsece et essentialiter cognoscens. Consequens est falsum, quia non 
-       <app>
-        <lem>stat</lem>
-        <rdg wit="#R #SV" type="intextu">intrinsece</rdg>
-       </app> 
-       lapidem intrinsece cognoscere, nisi esset per communicationem idiomatum quod non est ad propositum. Ergo illa cognitio non est intrinsece et essentialiter cognitio. Consequentia 
-       <app>
-        <lem>probatur,</lem>
-        <rdg wit="#V">tenet</rdg>
-       </app> 
-       quia quandocumque aliqua forma communicatur alicui subiecto, illa forma communicat sibi, in concreto omnem denominationem sibi competentem, in abstracto supple essentialem. Et eodem 
-       <app>
-        <lem>modo</lem>
-        <rdg wit="#SV" type="om."/>
-       </app> 
-       esset dicendum de omnibus aliis actibus intellectus et voluntatis quod nullus talis est intrinsece et essentialiter cognitio 
-       <app>
-        <lem>vel</lem>
-        <rdg wit="#V">sive</rdg>
-       </app> 
-       volitio, 
-       <app>
-        <lem>et sic patet propositum,</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       <app>
-        <lem>et</lem>
-        <rdg wit="#S" type="om."/>
-       </app> 
-       sic patet propositio probata.</p>
-     </div>
-     
-     <div>
-      <head xml:id="l15-Hsccpua">
-       <supplied>Secunda conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae ut activa</supplied>
-      </head>
-      
-      <p xml:id="l15-scnicv">Secunda conclusio: non ex habitudine potentiae ut activa 
-       <cb ed="#R" n="21vb"/> 
-       est cognitio denominatur cognitio. Unde imaginandum est quod cognitio 
-       <app>
-        <lem>habet</lem>
-        <rdg wit="#V" type="corrDeletion">
-         <corr>
-          <del type="strikethrough">cog</del>
-         </corr>
-        </rdg>
-       </app>
-       habitudinem multiplicem ad suum subiectum. Una est habitudo 
-       <app>
-        <lem>ut</lem>
-        <rdg wit="#SV" type="corrAddition">
-         <corr>
-          <add>ut</add>
-         </corr>
-        </rdg>
-       </app> 
-       formae inhaerentis. Alia est habitudo ut effectus a potentia producti. Alia est 
-       <app>
-        <lem>habitudo</lem>
-        <rdg wit="#S" type="om."/>
-       </app> 
-       ut vitaliter 
-       <app> <!-- dbcheck -->
-        <lem><unclear cert="medium">immutativus</unclear></lem>
-        <rdg wit="#V">immutativa</rdg>
-       </app> 
-       Modo 
-       <app> <!-- dbcheck -->
-        <lem>venandum</lem>
-        <rdg wit="#V">veniendum</rdg>
-       </app> 
-       est ex quo 
-       <app>
-        <lem>cognitio</lem>
-        <rdg wit="#V" type="intextu">non</rdg>
-       </app> 
-       intrinsece et essentialiter 
-       <app>
-        <lem>non est</lem>
-        <rdg wit="#V">dicitur</rdg>
-       </app> 
-       cognitio a qua denominatione sine habitudine extrinseca 
-       <app>
-        <lem>dicatur</lem>
-        <rdg wit="#V">dicitur</rdg>
-       </app> 
-       cognitio. Probatur ergo conclusio secunda, scilicet, quod cognitio non dicitur cognitio ex habitudine potentiae ut activa est, quia habitudo 
-       <app>
-        <lem>productionis</lem>
-        <rdg wit="#V">cognitionis</rdg>
-       </app> 
-       notitiae est prior, saltem natura, quam sit immutatio potentiae vitalis. Ergo Deus posset facere quod potentia produceret cognitionem, et tamen per eam potentia non cognosceret, quia non vitaliter immutaret potentiam. Igitur conclusio vera.</p> 
-       
-      <p xml:id="l15-sncapc">Secundo, nisi conclusio esset vera, 
-       <app>
-        <lem>tunc</lem>
-        <rdg wit="#S #V" type="om."/>
-       </app> 
-       ita videretur esse de qualibet notitia. Modo, instantia est de notitia divina, quia non dicitur per <unclear cert="low">hoc<!-- haec? --></unclear> cognitio, quia producitur a potentia cognitiva.</p>
-     </div>
-     
-     <div>
-      <head xml:id="l15-Htccpur">
-       <supplied>Tertia conclusio: cognitio non dicitur <mentioned>cognitio</mentioned> ex habitudine potentiae ut receptiva</supplied>
-      </head>
-   
-      <p xml:id="l15-tccsis">Tertia 
-       <app>
-        <lem>conclusio:</lem>
-        <rdg wit="#R #SV #S">propositio</rdg>
-       </app> 
-       cognitio non dicitur cognitio in habitudine ad suam potentiam 
-       <app>
-        <lem>ut</lem>
-        <rdg wit="#V">et</rdg>
-       </app> 
-       est receptiva. Probatur conclusio, quia de facto aliqua est cognitio, 
-       <app>
-        <lem>scilicet divina cognitio,</lem>
-        <rdg wit="#R #SV #S" type="om."/>
-        <note xml:lang="en">This is a good example of privileging the more explicit reading</note>
-       </app> 
-       quae non est in aliquo subiective, ergo de ratione cognitionis, non est quod sit in subiecto.</p> 
-       
-      <p xml:id="l15-spccee">Secundo, 
-       <app>
-        <lem>probatur conclusio,</lem>
-        <rdg wit="#V" type="om."/>
-       </app> 
-       quia, 
-       <cb ed="#V" n="30rb"/> 
-       si per Dei potentiam, cognitio poneretur in lapide, lapis ad eam haberet habitudinem receptivam, et tamen per 
-       <app>
-        <lem>hoc</lem>
-        <rdg wit="#S">eam</rdg>
-       </app> 
-       lapis non denominaretur cognoscens, ergo etc.</p>
-     </div>
-     
-     <div>
-      
-      <head xml:id="l15-Hqccevi">
-       <supplied>Quarta conclusio: cognitio dicitur "cognitio" ex habitudine ad suam potentiam ut perceptivam et vitaliter immutabilem</supplied>
-      </head>
-   
-      <p xml:id="l15-qccasp">Quarta conclusio: cognitio dicitur esse cognitio 
-       <app>
-        <lem>ex</lem>
-        <rdg wit="#S">in</rdg>
-       </app> 
-       habitudine ad suam potentiam ut perceptivam et 
-       <app>
-        <lem>vitaliter</lem>
-        <rdg wit="#R">virtualiter</rdg>
-       </app> 
-       <app>
-        <lem>immutabilem,</lem>
-        <rdg wit="#V">immutativam</rdg>
-       </app> 
-       et hoc loquendo de cognitione creata. Probatur conclusio, nam oportet ex quo cognitio non est intrinsece et essentialiter cognitio, quod hoc sit ex aliqua habitudine sive denominatione extrinseca et maxime ad suam potentiam, et hoc non est ex habitudine 
-       <app>
-        <lem>cognitionis</lem>
-        <rdg wit="#R #SV #S" type="om."/>
-       </app> 
-       ad suam potentiam ut est activa, nec ut est receptiva, per duas conclusiones praecedentes, ergo etc., quia non videntur esse nisi tres habitudines cognitionis ad suam potentiam.</p>
-     
-     </div>
-    </div>
-    
-    <div>
-     <head xml:id="l15-Hcccccc">
-     <supplied>Corollaria circa cognitionem</supplied>
-     </head>
-    
-     <div>
-      <head xml:id="l15-Hthpasc">
-       <supplied>Triplex habitudo potentiae ad suam cognitionem</supplied>
-      </head>
-    
-      <p xml:id="l15-eppdah">Ex 
-       <app>
-        <lem>praedictis</lem>
-        <rdg wit="#R">praedicto</rdg>
-       </app> 
-       patet quod potentiae ad suam cognitionem sive e converso triplex est habitudo. Una est 
-       <app>
-        <lem>subiectiva</lem>
-        <rdg wit="#R">subiective</rdg>
-       </app> 
-       in hoc, quod potentia recipit cognitionem in se subiective. Alia est activa in hoc, quod potentia producit illam cognitionem. Alia est vitaliter 
-       <app>
-        <lem>immutabilis</lem>
-        <rdg wit="#V">immutativa</rdg>
-       </app> 
-       in hoc, quod per illam cognitionem 
-       <app>
-        <lem>talis</lem>
-        <rdg wit="#S" type="om."/>
-       </app> 
-       potentia fertur 
-       <app>
-        <lem>vitaliter</lem>
-        <rdg wit="#R #SV #V" type="om."/>
-       </app> 
-       in obiectum suum. Modo ad propositum dicitur quod illa qualitas, quae est cognitio, dicitur esse cognitio ex habitudine illa tertia, secundum quam, 
-       <app>
-        <lem>scilicet,</lem>
-        <rdg wit="V">per eam</rdg>
-       </app> 
-       potentia fertur in obiectum 
-       <app>
-        <lem>suum</lem>
-        <rdg wit="#R #SV" type="om."/></app> et cognoscit illud, et non ex 
-       <app>
-        <lem>duabus</lem>
-        <rdg wit="#SV" type="corrDeletion">
-         <corr>
-          <del>quia non haberet illam tertiam</del>
-         </corr>
-        </rdg>
-       </app> 
-       aliis habitudinibus.</p>
-     </div>
-     <div>
-      
-      <head xml:id="l15-Hcepcne">[Cognitio extra potentiam cognitivam cognitionem non est]</head>
-    
-      <p xml:id="l15-eipncb">
-       <app>
-        <lem>Unde</lem>
-        <rdg wit="#R #SV" type="om."/>
-       </app>
-       ex istis patet quod, si illa qualitas, quae est cognitio, poneretur 
-       <cb ed="#R" n="22ra"/> 
-       extra potentiam 
-       <app>
-        <lem>cognitivam</lem>
-        <rdg wit="#V">cognoscitivam</rdg>
-       </app> non esset cognitio, quia non haberet illam tertiam habitudinem ad suum subiectum, quae est vitalis immutatio, 
-       <app>
-        <lem>requisitam</lem>
-        <rdg wit="#V">requista</rdg>
-       </app>
-       ad hoc: 
-       <app>
-        <lem>quod talis qualitas sit cognitio. Et ista si produceretur a potentia et reciperetur etiam in ipsa potentia, sine hoc,</lem>
-        <rdg wit="#V" type="om." cause="homoteleuton"/>
-       </app> 
-       <app>
-        <lem>quod</lem>
-        <rdg wit="#S" type="intextu">sic</rdg>
-       </app> 
-       vitaliter 
-       <app>
-        <lem>immutaret</lem>
-        <rdg wit="#S">mutaret</rdg>
-       </app> potentiam, non diceretur 
-       <app>
-        <lem>per</lem>
-        <rdg wit="#V">propter</rdg>
-       </app> 
-       <unclear>hoc <!--haec?--></unclear> 
-       cognitio. Patet ex 
-       <app>
-        <lem>praedictis.</lem>
-        <rdg wit="#V">praedicto.</rdg>
-       </app> 
-       <app>
-        <lem>Dicunt</lem>
-        <rdg wit="#V">Dicit</rdg>
-       </app> 
-       consequenter 
-       <app>
-        <lem>iste</lem>
-        <rdg wit="#R #SV">se</rdg>
-       </app> 
-       <name ref="#Candia">Magister Petrus de Candia</name> 
-       et sui sequaces, sicut fuit <name ref="#Ripa">Magister Ioannes de Ripa</name>, quod istae tres habitudines sint separabiles 
-       <app>
-        <lem>ab</lem>
-        <rdg wit="#V" type="corrDeletion">
-         <corr>
-          <del>
-           <unclear>inesse</unclear>
-          </del>
-         </corr>
-        </rdg>
-       </app> 
-       invicem, ita quod quaelibet potest esse sine alia. Utrum autem sic sint separabiles 
-       <app>
-        <lem>ab invicem,</lem>
-        <rdg wit="#R" type="om."/>
-       </app> 
-       alias 
-       <app>
-        <lem>videbitur</lem>
-        <rdg wit="#SV">videtur</rdg>
-       </app> 
-       et non plus pro nunc 
-       <app>
-        <lem>causa brevitatis.</lem>
-        <rdg wit="#V">etc.</rdg>
-       </app>
-      </p>
-     
-     </div>
-    </div>
-   </div>
-  </body>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lectio 15, De fide</title>
+        <author xml:id="PP">Petrus Plaoul</author>
+        <editor xml:id="JW">Jeffrey C. Witt</editor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="0.0.0-dev">
+          <title>Lectio 15, De fide</title>
+          <date when="2011-10-04">October 04, 2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <authority>SCTA</authority>
+        <availability status="free">
+          <p>Published under a <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike  4.0  International  (CC  BY-NC-SA  4.0)</ref></p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="R" n="reims">Reims</witness>
+          <witness xml:id="V" n="vat">Vatican</witness>
+          <witness xml:id="S" n="sorb">Sorbonne</witness>
+          <witness xml:id="SV" n="svict">St. Victor</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <schemaRef n="lbp-critical-1.0.0" url="https://raw.githubusercontent.com/lombardpress/lombardpress-schema/1.0.0/src/out/critical.rng"/>
+      <editorialDecl>
+        <p>Encoding of this text has followed the recommendations of the LombardPress 1.0.0 guidelines for a critical edition.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <revisionDesc status="draft">
+      <listChange>
+        <change when="2011-10-04" status="draft" n="0.0.0">
+          <p>Created file for the first time.</p>  
+        </change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="la">
+    <front>
+      <div xml:id="starts-on">
+      </div>
+    </front>
+    <body>
+      <div xml:id="lectio15">
+        <head xml:id="l15-Hd1e102">Lectio 15, De fide</head>
+        <div xml:id="l15-Dd1e105">
+          <head xml:id="l15-Hrdpdpc">
+            <supplied>Recapitulatio duarum praedictarum conclusionum</supplied>
+          </head>
+          <p xml:id="l15-seqapd">
+            <pb ed="#R" n="21-v"/>
+            <cb ed="#R" n="a"/>
+            Sciendum est quod in
+            <app>
+              <lem>praecedenti</lem>
+              <rdg wit="#R" type="correction-substitution">
+                <subst>
+                  <add>praecedenti</add>
+                  <del>praesenti</del>
+                </subst>
+              </rdg>
+            </app>
+            lectione positae fuerunt duae conclusiones. 
+            Una fuit quod actus sciendi et actus fidei
+            de eodem sunt compossibiles. 
+            Secunda fuit quod lumen naturale in infinitum ascendit per
+            latitudinem veritatum a principiis distantium.
+          </p>
+        </div>
+        <div xml:id="l15-Dd1e139">
+          <head xml:id="l15-Hcpcnsc">
+            <supplied>Circa primam conclusionem: opinio quod actus fidei actus scientificus non sunt
+              compossibiles</supplied>
+          </head>
+          <p xml:id="l15-ecppss">
+            Et
+            <app>
+              <lem>circa</lem>
+              <rdg wit="#V">per</rdg>
+            </app>
+            primam conclusionem fuit tacta opinio
+            <app>
+              <lem>communis</lem>
+              <rdg wit="#R" type="variation-absent"/>
+            </app>
+             quod: actus fidei et actus scientificus
+            <app>
+              <lem>respectu eiusdem non possunt simul stare</lem>
+              <rdg wit="V" type="variation-absent" cause="homoteleuton"/>
+              <note xml:lang="en">Omission is part of homoteleuton continued into the next
+                paragraph</note>
+            </app>.
+          </p>
+        </div>
+        <div xml:id="l15-Dd1e179">
+          <head xml:id="l15-Hopdpdc">
+            <supplied>Opinio Petri de Candia</supplied>
+          </head>
+          <p xml:id="l15-ncmani">
+            <app>
+              <lem>
+                Nihilominus considerando materiam, 
+                sciendum est quod 
+                <name ref="#Candia">Magister Petrus de Candia</name> 
+                in ista materia ponit istam conclusionem: 
+                quod licet actus fidei et actus scientificus
+              </lem>
+              <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+            </app>
+            sic
+            <app>
+              <lem>sunt</lem>
+              <rdg wit="#V">sint</rdg>
+            </app>
+            impossibiles respectu eiusdem quod impossibile sit
+            <app>
+              <lem>aliquem assentire</lem>
+              <rdg wit="#R #SV">quis aperire</rdg>
+            </app>
+            <app>
+              <lem>eidem</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            actu fidei et actu scientifico, 
+            tamen sunt simul
+            <app>
+              <lem>compossibiles</lem>
+              <rdg wit="#V" type="correction-substitution">
+                <subst>
+                  <del rend="strikethrough">incompossibiles</del>
+                  <add>compossibiles</add>
+                </subst>
+              </rdg>
+            </app>
+            subiective,
+            <app>
+              <lem>
+                ita quod conclusio est ista: quod actus fidei et actus scientificus de eodem sunt
+                facilis compossibiles in eadem potentia subiective
+              </lem>
+              <rdg wit="#R" type="variation-absent" cause="homoteleuton"/>
+            </app>,
+            non tamen sic: 
+            quod quilibet illorum actuum
+            <app>
+              <lem>immutet</lem>
+              <rdg wit="#V">mutet</rdg>
+            </app>
+            <app>
+              <lem>vitaliter</lem>
+              <rdg wit="#R #SV">veritatis</rdg>
+            </app>
+            potentiam, 
+            ita quod
+            <app>
+              <lem>vel</lem>
+              <rdg wit="#R #SV #S" type="variation-absent"/>
+            </app>
+            <app>
+              <!-- dbcheck; nominative seems best here given the parallel nominatives that follow -->
+              <lem>nullus</lem>
+              <rdg wit="#V">nullum</rdg>
+            </app>
+            immutat vel, 
+            si
+            <app>
+              <lem>unus</lem>
+              <rdg wit="#S">aliquis</rdg>
+            </app>
+            <app>
+              <lem>immutet</lem>
+              <rdg wit="#S #V">immutat</rdg>
+            </app>,
+            <app>
+              <lem>alter</lem>
+              <rdg wit="#V">alius</rdg>
+            </app>
+             non
+            <app>
+              <lem>immutat</lem>
+              <rdg wit="#S" type="variation-absent"/>
+            </app>.
+          </p>
+        </div>
+        <div xml:id="l15-Dd1e328">
+          <head xml:id="l15-Hrapcrc">
+            <supplied>Responsio ad opinionem Petri de Candia: quattuor conclusiones circa rationem
+              cognitionis</supplied>
+          </head>
+          <p xml:id="l15-cicimc">
+            Circa istam conclusionem,
+            <app>
+              <lem>possunt</lem>
+              <rdg wit="#S #V">possent</rdg>
+            </app>
+             poni
+            <app>
+              <lem>plura</lem>
+              <rdg wit="#V">multa</rdg>
+            </app>
+            quae pro nunc non discutientur ad plenum, 
+            sed solum ponentur
+            <app>
+              <lem>aliqua</lem>
+              <rdg wit="#V" type="variation-absent"/>
+            </app>
+            in generali et
+            <app>
+              <lem>possunt</lem>
+              <rdg wit="#V">possent</rdg>
+            </app>
+            poni in modum conclusionum.
+          </p>
+          <div xml:id="l15-Dd1e374">
+            <head xml:id="l15-Hpccdce">
+              <supplied>Prima conclusio: cognitio non dicitur "cognitio" essentialiter</supplied>
+            </head>
+            <p xml:id="l15-pdenep">Primum dictum
+              <app>
+                <lem>est</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>:
+              cognitio non dicitur intrinsece 
+              et essentialiter cognitio,
+              <app>
+                <lem>et</lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>
+              ita diceretur de quocumque actu cognoscendi generaliter. 
+              Probatur sic primo: 
+              quia, circumscriptis potentia et obiecto, 
+              cognitio non
+              <app>
+                <lem>remaneret</lem>
+                <rdg wit="#S">maneret</rdg>
+              </app>
+              cognitio, ergo etc. 
+              Consequentia tenet 
+              quia illud quod est intrinsece
+              <app>
+                <lem n="intrinsece"/>
+                <rdg wit="#V" type="variation-present">essentialiter</rdg>
+              </app>
+              <app>
+                <!-- dbcheck -->
+                <lem>aliquale</lem>
+                <rdg wit="#R">aut quale</rdg>
+              </app>
+              semper remanet tale omnibus extrinsecis circumscriptis.
+              <app>
+                <lem>Patet</lem>
+                <rdg wit="#V">apparet</rdg>
+              </app>
+              antecedens 
+              quia, si non, esset potentia praeceptiva talis
+              <app>
+                <lem>qualitas</lem>
+                <rdg wit="#V">qualis</rdg>
+              </app>
+              <app>
+                <lem>quae</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              est cognitio,
+              <app>
+                <lem>non esset cognitio</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              quia nec sibi 
+              quia non
+              <app>
+                <lem>cognovit</lem>
+                <rdg wit="#V">cognoscit</rdg>
+              </app>,
+              nec potentiae, quia per casum
+              <app>
+                <lem>nulla</lem>
+                <rdg wit="#V">non</rdg>
+              </app>
+              est potentia.
+            </p>
+            <p xml:id="l15-spcsqq">
+              Secundo probatur conclusio praedicta 
+              quia si cognitio esset
+              essentialiter et
+              <app>
+                <lem>intrinsece</lem>
+                <rdg wit="#S">extrinsece</rdg>
+              </app>
+              cognitio, 
+              tunc cum quilibet gradus repositus 
+              in latitudine cognitionum dicat
+              perfectionem similiter repositam 
+              sub latitudine viventium sequeretur quod cognitio viveret. 
+              Et per consequens esset perfectior subiecta non vivente, 
+              quod est falsum, cum
+              sit quaedam qualitas.
+            </p>
+            <p xml:id="l15-taippp">
+              Tertio
+              <app>
+                <lem>ad idem</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              sic, si cognitio poneretur in lapide, 
+              si esset essentialiter cognitio, tunc lapis per
+              eam denominaretur intrinsece et essentialiter cognoscens. 
+              Consequens est falsum 
+              quia non stat
+              <app>
+                <lem n="stat"/>
+                <rdg wit="#R #SV" type="variation-present">intrinsece</rdg>
+              </app>
+              lapidem intrinsece cognoscere, 
+              nisi esset per communicationem idiomatum 
+              quod non est ad propositum. 
+              Ergo illa cognitio non est intrinsece et essentialiter cognitio.
+              Consequentia
+              <app>
+                <lem>probatur</lem>
+                <rdg wit="#V">tenet</rdg>
+              </app>
+              quia quandocumque aliqua forma communicatur alicui subiecto, 
+              illa forma communicat sibi, 
+              in concreto omnem denominationem sibi competentem, 
+              in abstracto supple
+              essentialem. 
+              Et eodem
+              <app>
+                <lem>modo</lem>
+                <rdg wit="#SV" type="variation-absent"/>
+              </app>
+              esset dicendum de omnibus aliis actibus 
+              intellectus et voluntatis quod nullus talis
+              est intrinsece et essentialiter cognitio
+              <app>
+                <lem>vel</lem>
+                <rdg wit="#V">sive</rdg>
+              </app>
+              volitio,
+              <app>
+                <lem>et sic patet propositum</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>,
+              <app>
+                <lem>et</lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>
+              sic patet propositio probata.
+            </p>
+          </div>
+          <div xml:id="l15-Dd1e557">
+            <head xml:id="l15-Hsccpua">
+              <supplied>Secunda conclusio: cognitio non dicitur "cognitio" ex habitudine potentiae
+                ut activa</supplied>
+            </head>
+            <p xml:id="l15-scnicv">
+              Secunda conclusio: 
+              non ex habitudine potentiae ut activa
+              <cb ed="#R" n="b"/><!--21vb--> 
+              est cognitio denominatur cognitio. 
+              Unde imaginandum est quod
+              cognitio habet
+              <app>
+                <lem n="habet"/>
+                <rdg wit="#V" type="correction-deletion">
+                  <del type="strikethrough">cog</del>
+                </rdg>
+              </app>
+              habitudinem multiplicem ad suum subiectum. 
+              Una est habitudo
+              <app>
+                <lem>ut</lem>
+                <rdg wit="#SV" type="correction-addition">
+                  <add>ut</add>
+                </rdg>
+              </app>
+              formae inhaerentis. 
+              Alia est habitudo ut effectus a potentia producti. 
+              Alia est
+              <app>
+                <lem>habitudo</lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>
+              ut vitaliter
+              <app>
+                <!-- dbcheck -->
+                <lem><unclear cert="medium">immutativus</unclear></lem>
+                <rdg wit="#V">immutativa</rdg>
+              </app>.
+              Modo
+              <app>
+                <!-- dbcheck -->
+                <lem>venandum</lem>
+                <rdg wit="#V">veniendum</rdg>
+              </app>
+              est ex quo cognitio
+              <app>
+                <lem n="cognitio"/>
+                <rdg wit="#V" type="variation-present">non</rdg>
+              </app>
+              intrinsece et essentialiter
+              <app>
+                <lem>non est</lem>
+                <rdg wit="#V">dicitur</rdg>
+              </app>
+              cognitio a qua denominatione sine habitudine extrinseca
+              <app>
+                <lem>dicatur</lem>
+                <rdg wit="#V">dicitur</rdg>
+              </app>
+              cognitio. 
+              Probatur ergo conclusio secunda, 
+              scilicet quod cognitio non dicitur
+              cognitio ex habitudine potentiae ut activa est 
+              quia habitudo
+              <app>
+                <lem>productionis</lem>
+                <rdg wit="#V">cognitionis</rdg>
+              </app>
+              notitiae est prior, saltem natura, 
+              quam sit immutatio potentiae vitalis. 
+              Ergo Deus posset facere quod potentia produceret cognitionem, 
+              et tamen per eam potentia non
+              cognosceret, quia non vitaliter immutaret potentiam. 
+              Igitur conclusio vera.
+            </p>
+            <p xml:id="l15-sncapc">
+              Secundo, nisi conclusio esset vera,
+              <app>
+                <lem>tunc</lem>
+                <rdg wit="#S #V" type="variation-absent"/>
+              </app>
+              ita videretur esse de qualibet notitia. 
+              Modo, instantia est de notitia divina 
+              quia non dicitur per <unclear cert="low">hoc<!-- haec? --></unclear> cognitio 
+              quia producitur a potentia cognitiva.
+            </p>
+          </div>
+          <div xml:id="l15-Dd1e677">
+            <head xml:id="l15-Htccpur">
+              <supplied>Tertia conclusio: cognitio non dicitur <mentioned>cognitio</mentioned> ex
+                habitudine potentiae ut receptiva</supplied>
+            </head>
+            <p xml:id="l15-tccsis">
+              Tertia
+              <app>
+                <lem>conclusio:</lem>
+                <rdg wit="#R #SV #S">propositio</rdg>
+              </app>
+              cognitio non dicitur cognitio in habitudine ad suam potentiam
+              <app>
+                <lem>ut</lem>
+                <rdg wit="#V">et</rdg>
+              </app>
+              est receptiva. 
+              Probatur conclusio 
+              quia de facto aliqua est cognitio,
+              <app>
+                <lem>scilicet divina cognitio,</lem>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
+                <note xml:lang="en">This is a good example of privileging the more explicit
+                  reading</note>
+              </app>
+              quae non est in aliquo subiective, 
+              ergo de ratione cognitionis, 
+              non est quod sit in subiecto.
+            </p>
+            <p xml:id="l15-spccee">
+              Secundo,
+              <app>
+                <lem>probatur conclusio</lem>
+                <rdg wit="#V" type="variation-absent"/>
+              </app>
+              quia,
+              <cb ed="#V" n="b"/><!--30rb--> 
+              si per Dei potentiam, cognitio poneretur in lapide, 
+              lapis ad eam haberet habitudinem receptivam, 
+              et tamen per
+              <app>
+                <lem>hoc</lem>
+                <rdg wit="#S">eam</rdg>
+              </app>
+              lapis non denominaretur cognoscens, 
+              ergo etc.
+            </p>
+          </div>
+          <div xml:id="l15-Dd1e745">
+            <head xml:id="l15-Hqccevi">
+              <supplied>Quarta conclusio: cognitio dicitur "cognitio" ex habitudine ad suam
+                potentiam ut perceptivam et vitaliter immutabilem</supplied>
+            </head>
+            <p xml:id="l15-qccasp">
+              Quarta conclusio: 
+              cognitio dicitur esse cognitio
+              <app>
+                <lem>ex</lem>
+                <rdg wit="#S">in</rdg>
+              </app>
+               habitudine ad suam potentiam ut perceptivam et
+              <app>
+                <lem>vitaliter</lem>
+                <rdg wit="#R">virtualiter</rdg>
+              </app>
+              <app>
+                <lem>immutabilem,</lem>
+                <rdg wit="#V">immutativam</rdg>
+              </app>
+              et hoc loquendo de cognitione creata. 
+              Probatur conclusio, nam oportet ex quo cognitio
+              non est intrinsece et essentialiter cognitio, 
+              quod hoc sit ex aliqua habitudine sive
+              denominatione extrinseca et maxime ad suam potentiam, 
+              et hoc non est ex habitudine
+              <app>
+                <lem>cognitionis</lem>
+                <rdg wit="#R #SV #S" type="variation-absent"/>
+              </app>
+              ad suam potentiam ut est activa, 
+              nec ut est receptiva, 
+              per duas conclusiones
+              praecedentes, ergo etc., 
+              quia non videntur esse nisi 
+              tres habitudines cognitionis ad suam potentiam.
+            </p>
+          </div>
+        </div>
+        <div xml:id="l15-Dd1e794">
+          <head xml:id="l15-Hcccccc">
+            <supplied>Corollaria circa cognitionem</supplied>
+          </head>
+          <div xml:id="l15-Dd1e802">
+            <head xml:id="l15-Hthpasc">
+              <supplied>Triplex habitudo potentiae ad suam cognitionem</supplied>
+            </head>
+            <p xml:id="l15-eppdah">
+              Ex
+              <app>
+                <lem>praedictis</lem>
+                <rdg wit="#R">praedicto</rdg>
+              </app>
+              patet quod potentiae ad suam cognitionem 
+              sive e converso triplex est habitudo. 
+              Una est
+              <app>
+                <lem>subiectiva</lem>
+                <rdg wit="#R">subiective</rdg>
+              </app>
+              in hoc, quod potentia recipit cognitionem in se subiective. 
+              Alia est activa in hoc,
+              quod potentia producit illam cognitionem. 
+              Alia est vitaliter
+              <app>
+                <lem>immutabilis</lem>
+                <rdg wit="#V">immutativa</rdg>
+              </app>
+              in hoc, quod per illam cognitionem
+              <app>
+                <lem>talis</lem>
+                <rdg wit="#S" type="variation-absent"/>
+              </app>
+              potentia fertur
+              <app>
+                <lem>vitaliter</lem>
+                <rdg wit="#R #SV #V" type="variation-absent"/>
+              </app>
+              in obiectum suum. 
+              Modo ad propositum dicitur quod illa qualitas, 
+              quae est cognitio,
+              dicitur esse cognitio ex habitudine illa tertia, 
+              secundum quam,
+              <app>
+                <lem>scilicet</lem>
+                <rdg wit="#V">per eam</rdg>
+              </app>
+              potentia fertur in obiectum
+              <app>
+                <lem>suum</lem>
+                <rdg wit="#R #SV" type="variation-absent"/>
+              </app>
+              et cognoscit illud, 
+              et non ex
+              <app>
+                <lem>duabus</lem>
+                <rdg wit="#SV" type="correction-deletion">
+                  <del>quia non haberet illam tertiam</del>
+                </rdg>
+              </app>
+              aliis habitudinibus.
+            </p>
+          </div>
+          <div xml:id="l15-Dd1e887">
+            <head xml:id="l15-Hcepcne">[Cognitio extra potentiam cognitivam cognitionem non est]</head>
+            <p xml:id="l15-eipncb">
+              <app>
+                <lem>Unde</lem>
+                <rdg wit="#R #SV" type="variation-absent"/>
+              </app>
+              ex istis patet quod, 
+              si illa qualitas, quae est cognitio, 
+              poneretur
+              <pb ed="#R" n="22-r"/>
+              <cb ed="#R" n="a"/>
+              extra potentiam
+              <app>
+                <lem>cognitivam</lem>
+                <rdg wit="#V">cognoscitivam</rdg>
+              </app>
+              non esset cognitio 
+              quia non haberet illam tertiam habitudinem ad suum subiectum,
+              quae est vitalis immutatio,
+              <app>
+                <lem>requisitam</lem>
+                <rdg wit="#V">requista</rdg>
+              </app>
+               ad hoc:
+              <app>
+                <lem>
+                  quod talis qualitas sit cognitio. 
+                  Et ista si produceretur a potentia et
+                  reciperetur etiam in ipsa potentia, 
+                  sine hoc
+                </lem>
+                <rdg wit="#V" type="variation-absent" cause="homoteleuton"/>
+              </app>
+              quod
+              <app>
+                <lem n="quod"/>
+                <rdg wit="#S" type="variation-present">sic</rdg>
+              </app>
+              vitaliter
+              <app>
+                <lem>immutaret</lem>
+                <rdg wit="#S">mutaret</rdg>
+              </app>
+              potentiam, 
+              non diceretur
+              <app>
+                <lem>per</lem>
+                <rdg wit="#V">propter</rdg>
+              </app>
+              <unclear>hoc <!--haec?--></unclear> cognitio. 
+              Patet ex
+              <app>
+                <lem>praedictis</lem>
+                <rdg wit="#V">praedicto</rdg>
+              </app>.
+              <app>
+                <lem>Dicunt</lem>
+                <rdg wit="#V">Dicit</rdg>
+              </app>
+              consequenter
+              <app>
+                <lem>iste</lem>
+                <rdg wit="#R #SV">se</rdg>
+              </app>
+              <name ref="#Candia">Magister Petrus de Candia</name> 
+              et sui sequaces, 
+              sicut fuit 
+              <name ref="#Ripa">Magister Ioannes de Ripa</name>, 
+              quod istae tres habitudines sint
+              separabiles ab
+              <app>
+                <lem n="ab"/>
+                <rdg wit="#V" type="correction-deletion">
+                  <del>
+                    <unclear>inesse</unclear>
+                  </del>
+                </rdg>
+              </app>
+              invicem, 
+              ita quod quaelibet potest esse sine alia. 
+              Utrum autem sic sint separabiles
+              <app>
+                <lem>ab invicem</lem>
+                <rdg wit="#R" type="variation-absent"/>
+              </app>,
+              alias
+              <app>
+                <lem>videbitur</lem>
+                <rdg wit="#SV">videtur</rdg>
+              </app>
+              et non plus pro nunc
+              <app>
+                <lem>causa brevitatis</lem>
+                <rdg wit="#V">etc.</rdg>
+              </app>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
  </text>
 </TEI>
